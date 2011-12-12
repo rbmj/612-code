@@ -19,19 +19,19 @@ configured for your system.  The build process is as follows::
 License
 ++++++++++++++++
 
-All code in this project is licensed under the OpenBSD License (see LICENSE.rst)
+All code in this project is licensed under the OpenBSD License (see 'LICENSE.rst')
 and is Copyright |c| 2012 Chantilly Robotics unless otherwise noted.
 
 Contributors
 ++++++++++++++++
 
-A full list of contributors is in AUTHORS.rst
+A full list of contributors is in 'AUTHORS.rst'.
 
 Thanks
 ++++++++++++++++
 Thanks go out to nikitakit and all the other developers of the ucpp_ project.
 Thanks to github_ for providing hosting of our code.
-And finally, a big thanks to the entire organization of FIRST_
+And finally, a big thanks to the entire organization of FIRST_.
 
 
 
