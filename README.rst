@@ -38,4 +38,5 @@ And finally, a big thanks to the entire organization of FIRST_
 .. _`FIRST Team 612 Chantilly Robotics`: http://www.chantillyrobotics.org/
 .. _ucpp: https://github.com/nikitakit/ucpp
 .. _github: https://github.com/
+.. _FIRST: http://usfirst.org/
 .. |c| unicode:: 0xA9 .. (Copyright (c) Sign)
