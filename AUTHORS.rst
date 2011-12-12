@@ -13,3 +13,4 @@ Programming Team
 ================
 - username <email>
 - username_2 <email2>
+- username_3 <email3
