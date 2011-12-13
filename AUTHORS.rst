@@ -7,7 +7,7 @@ Leadership
 
 - rbmj <rbmj@verizon.net>: CEO and Code Monkey in Chief
 - ShiriB <shiribendelac@hotmail.com>: Programming Captain
-- anirudh's_username_here <email>: Head Programmer
+- anidev (Anirudh) <anidev.aelico@gmail.com>: Head Programmer
 
 Programming Team
 ================
