@@ -60,16 +60,16 @@ void robot_class::AutonomousContinuous() {
 void robot_class::TeleopContinuous() {
     //actually do something!! :D
     if (left_joystick.GetRawButton(1)) {
-		//arcade drive
-		drive.ArcadeDrive(left_joystick); //arcade drive on left joystick
-	}
-	else {
-		//tank drive
-		float left = left_joystick.GetY();
-		float right = right_joystick.GetY();
-		//explicitly state drive power is based on Y axis of that side joy
-		drive.TankDrive(left, right);
-	}
+        //arcade drive
+        drive.ArcadeDrive(left_joystick); //arcade drive on left joystick
+    }
+    else {
+        //tank drive
+        float left = left_joystick.GetY();
+        float right = right_joystick.GetY();
+        //explicitly state drive power is based on Y axis of that side joy
+        drive.TankDrive(left, right);
+    }
     Wait(0.005);
 }
 
