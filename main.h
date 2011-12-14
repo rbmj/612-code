@@ -28,5 +28,7 @@ public:
     void TeleopContinuous();
 };
 
+typedef UINT32 uinteger;
+
 
 #endif
