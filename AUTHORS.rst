@@ -10,6 +10,8 @@ Leadership
 - anidev (Anirudh) <anidev.aelico@gmail.com>: Head Programmer
 
 Programming Team
+================
+
 - eEbBhH (Boreh) <zalmon111@gmail.com>
 - MLDrauren (Michael) <eragonelven@yahoo.com>
 - BrianTHN (Brian N) <nguyenthbrian@gmail.com>
