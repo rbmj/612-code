@@ -16,3 +16,4 @@ Programming Team
 - BrianTHN (Brian N) <nguyenthbrian@gmail.com>
 - StevenLW (Steven) <kunzi145@gmail.com>
 - rk2583 (Revanth) <revanth_kolli@yahoo.com> 
+- Trololol (Fang) <simbaomg@hotmail.com>
