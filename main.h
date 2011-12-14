@@ -5,7 +5,6 @@
 #ifndef INC_MAIN_H_INC
 #define INC_MAIN_H_INC
 
-#include "ports.h"
 #include <IterativeRobot.h>
 
 class robot_class : public IterativeRobot {
