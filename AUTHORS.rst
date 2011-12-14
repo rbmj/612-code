@@ -17,3 +17,4 @@ Programming Team
 - StevenLW (Steven) <kunzi145@gmail.com>
 - rk2583 (Revanth) <revanth_kolli@yahoo.com> 
 - Trololol (Fang) <simbaomg@hotmail.com>
+- JeffTolbert <cobras7@cox.net>
