@@ -15,4 +15,5 @@ Programming Team
 - MLDrauren <eragonelven@yahoo.com>
 - BrianTHN <nguyenthbrian@gmail.com>
 - StevenLW <kunzi145@gmail.com>
-- rk2583 (Revanth) <revanth_kolli@yahoo.com> 
+- rk2583 (Revanth) <revanth_kolli@yahoo.com>
+- Chzn4Lifez(Weyland) <Chzn4Lifez@gmail.com> 
