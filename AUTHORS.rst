@@ -10,7 +10,6 @@ Leadership
 - anidev (Anirudh) <anidev.aelico@gmail.com>: Head Programmer
 
 Programming Team
-================
 - eEbBhH (Boreh) <zalmon111@gmail.com>
 - MLDrauren (Michael) <eragonelven@yahoo.com>
 - BrianTHN (Brian N) <nguyenthbrian@gmail.com>
@@ -19,3 +18,4 @@ Programming Team
 - Trololol (Fang) <simbaomg@hotmail.com>
 - JeffTolbert <cobras7@cox.net>
 - Swarage (Swaraj) <sdcoolio@gmail.com>
+- Chzn4Lifez(Weyland) <Chzn4Lifez@gmail.com> 
