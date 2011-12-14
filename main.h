@@ -10,22 +10,22 @@
 
 class robot_class : public IterativeRobot {
 private:
-	RobotDrive drive;
+    RobotDrive drive;
 public:
-	robot_class();
-	//init
-	void RobotInit();
-	void DisabledInit();
-	void AutonomousInit();
-	void TeleopInit();
-	//periodics
-	void DisabledPeriodic();
-	void AutonomousPeriodic();
-	void TeleopPeriodic();
-	//continuous
-	void DisabledContinuous();
-	void AutonomousContinuous();
-	void TeleopContinuous();
+    robot_class();
+    //init
+    void RobotInit();
+    void DisabledInit();
+    void AutonomousInit();
+    void TeleopInit();
+    //periodics
+    void DisabledPeriodic();
+    void AutonomousPeriodic();
+    void TeleopPeriodic();
+    //continuous
+    void DisabledContinuous();
+    void AutonomousContinuous();
+    void TeleopContinuous();
 };
 
 

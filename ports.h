@@ -6,9 +6,9 @@
 #include <Joystick.h>
 
 struct drive_jaguar {
-	Jaguar& jag;
-	RobotDrive::MotorType type;
-	bool reverse;
+    Jaguar& jag;
+    RobotDrive::MotorType type;
+    bool reverse;
 };
 
 
