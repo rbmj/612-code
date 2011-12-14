@@ -18,3 +18,4 @@ Programming Team
 - rk2583 (Revanth) <revanth_kolli@yahoo.com> 
 - Trololol (Fang) <simbaomg@hotmail.com>
 - JeffTolbert <cobras7@cox.net>
+- Swarage (Swaraj) <sdcoolio@gmail.com>
