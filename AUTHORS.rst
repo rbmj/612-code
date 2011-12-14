@@ -11,5 +11,4 @@ Leadership
 
 Programming Team
 ================
-- username <email>
-- username_2 <email2>
+- StevenLW <kunzi145@gmail.com>
