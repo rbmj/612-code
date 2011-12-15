@@ -1,11 +1,12 @@
 /* main.h
- * 
+ *
 */
 
 #ifndef INC_MAIN_H_INC
 #define INC_MAIN_H_INC
 
 #include <IterativeRobot.h>
+#include <RobotDrive.h>
 
 class robot_class : public IterativeRobot {
 private:
