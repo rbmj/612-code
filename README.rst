@@ -11,10 +11,28 @@ Usage
 For now, this project assumes that you already have ucpp_ installed and
 configured for your system.  The build process is as follows::
 
-   $ ucpp init             #run once
-   $ ucpp configure        #run each time the files in the project have changed
-   $ make                  #compile and link all code
-   $ make deploy           #deploy code to robot
+  $ ucpp init               #run once
+  $ ucpp configure          #run each time the files in the project have changed
+  $ make                    #compile and link all code (debug)
+  $ make DEBUG_MODE=0       #compile and link all code (release)
+  $ make deploy             #deploy code to robot
+
+Configuring
+++++++++++++++++
+
+ - Some configuration is required on the cRIO to get everything to work.  First,
+   when imaging it is necessary to select the option for WindRiver C++, and please
+   enable NetConsole (except for in perhaps release builds).
+ - Remember that the cRIO runs an ftp server that allows anonymous ftp access.
+ - Second, for NetConsole to work ni-rt.ini needs to have the DNS and default
+   gateway set to the router.  The default is 10.6.12.1, and, though this works on
+   the field, it will not allow NetConsole to work for debugging.  The subnet mask
+   of computer running NetConsole must also be set to 255.0.0.0 (not the more
+   intuitive 255.255.255.0).
+    - Again, without these changes, the robot will still DRIVE fine.
+ - FOR NOW, the robot REQUIRES version 30 of the firmware.  This WILL change come
+   build season, though!
+ - Be sure to undo any/all changes to ni-rt.ini before going onto the field!!!
 
 License
 ++++++++++++++++
