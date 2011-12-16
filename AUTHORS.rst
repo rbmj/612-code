@@ -21,3 +21,4 @@ Programming Team
 - JeffTolbert <cobras7@cox.net>
 - Swarage (Swaraj) <sdcoolio@gmail.com>
 - Chzn4Lifez(Weyland) <Chzn4Lifez@gmail.com> 
+- LeahH (Leah) <l.h.hirsh@gmail.com>
