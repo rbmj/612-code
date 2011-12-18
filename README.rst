@@ -17,6 +17,8 @@ configured for your system.  The build process is as follows::
   $ make DEBUG_MODE=0       #compile and link all code (release)
   $ make deploy             #deploy code to robot
 
+For more information regarding ucpp, see 'ucpp.rst'.
+
 Configuring
 ++++++++++++++++
 
