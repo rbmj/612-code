@@ -18,7 +18,7 @@ Programming Team
 - StevenLW (Steven) <kunzi145@gmail.com>
 - rk2583 (Revanth) <revanth_kolli@yahoo.com> 
 - Trololol (Fang) <simbaomg@hotmail.com>
-- JeffTolbert <cobras7@cox.net>
+- JeffTolbert (Jeff) <cobras7@cox.net>
 - Swarage (Swaraj) <sdcoolio@gmail.com>
 - Chzn4Lifez(Weyland) <Chzn4Lifez@gmail.com> 
 - LeahH (Leah) <l.h.hirsh@gmail.com>
