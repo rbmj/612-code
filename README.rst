@@ -39,7 +39,7 @@ Configuring
 License
 ++++++++++++++++
 
-All code in this project is licensed under the OpenBSD License (see 'LICENSE.rst')
+All code in this project is licensed under the ISC License (see 'LICENSE.rst')
 and is Copyright |c| 2012 Chantilly Robotics unless otherwise noted.
 
 Contributors
