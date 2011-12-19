@@ -1,0 +1,80 @@
+\hypertarget{classHiTechnicCompass}{\section{\-Hi\-Technic\-Compass \-Class \-Reference}
+\label{classHiTechnicCompass}\index{\-Hi\-Technic\-Compass@{\-Hi\-Technic\-Compass}}
+}
+
+
+{\ttfamily \#include $<$\-Hi\-Technic\-Compass.\-h$>$}
+
+\-Inheritance diagram for \-Hi\-Technic\-Compass\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classHiTechnicCompass}
+\end{center}
+\end{figure}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classHiTechnicCompass_a6927401a1cdb1a5e32dbb226adfb3fd5}{\-Hi\-Technic\-Compass} (\-U\-I\-N\-T32 slot)
+\item 
+virtual \hyperlink{classHiTechnicCompass_a4492a67a04de360c3247f5ec648d4e97}{$\sim$\-Hi\-Technic\-Compass} ()
+\item 
+float \hyperlink{classHiTechnicCompass_af09859e82140181c2ae4cb2e62f8f991}{\-Get\-Angle} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-Hi\-Technic \-N\-X\-T \-Compass.
+
+\-This class alows access to a \-Hi\-Technic \-N\-X\-T \-Compass on an \hyperlink{classI2C}{\-I2\-C} bus. \-These sensors to not allow changing addresses so you cannot have more than one on a single bus.
+
+\-Details on the sensor can be found here\-: \href{http://www.hitechnic.com/index.html?lang=en-us&target=d17.html}{\tt http\-://www.\-hitechnic.\-com/index.\-html?lang=en-\/us\&target=d17.\-html}
+
+\begin{DoxyRefDesc}{\-Todo}
+\item[\hyperlink{todo__todo000002}{\-Todo}]\-Implement a calibration method for the sensor. \end{DoxyRefDesc}
+
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{classHiTechnicCompass_a6927401a1cdb1a5e32dbb226adfb3fd5}{\index{\-Hi\-Technic\-Compass@{\-Hi\-Technic\-Compass}!\-Hi\-Technic\-Compass@{\-Hi\-Technic\-Compass}}
+\index{\-Hi\-Technic\-Compass@{\-Hi\-Technic\-Compass}!HiTechnicCompass@{\-Hi\-Technic\-Compass}}
+\subsubsection[{\-Hi\-Technic\-Compass}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Hi\-Technic\-Compass\-::\-Hi\-Technic\-Compass} (
+\begin{DoxyParamCaption}
+\item[{\-U\-I\-N\-T32}]{slot}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}explicit\mbox{]}}}}\label{classHiTechnicCompass_a6927401a1cdb1a5e32dbb226adfb3fd5}
+\-Constructor.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em slot} & \-The slot of the digital module that the sensor is plugged into. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classHiTechnicCompass_a4492a67a04de360c3247f5ec648d4e97}{\index{\-Hi\-Technic\-Compass@{\-Hi\-Technic\-Compass}!$\sim$\-Hi\-Technic\-Compass@{$\sim$\-Hi\-Technic\-Compass}}
+\index{$\sim$\-Hi\-Technic\-Compass@{$\sim$\-Hi\-Technic\-Compass}!HiTechnicCompass@{\-Hi\-Technic\-Compass}}
+\subsubsection[{$\sim$\-Hi\-Technic\-Compass}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Hi\-Technic\-Compass\-::$\sim$\-Hi\-Technic\-Compass} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{classHiTechnicCompass_a4492a67a04de360c3247f5ec648d4e97}
+\-Destructor. 
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classHiTechnicCompass_af09859e82140181c2ae4cb2e62f8f991}{\index{\-Hi\-Technic\-Compass@{\-Hi\-Technic\-Compass}!\-Get\-Angle@{\-Get\-Angle}}
+\index{\-Get\-Angle@{\-Get\-Angle}!HiTechnicCompass@{\-Hi\-Technic\-Compass}}
+\subsubsection[{\-Get\-Angle}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf \-Hi\-Technic\-Compass\-::\-Get\-Angle} (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{classHiTechnicCompass_af09859e82140181c2ae4cb2e62f8f991}
+\-Get the compass angle in degrees.
+
+\-The resolution of this reading is 1 degree.
+
+\begin{DoxyReturn}{\-Returns}
+\-Angle of the compass in degrees. 
+\end{DoxyReturn}
+
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+\-Hi\-Technic\-Compass.\-h\item 
+\-Hi\-Technic\-Compass.\-cpp\end{DoxyCompactItemize}

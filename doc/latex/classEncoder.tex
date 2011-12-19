@@ -1,0 +1,400 @@
+\hypertarget{classEncoder}{\section{\-Encoder \-Class \-Reference}
+\label{classEncoder}\index{\-Encoder@{\-Encoder}}
+}
+
+
+{\ttfamily \#include $<$\-Encoder.\-h$>$}
+
+\-Inheritance diagram for \-Encoder\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classEncoder}
+\end{center}
+\end{figure}
+\subsection*{\-Public \-Types}
+\begin{DoxyCompactItemize}
+\item 
+enum {\bfseries \-P\-I\-D\-Source\-Parameter} \{ {\bfseries k\-Distance}, 
+{\bfseries k\-Rate}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classEncoder_ae47a6cd11da6de3a2b03f4456b98c39b}{\-Encoder} (\-U\-I\-N\-T32 a\-Channel, \-U\-I\-N\-T32 b\-Channel, bool reverse\-Direction=false, \-Encoding\-Type encoding\-Type=k4\-X)
+\item 
+\hyperlink{classEncoder_a6969b68195dfba60d3b87a38847400fa}{\-Encoder} (\-U\-I\-N\-T32 a\-Slot, \-U\-I\-N\-T32 a\-Channel, \-U\-I\-N\-T32 b\-Slot, \-U\-I\-N\-T32 \-\_\-b\-Channel, bool reverse\-Direction=false, \-Encoding\-Type encoding\-Type=k4\-X)
+\item 
+\hyperlink{classEncoder_aa5f1987f6278c0b45c801b129f8222c9}{\-Encoder} (\hyperlink{classDigitalSource}{\-Digital\-Source} $\ast$a\-Source, \hyperlink{classDigitalSource}{\-Digital\-Source} $\ast$b\-Source, bool reverse\-Direction=false, \-Encoding\-Type encoding\-Type=k4\-X)
+\item 
+\hyperlink{classEncoder_a3a6d83c9e78a0bef6990558e8cf676d4}{\-Encoder} (\hyperlink{classDigitalSource}{\-Digital\-Source} \&a\-Source, \hyperlink{classDigitalSource}{\-Digital\-Source} \&b\-Source, bool reverse\-Direction=false, \-Encoding\-Type encoding\-Type=k4\-X)
+\item 
+virtual \hyperlink{classEncoder_a87cc8067c98c0ab2134dee3822e3b250}{$\sim$\-Encoder} ()
+\item 
+void \hyperlink{classEncoder_ac998caf5c4685e1497cac25f25534c9d}{\-Start} ()
+\item 
+\-I\-N\-T32 \hyperlink{classEncoder_a4631259e214b2827220c9baff25e6891}{\-Get} ()
+\item 
+\-I\-N\-T32 \hyperlink{classEncoder_a59c47ec9ef74ec6e414911a5fd6931d0}{\-Get\-Raw} ()
+\item 
+void \hyperlink{classEncoder_a4375bf4d88d56f5f5d09860f9062d691}{\-Reset} ()
+\item 
+void \hyperlink{classEncoder_a2b4d86aa679b2b305739165ce24d0df0}{\-Stop} ()
+\item 
+double \hyperlink{classEncoder_a9825883787337876f6d62951d7eaac24}{\-Get\-Period} ()
+\item 
+void \hyperlink{classEncoder_a53e9481bd248b04a00809a3ea69d97c1}{\-Set\-Max\-Period} (double max\-Period)
+\item 
+bool \hyperlink{classEncoder_ad55bea74aa76140ea048d22bda8de855}{\-Get\-Stopped} ()
+\item 
+bool \hyperlink{classEncoder_a135a248f9e69f99baa7c4ab8eaf66eb2}{\-Get\-Direction} ()
+\item 
+double \hyperlink{classEncoder_a523cc5a0cbd52f937f2a25a14185bc22}{\-Get\-Distance} ()
+\item 
+double \hyperlink{classEncoder_a72423acddb85ee347fc213b8600843f7}{\-Get\-Rate} ()
+\item 
+void \hyperlink{classEncoder_aed57d1224b55a28c666f2888102efbec}{\-Set\-Min\-Rate} (double min\-Rate)
+\item 
+void \hyperlink{classEncoder_a0bfacc84063e402077f1f620ea863ce5}{\-Set\-Distance\-Per\-Pulse} (double distance\-Per\-Pulse)
+\item 
+void \hyperlink{classEncoder_aefeeb7018f6f8ee57d824577c1c31f42}{\-Set\-Reverse\-Direction} (bool reverse\-Direction)
+\item 
+void \hyperlink{classEncoder_a1254bae484d9ac5d794c760d097e10b9}{\-Set\-P\-I\-D\-Source\-Parameter} (\-P\-I\-D\-Source\-Parameter pid\-Source)
+\item 
+double \hyperlink{classEncoder_a08665d9e47c9fa77606dfe8611612e73}{\-P\-I\-D\-Get} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-Class to read quad encoders. \-Quadrature encoders are devices that count shaft rotation and can sense direction. \-The output of the \-Quad\-Encoder class is an integer that can count either up or down, and can go negative for reverse direction counting. \-When creating \-Quad\-Encoders, a direction is supplied that changes the sense of the output to make code more readable if the encoder is mounted such that forward movement generates negative values. \-Quadrature encoders have two digital outputs, an \-A \-Channel and a \-B \-Channel that are out of phase with each other to allow the \-F\-P\-G\-A to do direction sensing. 
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{classEncoder_ae47a6cd11da6de3a2b03f4456b98c39b}{\index{\-Encoder@{\-Encoder}!\-Encoder@{\-Encoder}}
+\index{\-Encoder@{\-Encoder}!Encoder@{\-Encoder}}
+\subsubsection[{\-Encoder}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Encoder\-::\-Encoder} (
+\begin{DoxyParamCaption}
+\item[{\-U\-I\-N\-T32}]{a\-Channel, }
+\item[{\-U\-I\-N\-T32}]{b\-Channel, }
+\item[{bool}]{reverse\-Direction = {\ttfamily false}, }
+\item[{\-Encoding\-Type}]{encoding\-Type = {\ttfamily k4\-X}}
+\end{DoxyParamCaption}
+)}}\label{classEncoder_ae47a6cd11da6de3a2b03f4456b98c39b}
+\hyperlink{classEncoder}{\-Encoder} constructor. \-Construct a \hyperlink{classEncoder}{\-Encoder} given a and b channels assuming the default module. 
+\begin{DoxyParams}{\-Parameters}
+{\em a\-Channel} & \-The a channel digital input channel. \\
+\hline
+{\em b\-Channel} & \-The b channel digital input channel. \\
+\hline
+{\em reverse\-Direction} & represents the orientation of the encoder and inverts the output values if necessary so forward represents positive values. \\
+\hline
+{\em encoding\-Type} & either k1\-X, k2\-X, or k4\-X to indicate 1\-X, 2\-X or 4\-X decoding. \-If 4\-X is selected, then an encoder \-F\-P\-G\-A object is used and the returned counts will be 4x the encoder spec'd value since all rising and falling edges are counted. \-If 1\-X or 2\-X are selected then a counter object will be used and the returned value will either exactly match the spec'd count or be double (2x) the spec'd count. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classEncoder_a6969b68195dfba60d3b87a38847400fa}{\index{\-Encoder@{\-Encoder}!\-Encoder@{\-Encoder}}
+\index{\-Encoder@{\-Encoder}!Encoder@{\-Encoder}}
+\subsubsection[{\-Encoder}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Encoder\-::\-Encoder} (
+\begin{DoxyParamCaption}
+\item[{\-U\-I\-N\-T32}]{a\-Slot, }
+\item[{\-U\-I\-N\-T32}]{a\-Channel, }
+\item[{\-U\-I\-N\-T32}]{b\-Slot, }
+\item[{\-U\-I\-N\-T32}]{b\-Channel, }
+\item[{bool}]{reverse\-Direction = {\ttfamily false}, }
+\item[{\-Encoding\-Type}]{encoding\-Type = {\ttfamily k4\-X}}
+\end{DoxyParamCaption}
+)}}\label{classEncoder_a6969b68195dfba60d3b87a38847400fa}
+\hyperlink{classEncoder}{\-Encoder} constructor. \-Construct a \hyperlink{classEncoder}{\-Encoder} given a and b modules and channels fully specified. 
+\begin{DoxyParams}{\-Parameters}
+{\em a\-Slot} & \-The a channel digital input module. \\
+\hline
+{\em a\-Channel} & \-The a channel digital input channel. \\
+\hline
+{\em b\-Slot} & \-The b channel digital input module. \\
+\hline
+{\em b\-Channel} & \-The b channel digital input channel. \\
+\hline
+{\em reverse\-Direction} & represents the orientation of the encoder and inverts the output values if necessary so forward represents positive values. \\
+\hline
+{\em encoding\-Type} & either k1\-X, k2\-X, or k4\-X to indicate 1\-X, 2\-X or 4\-X decoding. \-If 4\-X is selected, then an encoder \-F\-P\-G\-A object is used and the returned counts will be 4x the encoder spec'd value since all rising and falling edges are counted. \-If 1\-X or 2\-X are selected then a counter object will be used and the returned value will either exactly match the spec'd count or be double (2x) the spec'd count. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classEncoder_aa5f1987f6278c0b45c801b129f8222c9}{\index{\-Encoder@{\-Encoder}!\-Encoder@{\-Encoder}}
+\index{\-Encoder@{\-Encoder}!Encoder@{\-Encoder}}
+\subsubsection[{\-Encoder}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Encoder\-::\-Encoder} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Digital\-Source} $\ast$}]{a\-Source, }
+\item[{{\bf \-Digital\-Source} $\ast$}]{b\-Source, }
+\item[{bool}]{reverse\-Direction = {\ttfamily false}, }
+\item[{\-Encoding\-Type}]{encoding\-Type = {\ttfamily k4\-X}}
+\end{DoxyParamCaption}
+)}}\label{classEncoder_aa5f1987f6278c0b45c801b129f8222c9}
+\hyperlink{classEncoder}{\-Encoder} constructor. \-Construct a \hyperlink{classEncoder}{\-Encoder} given a and b channels as digital inputs. \-This is used in the case where the digital inputs are shared. \-The \hyperlink{classEncoder}{\-Encoder} class will not allocate the digital inputs and assume that they already are counted. 
+\begin{DoxyParams}{\-Parameters}
+{\em a\-Source} & \-The source that should be used for the a channel. \\
+\hline
+{\em b\-Source} & the source that should be used for the b channel. \\
+\hline
+{\em reverse\-Direction} & represents the orientation of the encoder and inverts the output values if necessary so forward represents positive values. \\
+\hline
+{\em encoding\-Type} & either k1\-X, k2\-X, or k4\-X to indicate 1\-X, 2\-X or 4\-X decoding. \-If 4\-X is selected, then an encoder \-F\-P\-G\-A object is used and the returned counts will be 4x the encoder spec'd value since all rising and falling edges are counted. \-If 1\-X or 2\-X are selected then a counter object will be used and the returned value will either exactly match the spec'd count or be double (2x) the spec'd count. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classEncoder_a3a6d83c9e78a0bef6990558e8cf676d4}{\index{\-Encoder@{\-Encoder}!\-Encoder@{\-Encoder}}
+\index{\-Encoder@{\-Encoder}!Encoder@{\-Encoder}}
+\subsubsection[{\-Encoder}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Encoder\-::\-Encoder} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Digital\-Source} \&}]{a\-Source, }
+\item[{{\bf \-Digital\-Source} \&}]{b\-Source, }
+\item[{bool}]{reverse\-Direction = {\ttfamily false}, }
+\item[{\-Encoding\-Type}]{encoding\-Type = {\ttfamily k4\-X}}
+\end{DoxyParamCaption}
+)}}\label{classEncoder_a3a6d83c9e78a0bef6990558e8cf676d4}
+\hyperlink{classEncoder}{\-Encoder} constructor. \-Construct a \hyperlink{classEncoder}{\-Encoder} given a and b channels as digital inputs. \-This is used in the case where the digital inputs are shared. \-The \hyperlink{classEncoder}{\-Encoder} class will not allocate the digital inputs and assume that they already are counted. 
+\begin{DoxyParams}{\-Parameters}
+{\em a\-Source} & \-The source that should be used for the a channel. \\
+\hline
+{\em b\-Source} & the source that should be used for the b channel. \\
+\hline
+{\em reverse\-Direction} & represents the orientation of the encoder and inverts the output values if necessary so forward represents positive values. \\
+\hline
+{\em encoding\-Type} & either k1\-X, k2\-X, or k4\-X to indicate 1\-X, 2\-X or 4\-X decoding. \-If 4\-X is selected, then an encoder \-F\-P\-G\-A object is used and the returned counts will be 4x the encoder spec'd value since all rising and falling edges are counted. \-If 1\-X or 2\-X are selected then a counter object will be used and the returned value will either exactly match the spec'd count or be double (2x) the spec'd count. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classEncoder_a87cc8067c98c0ab2134dee3822e3b250}{\index{\-Encoder@{\-Encoder}!$\sim$\-Encoder@{$\sim$\-Encoder}}
+\index{$\sim$\-Encoder@{$\sim$\-Encoder}!Encoder@{\-Encoder}}
+\subsubsection[{$\sim$\-Encoder}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Encoder\-::$\sim$\-Encoder} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{classEncoder_a87cc8067c98c0ab2134dee3822e3b250}
+\-Free the resources for an \hyperlink{classEncoder}{\-Encoder}. \-Frees the \-F\-P\-G\-A resources associated with an \hyperlink{classEncoder}{\-Encoder}. 
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classEncoder_a4631259e214b2827220c9baff25e6891}{\index{\-Encoder@{\-Encoder}!\-Get@{\-Get}}
+\index{\-Get@{\-Get}!Encoder@{\-Encoder}}
+\subsubsection[{\-Get}]{\setlength{\rightskip}{0pt plus 5cm}\-I\-N\-T32 {\bf \-Encoder\-::\-Get} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{classEncoder_a4631259e214b2827220c9baff25e6891}
+\-Gets the current count. \-Returns the current count on the \hyperlink{classEncoder}{\-Encoder}. \-This method compensates for the decoding type.
+
+\begin{DoxyReturn}{\-Returns}
+\-Current count from the \hyperlink{classEncoder}{\-Encoder} adjusted for the 1x, 2x, or 4x scale factor. 
+\end{DoxyReturn}
+
+
+\-Implements \hyperlink{classCounterBase}{\-Counter\-Base}.
+
+\hypertarget{classEncoder_a135a248f9e69f99baa7c4ab8eaf66eb2}{\index{\-Encoder@{\-Encoder}!\-Get\-Direction@{\-Get\-Direction}}
+\index{\-Get\-Direction@{\-Get\-Direction}!Encoder@{\-Encoder}}
+\subsubsection[{\-Get\-Direction}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Encoder\-::\-Get\-Direction} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{classEncoder_a135a248f9e69f99baa7c4ab8eaf66eb2}
+\-The last direction the encoder value changed. \begin{DoxyReturn}{\-Returns}
+\-The last direction the encoder value changed. 
+\end{DoxyReturn}
+
+
+\-Implements \hyperlink{classCounterBase}{\-Counter\-Base}.
+
+\hypertarget{classEncoder_a523cc5a0cbd52f937f2a25a14185bc22}{\index{\-Encoder@{\-Encoder}!\-Get\-Distance@{\-Get\-Distance}}
+\index{\-Get\-Distance@{\-Get\-Distance}!Encoder@{\-Encoder}}
+\subsubsection[{\-Get\-Distance}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf \-Encoder\-::\-Get\-Distance} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classEncoder_a523cc5a0cbd52f937f2a25a14185bc22}
+\-Get the distance the robot has driven since the last reset.
+
+\begin{DoxyReturn}{\-Returns}
+\-The distance driven since the last reset as scaled by the value from \hyperlink{classEncoder_a0bfacc84063e402077f1f620ea863ce5}{\-Set\-Distance\-Per\-Pulse()}. 
+\end{DoxyReturn}
+\hypertarget{classEncoder_a9825883787337876f6d62951d7eaac24}{\index{\-Encoder@{\-Encoder}!\-Get\-Period@{\-Get\-Period}}
+\index{\-Get\-Period@{\-Get\-Period}!Encoder@{\-Encoder}}
+\subsubsection[{\-Get\-Period}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf \-Encoder\-::\-Get\-Period} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{classEncoder_a9825883787337876f6d62951d7eaac24}
+\-Returns the period of the most recent pulse. \-Returns the period of the most recent \hyperlink{classEncoder}{\-Encoder} pulse in seconds. \-This method compenstates for the decoding type.
+
+\begin{DoxyRefDesc}{\-Deprecated}
+\item[\hyperlink{deprecated__deprecated000004}{\-Deprecated}]\-Use \hyperlink{classEncoder_a72423acddb85ee347fc213b8600843f7}{\-Get\-Rate()} in favor of this method. \-This returns unscaled periods and \hyperlink{classEncoder_a72423acddb85ee347fc213b8600843f7}{\-Get\-Rate()} scales using value from \hyperlink{classEncoder_a0bfacc84063e402077f1f620ea863ce5}{\-Set\-Distance\-Per\-Pulse()}.\end{DoxyRefDesc}
+
+
+\begin{DoxyReturn}{\-Returns}
+\-Period in seconds of the most recent pulse. 
+\end{DoxyReturn}
+
+
+\-Implements \hyperlink{classCounterBase}{\-Counter\-Base}.
+
+\hypertarget{classEncoder_a72423acddb85ee347fc213b8600843f7}{\index{\-Encoder@{\-Encoder}!\-Get\-Rate@{\-Get\-Rate}}
+\index{\-Get\-Rate@{\-Get\-Rate}!Encoder@{\-Encoder}}
+\subsubsection[{\-Get\-Rate}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf \-Encoder\-::\-Get\-Rate} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classEncoder_a72423acddb85ee347fc213b8600843f7}
+\-Get the current rate of the encoder. \-Units are distance per second as scaled by the value from \hyperlink{classEncoder_a0bfacc84063e402077f1f620ea863ce5}{\-Set\-Distance\-Per\-Pulse()}.
+
+\begin{DoxyReturn}{\-Returns}
+\-The current rate of the encoder. 
+\end{DoxyReturn}
+\hypertarget{classEncoder_a59c47ec9ef74ec6e414911a5fd6931d0}{\index{\-Encoder@{\-Encoder}!\-Get\-Raw@{\-Get\-Raw}}
+\index{\-Get\-Raw@{\-Get\-Raw}!Encoder@{\-Encoder}}
+\subsubsection[{\-Get\-Raw}]{\setlength{\rightskip}{0pt plus 5cm}\-I\-N\-T32 {\bf \-Encoder\-::\-Get\-Raw} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classEncoder_a59c47ec9ef74ec6e414911a5fd6931d0}
+\-Gets the raw value from the encoder. \-The raw value is the actual count unscaled by the 1x, 2x, or 4x scale factor. \begin{DoxyReturn}{\-Returns}
+\-Current raw count from the encoder 
+\end{DoxyReturn}
+\hypertarget{classEncoder_ad55bea74aa76140ea048d22bda8de855}{\index{\-Encoder@{\-Encoder}!\-Get\-Stopped@{\-Get\-Stopped}}
+\index{\-Get\-Stopped@{\-Get\-Stopped}!Encoder@{\-Encoder}}
+\subsubsection[{\-Get\-Stopped}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Encoder\-::\-Get\-Stopped} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{classEncoder_ad55bea74aa76140ea048d22bda8de855}
+\-Determine if the encoder is stopped. \-Using the \-Max\-Period value, a boolean is returned that is true if the encoder is considered stopped and false if it is still moving. \-A stopped encoder is one where the most recent pulse width exceeds the \-Max\-Period. \begin{DoxyReturn}{\-Returns}
+\-True if the encoder is considered stopped. 
+\end{DoxyReturn}
+
+
+\-Implements \hyperlink{classCounterBase}{\-Counter\-Base}.
+
+\hypertarget{classEncoder_a08665d9e47c9fa77606dfe8611612e73}{\index{\-Encoder@{\-Encoder}!\-P\-I\-D\-Get@{\-P\-I\-D\-Get}}
+\index{\-P\-I\-D\-Get@{\-P\-I\-D\-Get}!Encoder@{\-Encoder}}
+\subsubsection[{\-P\-I\-D\-Get}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf \-Encoder\-::\-P\-I\-D\-Get} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{classEncoder_a08665d9e47c9fa77606dfe8611612e73}
+\-Implement the \hyperlink{classPIDSource}{\-P\-I\-D\-Source} interface.
+
+\begin{DoxyReturn}{\-Returns}
+\-The current value of the selected source parameter. 
+\end{DoxyReturn}
+
+
+\-Implements \hyperlink{classPIDSource}{\-P\-I\-D\-Source}.
+
+\hypertarget{classEncoder_a4375bf4d88d56f5f5d09860f9062d691}{\index{\-Encoder@{\-Encoder}!\-Reset@{\-Reset}}
+\index{\-Reset@{\-Reset}!Encoder@{\-Encoder}}
+\subsubsection[{\-Reset}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Encoder\-::\-Reset} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{classEncoder_a4375bf4d88d56f5f5d09860f9062d691}
+\-Reset the \hyperlink{classEncoder}{\-Encoder} distance to zero. \-Resets the current count to zero on the encoder. 
+
+\-Implements \hyperlink{classCounterBase}{\-Counter\-Base}.
+
+\hypertarget{classEncoder_a0bfacc84063e402077f1f620ea863ce5}{\index{\-Encoder@{\-Encoder}!\-Set\-Distance\-Per\-Pulse@{\-Set\-Distance\-Per\-Pulse}}
+\index{\-Set\-Distance\-Per\-Pulse@{\-Set\-Distance\-Per\-Pulse}!Encoder@{\-Encoder}}
+\subsubsection[{\-Set\-Distance\-Per\-Pulse}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Encoder\-::\-Set\-Distance\-Per\-Pulse} (
+\begin{DoxyParamCaption}
+\item[{double}]{distance\-Per\-Pulse}
+\end{DoxyParamCaption}
+)}}\label{classEncoder_a0bfacc84063e402077f1f620ea863ce5}
+\-Set the distance per pulse for this encoder. \-This sets the multiplier used to determine the distance driven based on the count value from the encoder. \-Do not include the decoding type in this scale. \-The library already compensates for the decoding type. \-Set this value based on the encoder's rated \-Pulses per \-Revolution and factor in gearing reductions following the encoder shaft. \-This distance can be in any units you like, linear or angular.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em distance\-Per\-Pulse} & \-The scale factor that will be used to convert pulses to useful units. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classEncoder_a53e9481bd248b04a00809a3ea69d97c1}{\index{\-Encoder@{\-Encoder}!\-Set\-Max\-Period@{\-Set\-Max\-Period}}
+\index{\-Set\-Max\-Period@{\-Set\-Max\-Period}!Encoder@{\-Encoder}}
+\subsubsection[{\-Set\-Max\-Period}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Encoder\-::\-Set\-Max\-Period} (
+\begin{DoxyParamCaption}
+\item[{double}]{max\-Period}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{classEncoder_a53e9481bd248b04a00809a3ea69d97c1}
+\-Sets the maximum period for stopped detection. \-Sets the value that represents the maximum period of the \hyperlink{classEncoder}{\-Encoder} before it will assume that the attached device is stopped. \-This timeout allows users to determine if the wheels or other shaft has stopped rotating. \-This method compensates for the decoding type.
+
+\begin{DoxyRefDesc}{\-Deprecated}
+\item[\hyperlink{deprecated__deprecated000005}{\-Deprecated}]\-Use \hyperlink{classEncoder_aed57d1224b55a28c666f2888102efbec}{\-Set\-Min\-Rate()} in favor of this method. \-This takes unscaled periods and \hyperlink{classEncoder_aed57d1224b55a28c666f2888102efbec}{\-Set\-Min\-Rate()} scales using value from \hyperlink{classEncoder_a0bfacc84063e402077f1f620ea863ce5}{\-Set\-Distance\-Per\-Pulse()}.\end{DoxyRefDesc}
+
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em max\-Period} & \-The maximum time between rising and falling edges before the \-F\-P\-G\-A will report the device stopped. \-This is expressed in seconds. \\
+\hline
+\end{DoxyParams}
+
+
+\-Implements \hyperlink{classCounterBase}{\-Counter\-Base}.
+
+\hypertarget{classEncoder_aed57d1224b55a28c666f2888102efbec}{\index{\-Encoder@{\-Encoder}!\-Set\-Min\-Rate@{\-Set\-Min\-Rate}}
+\index{\-Set\-Min\-Rate@{\-Set\-Min\-Rate}!Encoder@{\-Encoder}}
+\subsubsection[{\-Set\-Min\-Rate}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Encoder\-::\-Set\-Min\-Rate} (
+\begin{DoxyParamCaption}
+\item[{double}]{min\-Rate}
+\end{DoxyParamCaption}
+)}}\label{classEncoder_aed57d1224b55a28c666f2888102efbec}
+\-Set the minimum rate of the device before the hardware reports it stopped.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em min\-Rate} & \-The minimum rate. \-The units are in distance per second as scaled by the value from \hyperlink{classEncoder_a0bfacc84063e402077f1f620ea863ce5}{\-Set\-Distance\-Per\-Pulse()}. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classEncoder_a1254bae484d9ac5d794c760d097e10b9}{\index{\-Encoder@{\-Encoder}!\-Set\-P\-I\-D\-Source\-Parameter@{\-Set\-P\-I\-D\-Source\-Parameter}}
+\index{\-Set\-P\-I\-D\-Source\-Parameter@{\-Set\-P\-I\-D\-Source\-Parameter}!Encoder@{\-Encoder}}
+\subsubsection[{\-Set\-P\-I\-D\-Source\-Parameter}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Encoder\-::\-Set\-P\-I\-D\-Source\-Parameter} (
+\begin{DoxyParamCaption}
+\item[{\-P\-I\-D\-Source\-Parameter}]{pid\-Source}
+\end{DoxyParamCaption}
+)}}\label{classEncoder_a1254bae484d9ac5d794c760d097e10b9}
+\-Set which parameter of the encoder you are using as a process control variable.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em pid\-Source} & \-An enum to select the parameter. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classEncoder_aefeeb7018f6f8ee57d824577c1c31f42}{\index{\-Encoder@{\-Encoder}!\-Set\-Reverse\-Direction@{\-Set\-Reverse\-Direction}}
+\index{\-Set\-Reverse\-Direction@{\-Set\-Reverse\-Direction}!Encoder@{\-Encoder}}
+\subsubsection[{\-Set\-Reverse\-Direction}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Encoder\-::\-Set\-Reverse\-Direction} (
+\begin{DoxyParamCaption}
+\item[{bool}]{reverse\-Direction}
+\end{DoxyParamCaption}
+)}}\label{classEncoder_aefeeb7018f6f8ee57d824577c1c31f42}
+\-Set the direction sensing for this encoder. \-This sets the direction sensing on the encoder so that it could count in the correct software direction regardless of the mounting. 
+\begin{DoxyParams}{\-Parameters}
+{\em reverse\-Direction} & true if the encoder direction should be reversed \\
+\hline
+\end{DoxyParams}
+\hypertarget{classEncoder_ac998caf5c4685e1497cac25f25534c9d}{\index{\-Encoder@{\-Encoder}!\-Start@{\-Start}}
+\index{\-Start@{\-Start}!Encoder@{\-Encoder}}
+\subsubsection[{\-Start}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Encoder\-::\-Start} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{classEncoder_ac998caf5c4685e1497cac25f25534c9d}
+\-Start the \hyperlink{classEncoder}{\-Encoder}. \-Starts counting pulses on the \hyperlink{classEncoder}{\-Encoder} device. 
+
+\-Implements \hyperlink{classCounterBase}{\-Counter\-Base}.
+
+\hypertarget{classEncoder_a2b4d86aa679b2b305739165ce24d0df0}{\index{\-Encoder@{\-Encoder}!\-Stop@{\-Stop}}
+\index{\-Stop@{\-Stop}!Encoder@{\-Encoder}}
+\subsubsection[{\-Stop}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Encoder\-::\-Stop} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{classEncoder_a2b4d86aa679b2b305739165ce24d0df0}
+\-Stops counting pulses on the \hyperlink{classEncoder}{\-Encoder} device. \-The value is not changed. 
+
+\-Implements \hyperlink{classCounterBase}{\-Counter\-Base}.
+
+
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+\-Encoder.\-h\item 
+\-Encoder.\-cpp\end{DoxyCompactItemize}

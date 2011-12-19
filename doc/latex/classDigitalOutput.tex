@@ -1,0 +1,257 @@
+\hypertarget{classDigitalOutput}{\section{\-Digital\-Output \-Class \-Reference}
+\label{classDigitalOutput}\index{\-Digital\-Output@{\-Digital\-Output}}
+}
+
+
+{\ttfamily \#include $<$\-Digital\-Output.\-h$>$}
+
+\-Inheritance diagram for \-Digital\-Output\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=5.000000cm]{classDigitalOutput}
+\end{center}
+\end{figure}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classDigitalOutput_ac1c585e61a1a1ae2c79845063b596725}{\-Digital\-Output} (\-U\-I\-N\-T32 channel)
+\item 
+\hyperlink{classDigitalOutput_af1649cff7e0d1f0c6195df263fba5c06}{\-Digital\-Output} (\-U\-I\-N\-T32 slot, \-U\-I\-N\-T32 channel)
+\item 
+virtual \hyperlink{classDigitalOutput_a442e379ebfbd2939d568809dad9c0ba2}{$\sim$\-Digital\-Output} ()
+\item 
+void \hyperlink{classDigitalOutput_af818325de1365e6b3902e64d7e902d72}{\-Set} (\-U\-I\-N\-T32 value)
+\item 
+\-U\-I\-N\-T32 \hyperlink{classDigitalOutput_a96c2d7c066de133bc4353251ddbbebf5}{\-Get\-Channel} ()
+\item 
+void \hyperlink{classDigitalOutput_a02c70b0de12b60f4d931cdc59e5e3bed}{\-Pulse} (float length)
+\item 
+bool \hyperlink{classDigitalOutput_ae7eeb94537b4b75891c9b93f380cc60d}{\-Is\-Pulsing} ()
+\item 
+void \hyperlink{classDigitalOutput_ad02dd24082f2b19215ee3dba04e54cd9}{\-Set\-P\-W\-M\-Rate} (float rate)
+\item 
+void \hyperlink{classDigitalOutput_a89d710e1c8968f956bafe63321728741}{\-Enable\-P\-W\-M} (float initial\-Duty\-Cycle)
+\item 
+void \hyperlink{classDigitalOutput_aa50319d3ffed532b1adc2243e7d2cdea}{\-Disable\-P\-W\-M} ()
+\item 
+void \hyperlink{classDigitalOutput_a21ce143ed578be81d04d66c0f5ef1800}{\-Update\-Duty\-Cycle} (float duty\-Cycle)
+\item 
+virtual \-U\-I\-N\-T32 \hyperlink{classDigitalOutput_a51540582af4f1ebb04c19e0256e0cbfd}{\-Get\-Channel\-For\-Routing} ()
+\item 
+virtual \-U\-I\-N\-T32 \hyperlink{classDigitalOutput_aa32b0d9370a8dca3970a09b38d0bb434}{\-Get\-Module\-For\-Routing} ()
+\item 
+virtual bool \hyperlink{classDigitalOutput_a5385027e23524f1872c5a091a2b98501}{\-Get\-Analog\-Trigger\-For\-Routing} ()
+\item 
+virtual void \hyperlink{classDigitalOutput_a7b6b75adbb177a08519ab3928f6ff625}{\-Request\-Interrupts} (t\-Interrupt\-Handler handler, void $\ast$param)
+\item 
+virtual void \hyperlink{classDigitalOutput_a8e0e5a3de7d43097e99f6ea885f43ece}{\-Request\-Interrupts} ()
+\item 
+\hypertarget{classDigitalOutput_a1aeededcacfa0d99f29b72bfaed873f3}{void {\bfseries \-Set\-Up\-Source\-Edge} (bool rising\-Edge, bool falling\-Edge)}\label{classDigitalOutput_a1aeededcacfa0d99f29b72bfaed873f3}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-Class to write to digital outputs. \-Write values to the digital output channels. \-Other devices implemented elsewhere will allocate channels automatically so for those devices it shouldn't be done here. 
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{classDigitalOutput_ac1c585e61a1a1ae2c79845063b596725}{\index{\-Digital\-Output@{\-Digital\-Output}!\-Digital\-Output@{\-Digital\-Output}}
+\index{\-Digital\-Output@{\-Digital\-Output}!DigitalOutput@{\-Digital\-Output}}
+\subsubsection[{\-Digital\-Output}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Digital\-Output\-::\-Digital\-Output} (
+\begin{DoxyParamCaption}
+\item[{\-U\-I\-N\-T32}]{channel}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}explicit\mbox{]}}}}\label{classDigitalOutput_ac1c585e61a1a1ae2c79845063b596725}
+\-Create an instance of a digital output. \-Create a digital output given a channel. \-The default module is used. \hypertarget{classDigitalOutput_af1649cff7e0d1f0c6195df263fba5c06}{\index{\-Digital\-Output@{\-Digital\-Output}!\-Digital\-Output@{\-Digital\-Output}}
+\index{\-Digital\-Output@{\-Digital\-Output}!DigitalOutput@{\-Digital\-Output}}
+\subsubsection[{\-Digital\-Output}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Digital\-Output\-::\-Digital\-Output} (
+\begin{DoxyParamCaption}
+\item[{\-U\-I\-N\-T32}]{slot, }
+\item[{\-U\-I\-N\-T32}]{channel}
+\end{DoxyParamCaption}
+)}}\label{classDigitalOutput_af1649cff7e0d1f0c6195df263fba5c06}
+\-Create an instance of a digital output. \-Create an instance of a digital output given a slot and channel. \hypertarget{classDigitalOutput_a442e379ebfbd2939d568809dad9c0ba2}{\index{\-Digital\-Output@{\-Digital\-Output}!$\sim$\-Digital\-Output@{$\sim$\-Digital\-Output}}
+\index{$\sim$\-Digital\-Output@{$\sim$\-Digital\-Output}!DigitalOutput@{\-Digital\-Output}}
+\subsubsection[{$\sim$\-Digital\-Output}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Digital\-Output\-::$\sim$\-Digital\-Output} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{classDigitalOutput_a442e379ebfbd2939d568809dad9c0ba2}
+\-Free the resources associated with a digital output. 
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classDigitalOutput_aa50319d3ffed532b1adc2243e7d2cdea}{\index{\-Digital\-Output@{\-Digital\-Output}!\-Disable\-P\-W\-M@{\-Disable\-P\-W\-M}}
+\index{\-Disable\-P\-W\-M@{\-Disable\-P\-W\-M}!DigitalOutput@{\-Digital\-Output}}
+\subsubsection[{\-Disable\-P\-W\-M}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Digital\-Output\-::\-Disable\-P\-W\-M} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classDigitalOutput_aa50319d3ffed532b1adc2243e7d2cdea}
+\-Change this line from a \hyperlink{classPWM}{\-P\-W\-M} output back to a static \-Digital \-Output line.
+
+\-Free up one of the 4 \-D\-O \hyperlink{classPWM}{\-P\-W\-M} generator resources that were in use. \hypertarget{classDigitalOutput_a89d710e1c8968f956bafe63321728741}{\index{\-Digital\-Output@{\-Digital\-Output}!\-Enable\-P\-W\-M@{\-Enable\-P\-W\-M}}
+\index{\-Enable\-P\-W\-M@{\-Enable\-P\-W\-M}!DigitalOutput@{\-Digital\-Output}}
+\subsubsection[{\-Enable\-P\-W\-M}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Digital\-Output\-::\-Enable\-P\-W\-M} (
+\begin{DoxyParamCaption}
+\item[{float}]{initial\-Duty\-Cycle}
+\end{DoxyParamCaption}
+)}}\label{classDigitalOutput_a89d710e1c8968f956bafe63321728741}
+\-Enable a \hyperlink{classPWM}{\-P\-W\-M} \-Output on this line.
+
+\-Allocate one of the 4 \-D\-O \hyperlink{classPWM}{\-P\-W\-M} generator resources from this module.
+
+\-Supply the initial duty-\/cycle to output so as to avoid a glitch when first starting.
+
+\-The resolution of the duty cycle is 8-\/bit for low frequencies (1k\-Hz or less) but is reduced the higher the frequency of the \hyperlink{classPWM}{\-P\-W\-M} signal is.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em initial\-Duty\-Cycle} & \-The duty-\/cycle to start generating. \mbox{[}0..1\mbox{]} \\
+\hline
+\end{DoxyParams}
+\hypertarget{classDigitalOutput_a5385027e23524f1872c5a091a2b98501}{\index{\-Digital\-Output@{\-Digital\-Output}!\-Get\-Analog\-Trigger\-For\-Routing@{\-Get\-Analog\-Trigger\-For\-Routing}}
+\index{\-Get\-Analog\-Trigger\-For\-Routing@{\-Get\-Analog\-Trigger\-For\-Routing}!DigitalOutput@{\-Digital\-Output}}
+\subsubsection[{\-Get\-Analog\-Trigger\-For\-Routing}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Digital\-Output\-::\-Get\-Analog\-Trigger\-For\-Routing} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{classDigitalOutput_a5385027e23524f1872c5a091a2b98501}
+\begin{DoxyReturn}{\-Returns}
+\-The value to be written to the analog trigger field of a routing mux. 
+\end{DoxyReturn}
+
+
+\-Implements \hyperlink{classDigitalSource}{\-Digital\-Source}.
+
+\hypertarget{classDigitalOutput_a96c2d7c066de133bc4353251ddbbebf5}{\index{\-Digital\-Output@{\-Digital\-Output}!\-Get\-Channel@{\-Get\-Channel}}
+\index{\-Get\-Channel@{\-Get\-Channel}!DigitalOutput@{\-Digital\-Output}}
+\subsubsection[{\-Get\-Channel}]{\setlength{\rightskip}{0pt plus 5cm}\-U\-I\-N\-T32 {\bf \-Digital\-Output\-::\-Get\-Channel} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classDigitalOutput_a96c2d7c066de133bc4353251ddbbebf5}
+\begin{DoxyReturn}{\-Returns}
+\-The \-G\-P\-I\-O channel number that this object represents. 
+\end{DoxyReturn}
+\hypertarget{classDigitalOutput_a51540582af4f1ebb04c19e0256e0cbfd}{\index{\-Digital\-Output@{\-Digital\-Output}!\-Get\-Channel\-For\-Routing@{\-Get\-Channel\-For\-Routing}}
+\index{\-Get\-Channel\-For\-Routing@{\-Get\-Channel\-For\-Routing}!DigitalOutput@{\-Digital\-Output}}
+\subsubsection[{\-Get\-Channel\-For\-Routing}]{\setlength{\rightskip}{0pt plus 5cm}\-U\-I\-N\-T32 {\bf \-Digital\-Output\-::\-Get\-Channel\-For\-Routing} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{classDigitalOutput_a51540582af4f1ebb04c19e0256e0cbfd}
+\begin{DoxyReturn}{\-Returns}
+\-The value to be written to the channel field of a routing mux. 
+\end{DoxyReturn}
+
+
+\-Implements \hyperlink{classDigitalSource}{\-Digital\-Source}.
+
+\hypertarget{classDigitalOutput_aa32b0d9370a8dca3970a09b38d0bb434}{\index{\-Digital\-Output@{\-Digital\-Output}!\-Get\-Module\-For\-Routing@{\-Get\-Module\-For\-Routing}}
+\index{\-Get\-Module\-For\-Routing@{\-Get\-Module\-For\-Routing}!DigitalOutput@{\-Digital\-Output}}
+\subsubsection[{\-Get\-Module\-For\-Routing}]{\setlength{\rightskip}{0pt plus 5cm}\-U\-I\-N\-T32 {\bf \-Digital\-Output\-::\-Get\-Module\-For\-Routing} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{classDigitalOutput_aa32b0d9370a8dca3970a09b38d0bb434}
+\begin{DoxyReturn}{\-Returns}
+\-The value to be written to the module field of a routing mux. 
+\end{DoxyReturn}
+
+
+\-Implements \hyperlink{classDigitalSource}{\-Digital\-Source}.
+
+\hypertarget{classDigitalOutput_ae7eeb94537b4b75891c9b93f380cc60d}{\index{\-Digital\-Output@{\-Digital\-Output}!\-Is\-Pulsing@{\-Is\-Pulsing}}
+\index{\-Is\-Pulsing@{\-Is\-Pulsing}!DigitalOutput@{\-Digital\-Output}}
+\subsubsection[{\-Is\-Pulsing}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Digital\-Output\-::\-Is\-Pulsing} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classDigitalOutput_ae7eeb94537b4b75891c9b93f380cc60d}
+\-Determine if the pulse is still going. \-Determine if a previously started pulse is still going. \hypertarget{classDigitalOutput_a02c70b0de12b60f4d931cdc59e5e3bed}{\index{\-Digital\-Output@{\-Digital\-Output}!\-Pulse@{\-Pulse}}
+\index{\-Pulse@{\-Pulse}!DigitalOutput@{\-Digital\-Output}}
+\subsubsection[{\-Pulse}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Digital\-Output\-::\-Pulse} (
+\begin{DoxyParamCaption}
+\item[{float}]{length}
+\end{DoxyParamCaption}
+)}}\label{classDigitalOutput_a02c70b0de12b60f4d931cdc59e5e3bed}
+\-Output a single pulse on the digital output line. \-Send a single pulse on the digital output line where the pulse diration is specified in seconds. \-Maximum pulse length is 0.\-0016 seconds. 
+\begin{DoxyParams}{\-Parameters}
+{\em length} & \-The pulselength in seconds \\
+\hline
+\end{DoxyParams}
+\hypertarget{classDigitalOutput_a7b6b75adbb177a08519ab3928f6ff625}{\index{\-Digital\-Output@{\-Digital\-Output}!\-Request\-Interrupts@{\-Request\-Interrupts}}
+\index{\-Request\-Interrupts@{\-Request\-Interrupts}!DigitalOutput@{\-Digital\-Output}}
+\subsubsection[{\-Request\-Interrupts}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Digital\-Output\-::\-Request\-Interrupts} (
+\begin{DoxyParamCaption}
+\item[{t\-Interrupt\-Handler}]{handler, }
+\item[{void $\ast$}]{param}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{classDigitalOutput_a7b6b75adbb177a08519ab3928f6ff625}
+\-Request interrupts asynchronously on this digital output. 
+\begin{DoxyParams}{\-Parameters}
+{\em handler} & \-The address of the interrupt handler function of type t\-Interrupt\-Handler that will be called whenever there is an interrupt on the digitial output port. \-Request interrupts in synchronus mode where the user program interrupt handler will be called when an interrupt occurs. \-The default is interrupt on rising edges only. \\
+\hline
+\end{DoxyParams}
+
+
+\-Implements \hyperlink{classDigitalSource_aa34b225d5dc38355ff8bd0a11b6113d3}{\-Digital\-Source}.
+
+\hypertarget{classDigitalOutput_a8e0e5a3de7d43097e99f6ea885f43ece}{\index{\-Digital\-Output@{\-Digital\-Output}!\-Request\-Interrupts@{\-Request\-Interrupts}}
+\index{\-Request\-Interrupts@{\-Request\-Interrupts}!DigitalOutput@{\-Digital\-Output}}
+\subsubsection[{\-Request\-Interrupts}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Digital\-Output\-::\-Request\-Interrupts} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{classDigitalOutput_a8e0e5a3de7d43097e99f6ea885f43ece}
+\-Request interrupts synchronously on this digital output. \-Request interrupts in synchronus mode where the user program will have to explicitly wait for the interrupt to occur. \-The default is interrupt on rising edges only. 
+
+\-Implements \hyperlink{classDigitalSource_a693e9521e21758c8d5f3d221dc9e9b5b}{\-Digital\-Source}.
+
+\hypertarget{classDigitalOutput_af818325de1365e6b3902e64d7e902d72}{\index{\-Digital\-Output@{\-Digital\-Output}!\-Set@{\-Set}}
+\index{\-Set@{\-Set}!DigitalOutput@{\-Digital\-Output}}
+\subsubsection[{\-Set}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Digital\-Output\-::\-Set} (
+\begin{DoxyParamCaption}
+\item[{\-U\-I\-N\-T32}]{value}
+\end{DoxyParamCaption}
+)}}\label{classDigitalOutput_af818325de1365e6b3902e64d7e902d72}
+\-Set the value of a digital output. \-Set the value of a digital output to either one (true) or zero (false). \hypertarget{classDigitalOutput_ad02dd24082f2b19215ee3dba04e54cd9}{\index{\-Digital\-Output@{\-Digital\-Output}!\-Set\-P\-W\-M\-Rate@{\-Set\-P\-W\-M\-Rate}}
+\index{\-Set\-P\-W\-M\-Rate@{\-Set\-P\-W\-M\-Rate}!DigitalOutput@{\-Digital\-Output}}
+\subsubsection[{\-Set\-P\-W\-M\-Rate}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Digital\-Output\-::\-Set\-P\-W\-M\-Rate} (
+\begin{DoxyParamCaption}
+\item[{float}]{rate}
+\end{DoxyParamCaption}
+)}}\label{classDigitalOutput_ad02dd24082f2b19215ee3dba04e54cd9}
+\-Change the \hyperlink{classPWM}{\-P\-W\-M} frequency of the \hyperlink{classPWM}{\-P\-W\-M} output on a \-Digital \-Output line.
+
+\-The valid range is from 0.\-6 \-Hz to 19 k\-Hz. \-The frequency resolution is logarithmic.
+
+\-There is only one \hyperlink{classPWM}{\-P\-W\-M} frequency per digital module.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em rate} & \-The frequency to output all digital output \hyperlink{classPWM}{\-P\-W\-M} signals on this module. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classDigitalOutput_a21ce143ed578be81d04d66c0f5ef1800}{\index{\-Digital\-Output@{\-Digital\-Output}!\-Update\-Duty\-Cycle@{\-Update\-Duty\-Cycle}}
+\index{\-Update\-Duty\-Cycle@{\-Update\-Duty\-Cycle}!DigitalOutput@{\-Digital\-Output}}
+\subsubsection[{\-Update\-Duty\-Cycle}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Digital\-Output\-::\-Update\-Duty\-Cycle} (
+\begin{DoxyParamCaption}
+\item[{float}]{duty\-Cycle}
+\end{DoxyParamCaption}
+)}}\label{classDigitalOutput_a21ce143ed578be81d04d66c0f5ef1800}
+\-Change the duty-\/cycle that is being generated on the line.
+
+\-The resolution of the duty cycle is 8-\/bit for low frequencies (1k\-Hz or less) but is reduced the higher the frequency of the \hyperlink{classPWM}{\-P\-W\-M} signal is.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em duty\-Cycle} & \-The duty-\/cycle to change to. \mbox{[}0..1\mbox{]} \\
+\hline
+\end{DoxyParams}
+
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+\-Digital\-Output.\-h\item 
+\-Digital\-Output.\-cpp\end{DoxyCompactItemize}

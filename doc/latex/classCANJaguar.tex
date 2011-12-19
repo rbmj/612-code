@@ -1,0 +1,892 @@
+\hypertarget{classCANJaguar}{\section{\-C\-A\-N\-Jaguar \-Class \-Reference}
+\label{classCANJaguar}\index{\-C\-A\-N\-Jaguar@{\-C\-A\-N\-Jaguar}}
+}
+
+
+{\ttfamily \#include $<$\-C\-A\-N\-Jaguar.\-h$>$}
+
+\-Inheritance diagram for \-C\-A\-N\-Jaguar\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classCANJaguar}
+\end{center}
+\end{figure}
+\subsection*{\-Public \-Types}
+\begin{DoxyCompactItemize}
+\item 
+enum {\bfseries \-Control\-Mode} \{ \*
+{\bfseries k\-Percent\-Vbus}, 
+{\bfseries k\-Current}, 
+{\bfseries k\-Speed}, 
+{\bfseries k\-Position}, 
+\*
+{\bfseries k\-Voltage}
+ \}
+\item 
+enum {\bfseries \-Faults} \{ {\bfseries k\-Current\-Fault} =  1, 
+{\bfseries k\-Temperature\-Fault} =  2, 
+{\bfseries k\-Bus\-Voltage\-Fault} =  4, 
+{\bfseries k\-Gate\-Driver\-Fault} =  8
+ \}
+\item 
+enum {\bfseries \-Limits} \{ {\bfseries k\-Forward\-Limit} =  1, 
+{\bfseries k\-Reverse\-Limit} =  2
+ \}
+\item 
+enum {\bfseries \-Position\-Reference} \{ {\bfseries k\-Pos\-Ref\-\_\-\-Quad\-Encoder} =  0, 
+{\bfseries k\-Pos\-Ref\-\_\-\-Potentiometer} =  1, 
+{\bfseries k\-Pos\-Ref\-\_\-\-None} =  0x\-F\-F
+ \}
+\item 
+enum {\bfseries \-Speed\-Reference} \{ {\bfseries k\-Speed\-Ref\-\_\-\-Encoder} =  0, 
+{\bfseries k\-Speed\-Ref\-\_\-\-Inv\-Encoder} =  2, 
+{\bfseries k\-Speed\-Ref\-\_\-\-Quad\-Encoder} =  3, 
+{\bfseries k\-Speed\-Ref\-\_\-\-None} =  0x\-F\-F
+ \}
+\item 
+enum {\bfseries \-Neutral\-Mode} \{ {\bfseries k\-Neutral\-Mode\-\_\-\-Jumper} =  0, 
+{\bfseries k\-Neutral\-Mode\-\_\-\-Brake} =  1, 
+{\bfseries k\-Neutral\-Mode\-\_\-\-Coast} =  2
+ \}
+\item 
+enum {\bfseries \-Limit\-Mode} \{ {\bfseries k\-Limit\-Mode\-\_\-\-Switch\-Inputs\-Only} =  0, 
+{\bfseries k\-Limit\-Mode\-\_\-\-Soft\-Position\-Limits} =  1
+ \}
+\end{DoxyCompactItemize}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classCANJaguar_a340969dc13d677bc2d5e35aa7f7b5138}{\-C\-A\-N\-Jaguar} (\-U\-I\-N\-T8 device\-Number, \-Control\-Mode control\-Mode=k\-Percent\-Vbus)
+\item 
+virtual float \hyperlink{classCANJaguar_a35f28a93acc83bcc482d481037389433}{\-Get} ()
+\item 
+virtual void \hyperlink{classCANJaguar_aa8a4f32b3c1839557cd73996693a116a}{\-Set} (float value, \-U\-I\-N\-T8 sync\-Group=0)
+\item 
+virtual void \hyperlink{classCANJaguar_a3dc0852859fb60499b609938b69e9252}{\-Disable} ()
+\item 
+virtual void \hyperlink{classCANJaguar_a2355d55f42083ab82870c79f742620e4}{\-P\-I\-D\-Write} (float output)
+\item 
+void \hyperlink{classCANJaguar_a581f44af48079151da32f6399e196c33}{\-Set\-Speed\-Reference} (\-Speed\-Reference reference)
+\item 
+\-Speed\-Reference \hyperlink{classCANJaguar_a453860ca7356cb42aa21958cbff30b82}{\-Get\-Speed\-Reference} (void)
+\item 
+void \hyperlink{classCANJaguar_ae99bbad1a99dcdd8f4620e4cc99705bf}{\-Set\-Position\-Reference} (\-Position\-Reference reference)
+\item 
+\-Position\-Reference \hyperlink{classCANJaguar_a3d73ad5f40fe5a471190263ccb5b5c97}{\-Get\-Position\-Reference} (void)
+\item 
+void \hyperlink{classCANJaguar_ae6650f4f7aea62f9df00056076b3d462}{\-Set\-P\-I\-D} (double p, double i, double d)
+\item 
+double \hyperlink{classCANJaguar_aba0dd36ac9faff31d16f78490edbe85d}{\-Get\-P} ()
+\item 
+double \hyperlink{classCANJaguar_affd66787becba69c8f9e5ffcb11f7ba1}{\-Get\-I} ()
+\item 
+double \hyperlink{classCANJaguar_ab8ddc893fde5f16e0c76684593c20758}{\-Get\-D} ()
+\item 
+void \hyperlink{classCANJaguar_af25bed87c7d97429b0472b52f92b186e}{\-Enable\-Control} (double encoder\-Initial\-Position=0.\-0)
+\item 
+void \hyperlink{classCANJaguar_a6bbbf784a74cf95f7b4a5660a3d53cc2}{\-Disable\-Control} ()
+\item 
+void \hyperlink{classCANJaguar_ababe0fdb6bdab82c95dcb9c0a9b660d0}{\-Change\-Control\-Mode} (\-Control\-Mode control\-Mode)
+\item 
+\-Control\-Mode \hyperlink{classCANJaguar_a0182b7175a6ea7e2d28dc6b331f7dbff}{\-Get\-Control\-Mode} ()
+\item 
+float \hyperlink{classCANJaguar_a9ab46336737e40a6d765f839cd43db61}{\-Get\-Bus\-Voltage} ()
+\item 
+float \hyperlink{classCANJaguar_a9c8ff9ed5747ce175a5215d2b18e973d}{\-Get\-Output\-Voltage} ()
+\item 
+float \hyperlink{classCANJaguar_a1845e946d4be9219d7b3ac3c6152f5b8}{\-Get\-Output\-Current} ()
+\item 
+float \hyperlink{classCANJaguar_aa58c2cc33eeebbb6684227c5500d7cbc}{\-Get\-Temperature} ()
+\item 
+double \hyperlink{classCANJaguar_a87df60fbda9e2cb8f6f8072f68476444}{\-Get\-Position} ()
+\item 
+double \hyperlink{classCANJaguar_afafb32f44cd1525e351615d6999f59f1}{\-Get\-Speed} ()
+\item 
+bool \hyperlink{classCANJaguar_a0f11a7f13319f448e493fad2dc47e71b}{\-Get\-Forward\-Limit\-O\-K} ()
+\item 
+bool \hyperlink{classCANJaguar_a0efb888bb3239cad4ea0f27890998dff}{\-Get\-Reverse\-Limit\-O\-K} ()
+\item 
+\-U\-I\-N\-T16 \hyperlink{classCANJaguar_a85127197e529c31e21c7f7dd601d1b29}{\-Get\-Faults} ()
+\item 
+bool \hyperlink{classCANJaguar_a37066e9210891a674ce80bee695c5ba5}{\-Get\-Power\-Cycled} ()
+\item 
+void \hyperlink{classCANJaguar_a73540797125ae698a72806f9cf10330d}{\-Set\-Voltage\-Ramp\-Rate} (double ramp\-Rate)
+\item 
+virtual \-U\-I\-N\-T32 \hyperlink{classCANJaguar_af0de370823437c4f9db998fcb009431e}{\-Get\-Firmware\-Version} ()
+\item 
+\-U\-I\-N\-T8 \hyperlink{classCANJaguar_a872d409492668ef44438dfe73bdb5efd}{\-Get\-Hardware\-Version} ()
+\item 
+void \hyperlink{classCANJaguar_a1f0512aa6c0b6eb60d37c3d8a3fd0f57}{\-Config\-Neutral\-Mode} (\-Neutral\-Mode mode)
+\item 
+void \hyperlink{classCANJaguar_a1b3155962cb795c6c5ee31e593ad97ec}{\-Config\-Encoder\-Codes\-Per\-Rev} (\-U\-I\-N\-T16 codes\-Per\-Rev)
+\item 
+void \hyperlink{classCANJaguar_a4c7f1f58c5dd5f3af20ed6867573df19}{\-Config\-Potentiometer\-Turns} (\-U\-I\-N\-T16 turns)
+\item 
+void \hyperlink{classCANJaguar_a388b3188432b3e7d7d73b29ba7e61b8f}{\-Config\-Soft\-Position\-Limits} (double forward\-Limit\-Position, double reverse\-Limit\-Position)
+\item 
+void \hyperlink{classCANJaguar_ae291e933f69ddd35a7b0da83520596d9}{\-Disable\-Soft\-Position\-Limits} ()
+\item 
+void \hyperlink{classCANJaguar_a82e172281e9c452d31b881693288a6ae}{\-Config\-Max\-Output\-Voltage} (double voltage)
+\item 
+void \hyperlink{classCANJaguar_a25d6360eb331a6e24b36cfbf8911e914}{\-Config\-Fault\-Time} (float fault\-Time)
+\item 
+\hypertarget{classCANJaguar_aa7de5a947804cc2233a8246b9801e025}{void {\bfseries \-Set\-Expiration} (float timeout)}\label{classCANJaguar_aa7de5a947804cc2233a8246b9801e025}
+
+\item 
+\hypertarget{classCANJaguar_afa39a3fa4e710f40466e47b51d3eb889}{float {\bfseries \-Get\-Expiration} ()}\label{classCANJaguar_afa39a3fa4e710f40466e47b51d3eb889}
+
+\item 
+\hypertarget{classCANJaguar_acd27267ca0452efd67384664ee8ce4c4}{bool {\bfseries \-Is\-Alive} ()}\label{classCANJaguar_acd27267ca0452efd67384664ee8ce4c4}
+
+\item 
+void \hyperlink{classCANJaguar_a5ce4840f1e80913836cfb2ddb2d7d50b}{\-Stop\-Motor} ()
+\item 
+\hypertarget{classCANJaguar_a7a74176fcaa2689cb28b43f6b01397ae}{bool {\bfseries \-Is\-Safety\-Enabled} ()}\label{classCANJaguar_a7a74176fcaa2689cb28b43f6b01397ae}
+
+\item 
+\hypertarget{classCANJaguar_a0a8faf4d9564c4d78dd3177b6dd66f90}{void {\bfseries \-Set\-Safety\-Enabled} (bool enabled)}\label{classCANJaguar_a0a8faf4d9564c4d78dd3177b6dd66f90}
+
+\end{DoxyCompactItemize}
+\subsection*{\-Static \-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{classCANJaguar_afbd06237b0fbdd5b35cdb7452937269e}{\-Update\-Sync\-Group} (\-U\-I\-N\-T8 sync\-Group)
+\end{DoxyCompactItemize}
+\subsection*{\-Static \-Public \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classCANJaguar_ad495131fc2f4345f5bb291b46cb10418}{static const \-I\-N\-T32 {\bfseries k\-Controller\-Rate} = 1000}\label{classCANJaguar_ad495131fc2f4345f5bb291b46cb10418}
+
+\item 
+\hypertarget{classCANJaguar_a20754925d6f0f3b20063fd469c275a54}{static const double {\bfseries k\-Approx\-Bus\-Voltage} = 12.\-0}\label{classCANJaguar_a20754925d6f0f3b20063fd469c275a54}
+
+\end{DoxyCompactItemize}
+\subsection*{\-Protected \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classCANJaguar_a2ae92b399f3ed7894c18216ab18de7cb}{\-U\-I\-N\-T8 {\bfseries pack\-Percentage} (\-U\-I\-N\-T8 $\ast$buffer, double value)}\label{classCANJaguar_a2ae92b399f3ed7894c18216ab18de7cb}
+
+\item 
+\hypertarget{classCANJaguar_acf94b677ffbeb4829698c8b48527b296}{\-U\-I\-N\-T8 {\bfseries pack\-F\-X\-P8\-\_\-8} (\-U\-I\-N\-T8 $\ast$buffer, double value)}\label{classCANJaguar_acf94b677ffbeb4829698c8b48527b296}
+
+\item 
+\hypertarget{classCANJaguar_a61dcba690fc6e4112025cdf6ad48e92c}{\-U\-I\-N\-T8 {\bfseries pack\-F\-X\-P16\-\_\-16} (\-U\-I\-N\-T8 $\ast$buffer, double value)}\label{classCANJaguar_a61dcba690fc6e4112025cdf6ad48e92c}
+
+\item 
+\hypertarget{classCANJaguar_ac9fdbc82dd563db0986da50e7ed5645f}{\-U\-I\-N\-T8 {\bfseries pack\-I\-N\-T16} (\-U\-I\-N\-T8 $\ast$buffer, \-I\-N\-T16 value)}\label{classCANJaguar_ac9fdbc82dd563db0986da50e7ed5645f}
+
+\item 
+\hypertarget{classCANJaguar_af4b4aca16cf31c567c2723b336e4d5c4}{\-U\-I\-N\-T8 {\bfseries pack\-I\-N\-T32} (\-U\-I\-N\-T8 $\ast$buffer, \-I\-N\-T32 value)}\label{classCANJaguar_af4b4aca16cf31c567c2723b336e4d5c4}
+
+\item 
+\hypertarget{classCANJaguar_a41db61754a1691983a07401162801f7c}{double {\bfseries unpack\-Percentage} (\-U\-I\-N\-T8 $\ast$buffer)}\label{classCANJaguar_a41db61754a1691983a07401162801f7c}
+
+\item 
+\hypertarget{classCANJaguar_a0fa1e85c76cf2f00c3536998f1a1fe7b}{double {\bfseries unpack\-F\-X\-P8\-\_\-8} (\-U\-I\-N\-T8 $\ast$buffer)}\label{classCANJaguar_a0fa1e85c76cf2f00c3536998f1a1fe7b}
+
+\item 
+\hypertarget{classCANJaguar_afea6d8c7d2b715eab607ffb62ac5e166}{double {\bfseries unpack\-F\-X\-P16\-\_\-16} (\-U\-I\-N\-T8 $\ast$buffer)}\label{classCANJaguar_afea6d8c7d2b715eab607ffb62ac5e166}
+
+\item 
+\hypertarget{classCANJaguar_a303bb788587002180deca44df0bb079b}{\-I\-N\-T16 {\bfseries unpack\-I\-N\-T16} (\-U\-I\-N\-T8 $\ast$buffer)}\label{classCANJaguar_a303bb788587002180deca44df0bb079b}
+
+\item 
+\hypertarget{classCANJaguar_a14598f98ca14a4914f54d5d896dc0f8b}{\-I\-N\-T32 {\bfseries unpack\-I\-N\-T32} (\-U\-I\-N\-T8 $\ast$buffer)}\label{classCANJaguar_a14598f98ca14a4914f54d5d896dc0f8b}
+
+\item 
+virtual void \hyperlink{classCANJaguar_adbe1668f13ba9cc7275c694c5aae01e0}{set\-Transaction} (\-U\-I\-N\-T32 message\-I\-D, const \-U\-I\-N\-T8 $\ast$data, \-U\-I\-N\-T8 data\-Size)
+\item 
+virtual void \hyperlink{classCANJaguar_a43eb6ab169c31a833dc38fd95eeca06e}{get\-Transaction} (\-U\-I\-N\-T32 message\-I\-D, \-U\-I\-N\-T8 $\ast$data, \-U\-I\-N\-T8 $\ast$data\-Size)
+\end{DoxyCompactItemize}
+\subsection*{\-Static \-Protected \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \-I\-N\-T32 \hyperlink{classCANJaguar_a987e2191d5fc2500c8716aae68b0c567}{send\-Message} (\-U\-I\-N\-T32 message\-I\-D, const \-U\-I\-N\-T8 $\ast$data, \-U\-I\-N\-T8 data\-Size)
+\item 
+static \-I\-N\-T32 \hyperlink{classCANJaguar_adaa8089e65ba5784df5eda9cf753eb8f}{receive\-Message} (\-U\-I\-N\-T32 $\ast$message\-I\-D, \-U\-I\-N\-T8 $\ast$data, \-U\-I\-N\-T8 $\ast$data\-Size, float timeout=0.\-01)
+\end{DoxyCompactItemize}
+\subsection*{\-Protected \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classCANJaguar_a1ec39f805b70e0b890b2d8477dac3513}{\-U\-I\-N\-T8 {\bfseries m\-\_\-device\-Number}}\label{classCANJaguar_a1ec39f805b70e0b890b2d8477dac3513}
+
+\item 
+\hypertarget{classCANJaguar_a255c79e2d98242b82719bd0b8c8e564e}{\-Control\-Mode {\bfseries m\-\_\-control\-Mode}}\label{classCANJaguar_a255c79e2d98242b82719bd0b8c8e564e}
+
+\item 
+\hypertarget{classCANJaguar_a0bf021133f8fa50fa5ca7542a42c7675}{\-S\-E\-M\-\_\-\-I\-D {\bfseries m\-\_\-transaction\-Semaphore}}\label{classCANJaguar_a0bf021133f8fa50fa5ca7542a42c7675}
+
+\item 
+\hypertarget{classCANJaguar_a2acc3a3074f73dedcd7f7d9032902adf}{double {\bfseries m\-\_\-max\-Output\-Voltage}}\label{classCANJaguar_a2acc3a3074f73dedcd7f7d9032902adf}
+
+\item 
+\hypertarget{classCANJaguar_ad84f27b89d83908933491f70397f971e}{\hyperlink{classMotorSafetyHelper}{\-Motor\-Safety\-Helper} $\ast$ {\bfseries m\-\_\-safety\-Helper}}\label{classCANJaguar_ad84f27b89d83908933491f70397f971e}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-Luminary \-Micro \hyperlink{classJaguar}{\-Jaguar} \-Speed \-Control 
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{classCANJaguar_a340969dc13d677bc2d5e35aa7f7b5138}{\index{\-C\-A\-N\-Jaguar@{\-C\-A\-N\-Jaguar}!\-C\-A\-N\-Jaguar@{\-C\-A\-N\-Jaguar}}
+\index{\-C\-A\-N\-Jaguar@{\-C\-A\-N\-Jaguar}!CANJaguar@{\-C\-A\-N\-Jaguar}}
+\subsubsection[{\-C\-A\-N\-Jaguar}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-C\-A\-N\-Jaguar\-::\-C\-A\-N\-Jaguar} (
+\begin{DoxyParamCaption}
+\item[{\-U\-I\-N\-T8}]{device\-Number, }
+\item[{\-Control\-Mode}]{control\-Mode = {\ttfamily k\-Percent\-Vbus}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}explicit\mbox{]}}}}\label{classCANJaguar_a340969dc13d677bc2d5e35aa7f7b5138}
+\-Constructor
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em device\-Number} & \-The the address of the \hyperlink{classJaguar}{\-Jaguar} on the \-C\-A\-N bus. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classCANJaguar_ababe0fdb6bdab82c95dcb9c0a9b660d0}{\index{\-C\-A\-N\-Jaguar@{\-C\-A\-N\-Jaguar}!\-Change\-Control\-Mode@{\-Change\-Control\-Mode}}
+\index{\-Change\-Control\-Mode@{\-Change\-Control\-Mode}!CANJaguar@{\-C\-A\-N\-Jaguar}}
+\subsubsection[{\-Change\-Control\-Mode}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-C\-A\-N\-Jaguar\-::\-Change\-Control\-Mode} (
+\begin{DoxyParamCaption}
+\item[{\-Control\-Mode}]{control\-Mode}
+\end{DoxyParamCaption}
+)}}\label{classCANJaguar_ababe0fdb6bdab82c95dcb9c0a9b660d0}
+\-Change the control mode of this \hyperlink{classJaguar}{\-Jaguar} object.
+
+\-After changing modes, configure any \-P\-I\-D constants or other settings needed and then \hyperlink{classCANJaguar_af25bed87c7d97429b0472b52f92b186e}{\-Enable\-Control()} to actually change the mode on the \hyperlink{classJaguar}{\-Jaguar}.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em control\-Mode} & \-The new mode. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classCANJaguar_a1b3155962cb795c6c5ee31e593ad97ec}{\index{\-C\-A\-N\-Jaguar@{\-C\-A\-N\-Jaguar}!\-Config\-Encoder\-Codes\-Per\-Rev@{\-Config\-Encoder\-Codes\-Per\-Rev}}
+\index{\-Config\-Encoder\-Codes\-Per\-Rev@{\-Config\-Encoder\-Codes\-Per\-Rev}!CANJaguar@{\-C\-A\-N\-Jaguar}}
+\subsubsection[{\-Config\-Encoder\-Codes\-Per\-Rev}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-C\-A\-N\-Jaguar\-::\-Config\-Encoder\-Codes\-Per\-Rev} (
+\begin{DoxyParamCaption}
+\item[{\-U\-I\-N\-T16}]{codes\-Per\-Rev}
+\end{DoxyParamCaption}
+)}}\label{classCANJaguar_a1b3155962cb795c6c5ee31e593ad97ec}
+\-Configure how many codes per revolution are generated by your encoder.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em codes\-Per\-Rev} & \-The number of counts per revolution in 1\-X mode. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classCANJaguar_a25d6360eb331a6e24b36cfbf8911e914}{\index{\-C\-A\-N\-Jaguar@{\-C\-A\-N\-Jaguar}!\-Config\-Fault\-Time@{\-Config\-Fault\-Time}}
+\index{\-Config\-Fault\-Time@{\-Config\-Fault\-Time}!CANJaguar@{\-C\-A\-N\-Jaguar}}
+\subsubsection[{\-Config\-Fault\-Time}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-C\-A\-N\-Jaguar\-::\-Config\-Fault\-Time} (
+\begin{DoxyParamCaption}
+\item[{float}]{fault\-Time}
+\end{DoxyParamCaption}
+)}}\label{classCANJaguar_a25d6360eb331a6e24b36cfbf8911e914}
+\-Configure how long the \hyperlink{classJaguar}{\-Jaguar} waits in the case of a fault before resuming operation.
+
+\-Faults include over temerature, over current, and bus under voltage. \-The default is 3.\-0 seconds, but can be reduced to as low as 0.\-5 seconds.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em fault\-Time} & \-The time to wait before resuming operation, in seconds. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classCANJaguar_a82e172281e9c452d31b881693288a6ae}{\index{\-C\-A\-N\-Jaguar@{\-C\-A\-N\-Jaguar}!\-Config\-Max\-Output\-Voltage@{\-Config\-Max\-Output\-Voltage}}
+\index{\-Config\-Max\-Output\-Voltage@{\-Config\-Max\-Output\-Voltage}!CANJaguar@{\-C\-A\-N\-Jaguar}}
+\subsubsection[{\-Config\-Max\-Output\-Voltage}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-C\-A\-N\-Jaguar\-::\-Config\-Max\-Output\-Voltage} (
+\begin{DoxyParamCaption}
+\item[{double}]{voltage}
+\end{DoxyParamCaption}
+)}}\label{classCANJaguar_a82e172281e9c452d31b881693288a6ae}
+\-Configure the maximum voltage that the \hyperlink{classJaguar}{\-Jaguar} will ever output.
+
+\-This can be used to limit the maximum output voltage in all modes so that motors which cannot withstand full bus voltage can be used safely.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em voltage} & \-The maximum voltage output by the \hyperlink{classJaguar}{\-Jaguar}. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classCANJaguar_a1f0512aa6c0b6eb60d37c3d8a3fd0f57}{\index{\-C\-A\-N\-Jaguar@{\-C\-A\-N\-Jaguar}!\-Config\-Neutral\-Mode@{\-Config\-Neutral\-Mode}}
+\index{\-Config\-Neutral\-Mode@{\-Config\-Neutral\-Mode}!CANJaguar@{\-C\-A\-N\-Jaguar}}
+\subsubsection[{\-Config\-Neutral\-Mode}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-C\-A\-N\-Jaguar\-::\-Config\-Neutral\-Mode} (
+\begin{DoxyParamCaption}
+\item[{\-Neutral\-Mode}]{mode}
+\end{DoxyParamCaption}
+)}}\label{classCANJaguar_a1f0512aa6c0b6eb60d37c3d8a3fd0f57}
+\-Configure what the controller does to the \-H-\/\-Bridge when neutral (not driving the output).
+
+\-This allows you to override the jumper configuration for brake or coast.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em mode} & \-Select to use the jumper setting or to override it to coast or brake. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classCANJaguar_a4c7f1f58c5dd5f3af20ed6867573df19}{\index{\-C\-A\-N\-Jaguar@{\-C\-A\-N\-Jaguar}!\-Config\-Potentiometer\-Turns@{\-Config\-Potentiometer\-Turns}}
+\index{\-Config\-Potentiometer\-Turns@{\-Config\-Potentiometer\-Turns}!CANJaguar@{\-C\-A\-N\-Jaguar}}
+\subsubsection[{\-Config\-Potentiometer\-Turns}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-C\-A\-N\-Jaguar\-::\-Config\-Potentiometer\-Turns} (
+\begin{DoxyParamCaption}
+\item[{\-U\-I\-N\-T16}]{turns}
+\end{DoxyParamCaption}
+)}}\label{classCANJaguar_a4c7f1f58c5dd5f3af20ed6867573df19}
+\-Configure the number of turns on the potentiometer.
+
+\-There is no special support for continuous turn potentiometers. \-Only integer numbers of turns are supported.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em turns} & \-The number of turns of the potentiometer \\
+\hline
+\end{DoxyParams}
+\hypertarget{classCANJaguar_a388b3188432b3e7d7d73b29ba7e61b8f}{\index{\-C\-A\-N\-Jaguar@{\-C\-A\-N\-Jaguar}!\-Config\-Soft\-Position\-Limits@{\-Config\-Soft\-Position\-Limits}}
+\index{\-Config\-Soft\-Position\-Limits@{\-Config\-Soft\-Position\-Limits}!CANJaguar@{\-C\-A\-N\-Jaguar}}
+\subsubsection[{\-Config\-Soft\-Position\-Limits}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-C\-A\-N\-Jaguar\-::\-Config\-Soft\-Position\-Limits} (
+\begin{DoxyParamCaption}
+\item[{double}]{forward\-Limit\-Position, }
+\item[{double}]{reverse\-Limit\-Position}
+\end{DoxyParamCaption}
+)}}\label{classCANJaguar_a388b3188432b3e7d7d73b29ba7e61b8f}
+\-Configure \-Soft \-Position \-Limits when in \-Position \-Controller mode.
+
+\-When controlling position, you can add additional limits on top of the limit switch inputs that are based on the position feedback. \-If the position limit is reached or the switch is opened, that direction will be disabled.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em forward\-Limit\-Position} & \-The position that if exceeded will disable the forward direction. \\
+\hline
+{\em reverse\-Limit\-Position} & \-The position that if exceeded will disable the reverse direction. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classCANJaguar_a3dc0852859fb60499b609938b69e9252}{\index{\-C\-A\-N\-Jaguar@{\-C\-A\-N\-Jaguar}!\-Disable@{\-Disable}}
+\index{\-Disable@{\-Disable}!CANJaguar@{\-C\-A\-N\-Jaguar}}
+\subsubsection[{\-Disable}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-C\-A\-N\-Jaguar\-::\-Disable} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{classCANJaguar_a3dc0852859fb60499b609938b69e9252}
+\-Common interface for disabling a motor.
+
+\begin{DoxyRefDesc}{\-Deprecated}
+\item[\hyperlink{deprecated__deprecated000001}{\-Deprecated}]\-Call \-Disable\-Control instead. \end{DoxyRefDesc}
+
+
+\-Implements \hyperlink{classSpeedController_a6fd7bbef6feb65b89d7eb727e8c1ec76}{\-Speed\-Controller}.
+
+\hypertarget{classCANJaguar_a6bbbf784a74cf95f7b4a5660a3d53cc2}{\index{\-C\-A\-N\-Jaguar@{\-C\-A\-N\-Jaguar}!\-Disable\-Control@{\-Disable\-Control}}
+\index{\-Disable\-Control@{\-Disable\-Control}!CANJaguar@{\-C\-A\-N\-Jaguar}}
+\subsubsection[{\-Disable\-Control}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-C\-A\-N\-Jaguar\-::\-Disable\-Control} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classCANJaguar_a6bbbf784a74cf95f7b4a5660a3d53cc2}
+\-Disable the closed loop controller.
+
+\-Stop driving the output based on the feedback. \hypertarget{classCANJaguar_ae291e933f69ddd35a7b0da83520596d9}{\index{\-C\-A\-N\-Jaguar@{\-C\-A\-N\-Jaguar}!\-Disable\-Soft\-Position\-Limits@{\-Disable\-Soft\-Position\-Limits}}
+\index{\-Disable\-Soft\-Position\-Limits@{\-Disable\-Soft\-Position\-Limits}!CANJaguar@{\-C\-A\-N\-Jaguar}}
+\subsubsection[{\-Disable\-Soft\-Position\-Limits}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-C\-A\-N\-Jaguar\-::\-Disable\-Soft\-Position\-Limits} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classCANJaguar_ae291e933f69ddd35a7b0da83520596d9}
+\-Disable \-Soft \-Position \-Limits if previously enabled.
+
+\-Soft \-Position \-Limits are disabled by default. \hypertarget{classCANJaguar_af25bed87c7d97429b0472b52f92b186e}{\index{\-C\-A\-N\-Jaguar@{\-C\-A\-N\-Jaguar}!\-Enable\-Control@{\-Enable\-Control}}
+\index{\-Enable\-Control@{\-Enable\-Control}!CANJaguar@{\-C\-A\-N\-Jaguar}}
+\subsubsection[{\-Enable\-Control}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-C\-A\-N\-Jaguar\-::\-Enable\-Control} (
+\begin{DoxyParamCaption}
+\item[{double}]{encoder\-Initial\-Position = {\ttfamily 0.0}}
+\end{DoxyParamCaption}
+)}}\label{classCANJaguar_af25bed87c7d97429b0472b52f92b186e}
+\-Enable the closed loop controller.
+
+\-Start actually controlling the output based on the feedback. \-If starting a position controller with an encoder reference, use the encoder\-Initial\-Position parameter to initialize the encoder state.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em encoder\-Initial\-Position} & \hyperlink{classEncoder}{\-Encoder} position to set if position with encoder reference. \-Ignored otherwise. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classCANJaguar_a35f28a93acc83bcc482d481037389433}{\index{\-C\-A\-N\-Jaguar@{\-C\-A\-N\-Jaguar}!\-Get@{\-Get}}
+\index{\-Get@{\-Get}!CANJaguar@{\-C\-A\-N\-Jaguar}}
+\subsubsection[{\-Get}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf \-C\-A\-N\-Jaguar\-::\-Get} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{classCANJaguar_a35f28a93acc83bcc482d481037389433}
+\-Get the recently set output\-Value setpoint.
+
+\-The scale and the units depend on the mode the \hyperlink{classJaguar}{\-Jaguar} is in. \-In \-Percent\-Vbus \-Mode, the output\-Value is from -\/1.\-0 to 1.\-0 (same as \hyperlink{classPWM}{\-P\-W\-M} \hyperlink{classJaguar}{\-Jaguar}). \-In \-Voltage \-Mode, the output\-Value is in \-Volts. \-In \-Current \-Mode, the output\-Value is in \-Amps. \-In \-Speed \-Mode, the output\-Value is in \-Rotations/\-Minute. \-In \-Position \-Mode, the output\-Value is in \-Rotations.
+
+\begin{DoxyReturn}{\-Returns}
+\-The most recently set output\-Value setpoint. 
+\end{DoxyReturn}
+
+
+\-Implements \hyperlink{classSpeedController_a41c2b62853ab141b471af0864e469031}{\-Speed\-Controller}.
+
+\hypertarget{classCANJaguar_a9ab46336737e40a6d765f839cd43db61}{\index{\-C\-A\-N\-Jaguar@{\-C\-A\-N\-Jaguar}!\-Get\-Bus\-Voltage@{\-Get\-Bus\-Voltage}}
+\index{\-Get\-Bus\-Voltage@{\-Get\-Bus\-Voltage}!CANJaguar@{\-C\-A\-N\-Jaguar}}
+\subsubsection[{\-Get\-Bus\-Voltage}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf \-C\-A\-N\-Jaguar\-::\-Get\-Bus\-Voltage} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classCANJaguar_a9ab46336737e40a6d765f839cd43db61}
+\-Get the voltage at the battery input terminals of the \hyperlink{classJaguar}{\-Jaguar}.
+
+\begin{DoxyReturn}{\-Returns}
+\-The bus voltage in \-Volts. 
+\end{DoxyReturn}
+\hypertarget{classCANJaguar_a0182b7175a6ea7e2d28dc6b331f7dbff}{\index{\-C\-A\-N\-Jaguar@{\-C\-A\-N\-Jaguar}!\-Get\-Control\-Mode@{\-Get\-Control\-Mode}}
+\index{\-Get\-Control\-Mode@{\-Get\-Control\-Mode}!CANJaguar@{\-C\-A\-N\-Jaguar}}
+\subsubsection[{\-Get\-Control\-Mode}]{\setlength{\rightskip}{0pt plus 5cm}\-C\-A\-N\-Jaguar\-::\-Control\-Mode {\bf \-C\-A\-N\-Jaguar\-::\-Get\-Control\-Mode} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classCANJaguar_a0182b7175a6ea7e2d28dc6b331f7dbff}
+\-Get the active control mode from the \hyperlink{classJaguar}{\-Jaguar}.
+
+\-Ask the \-Jag what mode it is in.
+
+\begin{DoxyReturn}{\-Returns}
+\-Control\-Mode that the \-Jag is in. 
+\end{DoxyReturn}
+\hypertarget{classCANJaguar_ab8ddc893fde5f16e0c76684593c20758}{\index{\-C\-A\-N\-Jaguar@{\-C\-A\-N\-Jaguar}!\-Get\-D@{\-Get\-D}}
+\index{\-Get\-D@{\-Get\-D}!CANJaguar@{\-C\-A\-N\-Jaguar}}
+\subsubsection[{\-Get\-D}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf \-C\-A\-N\-Jaguar\-::\-Get\-D} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classCANJaguar_ab8ddc893fde5f16e0c76684593c20758}
+\-Get the \-Differential gain of the controller.
+
+\begin{DoxyReturn}{\-Returns}
+\-The differential gain. 
+\end{DoxyReturn}
+\hypertarget{classCANJaguar_a85127197e529c31e21c7f7dd601d1b29}{\index{\-C\-A\-N\-Jaguar@{\-C\-A\-N\-Jaguar}!\-Get\-Faults@{\-Get\-Faults}}
+\index{\-Get\-Faults@{\-Get\-Faults}!CANJaguar@{\-C\-A\-N\-Jaguar}}
+\subsubsection[{\-Get\-Faults}]{\setlength{\rightskip}{0pt plus 5cm}\-U\-I\-N\-T16 {\bf \-C\-A\-N\-Jaguar\-::\-Get\-Faults} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classCANJaguar_a85127197e529c31e21c7f7dd601d1b29}
+\-Get the status of any faults the \hyperlink{classJaguar}{\-Jaguar} has detected.
+
+\begin{DoxyReturn}{\-Returns}
+\-A bit-\/mask of faults defined by the \char`\"{}\-Faults\char`\"{} enum. 
+\end{DoxyReturn}
+\hypertarget{classCANJaguar_af0de370823437c4f9db998fcb009431e}{\index{\-C\-A\-N\-Jaguar@{\-C\-A\-N\-Jaguar}!\-Get\-Firmware\-Version@{\-Get\-Firmware\-Version}}
+\index{\-Get\-Firmware\-Version@{\-Get\-Firmware\-Version}!CANJaguar@{\-C\-A\-N\-Jaguar}}
+\subsubsection[{\-Get\-Firmware\-Version}]{\setlength{\rightskip}{0pt plus 5cm}\-U\-I\-N\-T32 {\bf \-C\-A\-N\-Jaguar\-::\-Get\-Firmware\-Version} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{classCANJaguar_af0de370823437c4f9db998fcb009431e}
+\-Get the version of the firmware running on the \hyperlink{classJaguar}{\-Jaguar}.
+
+\begin{DoxyReturn}{\-Returns}
+\-The firmware version. 0 if the device did not respond. 
+\end{DoxyReturn}
+\hypertarget{classCANJaguar_a0f11a7f13319f448e493fad2dc47e71b}{\index{\-C\-A\-N\-Jaguar@{\-C\-A\-N\-Jaguar}!\-Get\-Forward\-Limit\-O\-K@{\-Get\-Forward\-Limit\-O\-K}}
+\index{\-Get\-Forward\-Limit\-O\-K@{\-Get\-Forward\-Limit\-O\-K}!CANJaguar@{\-C\-A\-N\-Jaguar}}
+\subsubsection[{\-Get\-Forward\-Limit\-O\-K}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-C\-A\-N\-Jaguar\-::\-Get\-Forward\-Limit\-O\-K} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classCANJaguar_a0f11a7f13319f448e493fad2dc47e71b}
+\-Get the status of the forward limit switch.
+
+\begin{DoxyReturn}{\-Returns}
+\-The motor is allowed to turn in the forward direction when true. 
+\end{DoxyReturn}
+\hypertarget{classCANJaguar_a872d409492668ef44438dfe73bdb5efd}{\index{\-C\-A\-N\-Jaguar@{\-C\-A\-N\-Jaguar}!\-Get\-Hardware\-Version@{\-Get\-Hardware\-Version}}
+\index{\-Get\-Hardware\-Version@{\-Get\-Hardware\-Version}!CANJaguar@{\-C\-A\-N\-Jaguar}}
+\subsubsection[{\-Get\-Hardware\-Version}]{\setlength{\rightskip}{0pt plus 5cm}\-U\-I\-N\-T8 {\bf \-C\-A\-N\-Jaguar\-::\-Get\-Hardware\-Version} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classCANJaguar_a872d409492668ef44438dfe73bdb5efd}
+\-Get the version of the \hyperlink{classJaguar}{\-Jaguar} hardware.
+
+\begin{DoxyReturn}{\-Returns}
+\-The hardware version. 1\-: \hyperlink{classJaguar}{\-Jaguar}, 2\-: \-Black \hyperlink{classJaguar}{\-Jaguar} 
+\end{DoxyReturn}
+\hypertarget{classCANJaguar_affd66787becba69c8f9e5ffcb11f7ba1}{\index{\-C\-A\-N\-Jaguar@{\-C\-A\-N\-Jaguar}!\-Get\-I@{\-Get\-I}}
+\index{\-Get\-I@{\-Get\-I}!CANJaguar@{\-C\-A\-N\-Jaguar}}
+\subsubsection[{\-Get\-I}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf \-C\-A\-N\-Jaguar\-::\-Get\-I} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classCANJaguar_affd66787becba69c8f9e5ffcb11f7ba1}
+\-Get the \-Intregral gain of the controller.
+
+\begin{DoxyReturn}{\-Returns}
+\-The integral gain. 
+\end{DoxyReturn}
+\hypertarget{classCANJaguar_a1845e946d4be9219d7b3ac3c6152f5b8}{\index{\-C\-A\-N\-Jaguar@{\-C\-A\-N\-Jaguar}!\-Get\-Output\-Current@{\-Get\-Output\-Current}}
+\index{\-Get\-Output\-Current@{\-Get\-Output\-Current}!CANJaguar@{\-C\-A\-N\-Jaguar}}
+\subsubsection[{\-Get\-Output\-Current}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf \-C\-A\-N\-Jaguar\-::\-Get\-Output\-Current} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classCANJaguar_a1845e946d4be9219d7b3ac3c6152f5b8}
+\-Get the current through the motor terminals of the \hyperlink{classJaguar}{\-Jaguar}.
+
+\begin{DoxyReturn}{\-Returns}
+\-The output current in \-Amps. 
+\end{DoxyReturn}
+\hypertarget{classCANJaguar_a9c8ff9ed5747ce175a5215d2b18e973d}{\index{\-C\-A\-N\-Jaguar@{\-C\-A\-N\-Jaguar}!\-Get\-Output\-Voltage@{\-Get\-Output\-Voltage}}
+\index{\-Get\-Output\-Voltage@{\-Get\-Output\-Voltage}!CANJaguar@{\-C\-A\-N\-Jaguar}}
+\subsubsection[{\-Get\-Output\-Voltage}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf \-C\-A\-N\-Jaguar\-::\-Get\-Output\-Voltage} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classCANJaguar_a9c8ff9ed5747ce175a5215d2b18e973d}
+\-Get the voltage being output from the motor terminals of the \hyperlink{classJaguar}{\-Jaguar}.
+
+\begin{DoxyReturn}{\-Returns}
+\-The output voltage in \-Volts. 
+\end{DoxyReturn}
+\hypertarget{classCANJaguar_aba0dd36ac9faff31d16f78490edbe85d}{\index{\-C\-A\-N\-Jaguar@{\-C\-A\-N\-Jaguar}!\-Get\-P@{\-Get\-P}}
+\index{\-Get\-P@{\-Get\-P}!CANJaguar@{\-C\-A\-N\-Jaguar}}
+\subsubsection[{\-Get\-P}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf \-C\-A\-N\-Jaguar\-::\-Get\-P} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classCANJaguar_aba0dd36ac9faff31d16f78490edbe85d}
+\-Get the \-Proportional gain of the controller.
+
+\begin{DoxyReturn}{\-Returns}
+\-The proportional gain. 
+\end{DoxyReturn}
+\hypertarget{classCANJaguar_a87df60fbda9e2cb8f6f8072f68476444}{\index{\-C\-A\-N\-Jaguar@{\-C\-A\-N\-Jaguar}!\-Get\-Position@{\-Get\-Position}}
+\index{\-Get\-Position@{\-Get\-Position}!CANJaguar@{\-C\-A\-N\-Jaguar}}
+\subsubsection[{\-Get\-Position}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf \-C\-A\-N\-Jaguar\-::\-Get\-Position} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classCANJaguar_a87df60fbda9e2cb8f6f8072f68476444}
+\-Get the position of the encoder or potentiometer.
+
+\begin{DoxyReturn}{\-Returns}
+\-The position of the motor in rotations based on the configured feedback. 
+\end{DoxyReturn}
+\hypertarget{classCANJaguar_a3d73ad5f40fe5a471190263ccb5b5c97}{\index{\-C\-A\-N\-Jaguar@{\-C\-A\-N\-Jaguar}!\-Get\-Position\-Reference@{\-Get\-Position\-Reference}}
+\index{\-Get\-Position\-Reference@{\-Get\-Position\-Reference}!CANJaguar@{\-C\-A\-N\-Jaguar}}
+\subsubsection[{\-Get\-Position\-Reference}]{\setlength{\rightskip}{0pt plus 5cm}\-C\-A\-N\-Jaguar\-::\-Position\-Reference {\bf \-C\-A\-N\-Jaguar\-::\-Get\-Position\-Reference} (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{classCANJaguar_a3d73ad5f40fe5a471190263ccb5b5c97}
+\-Get the reference source device for position controller mode.
+
+\begin{DoxyReturn}{\-Returns}
+\-A \-Position\-Reference indicating the currently selected reference device for position controller mode. 
+\end{DoxyReturn}
+\hypertarget{classCANJaguar_a37066e9210891a674ce80bee695c5ba5}{\index{\-C\-A\-N\-Jaguar@{\-C\-A\-N\-Jaguar}!\-Get\-Power\-Cycled@{\-Get\-Power\-Cycled}}
+\index{\-Get\-Power\-Cycled@{\-Get\-Power\-Cycled}!CANJaguar@{\-C\-A\-N\-Jaguar}}
+\subsubsection[{\-Get\-Power\-Cycled}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-C\-A\-N\-Jaguar\-::\-Get\-Power\-Cycled} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classCANJaguar_a37066e9210891a674ce80bee695c5ba5}
+\-Check if the \hyperlink{classJaguar}{\-Jaguar}'s power has been cycled since this was last called.
+
+\-This should return true the first time called after a \hyperlink{classJaguar}{\-Jaguar} power up, and false after that.
+
+\begin{DoxyReturn}{\-Returns}
+\-The \hyperlink{classJaguar}{\-Jaguar} was power cycled since the last call to this function. 
+\end{DoxyReturn}
+\hypertarget{classCANJaguar_a0efb888bb3239cad4ea0f27890998dff}{\index{\-C\-A\-N\-Jaguar@{\-C\-A\-N\-Jaguar}!\-Get\-Reverse\-Limit\-O\-K@{\-Get\-Reverse\-Limit\-O\-K}}
+\index{\-Get\-Reverse\-Limit\-O\-K@{\-Get\-Reverse\-Limit\-O\-K}!CANJaguar@{\-C\-A\-N\-Jaguar}}
+\subsubsection[{\-Get\-Reverse\-Limit\-O\-K}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-C\-A\-N\-Jaguar\-::\-Get\-Reverse\-Limit\-O\-K} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classCANJaguar_a0efb888bb3239cad4ea0f27890998dff}
+\-Get the status of the reverse limit switch.
+
+\begin{DoxyReturn}{\-Returns}
+\-The motor is allowed to turn in the reverse direction when true. 
+\end{DoxyReturn}
+\hypertarget{classCANJaguar_afafb32f44cd1525e351615d6999f59f1}{\index{\-C\-A\-N\-Jaguar@{\-C\-A\-N\-Jaguar}!\-Get\-Speed@{\-Get\-Speed}}
+\index{\-Get\-Speed@{\-Get\-Speed}!CANJaguar@{\-C\-A\-N\-Jaguar}}
+\subsubsection[{\-Get\-Speed}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf \-C\-A\-N\-Jaguar\-::\-Get\-Speed} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classCANJaguar_afafb32f44cd1525e351615d6999f59f1}
+\-Get the speed of the encoder.
+
+\begin{DoxyReturn}{\-Returns}
+\-The speed of the motor in \-R\-P\-M based on the configured feedback. 
+\end{DoxyReturn}
+\hypertarget{classCANJaguar_a453860ca7356cb42aa21958cbff30b82}{\index{\-C\-A\-N\-Jaguar@{\-C\-A\-N\-Jaguar}!\-Get\-Speed\-Reference@{\-Get\-Speed\-Reference}}
+\index{\-Get\-Speed\-Reference@{\-Get\-Speed\-Reference}!CANJaguar@{\-C\-A\-N\-Jaguar}}
+\subsubsection[{\-Get\-Speed\-Reference}]{\setlength{\rightskip}{0pt plus 5cm}\-C\-A\-N\-Jaguar\-::\-Speed\-Reference {\bf \-C\-A\-N\-Jaguar\-::\-Get\-Speed\-Reference} (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{classCANJaguar_a453860ca7356cb42aa21958cbff30b82}
+\-Get the reference source device for speed controller mode.
+
+\begin{DoxyReturn}{\-Returns}
+\-A \-Speed\-Reference indicating the currently selected reference device for speed controller mode. 
+\end{DoxyReturn}
+\hypertarget{classCANJaguar_aa58c2cc33eeebbb6684227c5500d7cbc}{\index{\-C\-A\-N\-Jaguar@{\-C\-A\-N\-Jaguar}!\-Get\-Temperature@{\-Get\-Temperature}}
+\index{\-Get\-Temperature@{\-Get\-Temperature}!CANJaguar@{\-C\-A\-N\-Jaguar}}
+\subsubsection[{\-Get\-Temperature}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf \-C\-A\-N\-Jaguar\-::\-Get\-Temperature} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classCANJaguar_aa58c2cc33eeebbb6684227c5500d7cbc}
+\-Get the internal temperature of the \hyperlink{classJaguar}{\-Jaguar}.
+
+\begin{DoxyReturn}{\-Returns}
+\-The temperature of the \hyperlink{classJaguar}{\-Jaguar} in degrees \-Celsius. 
+\end{DoxyReturn}
+\hypertarget{classCANJaguar_a43eb6ab169c31a833dc38fd95eeca06e}{\index{\-C\-A\-N\-Jaguar@{\-C\-A\-N\-Jaguar}!get\-Transaction@{get\-Transaction}}
+\index{get\-Transaction@{get\-Transaction}!CANJaguar@{\-C\-A\-N\-Jaguar}}
+\subsubsection[{get\-Transaction}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-C\-A\-N\-Jaguar\-::get\-Transaction} (
+\begin{DoxyParamCaption}
+\item[{\-U\-I\-N\-T32}]{message\-I\-D, }
+\item[{\-U\-I\-N\-T8 $\ast$}]{data, }
+\item[{\-U\-I\-N\-T8 $\ast$}]{data\-Size}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}protected, virtual\mbox{]}}}}\label{classCANJaguar_a43eb6ab169c31a833dc38fd95eeca06e}
+\-Execute a transaction with a \hyperlink{classJaguar}{\-Jaguar} that gets some property.
+
+\hyperlink{classJaguar}{\-Jaguar} always generates a message with the same message \-I\-D when replying.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em message\-I\-D} & \-The message\-I\-D to read from the \-C\-A\-N bus (device number is added internally) \\
+\hline
+{\em data} & \-The up to 8 bytes of data that was received with the message \\
+\hline
+{\em data\-Size} & \-Indicates how much data was received \\
+\hline
+\end{DoxyParams}
+\hypertarget{classCANJaguar_a2355d55f42083ab82870c79f742620e4}{\index{\-C\-A\-N\-Jaguar@{\-C\-A\-N\-Jaguar}!\-P\-I\-D\-Write@{\-P\-I\-D\-Write}}
+\index{\-P\-I\-D\-Write@{\-P\-I\-D\-Write}!CANJaguar@{\-C\-A\-N\-Jaguar}}
+\subsubsection[{\-P\-I\-D\-Write}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-C\-A\-N\-Jaguar\-::\-P\-I\-D\-Write} (
+\begin{DoxyParamCaption}
+\item[{float}]{output}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{classCANJaguar_a2355d55f42083ab82870c79f742620e4}
+\-Write out the \-P\-I\-D value as seen in the \hyperlink{classPIDOutput}{\-P\-I\-D\-Output} base object.
+
+\begin{DoxyRefDesc}{\-Deprecated}
+\item[\hyperlink{deprecated__deprecated000002}{\-Deprecated}]\-Call \-Set instead.\end{DoxyRefDesc}
+
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em output} & \-Write out the \-Percent\-Vbus value as was computed by the \hyperlink{classPIDController}{\-P\-I\-D\-Controller} \\
+\hline
+\end{DoxyParams}
+
+
+\-Implements \hyperlink{classPIDOutput}{\-P\-I\-D\-Output}.
+
+\hypertarget{classCANJaguar_adaa8089e65ba5784df5eda9cf753eb8f}{\index{\-C\-A\-N\-Jaguar@{\-C\-A\-N\-Jaguar}!receive\-Message@{receive\-Message}}
+\index{receive\-Message@{receive\-Message}!CANJaguar@{\-C\-A\-N\-Jaguar}}
+\subsubsection[{receive\-Message}]{\setlength{\rightskip}{0pt plus 5cm}\-I\-N\-T32 {\bf \-C\-A\-N\-Jaguar\-::receive\-Message} (
+\begin{DoxyParamCaption}
+\item[{\-U\-I\-N\-T32 $\ast$}]{message\-I\-D, }
+\item[{\-U\-I\-N\-T8 $\ast$}]{data, }
+\item[{\-U\-I\-N\-T8 $\ast$}]{data\-Size, }
+\item[{float}]{timeout = {\ttfamily 0.01}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static, protected\mbox{]}}}}\label{classCANJaguar_adaa8089e65ba5784df5eda9cf753eb8f}
+\-Receive a message from the \-C\-A\-N bus through the \-C\-A\-N driver in \-F\-R\-C\-\_\-\-Network\-Communication
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em message\-I\-D} & \-The message\-I\-D to read from the \-C\-A\-N bus \\
+\hline
+{\em data} & \-The up to 8 bytes of data that was received with the message \\
+\hline
+{\em data\-Size} & \-Indicates how much data was received \\
+\hline
+{\em timeout} & \-Specify how long to wait for a message (in seconds) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-Status of receive call 
+\end{DoxyReturn}
+\hypertarget{classCANJaguar_a987e2191d5fc2500c8716aae68b0c567}{\index{\-C\-A\-N\-Jaguar@{\-C\-A\-N\-Jaguar}!send\-Message@{send\-Message}}
+\index{send\-Message@{send\-Message}!CANJaguar@{\-C\-A\-N\-Jaguar}}
+\subsubsection[{send\-Message}]{\setlength{\rightskip}{0pt plus 5cm}\-I\-N\-T32 {\bf \-C\-A\-N\-Jaguar\-::send\-Message} (
+\begin{DoxyParamCaption}
+\item[{\-U\-I\-N\-T32}]{message\-I\-D, }
+\item[{const \-U\-I\-N\-T8 $\ast$}]{data, }
+\item[{\-U\-I\-N\-T8}]{data\-Size}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static, protected\mbox{]}}}}\label{classCANJaguar_a987e2191d5fc2500c8716aae68b0c567}
+\-Send a message on the \-C\-A\-N bus through the \-C\-A\-N driver in \-F\-R\-C\-\_\-\-Network\-Communication
+
+\-Trusted messages require a 2-\/byte token at the beginning of the data payload. \-If the message being sent is trusted, make space for the token.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em message\-I\-D} & \-The message\-I\-D to be used on the \-C\-A\-N bus \\
+\hline
+{\em data} & \-The up to 8 bytes of data to be sent with the message \\
+\hline
+{\em data\-Size} & \-Specify how much of the data in \char`\"{}data\char`\"{} to send \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-Status of send call 
+\end{DoxyReturn}
+\hypertarget{classCANJaguar_aa8a4f32b3c1839557cd73996693a116a}{\index{\-C\-A\-N\-Jaguar@{\-C\-A\-N\-Jaguar}!\-Set@{\-Set}}
+\index{\-Set@{\-Set}!CANJaguar@{\-C\-A\-N\-Jaguar}}
+\subsubsection[{\-Set}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-C\-A\-N\-Jaguar\-::\-Set} (
+\begin{DoxyParamCaption}
+\item[{float}]{output\-Value, }
+\item[{\-U\-I\-N\-T8}]{sync\-Group = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{classCANJaguar_aa8a4f32b3c1839557cd73996693a116a}
+\-Set the output set-\/point value.
+
+\-The scale and the units depend on the mode the \hyperlink{classJaguar}{\-Jaguar} is in. \-In \-Percent\-Vbus \-Mode, the output\-Value is from -\/1.\-0 to 1.\-0 (same as \hyperlink{classPWM}{\-P\-W\-M} \hyperlink{classJaguar}{\-Jaguar}). \-In \-Voltage \-Mode, the output\-Value is in \-Volts. \-In \-Current \-Mode, the output\-Value is in \-Amps. \-In \-Speed \-Mode, the output\-Value is in \-Rotations/\-Minute. \-In \-Position \-Mode, the output\-Value is in \-Rotations.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em output\-Value} & \-The set-\/point to sent to the motor controller. \\
+\hline
+{\em sync\-Group} & \-The update group to add this \hyperlink{classCANJaguar_aa8a4f32b3c1839557cd73996693a116a}{\-Set()} to, pending \hyperlink{classCANJaguar_afbd06237b0fbdd5b35cdb7452937269e}{\-Update\-Sync\-Group()}. \-If 0, update immediately. \\
+\hline
+\end{DoxyParams}
+
+
+\-Implements \hyperlink{classSpeedController_abaa1c81b41a9cc673fe92978bb12f82e}{\-Speed\-Controller}.
+
+\hypertarget{classCANJaguar_ae6650f4f7aea62f9df00056076b3d462}{\index{\-C\-A\-N\-Jaguar@{\-C\-A\-N\-Jaguar}!\-Set\-P\-I\-D@{\-Set\-P\-I\-D}}
+\index{\-Set\-P\-I\-D@{\-Set\-P\-I\-D}!CANJaguar@{\-C\-A\-N\-Jaguar}}
+\subsubsection[{\-Set\-P\-I\-D}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-C\-A\-N\-Jaguar\-::\-Set\-P\-I\-D} (
+\begin{DoxyParamCaption}
+\item[{double}]{p, }
+\item[{double}]{i, }
+\item[{double}]{d}
+\end{DoxyParamCaption}
+)}}\label{classCANJaguar_ae6650f4f7aea62f9df00056076b3d462}
+\-Set the \-P, \-I, and \-D constants for the closed loop modes.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em p} & \-The proportional gain of the \hyperlink{classJaguar}{\-Jaguar}'s \-P\-I\-D controller. \\
+\hline
+{\em i} & \-The integral gain of the \hyperlink{classJaguar}{\-Jaguar}'s \-P\-I\-D controller. \\
+\hline
+{\em d} & \-The differential gain of the \hyperlink{classJaguar}{\-Jaguar}'s \-P\-I\-D controller. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classCANJaguar_ae99bbad1a99dcdd8f4620e4cc99705bf}{\index{\-C\-A\-N\-Jaguar@{\-C\-A\-N\-Jaguar}!\-Set\-Position\-Reference@{\-Set\-Position\-Reference}}
+\index{\-Set\-Position\-Reference@{\-Set\-Position\-Reference}!CANJaguar@{\-C\-A\-N\-Jaguar}}
+\subsubsection[{\-Set\-Position\-Reference}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-C\-A\-N\-Jaguar\-::\-Set\-Position\-Reference} (
+\begin{DoxyParamCaption}
+\item[{\-Position\-Reference}]{reference}
+\end{DoxyParamCaption}
+)}}\label{classCANJaguar_ae99bbad1a99dcdd8f4620e4cc99705bf}
+\-Set the reference source device for position controller mode.
+
+\-Choose between using and encoder and using a potentiometer as the source of position feedback when in position control mode.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em reference} & \-Specify a \-Position\-Reference. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classCANJaguar_a581f44af48079151da32f6399e196c33}{\index{\-C\-A\-N\-Jaguar@{\-C\-A\-N\-Jaguar}!\-Set\-Speed\-Reference@{\-Set\-Speed\-Reference}}
+\index{\-Set\-Speed\-Reference@{\-Set\-Speed\-Reference}!CANJaguar@{\-C\-A\-N\-Jaguar}}
+\subsubsection[{\-Set\-Speed\-Reference}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-C\-A\-N\-Jaguar\-::\-Set\-Speed\-Reference} (
+\begin{DoxyParamCaption}
+\item[{\-Speed\-Reference}]{reference}
+\end{DoxyParamCaption}
+)}}\label{classCANJaguar_a581f44af48079151da32f6399e196c33}
+\-Set the reference source device for speed controller mode.
+
+\-Choose encoder as the source of speed feedback when in speed control mode.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em reference} & \-Specify a \-Speed\-Reference. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classCANJaguar_adbe1668f13ba9cc7275c694c5aae01e0}{\index{\-C\-A\-N\-Jaguar@{\-C\-A\-N\-Jaguar}!set\-Transaction@{set\-Transaction}}
+\index{set\-Transaction@{set\-Transaction}!CANJaguar@{\-C\-A\-N\-Jaguar}}
+\subsubsection[{set\-Transaction}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-C\-A\-N\-Jaguar\-::set\-Transaction} (
+\begin{DoxyParamCaption}
+\item[{\-U\-I\-N\-T32}]{message\-I\-D, }
+\item[{const \-U\-I\-N\-T8 $\ast$}]{data, }
+\item[{\-U\-I\-N\-T8}]{data\-Size}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}protected, virtual\mbox{]}}}}\label{classCANJaguar_adbe1668f13ba9cc7275c694c5aae01e0}
+\-Execute a transaction with a \hyperlink{classJaguar}{\-Jaguar} that sets some property.
+
+\hyperlink{classJaguar}{\-Jaguar} always acks when it receives a message. \-If we don't wait for an ack, the message object in the \hyperlink{classJaguar}{\-Jaguar} could get overwritten before it is handled.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em message\-I\-D} & \-The message\-I\-D to be used on the \-C\-A\-N bus (device number is added internally) \\
+\hline
+{\em data} & \-The up to 8 bytes of data to be sent with the message \\
+\hline
+{\em data\-Size} & \-Specify how much of the data in \char`\"{}data\char`\"{} to send \\
+\hline
+\end{DoxyParams}
+\hypertarget{classCANJaguar_a73540797125ae698a72806f9cf10330d}{\index{\-C\-A\-N\-Jaguar@{\-C\-A\-N\-Jaguar}!\-Set\-Voltage\-Ramp\-Rate@{\-Set\-Voltage\-Ramp\-Rate}}
+\index{\-Set\-Voltage\-Ramp\-Rate@{\-Set\-Voltage\-Ramp\-Rate}!CANJaguar@{\-C\-A\-N\-Jaguar}}
+\subsubsection[{\-Set\-Voltage\-Ramp\-Rate}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-C\-A\-N\-Jaguar\-::\-Set\-Voltage\-Ramp\-Rate} (
+\begin{DoxyParamCaption}
+\item[{double}]{ramp\-Rate}
+\end{DoxyParamCaption}
+)}}\label{classCANJaguar_a73540797125ae698a72806f9cf10330d}
+\-Set the maximum voltage change rate.
+
+\-When in \-Percent\-Vbus or \-Voltage output mode, the rate at which the voltage changes can be limited to reduce current spikes. \-Set this to 0.\-0 to disable rate limiting.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em ramp\-Rate} & \-The maximum rate of voltage change in \-Percent \-Voltage mode in \-V/s. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classCANJaguar_a5ce4840f1e80913836cfb2ddb2d7d50b}{\index{\-C\-A\-N\-Jaguar@{\-C\-A\-N\-Jaguar}!\-Stop\-Motor@{\-Stop\-Motor}}
+\index{\-Stop\-Motor@{\-Stop\-Motor}!CANJaguar@{\-C\-A\-N\-Jaguar}}
+\subsubsection[{\-Stop\-Motor}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-C\-A\-N\-Jaguar\-::\-Stop\-Motor} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{classCANJaguar_a5ce4840f1e80913836cfb2ddb2d7d50b}
+\-Common interface for stopping the motor \-Part of the \hyperlink{classMotorSafety}{\-Motor\-Safety} interface
+
+\begin{DoxyRefDesc}{\-Deprecated}
+\item[\hyperlink{deprecated__deprecated000003}{\-Deprecated}]\-Call \-Disable\-Control instead. \end{DoxyRefDesc}
+
+
+\-Implements \hyperlink{classMotorSafety}{\-Motor\-Safety}.
+
+\hypertarget{classCANJaguar_afbd06237b0fbdd5b35cdb7452937269e}{\index{\-C\-A\-N\-Jaguar@{\-C\-A\-N\-Jaguar}!\-Update\-Sync\-Group@{\-Update\-Sync\-Group}}
+\index{\-Update\-Sync\-Group@{\-Update\-Sync\-Group}!CANJaguar@{\-C\-A\-N\-Jaguar}}
+\subsubsection[{\-Update\-Sync\-Group}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-C\-A\-N\-Jaguar\-::\-Update\-Sync\-Group} (
+\begin{DoxyParamCaption}
+\item[{\-U\-I\-N\-T8}]{sync\-Group}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{classCANJaguar_afbd06237b0fbdd5b35cdb7452937269e}
+\-Update all the motors that have pending sets in the sync\-Group.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em sync\-Group} & \-A bitmask of groups to generate synchronous output. \\
+\hline
+\end{DoxyParams}
+
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+\-C\-A\-N\-Jaguar.\-h\item 
+\-C\-A\-N\-Jaguar.\-cpp\end{DoxyCompactItemize}

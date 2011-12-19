@@ -1,0 +1,142 @@
+\hypertarget{classAccelerometer}{\section{\-Accelerometer \-Class \-Reference}
+\label{classAccelerometer}\index{\-Accelerometer@{\-Accelerometer}}
+}
+
+
+{\ttfamily \#include $<$\-Accelerometer.\-h$>$}
+
+\-Inheritance diagram for \-Accelerometer\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classAccelerometer}
+\end{center}
+\end{figure}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classAccelerometer_a39b9a1d97af754f9e65d38e20fc7d4c6}{\-Accelerometer} (\-U\-I\-N\-T32 channel)
+\item 
+\hyperlink{classAccelerometer_ae32050fd113426ff203ce5ce83e09d4b}{\-Accelerometer} (\-U\-I\-N\-T32 slot, \-U\-I\-N\-T32 channel)
+\item 
+\hyperlink{classAccelerometer_a69cce3af6adfffca56d41dd4ff6c3a3a}{\-Accelerometer} (\hyperlink{classAnalogChannel}{\-Analog\-Channel} $\ast$channel)
+\item 
+virtual \hyperlink{classAccelerometer_acb6a7d9c61f2084ec4aec4a8ff35d622}{$\sim$\-Accelerometer} ()
+\item 
+float \hyperlink{classAccelerometer_a9a898749542f5338504895fc4debbf95}{\-Get\-Acceleration} ()
+\item 
+void \hyperlink{classAccelerometer_ad34599b5f2dbd1cd62de2c05b4d8e430}{\-Set\-Sensitivity} (float sensitivity)
+\item 
+void \hyperlink{classAccelerometer_aa769546f0fd9e93a25e8f696102ff8dd}{\-Set\-Zero} (float zero)
+\item 
+double \hyperlink{classAccelerometer_a4842f8338d2bb3922d8d8d793584d626}{\-P\-I\-D\-Get} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-Handle operation of the accelerometer. \-The accelerometer reads acceleration directly through the sensor. \-Many sensors have multiple axis and can be treated as multiple devices. \-Each is calibrated by finding the center value over a period of time. 
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{classAccelerometer_a39b9a1d97af754f9e65d38e20fc7d4c6}{\index{\-Accelerometer@{\-Accelerometer}!\-Accelerometer@{\-Accelerometer}}
+\index{\-Accelerometer@{\-Accelerometer}!Accelerometer@{\-Accelerometer}}
+\subsubsection[{\-Accelerometer}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Accelerometer\-::\-Accelerometer} (
+\begin{DoxyParamCaption}
+\item[{\-U\-I\-N\-T32}]{channel}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}explicit\mbox{]}}}}\label{classAccelerometer_a39b9a1d97af754f9e65d38e20fc7d4c6}
+\-Create a new instance of an accelerometer.
+
+\-The accelerometer is assumed to be in the first analog module in the given analog channel. \-The constructor allocates desired analog channel. \hypertarget{classAccelerometer_ae32050fd113426ff203ce5ce83e09d4b}{\index{\-Accelerometer@{\-Accelerometer}!\-Accelerometer@{\-Accelerometer}}
+\index{\-Accelerometer@{\-Accelerometer}!Accelerometer@{\-Accelerometer}}
+\subsubsection[{\-Accelerometer}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Accelerometer\-::\-Accelerometer} (
+\begin{DoxyParamCaption}
+\item[{\-U\-I\-N\-T32}]{slot, }
+\item[{\-U\-I\-N\-T32}]{channel}
+\end{DoxyParamCaption}
+)}}\label{classAccelerometer_ae32050fd113426ff203ce5ce83e09d4b}
+\-Create new instance of accelerometer.
+
+\-Make a new instance of the accelerometer given a module and channel. \-The constructor allocates the desired analog channel from the specified module \hypertarget{classAccelerometer_a69cce3af6adfffca56d41dd4ff6c3a3a}{\index{\-Accelerometer@{\-Accelerometer}!\-Accelerometer@{\-Accelerometer}}
+\index{\-Accelerometer@{\-Accelerometer}!Accelerometer@{\-Accelerometer}}
+\subsubsection[{\-Accelerometer}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Accelerometer\-::\-Accelerometer} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Analog\-Channel} $\ast$}]{channel}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}explicit\mbox{]}}}}\label{classAccelerometer_a69cce3af6adfffca56d41dd4ff6c3a3a}
+\-Create a new instance of \hyperlink{classAccelerometer}{\-Accelerometer} from an existing \hyperlink{classAnalogChannel}{\-Analog\-Channel}. \-Make a new instance of accelerometer given an \hyperlink{classAnalogChannel}{\-Analog\-Channel}. \-This is particularly useful if the port is going to be read as an analog channel as well as through the \hyperlink{classAccelerometer}{\-Accelerometer} class. \hypertarget{classAccelerometer_acb6a7d9c61f2084ec4aec4a8ff35d622}{\index{\-Accelerometer@{\-Accelerometer}!$\sim$\-Accelerometer@{$\sim$\-Accelerometer}}
+\index{$\sim$\-Accelerometer@{$\sim$\-Accelerometer}!Accelerometer@{\-Accelerometer}}
+\subsubsection[{$\sim$\-Accelerometer}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Accelerometer\-::$\sim$\-Accelerometer} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{classAccelerometer_acb6a7d9c61f2084ec4aec4a8ff35d622}
+\-Delete the analog components used for the accelerometer. 
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classAccelerometer_a9a898749542f5338504895fc4debbf95}{\index{\-Accelerometer@{\-Accelerometer}!\-Get\-Acceleration@{\-Get\-Acceleration}}
+\index{\-Get\-Acceleration@{\-Get\-Acceleration}!Accelerometer@{\-Accelerometer}}
+\subsubsection[{\-Get\-Acceleration}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf \-Accelerometer\-::\-Get\-Acceleration} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classAccelerometer_a9a898749542f5338504895fc4debbf95}
+\-Return the acceleration in \-Gs.
+
+\-The acceleration is returned units of \-Gs.
+
+\begin{DoxyReturn}{\-Returns}
+\-The current acceleration of the sensor in \-Gs. 
+\end{DoxyReturn}
+\hypertarget{classAccelerometer_a4842f8338d2bb3922d8d8d793584d626}{\index{\-Accelerometer@{\-Accelerometer}!\-P\-I\-D\-Get@{\-P\-I\-D\-Get}}
+\index{\-P\-I\-D\-Get@{\-P\-I\-D\-Get}!Accelerometer@{\-Accelerometer}}
+\subsubsection[{\-P\-I\-D\-Get}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf \-Accelerometer\-::\-P\-I\-D\-Get} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{classAccelerometer_a4842f8338d2bb3922d8d8d793584d626}
+\-Get the \-Acceleration for the \-P\-I\-D \-Source parent.
+
+\begin{DoxyReturn}{\-Returns}
+\-The current acceleration in \-Gs. 
+\end{DoxyReturn}
+
+
+\-Implements \hyperlink{classPIDSource}{\-P\-I\-D\-Source}.
+
+\hypertarget{classAccelerometer_ad34599b5f2dbd1cd62de2c05b4d8e430}{\index{\-Accelerometer@{\-Accelerometer}!\-Set\-Sensitivity@{\-Set\-Sensitivity}}
+\index{\-Set\-Sensitivity@{\-Set\-Sensitivity}!Accelerometer@{\-Accelerometer}}
+\subsubsection[{\-Set\-Sensitivity}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Accelerometer\-::\-Set\-Sensitivity} (
+\begin{DoxyParamCaption}
+\item[{float}]{sensitivity}
+\end{DoxyParamCaption}
+)}}\label{classAccelerometer_ad34599b5f2dbd1cd62de2c05b4d8e430}
+\-Set the accelerometer sensitivity.
+
+\-This sets the sensitivity of the accelerometer used for calculating the acceleration. \-The sensitivity varys by accelerometer model. \-There are constants defined for various models.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em sensitivity} & \-The sensitivity of accelerometer in \-Volts per \-G. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classAccelerometer_aa769546f0fd9e93a25e8f696102ff8dd}{\index{\-Accelerometer@{\-Accelerometer}!\-Set\-Zero@{\-Set\-Zero}}
+\index{\-Set\-Zero@{\-Set\-Zero}!Accelerometer@{\-Accelerometer}}
+\subsubsection[{\-Set\-Zero}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Accelerometer\-::\-Set\-Zero} (
+\begin{DoxyParamCaption}
+\item[{float}]{zero}
+\end{DoxyParamCaption}
+)}}\label{classAccelerometer_aa769546f0fd9e93a25e8f696102ff8dd}
+\-Set the voltage that corresponds to 0 \-G.
+
+\-The zero \-G voltage varys by accelerometer model. \-There are constants defined for various models.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em zero} & \-The zero \-G voltage. \\
+\hline
+\end{DoxyParams}
+
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+\-Accelerometer.\-h\item 
+\-Accelerometer.\-cpp\end{DoxyCompactItemize}

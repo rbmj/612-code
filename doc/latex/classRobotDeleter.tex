@@ -1,0 +1,11 @@
+\hypertarget{classRobotDeleter}{\section{\-Robot\-Deleter \-Class \-Reference}
+\label{classRobotDeleter}\index{\-Robot\-Deleter@{\-Robot\-Deleter}}
+}
+
+
+\subsection{\-Detailed \-Description}
+\-This class exists for the sole purpose of getting its destructor called when the module unloads. \-Before the module is done unloading, we need to delete the \hyperlink{classRobotBase}{\-Robot\-Base} derived singleton. \-This should delete the other remaining singletons that were registered. \-This should also stop all tasks that are using the \hyperlink{classTask}{\-Task} class. 
+
+\-The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+\-Robot\-Base.\-cpp\end{DoxyCompactItemize}

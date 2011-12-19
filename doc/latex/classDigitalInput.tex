@@ -1,0 +1,165 @@
+\hypertarget{classDigitalInput}{\section{\-Digital\-Input \-Class \-Reference}
+\label{classDigitalInput}\index{\-Digital\-Input@{\-Digital\-Input}}
+}
+
+
+{\ttfamily \#include $<$\-Digital\-Input.\-h$>$}
+
+\-Inheritance diagram for \-Digital\-Input\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=5.000000cm]{classDigitalInput}
+\end{center}
+\end{figure}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classDigitalInput_a7f4562a0d04285cd07a85b2700a3522f}{\-Digital\-Input} (\-U\-I\-N\-T32 channel)
+\item 
+\hyperlink{classDigitalInput_ae6ac627c06728ee02f15f6fd44ddd56f}{\-Digital\-Input} (\-U\-I\-N\-T32 slot, \-U\-I\-N\-T32 channel)
+\item 
+virtual \hyperlink{classDigitalInput_a7fb442a9bba43bdf7303504441d1569e}{$\sim$\-Digital\-Input} ()
+\item 
+\hypertarget{classDigitalInput_a6852f9fdbe7aa8221d6e16675b884d44}{\-U\-I\-N\-T32 {\bfseries \-Get} ()}\label{classDigitalInput_a6852f9fdbe7aa8221d6e16675b884d44}
+
+\item 
+\-U\-I\-N\-T32 \hyperlink{classDigitalInput_a75b989a787a5b822903f24765330fcea}{\-Get\-Channel} ()
+\item 
+virtual \-U\-I\-N\-T32 \hyperlink{classDigitalInput_a040ad3adde43d5ca89cfde006513fdcd}{\-Get\-Channel\-For\-Routing} ()
+\item 
+virtual \-U\-I\-N\-T32 \hyperlink{classDigitalInput_a4401dc554ebab68503196e596c58255e}{\-Get\-Module\-For\-Routing} ()
+\item 
+virtual bool \hyperlink{classDigitalInput_a670ae66c6f29cfe52e58e81068e0734d}{\-Get\-Analog\-Trigger\-For\-Routing} ()
+\item 
+virtual void \hyperlink{classDigitalInput_ade30372b4bd2355ffdab5c38759d1901}{\-Request\-Interrupts} (t\-Interrupt\-Handler handler, void $\ast$param=\-N\-U\-L\-L)
+\begin{DoxyCompactList}\small\item\em \-Asynchronus handler version. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classDigitalInput_add5d16083baeab64fbd62069b83e7e1a}{\-Request\-Interrupts} ()
+\begin{DoxyCompactList}\small\item\em \-Synchronus \-Wait version. \end{DoxyCompactList}\item 
+\hypertarget{classDigitalInput_ab53b8614e977073f11f601d484951349}{void {\bfseries \-Set\-Up\-Source\-Edge} (bool rising\-Edge, bool falling\-Edge)}\label{classDigitalInput_ab53b8614e977073f11f601d484951349}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-Class to read a digital input. \-This class will read digital inputs and return the current value on the channel. \-Other devices such as encoders, gear tooth sensors, etc. that are implemented elsewhere will automatically allocate digital inputs and outputs as required. \-This class is only for devices like switches etc. that aren't implemented anywhere else. 
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{classDigitalInput_a7f4562a0d04285cd07a85b2700a3522f}{\index{\-Digital\-Input@{\-Digital\-Input}!\-Digital\-Input@{\-Digital\-Input}}
+\index{\-Digital\-Input@{\-Digital\-Input}!DigitalInput@{\-Digital\-Input}}
+\subsubsection[{\-Digital\-Input}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Digital\-Input\-::\-Digital\-Input} (
+\begin{DoxyParamCaption}
+\item[{\-U\-I\-N\-T32}]{channel}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}explicit\mbox{]}}}}\label{classDigitalInput_a7f4562a0d04285cd07a85b2700a3522f}
+\-Create an instance of a \-Digital \-Input class. \-Creates a digital input given a channel and uses the default module. \hypertarget{classDigitalInput_ae6ac627c06728ee02f15f6fd44ddd56f}{\index{\-Digital\-Input@{\-Digital\-Input}!\-Digital\-Input@{\-Digital\-Input}}
+\index{\-Digital\-Input@{\-Digital\-Input}!DigitalInput@{\-Digital\-Input}}
+\subsubsection[{\-Digital\-Input}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Digital\-Input\-::\-Digital\-Input} (
+\begin{DoxyParamCaption}
+\item[{\-U\-I\-N\-T32}]{slot, }
+\item[{\-U\-I\-N\-T32}]{channel}
+\end{DoxyParamCaption}
+)}}\label{classDigitalInput_ae6ac627c06728ee02f15f6fd44ddd56f}
+\-Create an instance of a \-Digital \-Input class. \-Creates a digital input given an channel and module. \hypertarget{classDigitalInput_a7fb442a9bba43bdf7303504441d1569e}{\index{\-Digital\-Input@{\-Digital\-Input}!$\sim$\-Digital\-Input@{$\sim$\-Digital\-Input}}
+\index{$\sim$\-Digital\-Input@{$\sim$\-Digital\-Input}!DigitalInput@{\-Digital\-Input}}
+\subsubsection[{$\sim$\-Digital\-Input}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Digital\-Input\-::$\sim$\-Digital\-Input} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{classDigitalInput_a7fb442a9bba43bdf7303504441d1569e}
+\-Free resources associated with the \-Digital \-Input class. 
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classDigitalInput_a670ae66c6f29cfe52e58e81068e0734d}{\index{\-Digital\-Input@{\-Digital\-Input}!\-Get\-Analog\-Trigger\-For\-Routing@{\-Get\-Analog\-Trigger\-For\-Routing}}
+\index{\-Get\-Analog\-Trigger\-For\-Routing@{\-Get\-Analog\-Trigger\-For\-Routing}!DigitalInput@{\-Digital\-Input}}
+\subsubsection[{\-Get\-Analog\-Trigger\-For\-Routing}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Digital\-Input\-::\-Get\-Analog\-Trigger\-For\-Routing} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{classDigitalInput_a670ae66c6f29cfe52e58e81068e0734d}
+\begin{DoxyReturn}{\-Returns}
+\-The value to be written to the analog trigger field of a routing mux. 
+\end{DoxyReturn}
+
+
+\-Implements \hyperlink{classDigitalSource}{\-Digital\-Source}.
+
+\hypertarget{classDigitalInput_a75b989a787a5b822903f24765330fcea}{\index{\-Digital\-Input@{\-Digital\-Input}!\-Get\-Channel@{\-Get\-Channel}}
+\index{\-Get\-Channel@{\-Get\-Channel}!DigitalInput@{\-Digital\-Input}}
+\subsubsection[{\-Get\-Channel}]{\setlength{\rightskip}{0pt plus 5cm}\-U\-I\-N\-T32 {\bf \-Digital\-Input\-::\-Get\-Channel} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classDigitalInput_a75b989a787a5b822903f24765330fcea}
+\begin{DoxyReturn}{\-Returns}
+\-The \-G\-P\-I\-O channel number that this object represents. 
+\end{DoxyReturn}
+\hypertarget{classDigitalInput_a040ad3adde43d5ca89cfde006513fdcd}{\index{\-Digital\-Input@{\-Digital\-Input}!\-Get\-Channel\-For\-Routing@{\-Get\-Channel\-For\-Routing}}
+\index{\-Get\-Channel\-For\-Routing@{\-Get\-Channel\-For\-Routing}!DigitalInput@{\-Digital\-Input}}
+\subsubsection[{\-Get\-Channel\-For\-Routing}]{\setlength{\rightskip}{0pt plus 5cm}\-U\-I\-N\-T32 {\bf \-Digital\-Input\-::\-Get\-Channel\-For\-Routing} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{classDigitalInput_a040ad3adde43d5ca89cfde006513fdcd}
+\begin{DoxyReturn}{\-Returns}
+\-The value to be written to the channel field of a routing mux. 
+\end{DoxyReturn}
+
+
+\-Implements \hyperlink{classDigitalSource}{\-Digital\-Source}.
+
+\hypertarget{classDigitalInput_a4401dc554ebab68503196e596c58255e}{\index{\-Digital\-Input@{\-Digital\-Input}!\-Get\-Module\-For\-Routing@{\-Get\-Module\-For\-Routing}}
+\index{\-Get\-Module\-For\-Routing@{\-Get\-Module\-For\-Routing}!DigitalInput@{\-Digital\-Input}}
+\subsubsection[{\-Get\-Module\-For\-Routing}]{\setlength{\rightskip}{0pt plus 5cm}\-U\-I\-N\-T32 {\bf \-Digital\-Input\-::\-Get\-Module\-For\-Routing} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{classDigitalInput_a4401dc554ebab68503196e596c58255e}
+\begin{DoxyReturn}{\-Returns}
+\-The value to be written to the module field of a routing mux. 
+\end{DoxyReturn}
+
+
+\-Implements \hyperlink{classDigitalSource}{\-Digital\-Source}.
+
+\hypertarget{classDigitalInput_ade30372b4bd2355ffdab5c38759d1901}{\index{\-Digital\-Input@{\-Digital\-Input}!\-Request\-Interrupts@{\-Request\-Interrupts}}
+\index{\-Request\-Interrupts@{\-Request\-Interrupts}!DigitalInput@{\-Digital\-Input}}
+\subsubsection[{\-Request\-Interrupts}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Digital\-Input\-::\-Request\-Interrupts} (
+\begin{DoxyParamCaption}
+\item[{t\-Interrupt\-Handler}]{handler, }
+\item[{void $\ast$}]{param = {\ttfamily \-N\-U\-L\-L}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{classDigitalInput_ade30372b4bd2355ffdab5c38759d1901}
+
+
+\-Asynchronus handler version. 
+
+\-Request interrupts asynchronously on this digital input. 
+\begin{DoxyParams}{\-Parameters}
+{\em handler} & \-The address of the interrupt handler function of type t\-Interrupt\-Handler that will be called whenever there is an interrupt on the digitial input port. \-Request interrupts in synchronus mode where the user program interrupt handler will be called when an interrupt occurs. \-The default is interrupt on rising edges only. \\
+\hline
+\end{DoxyParams}
+
+
+\-Implements \hyperlink{classDigitalSource_aa34b225d5dc38355ff8bd0a11b6113d3}{\-Digital\-Source}.
+
+\hypertarget{classDigitalInput_add5d16083baeab64fbd62069b83e7e1a}{\index{\-Digital\-Input@{\-Digital\-Input}!\-Request\-Interrupts@{\-Request\-Interrupts}}
+\index{\-Request\-Interrupts@{\-Request\-Interrupts}!DigitalInput@{\-Digital\-Input}}
+\subsubsection[{\-Request\-Interrupts}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Digital\-Input\-::\-Request\-Interrupts} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{classDigitalInput_add5d16083baeab64fbd62069b83e7e1a}
+
+
+\-Synchronus \-Wait version. 
+
+\-Request interrupts synchronously on this digital input. \-Request interrupts in synchronus mode where the user program will have to explicitly wait for the interrupt to occur. \-The default is interrupt on rising edges only. 
+
+\-Implements \hyperlink{classDigitalSource_a693e9521e21758c8d5f3d221dc9e9b5b}{\-Digital\-Source}.
+
+
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+\-Digital\-Input.\-h\item 
+\-Digital\-Input.\-cpp\end{DoxyCompactItemize}

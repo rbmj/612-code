@@ -1,0 +1,143 @@
+\hypertarget{classCompressor}{\section{\-Compressor \-Class \-Reference}
+\label{classCompressor}\index{\-Compressor@{\-Compressor}}
+}
+
+
+{\ttfamily \#include $<$\-Compressor.\-h$>$}
+
+\-Inheritance diagram for \-Compressor\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classCompressor}
+\end{center}
+\end{figure}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classCompressor_af1a57848f4a733fe30f555f700d5ce8b}{\-Compressor} (\-U\-I\-N\-T32 pressure\-Switch\-Channel, \-U\-I\-N\-T32 compressor\-Relay\-Channel)
+\item 
+\hyperlink{classCompressor_afe0043d5d4c885f7c61860373044499e}{\-Compressor} (\-U\-I\-N\-T32 pressure\-Switch\-Slot, \-U\-I\-N\-T32 pressure\-Switch\-Channel, \-U\-I\-N\-T32 compresssor\-Relay\-Slot, \-U\-I\-N\-T32 compressor\-Relay\-Channel)
+\item 
+\hyperlink{classCompressor_a7153be4a80054c7da7b355ff6841c0f7}{$\sim$\-Compressor} ()
+\item 
+void \hyperlink{classCompressor_a710bb74699442b508062a109ed24e6a0}{\-Start} ()
+\item 
+void \hyperlink{classCompressor_a293182b6bfc18782b29deb8d7a99ff40}{\-Stop} ()
+\item 
+bool \hyperlink{classCompressor_a951cf9c276faa926510bf7b368efdef8}{\-Enabled} ()
+\item 
+\-U\-I\-N\-T32 \hyperlink{classCompressor_a085220e028ebdd0bca7a3df2c5081478}{\-Get\-Pressure\-Switch\-Value} ()
+\item 
+void \hyperlink{classCompressor_afc6d48dce81c1c8a3d14c5da4c8cde99}{\-Set\-Relay\-Value} (\-Relay\-::\-Value relay\-Value)
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\hyperlink{classCompressor}{\-Compressor} object. \-The \hyperlink{classCompressor}{\-Compressor} object is designed to handle the operation of the compressor, pressure sensor and relay for a \-F\-I\-R\-S\-T robot pneumatics system. \-The \hyperlink{classCompressor}{\-Compressor} object starts a task which runs in the backround and periodically polls the pressure sensor and operates the relay that controls the compressor. 
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{classCompressor_af1a57848f4a733fe30f555f700d5ce8b}{\index{\-Compressor@{\-Compressor}!\-Compressor@{\-Compressor}}
+\index{\-Compressor@{\-Compressor}!Compressor@{\-Compressor}}
+\subsubsection[{\-Compressor}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Compressor\-::\-Compressor} (
+\begin{DoxyParamCaption}
+\item[{\-U\-I\-N\-T32}]{pressure\-Switch\-Channel, }
+\item[{\-U\-I\-N\-T32}]{compressor\-Relay\-Channel}
+\end{DoxyParamCaption}
+)}}\label{classCompressor_af1a57848f4a733fe30f555f700d5ce8b}
+\hyperlink{classCompressor}{\-Compressor} constructor. \-Given a relay channel and pressure switch channel (both in the default digital module), initialize the \hyperlink{classCompressor}{\-Compressor} object.
+
+\-You \-M\-U\-S\-T start the compressor by calling the \hyperlink{classCompressor_a710bb74699442b508062a109ed24e6a0}{\-Start()} method.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em pressure\-Switch\-Channel} & \-The \-G\-P\-I\-O channel that the pressure switch is attached to. \\
+\hline
+{\em compressor\-Relay\-Channel} & \-The relay channel that the compressor relay is attached to. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classCompressor_afe0043d5d4c885f7c61860373044499e}{\index{\-Compressor@{\-Compressor}!\-Compressor@{\-Compressor}}
+\index{\-Compressor@{\-Compressor}!Compressor@{\-Compressor}}
+\subsubsection[{\-Compressor}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Compressor\-::\-Compressor} (
+\begin{DoxyParamCaption}
+\item[{\-U\-I\-N\-T32}]{pressure\-Switch\-Slot, }
+\item[{\-U\-I\-N\-T32}]{pressure\-Switch\-Channel, }
+\item[{\-U\-I\-N\-T32}]{compresssor\-Relay\-Slot, }
+\item[{\-U\-I\-N\-T32}]{compressor\-Relay\-Channel}
+\end{DoxyParamCaption}
+)}}\label{classCompressor_afe0043d5d4c885f7c61860373044499e}
+\hyperlink{classCompressor}{\-Compressor} constructor. \-Given a fully specified relay channel and pressure switch channel, initialize the \hyperlink{classCompressor}{\-Compressor} object.
+
+\-You \-M\-U\-S\-T start the compressor by calling the \hyperlink{classCompressor_a710bb74699442b508062a109ed24e6a0}{\-Start()} method.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em pressure\-Switch\-Slot} & \-The module that the pressure switch is attached to. \\
+\hline
+{\em pressure\-Switch\-Channel} & \-The \-G\-P\-I\-O channel that the pressure switch is attached to. \\
+\hline
+{\em compresssor\-Relay\-Slot} & \-The module that the compressor relay is attached to. \\
+\hline
+{\em compressor\-Relay\-Channel} & \-The relay channel that the compressor relay is attached to. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classCompressor_a7153be4a80054c7da7b355ff6841c0f7}{\index{\-Compressor@{\-Compressor}!$\sim$\-Compressor@{$\sim$\-Compressor}}
+\index{$\sim$\-Compressor@{$\sim$\-Compressor}!Compressor@{\-Compressor}}
+\subsubsection[{$\sim$\-Compressor}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Compressor\-::$\sim$\-Compressor} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classCompressor_a7153be4a80054c7da7b355ff6841c0f7}
+\-Delete the \hyperlink{classCompressor}{\-Compressor} object. \-Delete the allocated resources for the compressor and kill the compressor task that is polling the pressure switch. 
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classCompressor_a951cf9c276faa926510bf7b368efdef8}{\index{\-Compressor@{\-Compressor}!\-Enabled@{\-Enabled}}
+\index{\-Enabled@{\-Enabled}!Compressor@{\-Compressor}}
+\subsubsection[{\-Enabled}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Compressor\-::\-Enabled} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classCompressor_a951cf9c276faa926510bf7b368efdef8}
+\-Get the state of the enabled flag. \-Return the state of the enabled flag for the compressor and pressure switch combination.
+
+\begin{DoxyReturn}{\-Returns}
+\-The state of the compressor thread's enable flag. 
+\end{DoxyReturn}
+\hypertarget{classCompressor_a085220e028ebdd0bca7a3df2c5081478}{\index{\-Compressor@{\-Compressor}!\-Get\-Pressure\-Switch\-Value@{\-Get\-Pressure\-Switch\-Value}}
+\index{\-Get\-Pressure\-Switch\-Value@{\-Get\-Pressure\-Switch\-Value}!Compressor@{\-Compressor}}
+\subsubsection[{\-Get\-Pressure\-Switch\-Value}]{\setlength{\rightskip}{0pt plus 5cm}\-U\-I\-N\-T32 {\bf \-Compressor\-::\-Get\-Pressure\-Switch\-Value} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classCompressor_a085220e028ebdd0bca7a3df2c5081478}
+\-Get the pressure switch value. \-Read the pressure switch digital input.
+
+\begin{DoxyReturn}{\-Returns}
+\-The current state of the pressure switch. 
+\end{DoxyReturn}
+\hypertarget{classCompressor_afc6d48dce81c1c8a3d14c5da4c8cde99}{\index{\-Compressor@{\-Compressor}!\-Set\-Relay\-Value@{\-Set\-Relay\-Value}}
+\index{\-Set\-Relay\-Value@{\-Set\-Relay\-Value}!Compressor@{\-Compressor}}
+\subsubsection[{\-Set\-Relay\-Value}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Compressor\-::\-Set\-Relay\-Value} (
+\begin{DoxyParamCaption}
+\item[{\-Relay\-::\-Value}]{relay\-Value}
+\end{DoxyParamCaption}
+)}}\label{classCompressor_afc6d48dce81c1c8a3d14c5da4c8cde99}
+\-Operate the relay for the compressor. \-Change the value of the relay output that is connected to the compressor motor. \-This is only intended to be called by the internal polling thread. \hypertarget{classCompressor_a710bb74699442b508062a109ed24e6a0}{\index{\-Compressor@{\-Compressor}!\-Start@{\-Start}}
+\index{\-Start@{\-Start}!Compressor@{\-Compressor}}
+\subsubsection[{\-Start}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Compressor\-::\-Start} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classCompressor_a710bb74699442b508062a109ed24e6a0}
+\-Start the compressor. \-This method will allow the polling loop to actually operate the compressor. \-The is stopped by default and won't operate until starting it. \hypertarget{classCompressor_a293182b6bfc18782b29deb8d7a99ff40}{\index{\-Compressor@{\-Compressor}!\-Stop@{\-Stop}}
+\index{\-Stop@{\-Stop}!Compressor@{\-Compressor}}
+\subsubsection[{\-Stop}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Compressor\-::\-Stop} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classCompressor_a293182b6bfc18782b29deb8d7a99ff40}
+\-Stop the compressor. \-This method will stop the compressor from turning on. 
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+\-Compressor.\-h\item 
+\-Compressor.\-cpp\end{DoxyCompactItemize}

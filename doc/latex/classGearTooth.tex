@@ -1,0 +1,120 @@
+\hypertarget{classGearTooth}{\section{\-Gear\-Tooth \-Class \-Reference}
+\label{classGearTooth}\index{\-Gear\-Tooth@{\-Gear\-Tooth}}
+}
+
+
+{\ttfamily \#include $<$\-Gear\-Tooth.\-h$>$}
+
+\-Inheritance diagram for \-Gear\-Tooth\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{classGearTooth}
+\end{center}
+\end{figure}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classGearTooth_ad11e01b0445488157a029faebe06b0a8}{\-Gear\-Tooth} (\-U\-I\-N\-T32 channel, bool direction\-Sensitive=false)
+\item 
+\hyperlink{classGearTooth_ab6b5c091b0cdc9f032e6bc974c5bb5e5}{\-Gear\-Tooth} (\-U\-I\-N\-T32 slot, \-U\-I\-N\-T32 channel, bool direction\-Sensitive=false)
+\item 
+\hyperlink{classGearTooth_a6d69ae72386bb5bc2977b40a05964281}{\-Gear\-Tooth} (\hyperlink{classDigitalSource}{\-Digital\-Source} $\ast$source, bool direction\-Sensitive=false)
+\item 
+\hypertarget{classGearTooth_a1c077b7e532f113cfa9b27c796155564}{{\bfseries \-Gear\-Tooth} (\hyperlink{classDigitalSource}{\-Digital\-Source} \&source, bool direction\-Sensitive=false)}\label{classGearTooth_a1c077b7e532f113cfa9b27c796155564}
+
+\item 
+virtual \hyperlink{classGearTooth_a53619e7569c7d259b039420cbb9b712f}{$\sim$\-Gear\-Tooth} ()
+\item 
+void \hyperlink{classGearTooth_a0bec962d2920dc28f8d4ef53b5fa2c65}{\-Enable\-Direction\-Sensing} (bool direction\-Sensitive)
+\end{DoxyCompactItemize}
+\subsection*{\-Static \-Public \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classGearTooth_a3157e2642fa7e2963afe7428e125deb7}{static const double \hyperlink{classGearTooth_a3157e2642fa7e2963afe7428e125deb7}{k\-Gear\-Tooth\-Threshold} = 55e-\/6}\label{classGearTooth_a3157e2642fa7e2963afe7428e125deb7}
+
+\begin{DoxyCompactList}\small\item\em 55 u\-Sec for threshold \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-Alias for counter class. \-Implement the gear tooth sensor supplied by \-F\-I\-R\-S\-T. \-Currently there is no reverse sensing on the gear tooth sensor, but in future versions we might implement the necessary timing in the \-F\-P\-G\-A to sense direction. 
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{classGearTooth_ad11e01b0445488157a029faebe06b0a8}{\index{\-Gear\-Tooth@{\-Gear\-Tooth}!\-Gear\-Tooth@{\-Gear\-Tooth}}
+\index{\-Gear\-Tooth@{\-Gear\-Tooth}!GearTooth@{\-Gear\-Tooth}}
+\subsubsection[{\-Gear\-Tooth}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Gear\-Tooth\-::\-Gear\-Tooth} (
+\begin{DoxyParamCaption}
+\item[{\-U\-I\-N\-T32}]{channel, }
+\item[{bool}]{direction\-Sensitive = {\ttfamily false}}
+\end{DoxyParamCaption}
+)}}\label{classGearTooth_ad11e01b0445488157a029faebe06b0a8}
+\-Construct a \hyperlink{classGearTooth}{\-Gear\-Tooth} sensor given a channel.
+
+\-The default module is assumed.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em channel} & \-The \-G\-P\-I\-O channel on the digital module that the sensor is connected to. \\
+\hline
+{\em direction\-Sensitive} & \-Enable the pulse length decoding in hardware to specify count direction. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classGearTooth_ab6b5c091b0cdc9f032e6bc974c5bb5e5}{\index{\-Gear\-Tooth@{\-Gear\-Tooth}!\-Gear\-Tooth@{\-Gear\-Tooth}}
+\index{\-Gear\-Tooth@{\-Gear\-Tooth}!GearTooth@{\-Gear\-Tooth}}
+\subsubsection[{\-Gear\-Tooth}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Gear\-Tooth\-::\-Gear\-Tooth} (
+\begin{DoxyParamCaption}
+\item[{\-U\-I\-N\-T32}]{slot, }
+\item[{\-U\-I\-N\-T32}]{channel, }
+\item[{bool}]{direction\-Sensitive = {\ttfamily false}}
+\end{DoxyParamCaption}
+)}}\label{classGearTooth_ab6b5c091b0cdc9f032e6bc974c5bb5e5}
+\-Construct a \hyperlink{classGearTooth}{\-Gear\-Tooth} sensor given a channel and module.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em slot} & \-The slot in the chassis that the digital module is plugged in to. \\
+\hline
+{\em channel} & \-The \-G\-P\-I\-O channel on the digital module that the sensor is connected to. \\
+\hline
+{\em direction\-Sensitive} & \-Enable the pulse length decoding in hardware to specify count direction. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classGearTooth_a6d69ae72386bb5bc2977b40a05964281}{\index{\-Gear\-Tooth@{\-Gear\-Tooth}!\-Gear\-Tooth@{\-Gear\-Tooth}}
+\index{\-Gear\-Tooth@{\-Gear\-Tooth}!GearTooth@{\-Gear\-Tooth}}
+\subsubsection[{\-Gear\-Tooth}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Gear\-Tooth\-::\-Gear\-Tooth} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Digital\-Source} $\ast$}]{source, }
+\item[{bool}]{direction\-Sensitive = {\ttfamily false}}
+\end{DoxyParamCaption}
+)}}\label{classGearTooth_a6d69ae72386bb5bc2977b40a05964281}
+\-Construct a \hyperlink{classGearTooth}{\-Gear\-Tooth} sensor given a digital input. \-This should be used when sharing digial inputs.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em source} & \-An object that fully descibes the input that the sensor is connected to. \\
+\hline
+{\em direction\-Sensitive} & \-Enable the pulse length decoding in hardware to specify count direction. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classGearTooth_a53619e7569c7d259b039420cbb9b712f}{\index{\-Gear\-Tooth@{\-Gear\-Tooth}!$\sim$\-Gear\-Tooth@{$\sim$\-Gear\-Tooth}}
+\index{$\sim$\-Gear\-Tooth@{$\sim$\-Gear\-Tooth}!GearTooth@{\-Gear\-Tooth}}
+\subsubsection[{$\sim$\-Gear\-Tooth}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Gear\-Tooth\-::$\sim$\-Gear\-Tooth} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{classGearTooth_a53619e7569c7d259b039420cbb9b712f}
+\-Free the resources associated with a gear tooth sensor. 
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classGearTooth_a0bec962d2920dc28f8d4ef53b5fa2c65}{\index{\-Gear\-Tooth@{\-Gear\-Tooth}!\-Enable\-Direction\-Sensing@{\-Enable\-Direction\-Sensing}}
+\index{\-Enable\-Direction\-Sensing@{\-Enable\-Direction\-Sensing}!GearTooth@{\-Gear\-Tooth}}
+\subsubsection[{\-Enable\-Direction\-Sensing}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Gear\-Tooth\-::\-Enable\-Direction\-Sensing} (
+\begin{DoxyParamCaption}
+\item[{bool}]{direction\-Sensitive}
+\end{DoxyParamCaption}
+)}}\label{classGearTooth_a0bec962d2920dc28f8d4ef53b5fa2c65}
+\-Common code called by the constructors. 
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+\-Gear\-Tooth.\-h\item 
+\-Gear\-Tooth.\-cpp\end{DoxyCompactItemize}

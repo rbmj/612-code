@@ -1,0 +1,109 @@
+\hypertarget{classMotorSafetyHelper}{\section{\-Motor\-Safety\-Helper \-Class \-Reference}
+\label{classMotorSafetyHelper}\index{\-Motor\-Safety\-Helper@{\-Motor\-Safety\-Helper}}
+}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classMotorSafetyHelper_ad125be744ff4ee41557c3bfedcfc8d8f}{\-Motor\-Safety\-Helper} (\hyperlink{classMotorSafety}{\-Motor\-Safety} $\ast$safe\-Object)
+\item 
+\hypertarget{classMotorSafetyHelper_a67b80e9817dc725e0678de5e8f0bb39e}{void {\bfseries \-Feed} ()}\label{classMotorSafetyHelper_a67b80e9817dc725e0678de5e8f0bb39e}
+
+\item 
+\hypertarget{classMotorSafetyHelper_a7b41cb1bf51aa167d97a82691ac94f81}{void {\bfseries \-Set\-Expiration} (float expiration\-Time)}\label{classMotorSafetyHelper_a7b41cb1bf51aa167d97a82691ac94f81}
+
+\item 
+float \hyperlink{classMotorSafetyHelper_abd3c09d75c252406d43deed9e83234f5}{\-Get\-Expiration} ()
+\item 
+bool \hyperlink{classMotorSafetyHelper_a3d4d90d4f7bc0d76445a55e5ea1d75e8}{\-Is\-Alive} ()
+\item 
+void \hyperlink{classMotorSafetyHelper_a951390af947b507a299d1175b7e717cf}{\-Check} ()
+\item 
+void \hyperlink{classMotorSafetyHelper_ad3904b781b0d4e88aba0e9a93995b122}{\-Set\-Safety\-Enabled} (bool enabled)
+\item 
+bool \hyperlink{classMotorSafetyHelper_af038daa6b107e8b4ef604497d451ce07}{\-Is\-Safety\-Enabled} ()
+\end{DoxyCompactItemize}
+\subsection*{\-Static \-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{classMotorSafetyHelper_a38fbee9c862dfb1b5bc2f1a1542eed56}{\-Check\-Motors} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{classMotorSafetyHelper_ad125be744ff4ee41557c3bfedcfc8d8f}{\index{\-Motor\-Safety\-Helper@{\-Motor\-Safety\-Helper}!\-Motor\-Safety\-Helper@{\-Motor\-Safety\-Helper}}
+\index{\-Motor\-Safety\-Helper@{\-Motor\-Safety\-Helper}!MotorSafetyHelper@{\-Motor\-Safety\-Helper}}
+\subsubsection[{\-Motor\-Safety\-Helper}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Motor\-Safety\-Helper\-::\-Motor\-Safety\-Helper} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Motor\-Safety} $\ast$}]{safe\-Object}
+\end{DoxyParamCaption}
+)}}\label{classMotorSafetyHelper_ad125be744ff4ee41557c3bfedcfc8d8f}
+\-The constructor for a \hyperlink{classMotorSafetyHelper}{\-Motor\-Safety\-Helper} object. \-The helper object is constructed for every object that wants to implement the \-Motor \-Safety protocol. \-The helper object has the code to actually do the timing and call the motors \-Stop() method when the timeout expires. \-The motor object is expected to call the \-Feed() method whenever the motors value is updated. 
+\begin{DoxyParams}{\-Parameters}
+{\em safe\-Object} & a pointer to the motor object implementing \hyperlink{classMotorSafety}{\-Motor\-Safety}. \-This is used to call the \-Stop() method on the motor. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classMotorSafetyHelper_a951390af947b507a299d1175b7e717cf}{\index{\-Motor\-Safety\-Helper@{\-Motor\-Safety\-Helper}!\-Check@{\-Check}}
+\index{\-Check@{\-Check}!MotorSafetyHelper@{\-Motor\-Safety\-Helper}}
+\subsubsection[{\-Check}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Motor\-Safety\-Helper\-::\-Check} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classMotorSafetyHelper_a951390af947b507a299d1175b7e717cf}
+\-Check if this motor has exceeded its timeout. \-This method is called periodically to determine if this motor has exceeded its timeout value. \-If it has, the stop method is called, and the motor is shut down until its value is updated again. \hypertarget{classMotorSafetyHelper_a38fbee9c862dfb1b5bc2f1a1542eed56}{\index{\-Motor\-Safety\-Helper@{\-Motor\-Safety\-Helper}!\-Check\-Motors@{\-Check\-Motors}}
+\index{\-Check\-Motors@{\-Check\-Motors}!MotorSafetyHelper@{\-Motor\-Safety\-Helper}}
+\subsubsection[{\-Check\-Motors}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Motor\-Safety\-Helper\-::\-Check\-Motors} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{classMotorSafetyHelper_a38fbee9c862dfb1b5bc2f1a1542eed56}
+\-Check the motors to see if any have timed out. \-This static method is called periodically to poll all the motors and stop any that have timed out. \hypertarget{classMotorSafetyHelper_abd3c09d75c252406d43deed9e83234f5}{\index{\-Motor\-Safety\-Helper@{\-Motor\-Safety\-Helper}!\-Get\-Expiration@{\-Get\-Expiration}}
+\index{\-Get\-Expiration@{\-Get\-Expiration}!MotorSafetyHelper@{\-Motor\-Safety\-Helper}}
+\subsubsection[{\-Get\-Expiration}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf \-Motor\-Safety\-Helper\-::\-Get\-Expiration} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classMotorSafetyHelper_abd3c09d75c252406d43deed9e83234f5}
+\-Retrieve the timeout value for the corresponding motor safety object. \begin{DoxyReturn}{\-Returns}
+the timeout value in seconds. 
+\end{DoxyReturn}
+\hypertarget{classMotorSafetyHelper_a3d4d90d4f7bc0d76445a55e5ea1d75e8}{\index{\-Motor\-Safety\-Helper@{\-Motor\-Safety\-Helper}!\-Is\-Alive@{\-Is\-Alive}}
+\index{\-Is\-Alive@{\-Is\-Alive}!MotorSafetyHelper@{\-Motor\-Safety\-Helper}}
+\subsubsection[{\-Is\-Alive}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Motor\-Safety\-Helper\-::\-Is\-Alive} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classMotorSafetyHelper_a3d4d90d4f7bc0d76445a55e5ea1d75e8}
+\-Determine if the motor is still operating or has timed out. \begin{DoxyReturn}{\-Returns}
+a true value if the motor is still operating normally and hasn't timed out. 
+\end{DoxyReturn}
+\hypertarget{classMotorSafetyHelper_af038daa6b107e8b4ef604497d451ce07}{\index{\-Motor\-Safety\-Helper@{\-Motor\-Safety\-Helper}!\-Is\-Safety\-Enabled@{\-Is\-Safety\-Enabled}}
+\index{\-Is\-Safety\-Enabled@{\-Is\-Safety\-Enabled}!MotorSafetyHelper@{\-Motor\-Safety\-Helper}}
+\subsubsection[{\-Is\-Safety\-Enabled}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Motor\-Safety\-Helper\-::\-Is\-Safety\-Enabled} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classMotorSafetyHelper_af038daa6b107e8b4ef604497d451ce07}
+\-Return the state of the motor safety enabled flag \-Return if the motor safety is currently enabled for this devicce. \begin{DoxyReturn}{\-Returns}
+\-True if motor safety is enforced for this device 
+\end{DoxyReturn}
+\hypertarget{classMotorSafetyHelper_ad3904b781b0d4e88aba0e9a93995b122}{\index{\-Motor\-Safety\-Helper@{\-Motor\-Safety\-Helper}!\-Set\-Safety\-Enabled@{\-Set\-Safety\-Enabled}}
+\index{\-Set\-Safety\-Enabled@{\-Set\-Safety\-Enabled}!MotorSafetyHelper@{\-Motor\-Safety\-Helper}}
+\subsubsection[{\-Set\-Safety\-Enabled}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Motor\-Safety\-Helper\-::\-Set\-Safety\-Enabled} (
+\begin{DoxyParamCaption}
+\item[{bool}]{enabled}
+\end{DoxyParamCaption}
+)}}\label{classMotorSafetyHelper_ad3904b781b0d4e88aba0e9a93995b122}
+\-Enable/disable motor safety for this device \-Turn on and off the motor safety option for this \hyperlink{classPWM}{\-P\-W\-M} object. 
+\begin{DoxyParams}{\-Parameters}
+{\em enabled} & \-True if motor safety is enforced for this object \\
+\hline
+\end{DoxyParams}
+
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+\-Motor\-Safety\-Helper.\-h\item 
+\-Motor\-Safety\-Helper.\-cpp\end{DoxyCompactItemize}

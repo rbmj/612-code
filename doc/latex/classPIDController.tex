@@ -1,0 +1,265 @@
+\hypertarget{classPIDController}{\section{\-P\-I\-D\-Controller \-Class \-Reference}
+\label{classPIDController}\index{\-P\-I\-D\-Controller@{\-P\-I\-D\-Controller}}
+}
+
+
+{\ttfamily \#include $<$\-P\-I\-D\-Controller.\-h$>$}
+
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classPIDController_aeb0e62ab4c39e61826b71b4177eb97d5}{\-P\-I\-D\-Controller} (float p, float i, float d, \hyperlink{classPIDSource}{\-P\-I\-D\-Source} $\ast$source, \hyperlink{classPIDOutput}{\-P\-I\-D\-Output} $\ast$output, float period=0.\-05)
+\item 
+\hyperlink{classPIDController_a690e7ad4796e5c5143aa4b90f2f6677b}{$\sim$\-P\-I\-D\-Controller} ()
+\item 
+float \hyperlink{classPIDController_a5d096c87981f6612fe0cf496cea9772a}{\-Get} ()
+\item 
+void \hyperlink{classPIDController_adc068e4069028a0546fad0bee0ef32ca}{\-Set\-Continuous} (bool continuous=true)
+\item 
+void \hyperlink{classPIDController_aa105ab2c2020dfc767fe9b585be0103a}{\-Set\-Input\-Range} (float minimum\-Input, float maximum\-Input)
+\item 
+void \hyperlink{classPIDController_afa64ecde5d075a47a4cd1431f77b6060}{\-Set\-Output\-Range} (float mimimum\-Output, float maximum\-Output)
+\item 
+void \hyperlink{classPIDController_a1e4bf6acfb4eccb1b38f3f74ef74f995}{\-Set\-P\-I\-D} (float p, float i, float d)
+\item 
+float \hyperlink{classPIDController_a9572c875b0fee00189e7e22250db3831}{\-Get\-P} ()
+\item 
+float \hyperlink{classPIDController_aad4c914184a37b8ceb85401d59ff163b}{\-Get\-I} ()
+\item 
+float \hyperlink{classPIDController_a003738f4df587babc119131cdfada553}{\-Get\-D} ()
+\item 
+void \hyperlink{classPIDController_a60e89182f28d2cc1ee5adf481c2003c9}{\-Set\-Setpoint} (float setpoint)
+\item 
+float \hyperlink{classPIDController_ac25eb01ba2a0118f692bae207de62d63}{\-Get\-Setpoint} ()
+\item 
+float \hyperlink{classPIDController_aba10571498bacd21469121d4af1f4757}{\-Get\-Error} ()
+\item 
+\hypertarget{classPIDController_a86cba2e65c803b3f3d2c63ea0dfdaec4}{void {\bfseries \-Set\-Tolerance} (float percent)}\label{classPIDController_a86cba2e65c803b3f3d2c63ea0dfdaec4}
+
+\item 
+\hypertarget{classPIDController_acee849c5dd29905362aaeb414de5c3ed}{bool {\bfseries \-On\-Target} ()}\label{classPIDController_acee849c5dd29905362aaeb414de5c3ed}
+
+\item 
+void \hyperlink{classPIDController_a1b272c08b669b2a86f47958aa839b656}{\-Enable} ()
+\item 
+void \hyperlink{classPIDController_ad13d5e8f8b465a00ad2c21a14cb832c4}{\-Disable} ()
+\item 
+bool \hyperlink{classPIDController_a55f228ba275cac683e82bbc48a298842}{\-Is\-Enabled} ()
+\item 
+void \hyperlink{classPIDController_a7c4b30b19bbcf226f5c6de8df23ec9e9}{\-Reset} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-Class implements a \-P\-I\-D \-Control \-Loop.
+
+\-Creates a separate thread which reads the given \hyperlink{classPIDSource}{\-P\-I\-D\-Source} and takes care of the integral calculations, as well as writing the given \hyperlink{classPIDOutput}{\-P\-I\-D\-Output} 
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{classPIDController_aeb0e62ab4c39e61826b71b4177eb97d5}{\index{\-P\-I\-D\-Controller@{\-P\-I\-D\-Controller}!\-P\-I\-D\-Controller@{\-P\-I\-D\-Controller}}
+\index{\-P\-I\-D\-Controller@{\-P\-I\-D\-Controller}!PIDController@{\-P\-I\-D\-Controller}}
+\subsubsection[{\-P\-I\-D\-Controller}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-P\-I\-D\-Controller\-::\-P\-I\-D\-Controller} (
+\begin{DoxyParamCaption}
+\item[{float}]{\-Kp, }
+\item[{float}]{\-Ki, }
+\item[{float}]{\-Kd, }
+\item[{{\bf \-P\-I\-D\-Source} $\ast$}]{source, }
+\item[{{\bf \-P\-I\-D\-Output} $\ast$}]{output, }
+\item[{float}]{period = {\ttfamily 0.05}}
+\end{DoxyParamCaption}
+)}}\label{classPIDController_aeb0e62ab4c39e61826b71b4177eb97d5}
+\-Allocate a \-P\-I\-D object with the given constants for \-P, \-I, \-D 
+\begin{DoxyParams}{\-Parameters}
+{\em \-Kp} & the proportional coefficient \\
+\hline
+{\em \-Ki} & the integral coefficient \\
+\hline
+{\em \-Kd} & the derivative coefficient \\
+\hline
+{\em source} & \-The \hyperlink{classPIDSource}{\-P\-I\-D\-Source} object that is used to get values \\
+\hline
+{\em output} & \-The \hyperlink{classPIDOutput}{\-P\-I\-D\-Output} object that is set to the output value \\
+\hline
+{\em period} & the loop time for doing calculations. \-This particularly effects calculations of the integral and differental terms. \-The default is 50ms. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classPIDController_a690e7ad4796e5c5143aa4b90f2f6677b}{\index{\-P\-I\-D\-Controller@{\-P\-I\-D\-Controller}!$\sim$\-P\-I\-D\-Controller@{$\sim$\-P\-I\-D\-Controller}}
+\index{$\sim$\-P\-I\-D\-Controller@{$\sim$\-P\-I\-D\-Controller}!PIDController@{\-P\-I\-D\-Controller}}
+\subsubsection[{$\sim$\-P\-I\-D\-Controller}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-P\-I\-D\-Controller\-::$\sim$\-P\-I\-D\-Controller} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classPIDController_a690e7ad4796e5c5143aa4b90f2f6677b}
+\-Free the \-P\-I\-D object 
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classPIDController_ad13d5e8f8b465a00ad2c21a14cb832c4}{\index{\-P\-I\-D\-Controller@{\-P\-I\-D\-Controller}!\-Disable@{\-Disable}}
+\index{\-Disable@{\-Disable}!PIDController@{\-P\-I\-D\-Controller}}
+\subsubsection[{\-Disable}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-P\-I\-D\-Controller\-::\-Disable} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classPIDController_ad13d5e8f8b465a00ad2c21a14cb832c4}
+\-Stop running the \hyperlink{classPIDController}{\-P\-I\-D\-Controller}, this sets the output to zero before stopping. \hypertarget{classPIDController_a1b272c08b669b2a86f47958aa839b656}{\index{\-P\-I\-D\-Controller@{\-P\-I\-D\-Controller}!\-Enable@{\-Enable}}
+\index{\-Enable@{\-Enable}!PIDController@{\-P\-I\-D\-Controller}}
+\subsubsection[{\-Enable}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-P\-I\-D\-Controller\-::\-Enable} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classPIDController_a1b272c08b669b2a86f47958aa839b656}
+\-Begin running the \hyperlink{classPIDController}{\-P\-I\-D\-Controller} \hypertarget{classPIDController_a5d096c87981f6612fe0cf496cea9772a}{\index{\-P\-I\-D\-Controller@{\-P\-I\-D\-Controller}!\-Get@{\-Get}}
+\index{\-Get@{\-Get}!PIDController@{\-P\-I\-D\-Controller}}
+\subsubsection[{\-Get}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf \-P\-I\-D\-Controller\-::\-Get} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classPIDController_a5d096c87981f6612fe0cf496cea9772a}
+\-Return the current \-P\-I\-D result \-This is always centered on zero and constrained the the max and min outs \begin{DoxyReturn}{\-Returns}
+the latest calculated output 
+\end{DoxyReturn}
+\hypertarget{classPIDController_a003738f4df587babc119131cdfada553}{\index{\-P\-I\-D\-Controller@{\-P\-I\-D\-Controller}!\-Get\-D@{\-Get\-D}}
+\index{\-Get\-D@{\-Get\-D}!PIDController@{\-P\-I\-D\-Controller}}
+\subsubsection[{\-Get\-D}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf \-P\-I\-D\-Controller\-::\-Get\-D} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classPIDController_a003738f4df587babc119131cdfada553}
+\-Get the \-Differential coefficient \begin{DoxyReturn}{\-Returns}
+differential coefficient 
+\end{DoxyReturn}
+\hypertarget{classPIDController_aba10571498bacd21469121d4af1f4757}{\index{\-P\-I\-D\-Controller@{\-P\-I\-D\-Controller}!\-Get\-Error@{\-Get\-Error}}
+\index{\-Get\-Error@{\-Get\-Error}!PIDController@{\-P\-I\-D\-Controller}}
+\subsubsection[{\-Get\-Error}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf \-P\-I\-D\-Controller\-::\-Get\-Error} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classPIDController_aba10571498bacd21469121d4af1f4757}
+\-Retruns the current difference of the input from the setpoint \begin{DoxyReturn}{\-Returns}
+the current error 
+\end{DoxyReturn}
+\hypertarget{classPIDController_aad4c914184a37b8ceb85401d59ff163b}{\index{\-P\-I\-D\-Controller@{\-P\-I\-D\-Controller}!\-Get\-I@{\-Get\-I}}
+\index{\-Get\-I@{\-Get\-I}!PIDController@{\-P\-I\-D\-Controller}}
+\subsubsection[{\-Get\-I}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf \-P\-I\-D\-Controller\-::\-Get\-I} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classPIDController_aad4c914184a37b8ceb85401d59ff163b}
+\-Get the \-Integral coefficient \begin{DoxyReturn}{\-Returns}
+integral coefficient 
+\end{DoxyReturn}
+\hypertarget{classPIDController_a9572c875b0fee00189e7e22250db3831}{\index{\-P\-I\-D\-Controller@{\-P\-I\-D\-Controller}!\-Get\-P@{\-Get\-P}}
+\index{\-Get\-P@{\-Get\-P}!PIDController@{\-P\-I\-D\-Controller}}
+\subsubsection[{\-Get\-P}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf \-P\-I\-D\-Controller\-::\-Get\-P} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classPIDController_a9572c875b0fee00189e7e22250db3831}
+\-Get the \-Proportional coefficient \begin{DoxyReturn}{\-Returns}
+proportional coefficient 
+\end{DoxyReturn}
+\hypertarget{classPIDController_ac25eb01ba2a0118f692bae207de62d63}{\index{\-P\-I\-D\-Controller@{\-P\-I\-D\-Controller}!\-Get\-Setpoint@{\-Get\-Setpoint}}
+\index{\-Get\-Setpoint@{\-Get\-Setpoint}!PIDController@{\-P\-I\-D\-Controller}}
+\subsubsection[{\-Get\-Setpoint}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf \-P\-I\-D\-Controller\-::\-Get\-Setpoint} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classPIDController_ac25eb01ba2a0118f692bae207de62d63}
+\-Returns the current setpoint of the \hyperlink{classPIDController}{\-P\-I\-D\-Controller} \begin{DoxyReturn}{\-Returns}
+the current setpoint 
+\end{DoxyReturn}
+\hypertarget{classPIDController_a55f228ba275cac683e82bbc48a298842}{\index{\-P\-I\-D\-Controller@{\-P\-I\-D\-Controller}!\-Is\-Enabled@{\-Is\-Enabled}}
+\index{\-Is\-Enabled@{\-Is\-Enabled}!PIDController@{\-P\-I\-D\-Controller}}
+\subsubsection[{\-Is\-Enabled}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-P\-I\-D\-Controller\-::\-Is\-Enabled} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classPIDController_a55f228ba275cac683e82bbc48a298842}
+\-Return true if \hyperlink{classPIDController}{\-P\-I\-D\-Controller} is enabled. \hypertarget{classPIDController_a7c4b30b19bbcf226f5c6de8df23ec9e9}{\index{\-P\-I\-D\-Controller@{\-P\-I\-D\-Controller}!\-Reset@{\-Reset}}
+\index{\-Reset@{\-Reset}!PIDController@{\-P\-I\-D\-Controller}}
+\subsubsection[{\-Reset}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-P\-I\-D\-Controller\-::\-Reset} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classPIDController_a7c4b30b19bbcf226f5c6de8df23ec9e9}
+\-Reset the previous error,, the integral term, and disable the controller. \hypertarget{classPIDController_adc068e4069028a0546fad0bee0ef32ca}{\index{\-P\-I\-D\-Controller@{\-P\-I\-D\-Controller}!\-Set\-Continuous@{\-Set\-Continuous}}
+\index{\-Set\-Continuous@{\-Set\-Continuous}!PIDController@{\-P\-I\-D\-Controller}}
+\subsubsection[{\-Set\-Continuous}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-P\-I\-D\-Controller\-::\-Set\-Continuous} (
+\begin{DoxyParamCaption}
+\item[{bool}]{continuous = {\ttfamily true}}
+\end{DoxyParamCaption}
+)}}\label{classPIDController_adc068e4069028a0546fad0bee0ef32ca}
+\-Set the \-P\-I\-D controller to consider the input to be continuous, \-Rather then using the max and min in as constraints, it considers them to be the same point and automatically calculates the shortest route to the setpoint. 
+\begin{DoxyParams}{\-Parameters}
+{\em continuous} & \-Set to true turns on continuous, false turns off continuous \\
+\hline
+\end{DoxyParams}
+\hypertarget{classPIDController_aa105ab2c2020dfc767fe9b585be0103a}{\index{\-P\-I\-D\-Controller@{\-P\-I\-D\-Controller}!\-Set\-Input\-Range@{\-Set\-Input\-Range}}
+\index{\-Set\-Input\-Range@{\-Set\-Input\-Range}!PIDController@{\-P\-I\-D\-Controller}}
+\subsubsection[{\-Set\-Input\-Range}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-P\-I\-D\-Controller\-::\-Set\-Input\-Range} (
+\begin{DoxyParamCaption}
+\item[{float}]{minimum\-Input, }
+\item[{float}]{maximum\-Input}
+\end{DoxyParamCaption}
+)}}\label{classPIDController_aa105ab2c2020dfc767fe9b585be0103a}
+\-Sets the maximum and minimum values expected from the input.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em minimum\-Input} & the minimum value expected from the input \\
+\hline
+{\em maximum\-Input} & the maximum value expected from the output \\
+\hline
+\end{DoxyParams}
+\hypertarget{classPIDController_afa64ecde5d075a47a4cd1431f77b6060}{\index{\-P\-I\-D\-Controller@{\-P\-I\-D\-Controller}!\-Set\-Output\-Range@{\-Set\-Output\-Range}}
+\index{\-Set\-Output\-Range@{\-Set\-Output\-Range}!PIDController@{\-P\-I\-D\-Controller}}
+\subsubsection[{\-Set\-Output\-Range}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-P\-I\-D\-Controller\-::\-Set\-Output\-Range} (
+\begin{DoxyParamCaption}
+\item[{float}]{minimum\-Output, }
+\item[{float}]{maximum\-Output}
+\end{DoxyParamCaption}
+)}}\label{classPIDController_afa64ecde5d075a47a4cd1431f77b6060}
+\-Sets the minimum and maximum values to write.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em minimum\-Output} & the minimum value to write to the output \\
+\hline
+{\em maximum\-Output} & the maximum value to write to the output \\
+\hline
+\end{DoxyParams}
+\hypertarget{classPIDController_a1e4bf6acfb4eccb1b38f3f74ef74f995}{\index{\-P\-I\-D\-Controller@{\-P\-I\-D\-Controller}!\-Set\-P\-I\-D@{\-Set\-P\-I\-D}}
+\index{\-Set\-P\-I\-D@{\-Set\-P\-I\-D}!PIDController@{\-P\-I\-D\-Controller}}
+\subsubsection[{\-Set\-P\-I\-D}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-P\-I\-D\-Controller\-::\-Set\-P\-I\-D} (
+\begin{DoxyParamCaption}
+\item[{float}]{p, }
+\item[{float}]{i, }
+\item[{float}]{d}
+\end{DoxyParamCaption}
+)}}\label{classPIDController_a1e4bf6acfb4eccb1b38f3f74ef74f995}
+\-Set the \-P\-I\-D \-Controller gain parameters. \-Set the proportional, integral, and differential coefficients. 
+\begin{DoxyParams}{\-Parameters}
+{\em p} & \-Proportional coefficient \\
+\hline
+{\em i} & \-Integral coefficient \\
+\hline
+{\em d} & \-Differential coefficient \\
+\hline
+\end{DoxyParams}
+\hypertarget{classPIDController_a60e89182f28d2cc1ee5adf481c2003c9}{\index{\-P\-I\-D\-Controller@{\-P\-I\-D\-Controller}!\-Set\-Setpoint@{\-Set\-Setpoint}}
+\index{\-Set\-Setpoint@{\-Set\-Setpoint}!PIDController@{\-P\-I\-D\-Controller}}
+\subsubsection[{\-Set\-Setpoint}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-P\-I\-D\-Controller\-::\-Set\-Setpoint} (
+\begin{DoxyParamCaption}
+\item[{float}]{setpoint}
+\end{DoxyParamCaption}
+)}}\label{classPIDController_a60e89182f28d2cc1ee5adf481c2003c9}
+\-Set the setpoint for the \hyperlink{classPIDController}{\-P\-I\-D\-Controller} 
+\begin{DoxyParams}{\-Parameters}
+{\em setpoint} & the desired setpoint \\
+\hline
+\end{DoxyParams}
+
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+\-P\-I\-D\-Controller.\-h\item 
+\-P\-I\-D\-Controller.\-cpp\end{DoxyCompactItemize}

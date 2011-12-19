@@ -1,0 +1,81 @@
+\hypertarget{classSpeedController}{\section{\-Speed\-Controller \-Class \-Reference}
+\label{classSpeedController}\index{\-Speed\-Controller@{\-Speed\-Controller}}
+}
+
+
+{\ttfamily \#include $<$\-Speed\-Controller.\-h$>$}
+
+\-Inheritance diagram for \-Speed\-Controller\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classSpeedController}
+\end{center}
+\end{figure}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{classSpeedController_abaa1c81b41a9cc673fe92978bb12f82e}{\-Set} (float speed, \-U\-I\-N\-T8 sync\-Group=0)=0
+\item 
+virtual float \hyperlink{classSpeedController_a41c2b62853ab141b471af0864e469031}{\-Get} ()=0
+\item 
+virtual void \hyperlink{classSpeedController_a6fd7bbef6feb65b89d7eb727e8c1ec76}{\-Disable} ()=0
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-Interface for speed controlling devices. 
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classSpeedController_a6fd7bbef6feb65b89d7eb727e8c1ec76}{\index{\-Speed\-Controller@{\-Speed\-Controller}!\-Disable@{\-Disable}}
+\index{\-Disable@{\-Disable}!SpeedController@{\-Speed\-Controller}}
+\subsubsection[{\-Disable}]{\setlength{\rightskip}{0pt plus 5cm}virtual void {\bf \-Speed\-Controller\-::\-Disable} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}\label{classSpeedController_a6fd7bbef6feb65b89d7eb727e8c1ec76}
+\-Common interface for disabling a motor. 
+
+\-Implemented in \hyperlink{classCANJaguar_a3dc0852859fb60499b609938b69e9252}{\-C\-A\-N\-Jaguar}, \hyperlink{classJaguar_a59b1a6772a482f810134a4c623416b44}{\-Jaguar}, and \hyperlink{classVictor_a62b0d4aef3b9b749e326532164924a06}{\-Victor}.
+
+\hypertarget{classSpeedController_a41c2b62853ab141b471af0864e469031}{\index{\-Speed\-Controller@{\-Speed\-Controller}!\-Get@{\-Get}}
+\index{\-Get@{\-Get}!SpeedController@{\-Speed\-Controller}}
+\subsubsection[{\-Get}]{\setlength{\rightskip}{0pt plus 5cm}virtual float {\bf \-Speed\-Controller\-::\-Get} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}\label{classSpeedController_a41c2b62853ab141b471af0864e469031}
+\-Common interface for getting the current set speed of a speed controller.
+
+\begin{DoxyReturn}{\-Returns}
+\-The current set speed. \-Value is between -\/1.\-0 and 1.\-0. 
+\end{DoxyReturn}
+
+
+\-Implemented in \hyperlink{classCANJaguar_a35f28a93acc83bcc482d481037389433}{\-C\-A\-N\-Jaguar}, \hyperlink{classJaguar_a7ce9aa9378ec4f0907dca524f63bfdd1}{\-Jaguar}, and \hyperlink{classVictor_a71f7b8a475186a823515c4508af7498c}{\-Victor}.
+
+\hypertarget{classSpeedController_abaa1c81b41a9cc673fe92978bb12f82e}{\index{\-Speed\-Controller@{\-Speed\-Controller}!\-Set@{\-Set}}
+\index{\-Set@{\-Set}!SpeedController@{\-Speed\-Controller}}
+\subsubsection[{\-Set}]{\setlength{\rightskip}{0pt plus 5cm}virtual void {\bf \-Speed\-Controller\-::\-Set} (
+\begin{DoxyParamCaption}
+\item[{float}]{speed, }
+\item[{\-U\-I\-N\-T8}]{sync\-Group = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}\label{classSpeedController_abaa1c81b41a9cc673fe92978bb12f82e}
+\-Common interface for setting the speed of a speed controller.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em speed} & \-The speed to set. \-Value should be between -\/1.\-0 and 1.\-0. \\
+\hline
+{\em sync\-Group} & \-The update group to add this \hyperlink{classSpeedController_abaa1c81b41a9cc673fe92978bb12f82e}{\-Set()} to, pending \-Update\-Sync\-Group(). \-If 0, update immediately. \\
+\hline
+\end{DoxyParams}
+
+
+\-Implemented in \hyperlink{classCANJaguar_aa8a4f32b3c1839557cd73996693a116a}{\-C\-A\-N\-Jaguar}, \hyperlink{classJaguar_a1a15089e9ea94102f1d003bce3ae2f54}{\-Jaguar}, and \hyperlink{classVictor_aabd64f11a67851b3a4eed9b2ea1016ca}{\-Victor}.
+
+
+
+\-The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+\-Speed\-Controller.\-h\end{DoxyCompactItemize}

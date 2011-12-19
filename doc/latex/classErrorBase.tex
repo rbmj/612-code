@@ -1,0 +1,113 @@
+\hypertarget{classErrorBase}{\section{\-Error\-Base \-Class \-Reference}
+\label{classErrorBase}\index{\-Error\-Base@{\-Error\-Base}}
+}
+
+
+{\ttfamily \#include $<$\-Error\-Base.\-h$>$}
+
+\-Inheritance diagram for \-Error\-Base\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=12.000000cm]{classErrorBase}
+\end{center}
+\end{figure}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classErrorBase_a2b5460a3e693a12b3023b096795f28cb}{virtual \hyperlink{classError}{\-Error} \& \hyperlink{classErrorBase_a2b5460a3e693a12b3023b096795f28cb}{\-Get\-Error} ()}\label{classErrorBase_a2b5460a3e693a12b3023b096795f28cb}
+
+\begin{DoxyCompactList}\small\item\em \-Retrieve the current error. \-Get the current error information associated with this sensor. \end{DoxyCompactList}\item 
+\hypertarget{classErrorBase_aa365da53118bb3cd6c1fd4c42e6d90a3}{virtual const \hyperlink{classError}{\-Error} \& {\bfseries \-Get\-Error} () const }\label{classErrorBase_aa365da53118bb3cd6c1fd4c42e6d90a3}
+
+\item 
+virtual void \hyperlink{classErrorBase_aa2f089952c538a73d3e65a6a0bdb09ea}{\-Set\-Error} (\-Error\-::\-Code code, const char $\ast$filename, \-U\-I\-N\-T32 line\-Number) const 
+\begin{DoxyCompactList}\small\item\em \-Set the current error information associated with this sensor. \end{DoxyCompactList}\item 
+\hypertarget{classErrorBase_a25741ec13e810e708e337b9a26eff477}{virtual void \hyperlink{classErrorBase_a25741ec13e810e708e337b9a26eff477}{\-Clear\-Error} ()}\label{classErrorBase_a25741ec13e810e708e337b9a26eff477}
+
+\begin{DoxyCompactList}\small\item\em \-Clear the current error information associated with this sensor. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{classErrorBase_a05790f219c9e436a09752f73f7344024}{\-Status\-Is\-Fatal} () const 
+\begin{DoxyCompactList}\small\item\em \-Check if the current error code represents a fatal error. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{\-Static \-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{classError}{\-Error} \& \hyperlink{classErrorBase_ab85de5de437f0293356753b2ebab874c}{\-Get\-Global\-Error} ()
+\end{DoxyCompactItemize}
+\subsection*{\-Protected \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classErrorBase_af49991441156c7832d7017951427cef2}{\hyperlink{classErrorBase_af49991441156c7832d7017951427cef2}{\-Error\-Base} ()}\label{classErrorBase_af49991441156c7832d7017951427cef2}
+
+\begin{DoxyCompactList}\small\item\em \-Initialize the instance status to 0 for now. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{\-Protected \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classErrorBase_a94cef1c4df1d6def498a2b3c458408c4}{t\-Rio\-Status\-Code {\bfseries status}}\label{classErrorBase_a94cef1c4df1d6def498a2b3c458408c4}
+
+\item 
+\hypertarget{classErrorBase_a74124eca104892570b174fee2c484a4f}{\hyperlink{classError}{\-Error} {\bfseries error}}\label{classErrorBase_a74124eca104892570b174fee2c484a4f}
+
+\end{DoxyCompactItemize}
+\subsection*{\-Static \-Protected \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classErrorBase_a9138d500675bcc2310b13603e3a1099e}{static \-S\-E\-M\-\_\-\-I\-D {\bfseries global\-Error\-Mutex} = sem\-M\-Create(\-S\-E\-M\-\_\-\-Q\-\_\-\-P\-R\-I\-O\-R\-I\-T\-Y $|$ \-S\-E\-M\-\_\-\-D\-E\-L\-E\-T\-E\-\_\-\-S\-A\-F\-E $|$ \-S\-E\-M\-\_\-\-I\-N\-V\-E\-R\-S\-I\-O\-N\-\_\-\-S\-A\-F\-E)}\label{classErrorBase_a9138d500675bcc2310b13603e3a1099e}
+
+\item 
+\hypertarget{classErrorBase_aede1348bb4523e9ee6e8cadde662889b}{static \hyperlink{classError}{\-Error} {\bfseries global\-Error}}\label{classErrorBase_aede1348bb4523e9ee6e8cadde662889b}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-Base class for most objects. \hyperlink{classErrorBase}{\-Error\-Base} is the base class for most objects since it holds the generated error for that object. \-In addition, there is a single instance of a global error object 
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classErrorBase_ab85de5de437f0293356753b2ebab874c}{\index{\-Error\-Base@{\-Error\-Base}!\-Get\-Global\-Error@{\-Get\-Global\-Error}}
+\index{\-Get\-Global\-Error@{\-Get\-Global\-Error}!ErrorBase@{\-Error\-Base}}
+\subsubsection[{\-Get\-Global\-Error}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Error} \& {\bf \-Error\-Base\-::\-Get\-Global\-Error} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{classErrorBase_ab85de5de437f0293356753b2ebab874c}
+\-Retrieve the current global error. \hypertarget{classErrorBase_aa2f089952c538a73d3e65a6a0bdb09ea}{\index{\-Error\-Base@{\-Error\-Base}!\-Set\-Error@{\-Set\-Error}}
+\index{\-Set\-Error@{\-Set\-Error}!ErrorBase@{\-Error\-Base}}
+\subsubsection[{\-Set\-Error}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Error\-Base\-::\-Set\-Error} (
+\begin{DoxyParamCaption}
+\item[{\-Error\-::\-Code}]{code, }
+\item[{const char $\ast$}]{filename, }
+\item[{\-U\-I\-N\-T32}]{line\-Number}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{classErrorBase_aa2f089952c538a73d3e65a6a0bdb09ea}
+
+
+\-Set the current error information associated with this sensor. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em code} & \-The error code \\
+\hline
+{\em filename} & \-Filename of the error source \\
+\hline
+{\em line\-Number} & \-Line number of the error source \\
+\hline
+\end{DoxyParams}
+\hypertarget{classErrorBase_a05790f219c9e436a09752f73f7344024}{\index{\-Error\-Base@{\-Error\-Base}!\-Status\-Is\-Fatal@{\-Status\-Is\-Fatal}}
+\index{\-Status\-Is\-Fatal@{\-Status\-Is\-Fatal}!ErrorBase@{\-Error\-Base}}
+\subsubsection[{\-Status\-Is\-Fatal}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Error\-Base\-::\-Status\-Is\-Fatal} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{classErrorBase_a05790f219c9e436a09752f73f7344024}
+
+
+\-Check if the current error code represents a fatal error. 
+
+\begin{DoxyReturn}{\-Returns}
+true if the current error is fatal. 
+\end{DoxyReturn}
+
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+\-Error\-Base.\-h\item 
+\-Error\-Base.\-cpp\end{DoxyCompactItemize}

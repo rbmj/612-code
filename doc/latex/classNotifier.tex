@@ -1,0 +1,79 @@
+\hypertarget{classNotifier}{\section{\-Notifier \-Class \-Reference}
+\label{classNotifier}\index{\-Notifier@{\-Notifier}}
+}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classNotifier_add626cbc00f8e50f98dc09758d19f85a}{\-Notifier} (\-Timer\-Event\-Handler handler, void $\ast$param=\-N\-U\-L\-L)
+\item 
+virtual \hyperlink{classNotifier_acb1a245d3fbef36f2f96400150cef915}{$\sim$\-Notifier} ()
+\item 
+void \hyperlink{classNotifier_af62f654c1918a9c4256b201c5a9f78f7}{\-Start\-Single} (double delay)
+\item 
+void \hyperlink{classNotifier_ad86c4d07ac2947b0fa51b2ec4ed95dbf}{\-Start\-Periodic} (double period)
+\item 
+void \hyperlink{classNotifier_acbd1d398b7338e18d273a3acb6c1bf63}{\-Stop} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{classNotifier_add626cbc00f8e50f98dc09758d19f85a}{\index{\-Notifier@{\-Notifier}!\-Notifier@{\-Notifier}}
+\index{\-Notifier@{\-Notifier}!Notifier@{\-Notifier}}
+\subsubsection[{\-Notifier}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Notifier\-::\-Notifier} (
+\begin{DoxyParamCaption}
+\item[{\-Timer\-Event\-Handler}]{handler, }
+\item[{void $\ast$}]{param = {\ttfamily \-N\-U\-L\-L}}
+\end{DoxyParamCaption}
+)}}\label{classNotifier_add626cbc00f8e50f98dc09758d19f85a}
+\-Create a \hyperlink{classNotifier}{\-Notifier} for timer event notification. 
+\begin{DoxyParams}{\-Parameters}
+{\em handler} & \-The handler is called at the notification time which is set using \-Start\-Single or \-Start\-Periodic. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classNotifier_acb1a245d3fbef36f2f96400150cef915}{\index{\-Notifier@{\-Notifier}!$\sim$\-Notifier@{$\sim$\-Notifier}}
+\index{$\sim$\-Notifier@{$\sim$\-Notifier}!Notifier@{\-Notifier}}
+\subsubsection[{$\sim$\-Notifier}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Notifier\-::$\sim$\-Notifier} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{classNotifier_acb1a245d3fbef36f2f96400150cef915}
+\-Free the resources for a timer event. \-All resources will be freed and the timer event will be removed from the queue if necessary. 
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classNotifier_ad86c4d07ac2947b0fa51b2ec4ed95dbf}{\index{\-Notifier@{\-Notifier}!\-Start\-Periodic@{\-Start\-Periodic}}
+\index{\-Start\-Periodic@{\-Start\-Periodic}!Notifier@{\-Notifier}}
+\subsubsection[{\-Start\-Periodic}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Notifier\-::\-Start\-Periodic} (
+\begin{DoxyParamCaption}
+\item[{double}]{period}
+\end{DoxyParamCaption}
+)}}\label{classNotifier_ad86c4d07ac2947b0fa51b2ec4ed95dbf}
+\-Register for periodic event notification. \-A timer event is queued for periodic event notification. \-Each time the interrupt occurs, the event will be immedeatly requeued for the same time interval. 
+\begin{DoxyParams}{\-Parameters}
+{\em period} & \-Period in seconds to call the handler starting one period after the call to this method. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classNotifier_af62f654c1918a9c4256b201c5a9f78f7}{\index{\-Notifier@{\-Notifier}!\-Start\-Single@{\-Start\-Single}}
+\index{\-Start\-Single@{\-Start\-Single}!Notifier@{\-Notifier}}
+\subsubsection[{\-Start\-Single}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Notifier\-::\-Start\-Single} (
+\begin{DoxyParamCaption}
+\item[{double}]{delay}
+\end{DoxyParamCaption}
+)}}\label{classNotifier_af62f654c1918a9c4256b201c5a9f78f7}
+\-Register for single event notification. \-A timer event is queued for a single event after the specified delay. 
+\begin{DoxyParams}{\-Parameters}
+{\em delay} & \-Seconds to wait before the handler is called. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classNotifier_acbd1d398b7338e18d273a3acb6c1bf63}{\index{\-Notifier@{\-Notifier}!\-Stop@{\-Stop}}
+\index{\-Stop@{\-Stop}!Notifier@{\-Notifier}}
+\subsubsection[{\-Stop}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Notifier\-::\-Stop} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classNotifier_acbd1d398b7338e18d273a3acb6c1bf63}
+\-Stop timer events from occuring. \-Stop any repeating timer events from occuring. \-This will also remove any single notification events from the queue. \-If a timer-\/based call to the registered handler is in progress, this function will block until the handler call is complete. 
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+\-Notifier.\-h\item 
+\-Notifier.\-cpp\end{DoxyCompactItemize}

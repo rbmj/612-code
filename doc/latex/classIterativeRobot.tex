@@ -1,0 +1,252 @@
+\hypertarget{classIterativeRobot}{\section{\-Iterative\-Robot \-Class \-Reference}
+\label{classIterativeRobot}\index{\-Iterative\-Robot@{\-Iterative\-Robot}}
+}
+
+
+{\ttfamily \#include $<$\-Iterative\-Robot.\-h$>$}
+
+\-Inheritance diagram for \-Iterative\-Robot\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classIterativeRobot}
+\end{center}
+\end{figure}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{classIterativeRobot_ab0af04a781b0390981b9f0dd75358515}{\-Start\-Competition} ()
+\item 
+virtual void \hyperlink{classIterativeRobot_a5296334b4a48ad2123c29f49209b9f62}{\-Robot\-Init} ()
+\item 
+virtual void \hyperlink{classIterativeRobot_a428a5875274cb886730530d633a50db9}{\-Disabled\-Init} ()
+\item 
+virtual void \hyperlink{classIterativeRobot_aa936c0a4526e12e32defd50609cca90c}{\-Autonomous\-Init} ()
+\item 
+virtual void \hyperlink{classIterativeRobot_a7365e781f0a04674b94bb1fb5767d83e}{\-Teleop\-Init} ()
+\item 
+virtual void \hyperlink{classIterativeRobot_a00265f02550b12295ca2cffde2c9c838}{\-Disabled\-Periodic} ()
+\item 
+virtual void \hyperlink{classIterativeRobot_ac579e155cc4613ced00d5e740cf98667}{\-Autonomous\-Periodic} ()
+\item 
+virtual void \hyperlink{classIterativeRobot_a3336d7f71d644e646dba70839f4f4672}{\-Teleop\-Periodic} ()
+\item 
+virtual void \hyperlink{classIterativeRobot_a86e595ec2e7e645c8ae246243d6a16b8}{\-Disabled\-Continuous} ()
+\item 
+virtual void \hyperlink{classIterativeRobot_a766544e4b37b525b2a5d075e90e81b9e}{\-Autonomous\-Continuous} ()
+\item 
+virtual void \hyperlink{classIterativeRobot_afdfd6d7b231332af5d6277cb6e91bdfa}{\-Teleop\-Continuous} ()
+\item 
+void \hyperlink{classIterativeRobot_a1e49eb27408751ea8ce757bfe38717e2}{\-Set\-Period} (double period)
+\item 
+double \hyperlink{classIterativeRobot_a9752aaefce11839ea809b2a3326e937f}{\-Get\-Period} ()
+\item 
+double \hyperlink{classIterativeRobot_af8ada1ff1b92b0b678f1c959463cc460}{\-Get\-Loops\-Per\-Sec} ()
+\end{DoxyCompactItemize}
+\subsection*{\-Static \-Public \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classIterativeRobot_af4d4e42da2c2c2b805c5d0d7452c7f00}{static const double {\bfseries k\-Default\-Period} = 0.\-0}\label{classIterativeRobot_af4d4e42da2c2c2b805c5d0d7452c7f00}
+
+\end{DoxyCompactItemize}
+\subsection*{\-Protected \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \hyperlink{classIterativeRobot_a0d80a18c34ba474248a806ed0ea5ad74}{$\sim$\-Iterative\-Robot} ()
+\item 
+\hyperlink{classIterativeRobot_a7ec0b439b50ba3bc7ca34a6ed1653304}{\-Iterative\-Robot} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\hyperlink{classIterativeRobot}{\-Iterative\-Robot} implements a specific type of \-Robot \-Program framework, extending the \hyperlink{classRobotBase}{\-Robot\-Base} class.
+
+\-The \hyperlink{classIterativeRobot}{\-Iterative\-Robot} class is intended to be subclassed by a user creating a robot program.
+
+\-This class is intended to implement the \char`\"{}old style\char`\"{} default code, by providing the following functions which are called by the main loop, \hyperlink{classIterativeRobot_ab0af04a781b0390981b9f0dd75358515}{\-Start\-Competition()}, at the appropriate times\-:
+
+\hyperlink{classIterativeRobot_a5296334b4a48ad2123c29f49209b9f62}{\-Robot\-Init()} -\/-\/ provide for initialization at robot power-\/on
+
+\-Init() functions -\/-\/ each of the following functions is called once when the appropriate mode is entered\-:
+\begin{DoxyItemize}
+\item \hyperlink{classIterativeRobot_a428a5875274cb886730530d633a50db9}{\-Disabled\-Init()} -\/-\/ called only when first disabled
+\item \hyperlink{classIterativeRobot_aa936c0a4526e12e32defd50609cca90c}{\-Autonomous\-Init()} -\/-\/ called each and every time autonomous is entered from another mode
+\item \hyperlink{classIterativeRobot_a7365e781f0a04674b94bb1fb5767d83e}{\-Teleop\-Init()} -\/-\/ called each and every time teleop is entered from another mode
+\end{DoxyItemize}
+
+\-Periodic() functions -\/-\/ each of these functions is called iteratively at the appropriate periodic rate (aka the \char`\"{}slow loop\char`\"{}). \-The default period of the iterative robot is synced to the driver station control packets, giving a periodic frequency of about 50\-Hz (50 times per second).
+\begin{DoxyItemize}
+\item \hyperlink{classIterativeRobot_a00265f02550b12295ca2cffde2c9c838}{\-Disabled\-Periodic()}
+\item \hyperlink{classIterativeRobot_ac579e155cc4613ced00d5e740cf98667}{\-Autonomous\-Periodic()}
+\item \hyperlink{classIterativeRobot_a3336d7f71d644e646dba70839f4f4672}{\-Teleop\-Periodic()}
+\end{DoxyItemize}
+
+\-Continuous() functions -\/-\/ each of these functions is called repeatedly as fast as possible\-:
+\begin{DoxyItemize}
+\item \hyperlink{classIterativeRobot_a86e595ec2e7e645c8ae246243d6a16b8}{\-Disabled\-Continuous()}
+\item \hyperlink{classIterativeRobot_a766544e4b37b525b2a5d075e90e81b9e}{\-Autonomous\-Continuous()}
+\item \hyperlink{classIterativeRobot_afdfd6d7b231332af5d6277cb6e91bdfa}{\-Teleop\-Continuous()} 
+\end{DoxyItemize}
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{classIterativeRobot_a0d80a18c34ba474248a806ed0ea5ad74}{\index{\-Iterative\-Robot@{\-Iterative\-Robot}!$\sim$\-Iterative\-Robot@{$\sim$\-Iterative\-Robot}}
+\index{$\sim$\-Iterative\-Robot@{$\sim$\-Iterative\-Robot}!IterativeRobot@{\-Iterative\-Robot}}
+\subsubsection[{$\sim$\-Iterative\-Robot}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Iterative\-Robot\-::$\sim$\-Iterative\-Robot} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}protected, virtual\mbox{]}}}}\label{classIterativeRobot_a0d80a18c34ba474248a806ed0ea5ad74}
+\-Free the resources for a \-Robot\-Iterative\-Base class. \hypertarget{classIterativeRobot_a7ec0b439b50ba3bc7ca34a6ed1653304}{\index{\-Iterative\-Robot@{\-Iterative\-Robot}!\-Iterative\-Robot@{\-Iterative\-Robot}}
+\index{\-Iterative\-Robot@{\-Iterative\-Robot}!IterativeRobot@{\-Iterative\-Robot}}
+\subsubsection[{\-Iterative\-Robot}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Iterative\-Robot\-::\-Iterative\-Robot} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{classIterativeRobot_a7ec0b439b50ba3bc7ca34a6ed1653304}
+\-Constructor for \-Robot\-Iterative\-Base
+
+\-The constructor initializes the instance variables for the robot to indicate the status of initialization for disabled, autonomous, and teleop code. 
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classIterativeRobot_a766544e4b37b525b2a5d075e90e81b9e}{\index{\-Iterative\-Robot@{\-Iterative\-Robot}!\-Autonomous\-Continuous@{\-Autonomous\-Continuous}}
+\index{\-Autonomous\-Continuous@{\-Autonomous\-Continuous}!IterativeRobot@{\-Iterative\-Robot}}
+\subsubsection[{\-Autonomous\-Continuous}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Iterative\-Robot\-::\-Autonomous\-Continuous} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{classIterativeRobot_a766544e4b37b525b2a5d075e90e81b9e}
+\-Continuous code for autonomous mode should go here.
+
+\-Users should override this method for code which will be called repeatedly as frequently as possible while the robot is in autonomous mode. \hypertarget{classIterativeRobot_aa936c0a4526e12e32defd50609cca90c}{\index{\-Iterative\-Robot@{\-Iterative\-Robot}!\-Autonomous\-Init@{\-Autonomous\-Init}}
+\index{\-Autonomous\-Init@{\-Autonomous\-Init}!IterativeRobot@{\-Iterative\-Robot}}
+\subsubsection[{\-Autonomous\-Init}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Iterative\-Robot\-::\-Autonomous\-Init} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{classIterativeRobot_aa936c0a4526e12e32defd50609cca90c}
+\-Initialization code for autonomous mode should go here.
+
+\-Users should override this method for initialization code which will be called each time the robot enters autonomous mode. \hypertarget{classIterativeRobot_ac579e155cc4613ced00d5e740cf98667}{\index{\-Iterative\-Robot@{\-Iterative\-Robot}!\-Autonomous\-Periodic@{\-Autonomous\-Periodic}}
+\index{\-Autonomous\-Periodic@{\-Autonomous\-Periodic}!IterativeRobot@{\-Iterative\-Robot}}
+\subsubsection[{\-Autonomous\-Periodic}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Iterative\-Robot\-::\-Autonomous\-Periodic} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{classIterativeRobot_ac579e155cc4613ced00d5e740cf98667}
+\-Periodic code for autonomous mode should go here.
+
+\-Users should override this method for code which will be called periodically at a regular rate while the robot is in autonomous mode. \hypertarget{classIterativeRobot_a86e595ec2e7e645c8ae246243d6a16b8}{\index{\-Iterative\-Robot@{\-Iterative\-Robot}!\-Disabled\-Continuous@{\-Disabled\-Continuous}}
+\index{\-Disabled\-Continuous@{\-Disabled\-Continuous}!IterativeRobot@{\-Iterative\-Robot}}
+\subsubsection[{\-Disabled\-Continuous}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Iterative\-Robot\-::\-Disabled\-Continuous} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{classIterativeRobot_a86e595ec2e7e645c8ae246243d6a16b8}
+\-Continuous code for disabled mode should go here.
+
+\-Users should override this method for code which will be called repeatedly as frequently as possible while the robot is in disabled mode. \hypertarget{classIterativeRobot_a428a5875274cb886730530d633a50db9}{\index{\-Iterative\-Robot@{\-Iterative\-Robot}!\-Disabled\-Init@{\-Disabled\-Init}}
+\index{\-Disabled\-Init@{\-Disabled\-Init}!IterativeRobot@{\-Iterative\-Robot}}
+\subsubsection[{\-Disabled\-Init}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Iterative\-Robot\-::\-Disabled\-Init} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{classIterativeRobot_a428a5875274cb886730530d633a50db9}
+\-Initialization code for disabled mode should go here.
+
+\-Users should override this method for initialization code which will be called each time the robot enters disabled mode. \hypertarget{classIterativeRobot_a00265f02550b12295ca2cffde2c9c838}{\index{\-Iterative\-Robot@{\-Iterative\-Robot}!\-Disabled\-Periodic@{\-Disabled\-Periodic}}
+\index{\-Disabled\-Periodic@{\-Disabled\-Periodic}!IterativeRobot@{\-Iterative\-Robot}}
+\subsubsection[{\-Disabled\-Periodic}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Iterative\-Robot\-::\-Disabled\-Periodic} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{classIterativeRobot_a00265f02550b12295ca2cffde2c9c838}
+\-Periodic code for disabled mode should go here.
+
+\-Users should override this method for code which will be called periodically at a regular rate while the robot is in disabled mode. \hypertarget{classIterativeRobot_af8ada1ff1b92b0b678f1c959463cc460}{\index{\-Iterative\-Robot@{\-Iterative\-Robot}!\-Get\-Loops\-Per\-Sec@{\-Get\-Loops\-Per\-Sec}}
+\index{\-Get\-Loops\-Per\-Sec@{\-Get\-Loops\-Per\-Sec}!IterativeRobot@{\-Iterative\-Robot}}
+\subsubsection[{\-Get\-Loops\-Per\-Sec}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf \-Iterative\-Robot\-::\-Get\-Loops\-Per\-Sec} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classIterativeRobot_af8ada1ff1b92b0b678f1c959463cc460}
+\-Get the number of loops per second for the \hyperlink{classIterativeRobot}{\-Iterative\-Robot} \begin{DoxyReturn}{\-Returns}
+\-Frequency of the periodic function calls 
+\end{DoxyReturn}
+\hypertarget{classIterativeRobot_a9752aaefce11839ea809b2a3326e937f}{\index{\-Iterative\-Robot@{\-Iterative\-Robot}!\-Get\-Period@{\-Get\-Period}}
+\index{\-Get\-Period@{\-Get\-Period}!IterativeRobot@{\-Iterative\-Robot}}
+\subsubsection[{\-Get\-Period}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf \-Iterative\-Robot\-::\-Get\-Period} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classIterativeRobot_a9752aaefce11839ea809b2a3326e937f}
+\-Get the period for the periodic functions. \-Returns 0.\-0 if configured to syncronize with \-D\-S control data packets. \begin{DoxyReturn}{\-Returns}
+\-Period of the periodic function calls 
+\end{DoxyReturn}
+\hypertarget{classIterativeRobot_a5296334b4a48ad2123c29f49209b9f62}{\index{\-Iterative\-Robot@{\-Iterative\-Robot}!\-Robot\-Init@{\-Robot\-Init}}
+\index{\-Robot\-Init@{\-Robot\-Init}!IterativeRobot@{\-Iterative\-Robot}}
+\subsubsection[{\-Robot\-Init}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Iterative\-Robot\-::\-Robot\-Init} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{classIterativeRobot_a5296334b4a48ad2123c29f49209b9f62}
+\-Robot-\/wide initialization code should go here.
+
+\-Users should override this method for default \-Robot-\/wide initialization which will be called when the robot is first powered on. \-It will be called exactly 1 time. \hypertarget{classIterativeRobot_a1e49eb27408751ea8ce757bfe38717e2}{\index{\-Iterative\-Robot@{\-Iterative\-Robot}!\-Set\-Period@{\-Set\-Period}}
+\index{\-Set\-Period@{\-Set\-Period}!IterativeRobot@{\-Iterative\-Robot}}
+\subsubsection[{\-Set\-Period}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Iterative\-Robot\-::\-Set\-Period} (
+\begin{DoxyParamCaption}
+\item[{double}]{period}
+\end{DoxyParamCaption}
+)}}\label{classIterativeRobot_a1e49eb27408751ea8ce757bfe38717e2}
+\-Set the period for the periodic functions.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em period} & \-The period of the periodic function calls. 0.\-0 means sync to driver station control data. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classIterativeRobot_ab0af04a781b0390981b9f0dd75358515}{\index{\-Iterative\-Robot@{\-Iterative\-Robot}!\-Start\-Competition@{\-Start\-Competition}}
+\index{\-Start\-Competition@{\-Start\-Competition}!IterativeRobot@{\-Iterative\-Robot}}
+\subsubsection[{\-Start\-Competition}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Iterative\-Robot\-::\-Start\-Competition} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{classIterativeRobot_ab0af04a781b0390981b9f0dd75358515}
+\-Provide an alternate \char`\"{}main loop\char`\"{} via \hyperlink{classIterativeRobot_ab0af04a781b0390981b9f0dd75358515}{\-Start\-Competition()}.
+
+\-This specific \hyperlink{classIterativeRobot_ab0af04a781b0390981b9f0dd75358515}{\-Start\-Competition()} implements \char`\"{}main loop\char`\"{} behavior like that of the \-F\-R\-C control system in 2008 and earlier, with a primary (slow) loop that is called periodically, and a \char`\"{}fast loop\char`\"{} (a.\-k.\-a. \char`\"{}spin loop\char`\"{}) that is called as fast as possible with no delay between calls. 
+
+\-Implements \hyperlink{classRobotBase}{\-Robot\-Base}.
+
+\hypertarget{classIterativeRobot_afdfd6d7b231332af5d6277cb6e91bdfa}{\index{\-Iterative\-Robot@{\-Iterative\-Robot}!\-Teleop\-Continuous@{\-Teleop\-Continuous}}
+\index{\-Teleop\-Continuous@{\-Teleop\-Continuous}!IterativeRobot@{\-Iterative\-Robot}}
+\subsubsection[{\-Teleop\-Continuous}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Iterative\-Robot\-::\-Teleop\-Continuous} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{classIterativeRobot_afdfd6d7b231332af5d6277cb6e91bdfa}
+\-Continuous code for teleop mode should go here.
+
+\-Users should override this method for code which will be called repeatedly as frequently as possible while the robot is in teleop mode. \hypertarget{classIterativeRobot_a7365e781f0a04674b94bb1fb5767d83e}{\index{\-Iterative\-Robot@{\-Iterative\-Robot}!\-Teleop\-Init@{\-Teleop\-Init}}
+\index{\-Teleop\-Init@{\-Teleop\-Init}!IterativeRobot@{\-Iterative\-Robot}}
+\subsubsection[{\-Teleop\-Init}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Iterative\-Robot\-::\-Teleop\-Init} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{classIterativeRobot_a7365e781f0a04674b94bb1fb5767d83e}
+\-Initialization code for teleop mode should go here.
+
+\-Users should override this method for initialization code which will be called each time the robot enters teleop mode. \hypertarget{classIterativeRobot_a3336d7f71d644e646dba70839f4f4672}{\index{\-Iterative\-Robot@{\-Iterative\-Robot}!\-Teleop\-Periodic@{\-Teleop\-Periodic}}
+\index{\-Teleop\-Periodic@{\-Teleop\-Periodic}!IterativeRobot@{\-Iterative\-Robot}}
+\subsubsection[{\-Teleop\-Periodic}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Iterative\-Robot\-::\-Teleop\-Periodic} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{classIterativeRobot_a3336d7f71d644e646dba70839f4f4672}
+\-Periodic code for teleop mode should go here.
+
+\-Users should override this method for code which will be called periodically at a regular rate while the robot is in teleop mode. 
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+\-Iterative\-Robot.\-h\item 
+\-Iterative\-Robot.\-cpp\end{DoxyCompactItemize}

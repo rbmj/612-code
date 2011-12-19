@@ -1,0 +1,52 @@
+\hypertarget{classDigitalSource}{\section{\-Digital\-Source \-Class \-Reference}
+\label{classDigitalSource}\index{\-Digital\-Source@{\-Digital\-Source}}
+}
+
+
+{\ttfamily \#include $<$\-Digital\-Source.\-h$>$}
+
+\-Inheritance diagram for \-Digital\-Source\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=5.000000cm]{classDigitalSource}
+\end{center}
+\end{figure}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \hyperlink{classDigitalSource_a7acf991168815aeed0b8e7514400802b}{$\sim$\-Digital\-Source} ()
+\item 
+\hypertarget{classDigitalSource_a793640916ab6c7ed63325756033f2752}{virtual \-U\-I\-N\-T32 {\bfseries \-Get\-Channel\-For\-Routing} ()=0}\label{classDigitalSource_a793640916ab6c7ed63325756033f2752}
+
+\item 
+\hypertarget{classDigitalSource_a688c770f6ec4bfdfe8ea61a78ca6c31d}{virtual \-U\-I\-N\-T32 {\bfseries \-Get\-Module\-For\-Routing} ()=0}\label{classDigitalSource_a688c770f6ec4bfdfe8ea61a78ca6c31d}
+
+\item 
+\hypertarget{classDigitalSource_aa9a9f4c8d6e54b94516b2b015bdb1ee6}{virtual bool {\bfseries \-Get\-Analog\-Trigger\-For\-Routing} ()=0}\label{classDigitalSource_aa9a9f4c8d6e54b94516b2b015bdb1ee6}
+
+\item 
+\hypertarget{classDigitalSource_aa34b225d5dc38355ff8bd0a11b6113d3}{virtual void \hyperlink{classDigitalSource_aa34b225d5dc38355ff8bd0a11b6113d3}{\-Request\-Interrupts} (t\-Interrupt\-Handler handler, void $\ast$param)=0}\label{classDigitalSource_aa34b225d5dc38355ff8bd0a11b6113d3}
+
+\begin{DoxyCompactList}\small\item\em \-Asynchronus handler version. \end{DoxyCompactList}\item 
+\hypertarget{classDigitalSource_a693e9521e21758c8d5f3d221dc9e9b5b}{virtual void \hyperlink{classDigitalSource_a693e9521e21758c8d5f3d221dc9e9b5b}{\-Request\-Interrupts} ()=0}\label{classDigitalSource_a693e9521e21758c8d5f3d221dc9e9b5b}
+
+\begin{DoxyCompactList}\small\item\em \-Synchronus \-Wait version. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\hyperlink{classDigitalSource}{\-Digital\-Source} \-Interface. \-The \hyperlink{classDigitalSource}{\-Digital\-Source} represents all the possible inputs for a counter or a quadrature encoder. \-The source may be either a digital input or an analog input. \-If the caller just provides a channel, then a digital input will be constructed and freed when finished for the source. \-The source can either be a digital input or analog trigger but not both. 
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{classDigitalSource_a7acf991168815aeed0b8e7514400802b}{\index{\-Digital\-Source@{\-Digital\-Source}!$\sim$\-Digital\-Source@{$\sim$\-Digital\-Source}}
+\index{$\sim$\-Digital\-Source@{$\sim$\-Digital\-Source}!DigitalSource@{\-Digital\-Source}}
+\subsubsection[{$\sim$\-Digital\-Source}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Digital\-Source\-::$\sim$\-Digital\-Source} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{classDigitalSource_a7acf991168815aeed0b8e7514400802b}
+\hyperlink{classDigitalSource}{\-Digital\-Source} destructor. 
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+\-Digital\-Source.\-h\item 
+\-Digital\-Source.\-cpp\end{DoxyCompactItemize}

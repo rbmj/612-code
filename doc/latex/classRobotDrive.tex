@@ -1,0 +1,549 @@
+\hypertarget{classRobotDrive}{\section{\-Robot\-Drive \-Class \-Reference}
+\label{classRobotDrive}\index{\-Robot\-Drive@{\-Robot\-Drive}}
+}
+
+
+{\ttfamily \#include $<$\-Robot\-Drive.\-h$>$}
+
+\-Inheritance diagram for \-Robot\-Drive\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classRobotDrive}
+\end{center}
+\end{figure}
+\subsection*{\-Public \-Types}
+\begin{DoxyCompactItemize}
+\item 
+enum {\bfseries \-Motor\-Type} \{ {\bfseries k\-Front\-Left\-Motor} =  0, 
+{\bfseries k\-Front\-Right\-Motor} =  1, 
+{\bfseries k\-Rear\-Left\-Motor} =  2, 
+{\bfseries k\-Rear\-Right\-Motor} =  3
+ \}
+\end{DoxyCompactItemize}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classRobotDrive_a9cf81a481115792788aec8cb3e91b31c}{\-Robot\-Drive} (\-U\-I\-N\-T32 left\-Motor\-Channel, \-U\-I\-N\-T32 right\-Motor\-Channel)
+\item 
+\hyperlink{classRobotDrive_ae0892e46b7a378e546b5499ce686bef8}{\-Robot\-Drive} (\-U\-I\-N\-T32 front\-Left\-Motor\-Channel, \-U\-I\-N\-T32 rear\-Left\-Motor\-Channel, \-U\-I\-N\-T32 front\-Right\-Motor\-Channel, \-U\-I\-N\-T32 rear\-Right\-Motor\-Channel)
+\item 
+\hyperlink{classRobotDrive_a8acf6e6ab76d4442c9e58094147c1bd9}{\-Robot\-Drive} (\hyperlink{classSpeedController}{\-Speed\-Controller} $\ast$left\-Motor, \hyperlink{classSpeedController}{\-Speed\-Controller} $\ast$right\-Motor)
+\item 
+\hypertarget{classRobotDrive_a558340487b3deaf4ba919dd0b888de3c}{{\bfseries \-Robot\-Drive} (\hyperlink{classSpeedController}{\-Speed\-Controller} \&left\-Motor, \hyperlink{classSpeedController}{\-Speed\-Controller} \&right\-Motor)}\label{classRobotDrive_a558340487b3deaf4ba919dd0b888de3c}
+
+\item 
+\hyperlink{classRobotDrive_a47180c144fcca9e7550f7cb906c8b79a}{\-Robot\-Drive} (\hyperlink{classSpeedController}{\-Speed\-Controller} $\ast$front\-Left\-Motor, \hyperlink{classSpeedController}{\-Speed\-Controller} $\ast$rear\-Left\-Motor, \hyperlink{classSpeedController}{\-Speed\-Controller} $\ast$front\-Right\-Motor, \hyperlink{classSpeedController}{\-Speed\-Controller} $\ast$rear\-Right\-Motor)
+\item 
+\hypertarget{classRobotDrive_a98d8c91f1e9d960c9b7396638927d4b1}{{\bfseries \-Robot\-Drive} (\hyperlink{classSpeedController}{\-Speed\-Controller} \&front\-Left\-Motor, \hyperlink{classSpeedController}{\-Speed\-Controller} \&rear\-Left\-Motor, \hyperlink{classSpeedController}{\-Speed\-Controller} \&front\-Right\-Motor, \hyperlink{classSpeedController}{\-Speed\-Controller} \&rear\-Right\-Motor)}\label{classRobotDrive_a98d8c91f1e9d960c9b7396638927d4b1}
+
+\item 
+virtual \hyperlink{classRobotDrive_afb1b0e87856dca22c13a4baed8ab6059}{$\sim$\-Robot\-Drive} ()
+\item 
+void \hyperlink{classRobotDrive_a00f3c6f7906685fe2f98ceaa8bb7e188}{\-Drive} (float output\-Magnitude, float curve)
+\item 
+void \hyperlink{classRobotDrive_a47df0f6d6a60ab9fe99cf5e953f06d76}{\-Tank\-Drive} (\hyperlink{classGenericHID}{\-Generic\-H\-I\-D} $\ast$left\-Stick, \hyperlink{classGenericHID}{\-Generic\-H\-I\-D} $\ast$right\-Stick)
+\item 
+\hypertarget{classRobotDrive_ac8b4d83072ebb285a2682cf73f52e6b2}{void {\bfseries \-Tank\-Drive} (\hyperlink{classGenericHID}{\-Generic\-H\-I\-D} \&left\-Stick, \hyperlink{classGenericHID}{\-Generic\-H\-I\-D} \&right\-Stick)}\label{classRobotDrive_ac8b4d83072ebb285a2682cf73f52e6b2}
+
+\item 
+void \hyperlink{classRobotDrive_ae24f3802fb94ea30c716ad8a553a1b6d}{\-Tank\-Drive} (\hyperlink{classGenericHID}{\-Generic\-H\-I\-D} $\ast$left\-Stick, \-U\-I\-N\-T32 left\-Axis, \hyperlink{classGenericHID}{\-Generic\-H\-I\-D} $\ast$right\-Stick, \-U\-I\-N\-T32 right\-Axis)
+\item 
+\hypertarget{classRobotDrive_a585d112865f5607d966954ae942a86bd}{void {\bfseries \-Tank\-Drive} (\hyperlink{classGenericHID}{\-Generic\-H\-I\-D} \&left\-Stick, \-U\-I\-N\-T32 left\-Axis, \hyperlink{classGenericHID}{\-Generic\-H\-I\-D} \&right\-Stick, \-U\-I\-N\-T32 right\-Axis)}\label{classRobotDrive_a585d112865f5607d966954ae942a86bd}
+
+\item 
+void \hyperlink{classRobotDrive_ac6a60f5d8ed48bae4fde0d8828ffeafe}{\-Tank\-Drive} (float left\-Value, float right\-Value)
+\item 
+void \hyperlink{classRobotDrive_a6f064885fe1ec7611c6d7593148b7855}{\-Arcade\-Drive} (\hyperlink{classGenericHID}{\-Generic\-H\-I\-D} $\ast$stick, bool squared\-Inputs=true)
+\item 
+void \hyperlink{classRobotDrive_a5ebb511c01ab5050a7f995e3f64b7ef0}{\-Arcade\-Drive} (\hyperlink{classGenericHID}{\-Generic\-H\-I\-D} \&stick, bool squared\-Inputs=true)
+\item 
+void \hyperlink{classRobotDrive_aa60942896141c265d0ad24f21b647dff}{\-Arcade\-Drive} (\hyperlink{classGenericHID}{\-Generic\-H\-I\-D} $\ast$move\-Stick, \-U\-I\-N\-T32 move\-Channel, \hyperlink{classGenericHID}{\-Generic\-H\-I\-D} $\ast$rotate\-Stick, \-U\-I\-N\-T32 rotate\-Channel, bool squared\-Inputs=true)
+\item 
+void \hyperlink{classRobotDrive_a5c3a97e06c272c3418c0b219fa574a0a}{\-Arcade\-Drive} (\hyperlink{classGenericHID}{\-Generic\-H\-I\-D} \&move\-Stick, \-U\-I\-N\-T32 move\-Channel, \hyperlink{classGenericHID}{\-Generic\-H\-I\-D} \&rotate\-Stick, \-U\-I\-N\-T32 rotate\-Channel, bool squared\-Inputs=true)
+\item 
+void \hyperlink{classRobotDrive_ac95118d7b535c4f3fb3d56ba5b041e40}{\-Arcade\-Drive} (float move\-Value, float rotate\-Value, bool squared\-Inputs=true)
+\item 
+void \hyperlink{classRobotDrive_a2e7fa1a9713332281012e8aae5d9570e}{\-Mecanum\-Drive\-\_\-\-Cartesian} (float x, float y, float rotation, float gyro\-Angle=0.\-0)
+\item 
+void \hyperlink{classRobotDrive_a3ba6d4ec2c07575543c4f47d348332f1}{\-Mecanum\-Drive\-\_\-\-Polar} (float magnitude, float direction, float rotation)
+\item 
+void \hyperlink{classRobotDrive_ad21b09eed120e95f1b5741a26f2f9084}{\-Holonomic\-Drive} (float magnitude, float direction, float rotation)
+\item 
+virtual void \hyperlink{classRobotDrive_a6f17b92a6867d512188b497f192f0715}{\-Set\-Left\-Right\-Motor\-Outputs} (float left\-Output, float right\-Output)
+\item 
+\hypertarget{classRobotDrive_a707c3160f50bf6ddf72660f1afefdc0c}{void {\bfseries \-Set\-Inverted\-Motor} (\-Motor\-Type motor, bool is\-Inverted)}\label{classRobotDrive_a707c3160f50bf6ddf72660f1afefdc0c}
+
+\item 
+void \hyperlink{classRobotDrive_ae9838cbcf783b2eeca8ace11484ce79f}{\-Set\-Sensitivity} (float sensitivity)
+\item 
+void \hyperlink{classRobotDrive_a6537ad67ea0306727bbf23a9b8d9b3a8}{\-Set\-Max\-Output} (double max\-Output)
+\item 
+\hypertarget{classRobotDrive_a6e3e5ca44b0806dec67c92abbe8cc27a}{void {\bfseries \-Set\-Expiration} (float timeout)}\label{classRobotDrive_a6e3e5ca44b0806dec67c92abbe8cc27a}
+
+\item 
+\hypertarget{classRobotDrive_a31926bfb77ba5cf767baaa5bbf350205}{float {\bfseries \-Get\-Expiration} ()}\label{classRobotDrive_a31926bfb77ba5cf767baaa5bbf350205}
+
+\item 
+\hypertarget{classRobotDrive_acd55b1b0117d425fcb73a4e8470fc5c1}{bool {\bfseries \-Is\-Alive} ()}\label{classRobotDrive_acd55b1b0117d425fcb73a4e8470fc5c1}
+
+\item 
+\hypertarget{classRobotDrive_a7768e45b579e742d21c279bf84d4613b}{void {\bfseries \-Stop\-Motor} ()}\label{classRobotDrive_a7768e45b579e742d21c279bf84d4613b}
+
+\item 
+\hypertarget{classRobotDrive_a1bcceb2e547249492ad6776b6673c7d3}{bool {\bfseries \-Is\-Safety\-Enabled} ()}\label{classRobotDrive_a1bcceb2e547249492ad6776b6673c7d3}
+
+\item 
+\hypertarget{classRobotDrive_a09817084c895e48104ff66454174c2af}{void {\bfseries \-Set\-Safety\-Enabled} (bool enabled)}\label{classRobotDrive_a09817084c895e48104ff66454174c2af}
+
+\end{DoxyCompactItemize}
+\subsection*{\-Protected \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classRobotDrive_ae57d5bb728428fac6cbd7eade67c569d}{\-Init\-Robot\-Drive} ()
+\item 
+float \hyperlink{classRobotDrive_aa7d99fd794c6f8c0b5486603f508a3a7}{\-Limit} (float num)
+\item 
+void \hyperlink{classRobotDrive_a5e6a645728f44664ee57e5fb4c02acc7}{\-Normalize} (double $\ast$wheel\-Speeds)
+\item 
+void \hyperlink{classRobotDrive_af46d235e636cb5014bfbf525a2ecf247}{\-Rotate\-Vector} (double \&x, double \&y, double angle)
+\end{DoxyCompactItemize}
+\subsection*{\-Protected \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classRobotDrive_abcfae675b4a3eaf7367618f8dfb41a50}{\-I\-N\-T32 {\bfseries m\-\_\-inverted\-Motors} \mbox{[}k\-Max\-Number\-Of\-Motors\mbox{]}}\label{classRobotDrive_abcfae675b4a3eaf7367618f8dfb41a50}
+
+\item 
+\hypertarget{classRobotDrive_a08cc0269fd9b61a9d8f533c1f177057f}{float {\bfseries m\-\_\-sensitivity}}\label{classRobotDrive_a08cc0269fd9b61a9d8f533c1f177057f}
+
+\item 
+\hypertarget{classRobotDrive_a7b0af5263a4f1bd6b8fb71a707ed291f}{double {\bfseries m\-\_\-max\-Output}}\label{classRobotDrive_a7b0af5263a4f1bd6b8fb71a707ed291f}
+
+\item 
+\hypertarget{classRobotDrive_ae25a1fa747dcdd56da954f16898b258e}{bool {\bfseries m\-\_\-delete\-Speed\-Controllers}}\label{classRobotDrive_ae25a1fa747dcdd56da954f16898b258e}
+
+\item 
+\hypertarget{classRobotDrive_a28786db2af3d04eb24e588c9e4e80d3a}{\hyperlink{classSpeedController}{\-Speed\-Controller} $\ast$ {\bfseries m\-\_\-front\-Left\-Motor}}\label{classRobotDrive_a28786db2af3d04eb24e588c9e4e80d3a}
+
+\item 
+\hypertarget{classRobotDrive_a2a9790639e06361f4031871a32509deb}{\hyperlink{classSpeedController}{\-Speed\-Controller} $\ast$ {\bfseries m\-\_\-front\-Right\-Motor}}\label{classRobotDrive_a2a9790639e06361f4031871a32509deb}
+
+\item 
+\hypertarget{classRobotDrive_ab8ce1d64314ba60a7d32675464b57bb9}{\hyperlink{classSpeedController}{\-Speed\-Controller} $\ast$ {\bfseries m\-\_\-rear\-Left\-Motor}}\label{classRobotDrive_ab8ce1d64314ba60a7d32675464b57bb9}
+
+\item 
+\hypertarget{classRobotDrive_a3ba480ac56e25001b3d1b30caeefef2f}{\hyperlink{classSpeedController}{\-Speed\-Controller} $\ast$ {\bfseries m\-\_\-rear\-Right\-Motor}}\label{classRobotDrive_a3ba480ac56e25001b3d1b30caeefef2f}
+
+\item 
+\hypertarget{classRobotDrive_ae10ae2087a59659a2a902e13da2b52d7}{\hyperlink{classMotorSafetyHelper}{\-Motor\-Safety\-Helper} $\ast$ {\bfseries m\-\_\-safety\-Helper}}\label{classRobotDrive_ae10ae2087a59659a2a902e13da2b52d7}
+
+\end{DoxyCompactItemize}
+\subsection*{\-Static \-Protected \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classRobotDrive_a7c33f1e29f943ef3d8a81b2550f2bc7b}{static const \-I\-N\-T32 {\bfseries k\-Max\-Number\-Of\-Motors} = 4}\label{classRobotDrive_a7c33f1e29f943ef3d8a81b2550f2bc7b}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-Utility class for handling \-Robot drive based on a definition of the motor configuration. \-The robot drive class handles basic driving for a robot. \-Currently, 2 and 4 motor standard drive trains are supported. \-In the future other drive types like swerve and meccanum might be implemented. \-Motor channel numbers are passed supplied on creation of the class. \-Those are used for either the \-Drive function (intended for hand created drive code, such as autonomous) or with the \-Tank/\-Arcade functions intended to be used for \-Operator \-Control driving. 
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{classRobotDrive_a9cf81a481115792788aec8cb3e91b31c}{\index{\-Robot\-Drive@{\-Robot\-Drive}!\-Robot\-Drive@{\-Robot\-Drive}}
+\index{\-Robot\-Drive@{\-Robot\-Drive}!RobotDrive@{\-Robot\-Drive}}
+\subsubsection[{\-Robot\-Drive}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Robot\-Drive\-::\-Robot\-Drive} (
+\begin{DoxyParamCaption}
+\item[{\-U\-I\-N\-T32}]{left\-Motor\-Channel, }
+\item[{\-U\-I\-N\-T32}]{right\-Motor\-Channel}
+\end{DoxyParamCaption}
+)}}\label{classRobotDrive_a9cf81a481115792788aec8cb3e91b31c}
+\-Constructor for \hyperlink{classRobotDrive}{\-Robot\-Drive} with 2 motors specified with channel numbers. \-Set up parameters for a two wheel drive system where the left and right motor pwm channels are specified in the call. \-This call assumes \-Jaguars for controlling the motors. 
+\begin{DoxyParams}{\-Parameters}
+{\em left\-Motor\-Channel} & \-The \hyperlink{classPWM}{\-P\-W\-M} channel number on the default digital module that drives the left motor. \\
+\hline
+{\em right\-Motor\-Channel} & \-The \hyperlink{classPWM}{\-P\-W\-M} channel number on the default digital module that drives the right motor. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classRobotDrive_ae0892e46b7a378e546b5499ce686bef8}{\index{\-Robot\-Drive@{\-Robot\-Drive}!\-Robot\-Drive@{\-Robot\-Drive}}
+\index{\-Robot\-Drive@{\-Robot\-Drive}!RobotDrive@{\-Robot\-Drive}}
+\subsubsection[{\-Robot\-Drive}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Robot\-Drive\-::\-Robot\-Drive} (
+\begin{DoxyParamCaption}
+\item[{\-U\-I\-N\-T32}]{front\-Left\-Motor, }
+\item[{\-U\-I\-N\-T32}]{rear\-Left\-Motor, }
+\item[{\-U\-I\-N\-T32}]{front\-Right\-Motor, }
+\item[{\-U\-I\-N\-T32}]{rear\-Right\-Motor}
+\end{DoxyParamCaption}
+)}}\label{classRobotDrive_ae0892e46b7a378e546b5499ce686bef8}
+\-Constructor for \hyperlink{classRobotDrive}{\-Robot\-Drive} with 4 motors specified with channel numbers. \-Set up parameters for a four wheel drive system where all four motor pwm channels are specified in the call. \-This call assumes \-Jaguars for controlling the motors. 
+\begin{DoxyParams}{\-Parameters}
+{\em front\-Left\-Motor} & \-Front left motor channel number on the default digital module \\
+\hline
+{\em rear\-Left\-Motor} & \-Rear \-Left motor channel number on the default digital module \\
+\hline
+{\em front\-Right\-Motor} & \-Front right motor channel number on the default digital module \\
+\hline
+{\em rear\-Right\-Motor} & \-Rear \-Right motor channel number on the default digital module \\
+\hline
+\end{DoxyParams}
+\hypertarget{classRobotDrive_a8acf6e6ab76d4442c9e58094147c1bd9}{\index{\-Robot\-Drive@{\-Robot\-Drive}!\-Robot\-Drive@{\-Robot\-Drive}}
+\index{\-Robot\-Drive@{\-Robot\-Drive}!RobotDrive@{\-Robot\-Drive}}
+\subsubsection[{\-Robot\-Drive}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Robot\-Drive\-::\-Robot\-Drive} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Speed\-Controller} $\ast$}]{left\-Motor, }
+\item[{{\bf \-Speed\-Controller} $\ast$}]{right\-Motor}
+\end{DoxyParamCaption}
+)}}\label{classRobotDrive_a8acf6e6ab76d4442c9e58094147c1bd9}
+\-Constructor for \hyperlink{classRobotDrive}{\-Robot\-Drive} with 2 motors specified as \hyperlink{classSpeedController}{\-Speed\-Controller} objects. \-The \hyperlink{classSpeedController}{\-Speed\-Controller} version of the constructor enables programs to use the \hyperlink{classRobotDrive}{\-Robot\-Drive} classes with subclasses of the \hyperlink{classSpeedController}{\-Speed\-Controller} objects, for example, versions with ramping or reshaping of the curve to suit motor bias or deadband elimination. 
+\begin{DoxyParams}{\-Parameters}
+{\em left\-Motor} & \-The left \hyperlink{classSpeedController}{\-Speed\-Controller} object used to drive the robot. \\
+\hline
+{\em right\-Motor} & the right \hyperlink{classSpeedController}{\-Speed\-Controller} object used to drive the robot. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classRobotDrive_a47180c144fcca9e7550f7cb906c8b79a}{\index{\-Robot\-Drive@{\-Robot\-Drive}!\-Robot\-Drive@{\-Robot\-Drive}}
+\index{\-Robot\-Drive@{\-Robot\-Drive}!RobotDrive@{\-Robot\-Drive}}
+\subsubsection[{\-Robot\-Drive}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Robot\-Drive\-::\-Robot\-Drive} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Speed\-Controller} $\ast$}]{front\-Left\-Motor, }
+\item[{{\bf \-Speed\-Controller} $\ast$}]{rear\-Left\-Motor, }
+\item[{{\bf \-Speed\-Controller} $\ast$}]{front\-Right\-Motor, }
+\item[{{\bf \-Speed\-Controller} $\ast$}]{rear\-Right\-Motor}
+\end{DoxyParamCaption}
+)}}\label{classRobotDrive_a47180c144fcca9e7550f7cb906c8b79a}
+\-Constructor for \hyperlink{classRobotDrive}{\-Robot\-Drive} with 4 motors specified as \hyperlink{classSpeedController}{\-Speed\-Controller} objects. \-Speed controller input version of \hyperlink{classRobotDrive}{\-Robot\-Drive} (see previous comments). 
+\begin{DoxyParams}{\-Parameters}
+{\em rear\-Left\-Motor} & \-The back left \hyperlink{classSpeedController}{\-Speed\-Controller} object used to drive the robot. \\
+\hline
+{\em front\-Left\-Motor} & \-The front left \hyperlink{classSpeedController}{\-Speed\-Controller} object used to drive the robot \\
+\hline
+{\em rear\-Right\-Motor} & \-The back right \hyperlink{classSpeedController}{\-Speed\-Controller} object used to drive the robot. \\
+\hline
+{\em front\-Right\-Motor} & \-The front right \hyperlink{classSpeedController}{\-Speed\-Controller} object used to drive the robot. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classRobotDrive_afb1b0e87856dca22c13a4baed8ab6059}{\index{\-Robot\-Drive@{\-Robot\-Drive}!$\sim$\-Robot\-Drive@{$\sim$\-Robot\-Drive}}
+\index{$\sim$\-Robot\-Drive@{$\sim$\-Robot\-Drive}!RobotDrive@{\-Robot\-Drive}}
+\subsubsection[{$\sim$\-Robot\-Drive}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Robot\-Drive\-::$\sim$\-Robot\-Drive} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{classRobotDrive_afb1b0e87856dca22c13a4baed8ab6059}
+\hyperlink{classRobotDrive}{\-Robot\-Drive} destructor. \-Deletes motor objects that were not passed in and created internally only. 
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classRobotDrive_a6f064885fe1ec7611c6d7593148b7855}{\index{\-Robot\-Drive@{\-Robot\-Drive}!\-Arcade\-Drive@{\-Arcade\-Drive}}
+\index{\-Arcade\-Drive@{\-Arcade\-Drive}!RobotDrive@{\-Robot\-Drive}}
+\subsubsection[{\-Arcade\-Drive}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Robot\-Drive\-::\-Arcade\-Drive} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Generic\-H\-I\-D} $\ast$}]{stick, }
+\item[{bool}]{squared\-Inputs = {\ttfamily true}}
+\end{DoxyParamCaption}
+)}}\label{classRobotDrive_a6f064885fe1ec7611c6d7593148b7855}
+\-Arcade drive implements single stick driving. \-Given a single \hyperlink{classJoystick}{\-Joystick}, the class assumes the \-Y axis for the move value and the \-X axis for the rotate value. (\-Should add more information here regarding the way that arcade drive works.) 
+\begin{DoxyParams}{\-Parameters}
+{\em stick} & \-The joystick to use for \-Arcade single-\/stick driving. \-The \-Y-\/axis will be selected for forwards/backwards and the \-X-\/axis will be selected for rotation rate. \\
+\hline
+{\em squared\-Inputs} & \-If true, the sensitivity will be increased for small values \\
+\hline
+\end{DoxyParams}
+\hypertarget{classRobotDrive_a5ebb511c01ab5050a7f995e3f64b7ef0}{\index{\-Robot\-Drive@{\-Robot\-Drive}!\-Arcade\-Drive@{\-Arcade\-Drive}}
+\index{\-Arcade\-Drive@{\-Arcade\-Drive}!RobotDrive@{\-Robot\-Drive}}
+\subsubsection[{\-Arcade\-Drive}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Robot\-Drive\-::\-Arcade\-Drive} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Generic\-H\-I\-D} \&}]{stick, }
+\item[{bool}]{squared\-Inputs = {\ttfamily true}}
+\end{DoxyParamCaption}
+)}}\label{classRobotDrive_a5ebb511c01ab5050a7f995e3f64b7ef0}
+\-Arcade drive implements single stick driving. \-Given a single \hyperlink{classJoystick}{\-Joystick}, the class assumes the \-Y axis for the move value and the \-X axis for the rotate value. (\-Should add more information here regarding the way that arcade drive works.) 
+\begin{DoxyParams}{\-Parameters}
+{\em stick} & \-The joystick to use for \-Arcade single-\/stick driving. \-The \-Y-\/axis will be selected for forwards/backwards and the \-X-\/axis will be selected for rotation rate. \\
+\hline
+{\em squared\-Inputs} & \-If true, the sensitivity will be increased for small values \\
+\hline
+\end{DoxyParams}
+\hypertarget{classRobotDrive_aa60942896141c265d0ad24f21b647dff}{\index{\-Robot\-Drive@{\-Robot\-Drive}!\-Arcade\-Drive@{\-Arcade\-Drive}}
+\index{\-Arcade\-Drive@{\-Arcade\-Drive}!RobotDrive@{\-Robot\-Drive}}
+\subsubsection[{\-Arcade\-Drive}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Robot\-Drive\-::\-Arcade\-Drive} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Generic\-H\-I\-D} $\ast$}]{move\-Stick, }
+\item[{\-U\-I\-N\-T32}]{move\-Axis, }
+\item[{{\bf \-Generic\-H\-I\-D} $\ast$}]{rotate\-Stick, }
+\item[{\-U\-I\-N\-T32}]{rotate\-Axis, }
+\item[{bool}]{squared\-Inputs = {\ttfamily true}}
+\end{DoxyParamCaption}
+)}}\label{classRobotDrive_aa60942896141c265d0ad24f21b647dff}
+\-Arcade drive implements single stick driving. \-Given two joystick instances and two axis, compute the values to send to either two or four motors. 
+\begin{DoxyParams}{\-Parameters}
+{\em move\-Stick} & \-The \hyperlink{classJoystick}{\-Joystick} object that represents the forward/backward direction \\
+\hline
+{\em move\-Axis} & \-The axis on the move\-Stick object to use for fowards/backwards (typically \-Y\-\_\-\-A\-X\-I\-S) \\
+\hline
+{\em rotate\-Stick} & \-The \hyperlink{classJoystick}{\-Joystick} object that represents the rotation value \\
+\hline
+{\em rotate\-Axis} & \-The axis on the rotation object to use for the rotate right/left (typically \-X\-\_\-\-A\-X\-I\-S) \\
+\hline
+{\em squared\-Inputs} & \-Setting this parameter to true increases the sensitivity at lower speeds \\
+\hline
+\end{DoxyParams}
+\hypertarget{classRobotDrive_a5c3a97e06c272c3418c0b219fa574a0a}{\index{\-Robot\-Drive@{\-Robot\-Drive}!\-Arcade\-Drive@{\-Arcade\-Drive}}
+\index{\-Arcade\-Drive@{\-Arcade\-Drive}!RobotDrive@{\-Robot\-Drive}}
+\subsubsection[{\-Arcade\-Drive}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Robot\-Drive\-::\-Arcade\-Drive} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Generic\-H\-I\-D} \&}]{move\-Stick, }
+\item[{\-U\-I\-N\-T32}]{move\-Axis, }
+\item[{{\bf \-Generic\-H\-I\-D} \&}]{rotate\-Stick, }
+\item[{\-U\-I\-N\-T32}]{rotate\-Axis, }
+\item[{bool}]{squared\-Inputs = {\ttfamily true}}
+\end{DoxyParamCaption}
+)}}\label{classRobotDrive_a5c3a97e06c272c3418c0b219fa574a0a}
+\-Arcade drive implements single stick driving. \-Given two joystick instances and two axis, compute the values to send to either two or four motors. 
+\begin{DoxyParams}{\-Parameters}
+{\em move\-Stick} & \-The \hyperlink{classJoystick}{\-Joystick} object that represents the forward/backward direction \\
+\hline
+{\em move\-Axis} & \-The axis on the move\-Stick object to use for fowards/backwards (typically \-Y\-\_\-\-A\-X\-I\-S) \\
+\hline
+{\em rotate\-Stick} & \-The \hyperlink{classJoystick}{\-Joystick} object that represents the rotation value \\
+\hline
+{\em rotate\-Axis} & \-The axis on the rotation object to use for the rotate right/left (typically \-X\-\_\-\-A\-X\-I\-S) \\
+\hline
+{\em squared\-Inputs} & \-Setting this parameter to true increases the sensitivity at lower speeds \\
+\hline
+\end{DoxyParams}
+\hypertarget{classRobotDrive_ac95118d7b535c4f3fb3d56ba5b041e40}{\index{\-Robot\-Drive@{\-Robot\-Drive}!\-Arcade\-Drive@{\-Arcade\-Drive}}
+\index{\-Arcade\-Drive@{\-Arcade\-Drive}!RobotDrive@{\-Robot\-Drive}}
+\subsubsection[{\-Arcade\-Drive}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Robot\-Drive\-::\-Arcade\-Drive} (
+\begin{DoxyParamCaption}
+\item[{float}]{move\-Value, }
+\item[{float}]{rotate\-Value, }
+\item[{bool}]{squared\-Inputs = {\ttfamily true}}
+\end{DoxyParamCaption}
+)}}\label{classRobotDrive_ac95118d7b535c4f3fb3d56ba5b041e40}
+\-Arcade drive implements single stick driving. \-This function lets you directly provide joystick values from any source. 
+\begin{DoxyParams}{\-Parameters}
+{\em move\-Value} & \-The value to use for fowards/backwards \\
+\hline
+{\em rotate\-Value} & \-The value to use for the rotate right/left \\
+\hline
+{\em squared\-Inputs} & \-If set, increases the sensitivity at low speeds \\
+\hline
+\end{DoxyParams}
+\hypertarget{classRobotDrive_a00f3c6f7906685fe2f98ceaa8bb7e188}{\index{\-Robot\-Drive@{\-Robot\-Drive}!\-Drive@{\-Drive}}
+\index{\-Drive@{\-Drive}!RobotDrive@{\-Robot\-Drive}}
+\subsubsection[{\-Drive}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Robot\-Drive\-::\-Drive} (
+\begin{DoxyParamCaption}
+\item[{float}]{output\-Magnitude, }
+\item[{float}]{curve}
+\end{DoxyParamCaption}
+)}}\label{classRobotDrive_a00f3c6f7906685fe2f98ceaa8bb7e188}
+\-Drive the motors at \char`\"{}speed\char`\"{} and \char`\"{}curve\char`\"{}.
+
+\-The speed and curve are -\/1.\-0 to +1.0 values where 0.\-0 represents stopped and not turning. \-The algorithm for adding in the direction attempts to provide a constant turn radius for differing speeds.
+
+\-This function will most likely be used in an autonomous routine.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em output\-Magnitude} & \-The forward component of the output magnitude to send to the motors. \\
+\hline
+{\em curve} & \-The rate of turn, constant for different forward speeds. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classRobotDrive_ad21b09eed120e95f1b5741a26f2f9084}{\index{\-Robot\-Drive@{\-Robot\-Drive}!\-Holonomic\-Drive@{\-Holonomic\-Drive}}
+\index{\-Holonomic\-Drive@{\-Holonomic\-Drive}!RobotDrive@{\-Robot\-Drive}}
+\subsubsection[{\-Holonomic\-Drive}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Robot\-Drive\-::\-Holonomic\-Drive} (
+\begin{DoxyParamCaption}
+\item[{float}]{magnitude, }
+\item[{float}]{direction, }
+\item[{float}]{rotation}
+\end{DoxyParamCaption}
+)}}\label{classRobotDrive_ad21b09eed120e95f1b5741a26f2f9084}
+\-Holonomic \-Drive method for \-Mecanum wheeled robots.
+
+\-This is an alias to \hyperlink{classRobotDrive_a3ba6d4ec2c07575543c4f47d348332f1}{\-Mecanum\-Drive\-\_\-\-Polar()} for backward compatability
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em magnitude} & \-The speed that the robot should drive in a given direction. \mbox{[}-\/1.\-0..1.\-0\mbox{]} \\
+\hline
+{\em direction} & \-The direction the robot should drive. \-The direction and maginitute are independent of the rotation rate. \\
+\hline
+{\em rotation} & \-The rate of rotation for the robot that is completely independent of the magnitute or direction. \mbox{[}-\/1.\-0..1.\-0\mbox{]} \\
+\hline
+\end{DoxyParams}
+\hypertarget{classRobotDrive_ae57d5bb728428fac6cbd7eade67c569d}{\index{\-Robot\-Drive@{\-Robot\-Drive}!\-Init\-Robot\-Drive@{\-Init\-Robot\-Drive}}
+\index{\-Init\-Robot\-Drive@{\-Init\-Robot\-Drive}!RobotDrive@{\-Robot\-Drive}}
+\subsubsection[{\-Init\-Robot\-Drive}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Robot\-Drive\-::\-Init\-Robot\-Drive} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{classRobotDrive_ae57d5bb728428fac6cbd7eade67c569d}
+\-Common function to initialize all the robot drive constructors. \-Create a motor safety object (the real reason for the common code) and initialize all the motor assignments. \-The default timeout is set for the robot drive. \hypertarget{classRobotDrive_aa7d99fd794c6f8c0b5486603f508a3a7}{\index{\-Robot\-Drive@{\-Robot\-Drive}!\-Limit@{\-Limit}}
+\index{\-Limit@{\-Limit}!RobotDrive@{\-Robot\-Drive}}
+\subsubsection[{\-Limit}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf \-Robot\-Drive\-::\-Limit} (
+\begin{DoxyParamCaption}
+\item[{float}]{num}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{classRobotDrive_aa7d99fd794c6f8c0b5486603f508a3a7}
+\-Limit motor values to the -\/1.\-0 to +1.0 range. \hypertarget{classRobotDrive_a2e7fa1a9713332281012e8aae5d9570e}{\index{\-Robot\-Drive@{\-Robot\-Drive}!\-Mecanum\-Drive\-\_\-\-Cartesian@{\-Mecanum\-Drive\-\_\-\-Cartesian}}
+\index{\-Mecanum\-Drive\-\_\-\-Cartesian@{\-Mecanum\-Drive\-\_\-\-Cartesian}!RobotDrive@{\-Robot\-Drive}}
+\subsubsection[{\-Mecanum\-Drive\-\_\-\-Cartesian}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Robot\-Drive\-::\-Mecanum\-Drive\-\_\-\-Cartesian} (
+\begin{DoxyParamCaption}
+\item[{float}]{x, }
+\item[{float}]{y, }
+\item[{float}]{rotation, }
+\item[{float}]{gyro\-Angle = {\ttfamily 0.0}}
+\end{DoxyParamCaption}
+)}}\label{classRobotDrive_a2e7fa1a9713332281012e8aae5d9570e}
+\-Drive method for \-Mecanum wheeled robots.
+
+\-A method for driving with \-Mecanum wheeled robots. \-There are 4 wheels on the robot, arranged so that the front and back wheels are toed in 45 degrees. \-When looking at the wheels from the top, the roller axles should form an \-X across the robot.
+
+\-This is designed to be directly driven by joystick axes.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em x} & \-The speed that the robot should drive in the \-X direction. \mbox{[}-\/1.\-0..1.\-0\mbox{]} \\
+\hline
+{\em y} & \-The speed that the robot should drive in the \-Y direction. \-This input is inverted to match the forward == -\/1.\-0 that joysticks produce. \mbox{[}-\/1.\-0..1.\-0\mbox{]} \\
+\hline
+{\em rotation} & \-The rate of rotation for the robot that is completely independent of the translation. \mbox{[}-\/1.\-0..1.\-0\mbox{]} \\
+\hline
+{\em gyro\-Angle} & \-The current angle reading from the gyro. \-Use this to implement field-\/oriented controls. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classRobotDrive_a3ba6d4ec2c07575543c4f47d348332f1}{\index{\-Robot\-Drive@{\-Robot\-Drive}!\-Mecanum\-Drive\-\_\-\-Polar@{\-Mecanum\-Drive\-\_\-\-Polar}}
+\index{\-Mecanum\-Drive\-\_\-\-Polar@{\-Mecanum\-Drive\-\_\-\-Polar}!RobotDrive@{\-Robot\-Drive}}
+\subsubsection[{\-Mecanum\-Drive\-\_\-\-Polar}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Robot\-Drive\-::\-Mecanum\-Drive\-\_\-\-Polar} (
+\begin{DoxyParamCaption}
+\item[{float}]{magnitude, }
+\item[{float}]{direction, }
+\item[{float}]{rotation}
+\end{DoxyParamCaption}
+)}}\label{classRobotDrive_a3ba6d4ec2c07575543c4f47d348332f1}
+\-Drive method for \-Mecanum wheeled robots.
+
+\-A method for driving with \-Mecanum wheeled robots. \-There are 4 wheels on the robot, arranged so that the front and back wheels are toed in 45 degrees. \-When looking at the wheels from the top, the roller axles should form an \-X across the robot.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em magnitude} & \-The speed that the robot should drive in a given direction. \mbox{[}-\/1.\-0..1.\-0\mbox{]} \\
+\hline
+{\em direction} & \-The direction the robot should drive in degrees. \-The direction and maginitute are independent of the rotation rate. \\
+\hline
+{\em rotation} & \-The rate of rotation for the robot that is completely independent of the magnitute or direction. \mbox{[}-\/1.\-0..1.\-0\mbox{]} \\
+\hline
+\end{DoxyParams}
+\hypertarget{classRobotDrive_a5e6a645728f44664ee57e5fb4c02acc7}{\index{\-Robot\-Drive@{\-Robot\-Drive}!\-Normalize@{\-Normalize}}
+\index{\-Normalize@{\-Normalize}!RobotDrive@{\-Robot\-Drive}}
+\subsubsection[{\-Normalize}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Robot\-Drive\-::\-Normalize} (
+\begin{DoxyParamCaption}
+\item[{double $\ast$}]{wheel\-Speeds}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{classRobotDrive_a5e6a645728f44664ee57e5fb4c02acc7}
+\-Normalize all wheel speeds if the magnitude of any wheel is greater than 1.\-0. \hypertarget{classRobotDrive_af46d235e636cb5014bfbf525a2ecf247}{\index{\-Robot\-Drive@{\-Robot\-Drive}!\-Rotate\-Vector@{\-Rotate\-Vector}}
+\index{\-Rotate\-Vector@{\-Rotate\-Vector}!RobotDrive@{\-Robot\-Drive}}
+\subsubsection[{\-Rotate\-Vector}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Robot\-Drive\-::\-Rotate\-Vector} (
+\begin{DoxyParamCaption}
+\item[{double \&}]{x, }
+\item[{double \&}]{y, }
+\item[{double}]{angle}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{classRobotDrive_af46d235e636cb5014bfbf525a2ecf247}
+\-Rotate a vector in \-Cartesian space. \hypertarget{classRobotDrive_a6f17b92a6867d512188b497f192f0715}{\index{\-Robot\-Drive@{\-Robot\-Drive}!\-Set\-Left\-Right\-Motor\-Outputs@{\-Set\-Left\-Right\-Motor\-Outputs}}
+\index{\-Set\-Left\-Right\-Motor\-Outputs@{\-Set\-Left\-Right\-Motor\-Outputs}!RobotDrive@{\-Robot\-Drive}}
+\subsubsection[{\-Set\-Left\-Right\-Motor\-Outputs}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Robot\-Drive\-::\-Set\-Left\-Right\-Motor\-Outputs} (
+\begin{DoxyParamCaption}
+\item[{float}]{left\-Output, }
+\item[{float}]{right\-Output}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{classRobotDrive_a6f17b92a6867d512188b497f192f0715}
+\-Set the speed of the right and left motors. \-This is used once an appropriate drive setup function is called such as \-Two\-Wheel\-Drive(). \-The motors are set to \char`\"{}left\-Output\char`\"{} and \char`\"{}right\-Output\char`\"{} and includes flipping the direction of one side for opposing motors. 
+\begin{DoxyParams}{\-Parameters}
+{\em left\-Output} & \-The speed to send to the left side of the robot. \\
+\hline
+{\em right\-Output} & \-The speed to send to the right side of the robot. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classRobotDrive_a6537ad67ea0306727bbf23a9b8d9b3a8}{\index{\-Robot\-Drive@{\-Robot\-Drive}!\-Set\-Max\-Output@{\-Set\-Max\-Output}}
+\index{\-Set\-Max\-Output@{\-Set\-Max\-Output}!RobotDrive@{\-Robot\-Drive}}
+\subsubsection[{\-Set\-Max\-Output}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Robot\-Drive\-::\-Set\-Max\-Output} (
+\begin{DoxyParamCaption}
+\item[{double}]{max\-Output}
+\end{DoxyParamCaption}
+)}}\label{classRobotDrive_a6537ad67ea0306727bbf23a9b8d9b3a8}
+\-Configure the scaling factor for using \hyperlink{classRobotDrive}{\-Robot\-Drive} with motor controllers in a mode other than \-Percent\-Vbus. 
+\begin{DoxyParams}{\-Parameters}
+{\em max\-Output} & \-Multiplied with the output percentage computed by the drive functions. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classRobotDrive_ae9838cbcf783b2eeca8ace11484ce79f}{\index{\-Robot\-Drive@{\-Robot\-Drive}!\-Set\-Sensitivity@{\-Set\-Sensitivity}}
+\index{\-Set\-Sensitivity@{\-Set\-Sensitivity}!RobotDrive@{\-Robot\-Drive}}
+\subsubsection[{\-Set\-Sensitivity}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Robot\-Drive\-::\-Set\-Sensitivity} (
+\begin{DoxyParamCaption}
+\item[{float}]{sensitivity}
+\end{DoxyParamCaption}
+)}}\label{classRobotDrive_ae9838cbcf783b2eeca8ace11484ce79f}
+\-Set the turning sensitivity.
+
+\-This only impacts the \hyperlink{classRobotDrive_a00f3c6f7906685fe2f98ceaa8bb7e188}{\-Drive()} entry-\/point. 
+\begin{DoxyParams}{\-Parameters}
+{\em sensitivity} & \-Effectively sets the turning sensitivity (or turn radius for a given value) \\
+\hline
+\end{DoxyParams}
+\hypertarget{classRobotDrive_a47df0f6d6a60ab9fe99cf5e953f06d76}{\index{\-Robot\-Drive@{\-Robot\-Drive}!\-Tank\-Drive@{\-Tank\-Drive}}
+\index{\-Tank\-Drive@{\-Tank\-Drive}!RobotDrive@{\-Robot\-Drive}}
+\subsubsection[{\-Tank\-Drive}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Robot\-Drive\-::\-Tank\-Drive} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Generic\-H\-I\-D} $\ast$}]{left\-Stick, }
+\item[{{\bf \-Generic\-H\-I\-D} $\ast$}]{right\-Stick}
+\end{DoxyParamCaption}
+)}}\label{classRobotDrive_a47df0f6d6a60ab9fe99cf5e953f06d76}
+\-Provide tank steering using the stored robot configuration. \-Drive the robot using two joystick inputs. \-The \-Y-\/axis will be selected from each \hyperlink{classJoystick}{\-Joystick} object. 
+\begin{DoxyParams}{\-Parameters}
+{\em left\-Stick} & \-The joystick to control the left side of the robot. \\
+\hline
+{\em right\-Stick} & \-The joystick to control the right side of the robot. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classRobotDrive_ae24f3802fb94ea30c716ad8a553a1b6d}{\index{\-Robot\-Drive@{\-Robot\-Drive}!\-Tank\-Drive@{\-Tank\-Drive}}
+\index{\-Tank\-Drive@{\-Tank\-Drive}!RobotDrive@{\-Robot\-Drive}}
+\subsubsection[{\-Tank\-Drive}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Robot\-Drive\-::\-Tank\-Drive} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Generic\-H\-I\-D} $\ast$}]{left\-Stick, }
+\item[{\-U\-I\-N\-T32}]{left\-Axis, }
+\item[{{\bf \-Generic\-H\-I\-D} $\ast$}]{right\-Stick, }
+\item[{\-U\-I\-N\-T32}]{right\-Axis}
+\end{DoxyParamCaption}
+)}}\label{classRobotDrive_ae24f3802fb94ea30c716ad8a553a1b6d}
+\-Provide tank steering using the stored robot configuration. \-This function lets you pick the axis to be used on each \hyperlink{classJoystick}{\-Joystick} object for the left and right sides of the robot. 
+\begin{DoxyParams}{\-Parameters}
+{\em left\-Stick} & \-The \hyperlink{classJoystick}{\-Joystick} object to use for the left side of the robot. \\
+\hline
+{\em left\-Axis} & \-The axis to select on the left side \hyperlink{classJoystick}{\-Joystick} object. \\
+\hline
+{\em right\-Stick} & \-The \hyperlink{classJoystick}{\-Joystick} object to use for the right side of the robot. \\
+\hline
+{\em right\-Axis} & \-The axis to select on the right side \hyperlink{classJoystick}{\-Joystick} object. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classRobotDrive_ac6a60f5d8ed48bae4fde0d8828ffeafe}{\index{\-Robot\-Drive@{\-Robot\-Drive}!\-Tank\-Drive@{\-Tank\-Drive}}
+\index{\-Tank\-Drive@{\-Tank\-Drive}!RobotDrive@{\-Robot\-Drive}}
+\subsubsection[{\-Tank\-Drive}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Robot\-Drive\-::\-Tank\-Drive} (
+\begin{DoxyParamCaption}
+\item[{float}]{left\-Value, }
+\item[{float}]{right\-Value}
+\end{DoxyParamCaption}
+)}}\label{classRobotDrive_ac6a60f5d8ed48bae4fde0d8828ffeafe}
+\-Provide tank steering using the stored robot configuration. \-This function lets you directly provide joystick values from any source. 
+\begin{DoxyParams}{\-Parameters}
+{\em left\-Value} & \-The value of the left stick. \\
+\hline
+{\em right\-Value} & \-The value of the right stick. \\
+\hline
+\end{DoxyParams}
+
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+\-Robot\-Drive.\-h\item 
+\-Robot\-Drive.\-cpp\end{DoxyCompactItemize}

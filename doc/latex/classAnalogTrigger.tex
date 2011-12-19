@@ -1,0 +1,149 @@
+\hypertarget{classAnalogTrigger}{\section{\-Analog\-Trigger \-Class \-Reference}
+\label{classAnalogTrigger}\index{\-Analog\-Trigger@{\-Analog\-Trigger}}
+}
+\-Inheritance diagram for \-Analog\-Trigger\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classAnalogTrigger}
+\end{center}
+\end{figure}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classAnalogTrigger_a7d370b42d050aec9816a41cd0497d189}{\-Analog\-Trigger} (\-U\-I\-N\-T32 slot, \-U\-I\-N\-T32 channel)
+\item 
+\hyperlink{classAnalogTrigger_a336d4a7382c5616b1881e7c16f3e2bc0}{\-Analog\-Trigger} (\-U\-I\-N\-T32 channel)
+\item 
+\hyperlink{classAnalogTrigger_aee536c4e10aefc84394532d7b9b68b49}{\-Analog\-Trigger} (\hyperlink{classAnalogChannel}{\-Analog\-Channel} $\ast$channel)
+\item 
+void \hyperlink{classAnalogTrigger_a2c93aad3d8086ef2627bad4f642e538d}{\-Set\-Limits\-Voltage} (float lower, float upper)
+\item 
+void \hyperlink{classAnalogTrigger_a495e6dbbca044e64399e28af60bf5ca1}{\-Set\-Limits\-Raw} (\-I\-N\-T32 lower, \-I\-N\-T32 upper)
+\item 
+void \hyperlink{classAnalogTrigger_a450ceb7903cc3cc62beb712bdb2365b4}{\-Set\-Averaged} (bool use\-Averaged\-Value)
+\item 
+void \hyperlink{classAnalogTrigger_a1a362d7f7e82eed22d3d384b7a7792fa}{\-Set\-Filtered} (bool use\-Filtered\-Value)
+\item 
+\-U\-I\-N\-T32 \hyperlink{classAnalogTrigger_a674516aebe1f7be51110658333957385}{\-Get\-Index} ()
+\item 
+bool \hyperlink{classAnalogTrigger_a67f35a6ae7f5d4cde09530b9c35a471c}{\-Get\-In\-Window} ()
+\item 
+bool \hyperlink{classAnalogTrigger_a867ff45d7b9d30ee8b9970175862a3aa}{\-Get\-Trigger\-State} ()
+\item 
+\hyperlink{classAnalogTriggerOutput}{\-Analog\-Trigger\-Output} $\ast$ \hyperlink{classAnalogTrigger_a9873edc2ccb82375c63f69b4355de52d}{\-Create\-Output} (\-Analog\-Trigger\-Output\-::\-Type type)
+\end{DoxyCompactItemize}
+\subsection*{\-Friends}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classAnalogTrigger_a048ab468d109b1e8078f3cef9cee57ba}{class {\bfseries \-Analog\-Trigger\-Output}}\label{classAnalogTrigger_a048ab468d109b1e8078f3cef9cee57ba}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{classAnalogTrigger_a7d370b42d050aec9816a41cd0497d189}{\index{\-Analog\-Trigger@{\-Analog\-Trigger}!\-Analog\-Trigger@{\-Analog\-Trigger}}
+\index{\-Analog\-Trigger@{\-Analog\-Trigger}!AnalogTrigger@{\-Analog\-Trigger}}
+\subsubsection[{\-Analog\-Trigger}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Analog\-Trigger\-::\-Analog\-Trigger} (
+\begin{DoxyParamCaption}
+\item[{\-U\-I\-N\-T32}]{slot, }
+\item[{\-U\-I\-N\-T32}]{channel}
+\end{DoxyParamCaption}
+)}}\label{classAnalogTrigger_a7d370b42d050aec9816a41cd0497d189}
+\-Constructor for an analog trigger given both the slot and channel. \hypertarget{classAnalogTrigger_a336d4a7382c5616b1881e7c16f3e2bc0}{\index{\-Analog\-Trigger@{\-Analog\-Trigger}!\-Analog\-Trigger@{\-Analog\-Trigger}}
+\index{\-Analog\-Trigger@{\-Analog\-Trigger}!AnalogTrigger@{\-Analog\-Trigger}}
+\subsubsection[{\-Analog\-Trigger}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Analog\-Trigger\-::\-Analog\-Trigger} (
+\begin{DoxyParamCaption}
+\item[{\-U\-I\-N\-T32}]{channel}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}explicit\mbox{]}}}}\label{classAnalogTrigger_a336d4a7382c5616b1881e7c16f3e2bc0}
+\-Constructor for an analog trigger given a channel number. \-The default module is used in this case. \hypertarget{classAnalogTrigger_aee536c4e10aefc84394532d7b9b68b49}{\index{\-Analog\-Trigger@{\-Analog\-Trigger}!\-Analog\-Trigger@{\-Analog\-Trigger}}
+\index{\-Analog\-Trigger@{\-Analog\-Trigger}!AnalogTrigger@{\-Analog\-Trigger}}
+\subsubsection[{\-Analog\-Trigger}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Analog\-Trigger\-::\-Analog\-Trigger} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Analog\-Channel} $\ast$}]{channel}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}explicit\mbox{]}}}}\label{classAnalogTrigger_aee536c4e10aefc84394532d7b9b68b49}
+\-Construct an analog trigger given an analog channel. \-This should be used in the case of sharing an analog channel between the trigger and an analog input object. 
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classAnalogTrigger_a9873edc2ccb82375c63f69b4355de52d}{\index{\-Analog\-Trigger@{\-Analog\-Trigger}!\-Create\-Output@{\-Create\-Output}}
+\index{\-Create\-Output@{\-Create\-Output}!AnalogTrigger@{\-Analog\-Trigger}}
+\subsubsection[{\-Create\-Output}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Analog\-Trigger\-Output} $\ast$ {\bf \-Analog\-Trigger\-::\-Create\-Output} (
+\begin{DoxyParamCaption}
+\item[{\-Analog\-Trigger\-Output\-::\-Type}]{type}
+\end{DoxyParamCaption}
+)}}\label{classAnalogTrigger_a9873edc2ccb82375c63f69b4355de52d}
+\-Creates an \hyperlink{classAnalogTriggerOutput}{\-Analog\-Trigger\-Output} object. \-Gets an output object that can be used for routing. \-Caller is responsible for deleting the \hyperlink{classAnalogTriggerOutput}{\-Analog\-Trigger\-Output} object. 
+\begin{DoxyParams}{\-Parameters}
+{\em type} & \-An enum of the type of output object to create. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-A pointer to a new \hyperlink{classAnalogTriggerOutput}{\-Analog\-Trigger\-Output} object. 
+\end{DoxyReturn}
+\hypertarget{classAnalogTrigger_a674516aebe1f7be51110658333957385}{\index{\-Analog\-Trigger@{\-Analog\-Trigger}!\-Get\-Index@{\-Get\-Index}}
+\index{\-Get\-Index@{\-Get\-Index}!AnalogTrigger@{\-Analog\-Trigger}}
+\subsubsection[{\-Get\-Index}]{\setlength{\rightskip}{0pt plus 5cm}\-U\-I\-N\-T32 {\bf \-Analog\-Trigger\-::\-Get\-Index} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classAnalogTrigger_a674516aebe1f7be51110658333957385}
+\-Return the index of the analog trigger. \-This is the \-F\-P\-G\-A index of this analog trigger instance. \begin{DoxyReturn}{\-Returns}
+\-The index of the analog trigger. 
+\end{DoxyReturn}
+\hypertarget{classAnalogTrigger_a67f35a6ae7f5d4cde09530b9c35a471c}{\index{\-Analog\-Trigger@{\-Analog\-Trigger}!\-Get\-In\-Window@{\-Get\-In\-Window}}
+\index{\-Get\-In\-Window@{\-Get\-In\-Window}!AnalogTrigger@{\-Analog\-Trigger}}
+\subsubsection[{\-Get\-In\-Window}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Analog\-Trigger\-::\-Get\-In\-Window} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classAnalogTrigger_a67f35a6ae7f5d4cde09530b9c35a471c}
+\-Return the \-In\-Window output of the analog trigger. \-True if the analog input is between the upper and lower limits. \begin{DoxyReturn}{\-Returns}
+\-The \-In\-Window output of the analog trigger. 
+\end{DoxyReturn}
+\hypertarget{classAnalogTrigger_a867ff45d7b9d30ee8b9970175862a3aa}{\index{\-Analog\-Trigger@{\-Analog\-Trigger}!\-Get\-Trigger\-State@{\-Get\-Trigger\-State}}
+\index{\-Get\-Trigger\-State@{\-Get\-Trigger\-State}!AnalogTrigger@{\-Analog\-Trigger}}
+\subsubsection[{\-Get\-Trigger\-State}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Analog\-Trigger\-::\-Get\-Trigger\-State} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classAnalogTrigger_a867ff45d7b9d30ee8b9970175862a3aa}
+\-Return the \-Trigger\-State output of the analog trigger. \-True if above upper limit. \-False if below lower limit. \-If in \-Hysteresis, maintain previous state. \begin{DoxyReturn}{\-Returns}
+\-The \-Trigger\-State output of the analog trigger. 
+\end{DoxyReturn}
+\hypertarget{classAnalogTrigger_a450ceb7903cc3cc62beb712bdb2365b4}{\index{\-Analog\-Trigger@{\-Analog\-Trigger}!\-Set\-Averaged@{\-Set\-Averaged}}
+\index{\-Set\-Averaged@{\-Set\-Averaged}!AnalogTrigger@{\-Analog\-Trigger}}
+\subsubsection[{\-Set\-Averaged}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Analog\-Trigger\-::\-Set\-Averaged} (
+\begin{DoxyParamCaption}
+\item[{bool}]{use\-Averaged\-Value}
+\end{DoxyParamCaption}
+)}}\label{classAnalogTrigger_a450ceb7903cc3cc62beb712bdb2365b4}
+\-Configure the analog trigger to use the averaged vs. raw values. \-If the value is true, then the averaged value is selected for the analog trigger, otherwise the immediate value is used. \hypertarget{classAnalogTrigger_a1a362d7f7e82eed22d3d384b7a7792fa}{\index{\-Analog\-Trigger@{\-Analog\-Trigger}!\-Set\-Filtered@{\-Set\-Filtered}}
+\index{\-Set\-Filtered@{\-Set\-Filtered}!AnalogTrigger@{\-Analog\-Trigger}}
+\subsubsection[{\-Set\-Filtered}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Analog\-Trigger\-::\-Set\-Filtered} (
+\begin{DoxyParamCaption}
+\item[{bool}]{use\-Filtered\-Value}
+\end{DoxyParamCaption}
+)}}\label{classAnalogTrigger_a1a362d7f7e82eed22d3d384b7a7792fa}
+\-Configure the analog trigger to use a filtered value. \-The analog trigger will operate with a 3 point average rejection filter. \-This is designed to help with 360 degree pot applications for the period where the pot crosses through zero. \hypertarget{classAnalogTrigger_a495e6dbbca044e64399e28af60bf5ca1}{\index{\-Analog\-Trigger@{\-Analog\-Trigger}!\-Set\-Limits\-Raw@{\-Set\-Limits\-Raw}}
+\index{\-Set\-Limits\-Raw@{\-Set\-Limits\-Raw}!AnalogTrigger@{\-Analog\-Trigger}}
+\subsubsection[{\-Set\-Limits\-Raw}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Analog\-Trigger\-::\-Set\-Limits\-Raw} (
+\begin{DoxyParamCaption}
+\item[{\-I\-N\-T32}]{lower, }
+\item[{\-I\-N\-T32}]{upper}
+\end{DoxyParamCaption}
+)}}\label{classAnalogTrigger_a495e6dbbca044e64399e28af60bf5ca1}
+\-Set the upper and lower limits of the analog trigger. \-The limits are given in \-A\-D\-C codes. \-If oversampling is used, the units must be scaled appropriately. \hypertarget{classAnalogTrigger_a2c93aad3d8086ef2627bad4f642e538d}{\index{\-Analog\-Trigger@{\-Analog\-Trigger}!\-Set\-Limits\-Voltage@{\-Set\-Limits\-Voltage}}
+\index{\-Set\-Limits\-Voltage@{\-Set\-Limits\-Voltage}!AnalogTrigger@{\-Analog\-Trigger}}
+\subsubsection[{\-Set\-Limits\-Voltage}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Analog\-Trigger\-::\-Set\-Limits\-Voltage} (
+\begin{DoxyParamCaption}
+\item[{float}]{lower, }
+\item[{float}]{upper}
+\end{DoxyParamCaption}
+)}}\label{classAnalogTrigger_a2c93aad3d8086ef2627bad4f642e538d}
+\-Set the upper and lower limits of the analog trigger. \-The limits are given as floating point voltage values. 
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+\-Analog\-Trigger.\-h\item 
+\-Analog\-Trigger.\-cpp\end{DoxyCompactItemize}

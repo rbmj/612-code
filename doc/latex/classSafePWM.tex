@@ -1,0 +1,162 @@
+\hypertarget{classSafePWM}{\section{\-Safe\-P\-W\-M \-Class \-Reference}
+\label{classSafePWM}\index{\-Safe\-P\-W\-M@{\-Safe\-P\-W\-M}}
+}
+
+
+{\ttfamily \#include $<$\-Safe\-P\-W\-M.\-h$>$}
+
+\-Inheritance diagram for \-Safe\-P\-W\-M\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=5.000000cm]{classSafePWM}
+\end{center}
+\end{figure}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classSafePWM_a00a1366b4da440711a1f02d037950a2f}{\-Safe\-P\-W\-M} (\-U\-I\-N\-T32 channel)
+\item 
+\hyperlink{classSafePWM_a06eacc9ee214214cf8a7f0ac9650d59b}{\-Safe\-P\-W\-M} (\-U\-I\-N\-T32 slot, \-U\-I\-N\-T32 channel)
+\item 
+\hypertarget{classSafePWM_a30ee2880db771df845a8fe47f3184953}{void {\bfseries \-Set\-Expiration} (float timeout)}\label{classSafePWM_a30ee2880db771df845a8fe47f3184953}
+
+\item 
+float \hyperlink{classSafePWM_a81eae699cc4663f0812dfb7737c56281}{\-Get\-Expiration} ()
+\item 
+bool \hyperlink{classSafePWM_aebfc9f69eff62ed8180c2991b25ad043}{\-Is\-Alive} ()
+\item 
+void \hyperlink{classSafePWM_a66a27761982521795879b6067d81a6dc}{\-Stop\-Motor} ()
+\item 
+bool \hyperlink{classSafePWM_a8303289bd3ecd52d7764f7bb593a3474}{\-Is\-Safety\-Enabled} ()
+\item 
+void \hyperlink{classSafePWM_a882453a32c881e9114623072b7d905e5}{\-Set\-Safety\-Enabled} (bool enabled)
+\item 
+virtual void \hyperlink{classSafePWM_af1ed936d88f3ee6446b01c17feb24b78}{\-Set\-Speed} (float speed)
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-A safe version of the \hyperlink{classPWM}{\-P\-W\-M} class. \-It is safe because it implements the \hyperlink{classMotorSafety}{\-Motor\-Safety} interface that provides timeouts in the event that the motor value is not updated before the expiration time. \-This delegates the actual work to a \hyperlink{classMotorSafetyHelper}{\-Motor\-Safety\-Helper} object that is used for all objects that implement \hyperlink{classMotorSafety}{\-Motor\-Safety}. 
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{classSafePWM_a00a1366b4da440711a1f02d037950a2f}{\index{\-Safe\-P\-W\-M@{\-Safe\-P\-W\-M}!\-Safe\-P\-W\-M@{\-Safe\-P\-W\-M}}
+\index{\-Safe\-P\-W\-M@{\-Safe\-P\-W\-M}!SafePWM@{\-Safe\-P\-W\-M}}
+\subsubsection[{\-Safe\-P\-W\-M}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Safe\-P\-W\-M\-::\-Safe\-P\-W\-M} (
+\begin{DoxyParamCaption}
+\item[{\-U\-I\-N\-T32}]{channel}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}explicit\mbox{]}}}}\label{classSafePWM_a00a1366b4da440711a1f02d037950a2f}
+\-Constructor for a \hyperlink{classSafePWM}{\-Safe\-P\-W\-M} object taking a channel number 
+\begin{DoxyParams}{\-Parameters}
+{\em channel} & \-The channel number to be used for the underlying \hyperlink{classPWM}{\-P\-W\-M} object \\
+\hline
+\end{DoxyParams}
+\hypertarget{classSafePWM_a06eacc9ee214214cf8a7f0ac9650d59b}{\index{\-Safe\-P\-W\-M@{\-Safe\-P\-W\-M}!\-Safe\-P\-W\-M@{\-Safe\-P\-W\-M}}
+\index{\-Safe\-P\-W\-M@{\-Safe\-P\-W\-M}!SafePWM@{\-Safe\-P\-W\-M}}
+\subsubsection[{\-Safe\-P\-W\-M}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Safe\-P\-W\-M\-::\-Safe\-P\-W\-M} (
+\begin{DoxyParamCaption}
+\item[{\-U\-I\-N\-T32}]{slot, }
+\item[{\-U\-I\-N\-T32}]{channel}
+\end{DoxyParamCaption}
+)}}\label{classSafePWM_a06eacc9ee214214cf8a7f0ac9650d59b}
+\-Constructor for a \hyperlink{classSafePWM}{\-Safe\-P\-W\-M} object taking channel and slot numbers. 
+\begin{DoxyParams}{\-Parameters}
+{\em slot} & \-The slot number of the digital module for this \hyperlink{classPWM}{\-P\-W\-M} object \\
+\hline
+{\em channel} & \-The channel number in the module for this \hyperlink{classPWM}{\-P\-W\-M} object \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classSafePWM_a81eae699cc4663f0812dfb7737c56281}{\index{\-Safe\-P\-W\-M@{\-Safe\-P\-W\-M}!\-Get\-Expiration@{\-Get\-Expiration}}
+\index{\-Get\-Expiration@{\-Get\-Expiration}!SafePWM@{\-Safe\-P\-W\-M}}
+\subsubsection[{\-Get\-Expiration}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf \-Safe\-P\-W\-M\-::\-Get\-Expiration} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{classSafePWM_a81eae699cc4663f0812dfb7737c56281}
+\-Return the expiration time for the \hyperlink{classPWM}{\-P\-W\-M} object. \begin{DoxyReturn}{\-Returns}
+\-The expiration time value. 
+\end{DoxyReturn}
+
+
+\-Implements \hyperlink{classMotorSafety}{\-Motor\-Safety}.
+
+\hypertarget{classSafePWM_aebfc9f69eff62ed8180c2991b25ad043}{\index{\-Safe\-P\-W\-M@{\-Safe\-P\-W\-M}!\-Is\-Alive@{\-Is\-Alive}}
+\index{\-Is\-Alive@{\-Is\-Alive}!SafePWM@{\-Safe\-P\-W\-M}}
+\subsubsection[{\-Is\-Alive}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Safe\-P\-W\-M\-::\-Is\-Alive} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{classSafePWM_aebfc9f69eff62ed8180c2991b25ad043}
+\-Check if the \hyperlink{classPWM}{\-P\-W\-M} object is currently alive or stopped due to a timeout. \begin{DoxyReturn}{\-Returns}
+a bool value that is true if the motor has \-N\-O\-T timed out and should still be running. 
+\end{DoxyReturn}
+
+
+\-Implements \hyperlink{classMotorSafety}{\-Motor\-Safety}.
+
+\hypertarget{classSafePWM_a8303289bd3ecd52d7764f7bb593a3474}{\index{\-Safe\-P\-W\-M@{\-Safe\-P\-W\-M}!\-Is\-Safety\-Enabled@{\-Is\-Safety\-Enabled}}
+\index{\-Is\-Safety\-Enabled@{\-Is\-Safety\-Enabled}!SafePWM@{\-Safe\-P\-W\-M}}
+\subsubsection[{\-Is\-Safety\-Enabled}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Safe\-P\-W\-M\-::\-Is\-Safety\-Enabled} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{classSafePWM_a8303289bd3ecd52d7764f7bb593a3474}
+\-Check if motor safety is enabled for this object \begin{DoxyReturn}{\-Returns}
+\-True if motor safety is enforced for this object 
+\end{DoxyReturn}
+
+
+\-Implements \hyperlink{classMotorSafety}{\-Motor\-Safety}.
+
+\hypertarget{classSafePWM_a882453a32c881e9114623072b7d905e5}{\index{\-Safe\-P\-W\-M@{\-Safe\-P\-W\-M}!\-Set\-Safety\-Enabled@{\-Set\-Safety\-Enabled}}
+\index{\-Set\-Safety\-Enabled@{\-Set\-Safety\-Enabled}!SafePWM@{\-Safe\-P\-W\-M}}
+\subsubsection[{\-Set\-Safety\-Enabled}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Safe\-P\-W\-M\-::\-Set\-Safety\-Enabled} (
+\begin{DoxyParamCaption}
+\item[{bool}]{enabled}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{classSafePWM_a882453a32c881e9114623072b7d905e5}
+\-Enable/disable motor safety for this device \-Turn on and off the motor safety option for this \hyperlink{classPWM}{\-P\-W\-M} object. 
+\begin{DoxyParams}{\-Parameters}
+{\em enabled} & \-True if motor safety is enforced for this object \\
+\hline
+\end{DoxyParams}
+
+
+\-Implements \hyperlink{classMotorSafety}{\-Motor\-Safety}.
+
+\hypertarget{classSafePWM_af1ed936d88f3ee6446b01c17feb24b78}{\index{\-Safe\-P\-W\-M@{\-Safe\-P\-W\-M}!\-Set\-Speed@{\-Set\-Speed}}
+\index{\-Set\-Speed@{\-Set\-Speed}!SafePWM@{\-Safe\-P\-W\-M}}
+\subsubsection[{\-Set\-Speed}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Safe\-P\-W\-M\-::\-Set\-Speed} (
+\begin{DoxyParamCaption}
+\item[{float}]{speed}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{classSafePWM_af1ed936d88f3ee6446b01c17feb24b78}
+\-Feed the \hyperlink{classMotorSafety}{\-Motor\-Safety} timer when setting the speed. \-This method is called by the subclass motor whenever it updates its speed, thereby reseting the timeout value. 
+\begin{DoxyParams}{\-Parameters}
+{\em speed} & \-Value to pass to the \hyperlink{classPWM}{\-P\-W\-M} class \\
+\hline
+\end{DoxyParams}
+
+
+\-Reimplemented from \hyperlink{classPWM_a947e5f6073da9e4d1b60db0c7791ca9c}{\-P\-W\-M}.
+
+\hypertarget{classSafePWM_a66a27761982521795879b6067d81a6dc}{\index{\-Safe\-P\-W\-M@{\-Safe\-P\-W\-M}!\-Stop\-Motor@{\-Stop\-Motor}}
+\index{\-Stop\-Motor@{\-Stop\-Motor}!SafePWM@{\-Safe\-P\-W\-M}}
+\subsubsection[{\-Stop\-Motor}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Safe\-P\-W\-M\-::\-Stop\-Motor} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{classSafePWM_a66a27761982521795879b6067d81a6dc}
+\-Stop the motor associated with this \hyperlink{classPWM}{\-P\-W\-M} object. \-This is called by the \hyperlink{classMotorSafetyHelper}{\-Motor\-Safety\-Helper} object when it has a timeout for this \hyperlink{classPWM}{\-P\-W\-M} and needs to stop it from running. 
+
+\-Implements \hyperlink{classMotorSafety}{\-Motor\-Safety}.
+
+
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+\-Safe\-P\-W\-M.\-h\item 
+\-Safe\-P\-W\-M.\-cpp\end{DoxyCompactItemize}

@@ -1,0 +1,408 @@
+\hypertarget{classAnalogChannel}{\section{\-Analog\-Channel \-Class \-Reference}
+\label{classAnalogChannel}\index{\-Analog\-Channel@{\-Analog\-Channel}}
+}
+
+
+{\ttfamily \#include $<$\-Analog\-Channel.\-h$>$}
+
+\-Inheritance diagram for \-Analog\-Channel\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classAnalogChannel}
+\end{center}
+\end{figure}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classAnalogChannel_a8e6754f11b6515e0cb61cf43c6ed9f0c}{\-Analog\-Channel} (\-U\-I\-N\-T32 slot, \-U\-I\-N\-T32 channel)
+\item 
+\hyperlink{classAnalogChannel_a9596b1752bb22dcb1295c2158042ec76}{\-Analog\-Channel} (\-U\-I\-N\-T32 channel)
+\item 
+virtual \hyperlink{classAnalogChannel_aab41f5e25b1a9a8fa1b935783dcc89a1}{$\sim$\-Analog\-Channel} ()
+\item 
+\hyperlink{classAnalogModule}{\-Analog\-Module} $\ast$ \hyperlink{classAnalogChannel_aa8c8f0328ba7a4074d0f8c8fe8738327}{\-Get\-Module} ()
+\item 
+\-I\-N\-T16 \hyperlink{classAnalogChannel_ab9d814ee9f311c6beb2b379e60aee79a}{\-Get\-Value} ()
+\item 
+\-I\-N\-T32 \hyperlink{classAnalogChannel_a35dda9856d45c0fe807337ab3678b212}{\-Get\-Average\-Value} ()
+\item 
+float \hyperlink{classAnalogChannel_a8032c882a142a01c43ea16c817fc2290}{\-Get\-Voltage} ()
+\item 
+float \hyperlink{classAnalogChannel_aba0ed352ce011170556c039c939f8731}{\-Get\-Average\-Voltage} ()
+\item 
+\-U\-I\-N\-T32 \hyperlink{classAnalogChannel_a2c2a990443b12be6cf86e9900d43b0ec}{\-Get\-Slot} ()
+\item 
+\-U\-I\-N\-T32 \hyperlink{classAnalogChannel_a5d191a8fb04536a9c20355e6e5b97262}{\-Get\-Channel} ()
+\item 
+void \hyperlink{classAnalogChannel_a64da26075ace6b51c635ed4b0646742b}{\-Set\-Average\-Bits} (\-U\-I\-N\-T32 bits)
+\item 
+\-U\-I\-N\-T32 \hyperlink{classAnalogChannel_ab73e958a37fece26e7dd9fd3c358684e}{\-Get\-Average\-Bits} ()
+\item 
+void \hyperlink{classAnalogChannel_a69c5b8dd70a0a5792f2522b2b4758fc3}{\-Set\-Oversample\-Bits} (\-U\-I\-N\-T32 bits)
+\item 
+\-U\-I\-N\-T32 \hyperlink{classAnalogChannel_ae7ddc6516b2ecba8d1e9b9abab9a5939}{\-Get\-Oversample\-Bits} ()
+\item 
+\-U\-I\-N\-T32 \hyperlink{classAnalogChannel_a6a491e56a5d92d4400bf7bde40eda2cc}{\-Get\-L\-S\-B\-Weight} ()
+\item 
+\-I\-N\-T32 \hyperlink{classAnalogChannel_a0e2d698faf502d341f16cadad26e39fd}{\-Get\-Offset} ()
+\item 
+bool \hyperlink{classAnalogChannel_a6915bcc0cb08e270812f31fdf7aa6caa}{\-Is\-Accumulator\-Channel} ()
+\item 
+void \hyperlink{classAnalogChannel_a8f3c0b9bd0ca7ab9449b89e5c2abd53f}{\-Init\-Accumulator} ()
+\item 
+void \hyperlink{classAnalogChannel_aae43ed632a10270fd163d44eea2d8f8f}{\-Set\-Accumulator\-Initial\-Value} (\-I\-N\-T64 value)
+\item 
+void \hyperlink{classAnalogChannel_aecf5da778576f4904e51ece5d327ea17}{\-Reset\-Accumulator} ()
+\item 
+void \hyperlink{classAnalogChannel_a1e28d604275cfda65b8a5e1b5bd79134}{\-Set\-Accumulator\-Center} (\-I\-N\-T32 center)
+\item 
+void \hyperlink{classAnalogChannel_ac404eb71545eb04daf9d09c465e0997a}{\-Set\-Accumulator\-Deadband} (\-I\-N\-T32 deadband)
+\item 
+\-I\-N\-T64 \hyperlink{classAnalogChannel_a8ad12eb79e2ae1c981654ec4907b0f03}{\-Get\-Accumulator\-Value} ()
+\item 
+\-U\-I\-N\-T32 \hyperlink{classAnalogChannel_a234fa038c75f10ddfc20147740d61dda}{\-Get\-Accumulator\-Count} ()
+\item 
+void \hyperlink{classAnalogChannel_ae133b8fe46584ea20b35ea3a0294c2bb}{\-Get\-Accumulator\-Output} (\-I\-N\-T64 $\ast$value, \-U\-I\-N\-T32 $\ast$count)
+\item 
+double \hyperlink{classAnalogChannel_ac6317cfcc26ddff2289f8efc242d99d3}{\-P\-I\-D\-Get} ()
+\end{DoxyCompactItemize}
+\subsection*{\-Static \-Public \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classAnalogChannel_a5ede081990c971577862f4913f0b89cc}{static const \-U\-I\-N\-T32 {\bfseries k\-Accumulator\-Slot} = 1}\label{classAnalogChannel_a5ede081990c971577862f4913f0b89cc}
+
+\item 
+\hypertarget{classAnalogChannel_aa1ecbaa46e972b4d404ce260d58c5c34}{static const \-U\-I\-N\-T32 {\bfseries k\-Accumulator\-Num\-Channels} = 2}\label{classAnalogChannel_aa1ecbaa46e972b4d404ce260d58c5c34}
+
+\item 
+\hypertarget{classAnalogChannel_ae83f8b390f6f72a1eb743352e688b7f8}{static const \-U\-I\-N\-T32 {\bfseries k\-Accumulator\-Channels} \mbox{[}k\-Accumulator\-Num\-Channels\mbox{]} = \{1, 2\}}\label{classAnalogChannel_ae83f8b390f6f72a1eb743352e688b7f8}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-Analog channel class.
+
+\-Each analog channel is read from hardware as a 12-\/bit number representing -\/10\-V to 10\-V.
+
+\-Connected to each analog channel is an averaging and oversampling engine. \-This engine accumulates the specified ( by \hyperlink{classAnalogChannel_a64da26075ace6b51c635ed4b0646742b}{\-Set\-Average\-Bits()} and \hyperlink{classAnalogChannel_a69c5b8dd70a0a5792f2522b2b4758fc3}{\-Set\-Oversample\-Bits()} ) number of samples before returning a new value. \-This is not a sliding window average. \-The only difference between the oversampled samples and the averaged samples is that the oversampled samples are simply accumulated effectively increasing the resolution, while the averaged samples are divided by the number of samples to retain the resolution, but get more stable values. 
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{classAnalogChannel_a8e6754f11b6515e0cb61cf43c6ed9f0c}{\index{\-Analog\-Channel@{\-Analog\-Channel}!\-Analog\-Channel@{\-Analog\-Channel}}
+\index{\-Analog\-Channel@{\-Analog\-Channel}!AnalogChannel@{\-Analog\-Channel}}
+\subsubsection[{\-Analog\-Channel}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Analog\-Channel\-::\-Analog\-Channel} (
+\begin{DoxyParamCaption}
+\item[{\-U\-I\-N\-T32}]{slot, }
+\item[{\-U\-I\-N\-T32}]{channel}
+\end{DoxyParamCaption}
+)}}\label{classAnalogChannel_a8e6754f11b6515e0cb61cf43c6ed9f0c}
+\-Construct an analog channel on a specified module.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em slot} & \-The slot that the analog module is plugged into. \\
+\hline
+{\em channel} & \-The channel number to represent. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classAnalogChannel_a9596b1752bb22dcb1295c2158042ec76}{\index{\-Analog\-Channel@{\-Analog\-Channel}!\-Analog\-Channel@{\-Analog\-Channel}}
+\index{\-Analog\-Channel@{\-Analog\-Channel}!AnalogChannel@{\-Analog\-Channel}}
+\subsubsection[{\-Analog\-Channel}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Analog\-Channel\-::\-Analog\-Channel} (
+\begin{DoxyParamCaption}
+\item[{\-U\-I\-N\-T32}]{channel}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}explicit\mbox{]}}}}\label{classAnalogChannel_a9596b1752bb22dcb1295c2158042ec76}
+\-Construct an analog channel on the default module.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em channel} & \-The channel number to represent. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classAnalogChannel_aab41f5e25b1a9a8fa1b935783dcc89a1}{\index{\-Analog\-Channel@{\-Analog\-Channel}!$\sim$\-Analog\-Channel@{$\sim$\-Analog\-Channel}}
+\index{$\sim$\-Analog\-Channel@{$\sim$\-Analog\-Channel}!AnalogChannel@{\-Analog\-Channel}}
+\subsubsection[{$\sim$\-Analog\-Channel}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Analog\-Channel\-::$\sim$\-Analog\-Channel} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{classAnalogChannel_aab41f5e25b1a9a8fa1b935783dcc89a1}
+\-Channel destructor. 
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classAnalogChannel_a234fa038c75f10ddfc20147740d61dda}{\index{\-Analog\-Channel@{\-Analog\-Channel}!\-Get\-Accumulator\-Count@{\-Get\-Accumulator\-Count}}
+\index{\-Get\-Accumulator\-Count@{\-Get\-Accumulator\-Count}!AnalogChannel@{\-Analog\-Channel}}
+\subsubsection[{\-Get\-Accumulator\-Count}]{\setlength{\rightskip}{0pt plus 5cm}\-U\-I\-N\-T32 {\bf \-Analog\-Channel\-::\-Get\-Accumulator\-Count} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classAnalogChannel_a234fa038c75f10ddfc20147740d61dda}
+\-Read the number of accumulated values.
+
+\-Read the count of the accumulated values since the accumulator was last \-Reset().
+
+\begin{DoxyReturn}{\-Returns}
+\-The number of times samples from the channel were accumulated. 
+\end{DoxyReturn}
+\hypertarget{classAnalogChannel_ae133b8fe46584ea20b35ea3a0294c2bb}{\index{\-Analog\-Channel@{\-Analog\-Channel}!\-Get\-Accumulator\-Output@{\-Get\-Accumulator\-Output}}
+\index{\-Get\-Accumulator\-Output@{\-Get\-Accumulator\-Output}!AnalogChannel@{\-Analog\-Channel}}
+\subsubsection[{\-Get\-Accumulator\-Output}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Analog\-Channel\-::\-Get\-Accumulator\-Output} (
+\begin{DoxyParamCaption}
+\item[{\-I\-N\-T64 $\ast$}]{value, }
+\item[{\-U\-I\-N\-T32 $\ast$}]{count}
+\end{DoxyParamCaption}
+)}}\label{classAnalogChannel_ae133b8fe46584ea20b35ea3a0294c2bb}
+\-Read the accumulated value and the number of accumulated values atomically.
+
+\-This function reads the value and count from the \-F\-P\-G\-A atomically. \-This can be used for averaging.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em value} & \-Pointer to the 64-\/bit accumulated output. \\
+\hline
+{\em count} & \-Pointer to the number of accumulation cycles. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classAnalogChannel_a8ad12eb79e2ae1c981654ec4907b0f03}{\index{\-Analog\-Channel@{\-Analog\-Channel}!\-Get\-Accumulator\-Value@{\-Get\-Accumulator\-Value}}
+\index{\-Get\-Accumulator\-Value@{\-Get\-Accumulator\-Value}!AnalogChannel@{\-Analog\-Channel}}
+\subsubsection[{\-Get\-Accumulator\-Value}]{\setlength{\rightskip}{0pt plus 5cm}\-I\-N\-T64 {\bf \-Analog\-Channel\-::\-Get\-Accumulator\-Value} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classAnalogChannel_a8ad12eb79e2ae1c981654ec4907b0f03}
+\-Read the accumulated value.
+
+\-Read the value that has been accumulating on channel 1. \-The accumulator is attached after the oversample and average engine.
+
+\begin{DoxyReturn}{\-Returns}
+\-The 64-\/bit value accumulated since the last \-Reset(). 
+\end{DoxyReturn}
+\hypertarget{classAnalogChannel_ab73e958a37fece26e7dd9fd3c358684e}{\index{\-Analog\-Channel@{\-Analog\-Channel}!\-Get\-Average\-Bits@{\-Get\-Average\-Bits}}
+\index{\-Get\-Average\-Bits@{\-Get\-Average\-Bits}!AnalogChannel@{\-Analog\-Channel}}
+\subsubsection[{\-Get\-Average\-Bits}]{\setlength{\rightskip}{0pt plus 5cm}\-U\-I\-N\-T32 {\bf \-Analog\-Channel\-::\-Get\-Average\-Bits} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classAnalogChannel_ab73e958a37fece26e7dd9fd3c358684e}
+\-Get the number of averaging bits previously configured. \-This gets the number of averaging bits from the \-F\-P\-G\-A. \-The actual number of averaged samples is 2$\ast$$\ast$bits. \-The averaging is done automatically in the \-F\-P\-G\-A.
+
+\begin{DoxyReturn}{\-Returns}
+\-Number of bits of averaging previously configured. 
+\end{DoxyReturn}
+\hypertarget{classAnalogChannel_a35dda9856d45c0fe807337ab3678b212}{\index{\-Analog\-Channel@{\-Analog\-Channel}!\-Get\-Average\-Value@{\-Get\-Average\-Value}}
+\index{\-Get\-Average\-Value@{\-Get\-Average\-Value}!AnalogChannel@{\-Analog\-Channel}}
+\subsubsection[{\-Get\-Average\-Value}]{\setlength{\rightskip}{0pt plus 5cm}\-I\-N\-T32 {\bf \-Analog\-Channel\-::\-Get\-Average\-Value} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classAnalogChannel_a35dda9856d45c0fe807337ab3678b212}
+\-Get a sample from the output of the oversample and average engine for this channel. \-The sample is 12-\/bit + the value configured in \hyperlink{classAnalogChannel_a69c5b8dd70a0a5792f2522b2b4758fc3}{\-Set\-Oversample\-Bits()}. \-The value configured in \hyperlink{classAnalogChannel_a64da26075ace6b51c635ed4b0646742b}{\-Set\-Average\-Bits()} will cause this value to be averaged 2$\ast$$\ast$bits number of samples. \-This is not a sliding window. \-The sample will not change until 2$\ast$$\ast$(\-Oversampl\-Bits + \-Average\-Bits) samples have been acquired from the module on this channel. \-Use \hyperlink{classAnalogChannel_aba0ed352ce011170556c039c939f8731}{\-Get\-Average\-Voltage()} to get the analog value in calibrated units. \begin{DoxyReturn}{\-Returns}
+\-A sample from the oversample and average engine for this channel. 
+\end{DoxyReturn}
+\hypertarget{classAnalogChannel_aba0ed352ce011170556c039c939f8731}{\index{\-Analog\-Channel@{\-Analog\-Channel}!\-Get\-Average\-Voltage@{\-Get\-Average\-Voltage}}
+\index{\-Get\-Average\-Voltage@{\-Get\-Average\-Voltage}!AnalogChannel@{\-Analog\-Channel}}
+\subsubsection[{\-Get\-Average\-Voltage}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf \-Analog\-Channel\-::\-Get\-Average\-Voltage} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classAnalogChannel_aba0ed352ce011170556c039c939f8731}
+\-Get a scaled sample from the output of the oversample and average engine for this channel. \-The value is scaled to units of \-Volts using the calibrated scaling data from \hyperlink{classAnalogChannel_a6a491e56a5d92d4400bf7bde40eda2cc}{\-Get\-L\-S\-B\-Weight()} and \hyperlink{classAnalogChannel_a0e2d698faf502d341f16cadad26e39fd}{\-Get\-Offset()}. \-Using oversampling will cause this value to be higher resolution, but it will update more slowly. \-Using averaging will cause this value to be more stable, but it will update more slowly. \begin{DoxyReturn}{\-Returns}
+\-A scaled sample from the output of the oversample and average engine for this channel. 
+\end{DoxyReturn}
+\hypertarget{classAnalogChannel_a5d191a8fb04536a9c20355e6e5b97262}{\index{\-Analog\-Channel@{\-Analog\-Channel}!\-Get\-Channel@{\-Get\-Channel}}
+\index{\-Get\-Channel@{\-Get\-Channel}!AnalogChannel@{\-Analog\-Channel}}
+\subsubsection[{\-Get\-Channel}]{\setlength{\rightskip}{0pt plus 5cm}\-U\-I\-N\-T32 {\bf \-Analog\-Channel\-::\-Get\-Channel} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classAnalogChannel_a5d191a8fb04536a9c20355e6e5b97262}
+\-Get the channel number. \begin{DoxyReturn}{\-Returns}
+\-The channel number. 
+\end{DoxyReturn}
+\hypertarget{classAnalogChannel_a6a491e56a5d92d4400bf7bde40eda2cc}{\index{\-Analog\-Channel@{\-Analog\-Channel}!\-Get\-L\-S\-B\-Weight@{\-Get\-L\-S\-B\-Weight}}
+\index{\-Get\-L\-S\-B\-Weight@{\-Get\-L\-S\-B\-Weight}!AnalogChannel@{\-Analog\-Channel}}
+\subsubsection[{\-Get\-L\-S\-B\-Weight}]{\setlength{\rightskip}{0pt plus 5cm}\-U\-I\-N\-T32 {\bf \-Analog\-Channel\-::\-Get\-L\-S\-B\-Weight} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classAnalogChannel_a6a491e56a5d92d4400bf7bde40eda2cc}
+\-Get the factory scaling least significant bit weight constant. \-The least significant bit weight constant for the channel that was calibrated in manufacturing and stored in an eeprom in the module.
+
+\-Volts = ((\-L\-S\-B\-\_\-\-Weight $\ast$ 1e-\/9) $\ast$ raw) -\/ (\-Offset $\ast$ 1e-\/9)
+
+\begin{DoxyReturn}{\-Returns}
+\-Least significant bit weight. 
+\end{DoxyReturn}
+\hypertarget{classAnalogChannel_aa8c8f0328ba7a4074d0f8c8fe8738327}{\index{\-Analog\-Channel@{\-Analog\-Channel}!\-Get\-Module@{\-Get\-Module}}
+\index{\-Get\-Module@{\-Get\-Module}!AnalogChannel@{\-Analog\-Channel}}
+\subsubsection[{\-Get\-Module}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Analog\-Module} $\ast$ {\bf \-Analog\-Channel\-::\-Get\-Module} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classAnalogChannel_aa8c8f0328ba7a4074d0f8c8fe8738327}
+\-Get the analog module that this channel is on. \begin{DoxyReturn}{\-Returns}
+\-A pointer to the \hyperlink{classAnalogModule}{\-Analog\-Module} that this channel is on. 
+\end{DoxyReturn}
+\hypertarget{classAnalogChannel_a0e2d698faf502d341f16cadad26e39fd}{\index{\-Analog\-Channel@{\-Analog\-Channel}!\-Get\-Offset@{\-Get\-Offset}}
+\index{\-Get\-Offset@{\-Get\-Offset}!AnalogChannel@{\-Analog\-Channel}}
+\subsubsection[{\-Get\-Offset}]{\setlength{\rightskip}{0pt plus 5cm}\-I\-N\-T32 {\bf \-Analog\-Channel\-::\-Get\-Offset} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classAnalogChannel_a0e2d698faf502d341f16cadad26e39fd}
+\-Get the factory scaling offset constant. \-The offset constant for the channel that was calibrated in manufacturing and stored in an eeprom in the module.
+
+\-Volts = ((\-L\-S\-B\-\_\-\-Weight $\ast$ 1e-\/9) $\ast$ raw) -\/ (\-Offset $\ast$ 1e-\/9)
+
+\begin{DoxyReturn}{\-Returns}
+\-Offset constant. 
+\end{DoxyReturn}
+\hypertarget{classAnalogChannel_ae7ddc6516b2ecba8d1e9b9abab9a5939}{\index{\-Analog\-Channel@{\-Analog\-Channel}!\-Get\-Oversample\-Bits@{\-Get\-Oversample\-Bits}}
+\index{\-Get\-Oversample\-Bits@{\-Get\-Oversample\-Bits}!AnalogChannel@{\-Analog\-Channel}}
+\subsubsection[{\-Get\-Oversample\-Bits}]{\setlength{\rightskip}{0pt plus 5cm}\-U\-I\-N\-T32 {\bf \-Analog\-Channel\-::\-Get\-Oversample\-Bits} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classAnalogChannel_ae7ddc6516b2ecba8d1e9b9abab9a5939}
+\-Get the number of oversample bits previously configured. \-This gets the number of oversample bits from the \-F\-P\-G\-A. \-The actual number of oversampled values is 2$\ast$$\ast$bits. \-The oversampling is done automatically in the \-F\-P\-G\-A.
+
+\begin{DoxyReturn}{\-Returns}
+\-Number of bits of oversampling previously configured. 
+\end{DoxyReturn}
+\hypertarget{classAnalogChannel_a2c2a990443b12be6cf86e9900d43b0ec}{\index{\-Analog\-Channel@{\-Analog\-Channel}!\-Get\-Slot@{\-Get\-Slot}}
+\index{\-Get\-Slot@{\-Get\-Slot}!AnalogChannel@{\-Analog\-Channel}}
+\subsubsection[{\-Get\-Slot}]{\setlength{\rightskip}{0pt plus 5cm}\-U\-I\-N\-T32 {\bf \-Analog\-Channel\-::\-Get\-Slot} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classAnalogChannel_a2c2a990443b12be6cf86e9900d43b0ec}
+\-Get the slot that the analog module is plugged into. \begin{DoxyReturn}{\-Returns}
+\-The slot that the analog module is plugged into. 
+\end{DoxyReturn}
+\hypertarget{classAnalogChannel_ab9d814ee9f311c6beb2b379e60aee79a}{\index{\-Analog\-Channel@{\-Analog\-Channel}!\-Get\-Value@{\-Get\-Value}}
+\index{\-Get\-Value@{\-Get\-Value}!AnalogChannel@{\-Analog\-Channel}}
+\subsubsection[{\-Get\-Value}]{\setlength{\rightskip}{0pt plus 5cm}\-I\-N\-T16 {\bf \-Analog\-Channel\-::\-Get\-Value} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classAnalogChannel_ab9d814ee9f311c6beb2b379e60aee79a}
+\-Get a sample straight from this channel on the module. \-The sample is a 12-\/bit value representing the -\/10\-V to 10\-V range of the \-A/\-D converter in the module. \-The units are in \-A/\-D converter codes. \-Use \hyperlink{classAnalogChannel_a8032c882a142a01c43ea16c817fc2290}{\-Get\-Voltage()} to get the analog value in calibrated units. \begin{DoxyReturn}{\-Returns}
+\-A sample straight from this channel on the module. 
+\end{DoxyReturn}
+\hypertarget{classAnalogChannel_a8032c882a142a01c43ea16c817fc2290}{\index{\-Analog\-Channel@{\-Analog\-Channel}!\-Get\-Voltage@{\-Get\-Voltage}}
+\index{\-Get\-Voltage@{\-Get\-Voltage}!AnalogChannel@{\-Analog\-Channel}}
+\subsubsection[{\-Get\-Voltage}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf \-Analog\-Channel\-::\-Get\-Voltage} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classAnalogChannel_a8032c882a142a01c43ea16c817fc2290}
+\-Get a scaled sample straight from this channel on the module. \-The value is scaled to units of \-Volts using the calibrated scaling data from \hyperlink{classAnalogChannel_a6a491e56a5d92d4400bf7bde40eda2cc}{\-Get\-L\-S\-B\-Weight()} and \hyperlink{classAnalogChannel_a0e2d698faf502d341f16cadad26e39fd}{\-Get\-Offset()}. \begin{DoxyReturn}{\-Returns}
+\-A scaled sample straight from this channel on the module. 
+\end{DoxyReturn}
+\hypertarget{classAnalogChannel_a8f3c0b9bd0ca7ab9449b89e5c2abd53f}{\index{\-Analog\-Channel@{\-Analog\-Channel}!\-Init\-Accumulator@{\-Init\-Accumulator}}
+\index{\-Init\-Accumulator@{\-Init\-Accumulator}!AnalogChannel@{\-Analog\-Channel}}
+\subsubsection[{\-Init\-Accumulator}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Analog\-Channel\-::\-Init\-Accumulator} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classAnalogChannel_a8f3c0b9bd0ca7ab9449b89e5c2abd53f}
+\-Initialize the accumulator. \hypertarget{classAnalogChannel_a6915bcc0cb08e270812f31fdf7aa6caa}{\index{\-Analog\-Channel@{\-Analog\-Channel}!\-Is\-Accumulator\-Channel@{\-Is\-Accumulator\-Channel}}
+\index{\-Is\-Accumulator\-Channel@{\-Is\-Accumulator\-Channel}!AnalogChannel@{\-Analog\-Channel}}
+\subsubsection[{\-Is\-Accumulator\-Channel}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Analog\-Channel\-::\-Is\-Accumulator\-Channel} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classAnalogChannel_a6915bcc0cb08e270812f31fdf7aa6caa}
+\-Is the channel attached to an accumulator.
+
+\begin{DoxyReturn}{\-Returns}
+\-The analog channel is attached to an accumulator. 
+\end{DoxyReturn}
+\hypertarget{classAnalogChannel_ac6317cfcc26ddff2289f8efc242d99d3}{\index{\-Analog\-Channel@{\-Analog\-Channel}!\-P\-I\-D\-Get@{\-P\-I\-D\-Get}}
+\index{\-P\-I\-D\-Get@{\-P\-I\-D\-Get}!AnalogChannel@{\-Analog\-Channel}}
+\subsubsection[{\-P\-I\-D\-Get}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf \-Analog\-Channel\-::\-P\-I\-D\-Get} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{classAnalogChannel_ac6317cfcc26ddff2289f8efc242d99d3}
+\-Get the \-Average voltage for the \-P\-I\-D \-Source base object.
+
+\begin{DoxyReturn}{\-Returns}
+\-The average voltage. 
+\end{DoxyReturn}
+
+
+\-Implements \hyperlink{classPIDSource}{\-P\-I\-D\-Source}.
+
+\hypertarget{classAnalogChannel_aecf5da778576f4904e51ece5d327ea17}{\index{\-Analog\-Channel@{\-Analog\-Channel}!\-Reset\-Accumulator@{\-Reset\-Accumulator}}
+\index{\-Reset\-Accumulator@{\-Reset\-Accumulator}!AnalogChannel@{\-Analog\-Channel}}
+\subsubsection[{\-Reset\-Accumulator}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Analog\-Channel\-::\-Reset\-Accumulator} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classAnalogChannel_aecf5da778576f4904e51ece5d327ea17}
+\-Resets the accumulator to the initial value. \hypertarget{classAnalogChannel_a1e28d604275cfda65b8a5e1b5bd79134}{\index{\-Analog\-Channel@{\-Analog\-Channel}!\-Set\-Accumulator\-Center@{\-Set\-Accumulator\-Center}}
+\index{\-Set\-Accumulator\-Center@{\-Set\-Accumulator\-Center}!AnalogChannel@{\-Analog\-Channel}}
+\subsubsection[{\-Set\-Accumulator\-Center}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Analog\-Channel\-::\-Set\-Accumulator\-Center} (
+\begin{DoxyParamCaption}
+\item[{\-I\-N\-T32}]{center}
+\end{DoxyParamCaption}
+)}}\label{classAnalogChannel_a1e28d604275cfda65b8a5e1b5bd79134}
+\-Set the center value of the accumulator.
+
+\-The center value is subtracted from each \-A/\-D value before it is added to the accumulator. \-This is used for the center value of devices like gyros and accelerometers to make integration work and to take the device offset into account when integrating.
+
+\-This center value is based on the output of the oversampled and averaged source from channel 1. \-Because of this, any non-\/zero oversample bits will affect the size of the value for this field. \hypertarget{classAnalogChannel_ac404eb71545eb04daf9d09c465e0997a}{\index{\-Analog\-Channel@{\-Analog\-Channel}!\-Set\-Accumulator\-Deadband@{\-Set\-Accumulator\-Deadband}}
+\index{\-Set\-Accumulator\-Deadband@{\-Set\-Accumulator\-Deadband}!AnalogChannel@{\-Analog\-Channel}}
+\subsubsection[{\-Set\-Accumulator\-Deadband}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Analog\-Channel\-::\-Set\-Accumulator\-Deadband} (
+\begin{DoxyParamCaption}
+\item[{\-I\-N\-T32}]{deadband}
+\end{DoxyParamCaption}
+)}}\label{classAnalogChannel_ac404eb71545eb04daf9d09c465e0997a}
+\-Set the accumulator's deadband. \hypertarget{classAnalogChannel_aae43ed632a10270fd163d44eea2d8f8f}{\index{\-Analog\-Channel@{\-Analog\-Channel}!\-Set\-Accumulator\-Initial\-Value@{\-Set\-Accumulator\-Initial\-Value}}
+\index{\-Set\-Accumulator\-Initial\-Value@{\-Set\-Accumulator\-Initial\-Value}!AnalogChannel@{\-Analog\-Channel}}
+\subsubsection[{\-Set\-Accumulator\-Initial\-Value}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Analog\-Channel\-::\-Set\-Accumulator\-Initial\-Value} (
+\begin{DoxyParamCaption}
+\item[{\-I\-N\-T64}]{initial\-Value}
+\end{DoxyParamCaption}
+)}}\label{classAnalogChannel_aae43ed632a10270fd163d44eea2d8f8f}
+\-Set an inital value for the accumulator.
+
+\-This will be added to all values returned to the user. 
+\begin{DoxyParams}{\-Parameters}
+{\em initial\-Value} & \-The value that the accumulator should start from when reset. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classAnalogChannel_a64da26075ace6b51c635ed4b0646742b}{\index{\-Analog\-Channel@{\-Analog\-Channel}!\-Set\-Average\-Bits@{\-Set\-Average\-Bits}}
+\index{\-Set\-Average\-Bits@{\-Set\-Average\-Bits}!AnalogChannel@{\-Analog\-Channel}}
+\subsubsection[{\-Set\-Average\-Bits}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Analog\-Channel\-::\-Set\-Average\-Bits} (
+\begin{DoxyParamCaption}
+\item[{\-U\-I\-N\-T32}]{bits}
+\end{DoxyParamCaption}
+)}}\label{classAnalogChannel_a64da26075ace6b51c635ed4b0646742b}
+\-Set the number of averaging bits. \-This sets the number of averaging bits. \-The actual number of averaged samples is 2$\ast$$\ast$bits. \-Use averaging to improve the stability of your measurement at the expense of sampling rate. \-The averaging is done automatically in the \-F\-P\-G\-A.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em bits} & \-Number of bits of averaging. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classAnalogChannel_a69c5b8dd70a0a5792f2522b2b4758fc3}{\index{\-Analog\-Channel@{\-Analog\-Channel}!\-Set\-Oversample\-Bits@{\-Set\-Oversample\-Bits}}
+\index{\-Set\-Oversample\-Bits@{\-Set\-Oversample\-Bits}!AnalogChannel@{\-Analog\-Channel}}
+\subsubsection[{\-Set\-Oversample\-Bits}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Analog\-Channel\-::\-Set\-Oversample\-Bits} (
+\begin{DoxyParamCaption}
+\item[{\-U\-I\-N\-T32}]{bits}
+\end{DoxyParamCaption}
+)}}\label{classAnalogChannel_a69c5b8dd70a0a5792f2522b2b4758fc3}
+\-Set the number of oversample bits. \-This sets the number of oversample bits. \-The actual number of oversampled values is 2$\ast$$\ast$bits. \-Use oversampling to improve the resolution of your measurements at the expense of sampling rate. \-The oversampling is done automatically in the \-F\-P\-G\-A.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em bits} & \-Number of bits of oversampling. \\
+\hline
+\end{DoxyParams}
+
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+\-Analog\-Channel.\-h\item 
+\-Analog\-Channel.\-cpp\end{DoxyCompactItemize}

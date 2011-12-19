@@ -1,0 +1,304 @@
+\hypertarget{classDriverStation}{\section{\-Driver\-Station \-Class \-Reference}
+\label{classDriverStation}\index{\-Driver\-Station@{\-Driver\-Station}}
+}
+
+
+{\ttfamily \#include $<$\-Driver\-Station.\-h$>$}
+
+\-Inheritance diagram for \-Driver\-Station\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classDriverStation}
+\end{center}
+\end{figure}
+\subsection*{\-Public \-Types}
+\begin{DoxyCompactItemize}
+\item 
+enum {\bfseries \-Alliance} \{ {\bfseries k\-Red}, 
+{\bfseries k\-Blue}, 
+{\bfseries k\-Invalid}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+float \hyperlink{classDriverStation_ae5e5fbb7b3c287825caee2654971bed3}{\-Get\-Stick\-Axis} (\-U\-I\-N\-T32 stick, \-U\-I\-N\-T32 axis)
+\item 
+short \hyperlink{classDriverStation_a5a26a64a7f0a1016c24fef2af2514fbb}{\-Get\-Stick\-Buttons} (\-U\-I\-N\-T32 stick)
+\item 
+float \hyperlink{classDriverStation_abf159102b44e03b26e006a777b96c5e5}{\-Get\-Analog\-In} (\-U\-I\-N\-T32 channel)
+\item 
+bool \hyperlink{classDriverStation_ac41869035eacd80eb902534afdd944ed}{\-Get\-Digital\-In} (\-U\-I\-N\-T32 channel)
+\item 
+void \hyperlink{classDriverStation_aa6f189f102414ed3abc4a04aa310bcf3}{\-Set\-Digital\-Out} (\-U\-I\-N\-T32 channel, bool value)
+\item 
+bool \hyperlink{classDriverStation_a492ef73cb147833e1acdc90188e16f4d}{\-Get\-Digital\-Out} (\-U\-I\-N\-T32 channel)
+\item 
+\hypertarget{classDriverStation_a7e0490ebe441784f803e09325436ac10}{bool {\bfseries \-Is\-Enabled} ()}\label{classDriverStation_a7e0490ebe441784f803e09325436ac10}
+
+\item 
+\hypertarget{classDriverStation_afcccb82207e0342596133e81dc7a047f}{bool {\bfseries \-Is\-Disabled} ()}\label{classDriverStation_afcccb82207e0342596133e81dc7a047f}
+
+\item 
+\hypertarget{classDriverStation_ae7f9794664d49a36b65a3cd4a6e6987b}{bool {\bfseries \-Is\-Autonomous} ()}\label{classDriverStation_ae7f9794664d49a36b65a3cd4a6e6987b}
+
+\item 
+\hypertarget{classDriverStation_a092c3018d93ff244bea1b6570a48054b}{bool {\bfseries \-Is\-Operator\-Control} ()}\label{classDriverStation_a092c3018d93ff244bea1b6570a48054b}
+
+\item 
+bool \hyperlink{classDriverStation_a2315a30b237d80bff26b0d1f81d54648}{\-Is\-New\-Control\-Data} ()
+\item 
+bool \hyperlink{classDriverStation_a860ba31fcd623fb482c24b8b73700aed}{\-Is\-F\-M\-S\-Attached} ()
+\item 
+\-U\-I\-N\-T32 \hyperlink{classDriverStation_a103fd8e73107d268cda8a6ecbd324aaa}{\-Get\-Packet\-Number} ()
+\item 
+\hypertarget{classDriverStation_ab1d20060a7ca1d4d759b729883ce9855}{\-Alliance {\bfseries \-Get\-Alliance} ()}\label{classDriverStation_ab1d20060a7ca1d4d759b729883ce9855}
+
+\item 
+\hypertarget{classDriverStation_a3899bcaedd7a6befed43eb5c036690a1}{\-U\-I\-N\-T32 {\bfseries \-Get\-Location} ()}\label{classDriverStation_a3899bcaedd7a6befed43eb5c036690a1}
+
+\item 
+float \hyperlink{classDriverStation_a29be7401b5ccdcf7d86f0cf8030f85bf}{\-Get\-Battery\-Voltage} ()
+\item 
+\hypertarget{classDriverStation_af5411eeb41793a89b5b9987c00918eae}{\hyperlink{classDashboard}{\-Dashboard} \& {\bfseries \-Get\-High\-Priority\-Dashboard\-Packer} ()}\label{classDriverStation_af5411eeb41793a89b5b9987c00918eae}
+
+\item 
+\hypertarget{classDriverStation_ae08099bbd1803e082be3cc9c46155df8}{\hyperlink{classDashboard}{\-Dashboard} \& {\bfseries \-Get\-Low\-Priority\-Dashboard\-Packer} ()}\label{classDriverStation_ae08099bbd1803e082be3cc9c46155df8}
+
+\item 
+\hypertarget{classDriverStation_a26ade7bb28ae2e7b71005432ec0e81ca}{\hyperlink{classDashboardBase}{\-Dashboard\-Base} $\ast$ {\bfseries \-Get\-High\-Priority\-Dashboard\-Packer\-In\-Use} ()}\label{classDriverStation_a26ade7bb28ae2e7b71005432ec0e81ca}
+
+\item 
+\hypertarget{classDriverStation_a54d39abd25e5213952ea2ae3265bcb55}{\hyperlink{classDashboardBase}{\-Dashboard\-Base} $\ast$ {\bfseries \-Get\-Low\-Priority\-Dashboard\-Packer\-In\-Use} ()}\label{classDriverStation_a54d39abd25e5213952ea2ae3265bcb55}
+
+\item 
+\hypertarget{classDriverStation_a656cd215d890fdf28736e950ac664b42}{void {\bfseries \-Set\-High\-Priority\-Dashboard\-Packer\-To\-Use} (\hyperlink{classDashboardBase}{\-Dashboard\-Base} $\ast$db)}\label{classDriverStation_a656cd215d890fdf28736e950ac664b42}
+
+\item 
+\hypertarget{classDriverStation_a693f723f6be659c9385fad63c17d157d}{void {\bfseries \-Set\-Low\-Priority\-Dashboard\-Packer\-To\-Use} (\hyperlink{classDashboardBase}{\-Dashboard\-Base} $\ast$db)}\label{classDriverStation_a693f723f6be659c9385fad63c17d157d}
+
+\item 
+\hypertarget{classDriverStation_a94c7b5fce697280e73b30dce57bbb917}{\hyperlink{classDriverStationEnhancedIO}{\-Driver\-Station\-Enhanced\-I\-O} \& {\bfseries \-Get\-Enhanced\-I\-O} ()}\label{classDriverStation_a94c7b5fce697280e73b30dce57bbb917}
+
+\item 
+\hypertarget{classDriverStation_a6984ff4cb46d315679ace551cb88c875}{void {\bfseries \-Increment\-Update\-Number} ()}\label{classDriverStation_a6984ff4cb46d315679ace551cb88c875}
+
+\item 
+\hypertarget{classDriverStation_a95bff259901c96256fa2f9daae5c404a}{\-S\-E\-M\-\_\-\-I\-D {\bfseries \-Get\-User\-Status\-Data\-Sem} ()}\label{classDriverStation_a95bff259901c96256fa2f9daae5c404a}
+
+\end{DoxyCompactItemize}
+\subsection*{\-Static \-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{classDriverStation}{\-Driver\-Station} $\ast$ \hyperlink{classDriverStation_ab0995c2d3f0b40cb13ac5aff656e46d0}{\-Get\-Instance} ()
+\end{DoxyCompactItemize}
+\subsection*{\-Static \-Public \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classDriverStation_aa9180c5fbe44a7da026e77ca1cf2a89b}{static const \-U\-I\-N\-T32 {\bfseries k\-Battery\-Slot} = 1}\label{classDriverStation_aa9180c5fbe44a7da026e77ca1cf2a89b}
+
+\item 
+\hypertarget{classDriverStation_a9af68ea44c22fff029ef61bd7fefba38}{static const \-U\-I\-N\-T32 {\bfseries k\-Battery\-Channel} = 8}\label{classDriverStation_a9af68ea44c22fff029ef61bd7fefba38}
+
+\item 
+\hypertarget{classDriverStation_a02a022d3efcbcd3d7e11b9ec7341f742}{static const \-U\-I\-N\-T32 {\bfseries k\-Joystick\-Ports} = 4}\label{classDriverStation_a02a022d3efcbcd3d7e11b9ec7341f742}
+
+\item 
+\hypertarget{classDriverStation_a41b68f0f2844dbaf02e90e59139062ab}{static const \-U\-I\-N\-T32 {\bfseries k\-Joystick\-Axes} = 6}\label{classDriverStation_a41b68f0f2844dbaf02e90e59139062ab}
+
+\end{DoxyCompactItemize}
+\subsection*{\-Protected \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classDriverStation_a343945cc9bbf870e0ada94b47f3fec92}{\-Driver\-Station} ()
+\item 
+void \hyperlink{classDriverStation_a0e394acf2476d1bbfc831c9e5fbd9b41}{\-Get\-Data} ()
+\item 
+void \hyperlink{classDriverStation_a01eb31617213308c3688a5e863c53449}{\-Set\-Data} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-Provide access to the network communication data to / from the \-Driver \-Station. 
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{classDriverStation_a343945cc9bbf870e0ada94b47f3fec92}{\index{\-Driver\-Station@{\-Driver\-Station}!\-Driver\-Station@{\-Driver\-Station}}
+\index{\-Driver\-Station@{\-Driver\-Station}!DriverStation@{\-Driver\-Station}}
+\subsubsection[{\-Driver\-Station}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Driver\-Station\-::\-Driver\-Station} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{classDriverStation_a343945cc9bbf870e0ada94b47f3fec92}
+\hyperlink{classDriverStation}{\-Driver\-Station} contructor.
+
+\-This is only called once the first time \hyperlink{classDriverStation_ab0995c2d3f0b40cb13ac5aff656e46d0}{\-Get\-Instance()} is called 
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classDriverStation_abf159102b44e03b26e006a777b96c5e5}{\index{\-Driver\-Station@{\-Driver\-Station}!\-Get\-Analog\-In@{\-Get\-Analog\-In}}
+\index{\-Get\-Analog\-In@{\-Get\-Analog\-In}!DriverStation@{\-Driver\-Station}}
+\subsubsection[{\-Get\-Analog\-In}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf \-Driver\-Station\-::\-Get\-Analog\-In} (
+\begin{DoxyParamCaption}
+\item[{\-U\-I\-N\-T32}]{channel}
+\end{DoxyParamCaption}
+)}}\label{classDriverStation_abf159102b44e03b26e006a777b96c5e5}
+\-Get an analog voltage from the \-Driver \-Station. \-The analog values are returned as voltage values for the \-Driver \-Station analog inputs. \-These inputs are typically used for advanced operator interfaces consisting of potentiometers or resistor networks representing values on a rotary switch.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em channel} & \-The analog input channel on the driver station to read from. \-Valid range is 1 -\/ 4. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-The analog voltage on the input. 
+\end{DoxyReturn}
+\hypertarget{classDriverStation_a29be7401b5ccdcf7d86f0cf8030f85bf}{\index{\-Driver\-Station@{\-Driver\-Station}!\-Get\-Battery\-Voltage@{\-Get\-Battery\-Voltage}}
+\index{\-Get\-Battery\-Voltage@{\-Get\-Battery\-Voltage}!DriverStation@{\-Driver\-Station}}
+\subsubsection[{\-Get\-Battery\-Voltage}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf \-Driver\-Station\-::\-Get\-Battery\-Voltage} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classDriverStation_a29be7401b5ccdcf7d86f0cf8030f85bf}
+\-Read the battery voltage from the specified \hyperlink{classAnalogChannel}{\-Analog\-Channel}.
+
+\-This accessor assumes that the battery voltage is being measured through the voltage divider on an analog breakout.
+
+\begin{DoxyReturn}{\-Returns}
+\-The battery voltage. 
+\end{DoxyReturn}
+\hypertarget{classDriverStation_a0e394acf2476d1bbfc831c9e5fbd9b41}{\index{\-Driver\-Station@{\-Driver\-Station}!\-Get\-Data@{\-Get\-Data}}
+\index{\-Get\-Data@{\-Get\-Data}!DriverStation@{\-Driver\-Station}}
+\subsubsection[{\-Get\-Data}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Driver\-Station\-::\-Get\-Data} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{classDriverStation_a0e394acf2476d1bbfc831c9e5fbd9b41}
+\-Copy data from the \-D\-S task for the user. \-If no new data exists, it will just be returned, otherwise the data will be copied from the \-D\-S polling loop. \hypertarget{classDriverStation_ac41869035eacd80eb902534afdd944ed}{\index{\-Driver\-Station@{\-Driver\-Station}!\-Get\-Digital\-In@{\-Get\-Digital\-In}}
+\index{\-Get\-Digital\-In@{\-Get\-Digital\-In}!DriverStation@{\-Driver\-Station}}
+\subsubsection[{\-Get\-Digital\-In}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Driver\-Station\-::\-Get\-Digital\-In} (
+\begin{DoxyParamCaption}
+\item[{\-U\-I\-N\-T32}]{channel}
+\end{DoxyParamCaption}
+)}}\label{classDriverStation_ac41869035eacd80eb902534afdd944ed}
+\-Get values from the digital inputs on the \-Driver \-Station. \-Return digital values from the \-Drivers \-Station. \-These values are typically used for buttons and switches on advanced operator interfaces. 
+\begin{DoxyParams}{\-Parameters}
+{\em channel} & \-The digital input to get. \-Valid range is 1 -\/ 8. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classDriverStation_a492ef73cb147833e1acdc90188e16f4d}{\index{\-Driver\-Station@{\-Driver\-Station}!\-Get\-Digital\-Out@{\-Get\-Digital\-Out}}
+\index{\-Get\-Digital\-Out@{\-Get\-Digital\-Out}!DriverStation@{\-Driver\-Station}}
+\subsubsection[{\-Get\-Digital\-Out}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Driver\-Station\-::\-Get\-Digital\-Out} (
+\begin{DoxyParamCaption}
+\item[{\-U\-I\-N\-T32}]{channel}
+\end{DoxyParamCaption}
+)}}\label{classDriverStation_a492ef73cb147833e1acdc90188e16f4d}
+\-Get a value that was set for the digital outputs on the \-Driver \-Station. 
+\begin{DoxyParams}{\-Parameters}
+{\em channel} & \-The digital ouput to monitor. \-Valid range is 1 through 8. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-A digital value being output on the \-Drivers \-Station. 
+\end{DoxyReturn}
+\hypertarget{classDriverStation_ab0995c2d3f0b40cb13ac5aff656e46d0}{\index{\-Driver\-Station@{\-Driver\-Station}!\-Get\-Instance@{\-Get\-Instance}}
+\index{\-Get\-Instance@{\-Get\-Instance}!DriverStation@{\-Driver\-Station}}
+\subsubsection[{\-Get\-Instance}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Driver\-Station} $\ast$ {\bf \-Driver\-Station\-::\-Get\-Instance} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{classDriverStation_ab0995c2d3f0b40cb13ac5aff656e46d0}
+\-Return a pointer to the singleton \hyperlink{classDriverStation}{\-Driver\-Station}. \hypertarget{classDriverStation_a103fd8e73107d268cda8a6ecbd324aaa}{\index{\-Driver\-Station@{\-Driver\-Station}!\-Get\-Packet\-Number@{\-Get\-Packet\-Number}}
+\index{\-Get\-Packet\-Number@{\-Get\-Packet\-Number}!DriverStation@{\-Driver\-Station}}
+\subsubsection[{\-Get\-Packet\-Number}]{\setlength{\rightskip}{0pt plus 5cm}\-U\-I\-N\-T32 {\bf \-Driver\-Station\-::\-Get\-Packet\-Number} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classDriverStation_a103fd8e73107d268cda8a6ecbd324aaa}
+\-Return the \-D\-S packet number. \-The packet number is the index of this set of data returned by the driver station. \-Each time new data is received, the packet number (included with the sent data) is returned. \hypertarget{classDriverStation_ae5e5fbb7b3c287825caee2654971bed3}{\index{\-Driver\-Station@{\-Driver\-Station}!\-Get\-Stick\-Axis@{\-Get\-Stick\-Axis}}
+\index{\-Get\-Stick\-Axis@{\-Get\-Stick\-Axis}!DriverStation@{\-Driver\-Station}}
+\subsubsection[{\-Get\-Stick\-Axis}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf \-Driver\-Station\-::\-Get\-Stick\-Axis} (
+\begin{DoxyParamCaption}
+\item[{\-U\-I\-N\-T32}]{stick, }
+\item[{\-U\-I\-N\-T32}]{axis}
+\end{DoxyParamCaption}
+)}}\label{classDriverStation_ae5e5fbb7b3c287825caee2654971bed3}
+\-Get the value of the axis on a joystick. \-This depends on the mapping of the joystick connected to the specified port.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em stick} & \-The joystick to read. \\
+\hline
+{\em axis} & \-The analog axis value to read from the joystick. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-The value of the axis on the joystick. 
+\end{DoxyReturn}
+\hypertarget{classDriverStation_a5a26a64a7f0a1016c24fef2af2514fbb}{\index{\-Driver\-Station@{\-Driver\-Station}!\-Get\-Stick\-Buttons@{\-Get\-Stick\-Buttons}}
+\index{\-Get\-Stick\-Buttons@{\-Get\-Stick\-Buttons}!DriverStation@{\-Driver\-Station}}
+\subsubsection[{\-Get\-Stick\-Buttons}]{\setlength{\rightskip}{0pt plus 5cm}short {\bf \-Driver\-Station\-::\-Get\-Stick\-Buttons} (
+\begin{DoxyParamCaption}
+\item[{\-U\-I\-N\-T32}]{stick}
+\end{DoxyParamCaption}
+)}}\label{classDriverStation_a5a26a64a7f0a1016c24fef2af2514fbb}
+\-The state of the buttons on the joystick. 12 buttons (4 msb are unused) from the joystick.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em stick} & \-The joystick to read. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-The state of the buttons on the joystick. 
+\end{DoxyReturn}
+\hypertarget{classDriverStation_a860ba31fcd623fb482c24b8b73700aed}{\index{\-Driver\-Station@{\-Driver\-Station}!\-Is\-F\-M\-S\-Attached@{\-Is\-F\-M\-S\-Attached}}
+\index{\-Is\-F\-M\-S\-Attached@{\-Is\-F\-M\-S\-Attached}!DriverStation@{\-Driver\-Station}}
+\subsubsection[{\-Is\-F\-M\-S\-Attached}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Driver\-Station\-::\-Is\-F\-M\-S\-Attached} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classDriverStation_a860ba31fcd623fb482c24b8b73700aed}
+\-Is the driver station attached to a \-Field \-Management \-System? \-Note\-: \-This does not work with the \-Blue \-D\-S. \begin{DoxyReturn}{\-Returns}
+\-True if the robot is competing on a field being controlled by a \-Field \-Management \-System 
+\end{DoxyReturn}
+\hypertarget{classDriverStation_a2315a30b237d80bff26b0d1f81d54648}{\index{\-Driver\-Station@{\-Driver\-Station}!\-Is\-New\-Control\-Data@{\-Is\-New\-Control\-Data}}
+\index{\-Is\-New\-Control\-Data@{\-Is\-New\-Control\-Data}!DriverStation@{\-Driver\-Station}}
+\subsubsection[{\-Is\-New\-Control\-Data}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Driver\-Station\-::\-Is\-New\-Control\-Data} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classDriverStation_a2315a30b237d80bff26b0d1f81d54648}
+\-Has a new control packet from the driver station arrived since the last time this function was called? \begin{DoxyReturn}{\-Returns}
+\-True if the control data has been updated since the last call. 
+\end{DoxyReturn}
+\hypertarget{classDriverStation_a01eb31617213308c3688a5e863c53449}{\index{\-Driver\-Station@{\-Driver\-Station}!\-Set\-Data@{\-Set\-Data}}
+\index{\-Set\-Data@{\-Set\-Data}!DriverStation@{\-Driver\-Station}}
+\subsubsection[{\-Set\-Data}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Driver\-Station\-::\-Set\-Data} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{classDriverStation_a01eb31617213308c3688a5e863c53449}
+\-Copy status data from the \-D\-S task for the user. \hypertarget{classDriverStation_aa6f189f102414ed3abc4a04aa310bcf3}{\index{\-Driver\-Station@{\-Driver\-Station}!\-Set\-Digital\-Out@{\-Set\-Digital\-Out}}
+\index{\-Set\-Digital\-Out@{\-Set\-Digital\-Out}!DriverStation@{\-Driver\-Station}}
+\subsubsection[{\-Set\-Digital\-Out}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Driver\-Station\-::\-Set\-Digital\-Out} (
+\begin{DoxyParamCaption}
+\item[{\-U\-I\-N\-T32}]{channel, }
+\item[{bool}]{value}
+\end{DoxyParamCaption}
+)}}\label{classDriverStation_aa6f189f102414ed3abc4a04aa310bcf3}
+\-Set a value for the digital outputs on the \-Driver \-Station.
+
+\-Control digital outputs on the \-Drivers \-Station. \-These values are typically used for giving feedback on a custom operator station such as \-L\-E\-Ds.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em channel} & \-The digital output to set. \-Valid range is 1 -\/ 8. \\
+\hline
+{\em value} & \-The state to set the digital output. \\
+\hline
+\end{DoxyParams}
+
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+\-Driver\-Station.\-h\item 
+\-Driver\-Station.\-cpp\end{DoxyCompactItemize}

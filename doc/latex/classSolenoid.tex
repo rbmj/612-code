@@ -1,0 +1,107 @@
+\hypertarget{classSolenoid}{\section{\-Solenoid \-Class \-Reference}
+\label{classSolenoid}\index{\-Solenoid@{\-Solenoid}}
+}
+
+
+{\ttfamily \#include $<$\-Solenoid.\-h$>$}
+
+\-Inheritance diagram for \-Solenoid\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{classSolenoid}
+\end{center}
+\end{figure}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classSolenoid_a84efe24ac994ba56781e3c6f1b1b8c56}{\-Solenoid} (\-U\-I\-N\-T32 channel)
+\item 
+\hyperlink{classSolenoid_aa155888eec5f296d849847d804612f59}{\-Solenoid} (\-U\-I\-N\-T32 slot, \-U\-I\-N\-T32 channel)
+\item 
+virtual \hyperlink{classSolenoid_a34907a41f61848e199967e0319154d13}{$\sim$\-Solenoid} ()
+\item 
+virtual void \hyperlink{classSolenoid_a913e4530ea804c7c0e3baf2458b4dee3}{\-Set} (bool on)
+\item 
+virtual bool \hyperlink{classSolenoid_ab9eda95dc5f78d2f808a053d33e40814}{\-Get} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\hyperlink{classSolenoid}{\-Solenoid} class for running high voltage \-Digital \-Output (9472 module).
+
+\-The \hyperlink{classSolenoid}{\-Solenoid} class is typically used for pneumatics solenoids, but could be used for any device within the current spec of the 9472 module. 
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{classSolenoid_a84efe24ac994ba56781e3c6f1b1b8c56}{\index{\-Solenoid@{\-Solenoid}!\-Solenoid@{\-Solenoid}}
+\index{\-Solenoid@{\-Solenoid}!Solenoid@{\-Solenoid}}
+\subsubsection[{\-Solenoid}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Solenoid\-::\-Solenoid} (
+\begin{DoxyParamCaption}
+\item[{\-U\-I\-N\-T32}]{channel}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}explicit\mbox{]}}}}\label{classSolenoid_a84efe24ac994ba56781e3c6f1b1b8c56}
+\-Constructor.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em channel} & \-The channel on the module to control. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classSolenoid_aa155888eec5f296d849847d804612f59}{\index{\-Solenoid@{\-Solenoid}!\-Solenoid@{\-Solenoid}}
+\index{\-Solenoid@{\-Solenoid}!Solenoid@{\-Solenoid}}
+\subsubsection[{\-Solenoid}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Solenoid\-::\-Solenoid} (
+\begin{DoxyParamCaption}
+\item[{\-U\-I\-N\-T32}]{slot, }
+\item[{\-U\-I\-N\-T32}]{channel}
+\end{DoxyParamCaption}
+)}}\label{classSolenoid_aa155888eec5f296d849847d804612f59}
+\-Constructor.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em slot} & \-The slot that the 9472 module is plugged into. \\
+\hline
+{\em channel} & \-The channel on the module to control. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classSolenoid_a34907a41f61848e199967e0319154d13}{\index{\-Solenoid@{\-Solenoid}!$\sim$\-Solenoid@{$\sim$\-Solenoid}}
+\index{$\sim$\-Solenoid@{$\sim$\-Solenoid}!Solenoid@{\-Solenoid}}
+\subsubsection[{$\sim$\-Solenoid}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Solenoid\-::$\sim$\-Solenoid} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{classSolenoid_a34907a41f61848e199967e0319154d13}
+\-Destructor. 
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classSolenoid_ab9eda95dc5f78d2f808a053d33e40814}{\index{\-Solenoid@{\-Solenoid}!\-Get@{\-Get}}
+\index{\-Get@{\-Get}!Solenoid@{\-Solenoid}}
+\subsubsection[{\-Get}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Solenoid\-::\-Get} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{classSolenoid_ab9eda95dc5f78d2f808a053d33e40814}
+\-Read the current value of the solenoid.
+
+\begin{DoxyReturn}{\-Returns}
+\-The current value of the solenoid. 
+\end{DoxyReturn}
+\hypertarget{classSolenoid_a913e4530ea804c7c0e3baf2458b4dee3}{\index{\-Solenoid@{\-Solenoid}!\-Set@{\-Set}}
+\index{\-Set@{\-Set}!Solenoid@{\-Solenoid}}
+\subsubsection[{\-Set}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Solenoid\-::\-Set} (
+\begin{DoxyParamCaption}
+\item[{bool}]{on}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{classSolenoid_a913e4530ea804c7c0e3baf2458b4dee3}
+\-Set the value of a solenoid.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em on} & \-Turn the solenoid output off or on. \\
+\hline
+\end{DoxyParams}
+
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+\-Solenoid.\-h\item 
+\-Solenoid.\-cpp\end{DoxyCompactItemize}

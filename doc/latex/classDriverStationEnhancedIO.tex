@@ -1,0 +1,588 @@
+\hypertarget{classDriverStationEnhancedIO}{\section{\-Driver\-Station\-Enhanced\-I\-O \-Class \-Reference}
+\label{classDriverStationEnhancedIO}\index{\-Driver\-Station\-Enhanced\-I\-O@{\-Driver\-Station\-Enhanced\-I\-O}}
+}
+
+
+{\ttfamily \#include $<$\-Driver\-Station\-Enhanced\-I\-O.\-h$>$}
+
+\-Inheritance diagram for \-Driver\-Station\-Enhanced\-I\-O\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classDriverStationEnhancedIO}
+\end{center}
+\end{figure}
+\subsection*{\-Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct {\bfseries control\-\_\-block\-\_\-t}
+\item 
+struct {\bfseries input\-\_\-t}
+\item 
+struct {\bfseries output\-\_\-t}
+\item 
+struct {\bfseries status\-\_\-block\-\_\-t}
+\end{DoxyCompactItemize}
+\subsection*{\-Public \-Types}
+\begin{DoxyCompactItemize}
+\item 
+enum {\bfseries t\-Digital\-Config} \{ \*
+{\bfseries k\-Unknown}, 
+{\bfseries k\-Input\-Floating}, 
+{\bfseries k\-Input\-Pull\-Up}, 
+{\bfseries k\-Input\-Pull\-Down}, 
+\*
+{\bfseries k\-Output}, 
+{\bfseries k\-P\-W\-M}, 
+{\bfseries k\-Analog\-Comparator}
+ \}
+\item 
+enum {\bfseries t\-Accel\-Channel} \{ {\bfseries k\-Accel\-X} =  0, 
+{\bfseries k\-Accel\-Y} =  1, 
+{\bfseries k\-Accel\-Z} =  2
+ \}
+\item 
+enum {\bfseries t\-P\-W\-M\-Period\-Channels} \{ {\bfseries k\-P\-W\-M\-Channels1and2}, 
+{\bfseries k\-P\-W\-M\-Channels3and4}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+double \hyperlink{classDriverStationEnhancedIO_a594f2ddea855e046abcf50406542a4ca}{\-Get\-Acceleration} (t\-Accel\-Channel channel)
+\item 
+double \hyperlink{classDriverStationEnhancedIO_a8a4d31fb1c8845f33de2da37c559f016}{\-Get\-Analog\-In} (\-U\-I\-N\-T32 channel)
+\item 
+double \hyperlink{classDriverStationEnhancedIO_a37c9af7405e84233c47a708be5a3c53a}{\-Get\-Analog\-In\-Ratio} (\-U\-I\-N\-T32 channel)
+\item 
+double \hyperlink{classDriverStationEnhancedIO_a7cefa1bbdd5c1b7520e0268a17bd75db}{\-Get\-Analog\-Out} (\-U\-I\-N\-T32 channel)
+\item 
+void \hyperlink{classDriverStationEnhancedIO_ab6888ed427c283821a7b6e7e728486bc}{\-Set\-Analog\-Out} (\-U\-I\-N\-T32 channel, double value)
+\item 
+bool \hyperlink{classDriverStationEnhancedIO_a8fe07c23d485a9dac1b9821583c539b6}{\-Get\-Button} (\-U\-I\-N\-T32 channel)
+\item 
+\-U\-I\-N\-T8 \hyperlink{classDriverStationEnhancedIO_a04ed7d81517bc526ef6897a006bd3782}{\-Get\-Buttons} ()
+\item 
+void \hyperlink{classDriverStationEnhancedIO_a34d6429692d4a27bc384533319e4127b}{\-Set\-L\-E\-D} (\-U\-I\-N\-T32 channel, bool value)
+\item 
+void \hyperlink{classDriverStationEnhancedIO_a476ebdc37d1dd1fa58ab0a0ec09c1c17}{\-Set\-L\-E\-Ds} (\-U\-I\-N\-T8 value)
+\item 
+bool \hyperlink{classDriverStationEnhancedIO_ae7cf63b5f341ddb29b9e3ef988374747}{\-Get\-Digital} (\-U\-I\-N\-T32 channel)
+\item 
+\-U\-I\-N\-T16 \hyperlink{classDriverStationEnhancedIO_a052a9491d9661576d66896a4658e1509}{\-Get\-Digitals} ()
+\item 
+void \hyperlink{classDriverStationEnhancedIO_a1b17805cb755900f4bc9f34f1444d822}{\-Set\-Digital\-Output} (\-U\-I\-N\-T32 channel, bool value)
+\item 
+t\-Digital\-Config \hyperlink{classDriverStationEnhancedIO_a8f5de58215d255e84e48723fda4e4c5e}{\-Get\-Digital\-Config} (\-U\-I\-N\-T32 channel)
+\item 
+void \hyperlink{classDriverStationEnhancedIO_afad555dfa62bf621e92edda0b36613d0}{\-Set\-Digital\-Config} (\-U\-I\-N\-T32 channel, t\-Digital\-Config config)
+\item 
+double \hyperlink{classDriverStationEnhancedIO_a4cd8909d9a276724787ea5ec0f954c66}{\-Get\-P\-W\-M\-Period} (t\-P\-W\-M\-Period\-Channels channels)
+\item 
+void \hyperlink{classDriverStationEnhancedIO_a6f1c7196f6cbcce00a928d7380b9d46f}{\-Set\-P\-W\-M\-Period} (t\-P\-W\-M\-Period\-Channels channels, double period)
+\item 
+bool \hyperlink{classDriverStationEnhancedIO_aee619374b9c5f1135682bda584ec146c}{\-Get\-Fixed\-Digital\-Output} (\-U\-I\-N\-T32 channel)
+\item 
+void \hyperlink{classDriverStationEnhancedIO_a97ef0ba03c428cb102d7a8687e482f17}{\-Set\-Fixed\-Digital\-Output} (\-U\-I\-N\-T32 channel, bool value)
+\item 
+\-I\-N\-T16 \hyperlink{classDriverStationEnhancedIO_a32f6f8d6b4f5969ea4f85373d5e0f1b7}{\-Get\-Encoder} (\-U\-I\-N\-T32 encoder\-Number)
+\item 
+void \hyperlink{classDriverStationEnhancedIO_a22ca90b78c4412be888953c77f6280e6}{\-Reset\-Encoder} (\-U\-I\-N\-T32 encoder\-Number)
+\item 
+bool \hyperlink{classDriverStationEnhancedIO_a6e88a899d3cdb6e4750d37204e269f9c}{\-Get\-Encoder\-Index\-Enable} (\-U\-I\-N\-T32 encoder\-Number)
+\item 
+void \hyperlink{classDriverStationEnhancedIO_a01d34032c4d8c282359c62c3b44f8a85}{\-Set\-Encoder\-Index\-Enable} (\-U\-I\-N\-T32 encoder\-Number, bool enable)
+\item 
+double \hyperlink{classDriverStationEnhancedIO_a873a93d533fc36508b0315796319fd90}{\-Get\-Touch\-Slider} ()
+\item 
+double \hyperlink{classDriverStationEnhancedIO_ae98d30680867528616fee53ff90b6921}{\-Get\-P\-W\-M\-Output} (\-U\-I\-N\-T32 channel)
+\item 
+void \hyperlink{classDriverStationEnhancedIO_aa343765022e453e9be07719b3e247eb5}{\-Set\-P\-W\-M\-Output} (\-U\-I\-N\-T32 channel, double value)
+\item 
+\-U\-I\-N\-T8 \hyperlink{classDriverStationEnhancedIO_af47e837e7e54536ea38e141a38192c9f}{\-Get\-Firmware\-Version} ()
+\end{DoxyCompactItemize}
+\subsection*{\-Friends}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classDriverStationEnhancedIO_a8a49b196fd9fe998c84a7bee5ebe1883}{class {\bfseries \-Driver\-Station}}\label{classDriverStationEnhancedIO_a8a49b196fd9fe998c84a7bee5ebe1883}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-Interact with the more complete \-I/\-O available from the newest driver station. \-Get a reference to an object of this type by calling \-Get\-Enhanced\-I\-O() on the \hyperlink{classDriverStation}{\-Driver\-Station} object. 
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classDriverStationEnhancedIO_a594f2ddea855e046abcf50406542a4ca}{\index{\-Driver\-Station\-Enhanced\-I\-O@{\-Driver\-Station\-Enhanced\-I\-O}!\-Get\-Acceleration@{\-Get\-Acceleration}}
+\index{\-Get\-Acceleration@{\-Get\-Acceleration}!DriverStationEnhancedIO@{\-Driver\-Station\-Enhanced\-I\-O}}
+\subsubsection[{\-Get\-Acceleration}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf \-Driver\-Station\-Enhanced\-I\-O\-::\-Get\-Acceleration} (
+\begin{DoxyParamCaption}
+\item[{t\-Accel\-Channel}]{channel}
+\end{DoxyParamCaption}
+)}}\label{classDriverStationEnhancedIO_a594f2ddea855e046abcf50406542a4ca}
+\-Query an accelerometer channel on the \-D\-S \-I\-O.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em channel} & \-The channel number to read. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-The current acceleration on the channel in \-Gs. 
+\end{DoxyReturn}
+\hypertarget{classDriverStationEnhancedIO_a8a4d31fb1c8845f33de2da37c559f016}{\index{\-Driver\-Station\-Enhanced\-I\-O@{\-Driver\-Station\-Enhanced\-I\-O}!\-Get\-Analog\-In@{\-Get\-Analog\-In}}
+\index{\-Get\-Analog\-In@{\-Get\-Analog\-In}!DriverStationEnhancedIO@{\-Driver\-Station\-Enhanced\-I\-O}}
+\subsubsection[{\-Get\-Analog\-In}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf \-Driver\-Station\-Enhanced\-I\-O\-::\-Get\-Analog\-In} (
+\begin{DoxyParamCaption}
+\item[{\-U\-I\-N\-T32}]{channel}
+\end{DoxyParamCaption}
+)}}\label{classDriverStationEnhancedIO_a8a4d31fb1c8845f33de2da37c559f016}
+\-Query an analog input channel on the \-D\-S \-I\-O.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em channel} & \-The channel number to read. \mbox{[}1,8\mbox{]} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-The analog input voltage for the channel. 
+\end{DoxyReturn}
+\hypertarget{classDriverStationEnhancedIO_a37c9af7405e84233c47a708be5a3c53a}{\index{\-Driver\-Station\-Enhanced\-I\-O@{\-Driver\-Station\-Enhanced\-I\-O}!\-Get\-Analog\-In\-Ratio@{\-Get\-Analog\-In\-Ratio}}
+\index{\-Get\-Analog\-In\-Ratio@{\-Get\-Analog\-In\-Ratio}!DriverStationEnhancedIO@{\-Driver\-Station\-Enhanced\-I\-O}}
+\subsubsection[{\-Get\-Analog\-In\-Ratio}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf \-Driver\-Station\-Enhanced\-I\-O\-::\-Get\-Analog\-In\-Ratio} (
+\begin{DoxyParamCaption}
+\item[{\-U\-I\-N\-T32}]{channel}
+\end{DoxyParamCaption}
+)}}\label{classDriverStationEnhancedIO_a37c9af7405e84233c47a708be5a3c53a}
+\-Query an analog input channel on the \-D\-S \-I\-O in ratiometric form.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em channel} & \-The channel number to read. \mbox{[}1,8\mbox{]} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-The analog input percentage for the channel. 
+\end{DoxyReturn}
+\hypertarget{classDriverStationEnhancedIO_a7cefa1bbdd5c1b7520e0268a17bd75db}{\index{\-Driver\-Station\-Enhanced\-I\-O@{\-Driver\-Station\-Enhanced\-I\-O}!\-Get\-Analog\-Out@{\-Get\-Analog\-Out}}
+\index{\-Get\-Analog\-Out@{\-Get\-Analog\-Out}!DriverStationEnhancedIO@{\-Driver\-Station\-Enhanced\-I\-O}}
+\subsubsection[{\-Get\-Analog\-Out}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf \-Driver\-Station\-Enhanced\-I\-O\-::\-Get\-Analog\-Out} (
+\begin{DoxyParamCaption}
+\item[{\-U\-I\-N\-T32}]{channel}
+\end{DoxyParamCaption}
+)}}\label{classDriverStationEnhancedIO_a7cefa1bbdd5c1b7520e0268a17bd75db}
+\-Query the voltage currently being output.
+
+\-A\-O1 is pin 11 on the top connector (\-P2). \-A\-O2 is pin 12 on the top connector (\-P2).
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em channel} & \-The analog output channel on the \-D\-S \-I\-O. \mbox{[}1,2\mbox{]} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-The voltage being output on the channel. 
+\end{DoxyReturn}
+\hypertarget{classDriverStationEnhancedIO_a8fe07c23d485a9dac1b9821583c539b6}{\index{\-Driver\-Station\-Enhanced\-I\-O@{\-Driver\-Station\-Enhanced\-I\-O}!\-Get\-Button@{\-Get\-Button}}
+\index{\-Get\-Button@{\-Get\-Button}!DriverStationEnhancedIO@{\-Driver\-Station\-Enhanced\-I\-O}}
+\subsubsection[{\-Get\-Button}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Driver\-Station\-Enhanced\-I\-O\-::\-Get\-Button} (
+\begin{DoxyParamCaption}
+\item[{\-U\-I\-N\-T32}]{channel}
+\end{DoxyParamCaption}
+)}}\label{classDriverStationEnhancedIO_a8fe07c23d485a9dac1b9821583c539b6}
+\-Get the state of a button on the \-I\-O board.
+
+\-Button1 is the physical button \char`\"{}\-S1\char`\"{}. \-Button2 is pin 4 on the top connector (\-P2). \-Button3 is pin 6 on the top connector (\-P2). \-Button4 is pin 8 on the top connector (\-P2). \-Button5 is pin 10 on the top connector (\-P2). \-Button6 is pin 7 on the top connector (\-P2).
+
+\-Button2 through \-Button6 are \-Capacitive \-Sense buttons.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em channel} & \-The button channel to read. \mbox{[}1,6\mbox{]} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-The state of the selected button. 
+\end{DoxyReturn}
+\hypertarget{classDriverStationEnhancedIO_a04ed7d81517bc526ef6897a006bd3782}{\index{\-Driver\-Station\-Enhanced\-I\-O@{\-Driver\-Station\-Enhanced\-I\-O}!\-Get\-Buttons@{\-Get\-Buttons}}
+\index{\-Get\-Buttons@{\-Get\-Buttons}!DriverStationEnhancedIO@{\-Driver\-Station\-Enhanced\-I\-O}}
+\subsubsection[{\-Get\-Buttons}]{\setlength{\rightskip}{0pt plus 5cm}\-U\-I\-N\-T8 {\bf \-Driver\-Station\-Enhanced\-I\-O\-::\-Get\-Buttons} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classDriverStationEnhancedIO_a04ed7d81517bc526ef6897a006bd3782}
+\-Get the state of all the button channels.
+
+\begin{DoxyReturn}{\-Returns}
+\-The state of the 6 button channels in the 6 lsb of the returned byte. 
+\end{DoxyReturn}
+\hypertarget{classDriverStationEnhancedIO_ae7cf63b5f341ddb29b9e3ef988374747}{\index{\-Driver\-Station\-Enhanced\-I\-O@{\-Driver\-Station\-Enhanced\-I\-O}!\-Get\-Digital@{\-Get\-Digital}}
+\index{\-Get\-Digital@{\-Get\-Digital}!DriverStationEnhancedIO@{\-Driver\-Station\-Enhanced\-I\-O}}
+\subsubsection[{\-Get\-Digital}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Driver\-Station\-Enhanced\-I\-O\-::\-Get\-Digital} (
+\begin{DoxyParamCaption}
+\item[{\-U\-I\-N\-T32}]{channel}
+\end{DoxyParamCaption}
+)}}\label{classDriverStationEnhancedIO_ae7cf63b5f341ddb29b9e3ef988374747}
+\-Get the current state of a \-D\-I\-O channel regardless of mode.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em channel} & \-The \-D\-I\-O channel to read. \mbox{[}1,16\mbox{]} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-The state of the selected digital line. 
+\end{DoxyReturn}
+\hypertarget{classDriverStationEnhancedIO_a8f5de58215d255e84e48723fda4e4c5e}{\index{\-Driver\-Station\-Enhanced\-I\-O@{\-Driver\-Station\-Enhanced\-I\-O}!\-Get\-Digital\-Config@{\-Get\-Digital\-Config}}
+\index{\-Get\-Digital\-Config@{\-Get\-Digital\-Config}!DriverStationEnhancedIO@{\-Driver\-Station\-Enhanced\-I\-O}}
+\subsubsection[{\-Get\-Digital\-Config}]{\setlength{\rightskip}{0pt plus 5cm}\-Driver\-Station\-Enhanced\-I\-O\-::t\-Digital\-Config {\bf \-Driver\-Station\-Enhanced\-I\-O\-::\-Get\-Digital\-Config} (
+\begin{DoxyParamCaption}
+\item[{\-U\-I\-N\-T32}]{channel}
+\end{DoxyParamCaption}
+)}}\label{classDriverStationEnhancedIO_a8f5de58215d255e84e48723fda4e4c5e}
+\-Get the current configuration for a \-D\-I\-O line.
+
+\-This has the side effect of forcing the \-Driver \-Station to switch to \-Enhanced mode if it's not when called. \-If \-Enhanced mode is not enabled when this is called, it will return k\-Unknown.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em channel} & \-The \-D\-I\-O channel config to get. \mbox{[}1,16\mbox{]} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-The configured mode for the \-D\-I\-O line. 
+\end{DoxyReturn}
+\hypertarget{classDriverStationEnhancedIO_a052a9491d9661576d66896a4658e1509}{\index{\-Driver\-Station\-Enhanced\-I\-O@{\-Driver\-Station\-Enhanced\-I\-O}!\-Get\-Digitals@{\-Get\-Digitals}}
+\index{\-Get\-Digitals@{\-Get\-Digitals}!DriverStationEnhancedIO@{\-Driver\-Station\-Enhanced\-I\-O}}
+\subsubsection[{\-Get\-Digitals}]{\setlength{\rightskip}{0pt plus 5cm}\-U\-I\-N\-T16 {\bf \-Driver\-Station\-Enhanced\-I\-O\-::\-Get\-Digitals} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classDriverStationEnhancedIO_a052a9491d9661576d66896a4658e1509}
+\-Get the state of all 16 \-D\-I\-O lines regardless of mode.
+
+\begin{DoxyReturn}{\-Returns}
+\-The state of all \-D\-I\-O lines. \-D\-I\-O1 is lsb and \-D\-I\-O16 is msb. 
+\end{DoxyReturn}
+\hypertarget{classDriverStationEnhancedIO_a32f6f8d6b4f5969ea4f85373d5e0f1b7}{\index{\-Driver\-Station\-Enhanced\-I\-O@{\-Driver\-Station\-Enhanced\-I\-O}!\-Get\-Encoder@{\-Get\-Encoder}}
+\index{\-Get\-Encoder@{\-Get\-Encoder}!DriverStationEnhancedIO@{\-Driver\-Station\-Enhanced\-I\-O}}
+\subsubsection[{\-Get\-Encoder}]{\setlength{\rightskip}{0pt plus 5cm}\-I\-N\-T16 {\bf \-Driver\-Station\-Enhanced\-I\-O\-::\-Get\-Encoder} (
+\begin{DoxyParamCaption}
+\item[{\-U\-I\-N\-T32}]{encoder\-Number}
+\end{DoxyParamCaption}
+)}}\label{classDriverStationEnhancedIO_a32f6f8d6b4f5969ea4f85373d5e0f1b7}
+\-Get the position of a quadrature encoder.
+
+\-There are two signed 16-\/bit 4\-X quadrature decoders on the \-I\-O board. \-These decoders are always monitoring the state of the lines assigned to them, but these lines do not have to be used for encoders.
+
+\-Encoder1 uses \-D\-I\-O4 for \char`\"{}\-A\char`\"{}, \-D\-I\-O6 for \char`\"{}\-B\char`\"{}, and \-D\-I\-O8 for \char`\"{}\-Index\char`\"{}. \-Encoder2 uses \-D\-I\-O5 for \char`\"{}\-A\char`\"{}, \-D\-I\-O7 for \char`\"{}\-B\char`\"{}, and \-D\-I\-O9 for \char`\"{}\-Index\char`\"{}.
+
+\-The index functionality can be enabled or disabled using \hyperlink{classDriverStationEnhancedIO_a01d34032c4d8c282359c62c3b44f8a85}{\-Set\-Encoder\-Index\-Enable()}.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em encoder\-Number} & \-The quadrature encoder to access. \mbox{[}1,2\mbox{]} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-The current position of the quadrature encoder. 
+\end{DoxyReturn}
+\hypertarget{classDriverStationEnhancedIO_a6e88a899d3cdb6e4750d37204e269f9c}{\index{\-Driver\-Station\-Enhanced\-I\-O@{\-Driver\-Station\-Enhanced\-I\-O}!\-Get\-Encoder\-Index\-Enable@{\-Get\-Encoder\-Index\-Enable}}
+\index{\-Get\-Encoder\-Index\-Enable@{\-Get\-Encoder\-Index\-Enable}!DriverStationEnhancedIO@{\-Driver\-Station\-Enhanced\-I\-O}}
+\subsubsection[{\-Get\-Encoder\-Index\-Enable}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Driver\-Station\-Enhanced\-I\-O\-::\-Get\-Encoder\-Index\-Enable} (
+\begin{DoxyParamCaption}
+\item[{\-U\-I\-N\-T32}]{encoder\-Number}
+\end{DoxyParamCaption}
+)}}\label{classDriverStationEnhancedIO_a6e88a899d3cdb6e4750d37204e269f9c}
+\-Get the current configuration of a quadrature encoder index channel.
+
+\-This has the side effect of forcing the \-Driver \-Station to switch to \-Enhanced mode if it's not when called. \-If \-Enhanced mode is not enabled when this is called, it will return false.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em encoder\-Number} & \-The quadrature encoder. \mbox{[}1,2\mbox{]} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-Is the index channel of the encoder enabled. 
+\end{DoxyReturn}
+\hypertarget{classDriverStationEnhancedIO_af47e837e7e54536ea38e141a38192c9f}{\index{\-Driver\-Station\-Enhanced\-I\-O@{\-Driver\-Station\-Enhanced\-I\-O}!\-Get\-Firmware\-Version@{\-Get\-Firmware\-Version}}
+\index{\-Get\-Firmware\-Version@{\-Get\-Firmware\-Version}!DriverStationEnhancedIO@{\-Driver\-Station\-Enhanced\-I\-O}}
+\subsubsection[{\-Get\-Firmware\-Version}]{\setlength{\rightskip}{0pt plus 5cm}\-U\-I\-N\-T8 {\bf \-Driver\-Station\-Enhanced\-I\-O\-::\-Get\-Firmware\-Version} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classDriverStationEnhancedIO_af47e837e7e54536ea38e141a38192c9f}
+\-Get the firmware version running on the \-I\-O board.
+
+\-This also has the side effect of forcing the driver station to switch to \-Enhanced mode if it is not. \-If you plan to switch between \-Driver \-Stations with unknown \-I\-O configurations, you can call this until it returns a non-\/0 version to ensure that this \-A\-P\-I is accessible before proceeding.
+
+\begin{DoxyReturn}{\-Returns}
+\-The version of the firmware running on the \-I\-O board. 0 if the board is not attached or not in \-Enhanced mode. 
+\end{DoxyReturn}
+\hypertarget{classDriverStationEnhancedIO_aee619374b9c5f1135682bda584ec146c}{\index{\-Driver\-Station\-Enhanced\-I\-O@{\-Driver\-Station\-Enhanced\-I\-O}!\-Get\-Fixed\-Digital\-Output@{\-Get\-Fixed\-Digital\-Output}}
+\index{\-Get\-Fixed\-Digital\-Output@{\-Get\-Fixed\-Digital\-Output}!DriverStationEnhancedIO@{\-Driver\-Station\-Enhanced\-I\-O}}
+\subsubsection[{\-Get\-Fixed\-Digital\-Output}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Driver\-Station\-Enhanced\-I\-O\-::\-Get\-Fixed\-Digital\-Output} (
+\begin{DoxyParamCaption}
+\item[{\-U\-I\-N\-T32}]{channel}
+\end{DoxyParamCaption}
+)}}\label{classDriverStationEnhancedIO_aee619374b9c5f1135682bda584ec146c}
+\-Get the state being output on a fixed digital output.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em channel} & \-The \-Fixed\-D\-O line to get. \mbox{[}1,2\mbox{]} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-The state of the \-Fixed\-D\-O line. 
+\end{DoxyReturn}
+\hypertarget{classDriverStationEnhancedIO_ae98d30680867528616fee53ff90b6921}{\index{\-Driver\-Station\-Enhanced\-I\-O@{\-Driver\-Station\-Enhanced\-I\-O}!\-Get\-P\-W\-M\-Output@{\-Get\-P\-W\-M\-Output}}
+\index{\-Get\-P\-W\-M\-Output@{\-Get\-P\-W\-M\-Output}!DriverStationEnhancedIO@{\-Driver\-Station\-Enhanced\-I\-O}}
+\subsubsection[{\-Get\-P\-W\-M\-Output}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf \-Driver\-Station\-Enhanced\-I\-O\-::\-Get\-P\-W\-M\-Output} (
+\begin{DoxyParamCaption}
+\item[{\-U\-I\-N\-T32}]{channel}
+\end{DoxyParamCaption}
+)}}\label{classDriverStationEnhancedIO_ae98d30680867528616fee53ff90b6921}
+\-Get the percent duty-\/cycle that the \hyperlink{classPWM}{\-P\-W\-M} generator channel is configured to output.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em channel} & \-The \-D\-I\-O line's \hyperlink{classPWM}{\-P\-W\-M} generator to get the duty-\/cycle from. \mbox{[}1,4\mbox{]} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-The percent duty-\/cycle being output (if the \-D\-I\-O line is configured for \hyperlink{classPWM}{\-P\-W\-M}). \mbox{[}0.\-0,1.\-0\mbox{]} 
+\end{DoxyReturn}
+\hypertarget{classDriverStationEnhancedIO_a4cd8909d9a276724787ea5ec0f954c66}{\index{\-Driver\-Station\-Enhanced\-I\-O@{\-Driver\-Station\-Enhanced\-I\-O}!\-Get\-P\-W\-M\-Period@{\-Get\-P\-W\-M\-Period}}
+\index{\-Get\-P\-W\-M\-Period@{\-Get\-P\-W\-M\-Period}!DriverStationEnhancedIO@{\-Driver\-Station\-Enhanced\-I\-O}}
+\subsubsection[{\-Get\-P\-W\-M\-Period}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf \-Driver\-Station\-Enhanced\-I\-O\-::\-Get\-P\-W\-M\-Period} (
+\begin{DoxyParamCaption}
+\item[{t\-P\-W\-M\-Period\-Channels}]{channels}
+\end{DoxyParamCaption}
+)}}\label{classDriverStationEnhancedIO_a4cd8909d9a276724787ea5ec0f954c66}
+\-Get the period of a \hyperlink{classPWM}{\-P\-W\-M} generator.
+
+\-This has the side effect of forcing the \-Driver \-Station to switch to \-Enhanced mode if it's not when called. \-If \-Enhanced mode is not enabled when this is called, it will return 0.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em channels} & \-Select the generator by specifying the two channels to which it is connected. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-The period of the \hyperlink{classPWM}{\-P\-W\-M} generator in seconds. 
+\end{DoxyReturn}
+\hypertarget{classDriverStationEnhancedIO_a873a93d533fc36508b0315796319fd90}{\index{\-Driver\-Station\-Enhanced\-I\-O@{\-Driver\-Station\-Enhanced\-I\-O}!\-Get\-Touch\-Slider@{\-Get\-Touch\-Slider}}
+\index{\-Get\-Touch\-Slider@{\-Get\-Touch\-Slider}!DriverStationEnhancedIO@{\-Driver\-Station\-Enhanced\-I\-O}}
+\subsubsection[{\-Get\-Touch\-Slider}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf \-Driver\-Station\-Enhanced\-I\-O\-::\-Get\-Touch\-Slider} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classDriverStationEnhancedIO_a873a93d533fc36508b0315796319fd90}
+\-Get the value of the \-Capacitive \-Sense touch slider.
+
+\begin{DoxyReturn}{\-Returns}
+\-Value between 0.\-0 (toward center of board) and 1.\-0 (toward edge of board). -\/1.\-0 means no touch detected. 
+\end{DoxyReturn}
+\hypertarget{classDriverStationEnhancedIO_a22ca90b78c4412be888953c77f6280e6}{\index{\-Driver\-Station\-Enhanced\-I\-O@{\-Driver\-Station\-Enhanced\-I\-O}!\-Reset\-Encoder@{\-Reset\-Encoder}}
+\index{\-Reset\-Encoder@{\-Reset\-Encoder}!DriverStationEnhancedIO@{\-Driver\-Station\-Enhanced\-I\-O}}
+\subsubsection[{\-Reset\-Encoder}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Driver\-Station\-Enhanced\-I\-O\-::\-Reset\-Encoder} (
+\begin{DoxyParamCaption}
+\item[{\-U\-I\-N\-T32}]{encoder\-Number}
+\end{DoxyParamCaption}
+)}}\label{classDriverStationEnhancedIO_a22ca90b78c4412be888953c77f6280e6}
+\-Reset the position of an encoder to 0.
+
+\-This simply stores an offset locally. \-It does not reset the hardware counter on the \-I\-O board. \-If you use this method with \-Index enabled, you may get unexpected results.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em encoder\-Number} & \-The quadrature encoder to reset. \mbox{[}1,2\mbox{]} \\
+\hline
+\end{DoxyParams}
+\hypertarget{classDriverStationEnhancedIO_ab6888ed427c283821a7b6e7e728486bc}{\index{\-Driver\-Station\-Enhanced\-I\-O@{\-Driver\-Station\-Enhanced\-I\-O}!\-Set\-Analog\-Out@{\-Set\-Analog\-Out}}
+\index{\-Set\-Analog\-Out@{\-Set\-Analog\-Out}!DriverStationEnhancedIO@{\-Driver\-Station\-Enhanced\-I\-O}}
+\subsubsection[{\-Set\-Analog\-Out}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Driver\-Station\-Enhanced\-I\-O\-::\-Set\-Analog\-Out} (
+\begin{DoxyParamCaption}
+\item[{\-U\-I\-N\-T32}]{channel, }
+\item[{double}]{value}
+\end{DoxyParamCaption}
+)}}\label{classDriverStationEnhancedIO_ab6888ed427c283821a7b6e7e728486bc}
+\-Set the analog output voltage.
+
+\-A\-O1 is pin 11 on the top connector (\-P2). \-A\-O2 is pin 12 on the top connector (\-P2). \-A\-O1 is the reference voltage for the 2 analog comparators on \-D\-I\-O15 and \-D\-I\-O16.
+
+\-The output range is 0\-V to 4\-V, however due to the supply voltage don't expect more than about 3\-V. \-Current supply capability is only 100u\-A.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em channel} & \-The analog output channel on the \-D\-S \-I\-O. \mbox{[}1,2\mbox{]} \\
+\hline
+{\em value} & \-The voltage to output on the channel. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classDriverStationEnhancedIO_afad555dfa62bf621e92edda0b36613d0}{\index{\-Driver\-Station\-Enhanced\-I\-O@{\-Driver\-Station\-Enhanced\-I\-O}!\-Set\-Digital\-Config@{\-Set\-Digital\-Config}}
+\index{\-Set\-Digital\-Config@{\-Set\-Digital\-Config}!DriverStationEnhancedIO@{\-Driver\-Station\-Enhanced\-I\-O}}
+\subsubsection[{\-Set\-Digital\-Config}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Driver\-Station\-Enhanced\-I\-O\-::\-Set\-Digital\-Config} (
+\begin{DoxyParamCaption}
+\item[{\-U\-I\-N\-T32}]{channel, }
+\item[{t\-Digital\-Config}]{config}
+\end{DoxyParamCaption}
+)}}\label{classDriverStationEnhancedIO_afad555dfa62bf621e92edda0b36613d0}
+\-Override the \-D\-S's configuration of a \-D\-I\-O line.
+
+\-If configured to k\-Input\-Floating, the selected \-D\-I\-O line will be tri-\/stated with no internal pull resistor.
+
+\-If configured to k\-Input\-Pull\-Up, the selected \-D\-I\-O line will be tri-\/stated with a 5k-\/\-Ohm internal pull-\/up resistor enabled.
+
+\-If configured to k\-Input\-Pull\-Down, the selected \-D\-I\-O line will be tri-\/stated with a 5k-\/\-Ohm internal pull-\/down resistor enabled.
+
+\-If configured to k\-Output, the selected \-D\-I\-O line will actively drive to 0\-V or \-Vddio (specified by \-J1 and \-J4). \-D\-I\-O1 through \-D\-I\-O12, \-D\-I\-O15, and \-D\-I\-O16 can source 4m\-A and can sink 8m\-A. \-D\-I\-O12 and \-D\-I\-O13 can source 4m\-A and can sink 25m\-A.
+
+\-In addition to the common configurations, \-D\-I\-O1 through \-D\-I\-O4 can be configured to k\-P\-W\-M to enable \hyperlink{classPWM}{\-P\-W\-M} output.
+
+\-In addition to the common configurations, \-D\-I\-O15 and \-D\-I\-O16 can be configured to k\-Analog\-Comparator to enable analog comparators on those 2 \-D\-I\-O lines. \-When enabled, the lines are tri-\/stated and will accept analog voltages between 0\-V and 3.\-3\-V. \-If the input voltage is greater than the voltage output by \-A\-O1, the \-D\-I\-O will read as true, if less then false.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em channel} & \-The \-D\-I\-O line to configure. \mbox{[}1,16\mbox{]} \\
+\hline
+{\em config} & \-The mode to put the \-D\-I\-O line in. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classDriverStationEnhancedIO_a1b17805cb755900f4bc9f34f1444d822}{\index{\-Driver\-Station\-Enhanced\-I\-O@{\-Driver\-Station\-Enhanced\-I\-O}!\-Set\-Digital\-Output@{\-Set\-Digital\-Output}}
+\index{\-Set\-Digital\-Output@{\-Set\-Digital\-Output}!DriverStationEnhancedIO@{\-Driver\-Station\-Enhanced\-I\-O}}
+\subsubsection[{\-Set\-Digital\-Output}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Driver\-Station\-Enhanced\-I\-O\-::\-Set\-Digital\-Output} (
+\begin{DoxyParamCaption}
+\item[{\-U\-I\-N\-T32}]{channel, }
+\item[{bool}]{value}
+\end{DoxyParamCaption}
+)}}\label{classDriverStationEnhancedIO_a1b17805cb755900f4bc9f34f1444d822}
+\-Set the state of a \-D\-I\-O line that is configured for digital output.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em channel} & \-The \-D\-I\-O channel to set. \mbox{[}1,16\mbox{]} \\
+\hline
+{\em value} & \-The state to set the selected channel to. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classDriverStationEnhancedIO_a01d34032c4d8c282359c62c3b44f8a85}{\index{\-Driver\-Station\-Enhanced\-I\-O@{\-Driver\-Station\-Enhanced\-I\-O}!\-Set\-Encoder\-Index\-Enable@{\-Set\-Encoder\-Index\-Enable}}
+\index{\-Set\-Encoder\-Index\-Enable@{\-Set\-Encoder\-Index\-Enable}!DriverStationEnhancedIO@{\-Driver\-Station\-Enhanced\-I\-O}}
+\subsubsection[{\-Set\-Encoder\-Index\-Enable}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Driver\-Station\-Enhanced\-I\-O\-::\-Set\-Encoder\-Index\-Enable} (
+\begin{DoxyParamCaption}
+\item[{\-U\-I\-N\-T32}]{encoder\-Number, }
+\item[{bool}]{enable}
+\end{DoxyParamCaption}
+)}}\label{classDriverStationEnhancedIO_a01d34032c4d8c282359c62c3b44f8a85}
+\-Enable or disable the index channel of a quadrature encoder.
+
+\-The quadrature decoders on the \-I\-O board support an active-\/low index input.
+
+\-Encoder1 uses \-D\-I\-O8 for \char`\"{}\-Index\char`\"{}. \-Encoder2 uses \-D\-I\-O9 for \char`\"{}\-Index\char`\"{}.
+
+\-When enabled, the decoder's counter will be reset to 0 when \-A, \-B, and \-Index are all low.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em encoder\-Number} & \-The quadrature encoder. \mbox{[}1,2\mbox{]} \\
+\hline
+{\em enable} & \-If true, reset the encoder in an index condition. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classDriverStationEnhancedIO_a97ef0ba03c428cb102d7a8687e482f17}{\index{\-Driver\-Station\-Enhanced\-I\-O@{\-Driver\-Station\-Enhanced\-I\-O}!\-Set\-Fixed\-Digital\-Output@{\-Set\-Fixed\-Digital\-Output}}
+\index{\-Set\-Fixed\-Digital\-Output@{\-Set\-Fixed\-Digital\-Output}!DriverStationEnhancedIO@{\-Driver\-Station\-Enhanced\-I\-O}}
+\subsubsection[{\-Set\-Fixed\-Digital\-Output}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Driver\-Station\-Enhanced\-I\-O\-::\-Set\-Fixed\-Digital\-Output} (
+\begin{DoxyParamCaption}
+\item[{\-U\-I\-N\-T32}]{channel, }
+\item[{bool}]{value}
+\end{DoxyParamCaption}
+)}}\label{classDriverStationEnhancedIO_a97ef0ba03c428cb102d7a8687e482f17}
+\-Set the state to output on a \-Fixed \-High \-Current \-Digital \-Output line.
+
+\-Fixed\-D\-O1 is pin 5 on the top connector (\-P2). \-Fixed\-D\-O2 is pin 3 on the top connector (\-P2).
+
+\-The \-Fixed\-D\-O lines always output 0\-V and 3.\-3\-V regardless of \-J1 and \-J4. \-They can source 4m\-A and can sink 25m\-A. \-Because of this, they are expected to be used in an active low configuration, such as connecting to the cathode of a bright \-L\-E\-D. \-Because they are expected to be active low, they default to true.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em channel} & \-The \-Fixed\-D\-O channel to set. \\
+\hline
+{\em value} & \-The state to set the \-Fixed\-D\-O. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classDriverStationEnhancedIO_a34d6429692d4a27bc384533319e4127b}{\index{\-Driver\-Station\-Enhanced\-I\-O@{\-Driver\-Station\-Enhanced\-I\-O}!\-Set\-L\-E\-D@{\-Set\-L\-E\-D}}
+\index{\-Set\-L\-E\-D@{\-Set\-L\-E\-D}!DriverStationEnhancedIO@{\-Driver\-Station\-Enhanced\-I\-O}}
+\subsubsection[{\-Set\-L\-E\-D}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Driver\-Station\-Enhanced\-I\-O\-::\-Set\-L\-E\-D} (
+\begin{DoxyParamCaption}
+\item[{\-U\-I\-N\-T32}]{channel, }
+\item[{bool}]{value}
+\end{DoxyParamCaption}
+)}}\label{classDriverStationEnhancedIO_a34d6429692d4a27bc384533319e4127b}
+\-Set the state of an \-L\-E\-D on the \-I\-O board.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em channel} & \-The \-L\-E\-D channel to set. \mbox{[}1,8\mbox{]} \\
+\hline
+{\em value} & \-True to turn the \-L\-E\-D on. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classDriverStationEnhancedIO_a476ebdc37d1dd1fa58ab0a0ec09c1c17}{\index{\-Driver\-Station\-Enhanced\-I\-O@{\-Driver\-Station\-Enhanced\-I\-O}!\-Set\-L\-E\-Ds@{\-Set\-L\-E\-Ds}}
+\index{\-Set\-L\-E\-Ds@{\-Set\-L\-E\-Ds}!DriverStationEnhancedIO@{\-Driver\-Station\-Enhanced\-I\-O}}
+\subsubsection[{\-Set\-L\-E\-Ds}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Driver\-Station\-Enhanced\-I\-O\-::\-Set\-L\-E\-Ds} (
+\begin{DoxyParamCaption}
+\item[{\-U\-I\-N\-T8}]{value}
+\end{DoxyParamCaption}
+)}}\label{classDriverStationEnhancedIO_a476ebdc37d1dd1fa58ab0a0ec09c1c17}
+\-Set the state of all 8 \-L\-E\-Ds on the \-I\-O board.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em value} & \-The state of each \-L\-E\-D. \-L\-E\-D1 is lsb and \-L\-E\-D8 is msb. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classDriverStationEnhancedIO_aa343765022e453e9be07719b3e247eb5}{\index{\-Driver\-Station\-Enhanced\-I\-O@{\-Driver\-Station\-Enhanced\-I\-O}!\-Set\-P\-W\-M\-Output@{\-Set\-P\-W\-M\-Output}}
+\index{\-Set\-P\-W\-M\-Output@{\-Set\-P\-W\-M\-Output}!DriverStationEnhancedIO@{\-Driver\-Station\-Enhanced\-I\-O}}
+\subsubsection[{\-Set\-P\-W\-M\-Output}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Driver\-Station\-Enhanced\-I\-O\-::\-Set\-P\-W\-M\-Output} (
+\begin{DoxyParamCaption}
+\item[{\-U\-I\-N\-T32}]{channel, }
+\item[{double}]{value}
+\end{DoxyParamCaption}
+)}}\label{classDriverStationEnhancedIO_aa343765022e453e9be07719b3e247eb5}
+\-Set the percent duty-\/cycle to output on a \hyperlink{classPWM}{\-P\-W\-M} enabled \-D\-I\-O line.
+
+\-D\-I\-O1 through \-D\-I\-O4 have the ability to output a \hyperlink{classPWM}{\-P\-W\-M} signal. \-The period of the signal can be configured in pairs using \hyperlink{classDriverStationEnhancedIO_a6f1c7196f6cbcce00a928d7380b9d46f}{\-Set\-P\-W\-M\-Period()}.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em channel} & \-The \-D\-I\-O line's \hyperlink{classPWM}{\-P\-W\-M} generator to set. \mbox{[}1,4\mbox{]} \\
+\hline
+{\em value} & \-The percent duty-\/cycle to output from the \hyperlink{classPWM}{\-P\-W\-M} generator. \mbox{[}0.\-0,1.\-0\mbox{]} \\
+\hline
+\end{DoxyParams}
+\hypertarget{classDriverStationEnhancedIO_a6f1c7196f6cbcce00a928d7380b9d46f}{\index{\-Driver\-Station\-Enhanced\-I\-O@{\-Driver\-Station\-Enhanced\-I\-O}!\-Set\-P\-W\-M\-Period@{\-Set\-P\-W\-M\-Period}}
+\index{\-Set\-P\-W\-M\-Period@{\-Set\-P\-W\-M\-Period}!DriverStationEnhancedIO@{\-Driver\-Station\-Enhanced\-I\-O}}
+\subsubsection[{\-Set\-P\-W\-M\-Period}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Driver\-Station\-Enhanced\-I\-O\-::\-Set\-P\-W\-M\-Period} (
+\begin{DoxyParamCaption}
+\item[{t\-P\-W\-M\-Period\-Channels}]{channels, }
+\item[{double}]{period}
+\end{DoxyParamCaption}
+)}}\label{classDriverStationEnhancedIO_a6f1c7196f6cbcce00a928d7380b9d46f}
+\-Set the period of a \hyperlink{classPWM}{\-P\-W\-M} generator.
+
+\-There are 2 \hyperlink{classPWM}{\-P\-W\-M} generators on the \-I\-O board. \-One can generate \hyperlink{classPWM}{\-P\-W\-M} signals on \-D\-I\-O1 and \-D\-I\-O2, the other on \-D\-I\-O3 and \-D\-I\-O4. \-Each generator has one counter and two compare registers. \-As such, each pair of \hyperlink{classPWM}{\-P\-W\-M} outputs share the output period but have independent duty cycles.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em channels} & \-Select the generator by specifying the two channels to which it is connected. \\
+\hline
+{\em period} & \-The period of the \hyperlink{classPWM}{\-P\-W\-M} generator in seconds. \mbox{[}0.\-0,0.\-002731\mbox{]} \\
+\hline
+\end{DoxyParams}
+
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+\-Driver\-Station\-Enhanced\-I\-O.\-h\item 
+\-Driver\-Station\-Enhanced\-I\-O.\-cpp\end{DoxyCompactItemize}

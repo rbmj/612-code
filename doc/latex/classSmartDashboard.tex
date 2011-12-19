@@ -1,0 +1,167 @@
+\hypertarget{classSmartDashboard}{\section{\-Smart\-Dashboard \-Class \-Reference}
+\label{classSmartDashboard}\index{\-Smart\-Dashboard@{\-Smart\-Dashboard}}
+}
+\-Inheritance diagram for \-Smart\-Dashboard\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classSmartDashboard}
+\end{center}
+\end{figure}
+\subsection*{\-Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classSmartDashboard_1_1Buffer}{\-Buffer}
+\item 
+struct {\bfseries \-C\-String\-Less\-Than}
+\item 
+struct {\bfseries \-Field\-Record}
+\end{DoxyCompactItemize}
+\subsection*{\-Public \-Types}
+\begin{DoxyCompactItemize}
+\item 
+enum {\bfseries \-F\-I\-E\-L\-D\-\_\-\-T\-Y\-P\-E} \{ \*
+{\bfseries \-B\-Y\-T\-E\-\_\-\-T\-Y\-P\-E} =  0, 
+{\bfseries \-C\-H\-A\-R\-\_\-\-U\-T\-F16\-\_\-\-T\-Y\-P\-E} =  1, 
+{\bfseries \-I\-N\-T\-\_\-\-T\-Y\-P\-E} =  2, 
+{\bfseries \-L\-O\-N\-G\-\_\-\-T\-Y\-P\-E} =  3, 
+\*
+{\bfseries \-S\-H\-O\-R\-T\-\_\-\-T\-Y\-P\-E} =  4, 
+{\bfseries \-F\-L\-O\-A\-T\-\_\-\-T\-Y\-P\-E} =  5, 
+{\bfseries \-D\-O\-U\-B\-L\-E\-\_\-\-T\-Y\-P\-E} =  6, 
+{\bfseries \-S\-T\-R\-I\-N\-G\-\_\-\-U\-T\-F16\-\_\-\-T\-Y\-P\-E} =  7, 
+\*
+{\bfseries \-B\-O\-O\-L\-\_\-\-T\-Y\-P\-E} =  8, 
+{\bfseries \-S\-T\-R\-I\-N\-G\-\_\-\-U\-T\-F8\-\_\-\-T\-Y\-P\-E} =  9
+ \}
+\item 
+enum {\bfseries \-R\-E\-T\-C\-O\-D\-E} \{ {\bfseries \-S\-U\-C\-C\-E\-S\-S}, 
+{\bfseries \-E\-R\-R\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-F\-U\-L\-L}, 
+{\bfseries \-E\-R\-R\-O\-R\-\_\-\-S\-T\-R\-I\-N\-G\-\_\-\-T\-O\-O\-\_\-\-L\-O\-N\-G}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classSmartDashboard_a8ea30571169aaa8d656765084d14221d}{{\bfseries \-Smart\-Dashboard} (\-S\-E\-M\-\_\-\-I\-D status\-Data\-Semaphore)}\label{classSmartDashboard_a8ea30571169aaa8d656765084d14221d}
+
+\item 
+void \hyperlink{classSmartDashboard_aeaa051b9d8715ac4ccb02833c6623a1d}{\-Get\-Status\-Buffer} (char $\ast$$\ast$user\-Status\-Data, \-I\-N\-T32 $\ast$user\-Status\-Data\-Size)
+\item 
+\hypertarget{classSmartDashboard_a91f1e0d6dbf314a7443b536cb55b1ae8}{void {\bfseries \-Flush} ()}\label{classSmartDashboard_a91f1e0d6dbf314a7443b536cb55b1ae8}
+
+\end{DoxyCompactItemize}
+\subsection*{\-Static \-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classSmartDashboard_ae8ea8b62acfb5174bc70185b0e5021de}{static void {\bfseries init} ()}\label{classSmartDashboard_ae8ea8b62acfb5174bc70185b0e5021de}
+
+\item 
+static \-R\-E\-T\-C\-O\-D\-E \hyperlink{classSmartDashboard_a2036dedc4a797d69a5982eb9594d4cd7}{\-Log\-Char} (char value, const char $\ast$name)
+\item 
+static \-R\-E\-T\-C\-O\-D\-E \hyperlink{classSmartDashboard_a04cff49d968f0ac391bb0f94d10ab6b0}{\-Log\-Char} (wchar\-\_\-t value, const char $\ast$name)
+\item 
+static \-R\-E\-T\-C\-O\-D\-E \hyperlink{classSmartDashboard_a66ec21b3b33082b9fda0203f724009bd}{\-Log} (\-I\-N\-T32 value, const char $\ast$name)
+\item 
+static \-R\-E\-T\-C\-O\-D\-E \hyperlink{classSmartDashboard_abb3257d3f00cd3fd316c048e1b947c4b}{\-Log} (\-I\-N\-T64 value, const char $\ast$name)
+\item 
+static \-R\-E\-T\-C\-O\-D\-E \hyperlink{classSmartDashboard_a3da92a382181f248281a8849390004b3}{\-Log} (bool value, const char $\ast$name)
+\item 
+static \-R\-E\-T\-C\-O\-D\-E \hyperlink{classSmartDashboard_a569006a79c2ec72854e30010eb947c9c}{\-Log} (float value, const char $\ast$name)
+\item 
+static \-R\-E\-T\-C\-O\-D\-E \hyperlink{classSmartDashboard_ae404f47bce2723a32a46714ce8ebff82}{\-Log} (double value, const char $\ast$name)
+\item 
+static \-R\-E\-T\-C\-O\-D\-E \hyperlink{classSmartDashboard_ac739e3f781eab8b8e509beff12ac0dbc}{\-Log} (const char $\ast$value, const char $\ast$name)
+\end{DoxyCompactItemize}
+\subsection*{\-Static \-Public \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classSmartDashboard_a6f4f0c6679e2901bcef055b503814b9a}{static const \-I\-N\-T32 {\bfseries \-B\-U\-F\-F\-E\-R\-\_\-\-S\-I\-Z\-E} = 768}\label{classSmartDashboard_a6f4f0c6679e2901bcef055b503814b9a}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classSmartDashboard_aeaa051b9d8715ac4ccb02833c6623a1d}{\index{\-Smart\-Dashboard@{\-Smart\-Dashboard}!\-Get\-Status\-Buffer@{\-Get\-Status\-Buffer}}
+\index{\-Get\-Status\-Buffer@{\-Get\-Status\-Buffer}!SmartDashboard@{\-Smart\-Dashboard}}
+\subsubsection[{\-Get\-Status\-Buffer}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Smart\-Dashboard\-::\-Get\-Status\-Buffer} (
+\begin{DoxyParamCaption}
+\item[{char $\ast$$\ast$}]{user\-Status\-Data, }
+\item[{\-I\-N\-T32 $\ast$}]{user\-Status\-Data\-Size}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{classSmartDashboard_aeaa051b9d8715ac4ccb02833c6623a1d}
+\-Called by the \hyperlink{classDriverStation}{\-Driver\-Station} class to retrieve buffers, sizes, etc. for writing to the \-Network\-Communication task. \-This function is called while holding the m\-\_\-status\-Data\-Semaphore. 
+
+\-Implements \hyperlink{classDashboardBase}{\-Dashboard\-Base}.
+
+\hypertarget{classSmartDashboard_a66ec21b3b33082b9fda0203f724009bd}{\index{\-Smart\-Dashboard@{\-Smart\-Dashboard}!\-Log@{\-Log}}
+\index{\-Log@{\-Log}!SmartDashboard@{\-Smart\-Dashboard}}
+\subsubsection[{\-Log}]{\setlength{\rightskip}{0pt plus 5cm}\-Smart\-Dashboard\-::\-R\-E\-T\-C\-O\-D\-E {\bf \-Smart\-Dashboard\-::\-Log} (
+\begin{DoxyParamCaption}
+\item[{\-I\-N\-T32}]{value, }
+\item[{const char $\ast$}]{name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{classSmartDashboard_a66ec21b3b33082b9fda0203f724009bd}
+\-Log a 32-\/bit signed integer value. \hyperlink{classSmartDashboard}{\-Smart\-Dashboard} assumes the name string will remain valid. \-It does not make a copy. \hypertarget{classSmartDashboard_abb3257d3f00cd3fd316c048e1b947c4b}{\index{\-Smart\-Dashboard@{\-Smart\-Dashboard}!\-Log@{\-Log}}
+\index{\-Log@{\-Log}!SmartDashboard@{\-Smart\-Dashboard}}
+\subsubsection[{\-Log}]{\setlength{\rightskip}{0pt plus 5cm}\-Smart\-Dashboard\-::\-R\-E\-T\-C\-O\-D\-E {\bf \-Smart\-Dashboard\-::\-Log} (
+\begin{DoxyParamCaption}
+\item[{\-I\-N\-T64}]{value, }
+\item[{const char $\ast$}]{name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{classSmartDashboard_abb3257d3f00cd3fd316c048e1b947c4b}
+\-Log a 64-\/bit signed integer value. \hyperlink{classSmartDashboard}{\-Smart\-Dashboard} assumes the name string will remain valid. \-It does not make a copy. \hypertarget{classSmartDashboard_a3da92a382181f248281a8849390004b3}{\index{\-Smart\-Dashboard@{\-Smart\-Dashboard}!\-Log@{\-Log}}
+\index{\-Log@{\-Log}!SmartDashboard@{\-Smart\-Dashboard}}
+\subsubsection[{\-Log}]{\setlength{\rightskip}{0pt plus 5cm}\-Smart\-Dashboard\-::\-R\-E\-T\-C\-O\-D\-E {\bf \-Smart\-Dashboard\-::\-Log} (
+\begin{DoxyParamCaption}
+\item[{bool}]{value, }
+\item[{const char $\ast$}]{name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{classSmartDashboard_a3da92a382181f248281a8849390004b3}
+\-Log a boolean value. \hyperlink{classSmartDashboard}{\-Smart\-Dashboard} assumes the name string will remain valid. \-It does not make a copy. \hypertarget{classSmartDashboard_a569006a79c2ec72854e30010eb947c9c}{\index{\-Smart\-Dashboard@{\-Smart\-Dashboard}!\-Log@{\-Log}}
+\index{\-Log@{\-Log}!SmartDashboard@{\-Smart\-Dashboard}}
+\subsubsection[{\-Log}]{\setlength{\rightskip}{0pt plus 5cm}\-Smart\-Dashboard\-::\-R\-E\-T\-C\-O\-D\-E {\bf \-Smart\-Dashboard\-::\-Log} (
+\begin{DoxyParamCaption}
+\item[{float}]{value, }
+\item[{const char $\ast$}]{name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{classSmartDashboard_a569006a79c2ec72854e30010eb947c9c}
+\-Log a single precision floating point value. \hyperlink{classSmartDashboard}{\-Smart\-Dashboard} assumes the name string will remain valid. \-It does not make a copy. \hypertarget{classSmartDashboard_ae404f47bce2723a32a46714ce8ebff82}{\index{\-Smart\-Dashboard@{\-Smart\-Dashboard}!\-Log@{\-Log}}
+\index{\-Log@{\-Log}!SmartDashboard@{\-Smart\-Dashboard}}
+\subsubsection[{\-Log}]{\setlength{\rightskip}{0pt plus 5cm}\-Smart\-Dashboard\-::\-R\-E\-T\-C\-O\-D\-E {\bf \-Smart\-Dashboard\-::\-Log} (
+\begin{DoxyParamCaption}
+\item[{double}]{value, }
+\item[{const char $\ast$}]{name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{classSmartDashboard_ae404f47bce2723a32a46714ce8ebff82}
+\-Log a double precision floating point value. \hyperlink{classSmartDashboard}{\-Smart\-Dashboard} assumes the name string will remain valid. \-It does not make a copy. \hypertarget{classSmartDashboard_ac739e3f781eab8b8e509beff12ac0dbc}{\index{\-Smart\-Dashboard@{\-Smart\-Dashboard}!\-Log@{\-Log}}
+\index{\-Log@{\-Log}!SmartDashboard@{\-Smart\-Dashboard}}
+\subsubsection[{\-Log}]{\setlength{\rightskip}{0pt plus 5cm}\-Smart\-Dashboard\-::\-R\-E\-T\-C\-O\-D\-E {\bf \-Smart\-Dashboard\-::\-Log} (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{value, }
+\item[{const char $\ast$}]{name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{classSmartDashboard_ac739e3f781eab8b8e509beff12ac0dbc}
+\-Log a \-C string value (7-\/bit \-A\-S\-C\-I\-I or 8-\/bit \-L\-A\-T\-I\-N-\/1 encoding). \hyperlink{classSmartDashboard}{\-Smart\-Dashboard} assumes the name string will remain valid. \-It does not make a copy. \-It does copy the value string. \hypertarget{classSmartDashboard_a2036dedc4a797d69a5982eb9594d4cd7}{\index{\-Smart\-Dashboard@{\-Smart\-Dashboard}!\-Log\-Char@{\-Log\-Char}}
+\index{\-Log\-Char@{\-Log\-Char}!SmartDashboard@{\-Smart\-Dashboard}}
+\subsubsection[{\-Log\-Char}]{\setlength{\rightskip}{0pt plus 5cm}\-Smart\-Dashboard\-::\-R\-E\-T\-C\-O\-D\-E {\bf \-Smart\-Dashboard\-::\-Log\-Char} (
+\begin{DoxyParamCaption}
+\item[{char}]{value, }
+\item[{const char $\ast$}]{name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{classSmartDashboard_a2036dedc4a797d69a5982eb9594d4cd7}
+\-Send a value with the given name to the dashboard.
+
+\-Log a character (7-\/bit \-A\-S\-C\-I\-I or 8-\/bit \-L\-A\-T\-I\-N-\/1 encoding). \hyperlink{classSmartDashboard}{\-Smart\-Dashboard} assumes the name string will remain valid. \-It does not make a copy. \hypertarget{classSmartDashboard_a04cff49d968f0ac391bb0f94d10ab6b0}{\index{\-Smart\-Dashboard@{\-Smart\-Dashboard}!\-Log\-Char@{\-Log\-Char}}
+\index{\-Log\-Char@{\-Log\-Char}!SmartDashboard@{\-Smart\-Dashboard}}
+\subsubsection[{\-Log\-Char}]{\setlength{\rightskip}{0pt plus 5cm}\-Smart\-Dashboard\-::\-R\-E\-T\-C\-O\-D\-E {\bf \-Smart\-Dashboard\-::\-Log\-Char} (
+\begin{DoxyParamCaption}
+\item[{wchar\-\_\-t}]{value, }
+\item[{const char $\ast$}]{name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{classSmartDashboard_a04cff49d968f0ac391bb0f94d10ab6b0}
+\-Log a wide character (\-Unicode's \-U\-T\-F-\/16 encoding). \hyperlink{classSmartDashboard}{\-Smart\-Dashboard} assumes the name string will remain valid. \-It does not make a copy. 
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+\-Smart\-Dashboard.\-h\item 
+\-Smart\-Dashboard.\-cpp\end{DoxyCompactItemize}

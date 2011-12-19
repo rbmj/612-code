@@ -1,0 +1,64 @@
+\hypertarget{classSmartDashboardPacketFactory}{\section{\-Smart\-Dashboard\-Packet\-Factory \-Class \-Reference}
+\label{classSmartDashboardPacketFactory}\index{\-Smart\-Dashboard\-Packet\-Factory@{\-Smart\-Dashboard\-Packet\-Factory}}
+}
+\subsection*{\-Public \-Types}
+\begin{DoxyCompactItemize}
+\item 
+enum {\bfseries \-F\-R\-A\-M\-E\-\_\-\-T\-Y\-P\-E} \{ {\bfseries \-A\-N\-N\-O\-U\-N\-C\-E\-\_\-\-F\-R\-A\-M\-E} =  0, 
+{\bfseries \-U\-P\-D\-A\-T\-E\-\_\-\-F\-R\-A\-M\-E} =  1, 
+{\bfseries \-A\-N\-N\-O\-U\-N\-C\-E\-\_\-\-P\-R\-O\-F\-I\-L\-E\-\_\-\-F\-R\-A\-M\-E} =  2
+ \}
+\end{DoxyCompactItemize}
+\subsection*{\-Static \-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{classSmartDashboardPacketFactory_aad9ceb5e7e64f262a58ee5acfcce9703}{\-Announce} (\hyperlink{classSmartDashboard_1_1Buffer}{\-Smart\-Dashboard\-::\-Buffer} \&buf, char id, \-Smart\-Dashboard\-::\-F\-I\-E\-L\-D\-\_\-\-T\-Y\-P\-E type, const char $\ast$name)
+\item 
+static int \hyperlink{classSmartDashboardPacketFactory_a0eca571b4913ecdc7d6a000fef14b4a1}{\-Get\-Announce\-Length} (const char $\ast$name)
+\item 
+static void \hyperlink{classSmartDashboardPacketFactory_a7b4c5bef57b3758cda7e4dc425b992ee}{\-Update\-Prefix} (\hyperlink{classSmartDashboard_1_1Buffer}{\-Smart\-Dashboard\-::\-Buffer} \&buf, char id, int data\-Length)
+\item 
+static int \hyperlink{classSmartDashboardPacketFactory_a8fa74623d0c6e59ade47b37956223ec2}{\-Get\-Update\-Length} (int data\-Length)
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classSmartDashboardPacketFactory_aad9ceb5e7e64f262a58ee5acfcce9703}{\index{\-Smart\-Dashboard\-Packet\-Factory@{\-Smart\-Dashboard\-Packet\-Factory}!\-Announce@{\-Announce}}
+\index{\-Announce@{\-Announce}!SmartDashboardPacketFactory@{\-Smart\-Dashboard\-Packet\-Factory}}
+\subsubsection[{\-Announce}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Smart\-Dashboard\-Packet\-Factory\-::\-Announce} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Smart\-Dashboard\-::\-Buffer} \&}]{buf, }
+\item[{char}]{id, }
+\item[{\-Smart\-Dashboard\-::\-F\-I\-E\-L\-D\-\_\-\-T\-Y\-P\-E}]{type, }
+\item[{const char $\ast$}]{name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{classSmartDashboardPacketFactory_aad9ceb5e7e64f262a58ee5acfcce9703}
+\-Announces a field to the client. \hypertarget{classSmartDashboardPacketFactory_a0eca571b4913ecdc7d6a000fef14b4a1}{\index{\-Smart\-Dashboard\-Packet\-Factory@{\-Smart\-Dashboard\-Packet\-Factory}!\-Get\-Announce\-Length@{\-Get\-Announce\-Length}}
+\index{\-Get\-Announce\-Length@{\-Get\-Announce\-Length}!SmartDashboardPacketFactory@{\-Smart\-Dashboard\-Packet\-Factory}}
+\subsubsection[{\-Get\-Announce\-Length}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-Smart\-Dashboard\-Packet\-Factory\-::\-Get\-Announce\-Length} (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{classSmartDashboardPacketFactory_a0eca571b4913ecdc7d6a000fef14b4a1}
+\-Returns the length (in chars) required to announce a particular field. \hypertarget{classSmartDashboardPacketFactory_a8fa74623d0c6e59ade47b37956223ec2}{\index{\-Smart\-Dashboard\-Packet\-Factory@{\-Smart\-Dashboard\-Packet\-Factory}!\-Get\-Update\-Length@{\-Get\-Update\-Length}}
+\index{\-Get\-Update\-Length@{\-Get\-Update\-Length}!SmartDashboardPacketFactory@{\-Smart\-Dashboard\-Packet\-Factory}}
+\subsubsection[{\-Get\-Update\-Length}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-Smart\-Dashboard\-Packet\-Factory\-::\-Get\-Update\-Length} (
+\begin{DoxyParamCaption}
+\item[{int}]{data\-Length}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{classSmartDashboardPacketFactory_a8fa74623d0c6e59ade47b37956223ec2}
+\-Returns the length (in chars) required to update a particular field. \hypertarget{classSmartDashboardPacketFactory_a7b4c5bef57b3758cda7e4dc425b992ee}{\index{\-Smart\-Dashboard\-Packet\-Factory@{\-Smart\-Dashboard\-Packet\-Factory}!\-Update\-Prefix@{\-Update\-Prefix}}
+\index{\-Update\-Prefix@{\-Update\-Prefix}!SmartDashboardPacketFactory@{\-Smart\-Dashboard\-Packet\-Factory}}
+\subsubsection[{\-Update\-Prefix}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Smart\-Dashboard\-Packet\-Factory\-::\-Update\-Prefix} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Smart\-Dashboard\-::\-Buffer} \&}]{buf, }
+\item[{char}]{id, }
+\item[{int}]{data\-Length}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{classSmartDashboardPacketFactory_a7b4c5bef57b3758cda7e4dc425b992ee}
+\-Indicates that the data follows for the field with the given \-I\-D. 
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+\-Smart\-Dashboard\-Packet\-Factory.\-h\item 
+\-Smart\-Dashboard\-Packet\-Factory.\-cpp\end{DoxyCompactItemize}

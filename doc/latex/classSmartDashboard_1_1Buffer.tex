@@ -1,0 +1,67 @@
+\hypertarget{classSmartDashboard_1_1Buffer}{\section{\-Smart\-Dashboard\-:\-:\-Buffer \-Class \-Reference}
+\label{classSmartDashboard_1_1Buffer}\index{\-Smart\-Dashboard\-::\-Buffer@{\-Smart\-Dashboard\-::\-Buffer}}
+}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classSmartDashboard_1_1Buffer_a9131c50c2bfe44541ef6aad16bb76732}{{\bfseries \-Buffer} (\-I\-N\-T32 capacity)}\label{classSmartDashboard_1_1Buffer_a9131c50c2bfe44541ef6aad16bb76732}
+
+\item 
+\hypertarget{classSmartDashboard_1_1Buffer_abca8ed3aadffc5b6256015ccbedc26cb}{void {\bfseries \-Write\-Byte} (\-U\-I\-N\-T8 c)}\label{classSmartDashboard_1_1Buffer_abca8ed3aadffc5b6256015ccbedc26cb}
+
+\item 
+void \hyperlink{classSmartDashboard_1_1Buffer_a5ea50b02ab101b815d2c43874695a3a5}{\-Write\-Short} (\-U\-I\-N\-T16 s)
+\item 
+{\footnotesize template$<$class Char $>$ }\\void \hyperlink{classSmartDashboard_1_1Buffer_af3b5268322ba5ddc1994d95c169be8e3}{\-Write\-U\-T\-F} (const \-Char $\ast$s)
+\item 
+\hypertarget{classSmartDashboard_1_1Buffer_a90a26f451f2bf2311ced66b0bd678737}{void {\bfseries \-Flush} ()}\label{classSmartDashboard_1_1Buffer_a90a26f451f2bf2311ced66b0bd678737}
+
+\item 
+\hypertarget{classSmartDashboard_1_1Buffer_a144fccca8c9c5c8156fc3a195a962606}{bool {\bfseries \-Has\-Room} (\-I\-N\-T32 length)}\label{classSmartDashboard_1_1Buffer_a144fccca8c9c5c8156fc3a195a962606}
+
+\item 
+\hypertarget{classSmartDashboard_1_1Buffer_a1d7a4190277a38c94cb307385ca8bf46}{char $\ast$ {\bfseries \-Get\-Buffer} ()}\label{classSmartDashboard_1_1Buffer_a1d7a4190277a38c94cb307385ca8bf46}
+
+\item 
+\hypertarget{classSmartDashboard_1_1Buffer_a21c5266eac03eafd668152a42931fc2f}{\-I\-N\-T32 {\bfseries \-Get\-Buffer\-Size} ()}\label{classSmartDashboard_1_1Buffer_a21c5266eac03eafd668152a42931fc2f}
+
+\end{DoxyCompactItemize}
+\subsection*{\-Static \-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$class Char $>$ }\\static int \hyperlink{classSmartDashboard_1_1Buffer_af3b354365a11a2c6c7738a83bedb60ee}{\-Utf8\-Length} (const \-Char $\ast$s)
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classSmartDashboard_1_1Buffer_af3b354365a11a2c6c7738a83bedb60ee}{\index{\-Smart\-Dashboard\-::\-Buffer@{\-Smart\-Dashboard\-::\-Buffer}!\-Utf8\-Length@{\-Utf8\-Length}}
+\index{\-Utf8\-Length@{\-Utf8\-Length}!SmartDashboard::Buffer@{\-Smart\-Dashboard\-::\-Buffer}}
+\subsubsection[{\-Utf8\-Length}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Char $>$ int {\bf \-Smart\-Dashboard\-::\-Buffer\-::\-Utf8\-Length} (
+\begin{DoxyParamCaption}
+\item[{const \-Char $\ast$}]{s}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{classSmartDashboard_1_1Buffer_af3b354365a11a2c6c7738a83bedb60ee}
+\-Return the \char`\"{}\-U\-T\-F length\char`\"{} of the \-Data\-Input-\/modified \-U\-T\-F-\/8 string encoding. \-This works for \-N\-U\-L-\/terminated strings of char or wchar\-\_\-t (wide char) but maybe not for signed char. \-Unicode characters $>$ 0x7\-F\-F (including supplementary chars and their surrogate pair encodings) are not currently supported. \hypertarget{classSmartDashboard_1_1Buffer_a5ea50b02ab101b815d2c43874695a3a5}{\index{\-Smart\-Dashboard\-::\-Buffer@{\-Smart\-Dashboard\-::\-Buffer}!\-Write\-Short@{\-Write\-Short}}
+\index{\-Write\-Short@{\-Write\-Short}!SmartDashboard::Buffer@{\-Smart\-Dashboard\-::\-Buffer}}
+\subsubsection[{\-Write\-Short}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Smart\-Dashboard\-::\-Buffer\-::\-Write\-Short} (
+\begin{DoxyParamCaption}
+\item[{\-U\-I\-N\-T16}]{s}
+\end{DoxyParamCaption}
+)}}\label{classSmartDashboard_1_1Buffer_a5ea50b02ab101b815d2c43874695a3a5}
+\-Write an unsigned 16-\/bit big endian number. \hypertarget{classSmartDashboard_1_1Buffer_af3b5268322ba5ddc1994d95c169be8e3}{\index{\-Smart\-Dashboard\-::\-Buffer@{\-Smart\-Dashboard\-::\-Buffer}!\-Write\-U\-T\-F@{\-Write\-U\-T\-F}}
+\index{\-Write\-U\-T\-F@{\-Write\-U\-T\-F}!SmartDashboard::Buffer@{\-Smart\-Dashboard\-::\-Buffer}}
+\subsubsection[{\-Write\-U\-T\-F}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Char $>$ void {\bf \-Smart\-Dashboard\-::\-Buffer\-::\-Write\-U\-T\-F} (
+\begin{DoxyParamCaption}
+\item[{const \-Char $\ast$}]{s}
+\end{DoxyParamCaption}
+)}}\label{classSmartDashboard_1_1Buffer_af3b5268322ba5ddc1994d95c169be8e3}
+\-Emulate \-Java's \-Data\-Output\-::write\-U\-T\-F(), writing a 2-\/byte count of bytes followed by \-Utf8\-Length(s) bytes of \-Java's modified \-U\-T\-F-\/8 encoded text. \-See \href{http://download.oracle.com/javase/6/docs/api/java/io/DataInput.html#modified-utf-8}{\tt http\-://download.\-oracle.\-com/javase/6/docs/api/java/io/\-Data\-Input.\-html\#modified-\/utf-\/8} \href{http://download.oracle.com/javase/6/docs/api/java/io/DataOutput.html#writeUTF%28java.lang.String%29}{\tt http\-://download.\-oracle.\-com/javase/6/docs/api/java/io/\-Data\-Output.\-html\#write\-U\-T\-F\%28java.\-lang.\-String\%29}
+
+\-This works for \-N\-U\-L-\/terminated strings of char or wchar\-\_\-t (wide char) but maybe not for signed char.
+
+\-Encode characters in \mbox{[}1 .. 0x7\-F\mbox{]} as themselves. \-Encode characters in \mbox{[}0x80 .. 0x7\-F\-F\mbox{]} as a pair of bytes. \-Unicode characters $>$ 0x7\-F\-F (including supplementary chars and their surrogate pair encodings) are not currently supported. \-Character 0 (\-N\-U\-L) is the \-C string terminator so we never have to encode one. 
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+\-Smart\-Dashboard.\-h\item 
+\-Smart\-Dashboard.\-cpp\end{DoxyCompactItemize}

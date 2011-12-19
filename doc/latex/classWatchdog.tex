@@ -1,0 +1,196 @@
+\hypertarget{classWatchdog}{\section{\-Watchdog \-Class \-Reference}
+\label{classWatchdog}\index{\-Watchdog@{\-Watchdog}}
+}
+
+
+{\ttfamily \#include $<$\-Watchdog.\-h$>$}
+
+\-Inheritance diagram for \-Watchdog\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classWatchdog}
+\end{center}
+\end{figure}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classWatchdog_ab4aa2c62f897880ca29fd64062ab0e04}{\-Watchdog} ()
+\item 
+virtual \hyperlink{classWatchdog_ad836a36b5eb5dbe134d4050d49a95d4e}{$\sim$\-Watchdog} ()
+\item 
+bool \hyperlink{classWatchdog_a3cc002218451cef522323e31a47942fc}{\-Feed} ()
+\item 
+void \hyperlink{classWatchdog_a745909868621524196285fbafd19957a}{\-Kill} ()
+\item 
+double \hyperlink{classWatchdog_a1e9c281b0493b204846637c28a91ff2d}{\-Get\-Timer} ()
+\item 
+double \hyperlink{classWatchdog_a9bdab36844738068fab551d00f61825a}{\-Get\-Expiration} ()
+\item 
+void \hyperlink{classWatchdog_a9c38cdfcd21f1b66e4f19793c3116f63}{\-Set\-Expiration} (double expiration)
+\item 
+bool \hyperlink{classWatchdog_a3e909838aafb749f637323f06afc628c}{\-Get\-Enabled} ()
+\item 
+void \hyperlink{classWatchdog_a7b7f75dc69e94b17f62e57b915f3871a}{\-Set\-Enabled} (bool enabled)
+\item 
+bool \hyperlink{classWatchdog_aa985d8ec5ea4d0ab87d61180f74531d4}{\-Is\-Alive} ()
+\item 
+bool \hyperlink{classWatchdog_a5954d95dd512c007945c4d9061ef70ae}{\-Is\-System\-Active} ()
+\end{DoxyCompactItemize}
+\subsection*{\-Static \-Public \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classWatchdog_a08be3a8f0ce89a583dcce150e7a930a7}{static const double {\bfseries k\-Default\-Watchdog\-Expiration} = 0.\-5}\label{classWatchdog_a08be3a8f0ce89a583dcce150e7a930a7}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\hyperlink{classWatchdog}{\-Watchdog} timer class. \-The watchdog timer is designed to keep the robots safe. \-The idea is that the robot program must constantly \char`\"{}feed\char`\"{} the watchdog otherwise it will shut down all the motor outputs. \-That way if a program breaks, rather than having the robot continue to operate at the last known speed, the motors will be shut down.
+
+\-This is serious business. \-Don't just disable the watchdog. \-You can't afford it!
+
+\href{http://thedailywtf.com/Articles/_0x2f__0x2f_TODO_0x3a__Uncomment_Later.aspx}{\tt http\-://thedailywtf.\-com/\-Articles/\-\_\-0x2f\-\_\-\-\_\-0x2f\-\_\-\-T\-O\-D\-O\-\_\-0x3a\-\_\-\-\_\-\-Uncomment\-\_\-\-Later.\-aspx} 
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{classWatchdog_ab4aa2c62f897880ca29fd64062ab0e04}{\index{\-Watchdog@{\-Watchdog}!\-Watchdog@{\-Watchdog}}
+\index{\-Watchdog@{\-Watchdog}!Watchdog@{\-Watchdog}}
+\subsubsection[{\-Watchdog}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Watchdog\-::\-Watchdog} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classWatchdog_ab4aa2c62f897880ca29fd64062ab0e04}
+\-The \hyperlink{classWatchdog}{\-Watchdog} is born. \hypertarget{classWatchdog_ad836a36b5eb5dbe134d4050d49a95d4e}{\index{\-Watchdog@{\-Watchdog}!$\sim$\-Watchdog@{$\sim$\-Watchdog}}
+\index{$\sim$\-Watchdog@{$\sim$\-Watchdog}!Watchdog@{\-Watchdog}}
+\subsubsection[{$\sim$\-Watchdog}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Watchdog\-::$\sim$\-Watchdog} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{classWatchdog_ad836a36b5eb5dbe134d4050d49a95d4e}
+\-Time to bury him in the back yard. 
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classWatchdog_a3cc002218451cef522323e31a47942fc}{\index{\-Watchdog@{\-Watchdog}!\-Feed@{\-Feed}}
+\index{\-Feed@{\-Feed}!Watchdog@{\-Watchdog}}
+\subsubsection[{\-Feed}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Watchdog\-::\-Feed} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classWatchdog_a3cc002218451cef522323e31a47942fc}
+\-Throw the dog a bone.
+
+\-When everything is going well, you feed your dog when you get home. \-Let's hope you don't drive your car off a bridge on the way home... \-Your dog won't get fed and he will starve to death.
+
+\-By the way, it's not cool to ask the neighbor (some random task) to feed your dog for you. \-He's your responsibility!
+
+\begin{DoxyReturn}{\-Returns}
+\-Returns the previous state of the watchdog before feeding it. 
+\end{DoxyReturn}
+\hypertarget{classWatchdog_a3e909838aafb749f637323f06afc628c}{\index{\-Watchdog@{\-Watchdog}!\-Get\-Enabled@{\-Get\-Enabled}}
+\index{\-Get\-Enabled@{\-Get\-Enabled}!Watchdog@{\-Watchdog}}
+\subsubsection[{\-Get\-Enabled}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Watchdog\-::\-Get\-Enabled} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classWatchdog_a3e909838aafb749f637323f06afc628c}
+\-Find out if the watchdog is currently enabled or disabled (mortal or immortal).
+
+\begin{DoxyReturn}{\-Returns}
+\-Enabled or disabled. 
+\end{DoxyReturn}
+\hypertarget{classWatchdog_a9bdab36844738068fab551d00f61825a}{\index{\-Watchdog@{\-Watchdog}!\-Get\-Expiration@{\-Get\-Expiration}}
+\index{\-Get\-Expiration@{\-Get\-Expiration}!Watchdog@{\-Watchdog}}
+\subsubsection[{\-Get\-Expiration}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf \-Watchdog\-::\-Get\-Expiration} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classWatchdog_a9bdab36844738068fab551d00f61825a}
+\-Read what the current expiration is.
+
+\begin{DoxyReturn}{\-Returns}
+\-The number of seconds before starvation following a meal (watchdog starves if it doesn't eat this often). 
+\end{DoxyReturn}
+\hypertarget{classWatchdog_a1e9c281b0493b204846637c28a91ff2d}{\index{\-Watchdog@{\-Watchdog}!\-Get\-Timer@{\-Get\-Timer}}
+\index{\-Get\-Timer@{\-Get\-Timer}!Watchdog@{\-Watchdog}}
+\subsubsection[{\-Get\-Timer}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf \-Watchdog\-::\-Get\-Timer} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classWatchdog_a1e9c281b0493b204846637c28a91ff2d}
+\-Read how long it has been since the watchdog was last fed.
+
+\begin{DoxyReturn}{\-Returns}
+\-The number of seconds since last meal. 
+\end{DoxyReturn}
+\hypertarget{classWatchdog_aa985d8ec5ea4d0ab87d61180f74531d4}{\index{\-Watchdog@{\-Watchdog}!\-Is\-Alive@{\-Is\-Alive}}
+\index{\-Is\-Alive@{\-Is\-Alive}!Watchdog@{\-Watchdog}}
+\subsubsection[{\-Is\-Alive}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Watchdog\-::\-Is\-Alive} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classWatchdog_aa985d8ec5ea4d0ab87d61180f74531d4}
+\-Check in on the watchdog and make sure he's still kicking.
+
+\-This indicates that your watchdog is allowing the system to operate. \-It is still possible that the network communications is not allowing the system to run, but you can check this to make sure it's not your fault. \-Check \hyperlink{classWatchdog_a5954d95dd512c007945c4d9061ef70ae}{\-Is\-System\-Active()} for overall system status.
+
+\-If the watchdog is disabled, then your watchdog is immortal.
+
+\begin{DoxyReturn}{\-Returns}
+\-Is the watchdog still alive? 
+\end{DoxyReturn}
+\hypertarget{classWatchdog_a5954d95dd512c007945c4d9061ef70ae}{\index{\-Watchdog@{\-Watchdog}!\-Is\-System\-Active@{\-Is\-System\-Active}}
+\index{\-Is\-System\-Active@{\-Is\-System\-Active}!Watchdog@{\-Watchdog}}
+\subsubsection[{\-Is\-System\-Active}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Watchdog\-::\-Is\-System\-Active} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classWatchdog_a5954d95dd512c007945c4d9061ef70ae}
+\-Check on the overall status of the system.
+
+\begin{DoxyReturn}{\-Returns}
+\-Is the system active (i.\-e. \hyperlink{classPWM}{\-P\-W\-M} motor outputs, etc. enabled)? 
+\end{DoxyReturn}
+\hypertarget{classWatchdog_a745909868621524196285fbafd19957a}{\index{\-Watchdog@{\-Watchdog}!\-Kill@{\-Kill}}
+\index{\-Kill@{\-Kill}!Watchdog@{\-Watchdog}}
+\subsubsection[{\-Kill}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Watchdog\-::\-Kill} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classWatchdog_a745909868621524196285fbafd19957a}
+\-Put the watchdog out of its misery.
+
+\-Don't wait for your dying robot to starve when there is a problem. \-Kill it quickly, cleanly, and humanely. \hypertarget{classWatchdog_a7b7f75dc69e94b17f62e57b915f3871a}{\index{\-Watchdog@{\-Watchdog}!\-Set\-Enabled@{\-Set\-Enabled}}
+\index{\-Set\-Enabled@{\-Set\-Enabled}!Watchdog@{\-Watchdog}}
+\subsubsection[{\-Set\-Enabled}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Watchdog\-::\-Set\-Enabled} (
+\begin{DoxyParamCaption}
+\item[{bool}]{enabled}
+\end{DoxyParamCaption}
+)}}\label{classWatchdog_a7b7f75dc69e94b17f62e57b915f3871a}
+\-Enable or disable the watchdog timer.
+
+\-When enabled, you must keep feeding the watchdog timer to keep the watchdog active, and hence the dangerous parts (motor outputs, etc.) can keep functioning. \-When disabled, the watchdog is immortal and will remain active even without being fed. \-It will also ignore any kill commands while disabled.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em enabled} & \-Enable or disable the watchdog. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classWatchdog_a9c38cdfcd21f1b66e4f19793c3116f63}{\index{\-Watchdog@{\-Watchdog}!\-Set\-Expiration@{\-Set\-Expiration}}
+\index{\-Set\-Expiration@{\-Set\-Expiration}!Watchdog@{\-Watchdog}}
+\subsubsection[{\-Set\-Expiration}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Watchdog\-::\-Set\-Expiration} (
+\begin{DoxyParamCaption}
+\item[{double}]{expiration}
+\end{DoxyParamCaption}
+)}}\label{classWatchdog_a9c38cdfcd21f1b66e4f19793c3116f63}
+\-Configure how many seconds your watchdog can be neglected before it starves to death.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em expiration} & \-The number of seconds before starvation following a meal (watchdog starves if it doesn't eat this often). \\
+\hline
+\end{DoxyParams}
+
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+\-Watchdog.\-h\item 
+\-Watchdog.\-cpp\end{DoxyCompactItemize}

@@ -1,0 +1,360 @@
+\hypertarget{classPWM}{\section{\-P\-W\-M \-Class \-Reference}
+\label{classPWM}\index{\-P\-W\-M@{\-P\-W\-M}}
+}
+
+
+{\ttfamily \#include $<$\-P\-W\-M.\-h$>$}
+
+\-Inheritance diagram for \-P\-W\-M\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=5.000000cm]{classPWM}
+\end{center}
+\end{figure}
+\subsection*{\-Public \-Types}
+\begin{DoxyCompactItemize}
+\item 
+enum {\bfseries \-Period\-Multiplier} \{ {\bfseries k\-Period\-Multiplier\-\_\-1\-X} =  1, 
+{\bfseries k\-Period\-Multiplier\-\_\-2\-X} =  2, 
+{\bfseries k\-Period\-Multiplier\-\_\-4\-X} =  4
+ \}
+\end{DoxyCompactItemize}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classPWM_aa96fde4003a2ee8c57f90019b2504009}{\-P\-W\-M} (\-U\-I\-N\-T32 channel)
+\item 
+\hyperlink{classPWM_aeded1d00b096610b78ce79a21cdaa2b8}{\-P\-W\-M} (\-U\-I\-N\-T32 slot, \-U\-I\-N\-T32 channel)
+\item 
+virtual \hyperlink{classPWM_a903377c1da3618530f999d77297406af}{$\sim$\-P\-W\-M} ()
+\item 
+virtual void \hyperlink{classPWM_ae0916ef0dec0ad1e7793a16d3d6c42c3}{\-Set\-Raw} (\-U\-I\-N\-T8 value)
+\item 
+virtual \-U\-I\-N\-T8 \hyperlink{classPWM_a4fe28ee13017aa4c6b9b8fa662ebf99e}{\-Get\-Raw} ()
+\item 
+void \hyperlink{classPWM_a274fbac1ce527d1b08fab2ef4d66c35b}{\-Set\-Period\-Multiplier} (\-Period\-Multiplier mult)
+\item 
+void \hyperlink{classPWM_a9e3edb95ce8aefe94e2d0827798e62a1}{\-Enable\-Deadband\-Elimination} (bool eliminate\-Deadband)
+\item 
+void \hyperlink{classPWM_a57047fe0445577e94cebad0aa96165be}{\-Set\-Bounds} (\-I\-N\-T32 max, \-I\-N\-T32 deadband\-Max, \-I\-N\-T32 center, \-I\-N\-T32 deadband\-Min, \-I\-N\-T32 min)
+\end{DoxyCompactItemize}
+\subsection*{\-Protected \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{classPWM_a93e43862c48e9a06d95bd916b77c183a}{\-Set\-Position} (float pos)
+\item 
+virtual float \hyperlink{classPWM_a2f5dcbf84dc82c4b19098c4cc99d0390}{\-Get\-Position} ()
+\item 
+virtual void \hyperlink{classPWM_a947e5f6073da9e4d1b60db0c7791ca9c}{\-Set\-Speed} (float speed)
+\item 
+virtual float \hyperlink{classPWM_a42b209cbe7e63732918cbbcb55bfaac7}{\-Get\-Speed} ()
+\end{DoxyCompactItemize}
+\subsection*{\-Protected \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classPWM_a80b83bf5f9751ceaf6439fccab8fe5d0}{bool {\bfseries m\-\_\-eliminate\-Deadband}}\label{classPWM_a80b83bf5f9751ceaf6439fccab8fe5d0}
+
+\item 
+\hypertarget{classPWM_a2494b8bdaa325b304c1f3ef9c2c0cf4f}{\-I\-N\-T32 {\bfseries m\-\_\-max\-Pwm}}\label{classPWM_a2494b8bdaa325b304c1f3ef9c2c0cf4f}
+
+\item 
+\hypertarget{classPWM_ad679eaccdc7edfd3eb2c6b52f41669a9}{\-I\-N\-T32 {\bfseries m\-\_\-deadband\-Max\-Pwm}}\label{classPWM_ad679eaccdc7edfd3eb2c6b52f41669a9}
+
+\item 
+\hypertarget{classPWM_ae675cc802a52f61413ea64823e843f93}{\-I\-N\-T32 {\bfseries m\-\_\-center\-Pwm}}\label{classPWM_ae675cc802a52f61413ea64823e843f93}
+
+\item 
+\hypertarget{classPWM_a51086c285825c581369217b0f4e4a527}{\-I\-N\-T32 {\bfseries m\-\_\-deadband\-Min\-Pwm}}\label{classPWM_a51086c285825c581369217b0f4e4a527}
+
+\item 
+\hypertarget{classPWM_abceceb853052bcb9c84a79a6e034d368}{\-I\-N\-T32 {\bfseries m\-\_\-min\-Pwm}}\label{classPWM_abceceb853052bcb9c84a79a6e034d368}
+
+\end{DoxyCompactItemize}
+\subsection*{\-Static \-Protected \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const \-U\-I\-N\-T32 \hyperlink{classPWM_ad76e35266df11ca46f9792492671379a}{k\-Default\-Pwm\-Period} = 774
+\item 
+static const \-U\-I\-N\-T32 \hyperlink{classPWM_a6d481a094dc4d1df83cfd77b2d6bbf06}{k\-Default\-Min\-Pwm\-High} = 102
+\item 
+\hypertarget{classPWM_a1128d7b7ad8cb6a4d3bb49ef4c08fbfa}{static const \-I\-N\-T32 {\bfseries k\-Pwm\-Disabled} = 0}\label{classPWM_a1128d7b7ad8cb6a4d3bb49ef4c08fbfa}
+
+\end{DoxyCompactItemize}
+\subsection*{\-Friends}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classPWM_aa15053da4e6cbe2d051a32116bcfbf2b}{class {\bfseries \-Digital\-Module}}\label{classPWM_aa15053da4e6cbe2d051a32116bcfbf2b}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-Class implements the \hyperlink{classPWM}{\-P\-W\-M} generation in the \-F\-P\-G\-A.
+
+\-The values supplied as arguments for \hyperlink{classPWM}{\-P\-W\-M} outputs range from -\/1.\-0 to 1.\-0. \-They are mapped to the hardware dependent values, in this case 0-\/255 for the \-F\-P\-G\-A. \-Changes are immediately sent to the \-F\-P\-G\-A, and the update occurs at the next \-F\-P\-G\-A cycle. \-There is no delay.
+
+\-As of revision 0.\-1.\-10 of the \-F\-P\-G\-A, the \-F\-P\-G\-A interprets the 0-\/255 values as follows\-:
+\begin{DoxyItemize}
+\item 255 = full \char`\"{}forward\char`\"{}
+\item 254 to 129 = linear scaling from \char`\"{}full forward\char`\"{} to \char`\"{}center\char`\"{}
+\item 128 = center value
+\item 127 to 2 = linear scaling from \char`\"{}center\char`\"{} to \char`\"{}full reverse\char`\"{}
+\item 1 = full \char`\"{}reverse\char`\"{}
+\item 0 = disabled (i.\-e. \hyperlink{classPWM}{\-P\-W\-M} output is held low) 
+\end{DoxyItemize}
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{classPWM_aa96fde4003a2ee8c57f90019b2504009}{\index{\-P\-W\-M@{\-P\-W\-M}!\-P\-W\-M@{\-P\-W\-M}}
+\index{\-P\-W\-M@{\-P\-W\-M}!PWM@{\-P\-W\-M}}
+\subsubsection[{\-P\-W\-M}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-P\-W\-M\-::\-P\-W\-M} (
+\begin{DoxyParamCaption}
+\item[{\-U\-I\-N\-T32}]{channel}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}explicit\mbox{]}}}}\label{classPWM_aa96fde4003a2ee8c57f90019b2504009}
+\-Allocate a \hyperlink{classPWM}{\-P\-W\-M} in the default module given a channel.
+
+\-Using a default module allocate a \hyperlink{classPWM}{\-P\-W\-M} given the channel number. \-The default module is the first slot numerically in the c\-R\-I\-O chassis.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em channel} & \-The \hyperlink{classPWM}{\-P\-W\-M} channel on the digital module. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classPWM_aeded1d00b096610b78ce79a21cdaa2b8}{\index{\-P\-W\-M@{\-P\-W\-M}!\-P\-W\-M@{\-P\-W\-M}}
+\index{\-P\-W\-M@{\-P\-W\-M}!PWM@{\-P\-W\-M}}
+\subsubsection[{\-P\-W\-M}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-P\-W\-M\-::\-P\-W\-M} (
+\begin{DoxyParamCaption}
+\item[{\-U\-I\-N\-T32}]{slot, }
+\item[{\-U\-I\-N\-T32}]{channel}
+\end{DoxyParamCaption}
+)}}\label{classPWM_aeded1d00b096610b78ce79a21cdaa2b8}
+\-Allocate a \hyperlink{classPWM}{\-P\-W\-M} given a module and channel. \-Allocate a \hyperlink{classPWM}{\-P\-W\-M} using a module and channel number.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em slot} & \-The slot the digital module is plugged into. \\
+\hline
+{\em channel} & \-The \hyperlink{classPWM}{\-P\-W\-M} channel on the digital module. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classPWM_a903377c1da3618530f999d77297406af}{\index{\-P\-W\-M@{\-P\-W\-M}!$\sim$\-P\-W\-M@{$\sim$\-P\-W\-M}}
+\index{$\sim$\-P\-W\-M@{$\sim$\-P\-W\-M}!PWM@{\-P\-W\-M}}
+\subsubsection[{$\sim$\-P\-W\-M}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-P\-W\-M\-::$\sim$\-P\-W\-M} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{classPWM_a903377c1da3618530f999d77297406af}
+\-Free the \hyperlink{classPWM}{\-P\-W\-M} channel.
+
+\-Free the resource associated with the \hyperlink{classPWM}{\-P\-W\-M} channel and set the value to 0. 
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classPWM_a9e3edb95ce8aefe94e2d0827798e62a1}{\index{\-P\-W\-M@{\-P\-W\-M}!\-Enable\-Deadband\-Elimination@{\-Enable\-Deadband\-Elimination}}
+\index{\-Enable\-Deadband\-Elimination@{\-Enable\-Deadband\-Elimination}!PWM@{\-P\-W\-M}}
+\subsubsection[{\-Enable\-Deadband\-Elimination}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-P\-W\-M\-::\-Enable\-Deadband\-Elimination} (
+\begin{DoxyParamCaption}
+\item[{bool}]{eliminate\-Deadband}
+\end{DoxyParamCaption}
+)}}\label{classPWM_a9e3edb95ce8aefe94e2d0827798e62a1}
+\-Optionally eliminate the deadband from a speed controller. 
+\begin{DoxyParams}{\-Parameters}
+{\em eliminate\-Deadband} & \-If true, set the motor curve on the \hyperlink{classJaguar}{\-Jaguar} to eliminate the deadband in the middle of the range. \-Otherwise, keep the full range without modifying any values. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classPWM_a2f5dcbf84dc82c4b19098c4cc99d0390}{\index{\-P\-W\-M@{\-P\-W\-M}!\-Get\-Position@{\-Get\-Position}}
+\index{\-Get\-Position@{\-Get\-Position}!PWM@{\-P\-W\-M}}
+\subsubsection[{\-Get\-Position}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf \-P\-W\-M\-::\-Get\-Position} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}protected, virtual\mbox{]}}}}\label{classPWM_a2f5dcbf84dc82c4b19098c4cc99d0390}
+\-Get the \hyperlink{classPWM}{\-P\-W\-M} value in terms of a position.
+
+\-This is intended to be used by servos.
+
+\begin{DoxyPrecond}{\-Precondition}
+\-Set\-Max\-Positive\-Pwm() called. 
+
+\-Set\-Min\-Negative\-Pwm() called.
+\end{DoxyPrecond}
+\begin{DoxyReturn}{\-Returns}
+\-The position the servo is set to between 0.\-0 and 1.\-0. 
+\end{DoxyReturn}
+\hypertarget{classPWM_a4fe28ee13017aa4c6b9b8fa662ebf99e}{\index{\-P\-W\-M@{\-P\-W\-M}!\-Get\-Raw@{\-Get\-Raw}}
+\index{\-Get\-Raw@{\-Get\-Raw}!PWM@{\-P\-W\-M}}
+\subsubsection[{\-Get\-Raw}]{\setlength{\rightskip}{0pt plus 5cm}\-U\-I\-N\-T8 {\bf \-P\-W\-M\-::\-Get\-Raw} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{classPWM_a4fe28ee13017aa4c6b9b8fa662ebf99e}
+\-Get the \hyperlink{classPWM}{\-P\-W\-M} value directly from the hardware.
+
+\-Read a raw value from a \hyperlink{classPWM}{\-P\-W\-M} channel.
+
+\begin{DoxyReturn}{\-Returns}
+\-Raw \hyperlink{classPWM}{\-P\-W\-M} control value. \-Range\-: 0 -\/ 255. 
+\end{DoxyReturn}
+\hypertarget{classPWM_a42b209cbe7e63732918cbbcb55bfaac7}{\index{\-P\-W\-M@{\-P\-W\-M}!\-Get\-Speed@{\-Get\-Speed}}
+\index{\-Get\-Speed@{\-Get\-Speed}!PWM@{\-P\-W\-M}}
+\subsubsection[{\-Get\-Speed}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf \-P\-W\-M\-::\-Get\-Speed} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}protected, virtual\mbox{]}}}}\label{classPWM_a42b209cbe7e63732918cbbcb55bfaac7}
+\-Get the \hyperlink{classPWM}{\-P\-W\-M} value in terms of speed.
+
+\-This is intended to be used by speed controllers.
+
+\begin{DoxyPrecond}{\-Precondition}
+\-Set\-Max\-Positive\-Pwm() called. 
+
+\-Set\-Min\-Positive\-Pwm() called. 
+
+\-Set\-Max\-Negative\-Pwm() called. 
+
+\-Set\-Min\-Negative\-Pwm() called.
+\end{DoxyPrecond}
+\begin{DoxyReturn}{\-Returns}
+\-The most recently set speed between -\/1.\-0 and 1.\-0. 
+\end{DoxyReturn}
+\hypertarget{classPWM_a57047fe0445577e94cebad0aa96165be}{\index{\-P\-W\-M@{\-P\-W\-M}!\-Set\-Bounds@{\-Set\-Bounds}}
+\index{\-Set\-Bounds@{\-Set\-Bounds}!PWM@{\-P\-W\-M}}
+\subsubsection[{\-Set\-Bounds}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-P\-W\-M\-::\-Set\-Bounds} (
+\begin{DoxyParamCaption}
+\item[{\-I\-N\-T32}]{max, }
+\item[{\-I\-N\-T32}]{deadband\-Max, }
+\item[{\-I\-N\-T32}]{center, }
+\item[{\-I\-N\-T32}]{deadband\-Min, }
+\item[{\-I\-N\-T32}]{min}
+\end{DoxyParamCaption}
+)}}\label{classPWM_a57047fe0445577e94cebad0aa96165be}
+\-Set the bounds on the \hyperlink{classPWM}{\-P\-W\-M} values. \-This sets the bounds on the \hyperlink{classPWM}{\-P\-W\-M} values for a particular each type of controller. \-The values determine the upper and lower speeds as well as the deadband bracket. 
+\begin{DoxyParams}{\-Parameters}
+{\em max} & \-The \-Minimum pwm value \\
+\hline
+{\em deadband\-Max} & \-The high end of the deadband range \\
+\hline
+{\em center} & \-The center speed (off) \\
+\hline
+{\em deadband\-Min} & \-The low end of the deadband range \\
+\hline
+{\em min} & \-The minimum pwm value \\
+\hline
+\end{DoxyParams}
+\hypertarget{classPWM_a274fbac1ce527d1b08fab2ef4d66c35b}{\index{\-P\-W\-M@{\-P\-W\-M}!\-Set\-Period\-Multiplier@{\-Set\-Period\-Multiplier}}
+\index{\-Set\-Period\-Multiplier@{\-Set\-Period\-Multiplier}!PWM@{\-P\-W\-M}}
+\subsubsection[{\-Set\-Period\-Multiplier}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-P\-W\-M\-::\-Set\-Period\-Multiplier} (
+\begin{DoxyParamCaption}
+\item[{\-Period\-Multiplier}]{mult}
+\end{DoxyParamCaption}
+)}}\label{classPWM_a274fbac1ce527d1b08fab2ef4d66c35b}
+\-Slow down the \hyperlink{classPWM}{\-P\-W\-M} signal for old devices.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em mult} & \-The period multiplier to apply to this channel \\
+\hline
+\end{DoxyParams}
+\hypertarget{classPWM_a93e43862c48e9a06d95bd916b77c183a}{\index{\-P\-W\-M@{\-P\-W\-M}!\-Set\-Position@{\-Set\-Position}}
+\index{\-Set\-Position@{\-Set\-Position}!PWM@{\-P\-W\-M}}
+\subsubsection[{\-Set\-Position}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-P\-W\-M\-::\-Set\-Position} (
+\begin{DoxyParamCaption}
+\item[{float}]{pos}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}protected, virtual\mbox{]}}}}\label{classPWM_a93e43862c48e9a06d95bd916b77c183a}
+\-Set the \hyperlink{classPWM}{\-P\-W\-M} value based on a position.
+
+\-This is intended to be used by servos.
+
+\begin{DoxyPrecond}{\-Precondition}
+\-Set\-Max\-Positive\-Pwm() called. 
+
+\-Set\-Min\-Negative\-Pwm() called.
+\end{DoxyPrecond}
+
+\begin{DoxyParams}{\-Parameters}
+{\em pos} & \-The position to set the servo between 0.\-0 and 1.\-0. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classPWM_ae0916ef0dec0ad1e7793a16d3d6c42c3}{\index{\-P\-W\-M@{\-P\-W\-M}!\-Set\-Raw@{\-Set\-Raw}}
+\index{\-Set\-Raw@{\-Set\-Raw}!PWM@{\-P\-W\-M}}
+\subsubsection[{\-Set\-Raw}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-P\-W\-M\-::\-Set\-Raw} (
+\begin{DoxyParamCaption}
+\item[{\-U\-I\-N\-T8}]{value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{classPWM_ae0916ef0dec0ad1e7793a16d3d6c42c3}
+\-Set the \hyperlink{classPWM}{\-P\-W\-M} value directly to the hardware.
+
+\-Write a raw value to a \hyperlink{classPWM}{\-P\-W\-M} channel.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em value} & \-Raw \hyperlink{classPWM}{\-P\-W\-M} value. \-Range 0 -\/ 255. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classPWM_a947e5f6073da9e4d1b60db0c7791ca9c}{\index{\-P\-W\-M@{\-P\-W\-M}!\-Set\-Speed@{\-Set\-Speed}}
+\index{\-Set\-Speed@{\-Set\-Speed}!PWM@{\-P\-W\-M}}
+\subsubsection[{\-Set\-Speed}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-P\-W\-M\-::\-Set\-Speed} (
+\begin{DoxyParamCaption}
+\item[{float}]{speed}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}protected, virtual\mbox{]}}}}\label{classPWM_a947e5f6073da9e4d1b60db0c7791ca9c}
+\-Set the \hyperlink{classPWM}{\-P\-W\-M} value based on a speed.
+
+\-This is intended to be used by speed controllers.
+
+\begin{DoxyPrecond}{\-Precondition}
+\-Set\-Max\-Positive\-Pwm() called. 
+
+\-Set\-Min\-Positive\-Pwm() called. 
+
+\-Set\-Center\-Pwm() called. 
+
+\-Set\-Max\-Negative\-Pwm() called. 
+
+\-Set\-Min\-Negative\-Pwm() called.
+\end{DoxyPrecond}
+
+\begin{DoxyParams}{\-Parameters}
+{\em speed} & \-The speed to set the speed controller between -\/1.\-0 and 1.\-0. \\
+\hline
+\end{DoxyParams}
+
+
+\-Reimplemented in \hyperlink{classSafePWM_af1ed936d88f3ee6446b01c17feb24b78}{\-Safe\-P\-W\-M}.
+
+
+
+\subsection{\-Member \-Data \-Documentation}
+\hypertarget{classPWM_a6d481a094dc4d1df83cfd77b2d6bbf06}{\index{\-P\-W\-M@{\-P\-W\-M}!k\-Default\-Min\-Pwm\-High@{k\-Default\-Min\-Pwm\-High}}
+\index{k\-Default\-Min\-Pwm\-High@{k\-Default\-Min\-Pwm\-High}!PWM@{\-P\-W\-M}}
+\subsubsection[{k\-Default\-Min\-Pwm\-High}]{\setlength{\rightskip}{0pt plus 5cm}const \-U\-I\-N\-T32 {\bf \-P\-W\-M\-::k\-Default\-Min\-Pwm\-High} = 102\hspace{0.3cm}{\ttfamily  \mbox{[}static, protected\mbox{]}}}}\label{classPWM_a6d481a094dc4d1df83cfd77b2d6bbf06}
+k\-Default\-Min\-Pwm\-High is \char`\"{}ticks\char`\"{} where each tick is 6.\-525us
+
+
+\begin{DoxyItemize}
+\item \-There are 128 pwm values less than the center, so...
+\item \-The minimum output pulse length is 1.\-5ms -\/ 128 $\ast$ 6.\-525us = 0.\-665ms
+\item 0.\-665ms / 6.\-525us per tick = 102 
+\end{DoxyItemize}\hypertarget{classPWM_ad76e35266df11ca46f9792492671379a}{\index{\-P\-W\-M@{\-P\-W\-M}!k\-Default\-Pwm\-Period@{k\-Default\-Pwm\-Period}}
+\index{k\-Default\-Pwm\-Period@{k\-Default\-Pwm\-Period}!PWM@{\-P\-W\-M}}
+\subsubsection[{k\-Default\-Pwm\-Period}]{\setlength{\rightskip}{0pt plus 5cm}const \-U\-I\-N\-T32 {\bf \-P\-W\-M\-::k\-Default\-Pwm\-Period} = 774\hspace{0.3cm}{\ttfamily  \mbox{[}static, protected\mbox{]}}}}\label{classPWM_ad76e35266df11ca46f9792492671379a}
+k\-Default\-Pwm\-Period is \char`\"{}ticks\char`\"{} where each tick is 6.\-525us
+
+
+\begin{DoxyItemize}
+\item 20ms periods (50 \-Hz) are the \char`\"{}safest\char`\"{} setting in that this works for all devices
+\item 20ms periods seem to be desirable for \-Vex \-Motors
+\item 20ms periods are the specified period for \-H\-S-\/322\-H\-D servos, but work reliably down to 10.\-0 ms; starting at about 8.\-5ms, the servo sometimes hums and get hot; by 5.\-0ms the hum is nearly continuous
+\item 10ms periods work well for \hyperlink{classVictor}{\-Victor} 884
+\item 5ms periods allows higher update rates for \-Luminary \-Micro \hyperlink{classJaguar}{\-Jaguar} speed controllers. \-Due to the shipping firmware on the \hyperlink{classJaguar}{\-Jaguar}, we can't run the update period less than 5.\-05 ms.
+\end{DoxyItemize}
+
+k\-Default\-Pwm\-Period is the 1x period (5.\-05 ms). \-In hardware, the period scaling is implemented as an output squelch to get longer periods for old devices.
+
+\-Set to 5.\-05 ms period / 6.\-525us clock = 774 
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+\-P\-W\-M.\-h\item 
+\-P\-W\-M.\-cpp\end{DoxyCompactItemize}

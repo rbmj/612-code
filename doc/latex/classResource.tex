@@ -1,0 +1,81 @@
+\hypertarget{classResource}{\section{\-Resource \-Class \-Reference}
+\label{classResource}\index{\-Resource@{\-Resource}}
+}
+
+
+{\ttfamily \#include $<$\-Resource.\-h$>$}
+
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \hyperlink{classResource_a0e5ec475e2601bdb33644468e86f6f10}{$\sim$\-Resource} ()
+\item 
+\-U\-I\-N\-T32 \hyperlink{classResource_ae3a993c7a656e97b51c77b1f7698ef3c}{\-Allocate} ()
+\item 
+\-U\-I\-N\-T32 \hyperlink{classResource_a502ca9f878a2c538fd0db89621033140}{\-Allocate} (\-U\-I\-N\-T32 index)
+\item 
+void \hyperlink{classResource_a1f8793fe4ecfcd6c4ae1417c3d0745ca}{\-Free} (\-U\-I\-N\-T32 index)
+\end{DoxyCompactItemize}
+\subsection*{\-Static \-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classResource_ade155b92abe4ff2b0c43576434033922}{static void {\bfseries \-Create\-Resource\-Object} (\hyperlink{classResource}{\-Resource} $\ast$$\ast$r, \-U\-I\-N\-T32 elements)}\label{classResource_ade155b92abe4ff2b0c43576434033922}
+
+\end{DoxyCompactItemize}
+\subsection*{\-Protected \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classResource_a0b78cc75804fa191429da3cc501ad5ab}{\-Resource} (\-U\-I\-N\-T32 size)
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-Track resources in the program. \-The \hyperlink{classResource}{\-Resource} class is a convienent way of keeping track of allocated arbitrary resources in the program. \-Resources are just indicies that have an lower and upper bound that are tracked by this class. \-In the library they are used for tracking allocation of hardware channels but this is purely arbitrary. \-The resource class does not do any actual allocation, but simply tracks if a given index is currently in use.
+
+\-W\-A\-R\-N\-I\-N\-G\-: this should only be statically allocated. \-When the program loads into memory all the static constructors are called. \-At that time a linked list of all the \char`\"{}\-Resources\char`\"{} is created. \-Then when the program actually starts -\/ in the \-Robot constructor, all resources are initialized. \-This ensures that the program is restartable in memory without having to unload/reload. 
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{classResource_a0e5ec475e2601bdb33644468e86f6f10}{\index{\-Resource@{\-Resource}!$\sim$\-Resource@{$\sim$\-Resource}}
+\index{$\sim$\-Resource@{$\sim$\-Resource}!Resource@{\-Resource}}
+\subsubsection[{$\sim$\-Resource}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Resource\-::$\sim$\-Resource} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{classResource_a0e5ec475e2601bdb33644468e86f6f10}
+\-Delete the allocated array or resources. \-This happens when the module is unloaded (provided it was statically allocated). \hypertarget{classResource_a0b78cc75804fa191429da3cc501ad5ab}{\index{\-Resource@{\-Resource}!\-Resource@{\-Resource}}
+\index{\-Resource@{\-Resource}!Resource@{\-Resource}}
+\subsubsection[{\-Resource}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Resource\-::\-Resource} (
+\begin{DoxyParamCaption}
+\item[{\-U\-I\-N\-T32}]{elements}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}explicit, protected\mbox{]}}}}\label{classResource_a0b78cc75804fa191429da3cc501ad5ab}
+\-Allocate storage for a new instance of \hyperlink{classResource}{\-Resource}. \-Allocate a bool array of values that will get initialized to indicate that no resources have been allocated yet. \-The indicies of the resources are 0..size-\/1. 
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classResource_ae3a993c7a656e97b51c77b1f7698ef3c}{\index{\-Resource@{\-Resource}!\-Allocate@{\-Allocate}}
+\index{\-Allocate@{\-Allocate}!Resource@{\-Resource}}
+\subsubsection[{\-Allocate}]{\setlength{\rightskip}{0pt plus 5cm}\-U\-I\-N\-T32 {\bf \-Resource\-::\-Allocate} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classResource_ae3a993c7a656e97b51c77b1f7698ef3c}
+\-Allocate a resource. \-When a resource is requested, mark it allocated. \-In this case, a free resource value within the range is located and returned after it is marked allocated. \hypertarget{classResource_a502ca9f878a2c538fd0db89621033140}{\index{\-Resource@{\-Resource}!\-Allocate@{\-Allocate}}
+\index{\-Allocate@{\-Allocate}!Resource@{\-Resource}}
+\subsubsection[{\-Allocate}]{\setlength{\rightskip}{0pt plus 5cm}\-U\-I\-N\-T32 {\bf \-Resource\-::\-Allocate} (
+\begin{DoxyParamCaption}
+\item[{\-U\-I\-N\-T32}]{index}
+\end{DoxyParamCaption}
+)}}\label{classResource_a502ca9f878a2c538fd0db89621033140}
+\-Allocate a specific resource value. \-The user requests a specific resource value, i.\-e. channel number and it is verified unallocated, then returned. \hypertarget{classResource_a1f8793fe4ecfcd6c4ae1417c3d0745ca}{\index{\-Resource@{\-Resource}!\-Free@{\-Free}}
+\index{\-Free@{\-Free}!Resource@{\-Resource}}
+\subsubsection[{\-Free}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Resource\-::\-Free} (
+\begin{DoxyParamCaption}
+\item[{\-U\-I\-N\-T32}]{index}
+\end{DoxyParamCaption}
+)}}\label{classResource_a1f8793fe4ecfcd6c4ae1417c3d0745ca}
+\-Free an allocated resource. \-After a resource is no longer needed, for example a destructor is called for a channel assignment class, \-Free will release the resource value so it can be reused somewhere else in the program. 
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+\-Resource.\-h\item 
+\-Resource.\-cpp\end{DoxyCompactItemize}

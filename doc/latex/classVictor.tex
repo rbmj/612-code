@@ -1,0 +1,142 @@
+\hypertarget{classVictor}{\section{\-Victor \-Class \-Reference}
+\label{classVictor}\index{\-Victor@{\-Victor}}
+}
+
+
+{\ttfamily \#include $<$\-Victor.\-h$>$}
+
+\-Inheritance diagram for \-Victor\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=5.000000cm]{classVictor}
+\end{center}
+\end{figure}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classVictor_a76d5403d48eba19d889866c240dca391}{\-Victor} (\-U\-I\-N\-T32 channel)
+\item 
+\hyperlink{classVictor_ac2d85bd01921c5e47440ea28fa64ae40}{\-Victor} (\-U\-I\-N\-T32 slot, \-U\-I\-N\-T32 channel)
+\item 
+virtual void \hyperlink{classVictor_aabd64f11a67851b3a4eed9b2ea1016ca}{\-Set} (float value, \-U\-I\-N\-T8 sync\-Group=0)
+\item 
+virtual float \hyperlink{classVictor_a71f7b8a475186a823515c4508af7498c}{\-Get} ()
+\item 
+virtual void \hyperlink{classVictor_a62b0d4aef3b9b749e326532164924a06}{\-Disable} ()
+\item 
+virtual void \hyperlink{classVictor_a9b0d32b9299b6525d6450ff88c3365a7}{\-P\-I\-D\-Write} (float output)
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-I\-F\-I \hyperlink{classVictor}{\-Victor} \-Speed \-Controller 
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{classVictor_a76d5403d48eba19d889866c240dca391}{\index{\-Victor@{\-Victor}!\-Victor@{\-Victor}}
+\index{\-Victor@{\-Victor}!Victor@{\-Victor}}
+\subsubsection[{\-Victor}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Victor\-::\-Victor} (
+\begin{DoxyParamCaption}
+\item[{\-U\-I\-N\-T32}]{channel}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}explicit\mbox{]}}}}\label{classVictor_a76d5403d48eba19d889866c240dca391}
+\-Constructor that assumes the default digital module.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em channel} & \-The \hyperlink{classPWM}{\-P\-W\-M} channel on the digital module that the \hyperlink{classVictor}{\-Victor} is attached to. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classVictor_ac2d85bd01921c5e47440ea28fa64ae40}{\index{\-Victor@{\-Victor}!\-Victor@{\-Victor}}
+\index{\-Victor@{\-Victor}!Victor@{\-Victor}}
+\subsubsection[{\-Victor}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Victor\-::\-Victor} (
+\begin{DoxyParamCaption}
+\item[{\-U\-I\-N\-T32}]{slot, }
+\item[{\-U\-I\-N\-T32}]{channel}
+\end{DoxyParamCaption}
+)}}\label{classVictor_ac2d85bd01921c5e47440ea28fa64ae40}
+\-Constructor that specifies the digital module.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em slot} & \-The slot in the chassis that the digital module is plugged into. \\
+\hline
+{\em channel} & \-The \hyperlink{classPWM}{\-P\-W\-M} channel on the digital module that the \hyperlink{classVictor}{\-Victor} is attached to. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classVictor_a62b0d4aef3b9b749e326532164924a06}{\index{\-Victor@{\-Victor}!\-Disable@{\-Disable}}
+\index{\-Disable@{\-Disable}!Victor@{\-Victor}}
+\subsubsection[{\-Disable}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Victor\-::\-Disable} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{classVictor_a62b0d4aef3b9b749e326532164924a06}
+\-Common interface for disabling a motor. 
+
+\-Implements \hyperlink{classSpeedController_a6fd7bbef6feb65b89d7eb727e8c1ec76}{\-Speed\-Controller}.
+
+\hypertarget{classVictor_a71f7b8a475186a823515c4508af7498c}{\index{\-Victor@{\-Victor}!\-Get@{\-Get}}
+\index{\-Get@{\-Get}!Victor@{\-Victor}}
+\subsubsection[{\-Get}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf \-Victor\-::\-Get} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{classVictor_a71f7b8a475186a823515c4508af7498c}
+\-Get the recently set value of the \hyperlink{classPWM}{\-P\-W\-M}.
+
+\begin{DoxyReturn}{\-Returns}
+\-The most recently set value for the \hyperlink{classPWM}{\-P\-W\-M} between -\/1.\-0 and 1.\-0. 
+\end{DoxyReturn}
+
+
+\-Implements \hyperlink{classSpeedController_a41c2b62853ab141b471af0864e469031}{\-Speed\-Controller}.
+
+\hypertarget{classVictor_a9b0d32b9299b6525d6450ff88c3365a7}{\index{\-Victor@{\-Victor}!\-P\-I\-D\-Write@{\-P\-I\-D\-Write}}
+\index{\-P\-I\-D\-Write@{\-P\-I\-D\-Write}!Victor@{\-Victor}}
+\subsubsection[{\-P\-I\-D\-Write}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Victor\-::\-P\-I\-D\-Write} (
+\begin{DoxyParamCaption}
+\item[{float}]{output}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{classVictor_a9b0d32b9299b6525d6450ff88c3365a7}
+\-Write out the \-P\-I\-D value as seen in the \hyperlink{classPIDOutput}{\-P\-I\-D\-Output} base object.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em output} & \-Write out the \hyperlink{classPWM}{\-P\-W\-M} value as was found in the \hyperlink{classPIDController}{\-P\-I\-D\-Controller} \\
+\hline
+\end{DoxyParams}
+
+
+\-Implements \hyperlink{classPIDOutput}{\-P\-I\-D\-Output}.
+
+\hypertarget{classVictor_aabd64f11a67851b3a4eed9b2ea1016ca}{\index{\-Victor@{\-Victor}!\-Set@{\-Set}}
+\index{\-Set@{\-Set}!Victor@{\-Victor}}
+\subsubsection[{\-Set}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Victor\-::\-Set} (
+\begin{DoxyParamCaption}
+\item[{float}]{speed, }
+\item[{\-U\-I\-N\-T8}]{sync\-Group = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{classVictor_aabd64f11a67851b3a4eed9b2ea1016ca}
+\-Set the \hyperlink{classPWM}{\-P\-W\-M} value.
+
+\-The \hyperlink{classPWM}{\-P\-W\-M} value is set using a range of -\/1.\-0 to 1.\-0, appropriately scaling the value for the \-F\-P\-G\-A.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em speed} & \-The speed value between -\/1.\-0 and 1.\-0 to set. \\
+\hline
+{\em sync\-Group} & \-Unused interface. \\
+\hline
+\end{DoxyParams}
+
+
+\-Implements \hyperlink{classSpeedController_abaa1c81b41a9cc673fe92978bb12f82e}{\-Speed\-Controller}.
+
+
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+\-Victor.\-h\item 
+\-Victor.\-cpp\end{DoxyCompactItemize}
