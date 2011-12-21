@@ -88,6 +88,13 @@ void robot_class::TeleopContinuous() {
         //explicitly state drive power is based on Y axis of that side joy
         drive.TankDrive(left, right);
     }
+    if (left_joystick.GetRawButton(6)) {        // button 6 on left  joystick move arm forward
+		minibot_jag.Set(0.2);
+	} else if (left_joystick.GetRawButton(7)) { // button 7 on right joystick move arm backward
+		minibot_jag.Set(-0.2);
+	} else {
+		minibot_jag.Set(0);
+	}
     Wait(0.005); //let the CPU rest a little - 5 ms isn't too long
 }
 

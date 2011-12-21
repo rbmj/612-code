@@ -44,6 +44,7 @@ extern drive_jaguar left_front_motor;
 extern drive_jaguar right_front_motor;
 extern drive_jaguar left_rear_motor;
 extern drive_jaguar right_rear_motor;
+extern Jaguar       minibot_jag;
 
 //DIOs
 
@@ -54,5 +55,6 @@ extern drive_jaguar right_rear_motor;
 //USBs (on driver station)
 extern Joystick left_joystick;
 extern Joystick right_joystick;
+extern Joystick gunner_joystick;
 
 #endif
