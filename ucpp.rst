@@ -32,8 +32,8 @@ Installation Directions (Linux/Unix)
    or through a download of a .tar.gz snapshot.
  - Add the ucpp folder to your path.  For example, I put ucpp in
    /usr/local/share, so I have this at the end of my /etc/profile::
-      # modify the file ~/.profile
-      # UCPP PATH - ucpp is located at /usr/local/share/ucpp
+      # This can go in either /etc/profile or ~/.profile
+      # UCPP PATH - ucpp is located at /usr/local/share/ucpp in this case
       # and the scripts are located in the ucpp subdirectory of *that*
       PATH="$PATH:/usr/local/share/ucpp/ucpp"
       export PATH
