@@ -1,107 +1,124 @@
-\hypertarget{classTimer}{\section{\-Timer \-Class \-Reference}
-\label{classTimer}\index{\-Timer@{\-Timer}}
+\hypertarget{classTimer}{
+\section{Timer Class Reference}
+\label{classTimer}\index{Timer@{Timer}}
 }
 
 
-{\ttfamily \#include $<$\-Timer.\-h$>$}
+{\ttfamily \#include $<$Timer.h$>$}
 
-\subsection*{\-Public \-Member \-Functions}
+\subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{classTimer_a5f16e8da27d2a5a5242dead46de05d97}{\-Timer} ()
+\hyperlink{classTimer_a5f16e8da27d2a5a5242dead46de05d97}{Timer} ()
 \item 
-double \hyperlink{classTimer_aadc180bcac64bc164f134d9c8076e1a3}{\-Get} ()
+double \hyperlink{classTimer_aadc180bcac64bc164f134d9c8076e1a3}{Get} ()
 \item 
-void \hyperlink{classTimer_ae7c0c1e7d12de4b8a6e7c64e451cdd2a}{\-Reset} ()
+void \hyperlink{classTimer_ae7c0c1e7d12de4b8a6e7c64e451cdd2a}{Reset} ()
 \item 
-void \hyperlink{classTimer_a4e607b129b392c11adddd9641a320436}{\-Start} ()
+void \hyperlink{classTimer_a4e607b129b392c11adddd9641a320436}{Start} ()
 \item 
-void \hyperlink{classTimer_a6379e797f968aaee6ac3bb12dc6b81c5}{\-Stop} ()
+void \hyperlink{classTimer_a6379e797f968aaee6ac3bb12dc6b81c5}{Stop} ()
 \item 
-bool \hyperlink{classTimer_a044e56cf40905d2f5037745e44cc3881}{\-Has\-Period\-Passed} (double period)
+bool \hyperlink{classTimer_a044e56cf40905d2f5037745e44cc3881}{HasPeriodPassed} (double period)
 \end{DoxyCompactItemize}
-\subsection*{\-Static \-Public \-Member \-Functions}
+\subsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{classTimer_af5869805a98a766621ac340488b04543}{static double {\bfseries \-Get\-F\-P\-G\-A\-Timestamp} (void)}\label{classTimer_af5869805a98a766621ac340488b04543}
+\hypertarget{classTimer_a7fa6e6dffec055e5104ccd6bcadec9aa}{
+static double {\bfseries GetFPGATimestamp} ()}
+\label{classTimer_a7fa6e6dffec055e5104ccd6bcadec9aa}
 
 \item 
-\hypertarget{classTimer_aff30b0b97a5426b2e43d424e03d81dc2}{static double {\bfseries \-Get\-P\-P\-C\-Timestamp} (void)}\label{classTimer_aff30b0b97a5426b2e43d424e03d81dc2}
+\hypertarget{classTimer_a6a326db4fa89871033bda5a0538c77c4}{
+static double {\bfseries GetPPCTimestamp} ()}
+\label{classTimer_a6a326db4fa89871033bda5a0538c77c4}
 
 \end{DoxyCompactItemize}
 
 
-\subsection{\-Detailed \-Description}
-\hyperlink{classTimer}{\-Timer} objects measure accumulated time in seconds. \-The timer object functions like a stopwatch. \-It can be started, stopped, and cleared. \-When the timer is running its value counts up in seconds. \-When stopped, the timer holds the current value. \-The implementation simply records the time when started and subtracts the current time whenever the value is requested. 
+\subsection{Detailed Description}
+\hyperlink{classTimer}{Timer} objects measure accumulated time in seconds. The timer object functions like a stopwatch. It can be started, stopped, and cleared. When the timer is running its value counts up in seconds. When stopped, the timer holds the current value. The implementation simply records the time when started and subtracts the current time whenever the value is requested. 
 
-\subsection{\-Constructor \& \-Destructor \-Documentation}
-\hypertarget{classTimer_a5f16e8da27d2a5a5242dead46de05d97}{\index{\-Timer@{\-Timer}!\-Timer@{\-Timer}}
-\index{\-Timer@{\-Timer}!Timer@{\-Timer}}
-\subsubsection[{\-Timer}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Timer\-::\-Timer} (
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classTimer_a5f16e8da27d2a5a5242dead46de05d97}{
+\index{Timer@{Timer}!Timer@{Timer}}
+\index{Timer@{Timer}!Timer@{Timer}}
+\subsubsection[{Timer}]{\setlength{\rightskip}{0pt plus 5cm}Timer::Timer (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)}}\label{classTimer_a5f16e8da27d2a5a5242dead46de05d97}
-\-Create a new timer object.
+)}}
+\label{classTimer_a5f16e8da27d2a5a5242dead46de05d97}
+Create a new timer object.
 
-\-Create a new timer object and reset the time to zero. \-The timer is initially not running and must be started. 
+Create a new timer object and reset the time to zero. The timer is initially not running and must be started. 
 
-\subsection{\-Member \-Function \-Documentation}
-\hypertarget{classTimer_aadc180bcac64bc164f134d9c8076e1a3}{\index{\-Timer@{\-Timer}!\-Get@{\-Get}}
-\index{\-Get@{\-Get}!Timer@{\-Timer}}
-\subsubsection[{\-Get}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf \-Timer\-::\-Get} (
+\subsection{Member Function Documentation}
+\hypertarget{classTimer_aadc180bcac64bc164f134d9c8076e1a3}{
+\index{Timer@{Timer}!Get@{Get}}
+\index{Get@{Get}!Timer@{Timer}}
+\subsubsection[{Get}]{\setlength{\rightskip}{0pt plus 5cm}double Timer::Get (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)}}\label{classTimer_aadc180bcac64bc164f134d9c8076e1a3}
-\-Get the current time from the timer. \-If the clock is running it is derived from the current system clock the start time stored in the timer class. \-If the clock is not running, then return the time when it was last stopped.
+)}}
+\label{classTimer_aadc180bcac64bc164f134d9c8076e1a3}
+Get the current time from the timer. If the clock is running it is derived from the current system clock the start time stored in the timer class. If the clock is not running, then return the time when it was last stopped.
 
-\begin{DoxyReturn}{\-Returns}
-unsigned \-Current time value for this timer in seconds 
+\begin{DoxyReturn}{Returns}
+unsigned Current time value for this timer in seconds 
 \end{DoxyReturn}
-\hypertarget{classTimer_a044e56cf40905d2f5037745e44cc3881}{\index{\-Timer@{\-Timer}!\-Has\-Period\-Passed@{\-Has\-Period\-Passed}}
-\index{\-Has\-Period\-Passed@{\-Has\-Period\-Passed}!Timer@{\-Timer}}
-\subsubsection[{\-Has\-Period\-Passed}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Timer\-::\-Has\-Period\-Passed} (
+\hypertarget{classTimer_a044e56cf40905d2f5037745e44cc3881}{
+\index{Timer@{Timer}!HasPeriodPassed@{HasPeriodPassed}}
+\index{HasPeriodPassed@{HasPeriodPassed}!Timer@{Timer}}
+\subsubsection[{HasPeriodPassed}]{\setlength{\rightskip}{0pt plus 5cm}bool Timer::HasPeriodPassed (
 \begin{DoxyParamCaption}
 \item[{double}]{period}
 \end{DoxyParamCaption}
-)}}\label{classTimer_a044e56cf40905d2f5037745e44cc3881}
-\-Check if the period specified has passed and if it has, advance the start time by that period. \-This is useful to decide if it's time to do periodic work without drifting later by the time it took to get around to checking.
+)}}
+\label{classTimer_a044e56cf40905d2f5037745e44cc3881}
+Check if the period specified has passed and if it has, advance the start time by that period. This is useful to decide if it's time to do periodic work without drifting later by the time it took to get around to checking.
 
 
-\begin{DoxyParams}{\-Parameters}
-{\em period} & \-The period to check for (in seconds). \\
+\begin{DoxyParams}{Parameters}
+{\em period} & The period to check for (in seconds). \\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{\-Returns}
-\-If the period has passed. 
+\begin{DoxyReturn}{Returns}
+If the period has passed. 
 \end{DoxyReturn}
-\hypertarget{classTimer_ae7c0c1e7d12de4b8a6e7c64e451cdd2a}{\index{\-Timer@{\-Timer}!\-Reset@{\-Reset}}
-\index{\-Reset@{\-Reset}!Timer@{\-Timer}}
-\subsubsection[{\-Reset}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Timer\-::\-Reset} (
+\hypertarget{classTimer_ae7c0c1e7d12de4b8a6e7c64e451cdd2a}{
+\index{Timer@{Timer}!Reset@{Reset}}
+\index{Reset@{Reset}!Timer@{Timer}}
+\subsubsection[{Reset}]{\setlength{\rightskip}{0pt plus 5cm}void Timer::Reset (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)}}\label{classTimer_ae7c0c1e7d12de4b8a6e7c64e451cdd2a}
-\-Reset the timer by setting the time to 0.
+)}}
+\label{classTimer_ae7c0c1e7d12de4b8a6e7c64e451cdd2a}
+Reset the timer by setting the time to 0.
 
-\-Make the timer start\-Time the current time so new requests will be relative to now \hypertarget{classTimer_a4e607b129b392c11adddd9641a320436}{\index{\-Timer@{\-Timer}!\-Start@{\-Start}}
-\index{\-Start@{\-Start}!Timer@{\-Timer}}
-\subsubsection[{\-Start}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Timer\-::\-Start} (
+Make the timer startTime the current time so new requests will be relative to now \hypertarget{classTimer_a4e607b129b392c11adddd9641a320436}{
+\index{Timer@{Timer}!Start@{Start}}
+\index{Start@{Start}!Timer@{Timer}}
+\subsubsection[{Start}]{\setlength{\rightskip}{0pt plus 5cm}void Timer::Start (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)}}\label{classTimer_a4e607b129b392c11adddd9641a320436}
-\-Start the timer running. \-Just set the running flag to true indicating that all time requests should be relative to the system clock. \hypertarget{classTimer_a6379e797f968aaee6ac3bb12dc6b81c5}{\index{\-Timer@{\-Timer}!\-Stop@{\-Stop}}
-\index{\-Stop@{\-Stop}!Timer@{\-Timer}}
-\subsubsection[{\-Stop}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Timer\-::\-Stop} (
+)}}
+\label{classTimer_a4e607b129b392c11adddd9641a320436}
+Start the timer running. Just set the running flag to true indicating that all time requests should be relative to the system clock. \hypertarget{classTimer_a6379e797f968aaee6ac3bb12dc6b81c5}{
+\index{Timer@{Timer}!Stop@{Stop}}
+\index{Stop@{Stop}!Timer@{Timer}}
+\subsubsection[{Stop}]{\setlength{\rightskip}{0pt plus 5cm}void Timer::Stop (
 \begin{DoxyParamCaption}
-\item[{void}]{}
+{}
 \end{DoxyParamCaption}
-)}}\label{classTimer_a6379e797f968aaee6ac3bb12dc6b81c5}
-\-Stop the timer. \-This computes the time as of now and clears the running flag, causing all subsequent time requests to be read from the accumulated time rather than looking at the system clock. 
+)}}
+\label{classTimer_a6379e797f968aaee6ac3bb12dc6b81c5}
+Stop the timer. This computes the time as of now and clears the running flag, causing all subsequent time requests to be read from the accumulated time rather than looking at the system clock. 
 
-\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
 \item 
-\-Timer.\-h\item 
-\-Timer.\-cpp\end{DoxyCompactItemize}
+Timer.h\item 
+Timer.cpp\end{DoxyCompactItemize}

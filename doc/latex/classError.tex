@@ -1,46 +1,91 @@
-\hypertarget{classError}{\section{\-Error \-Class \-Reference}
-\label{classError}\index{\-Error@{\-Error}}
+\hypertarget{classError}{
+\section{Error Class Reference}
+\label{classError}\index{Error@{Error}}
 }
 
 
-{\ttfamily \#include $<$\-Error.\-h$>$}
+{\ttfamily \#include $<$Error.h$>$}
 
-\subsection*{\-Public \-Types}
+\subsection*{Public Types}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{classError_ad0ca95bfda335aaedd0d6c5c52b5d95b}{typedef t\-Rio\-Status\-Code {\bfseries \-Code}}\label{classError_ad0ca95bfda335aaedd0d6c5c52b5d95b}
+\hypertarget{classError_ad0ca95bfda335aaedd0d6c5c52b5d95b}{
+typedef tRioStatusCode {\bfseries Code}}
+\label{classError_ad0ca95bfda335aaedd0d6c5c52b5d95b}
 
 \end{DoxyCompactItemize}
-\subsection*{\-Public \-Member \-Functions}
+\subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{classError_aac48d824bf56f26e5c213f0f7454ec99}{\-Code {\bfseries \-Get\-Code} () const }\label{classError_aac48d824bf56f26e5c213f0f7454ec99}
+\hypertarget{classError_af403f873b9446aa1020c5b60d69a0eab}{
+void {\bfseries Clone} (\hyperlink{classError}{Error} \&error)}
+\label{classError_af403f873b9446aa1020c5b60d69a0eab}
 
 \item 
-\hypertarget{classError_a706aa3025b0d2b1430f503a7b3a3b713}{const char $\ast$ {\bfseries \-Get\-Message} () const }\label{classError_a706aa3025b0d2b1430f503a7b3a3b713}
+\hypertarget{classError_aac48d824bf56f26e5c213f0f7454ec99}{
+Code {\bfseries GetCode} () const }
+\label{classError_aac48d824bf56f26e5c213f0f7454ec99}
 
 \item 
-\hypertarget{classError_a1ecbf12fe24dac6f4c00da7895a4ff2f}{const char $\ast$ {\bfseries \-Get\-Filename} () const }\label{classError_a1ecbf12fe24dac6f4c00da7895a4ff2f}
+\hypertarget{classError_a706aa3025b0d2b1430f503a7b3a3b713}{
+const char $\ast$ {\bfseries GetMessage} () const }
+\label{classError_a706aa3025b0d2b1430f503a7b3a3b713}
 
 \item 
-\hypertarget{classError_abf8a3ba03ce42ad1a04caa5c2e6cf84a}{\-U\-I\-N\-T32 {\bfseries \-Get\-Line\-Number} () const }\label{classError_abf8a3ba03ce42ad1a04caa5c2e6cf84a}
+\hypertarget{classError_a1ecbf12fe24dac6f4c00da7895a4ff2f}{
+const char $\ast$ {\bfseries GetFilename} () const }
+\label{classError_a1ecbf12fe24dac6f4c00da7895a4ff2f}
 
 \item 
-\hypertarget{classError_ac3a8fe161c7baad22e7da65389892a3c}{const \hyperlink{classErrorBase}{\-Error\-Base} $\ast$ {\bfseries \-Get\-Originating\-Object} () const }\label{classError_ac3a8fe161c7baad22e7da65389892a3c}
+\hypertarget{classError_a4944f2d37794eef96c6ddaca980c3fe0}{
+const char $\ast$ {\bfseries GetFunction} () const }
+\label{classError_a4944f2d37794eef96c6ddaca980c3fe0}
 
 \item 
-\hypertarget{classError_afd919c7b9e33c2e630edee8072c31922}{void {\bfseries \-Clear} ()}\label{classError_afd919c7b9e33c2e630edee8072c31922}
+\hypertarget{classError_abf8a3ba03ce42ad1a04caa5c2e6cf84a}{
+UINT32 {\bfseries GetLineNumber} () const }
+\label{classError_abf8a3ba03ce42ad1a04caa5c2e6cf84a}
 
 \item 
-\hypertarget{classError_ab06aa51c2d0b1a2c2178bdc69c0fa1d3}{void {\bfseries \-Set} (\-Code code, const char $\ast$filename, \-U\-I\-N\-T32 line\-Number, const \hyperlink{classErrorBase}{\-Error\-Base} $\ast$originating\-Object)}\label{classError_ab06aa51c2d0b1a2c2178bdc69c0fa1d3}
+\hypertarget{classError_ac3a8fe161c7baad22e7da65389892a3c}{
+const \hyperlink{classErrorBase}{ErrorBase} $\ast$ {\bfseries GetOriginatingObject} () const }
+\label{classError_ac3a8fe161c7baad22e7da65389892a3c}
+
+\item 
+\hypertarget{classError_aa70dafb23425ece5045932d9b5e51d9a}{
+double {\bfseries GetTime} () const }
+\label{classError_aa70dafb23425ece5045932d9b5e51d9a}
+
+\item 
+\hypertarget{classError_afd919c7b9e33c2e630edee8072c31922}{
+void {\bfseries Clear} ()}
+\label{classError_afd919c7b9e33c2e630edee8072c31922}
+
+\item 
+\hypertarget{classError_ac3def8d75185839aecc68a1d5af75f6f}{
+void {\bfseries Set} (Code code, const char $\ast$contextMessage, const char $\ast$filename, const char $\ast$function, UINT32 lineNumber, const \hyperlink{classErrorBase}{ErrorBase} $\ast$originatingObject)}
+\label{classError_ac3def8d75185839aecc68a1d5af75f6f}
+
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classError_a38b410fa32e0365bcd6dd682e207f86a}{
+static void {\bfseries EnableStackTrace} (bool enable)}
+\label{classError_a38b410fa32e0365bcd6dd682e207f86a}
+
+\item 
+\hypertarget{classError_a2ab6731cd4059176d321bd30b9f8968d}{
+static void {\bfseries EnableSuspendOnError} (bool enable)}
+\label{classError_a2ab6731cd4059176d321bd30b9f8968d}
 
 \end{DoxyCompactItemize}
 
 
-\subsection{\-Detailed \-Description}
-\hyperlink{classError}{\-Error} object represents a library error. 
+\subsection{Detailed Description}
+\hyperlink{classError}{Error} object represents a library error. 
 
-\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
 \item 
-\-Error.\-h\item 
-\-Error.\-cpp\end{DoxyCompactItemize}
+Error.h\item 
+Error.cpp\end{DoxyCompactItemize}

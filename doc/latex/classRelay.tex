@@ -1,133 +1,124 @@
-\hypertarget{classRelay}{\section{\-Relay \-Class \-Reference}
-\label{classRelay}\index{\-Relay@{\-Relay}}
+\hypertarget{classRelay}{
+\section{Relay Class Reference}
+\label{classRelay}\index{Relay@{Relay}}
 }
 
 
-{\ttfamily \#include $<$\-Relay.\-h$>$}
+{\ttfamily \#include $<$Relay.h$>$}
 
-\-Inheritance diagram for \-Relay\-:\begin{figure}[H]
+Inheritance diagram for Relay:\begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[height=3.000000cm]{classRelay}
 \end{center}
 \end{figure}
-\subsection*{\-Public \-Types}
+\subsection*{Public Types}
 \begin{DoxyCompactItemize}
 \item 
-enum {\bfseries \-Value} \{ {\bfseries k\-Off}, 
-{\bfseries k\-On}, 
-{\bfseries k\-Forward}, 
-{\bfseries k\-Reverse}
+enum {\bfseries Value} \{ {\bfseries kOff}, 
+{\bfseries kOn}, 
+{\bfseries kForward}, 
+{\bfseries kReverse}
  \}
 \item 
-enum {\bfseries \-Direction} \{ {\bfseries k\-Both\-Directions}, 
-{\bfseries k\-Forward\-Only}, 
-{\bfseries k\-Reverse\-Only}
+enum {\bfseries Direction} \{ {\bfseries kBothDirections}, 
+{\bfseries kForwardOnly}, 
+{\bfseries kReverseOnly}
  \}
 \end{DoxyCompactItemize}
-\subsection*{\-Public \-Member \-Functions}
+\subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{classRelay_a25a4796fc9a4e52948c72d4885784764}{\-Relay} (\-U\-I\-N\-T32 channel, \-Direction direction=k\-Both\-Directions)
+\hyperlink{classRelay_a25a4796fc9a4e52948c72d4885784764}{Relay} (UINT32 channel, Direction direction=kBothDirections)
 \item 
-\hyperlink{classRelay_aa787f412ceabd8177195c3668927cb52}{\-Relay} (\-U\-I\-N\-T32 slot, \-U\-I\-N\-T32 channel, \-Direction direction=k\-Both\-Directions)
+\hyperlink{classRelay_accd81d4edb6ec1b0d7f967238834de5f}{Relay} (UINT8 moduleNumber, UINT32 channel, Direction direction=kBothDirections)
 \item 
-virtual \hyperlink{classRelay_a858c668bc7e353db53ed07b1a4ef1dbd}{$\sim$\-Relay} ()
+virtual \hyperlink{classRelay_a858c668bc7e353db53ed07b1a4ef1dbd}{$\sim$Relay} ()
 \item 
-void \hyperlink{classRelay_a35d0aa67e99f6ed89ccaa489a4275a31}{\-Set} (\-Value value)
-\item 
-void \hyperlink{classRelay_a2bb78af9da762fe6fb7f3339149720b5}{\-Set\-Direction} (\-Direction direction)
+void \hyperlink{classRelay_a35d0aa67e99f6ed89ccaa489a4275a31}{Set} (Value value)
 \end{DoxyCompactItemize}
 
 
-\subsection{\-Detailed \-Description}
-\-Class for \-Spike style relay outputs. \-Relays are intended to be connected to spikes or similar relays. \-The relay channels controls a pair of pins that are either both off, one on, the other on, or both on. \-This translates into two spike outputs at 0v, one at 12v and one at 0v, one at 0v and the other at 12v, or two spike outputs at 12\-V. \-This allows off, full forward, or full reverse control of motors without variable speed. \-It also allows the two channels (forward and reverse) to be used independently for something that does not care about voltage polatiry (like a solenoid). 
+\subsection{Detailed Description}
+Class for Spike style relay outputs. Relays are intended to be connected to spikes or similar relays. The relay channels controls a pair of pins that are either both off, one on, the other on, or both on. This translates into two spike outputs at 0v, one at 12v and one at 0v, one at 0v and the other at 12v, or two spike outputs at 12V. This allows off, full forward, or full reverse control of motors without variable speed. It also allows the two channels (forward and reverse) to be used independently for something that does not care about voltage polatiry (like a solenoid). 
 
-\subsection{\-Constructor \& \-Destructor \-Documentation}
-\hypertarget{classRelay_a25a4796fc9a4e52948c72d4885784764}{\index{\-Relay@{\-Relay}!\-Relay@{\-Relay}}
-\index{\-Relay@{\-Relay}!Relay@{\-Relay}}
-\subsubsection[{\-Relay}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Relay\-::\-Relay} (
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classRelay_a25a4796fc9a4e52948c72d4885784764}{
+\index{Relay@{Relay}!Relay@{Relay}}
+\index{Relay@{Relay}!Relay@{Relay}}
+\subsubsection[{Relay}]{\setlength{\rightskip}{0pt plus 5cm}Relay::Relay (
 \begin{DoxyParamCaption}
-\item[{\-U\-I\-N\-T32}]{channel, }
-\item[{\-Relay\-::\-Direction}]{direction = {\ttfamily k\-Both\-Directions}}
+\item[{UINT32}]{channel, }
+\item[{Relay::Direction}]{direction = {\ttfamily kBothDirections}}
 \end{DoxyParamCaption}
-)}}\label{classRelay_a25a4796fc9a4e52948c72d4885784764}
-\hyperlink{classRelay}{\-Relay} constructor given a channel only where the default digital module is used. 
-\begin{DoxyParams}{\-Parameters}
-{\em channel} & \-The channel number within the default module for this relay. \\
+)}}
+\label{classRelay_a25a4796fc9a4e52948c72d4885784764}
+\hyperlink{classRelay}{Relay} constructor given a channel only where the default digital module is used. 
+\begin{DoxyParams}{Parameters}
+{\em channel} & The channel number within the default module for this relay. \\
 \hline
-{\em direction} & \-The direction that the \hyperlink{classRelay}{\-Relay} object will control. \\
+{\em direction} & The direction that the \hyperlink{classRelay}{Relay} object will control. \\
 \hline
 \end{DoxyParams}
-\hypertarget{classRelay_aa787f412ceabd8177195c3668927cb52}{\index{\-Relay@{\-Relay}!\-Relay@{\-Relay}}
-\index{\-Relay@{\-Relay}!Relay@{\-Relay}}
-\subsubsection[{\-Relay}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Relay\-::\-Relay} (
+\hypertarget{classRelay_accd81d4edb6ec1b0d7f967238834de5f}{
+\index{Relay@{Relay}!Relay@{Relay}}
+\index{Relay@{Relay}!Relay@{Relay}}
+\subsubsection[{Relay}]{\setlength{\rightskip}{0pt plus 5cm}Relay::Relay (
 \begin{DoxyParamCaption}
-\item[{\-U\-I\-N\-T32}]{slot, }
-\item[{\-U\-I\-N\-T32}]{channel, }
-\item[{\-Relay\-::\-Direction}]{direction = {\ttfamily k\-Both\-Directions}}
+\item[{UINT8}]{moduleNumber, }
+\item[{UINT32}]{channel, }
+\item[{Relay::Direction}]{direction = {\ttfamily kBothDirections}}
 \end{DoxyParamCaption}
-)}}\label{classRelay_aa787f412ceabd8177195c3668927cb52}
-\hyperlink{classRelay}{\-Relay} constructor given the module and the channel. 
-\begin{DoxyParams}{\-Parameters}
-{\em slot} & \-The module slot number this relay is connected to. \\
+)}}
+\label{classRelay_accd81d4edb6ec1b0d7f967238834de5f}
+\hyperlink{classRelay}{Relay} constructor given the module and the channel.
+
+
+\begin{DoxyParams}{Parameters}
+{\em moduleNumber} & The digital module this relay is connected to (1 or 2). \\
 \hline
-{\em channel} & \-The channel number within the module for this relay. \\
+{\em channel} & The channel number within the module for this relay. \\
 \hline
-{\em direction} & \-The direction that the \hyperlink{classRelay}{\-Relay} object will control. \\
+{\em direction} & The direction that the \hyperlink{classRelay}{Relay} object will control. \\
 \hline
 \end{DoxyParams}
-\hypertarget{classRelay_a858c668bc7e353db53ed07b1a4ef1dbd}{\index{\-Relay@{\-Relay}!$\sim$\-Relay@{$\sim$\-Relay}}
-\index{$\sim$\-Relay@{$\sim$\-Relay}!Relay@{\-Relay}}
-\subsubsection[{$\sim$\-Relay}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Relay\-::$\sim$\-Relay} (
+\hypertarget{classRelay_a858c668bc7e353db53ed07b1a4ef1dbd}{
+\index{Relay@{Relay}!$\sim$Relay@{$\sim$Relay}}
+\index{$\sim$Relay@{$\sim$Relay}!Relay@{Relay}}
+\subsubsection[{$\sim$Relay}]{\setlength{\rightskip}{0pt plus 5cm}Relay::$\sim$Relay (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{classRelay_a858c668bc7e353db53ed07b1a4ef1dbd}
-\-Free the resource associated with a relay. \-The relay channels are set to free and the relay output is turned off. 
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classRelay_a858c668bc7e353db53ed07b1a4ef1dbd}
+Free the resource associated with a relay. The relay channels are set to free and the relay output is turned off. 
 
-\subsection{\-Member \-Function \-Documentation}
-\hypertarget{classRelay_a35d0aa67e99f6ed89ccaa489a4275a31}{\index{\-Relay@{\-Relay}!\-Set@{\-Set}}
-\index{\-Set@{\-Set}!Relay@{\-Relay}}
-\subsubsection[{\-Set}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Relay\-::\-Set} (
+\subsection{Member Function Documentation}
+\hypertarget{classRelay_a35d0aa67e99f6ed89ccaa489a4275a31}{
+\index{Relay@{Relay}!Set@{Set}}
+\index{Set@{Set}!Relay@{Relay}}
+\subsubsection[{Set}]{\setlength{\rightskip}{0pt plus 5cm}void Relay::Set (
 \begin{DoxyParamCaption}
-\item[{\-Relay\-::\-Value}]{value}
+\item[{Relay::Value}]{value}
 \end{DoxyParamCaption}
-)}}\label{classRelay_a35d0aa67e99f6ed89ccaa489a4275a31}
-\-Set the relay state.
+)}}
+\label{classRelay_a35d0aa67e99f6ed89ccaa489a4275a31}
+Set the relay state.
 
-\-Valid values depend on which directions of the relay are controlled by the object.
+Valid values depend on which directions of the relay are controlled by the object.
 
-\-When set to k\-Both\-Directions, the relay can only be one of the three reasonable values, 0v-\/0v, 0v-\/12v, or 12v-\/0v.
+When set to kBothDirections, the relay can be any of the four states: 0v-\/0v, 0v-\/12v, 12v-\/0v, 12v-\/12v
 
-\-When set to k\-Forward\-Only or k\-Reverse\-Only, you can specify the constant for the direction or you can simply specify k\-Off and k\-On. \-Using only k\-Off and k\-On is recommended.
-
-
-\begin{DoxyParams}{\-Parameters}
-{\em value} & \-The state to set the relay. \\
-\hline
-\end{DoxyParams}
-\hypertarget{classRelay_a2bb78af9da762fe6fb7f3339149720b5}{\index{\-Relay@{\-Relay}!\-Set\-Direction@{\-Set\-Direction}}
-\index{\-Set\-Direction@{\-Set\-Direction}!Relay@{\-Relay}}
-\subsubsection[{\-Set\-Direction}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Relay\-::\-Set\-Direction} (
-\begin{DoxyParamCaption}
-\item[{\-Relay\-::\-Direction}]{direction}
-\end{DoxyParamCaption}
-)}}\label{classRelay_a2bb78af9da762fe6fb7f3339149720b5}
-\-Set the \hyperlink{classRelay}{\-Relay} \-Direction
-
-\-Changes which values the relay can be set to depending on which direction is used
-
-\-Valid inputs are k\-Both\-Directions, k\-Forward\-Only, and k\-Reverse\-Only
+When set to kForwardOnly or kReverseOnly, you can specify the constant for the direction or you can simply specify kOff and kOn. Using only kOff and kOn is recommended.
 
 
-\begin{DoxyParams}{\-Parameters}
-{\em direction} & \-The direction for the relay to operate in \\
+\begin{DoxyParams}{Parameters}
+{\em value} & The state to set the relay. \\
 \hline
 \end{DoxyParams}
 
 
-\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
 \item 
-\-Relay.\-h\item 
-\-Relay.\-cpp\end{DoxyCompactItemize}
+Relay.h\item 
+Relay.cpp\end{DoxyCompactItemize}

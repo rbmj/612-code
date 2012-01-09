@@ -5,7 +5,7 @@
 %%For: 
 %Magnification: 1.00
 %%Orientation: Portrait
-%%BoundingBox: 0 0 500 701.219512
+%%BoundingBox: 0 0 500 853.658537
 %%Pages: 0
 %%BeginSetup
 %%EndSetup
@@ -19,13 +19,13 @@
 /marginwidth 10 def
 /distx 20 def
 /disty 40 def
-/boundaspect 0.713043 def  % aspect ratio of the BoundingBox (width/height)
+/boundaspect 0.585714 def  % aspect ratio of the BoundingBox (width/height)
 /boundx 500 def
 /boundy boundx boundaspect div def
 /xspacing 0 def
 /yspacing 0 def
-/rows 23 def
-/cols 4 def
+/rows 14 def
+/cols 2 def
 /scalefactor 0 def
 /boxfont /Times-Roman findfont fontheight scalefont def
 
@@ -174,32 +174,19 @@
 boxfont setfont
 1 boundaspect scale
 (ErrorBase) cw
+(CANJaguar) cw
 (DashboardBase) cw
 (DriverStationEnhancedIO) cw
+(Joystick) cw
+(KinectStick) cw
+(MotorSafetyHelper) cw
+(Notifier) cw
+(Preferences) cw
+(Resource) cw
+(RobotDrive) cw
 (SensorBase) cw
-(Dashboard) cw
-(SmartDashboard) cw
-(Accelerometer) cw
-(ADXL345_I2C) cw
-(ADXL345_SPI) cw
-(AnalogChannel) cw
-(AnalogTrigger) cw
-(Compressor) cw
-(Counter) cw
-(DriverStation) cw
-(DriverStationLCD) cw
-(Encoder) cw
-(Gyro) cw
-(HiTechnicCompass) cw
-(I2C) cw
-(InterruptableSensorBase) cw
-(Module) cw
-(PWM) cw
-(Relay) cw
-(SolenoidBase) cw
-(SPI) cw
-(Ultrasonic) cw
-(Watchdog) cw
+(SerialPort) cw
+(Task) cw
 /boxwidth boxwidth marginwidth 2 mul add def
 /xspacing boxwidth distx add def
 /yspacing boxheight disty add def
@@ -211,102 +198,52 @@ boundx scalefactor div boundy scalefactor div scale
 
 % ----- classes -----
 
- (ErrorBase) 1.000000 22.000000 box
- (DashboardBase) 0.000000 21.000000 box
- (DriverStationEnhancedIO) 1.000000 21.000000 box
- (SensorBase) 2.000000 21.000000 box
- (Dashboard) 1.000000 20.000000 box
- (SmartDashboard) 1.000000 19.000000 box
- (Accelerometer) 3.000000 20.000000 box
- (ADXL345_I2C) 3.000000 19.000000 box
- (ADXL345_SPI) 3.000000 18.000000 box
- (AnalogChannel) 3.000000 17.000000 box
- (AnalogTrigger) 3.000000 16.000000 box
- (Compressor) 3.000000 15.000000 box
- (Counter) 3.000000 14.000000 box
-3.000000 14.000000 mark
- (DriverStation) 3.000000 13.000000 box
- (DriverStationLCD) 3.000000 12.000000 box
- (Encoder) 3.000000 11.000000 box
- (Gyro) 3.000000 10.000000 box
- (HiTechnicCompass) 3.000000 9.000000 box
- (I2C) 3.000000 8.000000 box
- (InterruptableSensorBase) 3.000000 7.000000 box
-3.000000 7.000000 mark
- (Module) 3.000000 6.000000 box
-3.000000 6.000000 mark
- (PWM) 3.000000 5.000000 box
-3.000000 5.000000 mark
- (Relay) 3.000000 4.000000 box
- (SolenoidBase) 3.000000 3.000000 box
-3.000000 3.000000 mark
- (SPI) 3.000000 2.000000 box
- (Ultrasonic) 3.000000 1.000000 box
- (Watchdog) 3.000000 0.000000 box
+ (ErrorBase) 0.000000 13.000000 box
+ (CANJaguar) 1.000000 12.000000 box
+ (DashboardBase) 1.000000 11.000000 box
+1.000000 11.000000 mark
+ (DriverStationEnhancedIO) 1.000000 10.000000 box
+ (Joystick) 1.000000 9.000000 box
+ (KinectStick) 1.000000 8.000000 box
+ (MotorSafetyHelper) 1.000000 7.000000 box
+ (Notifier) 1.000000 6.000000 box
+ (Preferences) 1.000000 5.000000 box
+ (Resource) 1.000000 4.000000 box
+ (RobotDrive) 1.000000 3.000000 box
+ (SensorBase) 1.000000 2.000000 box
+1.000000 2.000000 mark
+ (SerialPort) 1.000000 1.000000 box
+ (Task) 1.000000 0.000000 box
 
 % ----- relations -----
 
 solid
-1 1.000000 21.250000 out
+1 0.000000 12.250000 out
 solid
-0.000000 2.000000 22.000000 conn
+0 0.000000 12.500000 hedge
 solid
-0 0.000000 21.750000 in
+0 0.000000 11.500000 hedge
 solid
-1 0.000000 20.250000 out
+0 0.000000 10.500000 hedge
 solid
-0 1.000000 21.750000 in
+0 0.000000 9.500000 hedge
 solid
-0 2.000000 21.750000 in
+0 0.000000 8.500000 hedge
 solid
-1 2.000000 20.250000 out
+0 0.000000 7.500000 hedge
 solid
-0 0.000000 20.500000 hedge
+0 0.000000 6.500000 hedge
 solid
-0 0.000000 19.500000 hedge
+0 0.000000 5.500000 hedge
 solid
-0.000000 21.000000 19.500000 vedge
+0 0.000000 4.500000 hedge
 solid
-0 2.000000 20.500000 hedge
+0 0.000000 3.500000 hedge
 solid
-0 2.000000 19.500000 hedge
+0 0.000000 2.500000 hedge
 solid
-0 2.000000 18.500000 hedge
+0 0.000000 1.500000 hedge
 solid
-0 2.000000 17.500000 hedge
+0 0.000000 0.500000 hedge
 solid
-0 2.000000 16.500000 hedge
-solid
-0 2.000000 15.500000 hedge
-solid
-0 2.000000 14.500000 hedge
-solid
-0 2.000000 13.500000 hedge
-solid
-0 2.000000 12.500000 hedge
-solid
-0 2.000000 11.500000 hedge
-solid
-0 2.000000 10.500000 hedge
-solid
-0 2.000000 9.500000 hedge
-dotted
-0 2.000000 8.500000 hedge
-solid
-0 2.000000 7.500000 hedge
-solid
-0 2.000000 6.500000 hedge
-solid
-0 2.000000 5.500000 hedge
-solid
-0 2.000000 4.500000 hedge
-solid
-0 2.000000 3.500000 hedge
-solid
-0 2.000000 2.500000 hedge
-solid
-0 2.000000 1.500000 hedge
-solid
-0 2.000000 0.500000 hedge
-solid
-2.000000 21.000000 0.500000 vedge
+0.000000 13.000000 0.500000 vedge

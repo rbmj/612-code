@@ -1,126 +1,122 @@
-\hypertarget{classSolenoidBase}{\section{\-Solenoid\-Base \-Class \-Reference}
-\label{classSolenoidBase}\index{\-Solenoid\-Base@{\-Solenoid\-Base}}
+\hypertarget{classSolenoidBase}{
+\section{SolenoidBase Class Reference}
+\label{classSolenoidBase}\index{SolenoidBase@{SolenoidBase}}
 }
 
 
-{\ttfamily \#include $<$\-Solenoid\-Base.\-h$>$}
+{\ttfamily \#include $<$SolenoidBase.h$>$}
 
-\-Inheritance diagram for \-Solenoid\-Base\-:\begin{figure}[H]
+Inheritance diagram for SolenoidBase:\begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[height=4.000000cm]{classSolenoidBase}
 \end{center}
 \end{figure}
-\subsection*{\-Public \-Member \-Functions}
+\subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-virtual \hyperlink{classSolenoidBase_aa3ff4e46bc52588243bfb6ea511864fa}{$\sim$\-Solenoid\-Base} ()
+virtual \hyperlink{classSolenoidBase_aa3ff4e46bc52588243bfb6ea511864fa}{$\sim$SolenoidBase} ()
 \item 
-\-U\-I\-N\-T8 \hyperlink{classSolenoidBase_ac0d9d4d811fce90140eef64f41cecdd5}{\-Get\-All} ()
+UINT8 \hyperlink{classSolenoidBase_ac0d9d4d811fce90140eef64f41cecdd5}{GetAll} ()
 \end{DoxyCompactItemize}
-\subsection*{\-Protected \-Member \-Functions}
+\subsection*{Protected Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{classSolenoidBase_a1ba5489c438cb364c4f97dd86e3d6533}{\-Solenoid\-Base} (\-U\-I\-N\-T32 slot)
+\hyperlink{classSolenoidBase_ae623dcc8b967d5a1f23f58f2f23317ae}{SolenoidBase} (UINT8 moduleNumber)
 \item 
-\-U\-I\-N\-T32 \hyperlink{classSolenoidBase_a279a4e4d5ef5973208fd468ab17efdba}{\-Slot\-To\-Index} (\-U\-I\-N\-T32 slot)
+void \hyperlink{classSolenoidBase_a7aa6f30b9b7337867667f24fec115058}{Set} (UINT8 value, UINT8 mask)
 \item 
-void \hyperlink{classSolenoidBase_a7aa6f30b9b7337867667f24fec115058}{\-Set} (\-U\-I\-N\-T8 value, \-U\-I\-N\-T8 mask)
-\item 
-\hypertarget{classSolenoidBase_a7ca79c91469bd82dc13163c3c7144d5e}{virtual void {\bfseries \-Init\-Solenoid} ()=0}\label{classSolenoidBase_a7ca79c91469bd82dc13163c3c7144d5e}
-
-\end{DoxyCompactItemize}
-\subsection*{\-Protected \-Attributes}
-\begin{DoxyCompactItemize}
-\item 
-\hypertarget{classSolenoidBase_a47cff309cb2d2bc82cc2721a1c93ba92}{\-U\-I\-N\-T32 \hyperlink{classSolenoidBase_a47cff309cb2d2bc82cc2721a1c93ba92}{m\-\_\-chassis\-Slot}}\label{classSolenoidBase_a47cff309cb2d2bc82cc2721a1c93ba92}
-
-\begin{DoxyCompactList}\small\item\em \-Slot number where the module is plugged into the chassis. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\subsection*{\-Static \-Protected \-Attributes}
-\begin{DoxyCompactItemize}
-\item 
-\hypertarget{classSolenoidBase_aea1b158d126f24e89dc145871511e35c}{static \hyperlink{classResource}{\-Resource} $\ast$ {\bfseries m\-\_\-allocated} = \-N\-U\-L\-L}\label{classSolenoidBase_aea1b158d126f24e89dc145871511e35c}
+\hypertarget{classSolenoidBase_a7ca79c91469bd82dc13163c3c7144d5e}{
+virtual void {\bfseries InitSolenoid} ()=0}
+\label{classSolenoidBase_a7ca79c91469bd82dc13163c3c7144d5e}
 
 \end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classSolenoidBase_a0687ad7201f53c533a21eacdd1d6cf42}{
+UINT32 \hyperlink{classSolenoidBase_a0687ad7201f53c533a21eacdd1d6cf42}{m\_\-moduleNumber}}
+\label{classSolenoidBase_a0687ad7201f53c533a21eacdd1d6cf42}
+
+\begin{DoxyCompactList}\small\item\em Slot number where the module is plugged into the chassis. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classSolenoidBase_aea1b158d126f24e89dc145871511e35c}{
+static \hyperlink{classResource}{Resource} $\ast$ {\bfseries m\_\-allocated} = NULL}
+\label{classSolenoidBase_aea1b158d126f24e89dc145871511e35c}
+
+\end{DoxyCompactItemize}
 
 
-\subsection{\-Detailed \-Description}
-\hyperlink{classSolenoidBase}{\-Solenoid\-Base} class is the common base class for the \hyperlink{classSolenoid}{\-Solenoid} and \hyperlink{classDoubleSolenoid}{\-Double\-Solenoid} classes. 
+\subsection{Detailed Description}
+\hyperlink{classSolenoidBase}{SolenoidBase} class is the common base class for the \hyperlink{classSolenoid}{Solenoid} and \hyperlink{classDoubleSolenoid}{DoubleSolenoid} classes. 
 
-\subsection{\-Constructor \& \-Destructor \-Documentation}
-\hypertarget{classSolenoidBase_aa3ff4e46bc52588243bfb6ea511864fa}{\index{\-Solenoid\-Base@{\-Solenoid\-Base}!$\sim$\-Solenoid\-Base@{$\sim$\-Solenoid\-Base}}
-\index{$\sim$\-Solenoid\-Base@{$\sim$\-Solenoid\-Base}!SolenoidBase@{\-Solenoid\-Base}}
-\subsubsection[{$\sim$\-Solenoid\-Base}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Solenoid\-Base\-::$\sim$\-Solenoid\-Base} (
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classSolenoidBase_aa3ff4e46bc52588243bfb6ea511864fa}{
+\index{SolenoidBase@{SolenoidBase}!$\sim$SolenoidBase@{$\sim$SolenoidBase}}
+\index{$\sim$SolenoidBase@{$\sim$SolenoidBase}!SolenoidBase@{SolenoidBase}}
+\subsubsection[{$\sim$SolenoidBase}]{\setlength{\rightskip}{0pt plus 5cm}SolenoidBase::$\sim$SolenoidBase (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{classSolenoidBase_aa3ff4e46bc52588243bfb6ea511864fa}
-\-Destructor. \hypertarget{classSolenoidBase_a1ba5489c438cb364c4f97dd86e3d6533}{\index{\-Solenoid\-Base@{\-Solenoid\-Base}!\-Solenoid\-Base@{\-Solenoid\-Base}}
-\index{\-Solenoid\-Base@{\-Solenoid\-Base}!SolenoidBase@{\-Solenoid\-Base}}
-\subsubsection[{\-Solenoid\-Base}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Solenoid\-Base\-::\-Solenoid\-Base} (
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classSolenoidBase_aa3ff4e46bc52588243bfb6ea511864fa}
+Destructor. \hypertarget{classSolenoidBase_ae623dcc8b967d5a1f23f58f2f23317ae}{
+\index{SolenoidBase@{SolenoidBase}!SolenoidBase@{SolenoidBase}}
+\index{SolenoidBase@{SolenoidBase}!SolenoidBase@{SolenoidBase}}
+\subsubsection[{SolenoidBase}]{\setlength{\rightskip}{0pt plus 5cm}SolenoidBase::SolenoidBase (
 \begin{DoxyParamCaption}
-\item[{\-U\-I\-N\-T32}]{slot}
+\item[{UINT8}]{moduleNumber}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily  \mbox{[}explicit, protected\mbox{]}}}}\label{classSolenoidBase_a1ba5489c438cb364c4f97dd86e3d6533}
-\-Constructor
+)\hspace{0.3cm}{\ttfamily  \mbox{[}explicit, protected\mbox{]}}}}
+\label{classSolenoidBase_ae623dcc8b967d5a1f23f58f2f23317ae}
+Constructor
 
 
-\begin{DoxyParams}{\-Parameters}
-{\em slot} & \-The slot that this \hyperlink{classSolenoidBase}{\-Solenoid\-Base} accesses. \\
+\begin{DoxyParams}{Parameters}
+{\em moduleNumber} & The solenoid module (1 or 2). \\
 \hline
 \end{DoxyParams}
 
 
-\subsection{\-Member \-Function \-Documentation}
-\hypertarget{classSolenoidBase_ac0d9d4d811fce90140eef64f41cecdd5}{\index{\-Solenoid\-Base@{\-Solenoid\-Base}!\-Get\-All@{\-Get\-All}}
-\index{\-Get\-All@{\-Get\-All}!SolenoidBase@{\-Solenoid\-Base}}
-\subsubsection[{\-Get\-All}]{\setlength{\rightskip}{0pt plus 5cm}\-U\-I\-N\-T8 {\bf \-Solenoid\-Base\-::\-Get\-All} (
+\subsection{Member Function Documentation}
+\hypertarget{classSolenoidBase_ac0d9d4d811fce90140eef64f41cecdd5}{
+\index{SolenoidBase@{SolenoidBase}!GetAll@{GetAll}}
+\index{GetAll@{GetAll}!SolenoidBase@{SolenoidBase}}
+\subsubsection[{GetAll}]{\setlength{\rightskip}{0pt plus 5cm}UINT8 SolenoidBase::GetAll (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)}}\label{classSolenoidBase_ac0d9d4d811fce90140eef64f41cecdd5}
-\-Read all 8 solenoids as a single byte
+)}}
+\label{classSolenoidBase_ac0d9d4d811fce90140eef64f41cecdd5}
+Read all 8 solenoids as a single byte
 
-\begin{DoxyReturn}{\-Returns}
-\-The current value of all 8 solenoids on the module. 
+\begin{DoxyReturn}{Returns}
+The current value of all 8 solenoids on the module. 
 \end{DoxyReturn}
-\hypertarget{classSolenoidBase_a7aa6f30b9b7337867667f24fec115058}{\index{\-Solenoid\-Base@{\-Solenoid\-Base}!\-Set@{\-Set}}
-\index{\-Set@{\-Set}!SolenoidBase@{\-Solenoid\-Base}}
-\subsubsection[{\-Set}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Solenoid\-Base\-::\-Set} (
+\hypertarget{classSolenoidBase_a7aa6f30b9b7337867667f24fec115058}{
+\index{SolenoidBase@{SolenoidBase}!Set@{Set}}
+\index{Set@{Set}!SolenoidBase@{SolenoidBase}}
+\subsubsection[{Set}]{\setlength{\rightskip}{0pt plus 5cm}void SolenoidBase::Set (
 \begin{DoxyParamCaption}
-\item[{\-U\-I\-N\-T8}]{value, }
-\item[{\-U\-I\-N\-T8}]{mask}
+\item[{UINT8}]{value, }
+\item[{UINT8}]{mask}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{classSolenoidBase_a7aa6f30b9b7337867667f24fec115058}
-\-Set the value of a solenoid.
+)\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classSolenoidBase_a7aa6f30b9b7337867667f24fec115058}
+Set the value of a solenoid.
 
 
-\begin{DoxyParams}{\-Parameters}
-{\em value} & \-The value you want to set on the module. \\
+\begin{DoxyParams}{Parameters}
+{\em value} & The value you want to set on the module. \\
 \hline
-{\em mask} & \-The channels you want to be affected. \\
+{\em mask} & The channels you want to be affected. \\
 \hline
 \end{DoxyParams}
-\hypertarget{classSolenoidBase_a279a4e4d5ef5973208fd468ab17efdba}{\index{\-Solenoid\-Base@{\-Solenoid\-Base}!\-Slot\-To\-Index@{\-Slot\-To\-Index}}
-\index{\-Slot\-To\-Index@{\-Slot\-To\-Index}!SolenoidBase@{\-Solenoid\-Base}}
-\subsubsection[{\-Slot\-To\-Index}]{\setlength{\rightskip}{0pt plus 5cm}\-U\-I\-N\-T32 {\bf \-Solenoid\-Base\-::\-Slot\-To\-Index} (
-\begin{DoxyParamCaption}
-\item[{\-U\-I\-N\-T32}]{slot}
-\end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{classSolenoidBase_a279a4e4d5ef5973208fd468ab17efdba}
-\-Convert slot number to index.
 
 
-\begin{DoxyParams}{\-Parameters}
-{\em slot} & \-The slot in the chassis where the module is plugged in. \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{\-Returns}
-\-An index to represent the module internally. 
-\end{DoxyReturn}
-
-
-\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
 \item 
-\-Solenoid\-Base.\-h\item 
-\-Solenoid\-Base.\-cpp\end{DoxyCompactItemize}
+SolenoidBase.h\item 
+SolenoidBase.cpp\end{DoxyCompactItemize}

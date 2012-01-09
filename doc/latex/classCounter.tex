@@ -1,460 +1,557 @@
-\hypertarget{classCounter}{\section{\-Counter \-Class \-Reference}
-\label{classCounter}\index{\-Counter@{\-Counter}}
+\hypertarget{classCounter}{
+\section{Counter Class Reference}
+\label{classCounter}\index{Counter@{Counter}}
 }
 
 
-{\ttfamily \#include $<$\-Counter.\-h$>$}
+{\ttfamily \#include $<$Counter.h$>$}
 
-\-Inheritance diagram for \-Counter\-:\begin{figure}[H]
+Inheritance diagram for Counter:\begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[height=4.000000cm]{classCounter}
 \end{center}
 \end{figure}
-\subsection*{\-Public \-Types}
+\subsection*{Public Types}
 \begin{DoxyCompactItemize}
 \item 
-enum {\bfseries \-Mode} \{ {\bfseries k\-Two\-Pulse} = 0, 
-{\bfseries k\-Semiperiod} = 1, 
-{\bfseries k\-Pulse\-Length} = 2, 
-{\bfseries k\-External\-Direction} = 3
+enum {\bfseries Mode} \{ {\bfseries kTwoPulse} = 0, 
+{\bfseries kSemiperiod} = 1, 
+{\bfseries kPulseLength} = 2, 
+{\bfseries kExternalDirection} = 3
  \}
 \end{DoxyCompactItemize}
-\subsection*{\-Public \-Member \-Functions}
+\subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{classCounter_a1e05f69b5240fbab3e7ab351672167f0}{\-Counter} ()
+\hyperlink{classCounter_a1e05f69b5240fbab3e7ab351672167f0}{Counter} ()
 \item 
-\hyperlink{classCounter_a133b5a4e1dba8d8260000e25a9a4d124}{\-Counter} (\-U\-I\-N\-T32 channel)
+\hyperlink{classCounter_a133b5a4e1dba8d8260000e25a9a4d124}{Counter} (UINT32 channel)
 \item 
-\hyperlink{classCounter_abbcae190800d57671a56f1cd8ddb85df}{\-Counter} (\-U\-I\-N\-T32 slot, \-U\-I\-N\-T32 channel)
+\hyperlink{classCounter_acf5e289d8c4b8db0e80f28fec89a01f2}{Counter} (UINT8 moduleNumber, UINT32 channel)
 \item 
-\hyperlink{classCounter_a9c7d57696e482eff75e1e03eaf6f8120}{\-Counter} (\hyperlink{classDigitalSource}{\-Digital\-Source} $\ast$source)
+\hyperlink{classCounter_a9c7d57696e482eff75e1e03eaf6f8120}{Counter} (\hyperlink{classDigitalSource}{DigitalSource} $\ast$source)
 \item 
-\hypertarget{classCounter_a21f3bf6b6692bff6906c59a00b31ee54}{{\bfseries \-Counter} (\hyperlink{classDigitalSource}{\-Digital\-Source} \&source)}\label{classCounter_a21f3bf6b6692bff6906c59a00b31ee54}
+\hypertarget{classCounter_a21f3bf6b6692bff6906c59a00b31ee54}{
+{\bfseries Counter} (\hyperlink{classDigitalSource}{DigitalSource} \&source)}
+\label{classCounter_a21f3bf6b6692bff6906c59a00b31ee54}
 
 \item 
-\hyperlink{classCounter_a51efc97323b6d5c42de11fa827655118}{\-Counter} (\hyperlink{classAnalogTrigger}{\-Analog\-Trigger} $\ast$trigger)
+\hyperlink{classCounter_a51efc97323b6d5c42de11fa827655118}{Counter} (\hyperlink{classAnalogTrigger}{AnalogTrigger} $\ast$trigger)
 \item 
-\hypertarget{classCounter_a7f3b71a90529ee3dffa442f113c4ad3f}{{\bfseries \-Counter} (\hyperlink{classAnalogTrigger}{\-Analog\-Trigger} \&trigger)}\label{classCounter_a7f3b71a90529ee3dffa442f113c4ad3f}
+\hypertarget{classCounter_a7f3b71a90529ee3dffa442f113c4ad3f}{
+{\bfseries Counter} (\hyperlink{classAnalogTrigger}{AnalogTrigger} \&trigger)}
+\label{classCounter_a7f3b71a90529ee3dffa442f113c4ad3f}
 
 \item 
-\hypertarget{classCounter_a37eface38998556665b5f88e35db7d16}{{\bfseries \-Counter} (\-Encoding\-Type encoding\-Type, \hyperlink{classDigitalSource}{\-Digital\-Source} $\ast$up\-Source, \hyperlink{classDigitalSource}{\-Digital\-Source} $\ast$down\-Source, bool inverted)}\label{classCounter_a37eface38998556665b5f88e35db7d16}
+\hypertarget{classCounter_a37eface38998556665b5f88e35db7d16}{
+{\bfseries Counter} (EncodingType encodingType, \hyperlink{classDigitalSource}{DigitalSource} $\ast$upSource, \hyperlink{classDigitalSource}{DigitalSource} $\ast$downSource, bool inverted)}
+\label{classCounter_a37eface38998556665b5f88e35db7d16}
 
 \item 
-virtual \hyperlink{classCounter_a97f4728470ae8eff37d50ef1d6bb0135}{$\sim$\-Counter} ()
+virtual \hyperlink{classCounter_a97f4728470ae8eff37d50ef1d6bb0135}{$\sim$Counter} ()
 \item 
-void \hyperlink{classCounter_a2788b50d591e9b9058bc7250268ced5d}{\-Set\-Up\-Source} (\-U\-I\-N\-T32 channel)
+void \hyperlink{classCounter_a2788b50d591e9b9058bc7250268ced5d}{SetUpSource} (UINT32 channel)
 \item 
-void \hyperlink{classCounter_af7dae6fde717e8759980591bb73c8b9f}{\-Set\-Up\-Source} (\-U\-I\-N\-T32 slot, \-U\-I\-N\-T32 channel)
+void \hyperlink{classCounter_a8f08109b27bb842c67826c27354fb68b}{SetUpSource} (UINT8 moduleNumber, UINT32 channel)
 \item 
-void \hyperlink{classCounter_a8e9838e4f44bf8111356ecdbbab833d9}{\-Set\-Up\-Source} (\hyperlink{classAnalogTrigger}{\-Analog\-Trigger} $\ast$analog\-Trigger, \-Analog\-Trigger\-Output\-::\-Type trigger\-Type)
+void \hyperlink{classCounter_a8e9838e4f44bf8111356ecdbbab833d9}{SetUpSource} (\hyperlink{classAnalogTrigger}{AnalogTrigger} $\ast$analogTrigger, AnalogTriggerOutput::Type triggerType)
 \item 
-void \hyperlink{classCounter_a8cddeb27c997a2cd5e7372367b6d8ced}{\-Set\-Up\-Source} (\hyperlink{classAnalogTrigger}{\-Analog\-Trigger} \&analog\-Trigger, \-Analog\-Trigger\-Output\-::\-Type trigger\-Type)
+void \hyperlink{classCounter_a8cddeb27c997a2cd5e7372367b6d8ced}{SetUpSource} (\hyperlink{classAnalogTrigger}{AnalogTrigger} \&analogTrigger, AnalogTriggerOutput::Type triggerType)
 \item 
-void \hyperlink{classCounter_a0687b78f7bf8a269d653eddca1819d5d}{\-Set\-Up\-Source} (\hyperlink{classDigitalSource}{\-Digital\-Source} $\ast$source)
+void \hyperlink{classCounter_a0687b78f7bf8a269d653eddca1819d5d}{SetUpSource} (\hyperlink{classDigitalSource}{DigitalSource} $\ast$source)
 \item 
-void \hyperlink{classCounter_a0015c2da61df6011bfbaf20bbf62982d}{\-Set\-Up\-Source} (\hyperlink{classDigitalSource}{\-Digital\-Source} \&source)
+void \hyperlink{classCounter_a0015c2da61df6011bfbaf20bbf62982d}{SetUpSource} (\hyperlink{classDigitalSource}{DigitalSource} \&source)
 \item 
-void \hyperlink{classCounter_af75f91bb8b014b04585b5bebb102e65d}{\-Set\-Up\-Source\-Edge} (bool rising\-Edge, bool falling\-Edge)
+void \hyperlink{classCounter_af75f91bb8b014b04585b5bebb102e65d}{SetUpSourceEdge} (bool risingEdge, bool fallingEdge)
 \item 
-void \hyperlink{classCounter_adfbbfef3d5b90d61d2a3702c3876e599}{\-Clear\-Up\-Source} ()
+void \hyperlink{classCounter_adfbbfef3d5b90d61d2a3702c3876e599}{ClearUpSource} ()
 \item 
-void \hyperlink{classCounter_a61624bde53b714db868b422ad1e35813}{\-Set\-Down\-Source} (\-U\-I\-N\-T32 channel)
+void \hyperlink{classCounter_a61624bde53b714db868b422ad1e35813}{SetDownSource} (UINT32 channel)
 \item 
-void \hyperlink{classCounter_a0ff428aada4f88ce538fb9a6a61d37c7}{\-Set\-Down\-Source} (\-U\-I\-N\-T32 slot, \-U\-I\-N\-T32 channel)
+void \hyperlink{classCounter_a683e70937992ac5830e268274b64429c}{SetDownSource} (UINT8 moduleNumber, UINT32 channel)
 \item 
-void \hyperlink{classCounter_a672fefa4c325665617f38e6588d83541}{\-Set\-Down\-Source} (\hyperlink{classAnalogTrigger}{\-Analog\-Trigger} $\ast$analog\-Trigger, \-Analog\-Trigger\-Output\-::\-Type trigger\-Type)
+void \hyperlink{classCounter_a672fefa4c325665617f38e6588d83541}{SetDownSource} (\hyperlink{classAnalogTrigger}{AnalogTrigger} $\ast$analogTrigger, AnalogTriggerOutput::Type triggerType)
 \item 
-void \hyperlink{classCounter_a74064fcd79b179aaf782d4ae8e7bd42e}{\-Set\-Down\-Source} (\hyperlink{classAnalogTrigger}{\-Analog\-Trigger} \&analog\-Trigger, \-Analog\-Trigger\-Output\-::\-Type trigger\-Type)
+void \hyperlink{classCounter_a74064fcd79b179aaf782d4ae8e7bd42e}{SetDownSource} (\hyperlink{classAnalogTrigger}{AnalogTrigger} \&analogTrigger, AnalogTriggerOutput::Type triggerType)
 \item 
-void \hyperlink{classCounter_a667ea67a66e39b5ce6727f49253bae02}{\-Set\-Down\-Source} (\hyperlink{classDigitalSource}{\-Digital\-Source} $\ast$source)
+void \hyperlink{classCounter_a667ea67a66e39b5ce6727f49253bae02}{SetDownSource} (\hyperlink{classDigitalSource}{DigitalSource} $\ast$source)
 \item 
-void \hyperlink{classCounter_a68fa4169dd3cf9a0c58de786f2d69c76}{\-Set\-Down\-Source} (\hyperlink{classDigitalSource}{\-Digital\-Source} \&source)
+void \hyperlink{classCounter_a68fa4169dd3cf9a0c58de786f2d69c76}{SetDownSource} (\hyperlink{classDigitalSource}{DigitalSource} \&source)
 \item 
-void \hyperlink{classCounter_a929a270422ce7fe72955f76e33e60fd2}{\-Set\-Down\-Source\-Edge} (bool rising\-Edge, bool falling\-Edge)
+void \hyperlink{classCounter_a929a270422ce7fe72955f76e33e60fd2}{SetDownSourceEdge} (bool risingEdge, bool fallingEdge)
 \item 
-void \hyperlink{classCounter_a14f57c89d5e20d5ca590877dcc6be50f}{\-Clear\-Down\-Source} ()
+void \hyperlink{classCounter_a14f57c89d5e20d5ca590877dcc6be50f}{ClearDownSource} ()
 \item 
-void \hyperlink{classCounter_aa71cea0b77f6664454f0f56a665b00c4}{\-Set\-Up\-Down\-Counter\-Mode} ()
+void \hyperlink{classCounter_aa71cea0b77f6664454f0f56a665b00c4}{SetUpDownCounterMode} ()
 \item 
-void \hyperlink{classCounter_a750cad2fc33948da6a8f595bfdd126c8}{\-Set\-External\-Direction\-Mode} ()
+void \hyperlink{classCounter_a750cad2fc33948da6a8f595bfdd126c8}{SetExternalDirectionMode} ()
 \item 
-void \hyperlink{classCounter_a1047b8a9c109942ecbbeaa66a1ba1842}{\-Set\-Semi\-Period\-Mode} (bool high\-Semi\-Period)
+void \hyperlink{classCounter_a1047b8a9c109942ecbbeaa66a1ba1842}{SetSemiPeriodMode} (bool highSemiPeriod)
 \item 
-void \hyperlink{classCounter_adc8d4c41b26c8654fe3775afdb6439f5}{\-Set\-Pulse\-Length\-Mode} (float threshold)
+void \hyperlink{classCounter_adc8d4c41b26c8654fe3775afdb6439f5}{SetPulseLengthMode} (float threshold)
 \item 
-void \hyperlink{classCounter_ab9f8c0a4b5491767c48262a5471992cd}{\-Set\-Reverse\-Direction} (bool reverse\-Direction)
+void \hyperlink{classCounter_ab9f8c0a4b5491767c48262a5471992cd}{SetReverseDirection} (bool reverseDirection)
 \item 
-void \hyperlink{classCounter_a0766c0a11e84866758b20b29e2e17cc0}{\-Start} ()
+void \hyperlink{classCounter_a0766c0a11e84866758b20b29e2e17cc0}{Start} ()
 \item 
-\-I\-N\-T32 \hyperlink{classCounter_ad8b0c5e46e0360f93554530d90d553b8}{\-Get} ()
+INT32 \hyperlink{classCounter_ad8b0c5e46e0360f93554530d90d553b8}{Get} ()
 \item 
-void \hyperlink{classCounter_a006032d39fada9ad683ccc849d2f60d3}{\-Reset} ()
+void \hyperlink{classCounter_a006032d39fada9ad683ccc849d2f60d3}{Reset} ()
 \item 
-void \hyperlink{classCounter_aa6ea006a3109769cc1e0a37dc25e11f4}{\-Stop} ()
+void \hyperlink{classCounter_aa6ea006a3109769cc1e0a37dc25e11f4}{Stop} ()
 \item 
-\hypertarget{classCounter_a51030989a5ee306beaf40ac28ab362c0}{double {\bfseries \-Get\-Period} ()}\label{classCounter_a51030989a5ee306beaf40ac28ab362c0}
+\hypertarget{classCounter_a51030989a5ee306beaf40ac28ab362c0}{
+double {\bfseries GetPeriod} ()}
+\label{classCounter_a51030989a5ee306beaf40ac28ab362c0}
 
 \item 
-void \hyperlink{classCounter_a8496d29a6b9424f76075396e9c729bca}{\-Set\-Max\-Period} (double max\-Period)
+void \hyperlink{classCounter_a8496d29a6b9424f76075396e9c729bca}{SetMaxPeriod} (double maxPeriod)
 \item 
-void \hyperlink{classCounter_a6701899f12600eabff3345223d65d4db}{\-Set\-Update\-When\-Empty} (bool enabled)
+void \hyperlink{classCounter_a6701899f12600eabff3345223d65d4db}{SetUpdateWhenEmpty} (bool enabled)
 \item 
-bool \hyperlink{classCounter_ae6bea5b908b1c276e8592e18656aaf21}{\-Get\-Stopped} ()
+bool \hyperlink{classCounter_ae6bea5b908b1c276e8592e18656aaf21}{GetStopped} ()
 \item 
-bool \hyperlink{classCounter_acdfa2215fb973249a5f0d2a9f2f3c6b6}{\-Get\-Direction} ()
+bool \hyperlink{classCounter_acdfa2215fb973249a5f0d2a9f2f3c6b6}{GetDirection} ()
 \end{DoxyCompactItemize}
 
 
-\subsection{\-Detailed \-Description}
-\-Class for counting the number of ticks on a digital input channel. \-This is a general purpose class for counting repetitive events. \-It can return the number of counts, the period of the most recent cycle, and detect when the signal being counted has stopped by supplying a maximum cycle time. 
+\subsection{Detailed Description}
+Class for counting the number of ticks on a digital input channel. This is a general purpose class for counting repetitive events. It can return the number of counts, the period of the most recent cycle, and detect when the signal being counted has stopped by supplying a maximum cycle time. 
 
-\subsection{\-Constructor \& \-Destructor \-Documentation}
-\hypertarget{classCounter_a1e05f69b5240fbab3e7ab351672167f0}{\index{\-Counter@{\-Counter}!\-Counter@{\-Counter}}
-\index{\-Counter@{\-Counter}!Counter@{\-Counter}}
-\subsubsection[{\-Counter}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Counter\-::\-Counter} (
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classCounter_a1e05f69b5240fbab3e7ab351672167f0}{
+\index{Counter@{Counter}!Counter@{Counter}}
+\index{Counter@{Counter}!Counter@{Counter}}
+\subsubsection[{Counter}]{\setlength{\rightskip}{0pt plus 5cm}Counter::Counter (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)}}\label{classCounter_a1e05f69b5240fbab3e7ab351672167f0}
-\-Create an instance of a counter where no sources are selected. \-Then they all must be selected by calling functions to specify the upsource and the downsource independently. \hypertarget{classCounter_a133b5a4e1dba8d8260000e25a9a4d124}{\index{\-Counter@{\-Counter}!\-Counter@{\-Counter}}
-\index{\-Counter@{\-Counter}!Counter@{\-Counter}}
-\subsubsection[{\-Counter}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Counter\-::\-Counter} (
+)}}
+\label{classCounter_a1e05f69b5240fbab3e7ab351672167f0}
+Create an instance of a counter where no sources are selected. Then they all must be selected by calling functions to specify the upsource and the downsource independently. \hypertarget{classCounter_a133b5a4e1dba8d8260000e25a9a4d124}{
+\index{Counter@{Counter}!Counter@{Counter}}
+\index{Counter@{Counter}!Counter@{Counter}}
+\subsubsection[{Counter}]{\setlength{\rightskip}{0pt plus 5cm}Counter::Counter (
 \begin{DoxyParamCaption}
-\item[{\-U\-I\-N\-T32}]{channel}
+\item[{UINT32}]{channel}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily  \mbox{[}explicit\mbox{]}}}}\label{classCounter_a133b5a4e1dba8d8260000e25a9a4d124}
-\-Create an instance of a \hyperlink{classCounter}{\-Counter} object. \-Create an up-\/\-Counter instance given a channel. \-The default digital module is assumed. \hypertarget{classCounter_abbcae190800d57671a56f1cd8ddb85df}{\index{\-Counter@{\-Counter}!\-Counter@{\-Counter}}
-\index{\-Counter@{\-Counter}!Counter@{\-Counter}}
-\subsubsection[{\-Counter}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Counter\-::\-Counter} (
+)\hspace{0.3cm}{\ttfamily  \mbox{[}explicit\mbox{]}}}}
+\label{classCounter_a133b5a4e1dba8d8260000e25a9a4d124}
+Create an instance of a \hyperlink{classCounter}{Counter} object. Create an up-\/Counter instance given a channel. The default digital module is assumed. \hypertarget{classCounter_acf5e289d8c4b8db0e80f28fec89a01f2}{
+\index{Counter@{Counter}!Counter@{Counter}}
+\index{Counter@{Counter}!Counter@{Counter}}
+\subsubsection[{Counter}]{\setlength{\rightskip}{0pt plus 5cm}Counter::Counter (
 \begin{DoxyParamCaption}
-\item[{\-U\-I\-N\-T32}]{slot, }
-\item[{\-U\-I\-N\-T32}]{channel}
+\item[{UINT8}]{moduleNumber, }
+\item[{UINT32}]{channel}
 \end{DoxyParamCaption}
-)}}\label{classCounter_abbcae190800d57671a56f1cd8ddb85df}
-\-Create an instance of a \hyperlink{classCounter}{\-Counter} object. \-Create an instance of an up-\/\-Counter given a digital module and a channel. 
-\begin{DoxyParams}{\-Parameters}
-{\em slot} & \-The c\-R\-I\-O chassis slot for the digital module used \\
+)}}
+\label{classCounter_acf5e289d8c4b8db0e80f28fec89a01f2}
+Create an instance of a \hyperlink{classCounter}{Counter} object. Create an instance of an up-\/Counter given a digital module and a channel. 
+\begin{DoxyParams}{Parameters}
+{\em moduleNumber} & The digital module (1 or 2). \\
 \hline
-{\em channel} & \-The channel in the digital module \\
+{\em channel} & The channel in the digital module \\
 \hline
 \end{DoxyParams}
-\hypertarget{classCounter_a9c7d57696e482eff75e1e03eaf6f8120}{\index{\-Counter@{\-Counter}!\-Counter@{\-Counter}}
-\index{\-Counter@{\-Counter}!Counter@{\-Counter}}
-\subsubsection[{\-Counter}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Counter\-::\-Counter} (
+\hypertarget{classCounter_a9c7d57696e482eff75e1e03eaf6f8120}{
+\index{Counter@{Counter}!Counter@{Counter}}
+\index{Counter@{Counter}!Counter@{Counter}}
+\subsubsection[{Counter}]{\setlength{\rightskip}{0pt plus 5cm}Counter::Counter (
 \begin{DoxyParamCaption}
-\item[{{\bf \-Digital\-Source} $\ast$}]{source}
+\item[{{\bf DigitalSource} $\ast$}]{source}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily  \mbox{[}explicit\mbox{]}}}}\label{classCounter_a9c7d57696e482eff75e1e03eaf6f8120}
-\-Create an instance of a counter from a \-Digital \-Input. \-This is used if an existing digital input is to be shared by multiple other objects such as encoders. \hypertarget{classCounter_a51efc97323b6d5c42de11fa827655118}{\index{\-Counter@{\-Counter}!\-Counter@{\-Counter}}
-\index{\-Counter@{\-Counter}!Counter@{\-Counter}}
-\subsubsection[{\-Counter}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Counter\-::\-Counter} (
+)\hspace{0.3cm}{\ttfamily  \mbox{[}explicit\mbox{]}}}}
+\label{classCounter_a9c7d57696e482eff75e1e03eaf6f8120}
+Create an instance of a counter from a Digital Input. This is used if an existing digital input is to be shared by multiple other objects such as encoders. \hypertarget{classCounter_a51efc97323b6d5c42de11fa827655118}{
+\index{Counter@{Counter}!Counter@{Counter}}
+\index{Counter@{Counter}!Counter@{Counter}}
+\subsubsection[{Counter}]{\setlength{\rightskip}{0pt plus 5cm}Counter::Counter (
 \begin{DoxyParamCaption}
-\item[{{\bf \-Analog\-Trigger} $\ast$}]{trigger}
+\item[{{\bf AnalogTrigger} $\ast$}]{trigger}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily  \mbox{[}explicit\mbox{]}}}}\label{classCounter_a51efc97323b6d5c42de11fa827655118}
-\-Create an instance of a \hyperlink{classCounter}{\-Counter} object. \-Create an instance of a simple up-\/\-Counter given an analog trigger. \-Use the trigger state output from the analog trigger. \hypertarget{classCounter_a97f4728470ae8eff37d50ef1d6bb0135}{\index{\-Counter@{\-Counter}!$\sim$\-Counter@{$\sim$\-Counter}}
-\index{$\sim$\-Counter@{$\sim$\-Counter}!Counter@{\-Counter}}
-\subsubsection[{$\sim$\-Counter}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Counter\-::$\sim$\-Counter} (
+)\hspace{0.3cm}{\ttfamily  \mbox{[}explicit\mbox{]}}}}
+\label{classCounter_a51efc97323b6d5c42de11fa827655118}
+Create an instance of a \hyperlink{classCounter}{Counter} object. Create an instance of a simple up-\/Counter given an analog trigger. Use the trigger state output from the analog trigger. \hypertarget{classCounter_a97f4728470ae8eff37d50ef1d6bb0135}{
+\index{Counter@{Counter}!$\sim$Counter@{$\sim$Counter}}
+\index{$\sim$Counter@{$\sim$Counter}!Counter@{Counter}}
+\subsubsection[{$\sim$Counter}]{\setlength{\rightskip}{0pt plus 5cm}Counter::$\sim$Counter (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{classCounter_a97f4728470ae8eff37d50ef1d6bb0135}
-\-Delete the \hyperlink{classCounter}{\-Counter} object. 
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classCounter_a97f4728470ae8eff37d50ef1d6bb0135}
+Delete the \hyperlink{classCounter}{Counter} object. 
 
-\subsection{\-Member \-Function \-Documentation}
-\hypertarget{classCounter_a14f57c89d5e20d5ca590877dcc6be50f}{\index{\-Counter@{\-Counter}!\-Clear\-Down\-Source@{\-Clear\-Down\-Source}}
-\index{\-Clear\-Down\-Source@{\-Clear\-Down\-Source}!Counter@{\-Counter}}
-\subsubsection[{\-Clear\-Down\-Source}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Counter\-::\-Clear\-Down\-Source} (
+\subsection{Member Function Documentation}
+\hypertarget{classCounter_a14f57c89d5e20d5ca590877dcc6be50f}{
+\index{Counter@{Counter}!ClearDownSource@{ClearDownSource}}
+\index{ClearDownSource@{ClearDownSource}!Counter@{Counter}}
+\subsubsection[{ClearDownSource}]{\setlength{\rightskip}{0pt plus 5cm}void Counter::ClearDownSource (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)}}\label{classCounter_a14f57c89d5e20d5ca590877dcc6be50f}
-\-Disable the down counting source to the counter. \hypertarget{classCounter_adfbbfef3d5b90d61d2a3702c3876e599}{\index{\-Counter@{\-Counter}!\-Clear\-Up\-Source@{\-Clear\-Up\-Source}}
-\index{\-Clear\-Up\-Source@{\-Clear\-Up\-Source}!Counter@{\-Counter}}
-\subsubsection[{\-Clear\-Up\-Source}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Counter\-::\-Clear\-Up\-Source} (
+)}}
+\label{classCounter_a14f57c89d5e20d5ca590877dcc6be50f}
+Disable the down counting source to the counter. \hypertarget{classCounter_adfbbfef3d5b90d61d2a3702c3876e599}{
+\index{Counter@{Counter}!ClearUpSource@{ClearUpSource}}
+\index{ClearUpSource@{ClearUpSource}!Counter@{Counter}}
+\subsubsection[{ClearUpSource}]{\setlength{\rightskip}{0pt plus 5cm}void Counter::ClearUpSource (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)}}\label{classCounter_adfbbfef3d5b90d61d2a3702c3876e599}
-\-Disable the up counting source to the counter. \hypertarget{classCounter_ad8b0c5e46e0360f93554530d90d553b8}{\index{\-Counter@{\-Counter}!\-Get@{\-Get}}
-\index{\-Get@{\-Get}!Counter@{\-Counter}}
-\subsubsection[{\-Get}]{\setlength{\rightskip}{0pt plus 5cm}\-I\-N\-T32 {\bf \-Counter\-::\-Get} (
+)}}
+\label{classCounter_adfbbfef3d5b90d61d2a3702c3876e599}
+Disable the up counting source to the counter. \hypertarget{classCounter_ad8b0c5e46e0360f93554530d90d553b8}{
+\index{Counter@{Counter}!Get@{Get}}
+\index{Get@{Get}!Counter@{Counter}}
+\subsubsection[{Get}]{\setlength{\rightskip}{0pt plus 5cm}INT32 Counter::Get (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{classCounter_ad8b0c5e46e0360f93554530d90d553b8}
-\-Read the current counter value. \-Read the value at this instant. \-It may still be running, so it reflects the current value. \-Next time it is read, it might have a different value. 
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classCounter_ad8b0c5e46e0360f93554530d90d553b8}
+Read the current counter value. Read the value at this instant. It may still be running, so it reflects the current value. Next time it is read, it might have a different value. 
 
-\-Implements \hyperlink{classCounterBase}{\-Counter\-Base}.
+Implements \hyperlink{classCounterBase}{CounterBase}.
 
-\hypertarget{classCounter_acdfa2215fb973249a5f0d2a9f2f3c6b6}{\index{\-Counter@{\-Counter}!\-Get\-Direction@{\-Get\-Direction}}
-\index{\-Get\-Direction@{\-Get\-Direction}!Counter@{\-Counter}}
-\subsubsection[{\-Get\-Direction}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Counter\-::\-Get\-Direction} (
+\hypertarget{classCounter_acdfa2215fb973249a5f0d2a9f2f3c6b6}{
+\index{Counter@{Counter}!GetDirection@{GetDirection}}
+\index{GetDirection@{GetDirection}!Counter@{Counter}}
+\subsubsection[{GetDirection}]{\setlength{\rightskip}{0pt plus 5cm}bool Counter::GetDirection (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{classCounter_acdfa2215fb973249a5f0d2a9f2f3c6b6}
-\-The last direction the counter value changed. \begin{DoxyReturn}{\-Returns}
-\-The last direction the counter value changed. 
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classCounter_acdfa2215fb973249a5f0d2a9f2f3c6b6}
+The last direction the counter value changed. \begin{DoxyReturn}{Returns}
+The last direction the counter value changed. 
 \end{DoxyReturn}
 
 
-\-Implements \hyperlink{classCounterBase}{\-Counter\-Base}.
+Implements \hyperlink{classCounterBase}{CounterBase}.
 
-\hypertarget{classCounter_ae6bea5b908b1c276e8592e18656aaf21}{\index{\-Counter@{\-Counter}!\-Get\-Stopped@{\-Get\-Stopped}}
-\index{\-Get\-Stopped@{\-Get\-Stopped}!Counter@{\-Counter}}
-\subsubsection[{\-Get\-Stopped}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Counter\-::\-Get\-Stopped} (
+\hypertarget{classCounter_ae6bea5b908b1c276e8592e18656aaf21}{
+\index{Counter@{Counter}!GetStopped@{GetStopped}}
+\index{GetStopped@{GetStopped}!Counter@{Counter}}
+\subsubsection[{GetStopped}]{\setlength{\rightskip}{0pt plus 5cm}bool Counter::GetStopped (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{classCounter_ae6bea5b908b1c276e8592e18656aaf21}
-\-Determine if the clock is stopped. \-Determine if the clocked input is stopped based on the \-Max\-Period value set using the \-Set\-Max\-Period method. \-If the clock exceeds the \-Max\-Period, then the device (and counter) are assumed to be stopped and it returns true. \begin{DoxyReturn}{\-Returns}
-\-Returns true if the most recent counter period exceeds the \-Max\-Period value set by \-Set\-Max\-Period. 
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classCounter_ae6bea5b908b1c276e8592e18656aaf21}
+Determine if the clock is stopped. Determine if the clocked input is stopped based on the MaxPeriod value set using the SetMaxPeriod method. If the clock exceeds the MaxPeriod, then the device (and counter) are assumed to be stopped and it returns true. \begin{DoxyReturn}{Returns}
+Returns true if the most recent counter period exceeds the MaxPeriod value set by SetMaxPeriod. 
 \end{DoxyReturn}
 
 
-\-Implements \hyperlink{classCounterBase}{\-Counter\-Base}.
+Implements \hyperlink{classCounterBase}{CounterBase}.
 
-\hypertarget{classCounter_a006032d39fada9ad683ccc849d2f60d3}{\index{\-Counter@{\-Counter}!\-Reset@{\-Reset}}
-\index{\-Reset@{\-Reset}!Counter@{\-Counter}}
-\subsubsection[{\-Reset}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Counter\-::\-Reset} (
+\hypertarget{classCounter_a006032d39fada9ad683ccc849d2f60d3}{
+\index{Counter@{Counter}!Reset@{Reset}}
+\index{Reset@{Reset}!Counter@{Counter}}
+\subsubsection[{Reset}]{\setlength{\rightskip}{0pt plus 5cm}void Counter::Reset (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{classCounter_a006032d39fada9ad683ccc849d2f60d3}
-\-Reset the \hyperlink{classCounter}{\-Counter} to zero. \-Set the counter value to zero. \-This doesn't effect the running state of the counter, just sets the current value to zero. 
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classCounter_a006032d39fada9ad683ccc849d2f60d3}
+Reset the \hyperlink{classCounter}{Counter} to zero. Set the counter value to zero. This doesn't effect the running state of the counter, just sets the current value to zero. 
 
-\-Implements \hyperlink{classCounterBase}{\-Counter\-Base}.
+Implements \hyperlink{classCounterBase}{CounterBase}.
 
-\hypertarget{classCounter_a61624bde53b714db868b422ad1e35813}{\index{\-Counter@{\-Counter}!\-Set\-Down\-Source@{\-Set\-Down\-Source}}
-\index{\-Set\-Down\-Source@{\-Set\-Down\-Source}!Counter@{\-Counter}}
-\subsubsection[{\-Set\-Down\-Source}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Counter\-::\-Set\-Down\-Source} (
+\hypertarget{classCounter_a61624bde53b714db868b422ad1e35813}{
+\index{Counter@{Counter}!SetDownSource@{SetDownSource}}
+\index{SetDownSource@{SetDownSource}!Counter@{Counter}}
+\subsubsection[{SetDownSource}]{\setlength{\rightskip}{0pt plus 5cm}void Counter::SetDownSource (
 \begin{DoxyParamCaption}
-\item[{\-U\-I\-N\-T32}]{channel}
+\item[{UINT32}]{channel}
 \end{DoxyParamCaption}
-)}}\label{classCounter_a61624bde53b714db868b422ad1e35813}
-\-Set the down counting source to be a digital input channel. \-The slot will be set to the default digital module slot. \hypertarget{classCounter_a0ff428aada4f88ce538fb9a6a61d37c7}{\index{\-Counter@{\-Counter}!\-Set\-Down\-Source@{\-Set\-Down\-Source}}
-\index{\-Set\-Down\-Source@{\-Set\-Down\-Source}!Counter@{\-Counter}}
-\subsubsection[{\-Set\-Down\-Source}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Counter\-::\-Set\-Down\-Source} (
+)}}
+\label{classCounter_a61624bde53b714db868b422ad1e35813}
+Set the down counting source to be a digital input channel. The slot will be set to the default digital module slot. \hypertarget{classCounter_a683e70937992ac5830e268274b64429c}{
+\index{Counter@{Counter}!SetDownSource@{SetDownSource}}
+\index{SetDownSource@{SetDownSource}!Counter@{Counter}}
+\subsubsection[{SetDownSource}]{\setlength{\rightskip}{0pt plus 5cm}void Counter::SetDownSource (
 \begin{DoxyParamCaption}
-\item[{\-U\-I\-N\-T32}]{slot, }
-\item[{\-U\-I\-N\-T32}]{channel}
+\item[{UINT8}]{moduleNumber, }
+\item[{UINT32}]{channel}
 \end{DoxyParamCaption}
-)}}\label{classCounter_a0ff428aada4f88ce538fb9a6a61d37c7}
-\-Set the down counting source to be a digital input slot and channel. \hypertarget{classCounter_a672fefa4c325665617f38e6588d83541}{\index{\-Counter@{\-Counter}!\-Set\-Down\-Source@{\-Set\-Down\-Source}}
-\index{\-Set\-Down\-Source@{\-Set\-Down\-Source}!Counter@{\-Counter}}
-\subsubsection[{\-Set\-Down\-Source}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Counter\-::\-Set\-Down\-Source} (
-\begin{DoxyParamCaption}
-\item[{{\bf \-Analog\-Trigger} $\ast$}]{analog\-Trigger, }
-\item[{\-Analog\-Trigger\-Output\-::\-Type}]{trigger\-Type}
-\end{DoxyParamCaption}
-)}}\label{classCounter_a672fefa4c325665617f38e6588d83541}
-\-Set the down counting source to be an analog trigger. 
-\begin{DoxyParams}{\-Parameters}
-{\em analog\-Trigger} & \-The analog trigger object that is used for the \-Down \-Source \\
+)}}
+\label{classCounter_a683e70937992ac5830e268274b64429c}
+Set the down counting source to be a digital input slot and channel.
+
+
+\begin{DoxyParams}{Parameters}
+{\em moduleNumber} & The digital module (1 or 2). \\
 \hline
-{\em trigger\-Type} & \-The analog trigger output that will trigger the counter. \\
+{\em channel} & The digital channel (1..14). \\
 \hline
 \end{DoxyParams}
-\hypertarget{classCounter_a74064fcd79b179aaf782d4ae8e7bd42e}{\index{\-Counter@{\-Counter}!\-Set\-Down\-Source@{\-Set\-Down\-Source}}
-\index{\-Set\-Down\-Source@{\-Set\-Down\-Source}!Counter@{\-Counter}}
-\subsubsection[{\-Set\-Down\-Source}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Counter\-::\-Set\-Down\-Source} (
+\hypertarget{classCounter_a672fefa4c325665617f38e6588d83541}{
+\index{Counter@{Counter}!SetDownSource@{SetDownSource}}
+\index{SetDownSource@{SetDownSource}!Counter@{Counter}}
+\subsubsection[{SetDownSource}]{\setlength{\rightskip}{0pt plus 5cm}void Counter::SetDownSource (
 \begin{DoxyParamCaption}
-\item[{{\bf \-Analog\-Trigger} \&}]{analog\-Trigger, }
-\item[{\-Analog\-Trigger\-Output\-::\-Type}]{trigger\-Type}
+\item[{{\bf AnalogTrigger} $\ast$}]{analogTrigger, }
+\item[{AnalogTriggerOutput::Type}]{triggerType}
 \end{DoxyParamCaption}
-)}}\label{classCounter_a74064fcd79b179aaf782d4ae8e7bd42e}
-\-Set the down counting source to be an analog trigger. 
-\begin{DoxyParams}{\-Parameters}
-{\em analog\-Trigger} & \-The analog trigger object that is used for the \-Down \-Source \\
+)}}
+\label{classCounter_a672fefa4c325665617f38e6588d83541}
+Set the down counting source to be an analog trigger. 
+\begin{DoxyParams}{Parameters}
+{\em analogTrigger} & The analog trigger object that is used for the Down Source \\
 \hline
-{\em trigger\-Type} & \-The analog trigger output that will trigger the counter. \\
+{\em triggerType} & The analog trigger output that will trigger the counter. \\
 \hline
 \end{DoxyParams}
-\hypertarget{classCounter_a667ea67a66e39b5ce6727f49253bae02}{\index{\-Counter@{\-Counter}!\-Set\-Down\-Source@{\-Set\-Down\-Source}}
-\index{\-Set\-Down\-Source@{\-Set\-Down\-Source}!Counter@{\-Counter}}
-\subsubsection[{\-Set\-Down\-Source}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Counter\-::\-Set\-Down\-Source} (
+\hypertarget{classCounter_a667ea67a66e39b5ce6727f49253bae02}{
+\index{Counter@{Counter}!SetDownSource@{SetDownSource}}
+\index{SetDownSource@{SetDownSource}!Counter@{Counter}}
+\subsubsection[{SetDownSource}]{\setlength{\rightskip}{0pt plus 5cm}void Counter::SetDownSource (
 \begin{DoxyParamCaption}
-\item[{{\bf \-Digital\-Source} $\ast$}]{source}
+\item[{{\bf DigitalSource} $\ast$}]{source}
 \end{DoxyParamCaption}
-)}}\label{classCounter_a667ea67a66e39b5ce6727f49253bae02}
-\-Set the source object that causes the counter to count down. \-Set the down counting \hyperlink{classDigitalSource}{\-Digital\-Source}. \hypertarget{classCounter_a68fa4169dd3cf9a0c58de786f2d69c76}{\index{\-Counter@{\-Counter}!\-Set\-Down\-Source@{\-Set\-Down\-Source}}
-\index{\-Set\-Down\-Source@{\-Set\-Down\-Source}!Counter@{\-Counter}}
-\subsubsection[{\-Set\-Down\-Source}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Counter\-::\-Set\-Down\-Source} (
+)}}
+\label{classCounter_a667ea67a66e39b5ce6727f49253bae02}
+Set the source object that causes the counter to count down. Set the down counting \hyperlink{classDigitalSource}{DigitalSource}. \hypertarget{classCounter_a74064fcd79b179aaf782d4ae8e7bd42e}{
+\index{Counter@{Counter}!SetDownSource@{SetDownSource}}
+\index{SetDownSource@{SetDownSource}!Counter@{Counter}}
+\subsubsection[{SetDownSource}]{\setlength{\rightskip}{0pt plus 5cm}void Counter::SetDownSource (
 \begin{DoxyParamCaption}
-\item[{{\bf \-Digital\-Source} \&}]{source}
+\item[{{\bf AnalogTrigger} \&}]{analogTrigger, }
+\item[{AnalogTriggerOutput::Type}]{triggerType}
 \end{DoxyParamCaption}
-)}}\label{classCounter_a68fa4169dd3cf9a0c58de786f2d69c76}
-\-Set the source object that causes the counter to count down. \-Set the down counting \hyperlink{classDigitalSource}{\-Digital\-Source}. \hypertarget{classCounter_a929a270422ce7fe72955f76e33e60fd2}{\index{\-Counter@{\-Counter}!\-Set\-Down\-Source\-Edge@{\-Set\-Down\-Source\-Edge}}
-\index{\-Set\-Down\-Source\-Edge@{\-Set\-Down\-Source\-Edge}!Counter@{\-Counter}}
-\subsubsection[{\-Set\-Down\-Source\-Edge}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Counter\-::\-Set\-Down\-Source\-Edge} (
+)}}
+\label{classCounter_a74064fcd79b179aaf782d4ae8e7bd42e}
+Set the down counting source to be an analog trigger. 
+\begin{DoxyParams}{Parameters}
+{\em analogTrigger} & The analog trigger object that is used for the Down Source \\
+\hline
+{\em triggerType} & The analog trigger output that will trigger the counter. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classCounter_a68fa4169dd3cf9a0c58de786f2d69c76}{
+\index{Counter@{Counter}!SetDownSource@{SetDownSource}}
+\index{SetDownSource@{SetDownSource}!Counter@{Counter}}
+\subsubsection[{SetDownSource}]{\setlength{\rightskip}{0pt plus 5cm}void Counter::SetDownSource (
 \begin{DoxyParamCaption}
-\item[{bool}]{rising\-Edge, }
-\item[{bool}]{falling\-Edge}
+\item[{{\bf DigitalSource} \&}]{source}
 \end{DoxyParamCaption}
-)}}\label{classCounter_a929a270422ce7fe72955f76e33e60fd2}
-\-Set the edge sensitivity on a down counting source. \-Set the down source to either detect rising edges or falling edges. \hypertarget{classCounter_a750cad2fc33948da6a8f595bfdd126c8}{\index{\-Counter@{\-Counter}!\-Set\-External\-Direction\-Mode@{\-Set\-External\-Direction\-Mode}}
-\index{\-Set\-External\-Direction\-Mode@{\-Set\-External\-Direction\-Mode}!Counter@{\-Counter}}
-\subsubsection[{\-Set\-External\-Direction\-Mode}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Counter\-::\-Set\-External\-Direction\-Mode} (
+)}}
+\label{classCounter_a68fa4169dd3cf9a0c58de786f2d69c76}
+Set the source object that causes the counter to count down. Set the down counting \hyperlink{classDigitalSource}{DigitalSource}. \hypertarget{classCounter_a929a270422ce7fe72955f76e33e60fd2}{
+\index{Counter@{Counter}!SetDownSourceEdge@{SetDownSourceEdge}}
+\index{SetDownSourceEdge@{SetDownSourceEdge}!Counter@{Counter}}
+\subsubsection[{SetDownSourceEdge}]{\setlength{\rightskip}{0pt plus 5cm}void Counter::SetDownSourceEdge (
+\begin{DoxyParamCaption}
+\item[{bool}]{risingEdge, }
+\item[{bool}]{fallingEdge}
+\end{DoxyParamCaption}
+)}}
+\label{classCounter_a929a270422ce7fe72955f76e33e60fd2}
+Set the edge sensitivity on a down counting source. Set the down source to either detect rising edges or falling edges. \hypertarget{classCounter_a750cad2fc33948da6a8f595bfdd126c8}{
+\index{Counter@{Counter}!SetExternalDirectionMode@{SetExternalDirectionMode}}
+\index{SetExternalDirectionMode@{SetExternalDirectionMode}!Counter@{Counter}}
+\subsubsection[{SetExternalDirectionMode}]{\setlength{\rightskip}{0pt plus 5cm}void Counter::SetExternalDirectionMode (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)}}\label{classCounter_a750cad2fc33948da6a8f595bfdd126c8}
-\-Set external direction mode on this counter. \-Counts are sourced on the \-Up counter input. \-The \-Down counter input represents the direction to count. \hypertarget{classCounter_a8496d29a6b9424f76075396e9c729bca}{\index{\-Counter@{\-Counter}!\-Set\-Max\-Period@{\-Set\-Max\-Period}}
-\index{\-Set\-Max\-Period@{\-Set\-Max\-Period}!Counter@{\-Counter}}
-\subsubsection[{\-Set\-Max\-Period}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Counter\-::\-Set\-Max\-Period} (
+)}}
+\label{classCounter_a750cad2fc33948da6a8f595bfdd126c8}
+Set external direction mode on this counter. Counts are sourced on the Up counter input. The Down counter input represents the direction to count. \hypertarget{classCounter_a8496d29a6b9424f76075396e9c729bca}{
+\index{Counter@{Counter}!SetMaxPeriod@{SetMaxPeriod}}
+\index{SetMaxPeriod@{SetMaxPeriod}!Counter@{Counter}}
+\subsubsection[{SetMaxPeriod}]{\setlength{\rightskip}{0pt plus 5cm}void Counter::SetMaxPeriod (
 \begin{DoxyParamCaption}
-\item[{double}]{max\-Period}
+\item[{double}]{maxPeriod}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{classCounter_a8496d29a6b9424f76075396e9c729bca}
-\-Set the maximum period where the device is still considered \char`\"{}moving\char`\"{}. \-Sets the maximum period where the device is considered moving. \-This value is used to determine the \char`\"{}stopped\char`\"{} state of the counter using the \-Get\-Stopped method. 
-\begin{DoxyParams}{\-Parameters}
-{\em max\-Period} & \-The maximum period where the counted device is considered moving in seconds. \\
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classCounter_a8496d29a6b9424f76075396e9c729bca}
+Set the maximum period where the device is still considered \char`\"{}moving\char`\"{}. Sets the maximum period where the device is considered moving. This value is used to determine the \char`\"{}stopped\char`\"{} state of the counter using the GetStopped method. 
+\begin{DoxyParams}{Parameters}
+{\em maxPeriod} & The maximum period where the counted device is considered moving in seconds. \\
 \hline
 \end{DoxyParams}
 
 
-\-Implements \hyperlink{classCounterBase}{\-Counter\-Base}.
+Implements \hyperlink{classCounterBase}{CounterBase}.
 
-\hypertarget{classCounter_adc8d4c41b26c8654fe3775afdb6439f5}{\index{\-Counter@{\-Counter}!\-Set\-Pulse\-Length\-Mode@{\-Set\-Pulse\-Length\-Mode}}
-\index{\-Set\-Pulse\-Length\-Mode@{\-Set\-Pulse\-Length\-Mode}!Counter@{\-Counter}}
-\subsubsection[{\-Set\-Pulse\-Length\-Mode}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Counter\-::\-Set\-Pulse\-Length\-Mode} (
+\hypertarget{classCounter_adc8d4c41b26c8654fe3775afdb6439f5}{
+\index{Counter@{Counter}!SetPulseLengthMode@{SetPulseLengthMode}}
+\index{SetPulseLengthMode@{SetPulseLengthMode}!Counter@{Counter}}
+\subsubsection[{SetPulseLengthMode}]{\setlength{\rightskip}{0pt plus 5cm}void Counter::SetPulseLengthMode (
 \begin{DoxyParamCaption}
 \item[{float}]{threshold}
 \end{DoxyParamCaption}
-)}}\label{classCounter_adc8d4c41b26c8654fe3775afdb6439f5}
-\-Configure the counter to count in up or down based on the length of the input pulse. \-This mode is most useful for direction sensitive gear tooth sensors. 
-\begin{DoxyParams}{\-Parameters}
-{\em threshold} & \-The pulse length beyond which the counter counts the opposite direction. \-Units are seconds. \\
+)}}
+\label{classCounter_adc8d4c41b26c8654fe3775afdb6439f5}
+Configure the counter to count in up or down based on the length of the input pulse. This mode is most useful for direction sensitive gear tooth sensors. 
+\begin{DoxyParams}{Parameters}
+{\em threshold} & The pulse length beyond which the counter counts the opposite direction. Units are seconds. \\
 \hline
 \end{DoxyParams}
-\hypertarget{classCounter_ab9f8c0a4b5491767c48262a5471992cd}{\index{\-Counter@{\-Counter}!\-Set\-Reverse\-Direction@{\-Set\-Reverse\-Direction}}
-\index{\-Set\-Reverse\-Direction@{\-Set\-Reverse\-Direction}!Counter@{\-Counter}}
-\subsubsection[{\-Set\-Reverse\-Direction}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Counter\-::\-Set\-Reverse\-Direction} (
+\hypertarget{classCounter_ab9f8c0a4b5491767c48262a5471992cd}{
+\index{Counter@{Counter}!SetReverseDirection@{SetReverseDirection}}
+\index{SetReverseDirection@{SetReverseDirection}!Counter@{Counter}}
+\subsubsection[{SetReverseDirection}]{\setlength{\rightskip}{0pt plus 5cm}void Counter::SetReverseDirection (
 \begin{DoxyParamCaption}
-\item[{bool}]{reverse\-Direction}
+\item[{bool}]{reverseDirection}
 \end{DoxyParamCaption}
-)}}\label{classCounter_ab9f8c0a4b5491767c48262a5471992cd}
-\-Set the \hyperlink{classCounter}{\-Counter} to return reversed sensing on the direction. \-This allows counters to change the direction they are counting in the case of 1\-X and 2\-X quadrature encoding only. \-Any other counter mode isn't supported. 
-\begin{DoxyParams}{\-Parameters}
-{\em reverse\-Direction} & true if the value counted should be negated. \\
+)}}
+\label{classCounter_ab9f8c0a4b5491767c48262a5471992cd}
+Set the \hyperlink{classCounter}{Counter} to return reversed sensing on the direction. This allows counters to change the direction they are counting in the case of 1X and 2X quadrature encoding only. Any other counter mode isn't supported. 
+\begin{DoxyParams}{Parameters}
+{\em reverseDirection} & true if the value counted should be negated. \\
 \hline
 \end{DoxyParams}
-\hypertarget{classCounter_a1047b8a9c109942ecbbeaa66a1ba1842}{\index{\-Counter@{\-Counter}!\-Set\-Semi\-Period\-Mode@{\-Set\-Semi\-Period\-Mode}}
-\index{\-Set\-Semi\-Period\-Mode@{\-Set\-Semi\-Period\-Mode}!Counter@{\-Counter}}
-\subsubsection[{\-Set\-Semi\-Period\-Mode}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Counter\-::\-Set\-Semi\-Period\-Mode} (
+\hypertarget{classCounter_a1047b8a9c109942ecbbeaa66a1ba1842}{
+\index{Counter@{Counter}!SetSemiPeriodMode@{SetSemiPeriodMode}}
+\index{SetSemiPeriodMode@{SetSemiPeriodMode}!Counter@{Counter}}
+\subsubsection[{SetSemiPeriodMode}]{\setlength{\rightskip}{0pt plus 5cm}void Counter::SetSemiPeriodMode (
 \begin{DoxyParamCaption}
-\item[{bool}]{high\-Semi\-Period}
+\item[{bool}]{highSemiPeriod}
 \end{DoxyParamCaption}
-)}}\label{classCounter_a1047b8a9c109942ecbbeaa66a1ba1842}
-\-Set \-Semi-\/period mode on this counter. \-Counts up on both rising and falling edges. \hypertarget{classCounter_a6701899f12600eabff3345223d65d4db}{\index{\-Counter@{\-Counter}!\-Set\-Update\-When\-Empty@{\-Set\-Update\-When\-Empty}}
-\index{\-Set\-Update\-When\-Empty@{\-Set\-Update\-When\-Empty}!Counter@{\-Counter}}
-\subsubsection[{\-Set\-Update\-When\-Empty}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Counter\-::\-Set\-Update\-When\-Empty} (
+)}}
+\label{classCounter_a1047b8a9c109942ecbbeaa66a1ba1842}
+Set Semi-\/period mode on this counter. Counts up on both rising and falling edges. \hypertarget{classCounter_a6701899f12600eabff3345223d65d4db}{
+\index{Counter@{Counter}!SetUpdateWhenEmpty@{SetUpdateWhenEmpty}}
+\index{SetUpdateWhenEmpty@{SetUpdateWhenEmpty}!Counter@{Counter}}
+\subsubsection[{SetUpdateWhenEmpty}]{\setlength{\rightskip}{0pt plus 5cm}void Counter::SetUpdateWhenEmpty (
 \begin{DoxyParamCaption}
 \item[{bool}]{enabled}
 \end{DoxyParamCaption}
-)}}\label{classCounter_a6701899f12600eabff3345223d65d4db}
-\-Select whether you want to continue updating the event timer output when there are no samples captured. \-The output of the event timer has a buffer of periods that are averaged and posted to a register on the \-F\-P\-G\-A. \-When the timer detects that the event source has stopped (based on the \-Max\-Period) the buffer of samples to be averaged is emptied. \-If you enable the update when empty, you will be notified of the stopped source and the event time will report 0 samples. \-If you disable update when empty, the most recent average will remain on the output until a new sample is acquired. \-You will never see 0 samples output (except when there have been no events since an \-F\-P\-G\-A reset) and you will likely not see the stopped bit become true (since it is updated at the end of an average and there are no samples to average). \hypertarget{classCounter_aa71cea0b77f6664454f0f56a665b00c4}{\index{\-Counter@{\-Counter}!\-Set\-Up\-Down\-Counter\-Mode@{\-Set\-Up\-Down\-Counter\-Mode}}
-\index{\-Set\-Up\-Down\-Counter\-Mode@{\-Set\-Up\-Down\-Counter\-Mode}!Counter@{\-Counter}}
-\subsubsection[{\-Set\-Up\-Down\-Counter\-Mode}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Counter\-::\-Set\-Up\-Down\-Counter\-Mode} (
+)}}
+\label{classCounter_a6701899f12600eabff3345223d65d4db}
+Select whether you want to continue updating the event timer output when there are no samples captured. The output of the event timer has a buffer of periods that are averaged and posted to a register on the FPGA. When the timer detects that the event source has stopped (based on the MaxPeriod) the buffer of samples to be averaged is emptied. If you enable the update when empty, you will be notified of the stopped source and the event time will report 0 samples. If you disable update when empty, the most recent average will remain on the output until a new sample is acquired. You will never see 0 samples output (except when there have been no events since an FPGA reset) and you will likely not see the stopped bit become true (since it is updated at the end of an average and there are no samples to average). \hypertarget{classCounter_aa71cea0b77f6664454f0f56a665b00c4}{
+\index{Counter@{Counter}!SetUpDownCounterMode@{SetUpDownCounterMode}}
+\index{SetUpDownCounterMode@{SetUpDownCounterMode}!Counter@{Counter}}
+\subsubsection[{SetUpDownCounterMode}]{\setlength{\rightskip}{0pt plus 5cm}void Counter::SetUpDownCounterMode (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)}}\label{classCounter_aa71cea0b77f6664454f0f56a665b00c4}
-\-Set standard up / down counting mode on this counter. \-Up and down counts are sourced independently from two inputs. \hypertarget{classCounter_a2788b50d591e9b9058bc7250268ced5d}{\index{\-Counter@{\-Counter}!\-Set\-Up\-Source@{\-Set\-Up\-Source}}
-\index{\-Set\-Up\-Source@{\-Set\-Up\-Source}!Counter@{\-Counter}}
-\subsubsection[{\-Set\-Up\-Source}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Counter\-::\-Set\-Up\-Source} (
+)}}
+\label{classCounter_aa71cea0b77f6664454f0f56a665b00c4}
+Set standard up / down counting mode on this counter. Up and down counts are sourced independently from two inputs. \hypertarget{classCounter_a0015c2da61df6011bfbaf20bbf62982d}{
+\index{Counter@{Counter}!SetUpSource@{SetUpSource}}
+\index{SetUpSource@{SetUpSource}!Counter@{Counter}}
+\subsubsection[{SetUpSource}]{\setlength{\rightskip}{0pt plus 5cm}void Counter::SetUpSource (
 \begin{DoxyParamCaption}
-\item[{\-U\-I\-N\-T32}]{channel}
+\item[{{\bf DigitalSource} \&}]{source}
 \end{DoxyParamCaption}
-)}}\label{classCounter_a2788b50d591e9b9058bc7250268ced5d}
-\-Set the upsource for the counter as a digital input channel. \-The slot will be the default digital module slot. \hypertarget{classCounter_af7dae6fde717e8759980591bb73c8b9f}{\index{\-Counter@{\-Counter}!\-Set\-Up\-Source@{\-Set\-Up\-Source}}
-\index{\-Set\-Up\-Source@{\-Set\-Up\-Source}!Counter@{\-Counter}}
-\subsubsection[{\-Set\-Up\-Source}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Counter\-::\-Set\-Up\-Source} (
+)}}
+\label{classCounter_a0015c2da61df6011bfbaf20bbf62982d}
+Set the source object that causes the counter to count up. Set the up counting \hyperlink{classDigitalSource}{DigitalSource}. \hypertarget{classCounter_a0687b78f7bf8a269d653eddca1819d5d}{
+\index{Counter@{Counter}!SetUpSource@{SetUpSource}}
+\index{SetUpSource@{SetUpSource}!Counter@{Counter}}
+\subsubsection[{SetUpSource}]{\setlength{\rightskip}{0pt plus 5cm}void Counter::SetUpSource (
 \begin{DoxyParamCaption}
-\item[{\-U\-I\-N\-T32}]{slot, }
-\item[{\-U\-I\-N\-T32}]{channel}
+\item[{{\bf DigitalSource} $\ast$}]{source}
 \end{DoxyParamCaption}
-)}}\label{classCounter_af7dae6fde717e8759980591bb73c8b9f}
-\-Set the up source for the counter as digital input channel and slot. \hypertarget{classCounter_a8e9838e4f44bf8111356ecdbbab833d9}{\index{\-Counter@{\-Counter}!\-Set\-Up\-Source@{\-Set\-Up\-Source}}
-\index{\-Set\-Up\-Source@{\-Set\-Up\-Source}!Counter@{\-Counter}}
-\subsubsection[{\-Set\-Up\-Source}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Counter\-::\-Set\-Up\-Source} (
+)}}
+\label{classCounter_a0687b78f7bf8a269d653eddca1819d5d}
+Set the source object that causes the counter to count up. Set the up counting \hyperlink{classDigitalSource}{DigitalSource}. \hypertarget{classCounter_a8f08109b27bb842c67826c27354fb68b}{
+\index{Counter@{Counter}!SetUpSource@{SetUpSource}}
+\index{SetUpSource@{SetUpSource}!Counter@{Counter}}
+\subsubsection[{SetUpSource}]{\setlength{\rightskip}{0pt plus 5cm}void Counter::SetUpSource (
 \begin{DoxyParamCaption}
-\item[{{\bf \-Analog\-Trigger} $\ast$}]{analog\-Trigger, }
-\item[{\-Analog\-Trigger\-Output\-::\-Type}]{trigger\-Type}
+\item[{UINT8}]{moduleNumber, }
+\item[{UINT32}]{channel}
 \end{DoxyParamCaption}
-)}}\label{classCounter_a8e9838e4f44bf8111356ecdbbab833d9}
-\-Set the up counting source to be an analog trigger. 
-\begin{DoxyParams}{\-Parameters}
-{\em analog\-Trigger} & \-The analog trigger object that is used for the \-Up \-Source \\
+)}}
+\label{classCounter_a8f08109b27bb842c67826c27354fb68b}
+Set the up source for the counter as digital input channel and slot.
+
+
+\begin{DoxyParams}{Parameters}
+{\em moduleNumber} & The digital module (1 or 2). \\
 \hline
-{\em trigger\-Type} & \-The analog trigger output that will trigger the counter. \\
+{\em channel} & The digital channel (1..14). \\
 \hline
 \end{DoxyParams}
-\hypertarget{classCounter_a8cddeb27c997a2cd5e7372367b6d8ced}{\index{\-Counter@{\-Counter}!\-Set\-Up\-Source@{\-Set\-Up\-Source}}
-\index{\-Set\-Up\-Source@{\-Set\-Up\-Source}!Counter@{\-Counter}}
-\subsubsection[{\-Set\-Up\-Source}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Counter\-::\-Set\-Up\-Source} (
+\hypertarget{classCounter_a8cddeb27c997a2cd5e7372367b6d8ced}{
+\index{Counter@{Counter}!SetUpSource@{SetUpSource}}
+\index{SetUpSource@{SetUpSource}!Counter@{Counter}}
+\subsubsection[{SetUpSource}]{\setlength{\rightskip}{0pt plus 5cm}void Counter::SetUpSource (
 \begin{DoxyParamCaption}
-\item[{{\bf \-Analog\-Trigger} \&}]{analog\-Trigger, }
-\item[{\-Analog\-Trigger\-Output\-::\-Type}]{trigger\-Type}
+\item[{{\bf AnalogTrigger} \&}]{analogTrigger, }
+\item[{AnalogTriggerOutput::Type}]{triggerType}
 \end{DoxyParamCaption}
-)}}\label{classCounter_a8cddeb27c997a2cd5e7372367b6d8ced}
-\-Set the up counting source to be an analog trigger. 
-\begin{DoxyParams}{\-Parameters}
-{\em analog\-Trigger} & \-The analog trigger object that is used for the \-Up \-Source \\
+)}}
+\label{classCounter_a8cddeb27c997a2cd5e7372367b6d8ced}
+Set the up counting source to be an analog trigger. 
+\begin{DoxyParams}{Parameters}
+{\em analogTrigger} & The analog trigger object that is used for the Up Source \\
 \hline
-{\em trigger\-Type} & \-The analog trigger output that will trigger the counter. \\
+{\em triggerType} & The analog trigger output that will trigger the counter. \\
 \hline
 \end{DoxyParams}
-\hypertarget{classCounter_a0687b78f7bf8a269d653eddca1819d5d}{\index{\-Counter@{\-Counter}!\-Set\-Up\-Source@{\-Set\-Up\-Source}}
-\index{\-Set\-Up\-Source@{\-Set\-Up\-Source}!Counter@{\-Counter}}
-\subsubsection[{\-Set\-Up\-Source}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Counter\-::\-Set\-Up\-Source} (
+\hypertarget{classCounter_a2788b50d591e9b9058bc7250268ced5d}{
+\index{Counter@{Counter}!SetUpSource@{SetUpSource}}
+\index{SetUpSource@{SetUpSource}!Counter@{Counter}}
+\subsubsection[{SetUpSource}]{\setlength{\rightskip}{0pt plus 5cm}void Counter::SetUpSource (
 \begin{DoxyParamCaption}
-\item[{{\bf \-Digital\-Source} $\ast$}]{source}
+\item[{UINT32}]{channel}
 \end{DoxyParamCaption}
-)}}\label{classCounter_a0687b78f7bf8a269d653eddca1819d5d}
-\-Set the source object that causes the counter to count up. \-Set the up counting \hyperlink{classDigitalSource}{\-Digital\-Source}. \hypertarget{classCounter_a0015c2da61df6011bfbaf20bbf62982d}{\index{\-Counter@{\-Counter}!\-Set\-Up\-Source@{\-Set\-Up\-Source}}
-\index{\-Set\-Up\-Source@{\-Set\-Up\-Source}!Counter@{\-Counter}}
-\subsubsection[{\-Set\-Up\-Source}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Counter\-::\-Set\-Up\-Source} (
+)}}
+\label{classCounter_a2788b50d591e9b9058bc7250268ced5d}
+Set the upsource for the counter as a digital input channel. The slot will be the default digital module slot. \hypertarget{classCounter_a8e9838e4f44bf8111356ecdbbab833d9}{
+\index{Counter@{Counter}!SetUpSource@{SetUpSource}}
+\index{SetUpSource@{SetUpSource}!Counter@{Counter}}
+\subsubsection[{SetUpSource}]{\setlength{\rightskip}{0pt plus 5cm}void Counter::SetUpSource (
 \begin{DoxyParamCaption}
-\item[{{\bf \-Digital\-Source} \&}]{source}
+\item[{{\bf AnalogTrigger} $\ast$}]{analogTrigger, }
+\item[{AnalogTriggerOutput::Type}]{triggerType}
 \end{DoxyParamCaption}
-)}}\label{classCounter_a0015c2da61df6011bfbaf20bbf62982d}
-\-Set the source object that causes the counter to count up. \-Set the up counting \hyperlink{classDigitalSource}{\-Digital\-Source}. \hypertarget{classCounter_af75f91bb8b014b04585b5bebb102e65d}{\index{\-Counter@{\-Counter}!\-Set\-Up\-Source\-Edge@{\-Set\-Up\-Source\-Edge}}
-\index{\-Set\-Up\-Source\-Edge@{\-Set\-Up\-Source\-Edge}!Counter@{\-Counter}}
-\subsubsection[{\-Set\-Up\-Source\-Edge}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Counter\-::\-Set\-Up\-Source\-Edge} (
+)}}
+\label{classCounter_a8e9838e4f44bf8111356ecdbbab833d9}
+Set the up counting source to be an analog trigger. 
+\begin{DoxyParams}{Parameters}
+{\em analogTrigger} & The analog trigger object that is used for the Up Source \\
+\hline
+{\em triggerType} & The analog trigger output that will trigger the counter. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classCounter_af75f91bb8b014b04585b5bebb102e65d}{
+\index{Counter@{Counter}!SetUpSourceEdge@{SetUpSourceEdge}}
+\index{SetUpSourceEdge@{SetUpSourceEdge}!Counter@{Counter}}
+\subsubsection[{SetUpSourceEdge}]{\setlength{\rightskip}{0pt plus 5cm}void Counter::SetUpSourceEdge (
 \begin{DoxyParamCaption}
-\item[{bool}]{rising\-Edge, }
-\item[{bool}]{falling\-Edge}
+\item[{bool}]{risingEdge, }
+\item[{bool}]{fallingEdge}
 \end{DoxyParamCaption}
-)}}\label{classCounter_af75f91bb8b014b04585b5bebb102e65d}
-\-Set the edge sensitivity on an up counting source. \-Set the up source to either detect rising edges or falling edges. \hypertarget{classCounter_a0766c0a11e84866758b20b29e2e17cc0}{\index{\-Counter@{\-Counter}!\-Start@{\-Start}}
-\index{\-Start@{\-Start}!Counter@{\-Counter}}
-\subsubsection[{\-Start}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Counter\-::\-Start} (
+)}}
+\label{classCounter_af75f91bb8b014b04585b5bebb102e65d}
+Set the edge sensitivity on an up counting source. Set the up source to either detect rising edges or falling edges. \hypertarget{classCounter_a0766c0a11e84866758b20b29e2e17cc0}{
+\index{Counter@{Counter}!Start@{Start}}
+\index{Start@{Start}!Counter@{Counter}}
+\subsubsection[{Start}]{\setlength{\rightskip}{0pt plus 5cm}void Counter::Start (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{classCounter_a0766c0a11e84866758b20b29e2e17cc0}
-\-Start the \hyperlink{classCounter}{\-Counter} counting. \-This enables the counter and it starts accumulating counts from the associated input channel. \-The counter value is not reset on starting, and still has the previous value. 
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classCounter_a0766c0a11e84866758b20b29e2e17cc0}
+Start the \hyperlink{classCounter}{Counter} counting. This enables the counter and it starts accumulating counts from the associated input channel. The counter value is not reset on starting, and still has the previous value. 
 
-\-Implements \hyperlink{classCounterBase}{\-Counter\-Base}.
+Implements \hyperlink{classCounterBase}{CounterBase}.
 
-\hypertarget{classCounter_aa6ea006a3109769cc1e0a37dc25e11f4}{\index{\-Counter@{\-Counter}!\-Stop@{\-Stop}}
-\index{\-Stop@{\-Stop}!Counter@{\-Counter}}
-\subsubsection[{\-Stop}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Counter\-::\-Stop} (
+\hypertarget{classCounter_aa6ea006a3109769cc1e0a37dc25e11f4}{
+\index{Counter@{Counter}!Stop@{Stop}}
+\index{Stop@{Stop}!Counter@{Counter}}
+\subsubsection[{Stop}]{\setlength{\rightskip}{0pt plus 5cm}void Counter::Stop (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{classCounter_aa6ea006a3109769cc1e0a37dc25e11f4}
-\-Stop the \hyperlink{classCounter}{\-Counter}. \-Stops the counting but doesn't effect the current value. 
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classCounter_aa6ea006a3109769cc1e0a37dc25e11f4}
+Stop the \hyperlink{classCounter}{Counter}. Stops the counting but doesn't effect the current value. 
 
-\-Implements \hyperlink{classCounterBase}{\-Counter\-Base}.
+Implements \hyperlink{classCounterBase}{CounterBase}.
 
 
 
-\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
 \item 
-\-Counter.\-h\item 
-\-Counter.\-cpp\end{DoxyCompactItemize}
+Counter.h\item 
+Counter.cpp\end{DoxyCompactItemize}

@@ -1,121 +1,132 @@
-\hypertarget{classDoubleSolenoid}{\section{\-Double\-Solenoid \-Class \-Reference}
-\label{classDoubleSolenoid}\index{\-Double\-Solenoid@{\-Double\-Solenoid}}
+\hypertarget{classDoubleSolenoid}{
+\section{DoubleSolenoid Class Reference}
+\label{classDoubleSolenoid}\index{DoubleSolenoid@{DoubleSolenoid}}
 }
 
 
-{\ttfamily \#include $<$\-Double\-Solenoid.\-h$>$}
+{\ttfamily \#include $<$DoubleSolenoid.h$>$}
 
-\-Inheritance diagram for \-Double\-Solenoid\-:\begin{figure}[H]
+Inheritance diagram for DoubleSolenoid:\begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[height=4.000000cm]{classDoubleSolenoid}
 \end{center}
 \end{figure}
-\subsection*{\-Public \-Types}
+\subsection*{Public Types}
 \begin{DoxyCompactItemize}
 \item 
-enum {\bfseries \-Value} \{ {\bfseries k\-Off}, 
-{\bfseries k\-Forward}, 
-{\bfseries k\-Reverse}
+enum {\bfseries Value} \{ {\bfseries kOff}, 
+{\bfseries kForward}, 
+{\bfseries kReverse}
  \}
 \end{DoxyCompactItemize}
-\subsection*{\-Public \-Member \-Functions}
+\subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{classDoubleSolenoid_af543be114c3c7ab9df19bcb91917fbe1}{\-Double\-Solenoid} (\-U\-I\-N\-T32 forward\-Channel, \-U\-I\-N\-T32 reverse\-Channel)
+\hyperlink{classDoubleSolenoid_af543be114c3c7ab9df19bcb91917fbe1}{DoubleSolenoid} (UINT32 forwardChannel, UINT32 reverseChannel)
 \item 
-\hyperlink{classDoubleSolenoid_a2bfec5f3b394f1a0fa29a209fc533802}{\-Double\-Solenoid} (\-U\-I\-N\-T32 slot, \-U\-I\-N\-T32 forward\-Channel, \-U\-I\-N\-T32 reverse\-Channel)
+\hyperlink{classDoubleSolenoid_a58c07ccb8ec7a5aefd2d0c0591f258e8}{DoubleSolenoid} (UINT8 moduleNumber, UINT32 forwardChannel, UINT32 reverseChannel)
 \item 
-virtual \hyperlink{classDoubleSolenoid_a6bb0815514cc362a87def521fd544508}{$\sim$\-Double\-Solenoid} ()
+virtual \hyperlink{classDoubleSolenoid_a6bb0815514cc362a87def521fd544508}{$\sim$DoubleSolenoid} ()
 \item 
-virtual void \hyperlink{classDoubleSolenoid_a538ae9e357b7c97e01f213f8fe0a7c20}{\-Set} (\-Value value)
+virtual void \hyperlink{classDoubleSolenoid_a538ae9e357b7c97e01f213f8fe0a7c20}{Set} (Value value)
 \item 
-virtual \-Value \hyperlink{classDoubleSolenoid_a831cbfdb95c2c689bfd6644a01694fe8}{\-Get} ()
+virtual Value \hyperlink{classDoubleSolenoid_a831cbfdb95c2c689bfd6644a01694fe8}{Get} ()
 \end{DoxyCompactItemize}
 
 
-\subsection{\-Detailed \-Description}
-\hyperlink{classDoubleSolenoid}{\-Double\-Solenoid} class for running 2 channels of high voltage \-Digital \-Output (9472 module).
+\subsection{Detailed Description}
+\hyperlink{classDoubleSolenoid}{DoubleSolenoid} class for running 2 channels of high voltage Digital Output (9472 module).
 
-\-The \hyperlink{classDoubleSolenoid}{\-Double\-Solenoid} class is typically used for pneumatics solenoids that have two positions controlled by two separate channels. 
+The \hyperlink{classDoubleSolenoid}{DoubleSolenoid} class is typically used for pneumatics solenoids that have two positions controlled by two separate channels. 
 
-\subsection{\-Constructor \& \-Destructor \-Documentation}
-\hypertarget{classDoubleSolenoid_af543be114c3c7ab9df19bcb91917fbe1}{\index{\-Double\-Solenoid@{\-Double\-Solenoid}!\-Double\-Solenoid@{\-Double\-Solenoid}}
-\index{\-Double\-Solenoid@{\-Double\-Solenoid}!DoubleSolenoid@{\-Double\-Solenoid}}
-\subsubsection[{\-Double\-Solenoid}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Double\-Solenoid\-::\-Double\-Solenoid} (
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classDoubleSolenoid_af543be114c3c7ab9df19bcb91917fbe1}{
+\index{DoubleSolenoid@{DoubleSolenoid}!DoubleSolenoid@{DoubleSolenoid}}
+\index{DoubleSolenoid@{DoubleSolenoid}!DoubleSolenoid@{DoubleSolenoid}}
+\subsubsection[{DoubleSolenoid}]{\setlength{\rightskip}{0pt plus 5cm}DoubleSolenoid::DoubleSolenoid (
 \begin{DoxyParamCaption}
-\item[{\-U\-I\-N\-T32}]{forward\-Channel, }
-\item[{\-U\-I\-N\-T32}]{reverse\-Channel}
+\item[{UINT32}]{forwardChannel, }
+\item[{UINT32}]{reverseChannel}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily  \mbox{[}explicit\mbox{]}}}}\label{classDoubleSolenoid_af543be114c3c7ab9df19bcb91917fbe1}
-\-Constructor.
+)\hspace{0.3cm}{\ttfamily  \mbox{[}explicit\mbox{]}}}}
+\label{classDoubleSolenoid_af543be114c3c7ab9df19bcb91917fbe1}
+Constructor.
 
 
-\begin{DoxyParams}{\-Parameters}
-{\em forward\-Channel} & \-The forward channel on the module to control. \\
+\begin{DoxyParams}{Parameters}
+{\em forwardChannel} & The forward channel on the module to control. \\
 \hline
-{\em reverse\-Channel} & \-The reverse channel on the module to control. \\
+{\em reverseChannel} & The reverse channel on the module to control. \\
 \hline
 \end{DoxyParams}
-\hypertarget{classDoubleSolenoid_a2bfec5f3b394f1a0fa29a209fc533802}{\index{\-Double\-Solenoid@{\-Double\-Solenoid}!\-Double\-Solenoid@{\-Double\-Solenoid}}
-\index{\-Double\-Solenoid@{\-Double\-Solenoid}!DoubleSolenoid@{\-Double\-Solenoid}}
-\subsubsection[{\-Double\-Solenoid}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Double\-Solenoid\-::\-Double\-Solenoid} (
+\hypertarget{classDoubleSolenoid_a58c07ccb8ec7a5aefd2d0c0591f258e8}{
+\index{DoubleSolenoid@{DoubleSolenoid}!DoubleSolenoid@{DoubleSolenoid}}
+\index{DoubleSolenoid@{DoubleSolenoid}!DoubleSolenoid@{DoubleSolenoid}}
+\subsubsection[{DoubleSolenoid}]{\setlength{\rightskip}{0pt plus 5cm}DoubleSolenoid::DoubleSolenoid (
 \begin{DoxyParamCaption}
-\item[{\-U\-I\-N\-T32}]{slot, }
-\item[{\-U\-I\-N\-T32}]{forward\-Channel, }
-\item[{\-U\-I\-N\-T32}]{reverse\-Channel}
+\item[{UINT8}]{moduleNumber, }
+\item[{UINT32}]{forwardChannel, }
+\item[{UINT32}]{reverseChannel}
 \end{DoxyParamCaption}
-)}}\label{classDoubleSolenoid_a2bfec5f3b394f1a0fa29a209fc533802}
-\-Constructor.
+)}}
+\label{classDoubleSolenoid_a58c07ccb8ec7a5aefd2d0c0591f258e8}
+Constructor.
 
 
-\begin{DoxyParams}{\-Parameters}
-{\em slot} & \-The slot that the 9472 module is plugged into. \\
+\begin{DoxyParams}{Parameters}
+{\em moduleNumber} & The solenoid module (1 or 2). \\
 \hline
-{\em forward\-Channel} & \-The forward channel on the module to control. \\
+{\em forwardChannel} & The forward channel on the module to control. \\
 \hline
-{\em reverse\-Channel} & \-The reverse channel on the module to control. \\
+{\em reverseChannel} & The reverse channel on the module to control. \\
 \hline
 \end{DoxyParams}
-\hypertarget{classDoubleSolenoid_a6bb0815514cc362a87def521fd544508}{\index{\-Double\-Solenoid@{\-Double\-Solenoid}!$\sim$\-Double\-Solenoid@{$\sim$\-Double\-Solenoid}}
-\index{$\sim$\-Double\-Solenoid@{$\sim$\-Double\-Solenoid}!DoubleSolenoid@{\-Double\-Solenoid}}
-\subsubsection[{$\sim$\-Double\-Solenoid}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Double\-Solenoid\-::$\sim$\-Double\-Solenoid} (
+\hypertarget{classDoubleSolenoid_a6bb0815514cc362a87def521fd544508}{
+\index{DoubleSolenoid@{DoubleSolenoid}!$\sim$DoubleSolenoid@{$\sim$DoubleSolenoid}}
+\index{$\sim$DoubleSolenoid@{$\sim$DoubleSolenoid}!DoubleSolenoid@{DoubleSolenoid}}
+\subsubsection[{$\sim$DoubleSolenoid}]{\setlength{\rightskip}{0pt plus 5cm}DoubleSolenoid::$\sim$DoubleSolenoid (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{classDoubleSolenoid_a6bb0815514cc362a87def521fd544508}
-\-Destructor. 
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classDoubleSolenoid_a6bb0815514cc362a87def521fd544508}
+Destructor. 
 
-\subsection{\-Member \-Function \-Documentation}
-\hypertarget{classDoubleSolenoid_a831cbfdb95c2c689bfd6644a01694fe8}{\index{\-Double\-Solenoid@{\-Double\-Solenoid}!\-Get@{\-Get}}
-\index{\-Get@{\-Get}!DoubleSolenoid@{\-Double\-Solenoid}}
-\subsubsection[{\-Get}]{\setlength{\rightskip}{0pt plus 5cm}\-Double\-Solenoid\-::\-Value {\bf \-Double\-Solenoid\-::\-Get} (
+\subsection{Member Function Documentation}
+\hypertarget{classDoubleSolenoid_a831cbfdb95c2c689bfd6644a01694fe8}{
+\index{DoubleSolenoid@{DoubleSolenoid}!Get@{Get}}
+\index{Get@{Get}!DoubleSolenoid@{DoubleSolenoid}}
+\subsubsection[{Get}]{\setlength{\rightskip}{0pt plus 5cm}DoubleSolenoid::Value DoubleSolenoid::Get (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{classDoubleSolenoid_a831cbfdb95c2c689bfd6644a01694fe8}
-\-Read the current value of the solenoid.
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classDoubleSolenoid_a831cbfdb95c2c689bfd6644a01694fe8}
+Read the current value of the solenoid.
 
-\begin{DoxyReturn}{\-Returns}
-\-The current value of the solenoid. 
+\begin{DoxyReturn}{Returns}
+The current value of the solenoid. 
 \end{DoxyReturn}
-\hypertarget{classDoubleSolenoid_a538ae9e357b7c97e01f213f8fe0a7c20}{\index{\-Double\-Solenoid@{\-Double\-Solenoid}!\-Set@{\-Set}}
-\index{\-Set@{\-Set}!DoubleSolenoid@{\-Double\-Solenoid}}
-\subsubsection[{\-Set}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Double\-Solenoid\-::\-Set} (
+\hypertarget{classDoubleSolenoid_a538ae9e357b7c97e01f213f8fe0a7c20}{
+\index{DoubleSolenoid@{DoubleSolenoid}!Set@{Set}}
+\index{Set@{Set}!DoubleSolenoid@{DoubleSolenoid}}
+\subsubsection[{Set}]{\setlength{\rightskip}{0pt plus 5cm}void DoubleSolenoid::Set (
 \begin{DoxyParamCaption}
-\item[{\-Value}]{value}
+\item[{Value}]{value}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{classDoubleSolenoid_a538ae9e357b7c97e01f213f8fe0a7c20}
-\-Set the value of a solenoid.
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classDoubleSolenoid_a538ae9e357b7c97e01f213f8fe0a7c20}
+Set the value of a solenoid.
 
 
-\begin{DoxyParams}{\-Parameters}
-{\em value} & \-Move the solenoid to forward, reverse, or don't move it. \\
+\begin{DoxyParams}{Parameters}
+{\em value} & Move the solenoid to forward, reverse, or don't move it. \\
 \hline
 \end{DoxyParams}
 
 
-\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
 \item 
-\-Double\-Solenoid.\-h\item 
-\-Double\-Solenoid.\-cpp\end{DoxyCompactItemize}
+DoubleSolenoid.h\item 
+DoubleSolenoid.cpp\end{DoxyCompactItemize}

@@ -1,171 +1,200 @@
-\hypertarget{classGyro}{\section{\-Gyro \-Class \-Reference}
-\label{classGyro}\index{\-Gyro@{\-Gyro}}
+\hypertarget{classGyro}{
+\section{Gyro Class Reference}
+\label{classGyro}\index{Gyro@{Gyro}}
 }
 
 
-{\ttfamily \#include $<$\-Gyro.\-h$>$}
+{\ttfamily \#include $<$Gyro.h$>$}
 
-\-Inheritance diagram for \-Gyro\-:\begin{figure}[H]
+Inheritance diagram for Gyro:\begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[height=3.000000cm]{classGyro}
 \end{center}
 \end{figure}
-\subsection*{\-Public \-Member \-Functions}
+\subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{classGyro_a11be27574819cf977af46381e5dd0977}{\-Gyro} (\-U\-I\-N\-T32 slot, \-U\-I\-N\-T32 channel)
+\hyperlink{classGyro_a41b40555c66c615074c504a5be6ed62e}{Gyro} (UINT8 moduleNumber, UINT32 channel)
 \item 
-\hyperlink{classGyro_afc23fe3ba40c495d1b3a0e10c5abec30}{\-Gyro} (\-U\-I\-N\-T32 channel)
+\hyperlink{classGyro_afc23fe3ba40c495d1b3a0e10c5abec30}{Gyro} (UINT32 channel)
 \item 
-\hyperlink{classGyro_ae90174929eaabecb8e1214a0a252ae60}{\-Gyro} (\hyperlink{classAnalogChannel}{\-Analog\-Channel} $\ast$channel)
+\hyperlink{classGyro_ae90174929eaabecb8e1214a0a252ae60}{Gyro} (\hyperlink{classAnalogChannel}{AnalogChannel} $\ast$channel)
 \item 
-\hypertarget{classGyro_abaedf2b4b315a9e9f26eb9e515f70fb6}{{\bfseries \-Gyro} (\hyperlink{classAnalogChannel}{\-Analog\-Channel} \&channel)}\label{classGyro_abaedf2b4b315a9e9f26eb9e515f70fb6}
+\hypertarget{classGyro_abaedf2b4b315a9e9f26eb9e515f70fb6}{
+{\bfseries Gyro} (\hyperlink{classAnalogChannel}{AnalogChannel} \&channel)}
+\label{classGyro_abaedf2b4b315a9e9f26eb9e515f70fb6}
 
 \item 
-virtual \hyperlink{classGyro_af58b57914897b22014110908326eace2}{$\sim$\-Gyro} ()
+virtual \hyperlink{classGyro_af58b57914897b22014110908326eace2}{$\sim$Gyro} ()
 \item 
-float \hyperlink{classGyro_a37c29b42b58b90fe1ed11f04c2635d4f}{\-Get\-Angle} ()
+virtual float \hyperlink{classGyro_a37c29b42b58b90fe1ed11f04c2635d4f}{GetAngle} ()
 \item 
-void \hyperlink{classGyro_aaf5c11137c5428c427b2a2162cd43f09}{\-Set\-Sensitivity} (float volts\-Per\-Degree\-Per\-Second)
+void \hyperlink{classGyro_aaf5c11137c5428c427b2a2162cd43f09}{SetSensitivity} (float voltsPerDegreePerSecond)
 \item 
-void \hyperlink{classGyro_ae13fc1c339cb0267740b86c0585ceac7}{\-Reset} ()
+virtual void \hyperlink{classGyro_ae13fc1c339cb0267740b86c0585ceac7}{Reset} ()
 \item 
-double \hyperlink{classGyro_aca619c0201c5fb85e2bbaeef0f39e8e6}{\-P\-I\-D\-Get} ()
+double \hyperlink{classGyro_aca619c0201c5fb85e2bbaeef0f39e8e6}{PIDGet} ()
 \end{DoxyCompactItemize}
-\subsection*{\-Static \-Public \-Attributes}
+\subsection*{Static Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{classGyro_aa5a4a22bd8b619a7ebb221b9412a1597}{static const \-U\-I\-N\-T32 {\bfseries k\-Oversample\-Bits} = 10}\label{classGyro_aa5a4a22bd8b619a7ebb221b9412a1597}
+\hypertarget{classGyro_aa5a4a22bd8b619a7ebb221b9412a1597}{
+static const UINT32 {\bfseries kOversampleBits} = 10}
+\label{classGyro_aa5a4a22bd8b619a7ebb221b9412a1597}
 
 \item 
-\hypertarget{classGyro_a491e633f55680ff58d8dd8fde169dc8b}{static const \-U\-I\-N\-T32 {\bfseries k\-Average\-Bits} = 0}\label{classGyro_a491e633f55680ff58d8dd8fde169dc8b}
+\hypertarget{classGyro_a491e633f55680ff58d8dd8fde169dc8b}{
+static const UINT32 {\bfseries kAverageBits} = 0}
+\label{classGyro_a491e633f55680ff58d8dd8fde169dc8b}
 
 \item 
-\hypertarget{classGyro_a64c71dccfd49e35c8723be4d3471029c}{static const float {\bfseries k\-Samples\-Per\-Second} = 50.\-0}\label{classGyro_a64c71dccfd49e35c8723be4d3471029c}
+\hypertarget{classGyro_a64c71dccfd49e35c8723be4d3471029c}{
+static const float {\bfseries kSamplesPerSecond} = 50.0}
+\label{classGyro_a64c71dccfd49e35c8723be4d3471029c}
 
 \item 
-\hypertarget{classGyro_a97cf14846097a6daf64f25955addb347}{static const float {\bfseries k\-Calibration\-Sample\-Time} = 5.\-0}\label{classGyro_a97cf14846097a6daf64f25955addb347}
+\hypertarget{classGyro_a97cf14846097a6daf64f25955addb347}{
+static const float {\bfseries kCalibrationSampleTime} = 5.0}
+\label{classGyro_a97cf14846097a6daf64f25955addb347}
 
 \item 
-\hypertarget{classGyro_ae668f3598a0f225fb68b820888e66f3a}{static const float {\bfseries k\-Default\-Volts\-Per\-Degree\-Per\-Second} = 0.\-007}\label{classGyro_ae668f3598a0f225fb68b820888e66f3a}
+\hypertarget{classGyro_ae668f3598a0f225fb68b820888e66f3a}{
+static const float {\bfseries kDefaultVoltsPerDegreePerSecond} = 0.007}
+\label{classGyro_ae668f3598a0f225fb68b820888e66f3a}
 
 \end{DoxyCompactItemize}
 
 
-\subsection{\-Detailed \-Description}
-\-Use a rate gyro to return the robots heading relative to a starting position. \-The \hyperlink{classGyro}{\-Gyro} class tracks the robots heading based on the starting position. \-As the robot rotates the new heading is computed by integrating the rate of rotation returned by the sensor. \-When the class is instantiated, it does a short calibration routine where it samples the gyro while at rest to determine the default offset. \-This is subtracted from each sample to determine the heading. 
+\subsection{Detailed Description}
+Use a rate gyro to return the robots heading relative to a starting position. The \hyperlink{classGyro}{Gyro} class tracks the robots heading based on the starting position. As the robot rotates the new heading is computed by integrating the rate of rotation returned by the sensor. When the class is instantiated, it does a short calibration routine where it samples the gyro while at rest to determine the default offset. This is subtracted from each sample to determine the heading. This gyro class must be used with a channel that is assigned one of the Analog accumulators from the FPGA. See \hyperlink{classAnalogChannel}{AnalogChannel} for the current accumulator assignments. 
 
-\subsection{\-Constructor \& \-Destructor \-Documentation}
-\hypertarget{classGyro_a11be27574819cf977af46381e5dd0977}{\index{\-Gyro@{\-Gyro}!\-Gyro@{\-Gyro}}
-\index{\-Gyro@{\-Gyro}!Gyro@{\-Gyro}}
-\subsubsection[{\-Gyro}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Gyro\-::\-Gyro} (
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classGyro_a41b40555c66c615074c504a5be6ed62e}{
+\index{Gyro@{Gyro}!Gyro@{Gyro}}
+\index{Gyro@{Gyro}!Gyro@{Gyro}}
+\subsubsection[{Gyro}]{\setlength{\rightskip}{0pt plus 5cm}Gyro::Gyro (
 \begin{DoxyParamCaption}
-\item[{\-U\-I\-N\-T32}]{slot, }
-\item[{\-U\-I\-N\-T32}]{channel}
+\item[{UINT8}]{moduleNumber, }
+\item[{UINT32}]{channel}
 \end{DoxyParamCaption}
-)}}\label{classGyro_a11be27574819cf977af46381e5dd0977}
-\hyperlink{classGyro}{\-Gyro} constructor given a slot and a channel.
+)}}
+\label{classGyro_a41b40555c66c615074c504a5be6ed62e}
+\hyperlink{classGyro}{Gyro} constructor given a slot and a channel.
 
 
-\begin{DoxyParams}{\-Parameters}
-{\em slot} & \-The c\-R\-I\-O slot for the analog module the gyro is connected to. \\
+\begin{DoxyParams}{Parameters}
+{\em moduleNumber} & The analog module the gyro is connected to (1). \\
 \hline
-{\em channel} & \-The analog channel the gyro is connected to. \\
+{\em channel} & The analog channel the gyro is connected to (1 or 2). \\
 \hline
 \end{DoxyParams}
-\hypertarget{classGyro_afc23fe3ba40c495d1b3a0e10c5abec30}{\index{\-Gyro@{\-Gyro}!\-Gyro@{\-Gyro}}
-\index{\-Gyro@{\-Gyro}!Gyro@{\-Gyro}}
-\subsubsection[{\-Gyro}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Gyro\-::\-Gyro} (
+\hypertarget{classGyro_afc23fe3ba40c495d1b3a0e10c5abec30}{
+\index{Gyro@{Gyro}!Gyro@{Gyro}}
+\index{Gyro@{Gyro}!Gyro@{Gyro}}
+\subsubsection[{Gyro}]{\setlength{\rightskip}{0pt plus 5cm}Gyro::Gyro (
 \begin{DoxyParamCaption}
-\item[{\-U\-I\-N\-T32}]{channel}
+\item[{UINT32}]{channel}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily  \mbox{[}explicit\mbox{]}}}}\label{classGyro_afc23fe3ba40c495d1b3a0e10c5abec30}
-\hyperlink{classGyro}{\-Gyro} constructor with only a channel.
+)\hspace{0.3cm}{\ttfamily  \mbox{[}explicit\mbox{]}}}}
+\label{classGyro_afc23fe3ba40c495d1b3a0e10c5abec30}
+\hyperlink{classGyro}{Gyro} constructor with only a channel.
 
-\-Use the default analog module slot.
+Use the default analog module slot.
 
 
-\begin{DoxyParams}{\-Parameters}
-{\em channel} & \-The analog channel the gyro is connected to. \\
+\begin{DoxyParams}{Parameters}
+{\em channel} & The analog channel the gyro is connected to. \\
 \hline
 \end{DoxyParams}
-\hypertarget{classGyro_ae90174929eaabecb8e1214a0a252ae60}{\index{\-Gyro@{\-Gyro}!\-Gyro@{\-Gyro}}
-\index{\-Gyro@{\-Gyro}!Gyro@{\-Gyro}}
-\subsubsection[{\-Gyro}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Gyro\-::\-Gyro} (
+\hypertarget{classGyro_ae90174929eaabecb8e1214a0a252ae60}{
+\index{Gyro@{Gyro}!Gyro@{Gyro}}
+\index{Gyro@{Gyro}!Gyro@{Gyro}}
+\subsubsection[{Gyro}]{\setlength{\rightskip}{0pt plus 5cm}Gyro::Gyro (
 \begin{DoxyParamCaption}
-\item[{{\bf \-Analog\-Channel} $\ast$}]{channel}
+\item[{{\bf AnalogChannel} $\ast$}]{channel}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily  \mbox{[}explicit\mbox{]}}}}\label{classGyro_ae90174929eaabecb8e1214a0a252ae60}
-\hyperlink{classGyro}{\-Gyro} constructor with a precreated analog channel object. \-Use this constructor when the analog channel needs to be shared. \-There is no reference counting when an \hyperlink{classAnalogChannel}{\-Analog\-Channel} is passed to the gyro. 
-\begin{DoxyParams}{\-Parameters}
-{\em channel} & \-The \hyperlink{classAnalogChannel}{\-Analog\-Channel} object that the gyro is connected to. \\
+)\hspace{0.3cm}{\ttfamily  \mbox{[}explicit\mbox{]}}}}
+\label{classGyro_ae90174929eaabecb8e1214a0a252ae60}
+\hyperlink{classGyro}{Gyro} constructor with a precreated analog channel object. Use this constructor when the analog channel needs to be shared. There is no reference counting when an \hyperlink{classAnalogChannel}{AnalogChannel} is passed to the gyro. 
+\begin{DoxyParams}{Parameters}
+{\em channel} & The \hyperlink{classAnalogChannel}{AnalogChannel} object that the gyro is connected to. \\
 \hline
 \end{DoxyParams}
-\hypertarget{classGyro_af58b57914897b22014110908326eace2}{\index{\-Gyro@{\-Gyro}!$\sim$\-Gyro@{$\sim$\-Gyro}}
-\index{$\sim$\-Gyro@{$\sim$\-Gyro}!Gyro@{\-Gyro}}
-\subsubsection[{$\sim$\-Gyro}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Gyro\-::$\sim$\-Gyro} (
+\hypertarget{classGyro_af58b57914897b22014110908326eace2}{
+\index{Gyro@{Gyro}!$\sim$Gyro@{$\sim$Gyro}}
+\index{$\sim$Gyro@{$\sim$Gyro}!Gyro@{Gyro}}
+\subsubsection[{$\sim$Gyro}]{\setlength{\rightskip}{0pt plus 5cm}Gyro::$\sim$Gyro (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{classGyro_af58b57914897b22014110908326eace2}
-\-Delete (free) the accumulator and the analog components used for the gyro. 
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classGyro_af58b57914897b22014110908326eace2}
+Delete (free) the accumulator and the analog components used for the gyro. 
 
-\subsection{\-Member \-Function \-Documentation}
-\hypertarget{classGyro_a37c29b42b58b90fe1ed11f04c2635d4f}{\index{\-Gyro@{\-Gyro}!\-Get\-Angle@{\-Get\-Angle}}
-\index{\-Get\-Angle@{\-Get\-Angle}!Gyro@{\-Gyro}}
-\subsubsection[{\-Get\-Angle}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf \-Gyro\-::\-Get\-Angle} (
+\subsection{Member Function Documentation}
+\hypertarget{classGyro_a37c29b42b58b90fe1ed11f04c2635d4f}{
+\index{Gyro@{Gyro}!GetAngle@{GetAngle}}
+\index{GetAngle@{GetAngle}!Gyro@{Gyro}}
+\subsubsection[{GetAngle}]{\setlength{\rightskip}{0pt plus 5cm}float Gyro::GetAngle (
 \begin{DoxyParamCaption}
 \item[{void}]{}
 \end{DoxyParamCaption}
-)}}\label{classGyro_a37c29b42b58b90fe1ed11f04c2635d4f}
-\-Return the actual angle in degrees that the robot is currently facing.
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classGyro_a37c29b42b58b90fe1ed11f04c2635d4f}
+Return the actual angle in degrees that the robot is currently facing.
 
-\-The angle is based on the current accumulator value corrected by the oversampling rate, the gyro type and the \-A/\-D calibration values. \-The angle is continuous, that is can go beyond 360 degrees. \-This make algorithms that wouldn't want to see a discontinuity in the gyro output as it sweeps past 0 on the second time around.
+The angle is based on the current accumulator value corrected by the oversampling rate, the gyro type and the A/D calibration values. The angle is continuous, that is can go beyond 360 degrees. This make algorithms that wouldn't want to see a discontinuity in the gyro output as it sweeps past 0 on the second time around.
 
-\begin{DoxyReturn}{\-Returns}
-the current heading of the robot in degrees. \-This heading is based on integration of the returned rate from the gyro. 
+\begin{DoxyReturn}{Returns}
+the current heading of the robot in degrees. This heading is based on integration of the returned rate from the gyro. 
 \end{DoxyReturn}
-\hypertarget{classGyro_aca619c0201c5fb85e2bbaeef0f39e8e6}{\index{\-Gyro@{\-Gyro}!\-P\-I\-D\-Get@{\-P\-I\-D\-Get}}
-\index{\-P\-I\-D\-Get@{\-P\-I\-D\-Get}!Gyro@{\-Gyro}}
-\subsubsection[{\-P\-I\-D\-Get}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf \-Gyro\-::\-P\-I\-D\-Get} (
+\hypertarget{classGyro_aca619c0201c5fb85e2bbaeef0f39e8e6}{
+\index{Gyro@{Gyro}!PIDGet@{PIDGet}}
+\index{PIDGet@{PIDGet}!Gyro@{Gyro}}
+\subsubsection[{PIDGet}]{\setlength{\rightskip}{0pt plus 5cm}double Gyro::PIDGet (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{classGyro_aca619c0201c5fb85e2bbaeef0f39e8e6}
-\-Get the angle in degrees for the \hyperlink{classPIDSource}{\-P\-I\-D\-Source} base object.
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classGyro_aca619c0201c5fb85e2bbaeef0f39e8e6}
+Get the angle in degrees for the \hyperlink{classPIDSource}{PIDSource} base object.
 
-\begin{DoxyReturn}{\-Returns}
-\-The angle in degrees. 
+\begin{DoxyReturn}{Returns}
+The angle in degrees. 
 \end{DoxyReturn}
 
 
-\-Implements \hyperlink{classPIDSource}{\-P\-I\-D\-Source}.
+Implements \hyperlink{classPIDSource}{PIDSource}.
 
-\hypertarget{classGyro_ae13fc1c339cb0267740b86c0585ceac7}{\index{\-Gyro@{\-Gyro}!\-Reset@{\-Reset}}
-\index{\-Reset@{\-Reset}!Gyro@{\-Gyro}}
-\subsubsection[{\-Reset}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Gyro\-::\-Reset} (
+\hypertarget{classGyro_ae13fc1c339cb0267740b86c0585ceac7}{
+\index{Gyro@{Gyro}!Reset@{Reset}}
+\index{Reset@{Reset}!Gyro@{Gyro}}
+\subsubsection[{Reset}]{\setlength{\rightskip}{0pt plus 5cm}void Gyro::Reset (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)}}\label{classGyro_ae13fc1c339cb0267740b86c0585ceac7}
-\-Reset the gyro. \-Resets the gyro to a heading of zero. \-This can be used if there is significant drift in the gyro and it needs to be recalibrated after it has been running. \hypertarget{classGyro_aaf5c11137c5428c427b2a2162cd43f09}{\index{\-Gyro@{\-Gyro}!\-Set\-Sensitivity@{\-Set\-Sensitivity}}
-\index{\-Set\-Sensitivity@{\-Set\-Sensitivity}!Gyro@{\-Gyro}}
-\subsubsection[{\-Set\-Sensitivity}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Gyro\-::\-Set\-Sensitivity} (
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classGyro_ae13fc1c339cb0267740b86c0585ceac7}
+Reset the gyro. Resets the gyro to a heading of zero. This can be used if there is significant drift in the gyro and it needs to be recalibrated after it has been running. \hypertarget{classGyro_aaf5c11137c5428c427b2a2162cd43f09}{
+\index{Gyro@{Gyro}!SetSensitivity@{SetSensitivity}}
+\index{SetSensitivity@{SetSensitivity}!Gyro@{Gyro}}
+\subsubsection[{SetSensitivity}]{\setlength{\rightskip}{0pt plus 5cm}void Gyro::SetSensitivity (
 \begin{DoxyParamCaption}
-\item[{float}]{volts\-Per\-Degree\-Per\-Second}
+\item[{float}]{voltsPerDegreePerSecond}
 \end{DoxyParamCaption}
-)}}\label{classGyro_aaf5c11137c5428c427b2a2162cd43f09}
-\-Set the gyro type based on the sensitivity. \-This takes the number of volts/degree/second sensitivity of the gyro and uses it in subsequent calculations to allow the code to work with multiple gyros.
+)}}
+\label{classGyro_aaf5c11137c5428c427b2a2162cd43f09}
+Set the gyro type based on the sensitivity. This takes the number of volts/degree/second sensitivity of the gyro and uses it in subsequent calculations to allow the code to work with multiple gyros.
 
 
-\begin{DoxyParams}{\-Parameters}
-{\em volts\-Per\-Degree\-Per\-Second} & \-The type of gyro specified as the voltage that represents one degree/second. \\
+\begin{DoxyParams}{Parameters}
+{\em voltsPerDegreePerSecond} & The type of gyro specified as the voltage that represents one degree/second. \\
 \hline
 \end{DoxyParams}
 
 
-\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
 \item 
-\-Gyro.\-h\item 
-\-Gyro.\-cpp\end{DoxyCompactItemize}
+Gyro.h\item 
+Gyro.cpp\end{DoxyCompactItemize}

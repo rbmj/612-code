@@ -1,0 +1,176 @@
+\hypertarget{classKinect}{
+\section{Kinect Class Reference}
+\label{classKinect}\index{Kinect@{Kinect}}
+}
+Inheritance diagram for Kinect:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classKinect}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structKinect_1_1Point4}{Point4}
+\end{DoxyCompactItemize}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum {\bfseries SkeletonTrackingState} \{ {\bfseries kNotTracked}, 
+{\bfseries kPositionOnly}, 
+{\bfseries kTracked}
+ \}
+\item 
+enum {\bfseries SkeletonQuality} \{ {\bfseries kClippedRight} =  1, 
+{\bfseries kClippedLeft} =  2, 
+{\bfseries kClippedTop} =  4, 
+{\bfseries kClippedBottom} =  8
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{classKinect_a2f709c6f1d7494235f1eaa066af57deb}{GetNumberOfPlayers} ()
+\item 
+\hyperlink{structKinect_1_1Point4}{Point4} \hyperlink{classKinect_a74626e0a9f23f6ade0870f317f46741d}{GetFloorClipPlane} ()
+\item 
+\hyperlink{structKinect_1_1Point4}{Point4} \hyperlink{classKinect_a9407fbe9ee738a179433febea23e17f3}{GetGravityNormal} ()
+\item 
+\hyperlink{classSkeleton}{Skeleton} \hyperlink{classKinect_aaa9c26d0c72101a1d34b595fe8d10cb1}{GetSkeleton} (int skeletonIndex=1)
+\item 
+\hyperlink{structKinect_1_1Point4}{Point4} \hyperlink{classKinect_a78938e42badb920ae502cc93acd801bf}{GetPosition} (int skeletonIndex=1)
+\item 
+UINT32 \hyperlink{classKinect_a2c5e3c65262756c8bdc46ccbd02dda2d}{GetQuality} (int skeletonIndex=1)
+\item 
+SkeletonTrackingState \hyperlink{classKinect_ad86ca99d266837111b537b52325ec675}{GetTrackingState} (int skeletonIndex=1)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{classKinect}{Kinect} $\ast$ \hyperlink{classKinect_a84cf4659d277e426684b4232266da03a}{GetInstance} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classKinect_a74626e0a9f23f6ade0870f317f46741d}{
+\index{Kinect@{Kinect}!GetFloorClipPlane@{GetFloorClipPlane}}
+\index{GetFloorClipPlane@{GetFloorClipPlane}!Kinect@{Kinect}}
+\subsubsection[{GetFloorClipPlane}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Kinect::Point4} Kinect::GetFloorClipPlane (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classKinect_a74626e0a9f23f6ade0870f317f46741d}
+Get the floor clip plane as defined in the \hyperlink{classKinect}{Kinect} SDK \begin{DoxyReturn}{Returns}
+The floor clip plane 
+\end{DoxyReturn}
+\hypertarget{classKinect_a9407fbe9ee738a179433febea23e17f3}{
+\index{Kinect@{Kinect}!GetGravityNormal@{GetGravityNormal}}
+\index{GetGravityNormal@{GetGravityNormal}!Kinect@{Kinect}}
+\subsubsection[{GetGravityNormal}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Kinect::Point4} Kinect::GetGravityNormal (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classKinect_a9407fbe9ee738a179433febea23e17f3}
+Get the gravity normal from the kinect as defined in the \hyperlink{classKinect}{Kinect} SDK \begin{DoxyReturn}{Returns}
+The gravity normal (w is ignored) 
+\end{DoxyReturn}
+\hypertarget{classKinect_a84cf4659d277e426684b4232266da03a}{
+\index{Kinect@{Kinect}!GetInstance@{GetInstance}}
+\index{GetInstance@{GetInstance}!Kinect@{Kinect}}
+\subsubsection[{GetInstance}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Kinect} $\ast$ Kinect::GetInstance (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{classKinect_a84cf4659d277e426684b4232266da03a}
+Get the one and only \hyperlink{classKinect}{Kinect} object \begin{DoxyReturn}{Returns}
+pointer to a \hyperlink{classKinect}{Kinect} 
+\end{DoxyReturn}
+\hypertarget{classKinect_a2f709c6f1d7494235f1eaa066af57deb}{
+\index{Kinect@{Kinect}!GetNumberOfPlayers@{GetNumberOfPlayers}}
+\index{GetNumberOfPlayers@{GetNumberOfPlayers}!Kinect@{Kinect}}
+\subsubsection[{GetNumberOfPlayers}]{\setlength{\rightskip}{0pt plus 5cm}int Kinect::GetNumberOfPlayers (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classKinect_a2f709c6f1d7494235f1eaa066af57deb}
+Get the number of tracked players on the \hyperlink{classKinect}{Kinect} \begin{DoxyReturn}{Returns}
+the number of players being actively tracked 
+\end{DoxyReturn}
+\hypertarget{classKinect_a78938e42badb920ae502cc93acd801bf}{
+\index{Kinect@{Kinect}!GetPosition@{GetPosition}}
+\index{GetPosition@{GetPosition}!Kinect@{Kinect}}
+\subsubsection[{GetPosition}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Kinect::Point4} Kinect::GetPosition (
+\begin{DoxyParamCaption}
+\item[{int}]{skeletonIndex = {\ttfamily 1}}
+\end{DoxyParamCaption}
+)}}
+\label{classKinect_a78938e42badb920ae502cc93acd801bf}
+Get the current position of the skeleton 
+\begin{DoxyParams}{Parameters}
+{\em skeletonIndex} & the skeleton to read from \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the current position as defined in the \hyperlink{classKinect}{Kinect} SDK (w is ignored) 
+\end{DoxyReturn}
+\hypertarget{classKinect_a2c5e3c65262756c8bdc46ccbd02dda2d}{
+\index{Kinect@{Kinect}!GetQuality@{GetQuality}}
+\index{GetQuality@{GetQuality}!Kinect@{Kinect}}
+\subsubsection[{GetQuality}]{\setlength{\rightskip}{0pt plus 5cm}UINT32 Kinect::GetQuality (
+\begin{DoxyParamCaption}
+\item[{int}]{skeletonIndex = {\ttfamily 1}}
+\end{DoxyParamCaption}
+)}}
+\label{classKinect_a2c5e3c65262756c8bdc46ccbd02dda2d}
+Get the quality of the skeleton. Quality masks are defined in the SkeletonQuality enum 
+\begin{DoxyParams}{Parameters}
+{\em skeletonIndex} & the skeleton to read from \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the quality value as defined in the \hyperlink{classKinect}{Kinect} SDK 
+\end{DoxyReturn}
+\hypertarget{classKinect_aaa9c26d0c72101a1d34b595fe8d10cb1}{
+\index{Kinect@{Kinect}!GetSkeleton@{GetSkeleton}}
+\index{GetSkeleton@{GetSkeleton}!Kinect@{Kinect}}
+\subsubsection[{GetSkeleton}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Skeleton} Kinect::GetSkeleton (
+\begin{DoxyParamCaption}
+\item[{int}]{skeletonIndex = {\ttfamily 1}}
+\end{DoxyParamCaption}
+)}}
+\label{classKinect_aaa9c26d0c72101a1d34b595fe8d10cb1}
+Get the skeleton data Returns the detected skeleton data from the kinect as defined in the \hyperlink{classKinect}{Kinect} SDK 
+\begin{DoxyParams}{Parameters}
+{\em skeletonIndex} & Which of (potentially 2) skeletons to return. This is ignored in this implementation and only a single skeleton is supported for the FRC release default gesture interpretation. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The current version of the skeleton object. 
+\end{DoxyReturn}
+\hypertarget{classKinect_ad86ca99d266837111b537b52325ec675}{
+\index{Kinect@{Kinect}!GetTrackingState@{GetTrackingState}}
+\index{GetTrackingState@{GetTrackingState}!Kinect@{Kinect}}
+\subsubsection[{GetTrackingState}]{\setlength{\rightskip}{0pt plus 5cm}Kinect::SkeletonTrackingState Kinect::GetTrackingState (
+\begin{DoxyParamCaption}
+\item[{int}]{skeletonIndex = {\ttfamily 1}}
+\end{DoxyParamCaption}
+)}}
+\label{classKinect_ad86ca99d266837111b537b52325ec675}
+Get the TrackingState of the skeleton. Tracking states are defined in the SkeletonTrackingState enum 
+\begin{DoxyParams}{Parameters}
+{\em skeletonIndex} & the skeleton to read from \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the tracking state value as defined in the \hyperlink{classKinect}{Kinect} SDK 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+Kinect.h\item 
+Kinect.cpp\end{DoxyCompactItemize}

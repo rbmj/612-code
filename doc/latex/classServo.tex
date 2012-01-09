@@ -1,156 +1,175 @@
-\hypertarget{classServo}{\section{\-Servo \-Class \-Reference}
-\label{classServo}\index{\-Servo@{\-Servo}}
+\hypertarget{classServo}{
+\section{Servo Class Reference}
+\label{classServo}\index{Servo@{Servo}}
 }
 
 
-{\ttfamily \#include $<$\-Servo.\-h$>$}
+{\ttfamily \#include $<$Servo.h$>$}
 
-\-Inheritance diagram for \-Servo\-:\begin{figure}[H]
+Inheritance diagram for Servo:\begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[height=5.000000cm]{classServo}
 \end{center}
 \end{figure}
-\subsection*{\-Public \-Member \-Functions}
+\subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{classServo_ac28728fe000cd4e1fbe37c7471c6ed42}{\-Servo} (\-U\-I\-N\-T32 channel)
+\hyperlink{classServo_ac28728fe000cd4e1fbe37c7471c6ed42}{Servo} (UINT32 channel)
 \item 
-\hyperlink{classServo_a0ec824dc7c4958c1386100b0e71419ee}{\-Servo} (\-U\-I\-N\-T32 slot, \-U\-I\-N\-T32 channel)
+\hyperlink{classServo_a3724431be0be92edb3a533a54f4b7909}{Servo} (UINT8 moduleNumber, UINT32 channel)
 \item 
-void \hyperlink{classServo_a9ab93d2e70c8be9d2599aa225a6f8610}{\-Set} (float value)
+void \hyperlink{classServo_a9ab93d2e70c8be9d2599aa225a6f8610}{Set} (float value)
 \item 
-void \hyperlink{classServo_ab151adcbbabc49c1bbe41ec349f17c23}{\-Set\-Offline} ()
+void \hyperlink{classServo_ab151adcbbabc49c1bbe41ec349f17c23}{SetOffline} ()
 \item 
-float \hyperlink{classServo_a5ecdde666455fa3c20d4ae1b6184a047}{\-Get} ()
+float \hyperlink{classServo_a5ecdde666455fa3c20d4ae1b6184a047}{Get} ()
 \item 
-void \hyperlink{classServo_a0046f9431e42de3fe63f8ce1b3995eb5}{\-Set\-Angle} (float angle)
+void \hyperlink{classServo_a0046f9431e42de3fe63f8ce1b3995eb5}{SetAngle} (float angle)
 \item 
-float \hyperlink{classServo_a0ccee0191f0026d94db4646e6662700c}{\-Get\-Angle} ()
+float \hyperlink{classServo_a0ccee0191f0026d94db4646e6662700c}{GetAngle} ()
 \end{DoxyCompactItemize}
-\subsection*{\-Static \-Public \-Member \-Functions}
+\subsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{classServo_ae36a37bed39b8f1eef52504835691c3a}{static float {\bfseries \-Get\-Max\-Angle} ()}\label{classServo_ae36a37bed39b8f1eef52504835691c3a}
+\hypertarget{classServo_ae36a37bed39b8f1eef52504835691c3a}{
+static float {\bfseries GetMaxAngle} ()}
+\label{classServo_ae36a37bed39b8f1eef52504835691c3a}
 
 \item 
-\hypertarget{classServo_a5f278b3f0f6d99e4c3fd74ded31f8b93}{static float {\bfseries \-Get\-Min\-Angle} ()}\label{classServo_a5f278b3f0f6d99e4c3fd74ded31f8b93}
+\hypertarget{classServo_a5f278b3f0f6d99e4c3fd74ded31f8b93}{
+static float {\bfseries GetMinAngle} ()}
+\label{classServo_a5f278b3f0f6d99e4c3fd74ded31f8b93}
 
 \end{DoxyCompactItemize}
 
 
-\subsection{\-Detailed \-Description}
-\-Standard hobby style servo.
+\subsection{Detailed Description}
+Standard hobby style servo.
 
-\-The range parameters default to the appropriate values for the \-Hitec \-H\-S-\/322\-H\-D servo provided in the \-F\-I\-R\-S\-T \-Kit of \-Parts in 2008. 
+The range parameters default to the appropriate values for the Hitec HS-\/322HD servo provided in the FIRST Kit of Parts in 2008. 
 
-\subsection{\-Constructor \& \-Destructor \-Documentation}
-\hypertarget{classServo_ac28728fe000cd4e1fbe37c7471c6ed42}{\index{\-Servo@{\-Servo}!\-Servo@{\-Servo}}
-\index{\-Servo@{\-Servo}!Servo@{\-Servo}}
-\subsubsection[{\-Servo}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Servo\-::\-Servo} (
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classServo_ac28728fe000cd4e1fbe37c7471c6ed42}{
+\index{Servo@{Servo}!Servo@{Servo}}
+\index{Servo@{Servo}!Servo@{Servo}}
+\subsubsection[{Servo}]{\setlength{\rightskip}{0pt plus 5cm}Servo::Servo (
 \begin{DoxyParamCaption}
-\item[{\-U\-I\-N\-T32}]{channel}
+\item[{UINT32}]{channel}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily  \mbox{[}explicit\mbox{]}}}}\label{classServo_ac28728fe000cd4e1fbe37c7471c6ed42}
-\-Constructor that assumes the default digital module.
+)\hspace{0.3cm}{\ttfamily  \mbox{[}explicit\mbox{]}}}}
+\label{classServo_ac28728fe000cd4e1fbe37c7471c6ed42}
+Constructor that assumes the default digital module.
 
 
-\begin{DoxyParams}{\-Parameters}
-{\em channel} & \-The \hyperlink{classPWM}{\-P\-W\-M} channel on the digital module to which the servo is attached. \\
+\begin{DoxyParams}{Parameters}
+{\em channel} & The \hyperlink{classPWM}{PWM} channel on the digital module to which the servo is attached. \\
 \hline
 \end{DoxyParams}
-\hypertarget{classServo_a0ec824dc7c4958c1386100b0e71419ee}{\index{\-Servo@{\-Servo}!\-Servo@{\-Servo}}
-\index{\-Servo@{\-Servo}!Servo@{\-Servo}}
-\subsubsection[{\-Servo}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Servo\-::\-Servo} (
+\hypertarget{classServo_a3724431be0be92edb3a533a54f4b7909}{
+\index{Servo@{Servo}!Servo@{Servo}}
+\index{Servo@{Servo}!Servo@{Servo}}
+\subsubsection[{Servo}]{\setlength{\rightskip}{0pt plus 5cm}Servo::Servo (
 \begin{DoxyParamCaption}
-\item[{\-U\-I\-N\-T32}]{slot, }
-\item[{\-U\-I\-N\-T32}]{channel}
+\item[{UINT8}]{moduleNumber, }
+\item[{UINT32}]{channel}
 \end{DoxyParamCaption}
-)}}\label{classServo_a0ec824dc7c4958c1386100b0e71419ee}
-\-Constructor that specifies the digital module.
+)}}
+\label{classServo_a3724431be0be92edb3a533a54f4b7909}
+Constructor that specifies the digital module.
 
 
-\begin{DoxyParams}{\-Parameters}
-{\em slot} & \-The slot in the chassis that the digital module is plugged into. \\
+\begin{DoxyParams}{Parameters}
+{\em moduleNumber} & The digital module (1 or 2). \\
 \hline
-{\em channel} & \-The \hyperlink{classPWM}{\-P\-W\-M} channel on the digital module to which the servo is attached. \\
+{\em channel} & The \hyperlink{classPWM}{PWM} channel on the digital module to which the servo is attached (1..10). \\
 \hline
 \end{DoxyParams}
 
 
-\subsection{\-Member \-Function \-Documentation}
-\hypertarget{classServo_a5ecdde666455fa3c20d4ae1b6184a047}{\index{\-Servo@{\-Servo}!\-Get@{\-Get}}
-\index{\-Get@{\-Get}!Servo@{\-Servo}}
-\subsubsection[{\-Get}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf \-Servo\-::\-Get} (
+\subsection{Member Function Documentation}
+\hypertarget{classServo_a5ecdde666455fa3c20d4ae1b6184a047}{
+\index{Servo@{Servo}!Get@{Get}}
+\index{Get@{Get}!Servo@{Servo}}
+\subsubsection[{Get}]{\setlength{\rightskip}{0pt plus 5cm}float Servo::Get (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)}}\label{classServo_a5ecdde666455fa3c20d4ae1b6184a047}
-\-Get the servo position.
+)}}
+\label{classServo_a5ecdde666455fa3c20d4ae1b6184a047}
+Get the servo position.
 
-\hyperlink{classServo}{\-Servo} values range from 0.\-0 to 1.\-0 corresponding to the range of full left to full right.
+\hyperlink{classServo}{Servo} values range from 0.0 to 1.0 corresponding to the range of full left to full right.
 
-\begin{DoxyReturn}{\-Returns}
-\-Position from 0.\-0 to 1.\-0. 
+\begin{DoxyReturn}{Returns}
+Position from 0.0 to 1.0. 
 \end{DoxyReturn}
-\hypertarget{classServo_a0ccee0191f0026d94db4646e6662700c}{\index{\-Servo@{\-Servo}!\-Get\-Angle@{\-Get\-Angle}}
-\index{\-Get\-Angle@{\-Get\-Angle}!Servo@{\-Servo}}
-\subsubsection[{\-Get\-Angle}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf \-Servo\-::\-Get\-Angle} (
+\hypertarget{classServo_a0ccee0191f0026d94db4646e6662700c}{
+\index{Servo@{Servo}!GetAngle@{GetAngle}}
+\index{GetAngle@{GetAngle}!Servo@{Servo}}
+\subsubsection[{GetAngle}]{\setlength{\rightskip}{0pt plus 5cm}float Servo::GetAngle (
 \begin{DoxyParamCaption}
 \item[{void}]{}
 \end{DoxyParamCaption}
-)}}\label{classServo_a0ccee0191f0026d94db4646e6662700c}
-\-Get the servo angle.
+)}}
+\label{classServo_a0ccee0191f0026d94db4646e6662700c}
+Get the servo angle.
 
-\-Assume that the servo angle is linear with respect to the \hyperlink{classPWM}{\-P\-W\-M} value (big assumption, need to test). \begin{DoxyReturn}{\-Returns}
-\-The angle in degrees to which the servo is set. 
+Assume that the servo angle is linear with respect to the \hyperlink{classPWM}{PWM} value (big assumption, need to test). \begin{DoxyReturn}{Returns}
+The angle in degrees to which the servo is set. 
 \end{DoxyReturn}
-\hypertarget{classServo_a9ab93d2e70c8be9d2599aa225a6f8610}{\index{\-Servo@{\-Servo}!\-Set@{\-Set}}
-\index{\-Set@{\-Set}!Servo@{\-Servo}}
-\subsubsection[{\-Set}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Servo\-::\-Set} (
+\hypertarget{classServo_a9ab93d2e70c8be9d2599aa225a6f8610}{
+\index{Servo@{Servo}!Set@{Set}}
+\index{Set@{Set}!Servo@{Servo}}
+\subsubsection[{Set}]{\setlength{\rightskip}{0pt plus 5cm}void Servo::Set (
 \begin{DoxyParamCaption}
 \item[{float}]{value}
 \end{DoxyParamCaption}
-)}}\label{classServo_a9ab93d2e70c8be9d2599aa225a6f8610}
-\-Set the servo position.
+)}}
+\label{classServo_a9ab93d2e70c8be9d2599aa225a6f8610}
+Set the servo position.
 
-\hyperlink{classServo}{\-Servo} values range from 0.\-0 to 1.\-0 corresponding to the range of full left to full right.
+\hyperlink{classServo}{Servo} values range from 0.0 to 1.0 corresponding to the range of full left to full right.
 
 
-\begin{DoxyParams}{\-Parameters}
-{\em value} & \-Position from 0.\-0 to 1.\-0. \\
+\begin{DoxyParams}{Parameters}
+{\em value} & Position from 0.0 to 1.0. \\
 \hline
 \end{DoxyParams}
-\hypertarget{classServo_a0046f9431e42de3fe63f8ce1b3995eb5}{\index{\-Servo@{\-Servo}!\-Set\-Angle@{\-Set\-Angle}}
-\index{\-Set\-Angle@{\-Set\-Angle}!Servo@{\-Servo}}
-\subsubsection[{\-Set\-Angle}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Servo\-::\-Set\-Angle} (
+\hypertarget{classServo_a0046f9431e42de3fe63f8ce1b3995eb5}{
+\index{Servo@{Servo}!SetAngle@{SetAngle}}
+\index{SetAngle@{SetAngle}!Servo@{Servo}}
+\subsubsection[{SetAngle}]{\setlength{\rightskip}{0pt plus 5cm}void Servo::SetAngle (
 \begin{DoxyParamCaption}
 \item[{float}]{degrees}
 \end{DoxyParamCaption}
-)}}\label{classServo_a0046f9431e42de3fe63f8ce1b3995eb5}
-\-Set the servo angle.
+)}}
+\label{classServo_a0046f9431e42de3fe63f8ce1b3995eb5}
+Set the servo angle.
 
-\-Assume that the servo angle is linear with respect to the \hyperlink{classPWM}{\-P\-W\-M} value (big assumption, need to test).
+Assume that the servo angle is linear with respect to the \hyperlink{classPWM}{PWM} value (big assumption, need to test).
 
-\hyperlink{classServo}{\-Servo} angles that are out of the supported range of the servo simply \char`\"{}saturate\char`\"{} in that direction \-In other words, if the servo has a range of (\-X degrees to \-Y degrees) than angles of less than \-X result in an angle of \-X being set and angles of more than \-Y degrees result in an angle of \-Y being set.
+\hyperlink{classServo}{Servo} angles that are out of the supported range of the servo simply \char`\"{}saturate\char`\"{} in that direction In other words, if the servo has a range of (X degrees to Y degrees) than angles of less than X result in an angle of X being set and angles of more than Y degrees result in an angle of Y being set.
 
 
-\begin{DoxyParams}{\-Parameters}
-{\em degrees} & \-The angle in degrees to set the servo. \\
+\begin{DoxyParams}{Parameters}
+{\em degrees} & The angle in degrees to set the servo. \\
 \hline
 \end{DoxyParams}
-\hypertarget{classServo_ab151adcbbabc49c1bbe41ec349f17c23}{\index{\-Servo@{\-Servo}!\-Set\-Offline@{\-Set\-Offline}}
-\index{\-Set\-Offline@{\-Set\-Offline}!Servo@{\-Servo}}
-\subsubsection[{\-Set\-Offline}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Servo\-::\-Set\-Offline} (
+\hypertarget{classServo_ab151adcbbabc49c1bbe41ec349f17c23}{
+\index{Servo@{Servo}!SetOffline@{SetOffline}}
+\index{SetOffline@{SetOffline}!Servo@{Servo}}
+\subsubsection[{SetOffline}]{\setlength{\rightskip}{0pt plus 5cm}void Servo::SetOffline (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)}}\label{classServo_ab151adcbbabc49c1bbe41ec349f17c23}
-\-Set the servo to offline.
+)}}
+\label{classServo_ab151adcbbabc49c1bbe41ec349f17c23}
+Set the servo to offline.
 
-\-Set the servo raw value to 0 (undriven) 
+Set the servo raw value to 0 (undriven) 
 
-\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
 \item 
-\-Servo.\-h\item 
-\-Servo.\-cpp\end{DoxyCompactItemize}
+Servo.h\item 
+Servo.cpp\end{DoxyCompactItemize}

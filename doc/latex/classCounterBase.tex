@@ -1,56 +1,73 @@
-\hypertarget{classCounterBase}{\section{\-Counter\-Base \-Class \-Reference}
-\label{classCounterBase}\index{\-Counter\-Base@{\-Counter\-Base}}
+\hypertarget{classCounterBase}{
+\section{CounterBase Class Reference}
+\label{classCounterBase}\index{CounterBase@{CounterBase}}
 }
 
 
-{\ttfamily \#include $<$\-Counter\-Base.\-h$>$}
+{\ttfamily \#include $<$CounterBase.h$>$}
 
-\-Inheritance diagram for \-Counter\-Base\-:\begin{figure}[H]
+Inheritance diagram for CounterBase:\begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[height=3.000000cm]{classCounterBase}
 \end{center}
 \end{figure}
-\subsection*{\-Public \-Types}
+\subsection*{Public Types}
 \begin{DoxyCompactItemize}
 \item 
-enum {\bfseries \-Encoding\-Type} \{ {\bfseries k1\-X}, 
-{\bfseries k2\-X}, 
-{\bfseries k4\-X}
+enum {\bfseries EncodingType} \{ {\bfseries k1X}, 
+{\bfseries k2X}, 
+{\bfseries k4X}
  \}
 \end{DoxyCompactItemize}
-\subsection*{\-Public \-Member \-Functions}
+\subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{classCounterBase_ac8c376e198e0402fd46712e323475302}{virtual void {\bfseries \-Start} ()=0}\label{classCounterBase_ac8c376e198e0402fd46712e323475302}
+\hypertarget{classCounterBase_ac8c376e198e0402fd46712e323475302}{
+virtual void {\bfseries Start} ()=0}
+\label{classCounterBase_ac8c376e198e0402fd46712e323475302}
 
 \item 
-\hypertarget{classCounterBase_a38288a46837b813ac2e34c07cc4d069c}{virtual \-I\-N\-T32 {\bfseries \-Get} ()=0}\label{classCounterBase_a38288a46837b813ac2e34c07cc4d069c}
+\hypertarget{classCounterBase_a38288a46837b813ac2e34c07cc4d069c}{
+virtual INT32 {\bfseries Get} ()=0}
+\label{classCounterBase_a38288a46837b813ac2e34c07cc4d069c}
 
 \item 
-\hypertarget{classCounterBase_afa72871043355ad39e703cfd182aec20}{virtual void {\bfseries \-Reset} ()=0}\label{classCounterBase_afa72871043355ad39e703cfd182aec20}
+\hypertarget{classCounterBase_afa72871043355ad39e703cfd182aec20}{
+virtual void {\bfseries Reset} ()=0}
+\label{classCounterBase_afa72871043355ad39e703cfd182aec20}
 
 \item 
-\hypertarget{classCounterBase_aea8ddd4a23c5d0fc05164a9b55fb22f8}{virtual void {\bfseries \-Stop} ()=0}\label{classCounterBase_aea8ddd4a23c5d0fc05164a9b55fb22f8}
+\hypertarget{classCounterBase_aea8ddd4a23c5d0fc05164a9b55fb22f8}{
+virtual void {\bfseries Stop} ()=0}
+\label{classCounterBase_aea8ddd4a23c5d0fc05164a9b55fb22f8}
 
 \item 
-\hypertarget{classCounterBase_a1d011fe2873cdf4a0fe624a56f38485b}{virtual double {\bfseries \-Get\-Period} ()=0}\label{classCounterBase_a1d011fe2873cdf4a0fe624a56f38485b}
+\hypertarget{classCounterBase_a1d011fe2873cdf4a0fe624a56f38485b}{
+virtual double {\bfseries GetPeriod} ()=0}
+\label{classCounterBase_a1d011fe2873cdf4a0fe624a56f38485b}
 
 \item 
-\hypertarget{classCounterBase_aecc60bf699c067a61dc6abd6c077d3dc}{virtual void {\bfseries \-Set\-Max\-Period} (double max\-Period)=0}\label{classCounterBase_aecc60bf699c067a61dc6abd6c077d3dc}
+\hypertarget{classCounterBase_aecc60bf699c067a61dc6abd6c077d3dc}{
+virtual void {\bfseries SetMaxPeriod} (double maxPeriod)=0}
+\label{classCounterBase_aecc60bf699c067a61dc6abd6c077d3dc}
 
 \item 
-\hypertarget{classCounterBase_a47e66b67064bad970d353918474fc434}{virtual bool {\bfseries \-Get\-Stopped} ()=0}\label{classCounterBase_a47e66b67064bad970d353918474fc434}
+\hypertarget{classCounterBase_a47e66b67064bad970d353918474fc434}{
+virtual bool {\bfseries GetStopped} ()=0}
+\label{classCounterBase_a47e66b67064bad970d353918474fc434}
 
 \item 
-\hypertarget{classCounterBase_a88b315c3e1d4e2f4431d6455c4e4173d}{virtual bool {\bfseries \-Get\-Direction} ()=0}\label{classCounterBase_a88b315c3e1d4e2f4431d6455c4e4173d}
+\hypertarget{classCounterBase_a88b315c3e1d4e2f4431d6455c4e4173d}{
+virtual bool {\bfseries GetDirection} ()=0}
+\label{classCounterBase_a88b315c3e1d4e2f4431d6455c4e4173d}
 
 \end{DoxyCompactItemize}
 
 
-\subsection{\-Detailed \-Description}
-\-Interface for counting the number of ticks on a digital input channel. \-Encoders, \-Gear tooth sensors, and counters should all subclass this so it can be used to build more advanced classes for control and driving. 
+\subsection{Detailed Description}
+Interface for counting the number of ticks on a digital input channel. Encoders, Gear tooth sensors, and counters should all subclass this so it can be used to build more advanced classes for control and driving. 
 
-\-The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
 \item 
-\-Counter\-Base.\-h\end{DoxyCompactItemize}
+CounterBase.h\end{DoxyCompactItemize}

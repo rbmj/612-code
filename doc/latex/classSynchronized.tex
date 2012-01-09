@@ -1,45 +1,50 @@
-\hypertarget{classSynchronized}{\section{\-Synchronized \-Class \-Reference}
-\label{classSynchronized}\index{\-Synchronized@{\-Synchronized}}
+\hypertarget{classSynchronized}{
+\section{Synchronized Class Reference}
+\label{classSynchronized}\index{Synchronized@{Synchronized}}
 }
 
 
-{\ttfamily \#include $<$\-Synchronized.\-h$>$}
+{\ttfamily \#include $<$Synchronized.h$>$}
 
-\subsection*{\-Public \-Member \-Functions}
+\subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{classSynchronized_a05041c29b6ec042b9537f62e40f022fa}{\-Synchronized} (\-S\-E\-M\-\_\-\-I\-D)
+\hyperlink{classSynchronized_a05041c29b6ec042b9537f62e40f022fa}{Synchronized} (SEM\_\-ID)
 \item 
-virtual \hyperlink{classSynchronized_adeaa46ad24013f926eaaca662281efd3}{$\sim$\-Synchronized} ()
+virtual \hyperlink{classSynchronized_adeaa46ad24013f926eaaca662281efd3}{$\sim$Synchronized} ()
 \end{DoxyCompactItemize}
 
 
-\subsection{\-Detailed \-Description}
-\-Provide easy support for critical regions. \-A critical region is an area of code that is always executed under mutual exclusion. \-Only one task can be executing this code at any time. \-The idea is that code that manipulates data that is shared between two or more tasks has to be prevented from executing at the same time otherwise a race condition is possible when both tasks try to update the data. \-Typically semaphores are used to ensure only single task access to the data. \hyperlink{classSynchronized}{\-Synchronized} objects are a simple wrapper around semaphores to help ensure that semaphores are always signaled (sem\-Give) after a wait (sem\-Take). 
+\subsection{Detailed Description}
+Provide easy support for critical regions. A critical region is an area of code that is always executed under mutual exclusion. Only one task can be executing this code at any time. The idea is that code that manipulates data that is shared between two or more tasks has to be prevented from executing at the same time otherwise a race condition is possible when both tasks try to update the data. Typically semaphores are used to ensure only single task access to the data. \hyperlink{classSynchronized}{Synchronized} objects are a simple wrapper around semaphores to help ensure that semaphores are always signaled (semGive) after a wait (semTake). 
 
-\subsection{\-Constructor \& \-Destructor \-Documentation}
-\hypertarget{classSynchronized_a05041c29b6ec042b9537f62e40f022fa}{\index{\-Synchronized@{\-Synchronized}!\-Synchronized@{\-Synchronized}}
-\index{\-Synchronized@{\-Synchronized}!Synchronized@{\-Synchronized}}
-\subsubsection[{\-Synchronized}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Synchronized\-::\-Synchronized} (
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classSynchronized_a05041c29b6ec042b9537f62e40f022fa}{
+\index{Synchronized@{Synchronized}!Synchronized@{Synchronized}}
+\index{Synchronized@{Synchronized}!Synchronized@{Synchronized}}
+\subsubsection[{Synchronized}]{\setlength{\rightskip}{0pt plus 5cm}Synchronized::Synchronized (
 \begin{DoxyParamCaption}
-\item[{\-S\-E\-M\-\_\-\-I\-D}]{semaphore}
+\item[{SEM\_\-ID}]{semaphore}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily  \mbox{[}explicit\mbox{]}}}}\label{classSynchronized_a05041c29b6ec042b9537f62e40f022fa}
-\hyperlink{classSynchronized}{\-Synchronized} class deals with critical regions. \-Declare a \hyperlink{classSynchronized}{\-Synchronized} object at the beginning of a block. \-That will take the semaphore. \-When the code exits from the block it will call the destructor which will give the semaphore. \-This ensures that no matter how the block is exited, the semaphore will always be released. \-Use the \-C\-R\-I\-T\-I\-C\-A\-L\-\_\-\-R\-E\-G\-I\-O\-N(\-S\-E\-M\-\_\-\-I\-D) and \-E\-N\-D\-\_\-\-R\-E\-G\-I\-O\-N macros to make the code look cleaner (see header file) 
-\begin{DoxyParams}{\-Parameters}
-{\em semaphore} & \-The semaphore controlling this critical region. \\
+)\hspace{0.3cm}{\ttfamily  \mbox{[}explicit\mbox{]}}}}
+\label{classSynchronized_a05041c29b6ec042b9537f62e40f022fa}
+\hyperlink{classSynchronized}{Synchronized} class deals with critical regions. Declare a \hyperlink{classSynchronized}{Synchronized} object at the beginning of a block. That will take the semaphore. When the code exits from the block it will call the destructor which will give the semaphore. This ensures that no matter how the block is exited, the semaphore will always be released. Use the CRITICAL\_\-REGION(SEM\_\-ID) and END\_\-REGION macros to make the code look cleaner (see header file) 
+\begin{DoxyParams}{Parameters}
+{\em semaphore} & The semaphore controlling this critical region. \\
 \hline
 \end{DoxyParams}
-\hypertarget{classSynchronized_adeaa46ad24013f926eaaca662281efd3}{\index{\-Synchronized@{\-Synchronized}!$\sim$\-Synchronized@{$\sim$\-Synchronized}}
-\index{$\sim$\-Synchronized@{$\sim$\-Synchronized}!Synchronized@{\-Synchronized}}
-\subsubsection[{$\sim$\-Synchronized}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Synchronized\-::$\sim$\-Synchronized} (
+\hypertarget{classSynchronized_adeaa46ad24013f926eaaca662281efd3}{
+\index{Synchronized@{Synchronized}!$\sim$Synchronized@{$\sim$Synchronized}}
+\index{$\sim$Synchronized@{$\sim$Synchronized}!Synchronized@{Synchronized}}
+\subsubsection[{$\sim$Synchronized}]{\setlength{\rightskip}{0pt plus 5cm}Synchronized::$\sim$Synchronized (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{classSynchronized_adeaa46ad24013f926eaaca662281efd3}
-\-Syncronized destructor. \-This destructor frees the semaphore ensuring that the resource is freed for the block containing the \hyperlink{classSynchronized}{\-Synchronized} object. 
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classSynchronized_adeaa46ad24013f926eaaca662281efd3}
+Syncronized destructor. This destructor frees the semaphore ensuring that the resource is freed for the block containing the \hyperlink{classSynchronized}{Synchronized} object. 
 
-\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
 \item 
-\-Synchronized.\-h\item 
-\-Synchronized.\-cpp\end{DoxyCompactItemize}
+Synchronized.h\item 
+Synchronized.cpp\end{DoxyCompactItemize}

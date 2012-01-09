@@ -1,142 +1,155 @@
-\hypertarget{classJaguar}{\section{\-Jaguar \-Class \-Reference}
-\label{classJaguar}\index{\-Jaguar@{\-Jaguar}}
+\hypertarget{classJaguar}{
+\section{Jaguar Class Reference}
+\label{classJaguar}\index{Jaguar@{Jaguar}}
 }
 
 
-{\ttfamily \#include $<$\-Jaguar.\-h$>$}
+{\ttfamily \#include $<$Jaguar.h$>$}
 
-\-Inheritance diagram for \-Jaguar\-:\begin{figure}[H]
+Inheritance diagram for Jaguar:\begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[height=5.000000cm]{classJaguar}
 \end{center}
 \end{figure}
-\subsection*{\-Public \-Member \-Functions}
+\subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{classJaguar_ac209b4c1dfe97eacb264889f53b523a4}{\-Jaguar} (\-U\-I\-N\-T32 channel)
+\hyperlink{classJaguar_ac209b4c1dfe97eacb264889f53b523a4}{Jaguar} (UINT32 channel)
 \item 
-\hyperlink{classJaguar_a8ddc8e67e21a760f7b2bb3c005f7ca2e}{\-Jaguar} (\-U\-I\-N\-T32 slot, \-U\-I\-N\-T32 channel)
+\hyperlink{classJaguar_a84a9cebc7f34fd312309d4bb6812ce33}{Jaguar} (UINT8 moduleNumber, UINT32 channel)
 \item 
-virtual void \hyperlink{classJaguar_a1a15089e9ea94102f1d003bce3ae2f54}{\-Set} (float value, \-U\-I\-N\-T8 sync\-Group=0)
+virtual void \hyperlink{classJaguar_a1a15089e9ea94102f1d003bce3ae2f54}{Set} (float value, UINT8 syncGroup=0)
 \item 
-virtual float \hyperlink{classJaguar_a7ce9aa9378ec4f0907dca524f63bfdd1}{\-Get} ()
+virtual float \hyperlink{classJaguar_a7ce9aa9378ec4f0907dca524f63bfdd1}{Get} ()
 \item 
-virtual void \hyperlink{classJaguar_a59b1a6772a482f810134a4c623416b44}{\-Disable} ()
+virtual void \hyperlink{classJaguar_a59b1a6772a482f810134a4c623416b44}{Disable} ()
 \item 
-virtual void \hyperlink{classJaguar_af03d1c5b19cae7363d9eafdcb9ec354e}{\-P\-I\-D\-Write} (float output)
+virtual void \hyperlink{classJaguar_af03d1c5b19cae7363d9eafdcb9ec354e}{PIDWrite} (float output)
 \end{DoxyCompactItemize}
 
 
-\subsection{\-Detailed \-Description}
-\-Luminary \-Micro \hyperlink{classJaguar}{\-Jaguar} \-Speed \-Control 
+\subsection{Detailed Description}
+Luminary Micro \hyperlink{classJaguar}{Jaguar} Speed Control 
 
-\subsection{\-Constructor \& \-Destructor \-Documentation}
-\hypertarget{classJaguar_ac209b4c1dfe97eacb264889f53b523a4}{\index{\-Jaguar@{\-Jaguar}!\-Jaguar@{\-Jaguar}}
-\index{\-Jaguar@{\-Jaguar}!Jaguar@{\-Jaguar}}
-\subsubsection[{\-Jaguar}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Jaguar\-::\-Jaguar} (
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classJaguar_ac209b4c1dfe97eacb264889f53b523a4}{
+\index{Jaguar@{Jaguar}!Jaguar@{Jaguar}}
+\index{Jaguar@{Jaguar}!Jaguar@{Jaguar}}
+\subsubsection[{Jaguar}]{\setlength{\rightskip}{0pt plus 5cm}Jaguar::Jaguar (
 \begin{DoxyParamCaption}
-\item[{\-U\-I\-N\-T32}]{channel}
+\item[{UINT32}]{channel}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily  \mbox{[}explicit\mbox{]}}}}\label{classJaguar_ac209b4c1dfe97eacb264889f53b523a4}
-\-Constructor that assumes the default digital module.
+)\hspace{0.3cm}{\ttfamily  \mbox{[}explicit\mbox{]}}}}
+\label{classJaguar_ac209b4c1dfe97eacb264889f53b523a4}
+Constructor that assumes the default digital module.
 
 
-\begin{DoxyParams}{\-Parameters}
-{\em channel} & \-The \hyperlink{classPWM}{\-P\-W\-M} channel on the digital module that the \hyperlink{classJaguar}{\-Jaguar} is attached to. \\
+\begin{DoxyParams}{Parameters}
+{\em channel} & The \hyperlink{classPWM}{PWM} channel on the digital module that the \hyperlink{classJaguar}{Jaguar} is attached to. \\
 \hline
 \end{DoxyParams}
-\hypertarget{classJaguar_a8ddc8e67e21a760f7b2bb3c005f7ca2e}{\index{\-Jaguar@{\-Jaguar}!\-Jaguar@{\-Jaguar}}
-\index{\-Jaguar@{\-Jaguar}!Jaguar@{\-Jaguar}}
-\subsubsection[{\-Jaguar}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Jaguar\-::\-Jaguar} (
+\hypertarget{classJaguar_a84a9cebc7f34fd312309d4bb6812ce33}{
+\index{Jaguar@{Jaguar}!Jaguar@{Jaguar}}
+\index{Jaguar@{Jaguar}!Jaguar@{Jaguar}}
+\subsubsection[{Jaguar}]{\setlength{\rightskip}{0pt plus 5cm}Jaguar::Jaguar (
 \begin{DoxyParamCaption}
-\item[{\-U\-I\-N\-T32}]{slot, }
-\item[{\-U\-I\-N\-T32}]{channel}
+\item[{UINT8}]{moduleNumber, }
+\item[{UINT32}]{channel}
 \end{DoxyParamCaption}
-)}}\label{classJaguar_a8ddc8e67e21a760f7b2bb3c005f7ca2e}
-\-Constructor that specifies the digital module.
+)}}
+\label{classJaguar_a84a9cebc7f34fd312309d4bb6812ce33}
+Constructor that specifies the digital module.
 
 
-\begin{DoxyParams}{\-Parameters}
-{\em slot} & \-The slot in the chassis that the digital module is plugged into. \\
+\begin{DoxyParams}{Parameters}
+{\em moduleNumber} & The digital module (1 or 2). \\
 \hline
-{\em channel} & \-The \hyperlink{classPWM}{\-P\-W\-M} channel on the digital module that the \hyperlink{classJaguar}{\-Jaguar} is attached to. \\
+{\em channel} & The \hyperlink{classPWM}{PWM} channel on the digital module that the \hyperlink{classJaguar}{Jaguar} is attached to. \\
 \hline
 \end{DoxyParams}
 
 
-\subsection{\-Member \-Function \-Documentation}
-\hypertarget{classJaguar_a59b1a6772a482f810134a4c623416b44}{\index{\-Jaguar@{\-Jaguar}!\-Disable@{\-Disable}}
-\index{\-Disable@{\-Disable}!Jaguar@{\-Jaguar}}
-\subsubsection[{\-Disable}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Jaguar\-::\-Disable} (
+\subsection{Member Function Documentation}
+\hypertarget{classJaguar_a59b1a6772a482f810134a4c623416b44}{
+\index{Jaguar@{Jaguar}!Disable@{Disable}}
+\index{Disable@{Disable}!Jaguar@{Jaguar}}
+\subsubsection[{Disable}]{\setlength{\rightskip}{0pt plus 5cm}void Jaguar::Disable (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{classJaguar_a59b1a6772a482f810134a4c623416b44}
-\-Common interface for disabling a motor. 
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classJaguar_a59b1a6772a482f810134a4c623416b44}
+Common interface for disabling a motor. 
 
-\-Implements \hyperlink{classSpeedController_a6fd7bbef6feb65b89d7eb727e8c1ec76}{\-Speed\-Controller}.
+Implements \hyperlink{classSpeedController_a6fd7bbef6feb65b89d7eb727e8c1ec76}{SpeedController}.
 
-\hypertarget{classJaguar_a7ce9aa9378ec4f0907dca524f63bfdd1}{\index{\-Jaguar@{\-Jaguar}!\-Get@{\-Get}}
-\index{\-Get@{\-Get}!Jaguar@{\-Jaguar}}
-\subsubsection[{\-Get}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf \-Jaguar\-::\-Get} (
+\hypertarget{classJaguar_a7ce9aa9378ec4f0907dca524f63bfdd1}{
+\index{Jaguar@{Jaguar}!Get@{Get}}
+\index{Get@{Get}!Jaguar@{Jaguar}}
+\subsubsection[{Get}]{\setlength{\rightskip}{0pt plus 5cm}float Jaguar::Get (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{classJaguar_a7ce9aa9378ec4f0907dca524f63bfdd1}
-\-Get the recently set value of the \hyperlink{classPWM}{\-P\-W\-M}.
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classJaguar_a7ce9aa9378ec4f0907dca524f63bfdd1}
+Get the recently set value of the \hyperlink{classPWM}{PWM}.
 
-\begin{DoxyReturn}{\-Returns}
-\-The most recently set value for the \hyperlink{classPWM}{\-P\-W\-M} between -\/1.\-0 and 1.\-0. 
+\begin{DoxyReturn}{Returns}
+The most recently set value for the \hyperlink{classPWM}{PWM} between -\/1.0 and 1.0. 
 \end{DoxyReturn}
 
 
-\-Implements \hyperlink{classSpeedController_a41c2b62853ab141b471af0864e469031}{\-Speed\-Controller}.
+Implements \hyperlink{classSpeedController_a41c2b62853ab141b471af0864e469031}{SpeedController}.
 
-\hypertarget{classJaguar_af03d1c5b19cae7363d9eafdcb9ec354e}{\index{\-Jaguar@{\-Jaguar}!\-P\-I\-D\-Write@{\-P\-I\-D\-Write}}
-\index{\-P\-I\-D\-Write@{\-P\-I\-D\-Write}!Jaguar@{\-Jaguar}}
-\subsubsection[{\-P\-I\-D\-Write}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Jaguar\-::\-P\-I\-D\-Write} (
+\hypertarget{classJaguar_af03d1c5b19cae7363d9eafdcb9ec354e}{
+\index{Jaguar@{Jaguar}!PIDWrite@{PIDWrite}}
+\index{PIDWrite@{PIDWrite}!Jaguar@{Jaguar}}
+\subsubsection[{PIDWrite}]{\setlength{\rightskip}{0pt plus 5cm}void Jaguar::PIDWrite (
 \begin{DoxyParamCaption}
 \item[{float}]{output}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{classJaguar_af03d1c5b19cae7363d9eafdcb9ec354e}
-\-Write out the \-P\-I\-D value as seen in the \hyperlink{classPIDOutput}{\-P\-I\-D\-Output} base object.
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classJaguar_af03d1c5b19cae7363d9eafdcb9ec354e}
+Write out the PID value as seen in the \hyperlink{classPIDOutput}{PIDOutput} base object.
 
 
-\begin{DoxyParams}{\-Parameters}
-{\em output} & \-Write out the \hyperlink{classPWM}{\-P\-W\-M} value as was found in the \hyperlink{classPIDController}{\-P\-I\-D\-Controller} \\
+\begin{DoxyParams}{Parameters}
+{\em output} & Write out the \hyperlink{classPWM}{PWM} value as was found in the \hyperlink{classPIDController}{PIDController} \\
 \hline
 \end{DoxyParams}
 
 
-\-Implements \hyperlink{classPIDOutput}{\-P\-I\-D\-Output}.
+Implements \hyperlink{classPIDOutput}{PIDOutput}.
 
-\hypertarget{classJaguar_a1a15089e9ea94102f1d003bce3ae2f54}{\index{\-Jaguar@{\-Jaguar}!\-Set@{\-Set}}
-\index{\-Set@{\-Set}!Jaguar@{\-Jaguar}}
-\subsubsection[{\-Set}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Jaguar\-::\-Set} (
+\hypertarget{classJaguar_a1a15089e9ea94102f1d003bce3ae2f54}{
+\index{Jaguar@{Jaguar}!Set@{Set}}
+\index{Set@{Set}!Jaguar@{Jaguar}}
+\subsubsection[{Set}]{\setlength{\rightskip}{0pt plus 5cm}void Jaguar::Set (
 \begin{DoxyParamCaption}
 \item[{float}]{speed, }
-\item[{\-U\-I\-N\-T8}]{sync\-Group = {\ttfamily 0}}
+\item[{UINT8}]{syncGroup = {\ttfamily 0}}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{classJaguar_a1a15089e9ea94102f1d003bce3ae2f54}
-\-Set the \hyperlink{classPWM}{\-P\-W\-M} value.
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classJaguar_a1a15089e9ea94102f1d003bce3ae2f54}
+Set the \hyperlink{classPWM}{PWM} value.
 
-\-The \hyperlink{classPWM}{\-P\-W\-M} value is set using a range of -\/1.\-0 to 1.\-0, appropriately scaling the value for the \-F\-P\-G\-A.
+The \hyperlink{classPWM}{PWM} value is set using a range of -\/1.0 to 1.0, appropriately scaling the value for the FPGA.
 
 
-\begin{DoxyParams}{\-Parameters}
-{\em speed} & \-The speed value between -\/1.\-0 and 1.\-0 to set. \\
+\begin{DoxyParams}{Parameters}
+{\em speed} & The speed value between -\/1.0 and 1.0 to set. \\
 \hline
-{\em sync\-Group} & \-Unused interface. \\
+{\em syncGroup} & Unused interface. \\
 \hline
 \end{DoxyParams}
 
 
-\-Implements \hyperlink{classSpeedController_abaa1c81b41a9cc673fe92978bb12f82e}{\-Speed\-Controller}.
+Implements \hyperlink{classSpeedController_abaa1c81b41a9cc673fe92978bb12f82e}{SpeedController}.
 
 
 
-\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
 \item 
-\-Jaguar.\-h\item 
-\-Jaguar.\-cpp\end{DoxyCompactItemize}
+Jaguar.h\item 
+Jaguar.cpp\end{DoxyCompactItemize}

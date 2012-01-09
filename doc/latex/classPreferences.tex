@@ -1,0 +1,414 @@
+\hypertarget{classPreferences}{
+\section{Preferences Class Reference}
+\label{classPreferences}\index{Preferences@{Preferences}}
+}
+
+
+{\ttfamily \#include $<$Preferences.h$>$}
+
+Inheritance diagram for Preferences:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classPreferences}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+std::vector$<$ std::string $>$ \hyperlink{classPreferences_adfaa1b0d4e2317bbab416ad0e681d707}{GetKeys} ()
+\item 
+std::string \hyperlink{classPreferences_ad31cc879d70be5d64338fefa12e1a243}{GetString} (const char $\ast$key, const char $\ast$defaultValue=\char`\"{}\char`\"{})
+\item 
+int \hyperlink{classPreferences_ad2da52e665fe7c8fc70ce55d1a4b2895}{GetString} (const char $\ast$key, char $\ast$value, int valueSize, const char $\ast$defaultValue=\char`\"{}\char`\"{})
+\item 
+int \hyperlink{classPreferences_a5ca31ef76922a0fa26b8ded1e9291709}{GetInt} (const char $\ast$key, int defaultValue=0)
+\item 
+double \hyperlink{classPreferences_a06246f2b29a5015a7fb04dfa387d9727}{GetDouble} (const char $\ast$key, double defaultValue=0.0)
+\item 
+float \hyperlink{classPreferences_a20514b7b015c4b98ca999dc38d86608d}{GetFloat} (const char $\ast$key, float defaultValue=0.0)
+\item 
+bool \hyperlink{classPreferences_a4ee5292adb5b798e6acc3c184b1f2c2d}{GetBoolean} (const char $\ast$key, bool defaultValue=false)
+\item 
+INT64 \hyperlink{classPreferences_ab175a6bf8da0215476cc74cf4a8c5503}{GetLong} (const char $\ast$key, INT64 defaultValue=0)
+\item 
+void \hyperlink{classPreferences_ad75629afa66156aa009d73fa8933f8c3}{PutString} (const char $\ast$key, const char $\ast$value)
+\item 
+void \hyperlink{classPreferences_a0715c745aecfe942f37e0e8b19a8b404}{PutInt} (const char $\ast$key, int value)
+\item 
+void \hyperlink{classPreferences_aa268e1bfbde2c1957d3cca6b379d5da2}{PutDouble} (const char $\ast$key, double value)
+\item 
+void \hyperlink{classPreferences_a357246eabcaa351f7c2ad5c86a03fe0f}{PutFloat} (const char $\ast$key, float value)
+\item 
+void \hyperlink{classPreferences_a74bec1555c91e100ff9091484fcaac91}{PutBoolean} (const char $\ast$key, bool value)
+\item 
+void \hyperlink{classPreferences_a7cc71d0e62c873dccf59975b6720a3bc}{PutLong} (const char $\ast$key, INT64 value)
+\item 
+void \hyperlink{classPreferences_ae8ce1d8967e205e584e9cca1dbf86919}{Save} ()
+\item 
+bool \hyperlink{classPreferences_a7d9c2ec45d1966f06f92fc8383053b5d}{ContainsKey} (const char $\ast$key)
+\item 
+void \hyperlink{classPreferences_ae2b5f7567f130301c50869916571c81b}{Remove} (const char $\ast$key)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{classPreferences}{Preferences} $\ast$ \hyperlink{classPreferences_aacc16e546a94d54772f3b500ec9a81a0}{GetInstance} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The preferences class provides a relatively simple way to save important values to the cRIO to access the next time the cRIO is booted.
+
+This class loads and saves from a file inside the cRIO. The user can not access the file directly, but may modify values at specific fields which will then be saved to the file when \hyperlink{classPreferences_ae8ce1d8967e205e584e9cca1dbf86919}{Save()} is called.
+
+This class is thread safe.
+
+This will also interact with \hyperlink{}{NetworkTable} by creating a table called \char`\"{}Preferences\char`\"{} with all the key-\/value pairs. To save using \hyperlink{}{NetworkTable}, simply set the boolean at position \char`\"{}$\sim$S A V E$\sim$\char`\"{} to true. Also, if the value of any variable is " in the \hyperlink{}{NetworkTable}, then that represents non-\/existence in the \hyperlink{classPreferences}{Preferences} table 
+
+\subsection{Member Function Documentation}
+\hypertarget{classPreferences_a7d9c2ec45d1966f06f92fc8383053b5d}{
+\index{Preferences@{Preferences}!ContainsKey@{ContainsKey}}
+\index{ContainsKey@{ContainsKey}!Preferences@{Preferences}}
+\subsubsection[{ContainsKey}]{\setlength{\rightskip}{0pt plus 5cm}bool Preferences::ContainsKey (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{key}
+\end{DoxyParamCaption}
+)}}
+\label{classPreferences_a7d9c2ec45d1966f06f92fc8383053b5d}
+Returns whether or not there is a key with the given name. 
+\begin{DoxyParams}{Parameters}
+{\em key} & the key \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+if there is a value at the given key 
+\end{DoxyReturn}
+\hypertarget{classPreferences_a4ee5292adb5b798e6acc3c184b1f2c2d}{
+\index{Preferences@{Preferences}!GetBoolean@{GetBoolean}}
+\index{GetBoolean@{GetBoolean}!Preferences@{Preferences}}
+\subsubsection[{GetBoolean}]{\setlength{\rightskip}{0pt plus 5cm}bool Preferences::GetBoolean (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{key, }
+\item[{bool}]{defaultValue = {\ttfamily false}}
+\end{DoxyParamCaption}
+)}}
+\label{classPreferences_a4ee5292adb5b798e6acc3c184b1f2c2d}
+Returns the boolean at the given key. If this table does not have a value for that position, then the given defaultValue value will be returned. 
+\begin{DoxyParams}{Parameters}
+{\em key} & the key \\
+\hline
+{\em defaultValue} & the value to return if none exists in the table \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+either the value in the table, or the defaultValue 
+\end{DoxyReturn}
+\hypertarget{classPreferences_a06246f2b29a5015a7fb04dfa387d9727}{
+\index{Preferences@{Preferences}!GetDouble@{GetDouble}}
+\index{GetDouble@{GetDouble}!Preferences@{Preferences}}
+\subsubsection[{GetDouble}]{\setlength{\rightskip}{0pt plus 5cm}double Preferences::GetDouble (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{key, }
+\item[{double}]{defaultValue = {\ttfamily 0.0}}
+\end{DoxyParamCaption}
+)}}
+\label{classPreferences_a06246f2b29a5015a7fb04dfa387d9727}
+Returns the double at the given key. If this table does not have a value for that position, then the given defaultValue value will be returned. 
+\begin{DoxyParams}{Parameters}
+{\em key} & the key \\
+\hline
+{\em defaultValue} & the value to return if none exists in the table \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+either the value in the table, or the defaultValue 
+\end{DoxyReturn}
+\hypertarget{classPreferences_a20514b7b015c4b98ca999dc38d86608d}{
+\index{Preferences@{Preferences}!GetFloat@{GetFloat}}
+\index{GetFloat@{GetFloat}!Preferences@{Preferences}}
+\subsubsection[{GetFloat}]{\setlength{\rightskip}{0pt plus 5cm}float Preferences::GetFloat (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{key, }
+\item[{float}]{defaultValue = {\ttfamily 0.0}}
+\end{DoxyParamCaption}
+)}}
+\label{classPreferences_a20514b7b015c4b98ca999dc38d86608d}
+Returns the float at the given key. If this table does not have a value for that position, then the given defaultValue value will be returned. 
+\begin{DoxyParams}{Parameters}
+{\em key} & the key \\
+\hline
+{\em defaultValue} & the value to return if none exists in the table \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+either the value in the table, or the defaultValue 
+\end{DoxyReturn}
+\hypertarget{classPreferences_aacc16e546a94d54772f3b500ec9a81a0}{
+\index{Preferences@{Preferences}!GetInstance@{GetInstance}}
+\index{GetInstance@{GetInstance}!Preferences@{Preferences}}
+\subsubsection[{GetInstance}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Preferences} $\ast$ Preferences::GetInstance (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{classPreferences_aacc16e546a94d54772f3b500ec9a81a0}
+Get the one and only \hyperlink{classPreferences}{Preferences} object \begin{DoxyReturn}{Returns}
+pointer to the \hyperlink{classPreferences}{Preferences} 
+\end{DoxyReturn}
+\hypertarget{classPreferences_a5ca31ef76922a0fa26b8ded1e9291709}{
+\index{Preferences@{Preferences}!GetInt@{GetInt}}
+\index{GetInt@{GetInt}!Preferences@{Preferences}}
+\subsubsection[{GetInt}]{\setlength{\rightskip}{0pt plus 5cm}int Preferences::GetInt (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{key, }
+\item[{int}]{defaultValue = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}}
+\label{classPreferences_a5ca31ef76922a0fa26b8ded1e9291709}
+Returns the int at the given key. If this table does not have a value for that position, then the given defaultValue value will be returned. 
+\begin{DoxyParams}{Parameters}
+{\em key} & the key \\
+\hline
+{\em defaultValue} & the value to return if none exists in the table \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+either the value in the table, or the defaultValue 
+\end{DoxyReturn}
+\hypertarget{classPreferences_adfaa1b0d4e2317bbab416ad0e681d707}{
+\index{Preferences@{Preferences}!GetKeys@{GetKeys}}
+\index{GetKeys@{GetKeys}!Preferences@{Preferences}}
+\subsubsection[{GetKeys}]{\setlength{\rightskip}{0pt plus 5cm}std::vector$<$ std::string $>$ Preferences::GetKeys (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classPreferences_adfaa1b0d4e2317bbab416ad0e681d707}
+Returns a vector of all the keys \begin{DoxyReturn}{Returns}
+a vector of the keys 
+\end{DoxyReturn}
+\hypertarget{classPreferences_ab175a6bf8da0215476cc74cf4a8c5503}{
+\index{Preferences@{Preferences}!GetLong@{GetLong}}
+\index{GetLong@{GetLong}!Preferences@{Preferences}}
+\subsubsection[{GetLong}]{\setlength{\rightskip}{0pt plus 5cm}INT64 Preferences::GetLong (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{key, }
+\item[{INT64}]{defaultValue = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}}
+\label{classPreferences_ab175a6bf8da0215476cc74cf4a8c5503}
+Returns the long (INT64) at the given key. If this table does not have a value for that position, then the given defaultValue value will be returned. 
+\begin{DoxyParams}{Parameters}
+{\em key} & the key \\
+\hline
+{\em defaultValue} & the value to return if none exists in the table \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+either the value in the table, or the defaultValue 
+\end{DoxyReturn}
+\hypertarget{classPreferences_ad2da52e665fe7c8fc70ce55d1a4b2895}{
+\index{Preferences@{Preferences}!GetString@{GetString}}
+\index{GetString@{GetString}!Preferences@{Preferences}}
+\subsubsection[{GetString}]{\setlength{\rightskip}{0pt plus 5cm}int Preferences::GetString (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{key, }
+\item[{char $\ast$}]{value, }
+\item[{int}]{valueSize, }
+\item[{const char $\ast$}]{defaultValue = {\ttfamily \char`\"{}\char`\"{}}}
+\end{DoxyParamCaption}
+)}}
+\label{classPreferences_ad2da52e665fe7c8fc70ce55d1a4b2895}
+Returns the string at the given key. If this table does not have a value for that position, then the given defaultValue will be returned. 
+\begin{DoxyParams}{Parameters}
+{\em key} & the key \\
+\hline
+{\em value} & the buffer to copy the value into \\
+\hline
+{\em valueSize} & the size of value \\
+\hline
+{\em defaultValue} & the value to return if none exists in the table \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The size of the returned string 
+\end{DoxyReturn}
+\hypertarget{classPreferences_ad31cc879d70be5d64338fefa12e1a243}{
+\index{Preferences@{Preferences}!GetString@{GetString}}
+\index{GetString@{GetString}!Preferences@{Preferences}}
+\subsubsection[{GetString}]{\setlength{\rightskip}{0pt plus 5cm}std::string Preferences::GetString (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{key, }
+\item[{const char $\ast$}]{defaultValue = {\ttfamily \char`\"{}\char`\"{}}}
+\end{DoxyParamCaption}
+)}}
+\label{classPreferences_ad31cc879d70be5d64338fefa12e1a243}
+Returns the string at the given key. If this table does not have a value for that position, then the given defaultValue will be returned. 
+\begin{DoxyParams}{Parameters}
+{\em key} & the key \\
+\hline
+{\em defaultValue} & the value to return if none exists in the table \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+either the value in the table, or the defaultValue 
+\end{DoxyReturn}
+\hypertarget{classPreferences_a74bec1555c91e100ff9091484fcaac91}{
+\index{Preferences@{Preferences}!PutBoolean@{PutBoolean}}
+\index{PutBoolean@{PutBoolean}!Preferences@{Preferences}}
+\subsubsection[{PutBoolean}]{\setlength{\rightskip}{0pt plus 5cm}void Preferences::PutBoolean (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{key, }
+\item[{bool}]{value}
+\end{DoxyParamCaption}
+)}}
+\label{classPreferences_a74bec1555c91e100ff9091484fcaac91}
+Puts the given boolean into the preferences table.
+
+The key may not have any whitespace nor an equals sign
+
+This will {\bfseries NOT} save the value to memory between power cycles, to do that you must call \hyperlink{classPreferences_ae8ce1d8967e205e584e9cca1dbf86919}{Save()} (which must be used with care) at some point after calling this. 
+\begin{DoxyParams}{Parameters}
+{\em key} & the key \\
+\hline
+{\em value} & the value \\
+\hline
+\end{DoxyParams}
+\hypertarget{classPreferences_aa268e1bfbde2c1957d3cca6b379d5da2}{
+\index{Preferences@{Preferences}!PutDouble@{PutDouble}}
+\index{PutDouble@{PutDouble}!Preferences@{Preferences}}
+\subsubsection[{PutDouble}]{\setlength{\rightskip}{0pt plus 5cm}void Preferences::PutDouble (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{key, }
+\item[{double}]{value}
+\end{DoxyParamCaption}
+)}}
+\label{classPreferences_aa268e1bfbde2c1957d3cca6b379d5da2}
+Puts the given double into the preferences table.
+
+The key may not have any whitespace nor an equals sign
+
+This will {\bfseries NOT} save the value to memory between power cycles, to do that you must call \hyperlink{classPreferences_ae8ce1d8967e205e584e9cca1dbf86919}{Save()} (which must be used with care) at some point after calling this. 
+\begin{DoxyParams}{Parameters}
+{\em key} & the key \\
+\hline
+{\em value} & the value \\
+\hline
+\end{DoxyParams}
+\hypertarget{classPreferences_a357246eabcaa351f7c2ad5c86a03fe0f}{
+\index{Preferences@{Preferences}!PutFloat@{PutFloat}}
+\index{PutFloat@{PutFloat}!Preferences@{Preferences}}
+\subsubsection[{PutFloat}]{\setlength{\rightskip}{0pt plus 5cm}void Preferences::PutFloat (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{key, }
+\item[{float}]{value}
+\end{DoxyParamCaption}
+)}}
+\label{classPreferences_a357246eabcaa351f7c2ad5c86a03fe0f}
+Puts the given float into the preferences table.
+
+The key may not have any whitespace nor an equals sign
+
+This will {\bfseries NOT} save the value to memory between power cycles, to do that you must call \hyperlink{classPreferences_ae8ce1d8967e205e584e9cca1dbf86919}{Save()} (which must be used with care) at some point after calling this. 
+\begin{DoxyParams}{Parameters}
+{\em key} & the key \\
+\hline
+{\em value} & the value \\
+\hline
+\end{DoxyParams}
+\hypertarget{classPreferences_a0715c745aecfe942f37e0e8b19a8b404}{
+\index{Preferences@{Preferences}!PutInt@{PutInt}}
+\index{PutInt@{PutInt}!Preferences@{Preferences}}
+\subsubsection[{PutInt}]{\setlength{\rightskip}{0pt plus 5cm}void Preferences::PutInt (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{key, }
+\item[{int}]{value}
+\end{DoxyParamCaption}
+)}}
+\label{classPreferences_a0715c745aecfe942f37e0e8b19a8b404}
+Puts the given int into the preferences table.
+
+The key may not have any whitespace nor an equals sign
+
+This will {\bfseries NOT} save the value to memory between power cycles, to do that you must call \hyperlink{classPreferences_ae8ce1d8967e205e584e9cca1dbf86919}{Save()} (which must be used with care) at some point after calling this. 
+\begin{DoxyParams}{Parameters}
+{\em key} & the key \\
+\hline
+{\em value} & the value \\
+\hline
+\end{DoxyParams}
+\hypertarget{classPreferences_a7cc71d0e62c873dccf59975b6720a3bc}{
+\index{Preferences@{Preferences}!PutLong@{PutLong}}
+\index{PutLong@{PutLong}!Preferences@{Preferences}}
+\subsubsection[{PutLong}]{\setlength{\rightskip}{0pt plus 5cm}void Preferences::PutLong (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{key, }
+\item[{INT64}]{value}
+\end{DoxyParamCaption}
+)}}
+\label{classPreferences_a7cc71d0e62c873dccf59975b6720a3bc}
+Puts the given long (INT64) into the preferences table.
+
+The key may not have any whitespace nor an equals sign
+
+This will {\bfseries NOT} save the value to memory between power cycles, to do that you must call \hyperlink{classPreferences_ae8ce1d8967e205e584e9cca1dbf86919}{Save()} (which must be used with care) at some point after calling this. 
+\begin{DoxyParams}{Parameters}
+{\em key} & the key \\
+\hline
+{\em value} & the value \\
+\hline
+\end{DoxyParams}
+\hypertarget{classPreferences_ad75629afa66156aa009d73fa8933f8c3}{
+\index{Preferences@{Preferences}!PutString@{PutString}}
+\index{PutString@{PutString}!Preferences@{Preferences}}
+\subsubsection[{PutString}]{\setlength{\rightskip}{0pt plus 5cm}void Preferences::PutString (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{key, }
+\item[{const char $\ast$}]{value}
+\end{DoxyParamCaption}
+)}}
+\label{classPreferences_ad75629afa66156aa009d73fa8933f8c3}
+Puts the given string into the preferences table.
+
+The value may not have quotation marks, nor may the key have any whitespace nor an equals sign
+
+This will {\bfseries NOT} save the value to memory between power cycles, to do that you must call \hyperlink{classPreferences_ae8ce1d8967e205e584e9cca1dbf86919}{Save()} (which must be used with care). at some point after calling this. 
+\begin{DoxyParams}{Parameters}
+{\em key} & the key \\
+\hline
+{\em value} & the value \\
+\hline
+\end{DoxyParams}
+\hypertarget{classPreferences_ae2b5f7567f130301c50869916571c81b}{
+\index{Preferences@{Preferences}!Remove@{Remove}}
+\index{Remove@{Remove}!Preferences@{Preferences}}
+\subsubsection[{Remove}]{\setlength{\rightskip}{0pt plus 5cm}void Preferences::Remove (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{key}
+\end{DoxyParamCaption}
+)}}
+\label{classPreferences_ae2b5f7567f130301c50869916571c81b}
+Remove a preference 
+\begin{DoxyParams}{Parameters}
+{\em key} & the key \\
+\hline
+\end{DoxyParams}
+\hypertarget{classPreferences_ae8ce1d8967e205e584e9cca1dbf86919}{
+\index{Preferences@{Preferences}!Save@{Save}}
+\index{Save@{Save}!Preferences@{Preferences}}
+\subsubsection[{Save}]{\setlength{\rightskip}{0pt plus 5cm}void Preferences::Save (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classPreferences_ae8ce1d8967e205e584e9cca1dbf86919}
+Saves the preferences to a file on the cRIO.
+
+This should {\bfseries NOT} be called often. Too many writes can damage the cRIO's flash memory. While it is ok to save once or twice a match, this should never be called every run of \hyperlink{classIterativeRobot_a3336d7f71d644e646dba70839f4f4672}{IterativeRobot\#TeleopPeriodic()}, etc.
+
+The actual writing of the file is done in a separate thread. However, any call to a get or put method will wait until the table is fully saved before continuing. 
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+Preferences.h\item 
+Preferences.cpp\end{DoxyCompactItemize}

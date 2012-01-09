@@ -1,206 +1,243 @@
-\hypertarget{classTask}{\section{\-Task \-Class \-Reference}
-\label{classTask}\index{\-Task@{\-Task}}
+\hypertarget{classTask}{
+\section{Task Class Reference}
+\label{classTask}\index{Task@{Task}}
 }
 
 
-{\ttfamily \#include $<$\-Task.\-h$>$}
+{\ttfamily \#include $<$Task.h$>$}
 
-\subsection*{\-Public \-Member \-Functions}
+Inheritance diagram for Task:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classTask}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{classTask_afb7c8a69ecb923df1e787c46be887c8d}{\-Task} (const char $\ast$name, \-F\-U\-N\-C\-P\-T\-R function, \-I\-N\-T32 priority=k\-Default\-Priority, \-U\-I\-N\-T32 stack\-Size=20000)
+\hyperlink{classTask_afb7c8a69ecb923df1e787c46be887c8d}{Task} (const char $\ast$name, FUNCPTR function, INT32 priority=kDefaultPriority, UINT32 stackSize=20000)
 \item 
-bool \hyperlink{classTask_aed180b79ad986ff5e55170400db3c226}{\-Start} (\-U\-I\-N\-T32 arg0=0, \-U\-I\-N\-T32 arg1=0, \-U\-I\-N\-T32 arg2=0, \-U\-I\-N\-T32 arg3=0, \-U\-I\-N\-T32 arg4=0, \-U\-I\-N\-T32 arg5=0, \-U\-I\-N\-T32 arg6=0, \-U\-I\-N\-T32 arg7=0, \-U\-I\-N\-T32 arg8=0, \-U\-I\-N\-T32 arg9=0)
+bool \hyperlink{classTask_aed180b79ad986ff5e55170400db3c226}{Start} (UINT32 arg0=0, UINT32 arg1=0, UINT32 arg2=0, UINT32 arg3=0, UINT32 arg4=0, UINT32 arg5=0, UINT32 arg6=0, UINT32 arg7=0, UINT32 arg8=0, UINT32 arg9=0)
 \item 
-bool \hyperlink{classTask_a1c195fb41892ac1ca9bdf675d5fd3c95}{\-Restart} (void)
+bool \hyperlink{classTask_a5d2cbfc4103f71c3b64c53fee0e717c7}{Restart} ()
 \item 
-bool \hyperlink{classTask_a8249580436a83b7c1b089057a5f3d366}{\-Stop} (void)
+bool \hyperlink{classTask_a552b56dc92a117812a9ae3f24320eede}{Stop} ()
 \item 
-bool \hyperlink{classTask_ac92d5d26e7ecc08b1f5a37a3e64ccaf9}{\-Is\-Ready} (void)
+bool \hyperlink{classTask_ac4744fa610b1608e6c9f0f15d1b8658d}{IsReady} ()
 \item 
-bool \hyperlink{classTask_afa3955c7ef2a5b3942c5952088d098fb}{\-Is\-Suspended} (void)
+bool \hyperlink{classTask_a6bddcf6b3e0ba32dcfac642ab71b2780}{IsSuspended} ()
 \item 
-bool \hyperlink{classTask_aec1f9e1c674e60ea4591dfb0994dbd31}{\-Suspend} (void)
+bool \hyperlink{classTask_a546b3b5521b6093b1d30a41fc216d70c}{Suspend} ()
 \item 
-bool \hyperlink{classTask_aab1fd5134549786d499655e71a7f4ed9}{\-Resume} (void)
+bool \hyperlink{classTask_a600addb28efe217d2cbdcf4a6776faec}{Resume} ()
 \item 
-bool \hyperlink{classTask_a6a64ec6482de4ec6ae3975d8697d75aa}{\-Verify} (void)
+bool \hyperlink{classTask_af3367e19bf2d011c8de81a8064b7c0f4}{Verify} ()
 \item 
-\-I\-N\-T32 \hyperlink{classTask_a7b777da18a8fb73b3e1e50673e1bbf99}{\-Get\-Priority} (void)
+INT32 \hyperlink{classTask_af9db55d77496182dbd7798326c7c50b9}{GetPriority} ()
 \item 
-bool \hyperlink{classTask_aab7f714e8bbe56738a377b551b65abea}{\-Set\-Priority} (\-I\-N\-T32 priority)
+bool \hyperlink{classTask_aab7f714e8bbe56738a377b551b65abea}{SetPriority} (INT32 priority)
 \item 
-const char $\ast$ \hyperlink{classTask_ac7e3a400f969df83e247e71ac8f7666a}{\-Get\-Name} (void)
+const char $\ast$ \hyperlink{classTask_a187f61cd431240c24402b4e76904dfb8}{GetName} ()
 \item 
-\-I\-N\-T32 \hyperlink{classTask_af89919e7be6e94717f17337c94de84f4}{\-Get\-I\-D} (void)
+INT32 \hyperlink{classTask_a39b2ed461b0667ec87dc62abdcde3a05}{GetID} ()
 \end{DoxyCompactItemize}
-\subsection*{\-Static \-Public \-Attributes}
+\subsection*{Static Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{classTask_af5cab2635e0e71f87e9e7ce166c2aab0}{static const \-U\-I\-N\-T32 {\bfseries k\-Default\-Priority} = 101}\label{classTask_af5cab2635e0e71f87e9e7ce166c2aab0}
+\hypertarget{classTask_af5cab2635e0e71f87e9e7ce166c2aab0}{
+static const UINT32 {\bfseries kDefaultPriority} = 101}
+\label{classTask_af5cab2635e0e71f87e9e7ce166c2aab0}
 
 \item 
-\hypertarget{classTask_a61a32996894e9d3f1eea4ddad55cb2d2}{static const \-I\-N\-T32 {\bfseries k\-Invalid\-Task\-I\-D} = -\/1}\label{classTask_a61a32996894e9d3f1eea4ddad55cb2d2}
+\hypertarget{classTask_a61a32996894e9d3f1eea4ddad55cb2d2}{
+static const INT32 {\bfseries kInvalidTaskID} = -\/1}
+\label{classTask_a61a32996894e9d3f1eea4ddad55cb2d2}
 
 \end{DoxyCompactItemize}
 
 
-\subsection{\-Detailed \-Description}
-\-W\-P\-I task is a wrapper for the native \hyperlink{classTask}{\-Task} object. \-All \-W\-P\-I\-Lib tasks are managed by a static task manager for simplified cleanup. 
+\subsection{Detailed Description}
+WPI task is a wrapper for the native \hyperlink{classTask}{Task} object. All WPILib tasks are managed by a static task manager for simplified cleanup. 
 
-\subsection{\-Constructor \& \-Destructor \-Documentation}
-\hypertarget{classTask_afb7c8a69ecb923df1e787c46be887c8d}{\index{\-Task@{\-Task}!\-Task@{\-Task}}
-\index{\-Task@{\-Task}!Task@{\-Task}}
-\subsubsection[{\-Task}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Task\-::\-Task} (
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classTask_afb7c8a69ecb923df1e787c46be887c8d}{
+\index{Task@{Task}!Task@{Task}}
+\index{Task@{Task}!Task@{Task}}
+\subsubsection[{Task}]{\setlength{\rightskip}{0pt plus 5cm}Task::Task (
 \begin{DoxyParamCaption}
 \item[{const char $\ast$}]{name, }
-\item[{\-F\-U\-N\-C\-P\-T\-R}]{function, }
-\item[{\-I\-N\-T32}]{priority = {\ttfamily k\-Default\-Priority}, }
-\item[{\-U\-I\-N\-T32}]{stack\-Size = {\ttfamily 20000}}
+\item[{FUNCPTR}]{function, }
+\item[{INT32}]{priority = {\ttfamily kDefaultPriority}, }
+\item[{UINT32}]{stackSize = {\ttfamily 20000}}
 \end{DoxyParamCaption}
-)}}\label{classTask_afb7c8a69ecb923df1e787c46be887c8d}
-\-Create but don't launch a task. 
-\begin{DoxyParams}{\-Parameters}
-{\em name} & \-The name of the task. \char`\"{}\-F\-R\-C\char`\"{} will be prepended to the task name. \\
+)}}
+\label{classTask_afb7c8a69ecb923df1e787c46be887c8d}
+Create but don't launch a task. 
+\begin{DoxyParams}{Parameters}
+{\em name} & The name of the task. \char`\"{}FRC\char`\"{} will be prepended to the task name. \\
 \hline
-{\em function} & \-The address of the function to run as the new task. \\
+{\em function} & The address of the function to run as the new task. \\
 \hline
-{\em priority} & \-The \-Vx\-Works priority for the task. \\
+{\em priority} & The VxWorks priority for the task. \\
 \hline
-{\em stack\-Size} & \-The size of the stack for the task \\
+{\em stackSize} & The size of the stack for the task \\
 \hline
 \end{DoxyParams}
 
 
-\subsection{\-Member \-Function \-Documentation}
-\hypertarget{classTask_af89919e7be6e94717f17337c94de84f4}{\index{\-Task@{\-Task}!\-Get\-I\-D@{\-Get\-I\-D}}
-\index{\-Get\-I\-D@{\-Get\-I\-D}!Task@{\-Task}}
-\subsubsection[{\-Get\-I\-D}]{\setlength{\rightskip}{0pt plus 5cm}\-I\-N\-T32 {\bf \-Task\-::\-Get\-I\-D} (
+\subsection{Member Function Documentation}
+\hypertarget{classTask_a39b2ed461b0667ec87dc62abdcde3a05}{
+\index{Task@{Task}!GetID@{GetID}}
+\index{GetID@{GetID}!Task@{Task}}
+\subsubsection[{GetID}]{\setlength{\rightskip}{0pt plus 5cm}INT32 Task::GetID (
 \begin{DoxyParamCaption}
-\item[{void}]{}
+{}
 \end{DoxyParamCaption}
-)}}\label{classTask_af89919e7be6e94717f17337c94de84f4}
-\-Get the \-I\-D of a task \begin{DoxyReturn}{\-Returns}
-\hyperlink{classTask}{\-Task} \-I\-D of this task. \-Task\-::k\-Invalid\-Task\-I\-D (-\/1) if the task has not been started or has already exited. 
+)}}
+\label{classTask_a39b2ed461b0667ec87dc62abdcde3a05}
+Get the ID of a task \begin{DoxyReturn}{Returns}
+\hyperlink{classTask}{Task} ID of this task. Task::kInvalidTaskID (-\/1) if the task has not been started or has already exited. 
 \end{DoxyReturn}
-\hypertarget{classTask_ac7e3a400f969df83e247e71ac8f7666a}{\index{\-Task@{\-Task}!\-Get\-Name@{\-Get\-Name}}
-\index{\-Get\-Name@{\-Get\-Name}!Task@{\-Task}}
-\subsubsection[{\-Get\-Name}]{\setlength{\rightskip}{0pt plus 5cm}const char $\ast$ {\bf \-Task\-::\-Get\-Name} (
+\hypertarget{classTask_a187f61cd431240c24402b4e76904dfb8}{
+\index{Task@{Task}!GetName@{GetName}}
+\index{GetName@{GetName}!Task@{Task}}
+\subsubsection[{GetName}]{\setlength{\rightskip}{0pt plus 5cm}const char $\ast$ Task::GetName (
 \begin{DoxyParamCaption}
-\item[{void}]{}
+{}
 \end{DoxyParamCaption}
-)}}\label{classTask_ac7e3a400f969df83e247e71ac8f7666a}
-\-Returns the name of the task. \begin{DoxyReturn}{\-Returns}
-\-Pointer to the name of the task or \-N\-U\-L\-L if not allocated 
+)}}
+\label{classTask_a187f61cd431240c24402b4e76904dfb8}
+Returns the name of the task. \begin{DoxyReturn}{Returns}
+Pointer to the name of the task or NULL if not allocated 
 \end{DoxyReturn}
-\hypertarget{classTask_a7b777da18a8fb73b3e1e50673e1bbf99}{\index{\-Task@{\-Task}!\-Get\-Priority@{\-Get\-Priority}}
-\index{\-Get\-Priority@{\-Get\-Priority}!Task@{\-Task}}
-\subsubsection[{\-Get\-Priority}]{\setlength{\rightskip}{0pt plus 5cm}\-I\-N\-T32 {\bf \-Task\-::\-Get\-Priority} (
+\hypertarget{classTask_af9db55d77496182dbd7798326c7c50b9}{
+\index{Task@{Task}!GetPriority@{GetPriority}}
+\index{GetPriority@{GetPriority}!Task@{Task}}
+\subsubsection[{GetPriority}]{\setlength{\rightskip}{0pt plus 5cm}INT32 Task::GetPriority (
 \begin{DoxyParamCaption}
-\item[{void}]{}
+{}
 \end{DoxyParamCaption}
-)}}\label{classTask_a7b777da18a8fb73b3e1e50673e1bbf99}
-\-Gets the priority of a task. \begin{DoxyReturn}{\-Returns}
+)}}
+\label{classTask_af9db55d77496182dbd7798326c7c50b9}
+Gets the priority of a task. \begin{DoxyReturn}{Returns}
 task priority or 0 if an error occured 
 \end{DoxyReturn}
-\hypertarget{classTask_ac92d5d26e7ecc08b1f5a37a3e64ccaf9}{\index{\-Task@{\-Task}!\-Is\-Ready@{\-Is\-Ready}}
-\index{\-Is\-Ready@{\-Is\-Ready}!Task@{\-Task}}
-\subsubsection[{\-Is\-Ready}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Task\-::\-Is\-Ready} (
+\hypertarget{classTask_ac4744fa610b1608e6c9f0f15d1b8658d}{
+\index{Task@{Task}!IsReady@{IsReady}}
+\index{IsReady@{IsReady}!Task@{Task}}
+\subsubsection[{IsReady}]{\setlength{\rightskip}{0pt plus 5cm}bool Task::IsReady (
 \begin{DoxyParamCaption}
-\item[{void}]{}
+{}
 \end{DoxyParamCaption}
-)}}\label{classTask_ac92d5d26e7ecc08b1f5a37a3e64ccaf9}
-\-Returns true if the task is ready to execute (i.\-e. not suspended, delayed, or blocked). \begin{DoxyReturn}{\-Returns}
+)}}
+\label{classTask_ac4744fa610b1608e6c9f0f15d1b8658d}
+Returns true if the task is ready to execute (i.e. not suspended, delayed, or blocked). \begin{DoxyReturn}{Returns}
 true if ready, false if not ready. 
 \end{DoxyReturn}
-\hypertarget{classTask_afa3955c7ef2a5b3942c5952088d098fb}{\index{\-Task@{\-Task}!\-Is\-Suspended@{\-Is\-Suspended}}
-\index{\-Is\-Suspended@{\-Is\-Suspended}!Task@{\-Task}}
-\subsubsection[{\-Is\-Suspended}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Task\-::\-Is\-Suspended} (
+\hypertarget{classTask_a6bddcf6b3e0ba32dcfac642ab71b2780}{
+\index{Task@{Task}!IsSuspended@{IsSuspended}}
+\index{IsSuspended@{IsSuspended}!Task@{Task}}
+\subsubsection[{IsSuspended}]{\setlength{\rightskip}{0pt plus 5cm}bool Task::IsSuspended (
 \begin{DoxyParamCaption}
-\item[{void}]{}
+{}
 \end{DoxyParamCaption}
-)}}\label{classTask_afa3955c7ef2a5b3942c5952088d098fb}
-\-Returns true if the task was explicitly suspended by calling \hyperlink{classTask_aec1f9e1c674e60ea4591dfb0994dbd31}{\-Suspend()} \begin{DoxyReturn}{\-Returns}
+)}}
+\label{classTask_a6bddcf6b3e0ba32dcfac642ab71b2780}
+Returns true if the task was explicitly suspended by calling \hyperlink{classTask_a546b3b5521b6093b1d30a41fc216d70c}{Suspend()} \begin{DoxyReturn}{Returns}
 true if suspended, false if not suspended. 
 \end{DoxyReturn}
-\hypertarget{classTask_a1c195fb41892ac1ca9bdf675d5fd3c95}{\index{\-Task@{\-Task}!\-Restart@{\-Restart}}
-\index{\-Restart@{\-Restart}!Task@{\-Task}}
-\subsubsection[{\-Restart}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Task\-::\-Restart} (
+\hypertarget{classTask_a5d2cbfc4103f71c3b64c53fee0e717c7}{
+\index{Task@{Task}!Restart@{Restart}}
+\index{Restart@{Restart}!Task@{Task}}
+\subsubsection[{Restart}]{\setlength{\rightskip}{0pt plus 5cm}bool Task::Restart (
 \begin{DoxyParamCaption}
-\item[{void}]{}
+{}
 \end{DoxyParamCaption}
-)}}\label{classTask_a1c195fb41892ac1ca9bdf675d5fd3c95}
-\-Restarts a running task. \-If the task isn't started, it starts it. \begin{DoxyReturn}{\-Returns}
+)}}
+\label{classTask_a5d2cbfc4103f71c3b64c53fee0e717c7}
+Restarts a running task. If the task isn't started, it starts it. \begin{DoxyReturn}{Returns}
 false if the task is running and we are unable to kill the previous instance 
 \end{DoxyReturn}
-\hypertarget{classTask_aab1fd5134549786d499655e71a7f4ed9}{\index{\-Task@{\-Task}!\-Resume@{\-Resume}}
-\index{\-Resume@{\-Resume}!Task@{\-Task}}
-\subsubsection[{\-Resume}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Task\-::\-Resume} (
+\hypertarget{classTask_a600addb28efe217d2cbdcf4a6776faec}{
+\index{Task@{Task}!Resume@{Resume}}
+\index{Resume@{Resume}!Task@{Task}}
+\subsubsection[{Resume}]{\setlength{\rightskip}{0pt plus 5cm}bool Task::Resume (
 \begin{DoxyParamCaption}
-\item[{void}]{}
+{}
 \end{DoxyParamCaption}
-)}}\label{classTask_aab1fd5134549786d499655e71a7f4ed9}
-\-Resumes a paused task. \-Returns true on success, false if unable to resume or if the task isn't running/paused. \hypertarget{classTask_aab7f714e8bbe56738a377b551b65abea}{\index{\-Task@{\-Task}!\-Set\-Priority@{\-Set\-Priority}}
-\index{\-Set\-Priority@{\-Set\-Priority}!Task@{\-Task}}
-\subsubsection[{\-Set\-Priority}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Task\-::\-Set\-Priority} (
+)}}
+\label{classTask_a600addb28efe217d2cbdcf4a6776faec}
+Resumes a paused task. Returns true on success, false if unable to resume or if the task isn't running/paused. \hypertarget{classTask_aab7f714e8bbe56738a377b551b65abea}{
+\index{Task@{Task}!SetPriority@{SetPriority}}
+\index{SetPriority@{SetPriority}!Task@{Task}}
+\subsubsection[{SetPriority}]{\setlength{\rightskip}{0pt plus 5cm}bool Task::SetPriority (
 \begin{DoxyParamCaption}
-\item[{\-I\-N\-T32}]{priority}
+\item[{INT32}]{priority}
 \end{DoxyParamCaption}
-)}}\label{classTask_aab7f714e8bbe56738a377b551b65abea}
-\-This routine changes a task's priority to a specified priority. \-Priorities range from 0, the highest priority, to 255, the lowest priority. \-Default task priority is 100. 
-\begin{DoxyParams}{\-Parameters}
-{\em priority} & \-The priority the task should run at. \\
+)}}
+\label{classTask_aab7f714e8bbe56738a377b551b65abea}
+This routine changes a task's priority to a specified priority. Priorities range from 0, the highest priority, to 255, the lowest priority. Default task priority is 100. 
+\begin{DoxyParams}{Parameters}
+{\em priority} & The priority the task should run at. \\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{\-Returns}
+\begin{DoxyReturn}{Returns}
 true on success. 
 \end{DoxyReturn}
-\hypertarget{classTask_aed180b79ad986ff5e55170400db3c226}{\index{\-Task@{\-Task}!\-Start@{\-Start}}
-\index{\-Start@{\-Start}!Task@{\-Task}}
-\subsubsection[{\-Start}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Task\-::\-Start} (
+\hypertarget{classTask_aed180b79ad986ff5e55170400db3c226}{
+\index{Task@{Task}!Start@{Start}}
+\index{Start@{Start}!Task@{Task}}
+\subsubsection[{Start}]{\setlength{\rightskip}{0pt plus 5cm}bool Task::Start (
 \begin{DoxyParamCaption}
-\item[{\-U\-I\-N\-T32}]{arg0 = {\ttfamily 0}, }
-\item[{\-U\-I\-N\-T32}]{arg1 = {\ttfamily 0}, }
-\item[{\-U\-I\-N\-T32}]{arg2 = {\ttfamily 0}, }
-\item[{\-U\-I\-N\-T32}]{arg3 = {\ttfamily 0}, }
-\item[{\-U\-I\-N\-T32}]{arg4 = {\ttfamily 0}, }
-\item[{\-U\-I\-N\-T32}]{arg5 = {\ttfamily 0}, }
-\item[{\-U\-I\-N\-T32}]{arg6 = {\ttfamily 0}, }
-\item[{\-U\-I\-N\-T32}]{arg7 = {\ttfamily 0}, }
-\item[{\-U\-I\-N\-T32}]{arg8 = {\ttfamily 0}, }
-\item[{\-U\-I\-N\-T32}]{arg9 = {\ttfamily 0}}
+\item[{UINT32}]{arg0 = {\ttfamily 0}, }
+\item[{UINT32}]{arg1 = {\ttfamily 0}, }
+\item[{UINT32}]{arg2 = {\ttfamily 0}, }
+\item[{UINT32}]{arg3 = {\ttfamily 0}, }
+\item[{UINT32}]{arg4 = {\ttfamily 0}, }
+\item[{UINT32}]{arg5 = {\ttfamily 0}, }
+\item[{UINT32}]{arg6 = {\ttfamily 0}, }
+\item[{UINT32}]{arg7 = {\ttfamily 0}, }
+\item[{UINT32}]{arg8 = {\ttfamily 0}, }
+\item[{UINT32}]{arg9 = {\ttfamily 0}}
 \end{DoxyParamCaption}
-)}}\label{classTask_aed180b79ad986ff5e55170400db3c226}
-\-Starts this task. \-If it is already running or unable to start, it fails and returns false. \hypertarget{classTask_a8249580436a83b7c1b089057a5f3d366}{\index{\-Task@{\-Task}!\-Stop@{\-Stop}}
-\index{\-Stop@{\-Stop}!Task@{\-Task}}
-\subsubsection[{\-Stop}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Task\-::\-Stop} (
+)}}
+\label{classTask_aed180b79ad986ff5e55170400db3c226}
+Starts this task. If it is already running or unable to start, it fails and returns false. \hypertarget{classTask_a552b56dc92a117812a9ae3f24320eede}{
+\index{Task@{Task}!Stop@{Stop}}
+\index{Stop@{Stop}!Task@{Task}}
+\subsubsection[{Stop}]{\setlength{\rightskip}{0pt plus 5cm}bool Task::Stop (
 \begin{DoxyParamCaption}
-\item[{void}]{}
+{}
 \end{DoxyParamCaption}
-)}}\label{classTask_a8249580436a83b7c1b089057a5f3d366}
-\-Kills the running task. \begin{DoxyReturn}{\-Returns}
+)}}
+\label{classTask_a552b56dc92a117812a9ae3f24320eede}
+Kills the running task. \begin{DoxyReturn}{Returns}
 true on success false if the task doesn't exist or we are unable to kill it. 
 \end{DoxyReturn}
-\hypertarget{classTask_aec1f9e1c674e60ea4591dfb0994dbd31}{\index{\-Task@{\-Task}!\-Suspend@{\-Suspend}}
-\index{\-Suspend@{\-Suspend}!Task@{\-Task}}
-\subsubsection[{\-Suspend}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Task\-::\-Suspend} (
+\hypertarget{classTask_a546b3b5521b6093b1d30a41fc216d70c}{
+\index{Task@{Task}!Suspend@{Suspend}}
+\index{Suspend@{Suspend}!Task@{Task}}
+\subsubsection[{Suspend}]{\setlength{\rightskip}{0pt plus 5cm}bool Task::Suspend (
 \begin{DoxyParamCaption}
-\item[{void}]{}
+{}
 \end{DoxyParamCaption}
-)}}\label{classTask_aec1f9e1c674e60ea4591dfb0994dbd31}
-\-Pauses a running task. \-Returns true on success, false if unable to pause or the task isn't running. \hypertarget{classTask_a6a64ec6482de4ec6ae3975d8697d75aa}{\index{\-Task@{\-Task}!\-Verify@{\-Verify}}
-\index{\-Verify@{\-Verify}!Task@{\-Task}}
-\subsubsection[{\-Verify}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Task\-::\-Verify} (
+)}}
+\label{classTask_a546b3b5521b6093b1d30a41fc216d70c}
+Pauses a running task. Returns true on success, false if unable to pause or the task isn't running. \hypertarget{classTask_af3367e19bf2d011c8de81a8064b7c0f4}{
+\index{Task@{Task}!Verify@{Verify}}
+\index{Verify@{Verify}!Task@{Task}}
+\subsubsection[{Verify}]{\setlength{\rightskip}{0pt plus 5cm}bool Task::Verify (
 \begin{DoxyParamCaption}
-\item[{void}]{}
+{}
 \end{DoxyParamCaption}
-)}}\label{classTask_a6a64ec6482de4ec6ae3975d8697d75aa}
-\-Verifies a task still exists. \begin{DoxyReturn}{\-Returns}
+)}}
+\label{classTask_af3367e19bf2d011c8de81a8064b7c0f4}
+Verifies a task still exists. \begin{DoxyReturn}{Returns}
 true on success. 
 \end{DoxyReturn}
 
 
-\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
 \item 
-\-Task.\-h\item 
-\-Task.\-cpp\end{DoxyCompactItemize}
+Task.h\item 
+Task.cpp\end{DoxyCompactItemize}

@@ -1,113 +1,245 @@
-\hypertarget{classErrorBase}{\section{\-Error\-Base \-Class \-Reference}
-\label{classErrorBase}\index{\-Error\-Base@{\-Error\-Base}}
+\hypertarget{classErrorBase}{
+\section{ErrorBase Class Reference}
+\label{classErrorBase}\index{ErrorBase@{ErrorBase}}
 }
 
 
-{\ttfamily \#include $<$\-Error\-Base.\-h$>$}
+{\ttfamily \#include $<$ErrorBase.h$>$}
 
-\-Inheritance diagram for \-Error\-Base\-:\begin{figure}[H]
+Inheritance diagram for ErrorBase:\begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[height=12.000000cm]{classErrorBase}
 \end{center}
 \end{figure}
-\subsection*{\-Public \-Member \-Functions}
+\subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{classErrorBase_a2b5460a3e693a12b3023b096795f28cb}{virtual \hyperlink{classError}{\-Error} \& \hyperlink{classErrorBase_a2b5460a3e693a12b3023b096795f28cb}{\-Get\-Error} ()}\label{classErrorBase_a2b5460a3e693a12b3023b096795f28cb}
+\hypertarget{classErrorBase_a2b5460a3e693a12b3023b096795f28cb}{
+virtual \hyperlink{classError}{Error} \& \hyperlink{classErrorBase_a2b5460a3e693a12b3023b096795f28cb}{GetError} ()}
+\label{classErrorBase_a2b5460a3e693a12b3023b096795f28cb}
 
-\begin{DoxyCompactList}\small\item\em \-Retrieve the current error. \-Get the current error information associated with this sensor. \end{DoxyCompactList}\item 
-\hypertarget{classErrorBase_aa365da53118bb3cd6c1fd4c42e6d90a3}{virtual const \hyperlink{classError}{\-Error} \& {\bfseries \-Get\-Error} () const }\label{classErrorBase_aa365da53118bb3cd6c1fd4c42e6d90a3}
+\begin{DoxyCompactList}\small\item\em Retrieve the current error. Get the current error information associated with this sensor. \end{DoxyCompactList}\item 
+\hypertarget{classErrorBase_aa365da53118bb3cd6c1fd4c42e6d90a3}{
+virtual const \hyperlink{classError}{Error} \& {\bfseries GetError} () const }
+\label{classErrorBase_aa365da53118bb3cd6c1fd4c42e6d90a3}
 
 \item 
-virtual void \hyperlink{classErrorBase_aa2f089952c538a73d3e65a6a0bdb09ea}{\-Set\-Error} (\-Error\-::\-Code code, const char $\ast$filename, \-U\-I\-N\-T32 line\-Number) const 
-\begin{DoxyCompactList}\small\item\em \-Set the current error information associated with this sensor. \end{DoxyCompactList}\item 
-\hypertarget{classErrorBase_a25741ec13e810e708e337b9a26eff477}{virtual void \hyperlink{classErrorBase_a25741ec13e810e708e337b9a26eff477}{\-Clear\-Error} ()}\label{classErrorBase_a25741ec13e810e708e337b9a26eff477}
+virtual void \hyperlink{classErrorBase_add75f5bb8b6abf2ea78b77d0fd7e573c}{SetErrnoError} (const char $\ast$contextMessage, const char $\ast$filename, const char $\ast$function, UINT32 lineNumber) const 
+\begin{DoxyCompactList}\small\item\em Set error information associated with a C library call that set an error to the \char`\"{}errno\char`\"{} global variable. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classErrorBase_ab384f36745e20dcc4daeb0f2149ee9bb}{SetImaqError} (int success, const char $\ast$contextMessage, const char $\ast$filename, const char $\ast$function, UINT32 lineNumber) const 
+\begin{DoxyCompactList}\small\item\em Set the current error information associated from the nivision Imaq API. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classErrorBase_a0b7247c66e6ee1da85be87b07b814273}{SetError} (Error::Code code, const char $\ast$contextMessage, const char $\ast$filename, const char $\ast$function, UINT32 lineNumber) const 
+\begin{DoxyCompactList}\small\item\em Set the current error information associated with this sensor. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classErrorBase_a647d7afbdbfb9367f01b7e0253f84039}{SetWPIError} (const char $\ast$errorMessage, const char $\ast$contextMessage, const char $\ast$filename, const char $\ast$function, UINT32 lineNumber) const 
+\begin{DoxyCompactList}\small\item\em Set the current error information associated with this sensor. \end{DoxyCompactList}\item 
+\hypertarget{classErrorBase_adfc72ed28fadc33ffcb73468ea324d14}{
+virtual void {\bfseries CloneError} (\hyperlink{classErrorBase}{ErrorBase} $\ast$rhs) const }
+\label{classErrorBase_adfc72ed28fadc33ffcb73468ea324d14}
 
-\begin{DoxyCompactList}\small\item\em \-Clear the current error information associated with this sensor. \end{DoxyCompactList}\item 
-virtual bool \hyperlink{classErrorBase_a05790f219c9e436a09752f73f7344024}{\-Status\-Is\-Fatal} () const 
-\begin{DoxyCompactList}\small\item\em \-Check if the current error code represents a fatal error. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\subsection*{\-Static \-Public \-Member \-Functions}
+\item 
+\hypertarget{classErrorBase_ab67204acd1eb87ffe6fc45c2d22e517e}{
+virtual void \hyperlink{classErrorBase_ab67204acd1eb87ffe6fc45c2d22e517e}{ClearError} () const }
+\label{classErrorBase_ab67204acd1eb87ffe6fc45c2d22e517e}
+
+\begin{DoxyCompactList}\small\item\em Clear the current error information associated with this sensor. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{classErrorBase_a05790f219c9e436a09752f73f7344024}{StatusIsFatal} () const 
+\begin{DoxyCompactList}\small\item\em Check if the current error code represents a fatal error. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-static \hyperlink{classError}{\-Error} \& \hyperlink{classErrorBase_ab85de5de437f0293356753b2ebab874c}{\-Get\-Global\-Error} ()
+\hypertarget{classErrorBase_ab1a827a11e8c3ba905ef88cac9583c4f}{
+static void {\bfseries SetGlobalError} (Error::Code code, const char $\ast$contextMessage, const char $\ast$filename, const char $\ast$function, UINT32 lineNumber)}
+\label{classErrorBase_ab1a827a11e8c3ba905ef88cac9583c4f}
+
+\item 
+\hypertarget{classErrorBase_a3cc8960dee0edd4b57b494aa139e5887}{
+static void {\bfseries SetGlobalWPIError} (const char $\ast$errorMessage, const char $\ast$contextMessage, const char $\ast$filename, const char $\ast$function, UINT32 lineNumber)}
+\label{classErrorBase_a3cc8960dee0edd4b57b494aa139e5887}
+
+\item 
+static \hyperlink{classError}{Error} \& \hyperlink{classErrorBase_ab85de5de437f0293356753b2ebab874c}{GetGlobalError} ()
 \end{DoxyCompactItemize}
-\subsection*{\-Protected \-Member \-Functions}
+\subsection*{Protected Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{classErrorBase_af49991441156c7832d7017951427cef2}{\hyperlink{classErrorBase_af49991441156c7832d7017951427cef2}{\-Error\-Base} ()}\label{classErrorBase_af49991441156c7832d7017951427cef2}
+\hypertarget{classErrorBase_af49991441156c7832d7017951427cef2}{
+\hyperlink{classErrorBase_af49991441156c7832d7017951427cef2}{ErrorBase} ()}
+\label{classErrorBase_af49991441156c7832d7017951427cef2}
 
-\begin{DoxyCompactList}\small\item\em \-Initialize the instance status to 0 for now. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\subsection*{\-Protected \-Attributes}
+\begin{DoxyCompactList}\small\item\em Initialize the instance status to 0 for now. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{classErrorBase_a94cef1c4df1d6def498a2b3c458408c4}{t\-Rio\-Status\-Code {\bfseries status}}\label{classErrorBase_a94cef1c4df1d6def498a2b3c458408c4}
-
-\item 
-\hypertarget{classErrorBase_a74124eca104892570b174fee2c484a4f}{\hyperlink{classError}{\-Error} {\bfseries error}}\label{classErrorBase_a74124eca104892570b174fee2c484a4f}
+\hypertarget{classErrorBase_a4996df94b6e5fc5375e9c33ff5386374}{
+\hyperlink{classError}{Error} {\bfseries m\_\-error}}
+\label{classErrorBase_a4996df94b6e5fc5375e9c33ff5386374}
 
 \end{DoxyCompactItemize}
-\subsection*{\-Static \-Protected \-Attributes}
+\subsection*{Static Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{classErrorBase_a9138d500675bcc2310b13603e3a1099e}{static \-S\-E\-M\-\_\-\-I\-D {\bfseries global\-Error\-Mutex} = sem\-M\-Create(\-S\-E\-M\-\_\-\-Q\-\_\-\-P\-R\-I\-O\-R\-I\-T\-Y $|$ \-S\-E\-M\-\_\-\-D\-E\-L\-E\-T\-E\-\_\-\-S\-A\-F\-E $|$ \-S\-E\-M\-\_\-\-I\-N\-V\-E\-R\-S\-I\-O\-N\-\_\-\-S\-A\-F\-E)}\label{classErrorBase_a9138d500675bcc2310b13603e3a1099e}
+\hypertarget{classErrorBase_ae473c401d7462d6a353ab3c904d570b8}{
+static SEM\_\-ID {\bfseries \_\-globalErrorMutex} = semMCreate(SEM\_\-Q\_\-PRIORITY $|$ SEM\_\-DELETE\_\-SAFE $|$ SEM\_\-INVERSION\_\-SAFE)}
+\label{classErrorBase_ae473c401d7462d6a353ab3c904d570b8}
 
 \item 
-\hypertarget{classErrorBase_aede1348bb4523e9ee6e8cadde662889b}{static \hyperlink{classError}{\-Error} {\bfseries global\-Error}}\label{classErrorBase_aede1348bb4523e9ee6e8cadde662889b}
+\hypertarget{classErrorBase_a5e60c928a7eb8e94b243aa6a729bf6f6}{
+static \hyperlink{classError}{Error} {\bfseries \_\-globalError}}
+\label{classErrorBase_a5e60c928a7eb8e94b243aa6a729bf6f6}
 
 \end{DoxyCompactItemize}
 
 
-\subsection{\-Detailed \-Description}
-\-Base class for most objects. \hyperlink{classErrorBase}{\-Error\-Base} is the base class for most objects since it holds the generated error for that object. \-In addition, there is a single instance of a global error object 
+\subsection{Detailed Description}
+Base class for most objects. \hyperlink{classErrorBase}{ErrorBase} is the base class for most objects since it holds the generated error for that object. In addition, there is a single instance of a global error object 
 
-\subsection{\-Member \-Function \-Documentation}
-\hypertarget{classErrorBase_ab85de5de437f0293356753b2ebab874c}{\index{\-Error\-Base@{\-Error\-Base}!\-Get\-Global\-Error@{\-Get\-Global\-Error}}
-\index{\-Get\-Global\-Error@{\-Get\-Global\-Error}!ErrorBase@{\-Error\-Base}}
-\subsubsection[{\-Get\-Global\-Error}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Error} \& {\bf \-Error\-Base\-::\-Get\-Global\-Error} (
+\subsection{Member Function Documentation}
+\hypertarget{classErrorBase_ab85de5de437f0293356753b2ebab874c}{
+\index{ErrorBase@{ErrorBase}!GetGlobalError@{GetGlobalError}}
+\index{GetGlobalError@{GetGlobalError}!ErrorBase@{ErrorBase}}
+\subsubsection[{GetGlobalError}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Error} \& ErrorBase::GetGlobalError (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{classErrorBase_ab85de5de437f0293356753b2ebab874c}
-\-Retrieve the current global error. \hypertarget{classErrorBase_aa2f089952c538a73d3e65a6a0bdb09ea}{\index{\-Error\-Base@{\-Error\-Base}!\-Set\-Error@{\-Set\-Error}}
-\index{\-Set\-Error@{\-Set\-Error}!ErrorBase@{\-Error\-Base}}
-\subsubsection[{\-Set\-Error}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Error\-Base\-::\-Set\-Error} (
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{classErrorBase_ab85de5de437f0293356753b2ebab874c}
+Retrieve the current global error. \hypertarget{classErrorBase_add75f5bb8b6abf2ea78b77d0fd7e573c}{
+\index{ErrorBase@{ErrorBase}!SetErrnoError@{SetErrnoError}}
+\index{SetErrnoError@{SetErrnoError}!ErrorBase@{ErrorBase}}
+\subsubsection[{SetErrnoError}]{\setlength{\rightskip}{0pt plus 5cm}void ErrorBase::SetErrnoError (
 \begin{DoxyParamCaption}
-\item[{\-Error\-::\-Code}]{code, }
+\item[{const char $\ast$}]{contextMessage, }
 \item[{const char $\ast$}]{filename, }
-\item[{\-U\-I\-N\-T32}]{line\-Number}
+\item[{const char $\ast$}]{function, }
+\item[{UINT32}]{lineNumber}
 \end{DoxyParamCaption}
-) const\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{classErrorBase_aa2f089952c538a73d3e65a6a0bdb09ea}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classErrorBase_add75f5bb8b6abf2ea78b77d0fd7e573c}
 
 
-\-Set the current error information associated with this sensor. 
+Set error information associated with a C library call that set an error to the \char`\"{}errno\char`\"{} global variable. 
 
 
-\begin{DoxyParams}{\-Parameters}
-{\em code} & \-The error code \\
+\begin{DoxyParams}{Parameters}
+{\em contextMessage} & A custom message from the code that set the error. \\
 \hline
-{\em filename} & \-Filename of the error source \\
+{\em filename} & Filename of the error source \\
 \hline
-{\em line\-Number} & \-Line number of the error source \\
+{\em function} & Function of the error source \\
+\hline
+{\em lineNumber} & Line number of the error source \\
 \hline
 \end{DoxyParams}
-\hypertarget{classErrorBase_a05790f219c9e436a09752f73f7344024}{\index{\-Error\-Base@{\-Error\-Base}!\-Status\-Is\-Fatal@{\-Status\-Is\-Fatal}}
-\index{\-Status\-Is\-Fatal@{\-Status\-Is\-Fatal}!ErrorBase@{\-Error\-Base}}
-\subsubsection[{\-Status\-Is\-Fatal}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Error\-Base\-::\-Status\-Is\-Fatal} (
+\hypertarget{classErrorBase_a0b7247c66e6ee1da85be87b07b814273}{
+\index{ErrorBase@{ErrorBase}!SetError@{SetError}}
+\index{SetError@{SetError}!ErrorBase@{ErrorBase}}
+\subsubsection[{SetError}]{\setlength{\rightskip}{0pt plus 5cm}void ErrorBase::SetError (
+\begin{DoxyParamCaption}
+\item[{Error::Code}]{code, }
+\item[{const char $\ast$}]{contextMessage, }
+\item[{const char $\ast$}]{filename, }
+\item[{const char $\ast$}]{function, }
+\item[{UINT32}]{lineNumber}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classErrorBase_a0b7247c66e6ee1da85be87b07b814273}
+
+
+Set the current error information associated with this sensor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em code} & The error code \\
+\hline
+{\em contextMessage} & A custom message from the code that set the error. \\
+\hline
+{\em filename} & Filename of the error source \\
+\hline
+{\em function} & Function of the error source \\
+\hline
+{\em lineNumber} & Line number of the error source \\
+\hline
+\end{DoxyParams}
+\hypertarget{classErrorBase_ab384f36745e20dcc4daeb0f2149ee9bb}{
+\index{ErrorBase@{ErrorBase}!SetImaqError@{SetImaqError}}
+\index{SetImaqError@{SetImaqError}!ErrorBase@{ErrorBase}}
+\subsubsection[{SetImaqError}]{\setlength{\rightskip}{0pt plus 5cm}void ErrorBase::SetImaqError (
+\begin{DoxyParamCaption}
+\item[{int}]{success, }
+\item[{const char $\ast$}]{contextMessage, }
+\item[{const char $\ast$}]{filename, }
+\item[{const char $\ast$}]{function, }
+\item[{UINT32}]{lineNumber}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classErrorBase_ab384f36745e20dcc4daeb0f2149ee9bb}
+
+
+Set the current error information associated from the nivision Imaq API. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em success} & The return from the function \\
+\hline
+{\em contextMessage} & A custom message from the code that set the error. \\
+\hline
+{\em filename} & Filename of the error source \\
+\hline
+{\em function} & Function of the error source \\
+\hline
+{\em lineNumber} & Line number of the error source \\
+\hline
+\end{DoxyParams}
+\hypertarget{classErrorBase_a647d7afbdbfb9367f01b7e0253f84039}{
+\index{ErrorBase@{ErrorBase}!SetWPIError@{SetWPIError}}
+\index{SetWPIError@{SetWPIError}!ErrorBase@{ErrorBase}}
+\subsubsection[{SetWPIError}]{\setlength{\rightskip}{0pt plus 5cm}void ErrorBase::SetWPIError (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{errorMessage, }
+\item[{const char $\ast$}]{contextMessage, }
+\item[{const char $\ast$}]{filename, }
+\item[{const char $\ast$}]{function, }
+\item[{UINT32}]{lineNumber}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classErrorBase_a647d7afbdbfb9367f01b7e0253f84039}
+
+
+Set the current error information associated with this sensor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em errorMessage} & The error message from \hyperlink{WPIErrors_8h_source}{WPIErrors.h} \\
+\hline
+{\em contextMessage} & A custom message from the code that set the error. \\
+\hline
+{\em filename} & Filename of the error source \\
+\hline
+{\em function} & Function of the error source \\
+\hline
+{\em lineNumber} & Line number of the error source \\
+\hline
+\end{DoxyParams}
+\hypertarget{classErrorBase_a05790f219c9e436a09752f73f7344024}{
+\index{ErrorBase@{ErrorBase}!StatusIsFatal@{StatusIsFatal}}
+\index{StatusIsFatal@{StatusIsFatal}!ErrorBase@{ErrorBase}}
+\subsubsection[{StatusIsFatal}]{\setlength{\rightskip}{0pt plus 5cm}bool ErrorBase::StatusIsFatal (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-) const\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{classErrorBase_a05790f219c9e436a09752f73f7344024}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classErrorBase_a05790f219c9e436a09752f73f7344024}
 
 
-\-Check if the current error code represents a fatal error. 
+Check if the current error code represents a fatal error. 
 
-\begin{DoxyReturn}{\-Returns}
+\begin{DoxyReturn}{Returns}
 true if the current error is fatal. 
 \end{DoxyReturn}
 
 
-\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
 \item 
-\-Error\-Base.\-h\item 
-\-Error\-Base.\-cpp\end{DoxyCompactItemize}
+ErrorBase.h\item 
+ErrorBase.cpp\end{DoxyCompactItemize}

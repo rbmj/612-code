@@ -1,213 +1,232 @@
-\hypertarget{classI2C}{\section{\-I2\-C \-Class \-Reference}
-\label{classI2C}\index{\-I2\-C@{\-I2\-C}}
+\hypertarget{classI2C}{
+\section{I2C Class Reference}
+\label{classI2C}\index{I2C@{I2C}}
 }
 
 
-{\ttfamily \#include $<$\-I2\-C.\-h$>$}
+{\ttfamily \#include $<$I2C.h$>$}
 
-\-Inheritance diagram for \-I2\-C\-:\begin{figure}[H]
+Inheritance diagram for I2C:\begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[height=2.000000cm]{classI2C}
 \end{center}
 \end{figure}
-\subsection*{\-Public \-Member \-Functions}
+\subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-virtual \hyperlink{classI2C_afaad09fa9bdd23623bddbdcd7585a9fe}{$\sim$\-I2\-C} ()
+virtual \hyperlink{classI2C_afaad09fa9bdd23623bddbdcd7585a9fe}{$\sim$I2C} ()
 \item 
-bool \hyperlink{classI2C_ad2b8c000febc0a7c2444844da3a1886a}{\-Transaction} (\-U\-I\-N\-T8 $\ast$data\-To\-Send, \-U\-I\-N\-T8 send\-Size, \-U\-I\-N\-T8 $\ast$data\-Received, \-U\-I\-N\-T8 receive\-Size)
+bool \hyperlink{classI2C_ad2b8c000febc0a7c2444844da3a1886a}{Transaction} (UINT8 $\ast$dataToSend, UINT8 sendSize, UINT8 $\ast$dataReceived, UINT8 receiveSize)
 \item 
-bool \hyperlink{classI2C_a8aaad56f53bdbc0817a6d70ce0361fcd}{\-Address\-Only} ()
+bool \hyperlink{classI2C_a8aaad56f53bdbc0817a6d70ce0361fcd}{AddressOnly} ()
 \item 
-bool \hyperlink{classI2C_a789fbbfb29d01484527996c26b618b80}{\-Write} (\-U\-I\-N\-T8 register\-Address, \-U\-I\-N\-T8 data)
+bool \hyperlink{classI2C_a789fbbfb29d01484527996c26b618b80}{Write} (UINT8 registerAddress, UINT8 data)
 \item 
-bool \hyperlink{classI2C_ae50e3e7fb5c896762c6a785f8d85cdc2}{\-Read} (\-U\-I\-N\-T8 register\-Address, \-U\-I\-N\-T8 count, \-U\-I\-N\-T8 $\ast$data)
+bool \hyperlink{classI2C_ae50e3e7fb5c896762c6a785f8d85cdc2}{Read} (UINT8 registerAddress, UINT8 count, UINT8 $\ast$data)
 \item 
-void \hyperlink{classI2C_aab8d364d14d9265a399c7e0730213672}{\-Broadcast} (\-U\-I\-N\-T8 register\-Address, \-U\-I\-N\-T8 data)
+void \hyperlink{classI2C_aab8d364d14d9265a399c7e0730213672}{Broadcast} (UINT8 registerAddress, UINT8 data)
 \item 
-void \hyperlink{classI2C_af4c0a331591f394ae78e3ab03c0d6520}{\-Set\-Compatibility\-Mode} (bool enable)
+void \hyperlink{classI2C_af4c0a331591f394ae78e3ab03c0d6520}{SetCompatibilityMode} (bool enable)
 \item 
-bool \hyperlink{classI2C_a0d2101f590b7df2034c4239896f071c3}{\-Verify\-Sensor} (\-U\-I\-N\-T8 register\-Address, \-U\-I\-N\-T8 count, const \-U\-I\-N\-T8 $\ast$expected)
+bool \hyperlink{classI2C_a0d2101f590b7df2034c4239896f071c3}{VerifySensor} (UINT8 registerAddress, UINT8 count, const UINT8 $\ast$expected)
 \end{DoxyCompactItemize}
-\subsection*{\-Friends}
+\subsection*{Friends}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{classI2C_aa15053da4e6cbe2d051a32116bcfbf2b}{class {\bfseries \-Digital\-Module}}\label{classI2C_aa15053da4e6cbe2d051a32116bcfbf2b}
+\hypertarget{classI2C_aa15053da4e6cbe2d051a32116bcfbf2b}{
+class \hyperlink{classI2C_aa15053da4e6cbe2d051a32116bcfbf2b}{DigitalModule}}
+\label{classI2C_aa15053da4e6cbe2d051a32116bcfbf2b}
 
 \end{DoxyCompactItemize}
 
 
-\subsection{\-Detailed \-Description}
-\hyperlink{classI2C}{\-I2\-C} bus interface class.
+\subsection{Detailed Description}
+\hyperlink{classI2C}{I2C} bus interface class.
 
-\-This class is intended to be used by sensor (and other \hyperlink{classI2C}{\-I2\-C} device) drivers. \-It probably should not be used directly.
+This class is intended to be used by sensor (and other \hyperlink{classI2C}{I2C} device) drivers. It probably should not be used directly.
 
-\-It is constructed by calling \hyperlink{classDigitalModule_ae776c8449cf18b7f90fec0126b3e8373}{\-Digital\-Module\-::\-Get\-I2\-C()} on a \hyperlink{classDigitalModule}{\-Digital\-Module} object. 
+It is constructed by calling \hyperlink{classDigitalModule_ae776c8449cf18b7f90fec0126b3e8373}{DigitalModule::GetI2C()} on a \hyperlink{classDigitalModule}{DigitalModule} object. 
 
-\subsection{\-Constructor \& \-Destructor \-Documentation}
-\hypertarget{classI2C_afaad09fa9bdd23623bddbdcd7585a9fe}{\index{\-I2\-C@{\-I2\-C}!$\sim$\-I2\-C@{$\sim$\-I2\-C}}
-\index{$\sim$\-I2\-C@{$\sim$\-I2\-C}!I2C@{\-I2\-C}}
-\subsubsection[{$\sim$\-I2\-C}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-I2\-C\-::$\sim$\-I2\-C} (
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classI2C_afaad09fa9bdd23623bddbdcd7585a9fe}{
+\index{I2C@{I2C}!$\sim$I2C@{$\sim$I2C}}
+\index{$\sim$I2C@{$\sim$I2C}!I2C@{I2C}}
+\subsubsection[{$\sim$I2C}]{\setlength{\rightskip}{0pt plus 5cm}I2C::$\sim$I2C (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{classI2C_afaad09fa9bdd23623bddbdcd7585a9fe}
-\-Destructor. 
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classI2C_afaad09fa9bdd23623bddbdcd7585a9fe}
+Destructor. 
 
-\subsection{\-Member \-Function \-Documentation}
-\hypertarget{classI2C_a8aaad56f53bdbc0817a6d70ce0361fcd}{\index{\-I2\-C@{\-I2\-C}!\-Address\-Only@{\-Address\-Only}}
-\index{\-Address\-Only@{\-Address\-Only}!I2C@{\-I2\-C}}
-\subsubsection[{\-Address\-Only}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-I2\-C\-::\-Address\-Only} (
+\subsection{Member Function Documentation}
+\hypertarget{classI2C_a8aaad56f53bdbc0817a6d70ce0361fcd}{
+\index{I2C@{I2C}!AddressOnly@{AddressOnly}}
+\index{AddressOnly@{AddressOnly}!I2C@{I2C}}
+\subsubsection[{AddressOnly}]{\setlength{\rightskip}{0pt plus 5cm}bool I2C::AddressOnly (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)}}\label{classI2C_a8aaad56f53bdbc0817a6d70ce0361fcd}
-\-Attempt to address a device on the \hyperlink{classI2C}{\-I2\-C} bus.
+)}}
+\label{classI2C_a8aaad56f53bdbc0817a6d70ce0361fcd}
+Attempt to address a device on the \hyperlink{classI2C}{I2C} bus.
 
-\-This allows you to figure out if there is a device on the \hyperlink{classI2C}{\-I2\-C} bus that responds to the address specified in the constructor.
+This allows you to figure out if there is a device on the \hyperlink{classI2C}{I2C} bus that responds to the address specified in the constructor.
 
-\begin{DoxyReturn}{\-Returns}
-\-Transfer \-Aborted... false for success, true for aborted. 
+\begin{DoxyReturn}{Returns}
+Transfer Aborted... false for success, true for aborted. 
 \end{DoxyReturn}
-\hypertarget{classI2C_aab8d364d14d9265a399c7e0730213672}{\index{\-I2\-C@{\-I2\-C}!\-Broadcast@{\-Broadcast}}
-\index{\-Broadcast@{\-Broadcast}!I2C@{\-I2\-C}}
-\subsubsection[{\-Broadcast}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-I2\-C\-::\-Broadcast} (
+\hypertarget{classI2C_aab8d364d14d9265a399c7e0730213672}{
+\index{I2C@{I2C}!Broadcast@{Broadcast}}
+\index{Broadcast@{Broadcast}!I2C@{I2C}}
+\subsubsection[{Broadcast}]{\setlength{\rightskip}{0pt plus 5cm}void I2C::Broadcast (
 \begin{DoxyParamCaption}
-\item[{\-U\-I\-N\-T8}]{register\-Address, }
-\item[{\-U\-I\-N\-T8}]{data}
+\item[{UINT8}]{registerAddress, }
+\item[{UINT8}]{data}
 \end{DoxyParamCaption}
-)}}\label{classI2C_aab8d364d14d9265a399c7e0730213672}
-\-Send a broadcast write to all devices on the \hyperlink{classI2C}{\-I2\-C} bus.
+)}}
+\label{classI2C_aab8d364d14d9265a399c7e0730213672}
+Send a broadcast write to all devices on the \hyperlink{classI2C}{I2C} bus.
 
-\-This is not currently implemented!
+This is not currently implemented!
 
 
-\begin{DoxyParams}{\-Parameters}
-{\em register\-Address} & \-The register to write on all devices on the bus. \\
+\begin{DoxyParams}{Parameters}
+{\em registerAddress} & The register to write on all devices on the bus. \\
 \hline
-{\em data} & \-The value to write to the devices. \\
+{\em data} & The value to write to the devices. \\
 \hline
 \end{DoxyParams}
-\hypertarget{classI2C_ae50e3e7fb5c896762c6a785f8d85cdc2}{\index{\-I2\-C@{\-I2\-C}!\-Read@{\-Read}}
-\index{\-Read@{\-Read}!I2C@{\-I2\-C}}
-\subsubsection[{\-Read}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-I2\-C\-::\-Read} (
+\hypertarget{classI2C_ae50e3e7fb5c896762c6a785f8d85cdc2}{
+\index{I2C@{I2C}!Read@{Read}}
+\index{Read@{Read}!I2C@{I2C}}
+\subsubsection[{Read}]{\setlength{\rightskip}{0pt plus 5cm}bool I2C::Read (
 \begin{DoxyParamCaption}
-\item[{\-U\-I\-N\-T8}]{register\-Address, }
-\item[{\-U\-I\-N\-T8}]{count, }
-\item[{\-U\-I\-N\-T8 $\ast$}]{buffer}
+\item[{UINT8}]{registerAddress, }
+\item[{UINT8}]{count, }
+\item[{UINT8 $\ast$}]{buffer}
 \end{DoxyParamCaption}
-)}}\label{classI2C_ae50e3e7fb5c896762c6a785f8d85cdc2}
-\-Execute a read transaction with the device.
+)}}
+\label{classI2C_ae50e3e7fb5c896762c6a785f8d85cdc2}
+Execute a read transaction with the device.
 
-\-Read 1 to 7 bytes from a device. \-Most \hyperlink{classI2C}{\-I2\-C} devices will auto-\/increment the register pointer internally allowing you to read up to 7 consecutive registers on a device in a single transaction.
+Read 1 to 7 bytes from a device. Most \hyperlink{classI2C}{I2C} devices will auto-\/increment the register pointer internally allowing you to read up to 7 consecutive registers on a device in a single transaction.
 
 
-\begin{DoxyParams}{\-Parameters}
-{\em register\-Address} & \-The register to read first in the transaction. \\
+\begin{DoxyParams}{Parameters}
+{\em registerAddress} & The register to read first in the transaction. \\
 \hline
-{\em count} & \-The number of bytes to read in the transaction. \mbox{[}1..7\mbox{]} \\
+{\em count} & The number of bytes to read in the transaction. \mbox{[}1..7\mbox{]} \\
 \hline
-{\em buffer} & \-A pointer to the array of bytes to store the data read from the device. \\
+{\em buffer} & A pointer to the array of bytes to store the data read from the device. \\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{\-Returns}
-\-Transfer \-Aborted... false for success, true for aborted. 
+\begin{DoxyReturn}{Returns}
+Transfer Aborted... false for success, true for aborted. 
 \end{DoxyReturn}
-\hypertarget{classI2C_af4c0a331591f394ae78e3ab03c0d6520}{\index{\-I2\-C@{\-I2\-C}!\-Set\-Compatibility\-Mode@{\-Set\-Compatibility\-Mode}}
-\index{\-Set\-Compatibility\-Mode@{\-Set\-Compatibility\-Mode}!I2C@{\-I2\-C}}
-\subsubsection[{\-Set\-Compatibility\-Mode}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-I2\-C\-::\-Set\-Compatibility\-Mode} (
+\hypertarget{classI2C_af4c0a331591f394ae78e3ab03c0d6520}{
+\index{I2C@{I2C}!SetCompatibilityMode@{SetCompatibilityMode}}
+\index{SetCompatibilityMode@{SetCompatibilityMode}!I2C@{I2C}}
+\subsubsection[{SetCompatibilityMode}]{\setlength{\rightskip}{0pt plus 5cm}void I2C::SetCompatibilityMode (
 \begin{DoxyParamCaption}
 \item[{bool}]{enable}
 \end{DoxyParamCaption}
-)}}\label{classI2C_af4c0a331591f394ae78e3ab03c0d6520}
-\-Set\-Compatibility\-Mode
+)}}
+\label{classI2C_af4c0a331591f394ae78e3ab03c0d6520}
+SetCompatibilityMode
 
-\-Enables bitwise clock skewing detection. \-This will reduce the \hyperlink{classI2C}{\-I2\-C} interface speed, but will allow you to communicate with devices that skew the clock at abnormal times.
+Enables bitwise clock skewing detection. This will reduce the \hyperlink{classI2C}{I2C} interface speed, but will allow you to communicate with devices that skew the clock at abnormal times.
 
 
-\begin{DoxyParams}{\-Parameters}
-{\em enable} & \-Enable compatibility mode for this sensor or not. \\
+\begin{DoxyParams}{Parameters}
+{\em enable} & Enable compatibility mode for this sensor or not. \\
 \hline
 \end{DoxyParams}
-\hypertarget{classI2C_ad2b8c000febc0a7c2444844da3a1886a}{\index{\-I2\-C@{\-I2\-C}!\-Transaction@{\-Transaction}}
-\index{\-Transaction@{\-Transaction}!I2C@{\-I2\-C}}
-\subsubsection[{\-Transaction}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-I2\-C\-::\-Transaction} (
+\hypertarget{classI2C_ad2b8c000febc0a7c2444844da3a1886a}{
+\index{I2C@{I2C}!Transaction@{Transaction}}
+\index{Transaction@{Transaction}!I2C@{I2C}}
+\subsubsection[{Transaction}]{\setlength{\rightskip}{0pt plus 5cm}bool I2C::Transaction (
 \begin{DoxyParamCaption}
-\item[{\-U\-I\-N\-T8 $\ast$}]{data\-To\-Send, }
-\item[{\-U\-I\-N\-T8}]{send\-Size, }
-\item[{\-U\-I\-N\-T8 $\ast$}]{data\-Received, }
-\item[{\-U\-I\-N\-T8}]{receive\-Size}
+\item[{UINT8 $\ast$}]{dataToSend, }
+\item[{UINT8}]{sendSize, }
+\item[{UINT8 $\ast$}]{dataReceived, }
+\item[{UINT8}]{receiveSize}
 \end{DoxyParamCaption}
-)}}\label{classI2C_ad2b8c000febc0a7c2444844da3a1886a}
-\-Generic transaction.
+)}}
+\label{classI2C_ad2b8c000febc0a7c2444844da3a1886a}
+Generic transaction.
 
-\-This is a lower-\/level interface to the \hyperlink{classI2C}{\-I2\-C} hardware giving you more control over each transaction.
+This is a lower-\/level interface to the \hyperlink{classI2C}{I2C} hardware giving you more control over each transaction.
 
 
-\begin{DoxyParams}{\-Parameters}
-{\em data\-To\-Send} & \-Buffer of data to send as part of the transaction. \\
+\begin{DoxyParams}{Parameters}
+{\em dataToSend} & Buffer of data to send as part of the transaction. \\
 \hline
-{\em send\-Size} & \-Number of bytes to send as part of the transaction. \mbox{[}0..6\mbox{]} \\
+{\em sendSize} & Number of bytes to send as part of the transaction. \mbox{[}0..6\mbox{]} \\
 \hline
-{\em data\-Received} & \-Buffer to read data into. \\
+{\em dataReceived} & Buffer to read data into. \\
 \hline
-{\em receive\-Size} & \-Number of byted to read from the device. \mbox{[}0..7\mbox{]} \\
+{\em receiveSize} & Number of byted to read from the device. \mbox{[}0..7\mbox{]} \\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{\-Returns}
-\-Transfer \-Aborted... false for success, true for aborted. 
+\begin{DoxyReturn}{Returns}
+Transfer Aborted... false for success, true for aborted. 
 \end{DoxyReturn}
-\hypertarget{classI2C_a0d2101f590b7df2034c4239896f071c3}{\index{\-I2\-C@{\-I2\-C}!\-Verify\-Sensor@{\-Verify\-Sensor}}
-\index{\-Verify\-Sensor@{\-Verify\-Sensor}!I2C@{\-I2\-C}}
-\subsubsection[{\-Verify\-Sensor}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-I2\-C\-::\-Verify\-Sensor} (
+\hypertarget{classI2C_a0d2101f590b7df2034c4239896f071c3}{
+\index{I2C@{I2C}!VerifySensor@{VerifySensor}}
+\index{VerifySensor@{VerifySensor}!I2C@{I2C}}
+\subsubsection[{VerifySensor}]{\setlength{\rightskip}{0pt plus 5cm}bool I2C::VerifySensor (
 \begin{DoxyParamCaption}
-\item[{\-U\-I\-N\-T8}]{register\-Address, }
-\item[{\-U\-I\-N\-T8}]{count, }
-\item[{const \-U\-I\-N\-T8 $\ast$}]{expected}
+\item[{UINT8}]{registerAddress, }
+\item[{UINT8}]{count, }
+\item[{const UINT8 $\ast$}]{expected}
 \end{DoxyParamCaption}
-)}}\label{classI2C_a0d2101f590b7df2034c4239896f071c3}
-\-Verify that a device's registers contain expected values.
+)}}
+\label{classI2C_a0d2101f590b7df2034c4239896f071c3}
+Verify that a device's registers contain expected values.
 
-\-Most devices will have a set of registers that contain a known value that can be used to identify them. \-This allows an \hyperlink{classI2C}{\-I2\-C} device driver to easily verify that the device contains the expected value.
+Most devices will have a set of registers that contain a known value that can be used to identify them. This allows an \hyperlink{classI2C}{I2C} device driver to easily verify that the device contains the expected value.
 
-\begin{DoxyPrecond}{\-Precondition}
-\-The device must support and be configured to use register auto-\/increment.
+\begin{DoxyPrecond}{Precondition}
+The device must support and be configured to use register auto-\/increment.
 \end{DoxyPrecond}
 
-\begin{DoxyParams}{\-Parameters}
-{\em register\-Address} & \-The base register to start reading from the device. \\
+\begin{DoxyParams}{Parameters}
+{\em registerAddress} & The base register to start reading from the device. \\
 \hline
-{\em count} & \-The size of the field to be verified. \\
+{\em count} & The size of the field to be verified. \\
 \hline
-{\em expected} & \-A buffer containing the values expected from the device. \\
+{\em expected} & A buffer containing the values expected from the device. \\
 \hline
 \end{DoxyParams}
-\hypertarget{classI2C_a789fbbfb29d01484527996c26b618b80}{\index{\-I2\-C@{\-I2\-C}!\-Write@{\-Write}}
-\index{\-Write@{\-Write}!I2C@{\-I2\-C}}
-\subsubsection[{\-Write}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-I2\-C\-::\-Write} (
+\hypertarget{classI2C_a789fbbfb29d01484527996c26b618b80}{
+\index{I2C@{I2C}!Write@{Write}}
+\index{Write@{Write}!I2C@{I2C}}
+\subsubsection[{Write}]{\setlength{\rightskip}{0pt plus 5cm}bool I2C::Write (
 \begin{DoxyParamCaption}
-\item[{\-U\-I\-N\-T8}]{register\-Address, }
-\item[{\-U\-I\-N\-T8}]{data}
+\item[{UINT8}]{registerAddress, }
+\item[{UINT8}]{data}
 \end{DoxyParamCaption}
-)}}\label{classI2C_a789fbbfb29d01484527996c26b618b80}
-\-Execute a write transaction with the device.
+)}}
+\label{classI2C_a789fbbfb29d01484527996c26b618b80}
+Execute a write transaction with the device.
 
-\-Write a single byte to a register on a device and wait until the transaction is complete.
+Write a single byte to a register on a device and wait until the transaction is complete.
 
 
-\begin{DoxyParams}{\-Parameters}
-{\em register\-Address} & \-The address of the register on the device to be written. \\
+\begin{DoxyParams}{Parameters}
+{\em registerAddress} & The address of the register on the device to be written. \\
 \hline
-{\em data} & \-The byte to write to the register on the device. \\
+{\em data} & The byte to write to the register on the device. \\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{\-Returns}
-\-Transfer \-Aborted... false for success, true for aborted. 
+\begin{DoxyReturn}{Returns}
+Transfer Aborted... false for success, true for aborted. 
 \end{DoxyReturn}
 
 
-\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
 \item 
-\-I2\-C.\-h\item 
-\-I2\-C.\-cpp\end{DoxyCompactItemize}
+I2C.h\item 
+I2C.cpp\end{DoxyCompactItemize}

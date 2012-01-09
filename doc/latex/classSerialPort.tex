@@ -1,326 +1,365 @@
-\hypertarget{classSerialPort}{\section{\-Serial\-Port \-Class \-Reference}
-\label{classSerialPort}\index{\-Serial\-Port@{\-Serial\-Port}}
+\hypertarget{classSerialPort}{
+\section{SerialPort Class Reference}
+\label{classSerialPort}\index{SerialPort@{SerialPort}}
 }
 
 
-{\ttfamily \#include $<$\-Serial\-Port.\-h$>$}
+{\ttfamily \#include $<$SerialPort.h$>$}
 
-\subsection*{\-Public \-Types}
+Inheritance diagram for SerialPort:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classSerialPort}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
 \begin{DoxyCompactItemize}
 \item 
-enum {\bfseries \-Parity} \{ \*
-{\bfseries k\-Parity\-\_\-\-None} = 0, 
-{\bfseries k\-Parity\-\_\-\-Odd} = 1, 
-{\bfseries k\-Parity\-\_\-\-Even} = 2, 
-{\bfseries k\-Parity\-\_\-\-Mark} = 3, 
-\*
-{\bfseries k\-Parity\-\_\-\-Space} = 4
+enum {\bfseries Parity} \{ \par
+{\bfseries kParity\_\-None} = 0, 
+{\bfseries kParity\_\-Odd} = 1, 
+{\bfseries kParity\_\-Even} = 2, 
+{\bfseries kParity\_\-Mark} = 3, 
+\par
+{\bfseries kParity\_\-Space} = 4
  \}
 \item 
-enum {\bfseries \-Stop\-Bits} \{ {\bfseries k\-Stop\-Bits\-\_\-\-One} = 10, 
-{\bfseries k\-Stop\-Bits\-\_\-\-One\-Point\-Five} = 15, 
-{\bfseries k\-Stop\-Bits\-\_\-\-Two} = 20
+enum {\bfseries StopBits} \{ {\bfseries kStopBits\_\-One} = 10, 
+{\bfseries kStopBits\_\-OnePointFive} = 15, 
+{\bfseries kStopBits\_\-Two} = 20
  \}
 \item 
-enum {\bfseries \-Flow\-Control} \{ {\bfseries k\-Flow\-Control\-\_\-\-None} = 0, 
-{\bfseries k\-Flow\-Control\-\_\-\-Xon\-Xoff} = 1, 
-{\bfseries k\-Flow\-Control\-\_\-\-Rts\-Cts} = 2, 
-{\bfseries k\-Flow\-Control\-\_\-\-Dtr\-Dsr} = 4
+enum {\bfseries FlowControl} \{ {\bfseries kFlowControl\_\-None} = 0, 
+{\bfseries kFlowControl\_\-XonXoff} = 1, 
+{\bfseries kFlowControl\_\-RtsCts} = 2, 
+{\bfseries kFlowControl\_\-DtrDsr} = 4
  \}
 \item 
-enum {\bfseries \-Write\-Buffer\-Mode} \{ {\bfseries k\-Flush\-On\-Access} = 1, 
-{\bfseries k\-Flush\-When\-Full} = 2
+enum {\bfseries WriteBufferMode} \{ {\bfseries kFlushOnAccess} = 1, 
+{\bfseries kFlushWhenFull} = 2
  \}
 \end{DoxyCompactItemize}
-\subsection*{\-Public \-Member \-Functions}
+\subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{classSerialPort_a52c48c5f1dd124a65008640efd4d1cd6}{\-Serial\-Port} (\-U\-I\-N\-T32 baud\-Rate, \-U\-I\-N\-T8 data\-Bits=8, \-Parity parity=k\-Parity\-\_\-\-None, \-Stop\-Bits stop\-Bits=k\-Stop\-Bits\-\_\-\-One)
+\hyperlink{classSerialPort_a52c48c5f1dd124a65008640efd4d1cd6}{SerialPort} (UINT32 baudRate, UINT8 dataBits=8, Parity parity=kParity\_\-None, StopBits stopBits=kStopBits\_\-One)
 \item 
-\hyperlink{classSerialPort_a8e09f366ed9b26b0456b66ae7bd8c702}{$\sim$\-Serial\-Port} ()
+\hyperlink{classSerialPort_a8e09f366ed9b26b0456b66ae7bd8c702}{$\sim$SerialPort} ()
 \item 
-void \hyperlink{classSerialPort_ad1163b360e467c7c49fcd8467f8d30ad}{\-Set\-Flow\-Control} (\-Flow\-Control flow\-Control)
+void \hyperlink{classSerialPort_ad1163b360e467c7c49fcd8467f8d30ad}{SetFlowControl} (FlowControl flowControl)
 \item 
-void \hyperlink{classSerialPort_a90e27c4191d7ac4e46c614f562505b68}{\-Enable\-Termination} (char terminator= '$\backslash$n')
+void \hyperlink{classSerialPort_a90e27c4191d7ac4e46c614f562505b68}{EnableTermination} (char terminator= '$\backslash$n')
 \item 
-void \hyperlink{classSerialPort_a347f5209ef059b6e53dbf5aaa397e3ac}{\-Disable\-Termination} ()
+void \hyperlink{classSerialPort_a347f5209ef059b6e53dbf5aaa397e3ac}{DisableTermination} ()
 \item 
-\-I\-N\-T32 \hyperlink{classSerialPort_aa6894f04f38d747737b3c4dc721c03ea}{\-Get\-Bytes\-Received} ()
+INT32 \hyperlink{classSerialPort_aa6894f04f38d747737b3c4dc721c03ea}{GetBytesReceived} ()
 \item 
-void \hyperlink{classSerialPort_a7e6079639bb99639ab7b89353a55ed28}{\-Printf} (const char $\ast$write\-Fmt,...)
+void \hyperlink{classSerialPort_a7e6079639bb99639ab7b89353a55ed28}{Printf} (const char $\ast$writeFmt,...)
 \item 
-void \hyperlink{classSerialPort_a59c35256ee16b2afa2012e2dbd7f5c20}{\-Scanf} (const char $\ast$read\-Fmt,...)
+void \hyperlink{classSerialPort_a59c35256ee16b2afa2012e2dbd7f5c20}{Scanf} (const char $\ast$readFmt,...)
 \item 
-\-U\-I\-N\-T32 \hyperlink{classSerialPort_af414526bcb7b6b227d3efcb8a37c7bdc}{\-Read} (char $\ast$buffer, \-I\-N\-T32 count)
+UINT32 \hyperlink{classSerialPort_af414526bcb7b6b227d3efcb8a37c7bdc}{Read} (char $\ast$buffer, INT32 count)
 \item 
-\-U\-I\-N\-T32 \hyperlink{classSerialPort_a95e5422930b1f9c90e3857a973d9170e}{\-Write} (const char $\ast$buffer, \-I\-N\-T32 count)
+UINT32 \hyperlink{classSerialPort_a95e5422930b1f9c90e3857a973d9170e}{Write} (const char $\ast$buffer, INT32 count)
 \item 
-void \hyperlink{classSerialPort_aa3ad209dd5ab32427fccf711b476d8bf}{\-Set\-Timeout} (float timeout)
+void \hyperlink{classSerialPort_aa3ad209dd5ab32427fccf711b476d8bf}{SetTimeout} (float timeout)
 \item 
-void \hyperlink{classSerialPort_af361b5d5d045d6d36df507a3006c7cb1}{\-Set\-Read\-Buffer\-Size} (\-U\-I\-N\-T32 size)
+void \hyperlink{classSerialPort_af361b5d5d045d6d36df507a3006c7cb1}{SetReadBufferSize} (UINT32 size)
 \item 
-void \hyperlink{classSerialPort_a819775c096d0a679d0aad4ee420413a4}{\-Set\-Write\-Buffer\-Size} (\-U\-I\-N\-T32 size)
+void \hyperlink{classSerialPort_a819775c096d0a679d0aad4ee420413a4}{SetWriteBufferSize} (UINT32 size)
 \item 
-void \hyperlink{classSerialPort_a1fd9a6370da04fee0bdc978d04a95c78}{\-Set\-Write\-Buffer\-Mode} (\-Write\-Buffer\-Mode mode)
+void \hyperlink{classSerialPort_a1fd9a6370da04fee0bdc978d04a95c78}{SetWriteBufferMode} (WriteBufferMode mode)
 \item 
-void \hyperlink{classSerialPort_aea93ced7190870183d46f7aa303b45f6}{\-Flush} ()
+void \hyperlink{classSerialPort_aea93ced7190870183d46f7aa303b45f6}{Flush} ()
 \item 
-void \hyperlink{classSerialPort_ab00d8ab877678575767459e9166f775d}{\-Reset} ()
+void \hyperlink{classSerialPort_ab00d8ab877678575767459e9166f775d}{Reset} ()
 \end{DoxyCompactItemize}
 
 
-\subsection{\-Detailed \-Description}
-\-Driver for the \-R\-S-\/232 serial port on the c\-R\-I\-O.
+\subsection{Detailed Description}
+Driver for the RS-\/232 serial port on the cRIO.
 
-\-The current implementation uses the \-V\-I\-S\-A formatted \-I/\-O mode. \-This means that all traffic goes through the fomatted buffers. \-This allows the intermingled use of \hyperlink{classSerialPort_a7e6079639bb99639ab7b89353a55ed28}{\-Printf()}, \hyperlink{classSerialPort_a59c35256ee16b2afa2012e2dbd7f5c20}{\-Scanf()}, and the raw buffer accessors \hyperlink{classSerialPort_af414526bcb7b6b227d3efcb8a37c7bdc}{\-Read()} and \hyperlink{classSerialPort_a95e5422930b1f9c90e3857a973d9170e}{\-Write()}.
+The current implementation uses the VISA formatted I/O mode. This means that all traffic goes through the fomatted buffers. This allows the intermingled use of \hyperlink{classSerialPort_a7e6079639bb99639ab7b89353a55ed28}{Printf()}, \hyperlink{classSerialPort_a59c35256ee16b2afa2012e2dbd7f5c20}{Scanf()}, and the raw buffer accessors \hyperlink{classSerialPort_af414526bcb7b6b227d3efcb8a37c7bdc}{Read()} and \hyperlink{classSerialPort_a95e5422930b1f9c90e3857a973d9170e}{Write()}.
 
-\-More information can be found in the \-N\-I-\/\-V\-I\-S\-A \-User \-Manual here\-: \href{http://www.ni.com/pdf/manuals/370423a.pdf}{\tt http\-://www.\-ni.\-com/pdf/manuals/370423a.\-pdf} and the \-N\-I-\/\-V\-I\-S\-A \-Programmer's \-Reference \-Manual here\-: \href{http://www.ni.com/pdf/manuals/370132c.pdf}{\tt http\-://www.\-ni.\-com/pdf/manuals/370132c.\-pdf} 
+More information can be found in the NI-\/VISA User Manual here: \href{http://www.ni.com/pdf/manuals/370423a.pdf}{\tt http://www.ni.com/pdf/manuals/370423a.pdf} and the NI-\/VISA Programmer's Reference Manual here: \href{http://www.ni.com/pdf/manuals/370132c.pdf}{\tt http://www.ni.com/pdf/manuals/370132c.pdf} 
 
-\subsection{\-Constructor \& \-Destructor \-Documentation}
-\hypertarget{classSerialPort_a52c48c5f1dd124a65008640efd4d1cd6}{\index{\-Serial\-Port@{\-Serial\-Port}!\-Serial\-Port@{\-Serial\-Port}}
-\index{\-Serial\-Port@{\-Serial\-Port}!SerialPort@{\-Serial\-Port}}
-\subsubsection[{\-Serial\-Port}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Serial\-Port\-::\-Serial\-Port} (
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classSerialPort_a52c48c5f1dd124a65008640efd4d1cd6}{
+\index{SerialPort@{SerialPort}!SerialPort@{SerialPort}}
+\index{SerialPort@{SerialPort}!SerialPort@{SerialPort}}
+\subsubsection[{SerialPort}]{\setlength{\rightskip}{0pt plus 5cm}SerialPort::SerialPort (
 \begin{DoxyParamCaption}
-\item[{\-U\-I\-N\-T32}]{baud\-Rate, }
-\item[{\-U\-I\-N\-T8}]{data\-Bits = {\ttfamily 8}, }
-\item[{\-Serial\-Port\-::\-Parity}]{parity = {\ttfamily k\-Parity\-\_\-\-None}, }
-\item[{\-Serial\-Port\-::\-Stop\-Bits}]{stop\-Bits = {\ttfamily k\-Stop\-Bits\-\_\-\-One}}
+\item[{UINT32}]{baudRate, }
+\item[{UINT8}]{dataBits = {\ttfamily 8}, }
+\item[{SerialPort::Parity}]{parity = {\ttfamily kParity\_\-None}, }
+\item[{SerialPort::StopBits}]{stopBits = {\ttfamily kStopBits\_\-One}}
 \end{DoxyParamCaption}
-)}}\label{classSerialPort_a52c48c5f1dd124a65008640efd4d1cd6}
-\-Create an instance of a \-Serial \-Port class.
+)}}
+\label{classSerialPort_a52c48c5f1dd124a65008640efd4d1cd6}
+Create an instance of a Serial Port class.
 
 
-\begin{DoxyParams}{\-Parameters}
-{\em baud\-Rate} & \-The baud rate to configure the serial port. \-The c\-R\-I\-O-\/9074 supports up to 230400 \-Baud. \\
+\begin{DoxyParams}{Parameters}
+{\em baudRate} & The baud rate to configure the serial port. The cRIO-\/9074 supports up to 230400 Baud. \\
 \hline
-{\em data\-Bits} & \-The number of data bits per transfer. \-Valid values are between 5 and 8 bits. \\
+{\em dataBits} & The number of data bits per transfer. Valid values are between 5 and 8 bits. \\
 \hline
-{\em parity} & \-Select the type of parity checking to use. \\
+{\em parity} & Select the type of parity checking to use. \\
 \hline
-{\em stop\-Bits} & \-The number of stop bits to use as defined by the enum \-Stop\-Bits. \\
+{\em stopBits} & The number of stop bits to use as defined by the enum StopBits. \\
 \hline
 \end{DoxyParams}
-\hypertarget{classSerialPort_a8e09f366ed9b26b0456b66ae7bd8c702}{\index{\-Serial\-Port@{\-Serial\-Port}!$\sim$\-Serial\-Port@{$\sim$\-Serial\-Port}}
-\index{$\sim$\-Serial\-Port@{$\sim$\-Serial\-Port}!SerialPort@{\-Serial\-Port}}
-\subsubsection[{$\sim$\-Serial\-Port}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Serial\-Port\-::$\sim$\-Serial\-Port} (
+\hypertarget{classSerialPort_a8e09f366ed9b26b0456b66ae7bd8c702}{
+\index{SerialPort@{SerialPort}!$\sim$SerialPort@{$\sim$SerialPort}}
+\index{$\sim$SerialPort@{$\sim$SerialPort}!SerialPort@{SerialPort}}
+\subsubsection[{$\sim$SerialPort}]{\setlength{\rightskip}{0pt plus 5cm}SerialPort::$\sim$SerialPort (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)}}\label{classSerialPort_a8e09f366ed9b26b0456b66ae7bd8c702}
-\-Destructor. 
+)}}
+\label{classSerialPort_a8e09f366ed9b26b0456b66ae7bd8c702}
+Destructor. 
 
-\subsection{\-Member \-Function \-Documentation}
-\hypertarget{classSerialPort_a347f5209ef059b6e53dbf5aaa397e3ac}{\index{\-Serial\-Port@{\-Serial\-Port}!\-Disable\-Termination@{\-Disable\-Termination}}
-\index{\-Disable\-Termination@{\-Disable\-Termination}!SerialPort@{\-Serial\-Port}}
-\subsubsection[{\-Disable\-Termination}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Serial\-Port\-::\-Disable\-Termination} (
+\subsection{Member Function Documentation}
+\hypertarget{classSerialPort_a347f5209ef059b6e53dbf5aaa397e3ac}{
+\index{SerialPort@{SerialPort}!DisableTermination@{DisableTermination}}
+\index{DisableTermination@{DisableTermination}!SerialPort@{SerialPort}}
+\subsubsection[{DisableTermination}]{\setlength{\rightskip}{0pt plus 5cm}void SerialPort::DisableTermination (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)}}\label{classSerialPort_a347f5209ef059b6e53dbf5aaa397e3ac}
-\-Disable termination behavior. \hypertarget{classSerialPort_a90e27c4191d7ac4e46c614f562505b68}{\index{\-Serial\-Port@{\-Serial\-Port}!\-Enable\-Termination@{\-Enable\-Termination}}
-\index{\-Enable\-Termination@{\-Enable\-Termination}!SerialPort@{\-Serial\-Port}}
-\subsubsection[{\-Enable\-Termination}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Serial\-Port\-::\-Enable\-Termination} (
+)}}
+\label{classSerialPort_a347f5209ef059b6e53dbf5aaa397e3ac}
+Disable termination behavior. \hypertarget{classSerialPort_a90e27c4191d7ac4e46c614f562505b68}{
+\index{SerialPort@{SerialPort}!EnableTermination@{EnableTermination}}
+\index{EnableTermination@{EnableTermination}!SerialPort@{SerialPort}}
+\subsubsection[{EnableTermination}]{\setlength{\rightskip}{0pt plus 5cm}void SerialPort::EnableTermination (
 \begin{DoxyParamCaption}
 \item[{char}]{terminator = {\ttfamily '$\backslash$n'}}
 \end{DoxyParamCaption}
-)}}\label{classSerialPort_a90e27c4191d7ac4e46c614f562505b68}
-\-Enable termination and specify the termination character.
+)}}
+\label{classSerialPort_a90e27c4191d7ac4e46c614f562505b68}
+Enable termination and specify the termination character.
 
-\-Termination is currently only implemented for receive. \-When the the terminator is recieved, the \hyperlink{classSerialPort_af414526bcb7b6b227d3efcb8a37c7bdc}{\-Read()} or \hyperlink{classSerialPort_a59c35256ee16b2afa2012e2dbd7f5c20}{\-Scanf()} will return fewer bytes than requested, stopping after the terminator.
+Termination is currently only implemented for receive. When the the terminator is recieved, the \hyperlink{classSerialPort_af414526bcb7b6b227d3efcb8a37c7bdc}{Read()} or \hyperlink{classSerialPort_a59c35256ee16b2afa2012e2dbd7f5c20}{Scanf()} will return fewer bytes than requested, stopping after the terminator.
 
 
-\begin{DoxyParams}{\-Parameters}
-{\em terminator} & \-The character to use for termination. \\
+\begin{DoxyParams}{Parameters}
+{\em terminator} & The character to use for termination. \\
 \hline
 \end{DoxyParams}
-\hypertarget{classSerialPort_aea93ced7190870183d46f7aa303b45f6}{\index{\-Serial\-Port@{\-Serial\-Port}!\-Flush@{\-Flush}}
-\index{\-Flush@{\-Flush}!SerialPort@{\-Serial\-Port}}
-\subsubsection[{\-Flush}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Serial\-Port\-::\-Flush} (
+\hypertarget{classSerialPort_aea93ced7190870183d46f7aa303b45f6}{
+\index{SerialPort@{SerialPort}!Flush@{Flush}}
+\index{Flush@{Flush}!SerialPort@{SerialPort}}
+\subsubsection[{Flush}]{\setlength{\rightskip}{0pt plus 5cm}void SerialPort::Flush (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)}}\label{classSerialPort_aea93ced7190870183d46f7aa303b45f6}
-\-Force the output buffer to be written to the port.
+)}}
+\label{classSerialPort_aea93ced7190870183d46f7aa303b45f6}
+Force the output buffer to be written to the port.
 
-\-This is used when \hyperlink{classSerialPort_a1fd9a6370da04fee0bdc978d04a95c78}{\-Set\-Write\-Buffer\-Mode()} is set to k\-Flush\-When\-Full to force a flush before the buffer is full. \hypertarget{classSerialPort_aa6894f04f38d747737b3c4dc721c03ea}{\index{\-Serial\-Port@{\-Serial\-Port}!\-Get\-Bytes\-Received@{\-Get\-Bytes\-Received}}
-\index{\-Get\-Bytes\-Received@{\-Get\-Bytes\-Received}!SerialPort@{\-Serial\-Port}}
-\subsubsection[{\-Get\-Bytes\-Received}]{\setlength{\rightskip}{0pt plus 5cm}\-I\-N\-T32 {\bf \-Serial\-Port\-::\-Get\-Bytes\-Received} (
+This is used when \hyperlink{classSerialPort_a1fd9a6370da04fee0bdc978d04a95c78}{SetWriteBufferMode()} is set to kFlushWhenFull to force a flush before the buffer is full. \hypertarget{classSerialPort_aa6894f04f38d747737b3c4dc721c03ea}{
+\index{SerialPort@{SerialPort}!GetBytesReceived@{GetBytesReceived}}
+\index{GetBytesReceived@{GetBytesReceived}!SerialPort@{SerialPort}}
+\subsubsection[{GetBytesReceived}]{\setlength{\rightskip}{0pt plus 5cm}INT32 SerialPort::GetBytesReceived (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)}}\label{classSerialPort_aa6894f04f38d747737b3c4dc721c03ea}
-\-Get the number of bytes currently available to read from the serial port.
+)}}
+\label{classSerialPort_aa6894f04f38d747737b3c4dc721c03ea}
+Get the number of bytes currently available to read from the serial port.
 
-\begin{DoxyReturn}{\-Returns}
-\-The number of bytes available to read. 
+\begin{DoxyReturn}{Returns}
+The number of bytes available to read. 
 \end{DoxyReturn}
-\hypertarget{classSerialPort_a7e6079639bb99639ab7b89353a55ed28}{\index{\-Serial\-Port@{\-Serial\-Port}!\-Printf@{\-Printf}}
-\index{\-Printf@{\-Printf}!SerialPort@{\-Serial\-Port}}
-\subsubsection[{\-Printf}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Serial\-Port\-::\-Printf} (
+\hypertarget{classSerialPort_a7e6079639bb99639ab7b89353a55ed28}{
+\index{SerialPort@{SerialPort}!Printf@{Printf}}
+\index{Printf@{Printf}!SerialPort@{SerialPort}}
+\subsubsection[{Printf}]{\setlength{\rightskip}{0pt plus 5cm}void SerialPort::Printf (
 \begin{DoxyParamCaption}
-\item[{const char $\ast$}]{write\-Fmt, }
+\item[{const char $\ast$}]{writeFmt, }
 \item[{}]{...}
 \end{DoxyParamCaption}
-)}}\label{classSerialPort_a7e6079639bb99639ab7b89353a55ed28}
-\-Output formatted text to the serial port.
+)}}
+\label{classSerialPort_a7e6079639bb99639ab7b89353a55ed28}
+Output formatted text to the serial port.
 
-\begin{DoxyRefDesc}{\-Bug}
-\item[\hyperlink{bug__bug000001}{\-Bug}]\-All pointer-\/based parameters seem to return an error.\end{DoxyRefDesc}
+\begin{Desc}
+\item[\hyperlink{bug__bug000001}{Bug}]All pointer-\/based parameters seem to return an error.\end{Desc}
 
 
 
-\begin{DoxyParams}{\-Parameters}
-{\em write\-Fmt} & \-A string that defines the format of the output. \\
+\begin{DoxyParams}{Parameters}
+{\em writeFmt} & A string that defines the format of the output. \\
 \hline
 \end{DoxyParams}
-\hypertarget{classSerialPort_af414526bcb7b6b227d3efcb8a37c7bdc}{\index{\-Serial\-Port@{\-Serial\-Port}!\-Read@{\-Read}}
-\index{\-Read@{\-Read}!SerialPort@{\-Serial\-Port}}
-\subsubsection[{\-Read}]{\setlength{\rightskip}{0pt plus 5cm}\-U\-I\-N\-T32 {\bf \-Serial\-Port\-::\-Read} (
+\hypertarget{classSerialPort_af414526bcb7b6b227d3efcb8a37c7bdc}{
+\index{SerialPort@{SerialPort}!Read@{Read}}
+\index{Read@{Read}!SerialPort@{SerialPort}}
+\subsubsection[{Read}]{\setlength{\rightskip}{0pt plus 5cm}UINT32 SerialPort::Read (
 \begin{DoxyParamCaption}
 \item[{char $\ast$}]{buffer, }
-\item[{\-I\-N\-T32}]{count}
+\item[{INT32}]{count}
 \end{DoxyParamCaption}
-)}}\label{classSerialPort_af414526bcb7b6b227d3efcb8a37c7bdc}
-\-Read raw bytes out of the buffer.
+)}}
+\label{classSerialPort_af414526bcb7b6b227d3efcb8a37c7bdc}
+Read raw bytes out of the buffer.
 
 
-\begin{DoxyParams}{\-Parameters}
-{\em buffer} & \-Pointer to the buffer to store the bytes in. \\
+\begin{DoxyParams}{Parameters}
+{\em buffer} & Pointer to the buffer to store the bytes in. \\
 \hline
-{\em count} & \-The maximum number of bytes to read. \\
+{\em count} & The maximum number of bytes to read. \\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{\-Returns}
-\-The number of bytes actually read into the buffer. 
+\begin{DoxyReturn}{Returns}
+The number of bytes actually read into the buffer. 
 \end{DoxyReturn}
-\hypertarget{classSerialPort_ab00d8ab877678575767459e9166f775d}{\index{\-Serial\-Port@{\-Serial\-Port}!\-Reset@{\-Reset}}
-\index{\-Reset@{\-Reset}!SerialPort@{\-Serial\-Port}}
-\subsubsection[{\-Reset}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Serial\-Port\-::\-Reset} (
+\hypertarget{classSerialPort_ab00d8ab877678575767459e9166f775d}{
+\index{SerialPort@{SerialPort}!Reset@{Reset}}
+\index{Reset@{Reset}!SerialPort@{SerialPort}}
+\subsubsection[{Reset}]{\setlength{\rightskip}{0pt plus 5cm}void SerialPort::Reset (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)}}\label{classSerialPort_ab00d8ab877678575767459e9166f775d}
-\-Reset the serial port driver to a known state.
+)}}
+\label{classSerialPort_ab00d8ab877678575767459e9166f775d}
+Reset the serial port driver to a known state.
 
-\-Empty the transmit and receive buffers in the device and formatted \-I/\-O. \hypertarget{classSerialPort_a59c35256ee16b2afa2012e2dbd7f5c20}{\index{\-Serial\-Port@{\-Serial\-Port}!\-Scanf@{\-Scanf}}
-\index{\-Scanf@{\-Scanf}!SerialPort@{\-Serial\-Port}}
-\subsubsection[{\-Scanf}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Serial\-Port\-::\-Scanf} (
+Empty the transmit and receive buffers in the device and formatted I/O. \hypertarget{classSerialPort_a59c35256ee16b2afa2012e2dbd7f5c20}{
+\index{SerialPort@{SerialPort}!Scanf@{Scanf}}
+\index{Scanf@{Scanf}!SerialPort@{SerialPort}}
+\subsubsection[{Scanf}]{\setlength{\rightskip}{0pt plus 5cm}void SerialPort::Scanf (
 \begin{DoxyParamCaption}
-\item[{const char $\ast$}]{read\-Fmt, }
+\item[{const char $\ast$}]{readFmt, }
 \item[{}]{...}
 \end{DoxyParamCaption}
-)}}\label{classSerialPort_a59c35256ee16b2afa2012e2dbd7f5c20}
-\-Input formatted text from the serial port.
+)}}
+\label{classSerialPort_a59c35256ee16b2afa2012e2dbd7f5c20}
+Input formatted text from the serial port.
 
-\begin{DoxyRefDesc}{\-Bug}
-\item[\hyperlink{bug__bug000002}{\-Bug}]\-All pointer-\/based parameters seem to return an error.\end{DoxyRefDesc}
+\begin{Desc}
+\item[\hyperlink{bug__bug000002}{Bug}]All pointer-\/based parameters seem to return an error.\end{Desc}
 
 
 
-\begin{DoxyParams}{\-Parameters}
-{\em read\-Fmt} & \-A string that defines the format of the input. \\
+\begin{DoxyParams}{Parameters}
+{\em readFmt} & A string that defines the format of the input. \\
 \hline
 \end{DoxyParams}
-\hypertarget{classSerialPort_ad1163b360e467c7c49fcd8467f8d30ad}{\index{\-Serial\-Port@{\-Serial\-Port}!\-Set\-Flow\-Control@{\-Set\-Flow\-Control}}
-\index{\-Set\-Flow\-Control@{\-Set\-Flow\-Control}!SerialPort@{\-Serial\-Port}}
-\subsubsection[{\-Set\-Flow\-Control}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Serial\-Port\-::\-Set\-Flow\-Control} (
+\hypertarget{classSerialPort_ad1163b360e467c7c49fcd8467f8d30ad}{
+\index{SerialPort@{SerialPort}!SetFlowControl@{SetFlowControl}}
+\index{SetFlowControl@{SetFlowControl}!SerialPort@{SerialPort}}
+\subsubsection[{SetFlowControl}]{\setlength{\rightskip}{0pt plus 5cm}void SerialPort::SetFlowControl (
 \begin{DoxyParamCaption}
-\item[{\-Serial\-Port\-::\-Flow\-Control}]{flow\-Control}
+\item[{SerialPort::FlowControl}]{flowControl}
 \end{DoxyParamCaption}
-)}}\label{classSerialPort_ad1163b360e467c7c49fcd8467f8d30ad}
-\-Set the type of flow control to enable on this port.
+)}}
+\label{classSerialPort_ad1163b360e467c7c49fcd8467f8d30ad}
+Set the type of flow control to enable on this port.
 
-\-By default, flow control is disabled. \hypertarget{classSerialPort_af361b5d5d045d6d36df507a3006c7cb1}{\index{\-Serial\-Port@{\-Serial\-Port}!\-Set\-Read\-Buffer\-Size@{\-Set\-Read\-Buffer\-Size}}
-\index{\-Set\-Read\-Buffer\-Size@{\-Set\-Read\-Buffer\-Size}!SerialPort@{\-Serial\-Port}}
-\subsubsection[{\-Set\-Read\-Buffer\-Size}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Serial\-Port\-::\-Set\-Read\-Buffer\-Size} (
+By default, flow control is disabled. \hypertarget{classSerialPort_af361b5d5d045d6d36df507a3006c7cb1}{
+\index{SerialPort@{SerialPort}!SetReadBufferSize@{SetReadBufferSize}}
+\index{SetReadBufferSize@{SetReadBufferSize}!SerialPort@{SerialPort}}
+\subsubsection[{SetReadBufferSize}]{\setlength{\rightskip}{0pt plus 5cm}void SerialPort::SetReadBufferSize (
 \begin{DoxyParamCaption}
-\item[{\-U\-I\-N\-T32}]{size}
+\item[{UINT32}]{size}
 \end{DoxyParamCaption}
-)}}\label{classSerialPort_af361b5d5d045d6d36df507a3006c7cb1}
-\-Specify the size of the input buffer.
+)}}
+\label{classSerialPort_af361b5d5d045d6d36df507a3006c7cb1}
+Specify the size of the input buffer.
 
-\-Specify the amount of data that can be stored before data from the device is returned to \-Read or \-Scanf. \-If you want data that is recieved to be returned immediately, set this to 1.
+Specify the amount of data that can be stored before data from the device is returned to Read or Scanf. If you want data that is recieved to be returned immediately, set this to 1.
 
-\-It the buffer is not filled before the read timeout expires, all data that has been received so far will be returned.
+It the buffer is not filled before the read timeout expires, all data that has been received so far will be returned.
 
 
-\begin{DoxyParams}{\-Parameters}
-{\em size} & \-The read buffer size. \\
+\begin{DoxyParams}{Parameters}
+{\em size} & The read buffer size. \\
 \hline
 \end{DoxyParams}
-\hypertarget{classSerialPort_aa3ad209dd5ab32427fccf711b476d8bf}{\index{\-Serial\-Port@{\-Serial\-Port}!\-Set\-Timeout@{\-Set\-Timeout}}
-\index{\-Set\-Timeout@{\-Set\-Timeout}!SerialPort@{\-Serial\-Port}}
-\subsubsection[{\-Set\-Timeout}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Serial\-Port\-::\-Set\-Timeout} (
+\hypertarget{classSerialPort_aa3ad209dd5ab32427fccf711b476d8bf}{
+\index{SerialPort@{SerialPort}!SetTimeout@{SetTimeout}}
+\index{SetTimeout@{SetTimeout}!SerialPort@{SerialPort}}
+\subsubsection[{SetTimeout}]{\setlength{\rightskip}{0pt plus 5cm}void SerialPort::SetTimeout (
 \begin{DoxyParamCaption}
 \item[{float}]{timeout}
 \end{DoxyParamCaption}
-)}}\label{classSerialPort_aa3ad209dd5ab32427fccf711b476d8bf}
-\-Configure the timeout of the serial port.
+)}}
+\label{classSerialPort_aa3ad209dd5ab32427fccf711b476d8bf}
+Configure the timeout of the serial port.
 
-\-This defines the timeout for transactions with the hardware. \-It will affect reads and very large writes.
+This defines the timeout for transactions with the hardware. It will affect reads and very large writes.
 
 
-\begin{DoxyParams}{\-Parameters}
-{\em timeout} & \-The number of seconds to to wait for \-I/\-O. \\
+\begin{DoxyParams}{Parameters}
+{\em timeout} & The number of seconds to to wait for I/O. \\
 \hline
 \end{DoxyParams}
-\hypertarget{classSerialPort_a1fd9a6370da04fee0bdc978d04a95c78}{\index{\-Serial\-Port@{\-Serial\-Port}!\-Set\-Write\-Buffer\-Mode@{\-Set\-Write\-Buffer\-Mode}}
-\index{\-Set\-Write\-Buffer\-Mode@{\-Set\-Write\-Buffer\-Mode}!SerialPort@{\-Serial\-Port}}
-\subsubsection[{\-Set\-Write\-Buffer\-Mode}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Serial\-Port\-::\-Set\-Write\-Buffer\-Mode} (
+\hypertarget{classSerialPort_a1fd9a6370da04fee0bdc978d04a95c78}{
+\index{SerialPort@{SerialPort}!SetWriteBufferMode@{SetWriteBufferMode}}
+\index{SetWriteBufferMode@{SetWriteBufferMode}!SerialPort@{SerialPort}}
+\subsubsection[{SetWriteBufferMode}]{\setlength{\rightskip}{0pt plus 5cm}void SerialPort::SetWriteBufferMode (
 \begin{DoxyParamCaption}
-\item[{\-Serial\-Port\-::\-Write\-Buffer\-Mode}]{mode}
+\item[{SerialPort::WriteBufferMode}]{mode}
 \end{DoxyParamCaption}
-)}}\label{classSerialPort_a1fd9a6370da04fee0bdc978d04a95c78}
-\-Specify the flushing behavior of the output buffer.
+)}}
+\label{classSerialPort_a1fd9a6370da04fee0bdc978d04a95c78}
+Specify the flushing behavior of the output buffer.
 
-\-When set to k\-Flush\-On\-Access, data is synchronously written to the serial port after each call to either \hyperlink{classSerialPort_a7e6079639bb99639ab7b89353a55ed28}{\-Printf()} or \hyperlink{classSerialPort_a95e5422930b1f9c90e3857a973d9170e}{\-Write()}.
+When set to kFlushOnAccess, data is synchronously written to the serial port after each call to either \hyperlink{classSerialPort_a7e6079639bb99639ab7b89353a55ed28}{Printf()} or \hyperlink{classSerialPort_a95e5422930b1f9c90e3857a973d9170e}{Write()}.
 
-\-When set to k\-Flush\-When\-Full, data will only be written to the serial port when the buffer is full or when \hyperlink{classSerialPort_aea93ced7190870183d46f7aa303b45f6}{\-Flush()} is called.
+When set to kFlushWhenFull, data will only be written to the serial port when the buffer is full or when \hyperlink{classSerialPort_aea93ced7190870183d46f7aa303b45f6}{Flush()} is called.
 
 
-\begin{DoxyParams}{\-Parameters}
-{\em mode} & \-The write buffer mode. \\
+\begin{DoxyParams}{Parameters}
+{\em mode} & The write buffer mode. \\
 \hline
 \end{DoxyParams}
-\hypertarget{classSerialPort_a819775c096d0a679d0aad4ee420413a4}{\index{\-Serial\-Port@{\-Serial\-Port}!\-Set\-Write\-Buffer\-Size@{\-Set\-Write\-Buffer\-Size}}
-\index{\-Set\-Write\-Buffer\-Size@{\-Set\-Write\-Buffer\-Size}!SerialPort@{\-Serial\-Port}}
-\subsubsection[{\-Set\-Write\-Buffer\-Size}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Serial\-Port\-::\-Set\-Write\-Buffer\-Size} (
+\hypertarget{classSerialPort_a819775c096d0a679d0aad4ee420413a4}{
+\index{SerialPort@{SerialPort}!SetWriteBufferSize@{SetWriteBufferSize}}
+\index{SetWriteBufferSize@{SetWriteBufferSize}!SerialPort@{SerialPort}}
+\subsubsection[{SetWriteBufferSize}]{\setlength{\rightskip}{0pt plus 5cm}void SerialPort::SetWriteBufferSize (
 \begin{DoxyParamCaption}
-\item[{\-U\-I\-N\-T32}]{size}
+\item[{UINT32}]{size}
 \end{DoxyParamCaption}
-)}}\label{classSerialPort_a819775c096d0a679d0aad4ee420413a4}
-\-Specify the size of the output buffer.
+)}}
+\label{classSerialPort_a819775c096d0a679d0aad4ee420413a4}
+Specify the size of the output buffer.
 
-\-Specify the amount of data that can be stored before being transmitted to the device.
+Specify the amount of data that can be stored before being transmitted to the device.
 
 
-\begin{DoxyParams}{\-Parameters}
-{\em size} & \-The write buffer size. \\
+\begin{DoxyParams}{Parameters}
+{\em size} & The write buffer size. \\
 \hline
 \end{DoxyParams}
-\hypertarget{classSerialPort_a95e5422930b1f9c90e3857a973d9170e}{\index{\-Serial\-Port@{\-Serial\-Port}!\-Write@{\-Write}}
-\index{\-Write@{\-Write}!SerialPort@{\-Serial\-Port}}
-\subsubsection[{\-Write}]{\setlength{\rightskip}{0pt plus 5cm}\-U\-I\-N\-T32 {\bf \-Serial\-Port\-::\-Write} (
+\hypertarget{classSerialPort_a95e5422930b1f9c90e3857a973d9170e}{
+\index{SerialPort@{SerialPort}!Write@{Write}}
+\index{Write@{Write}!SerialPort@{SerialPort}}
+\subsubsection[{Write}]{\setlength{\rightskip}{0pt plus 5cm}UINT32 SerialPort::Write (
 \begin{DoxyParamCaption}
 \item[{const char $\ast$}]{buffer, }
-\item[{\-I\-N\-T32}]{count}
+\item[{INT32}]{count}
 \end{DoxyParamCaption}
-)}}\label{classSerialPort_a95e5422930b1f9c90e3857a973d9170e}
-\-Write raw bytes to the buffer.
+)}}
+\label{classSerialPort_a95e5422930b1f9c90e3857a973d9170e}
+Write raw bytes to the buffer.
 
 
-\begin{DoxyParams}{\-Parameters}
-{\em buffer} & \-Pointer to the buffer to read the bytes from. \\
+\begin{DoxyParams}{Parameters}
+{\em buffer} & Pointer to the buffer to read the bytes from. \\
 \hline
-{\em count} & \-The maximum number of bytes to write. \\
+{\em count} & The maximum number of bytes to write. \\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{\-Returns}
-\-The number of bytes actually written into the port. 
+\begin{DoxyReturn}{Returns}
+The number of bytes actually written into the port. 
 \end{DoxyReturn}
 
 
-\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
 \item 
-\-Serial\-Port.\-h\item 
-\-Serial\-Port.\-cpp\end{DoxyCompactItemize}
+SerialPort.h\item 
+SerialPort.cpp\end{DoxyCompactItemize}

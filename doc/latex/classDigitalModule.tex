@@ -1,348 +1,518 @@
-\hypertarget{classDigitalModule}{\section{\-Digital\-Module \-Class \-Reference}
-\label{classDigitalModule}\index{\-Digital\-Module@{\-Digital\-Module}}
+\hypertarget{classDigitalModule}{
+\section{DigitalModule Class Reference}
+\label{classDigitalModule}\index{DigitalModule@{DigitalModule}}
 }
-\-Inheritance diagram for \-Digital\-Module\-:\begin{figure}[H]
+Inheritance diagram for DigitalModule:\begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[height=4.000000cm]{classDigitalModule}
 \end{center}
 \end{figure}
-\subsection*{\-Public \-Member \-Functions}
+\subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \hyperlink{classDigitalModule_abc8303e66903fec0e24714f307cbb68c}{\-Set\-P\-W\-M} (\-U\-I\-N\-T32 channel, \-U\-I\-N\-T8 value)
+void \hyperlink{classDigitalModule_abc8303e66903fec0e24714f307cbb68c}{SetPWM} (UINT32 channel, UINT8 value)
 \item 
-\-U\-I\-N\-T8 \hyperlink{classDigitalModule_a5478b09023e19893ac3829c653221089}{\-Get\-P\-W\-M} (\-U\-I\-N\-T32 channel)
+UINT8 \hyperlink{classDigitalModule_a5478b09023e19893ac3829c653221089}{GetPWM} (UINT32 channel)
 \item 
-void \hyperlink{classDigitalModule_aaf1ce0fcdc44fa5b542a34c3c0f308c0}{\-Set\-P\-W\-M\-Period\-Scale} (\-U\-I\-N\-T32 channel, \-U\-I\-N\-T32 squelch\-Mask)
+void \hyperlink{classDigitalModule_aaf1ce0fcdc44fa5b542a34c3c0f308c0}{SetPWMPeriodScale} (UINT32 channel, UINT32 squelchMask)
 \item 
-void \hyperlink{classDigitalModule_aef58ca9a278fae8525da6324ec0f0b1a}{\-Set\-Relay\-Forward} (\-U\-I\-N\-T32 channel, bool on)
+void \hyperlink{classDigitalModule_aef58ca9a278fae8525da6324ec0f0b1a}{SetRelayForward} (UINT32 channel, bool on)
 \item 
-void \hyperlink{classDigitalModule_a6ce11154d9a4480ff1f017c9d8f0b9a5}{\-Set\-Relay\-Reverse} (\-U\-I\-N\-T32 channel, bool on)
+void \hyperlink{classDigitalModule_a6ce11154d9a4480ff1f017c9d8f0b9a5}{SetRelayReverse} (UINT32 channel, bool on)
 \item 
-bool \hyperlink{classDigitalModule_a521a7406eac1b38544f1eae056dd94bd}{\-Get\-Relay\-Forward} (\-U\-I\-N\-T32 channel)
+bool \hyperlink{classDigitalModule_a521a7406eac1b38544f1eae056dd94bd}{GetRelayForward} (UINT32 channel)
 \item 
-\-U\-I\-N\-T8 \hyperlink{classDigitalModule_a07bc18b3c640ef225098f7e8bc3326d1}{\-Get\-Relay\-Forward} (void)
+UINT8 \hyperlink{classDigitalModule_a42c0a0ce307e655ee5a87c16bdaddc04}{GetRelayForward} ()
 \item 
-bool \hyperlink{classDigitalModule_a4f95a8b6be89d69091cc5d536ed22384}{\-Get\-Relay\-Reverse} (\-U\-I\-N\-T32 channel)
+bool \hyperlink{classDigitalModule_a4f95a8b6be89d69091cc5d536ed22384}{GetRelayReverse} (UINT32 channel)
 \item 
-\-U\-I\-N\-T8 \hyperlink{classDigitalModule_ab30dc33f4f7872588cb001cb91eb65c3}{\-Get\-Relay\-Reverse} (void)
+UINT8 \hyperlink{classDigitalModule_afc5858981757c8ecba5f533e8c4b69a8}{GetRelayReverse} ()
 \item 
-bool \hyperlink{classDigitalModule_a55769aca83a090e7869764829248561a}{\-Allocate\-D\-I\-O} (\-U\-I\-N\-T32 channel, bool input)
+bool \hyperlink{classDigitalModule_a55769aca83a090e7869764829248561a}{AllocateDIO} (UINT32 channel, bool input)
 \item 
-void \hyperlink{classDigitalModule_a86f94ef21bf5a5b6dbdf66a18f8b8328}{\-Free\-D\-I\-O} (\-U\-I\-N\-T32 channel)
+void \hyperlink{classDigitalModule_a86f94ef21bf5a5b6dbdf66a18f8b8328}{FreeDIO} (UINT32 channel)
 \item 
-void \hyperlink{classDigitalModule_abd4f1500090e6e48cbbf8ad244d29fcd}{\-Set\-D\-I\-O} (\-U\-I\-N\-T32 channel, short value)
+void \hyperlink{classDigitalModule_abd4f1500090e6e48cbbf8ad244d29fcd}{SetDIO} (UINT32 channel, short value)
 \item 
-bool \hyperlink{classDigitalModule_aff95a87a6af8d7d1e76bb51c2de9fc35}{\-Get\-D\-I\-O} (\-U\-I\-N\-T32 channel)
+bool \hyperlink{classDigitalModule_aff95a87a6af8d7d1e76bb51c2de9fc35}{GetDIO} (UINT32 channel)
 \item 
-\-U\-I\-N\-T16 \hyperlink{classDigitalModule_ae45042ea2f66527493bd8c5a39410612}{\-Get\-D\-I\-O} (void)
+UINT16 \hyperlink{classDigitalModule_afc2c26333c078645033206d3ee5d7f51}{GetDIO} ()
 \item 
-bool \hyperlink{classDigitalModule_a4d3a7e90d5cca4e77c745865683b2957}{\-Get\-D\-I\-O\-Direction} (\-U\-I\-N\-T32 channel)
+bool \hyperlink{classDigitalModule_a4d3a7e90d5cca4e77c745865683b2957}{GetDIODirection} (UINT32 channel)
 \item 
-\-U\-I\-N\-T16 \hyperlink{classDigitalModule_ace6f6291bc6772c4824d41ca4091570e}{\-Get\-D\-I\-O\-Direction} (void)
+UINT16 \hyperlink{classDigitalModule_af4acbac69f014df143d972512e014a0f}{GetDIODirection} ()
 \item 
-void \hyperlink{classDigitalModule_a3651d475c592ed0330cfb08d1de00bc8}{\-Pulse} (\-U\-I\-N\-T32 channel, float pulse\-Length)
+void \hyperlink{classDigitalModule_a3651d475c592ed0330cfb08d1de00bc8}{Pulse} (UINT32 channel, float pulseLength)
 \item 
-bool \hyperlink{classDigitalModule_affabf884db92ab9290189cff53003480}{\-Is\-Pulsing} (\-U\-I\-N\-T32 channel)
+bool \hyperlink{classDigitalModule_affabf884db92ab9290189cff53003480}{IsPulsing} (UINT32 channel)
 \item 
-bool \hyperlink{classDigitalModule_a16bfc42defa1aab106cfbc6fd722b28f}{\-Is\-Pulsing} ()
+bool \hyperlink{classDigitalModule_a16bfc42defa1aab106cfbc6fd722b28f}{IsPulsing} ()
 \item 
-\-U\-I\-N\-T32 \hyperlink{classDigitalModule_a7289f380a40fa407f9b31f81fb8ed0f3}{\-Allocate\-D\-O\-\_\-\-P\-W\-M} ()
+UINT32 \hyperlink{classDigitalModule_a7289f380a40fa407f9b31f81fb8ed0f3}{AllocateDO\_\-PWM} ()
 \item 
-void \hyperlink{classDigitalModule_a7e388e508e7de68a06868a127670a9da}{\-Free\-D\-O\-\_\-\-P\-W\-M} (\-U\-I\-N\-T32 pwm\-Generator)
+void \hyperlink{classDigitalModule_a7e388e508e7de68a06868a127670a9da}{FreeDO\_\-PWM} (UINT32 pwmGenerator)
 \item 
-void \hyperlink{classDigitalModule_a3419b44d9ab72e95df6c0917e5e7db72}{\-Set\-D\-O\-\_\-\-P\-W\-M\-Rate} (float rate)
+void \hyperlink{classDigitalModule_a3419b44d9ab72e95df6c0917e5e7db72}{SetDO\_\-PWMRate} (float rate)
 \item 
-void \hyperlink{classDigitalModule_a74d6d4ae310213e91891de4b8940b917}{\-Set\-D\-O\-\_\-\-P\-W\-M\-Duty\-Cycle} (\-U\-I\-N\-T32 pwm\-Generator, float duty\-Cycle)
+void \hyperlink{classDigitalModule_a74d6d4ae310213e91891de4b8940b917}{SetDO\_\-PWMDutyCycle} (UINT32 pwmGenerator, float dutyCycle)
 \item 
-void \hyperlink{classDigitalModule_ac9b8da9267956e905c9083dcfb6b4a8f}{\-Set\-D\-O\-\_\-\-P\-W\-M\-Output\-Channel} (\-U\-I\-N\-T32 pwm\-Generator, \-U\-I\-N\-T32 channel)
+void \hyperlink{classDigitalModule_ac9b8da9267956e905c9083dcfb6b4a8f}{SetDO\_\-PWMOutputChannel} (UINT32 pwmGenerator, UINT32 channel)
 \item 
-\hyperlink{classI2C}{\-I2\-C} $\ast$ \hyperlink{classDigitalModule_ae776c8449cf18b7f90fec0126b3e8373}{\-Get\-I2\-C} (\-U\-I\-N\-T32 address)
+\hyperlink{classI2C}{I2C} $\ast$ \hyperlink{classDigitalModule_ae776c8449cf18b7f90fec0126b3e8373}{GetI2C} (UINT32 address)
 \end{DoxyCompactItemize}
-\subsection*{\-Static \-Public \-Member \-Functions}
+\subsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{classDigitalModule_a4ad8f109a2f9a6a5a7a73bc3fbb0b073}{static \-U\-I\-N\-T32 {\bfseries \-Slot\-To\-Index} (\-U\-I\-N\-T32 slot)}\label{classDigitalModule_a4ad8f109a2f9a6a5a7a73bc3fbb0b073}
+static \hyperlink{classDigitalModule}{DigitalModule} $\ast$ \hyperlink{classDigitalModule_ad6384445078c80a3b77ef4d2e840f930}{GetInstance} (UINT8 moduleNumber)
+\item 
+\hypertarget{classDigitalModule_a3960491ecc2a2adac1f53d87e9cbcbdf}{
+static UINT8 {\bfseries RemapDigitalChannel} (UINT32 channel)}
+\label{classDigitalModule_a3960491ecc2a2adac1f53d87e9cbcbdf}
 
 \item 
-static \hyperlink{classDigitalModule}{\-Digital\-Module} $\ast$ \hyperlink{classDigitalModule_a75a820addf9d20b50be21d9387f1a698}{\-Get\-Instance} (\-U\-I\-N\-T32 slot)
-\item 
-\hypertarget{classDigitalModule_a3960491ecc2a2adac1f53d87e9cbcbdf}{static \-U\-I\-N\-T8 {\bfseries \-Remap\-Digital\-Channel} (\-U\-I\-N\-T32 channel)}\label{classDigitalModule_a3960491ecc2a2adac1f53d87e9cbcbdf}
-
-\item 
-\hypertarget{classDigitalModule_a273fcd2893fbb23fe9747a8468ef3cff}{static \-U\-I\-N\-T8 {\bfseries \-Unmap\-Digital\-Channel} (\-U\-I\-N\-T32 channel)}\label{classDigitalModule_a273fcd2893fbb23fe9747a8468ef3cff}
+\hypertarget{classDigitalModule_a273fcd2893fbb23fe9747a8468ef3cff}{
+static UINT8 {\bfseries UnmapDigitalChannel} (UINT32 channel)}
+\label{classDigitalModule_a273fcd2893fbb23fe9747a8468ef3cff}
 
 \end{DoxyCompactItemize}
-\subsection*{\-Protected \-Member \-Functions}
+\subsection*{Protected Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{classDigitalModule_a338fe8e9e5fe4376f1b0fbe07e97372f}{\-Digital\-Module} (\-U\-I\-N\-T32 slot)
+\hyperlink{classDigitalModule_ab0794c372d0465bbf5c409c9e46dd0de}{DigitalModule} (UINT8 moduleNumber)
 \end{DoxyCompactItemize}
-\subsection*{\-Friends}
+\subsection*{Friends}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{classDigitalModule_af7fa5a7b20f73e730df04145e24f8151}{class {\bfseries \-I2\-C}}\label{classDigitalModule_af7fa5a7b20f73e730df04145e24f8151}
+\hypertarget{classDigitalModule_af7fa5a7b20f73e730df04145e24f8151}{
+class \hyperlink{classDigitalModule_af7fa5a7b20f73e730df04145e24f8151}{I2C}}
+\label{classDigitalModule_af7fa5a7b20f73e730df04145e24f8151}
+
+\item 
+\hypertarget{classDigitalModule_a21f639900c480510650969df9c74d17d}{
+class \hyperlink{classDigitalModule_a21f639900c480510650969df9c74d17d}{Module}}
+\label{classDigitalModule_a21f639900c480510650969df9c74d17d}
 
 \end{DoxyCompactItemize}
 
 
-\subsection{\-Constructor \& \-Destructor \-Documentation}
-\hypertarget{classDigitalModule_a338fe8e9e5fe4376f1b0fbe07e97372f}{\index{\-Digital\-Module@{\-Digital\-Module}!\-Digital\-Module@{\-Digital\-Module}}
-\index{\-Digital\-Module@{\-Digital\-Module}!DigitalModule@{\-Digital\-Module}}
-\subsubsection[{\-Digital\-Module}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Digital\-Module\-::\-Digital\-Module} (
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classDigitalModule_ab0794c372d0465bbf5c409c9e46dd0de}{
+\index{DigitalModule@{DigitalModule}!DigitalModule@{DigitalModule}}
+\index{DigitalModule@{DigitalModule}!DigitalModule@{DigitalModule}}
+\subsubsection[{DigitalModule}]{\setlength{\rightskip}{0pt plus 5cm}DigitalModule::DigitalModule (
 \begin{DoxyParamCaption}
-\item[{\-U\-I\-N\-T32}]{slot}
+\item[{UINT8}]{moduleNumber}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily  \mbox{[}explicit, protected\mbox{]}}}}\label{classDigitalModule_a338fe8e9e5fe4376f1b0fbe07e97372f}
-\-Create a new instance of an digital module. \-Create an instance of the digital module object. \-Initialize all the parameters to reasonable values on start. \-Setting a global value on an digital module can be done only once unless subsequent values are set the previously set value. \-Digital modules are a singleton, so the constructor is never called outside of this class. 
+)\hspace{0.3cm}{\ttfamily  \mbox{[}explicit, protected\mbox{]}}}}
+\label{classDigitalModule_ab0794c372d0465bbf5c409c9e46dd0de}
+Create a new instance of an digital module. Create an instance of the digital module object. Initialize all the parameters to reasonable values on start. Setting a global value on an digital module can be done only once unless subsequent values are set the previously set value. Digital modules are a singleton, so the constructor is never called outside of this class.
 
-\subsection{\-Member \-Function \-Documentation}
-\hypertarget{classDigitalModule_a55769aca83a090e7869764829248561a}{\index{\-Digital\-Module@{\-Digital\-Module}!\-Allocate\-D\-I\-O@{\-Allocate\-D\-I\-O}}
-\index{\-Allocate\-D\-I\-O@{\-Allocate\-D\-I\-O}!DigitalModule@{\-Digital\-Module}}
-\subsubsection[{\-Allocate\-D\-I\-O}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Digital\-Module\-::\-Allocate\-D\-I\-O} (
+
+\begin{DoxyParams}{Parameters}
+{\em moduleNumber} & The digital module to create (1 or 2). \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classDigitalModule_a55769aca83a090e7869764829248561a}{
+\index{DigitalModule@{DigitalModule}!AllocateDIO@{AllocateDIO}}
+\index{AllocateDIO@{AllocateDIO}!DigitalModule@{DigitalModule}}
+\subsubsection[{AllocateDIO}]{\setlength{\rightskip}{0pt plus 5cm}bool DigitalModule::AllocateDIO (
 \begin{DoxyParamCaption}
-\item[{\-U\-I\-N\-T32}]{channel, }
+\item[{UINT32}]{channel, }
 \item[{bool}]{input}
 \end{DoxyParamCaption}
-)}}\label{classDigitalModule_a55769aca83a090e7869764829248561a}
-\-Allocate \-Digital \-I/\-O channels. \-Allocate channels so that they are not accidently reused. \-Also the direction is set at the time of the allocation. \hypertarget{classDigitalModule_a7289f380a40fa407f9b31f81fb8ed0f3}{\index{\-Digital\-Module@{\-Digital\-Module}!\-Allocate\-D\-O\-\_\-\-P\-W\-M@{\-Allocate\-D\-O\-\_\-\-P\-W\-M}}
-\index{\-Allocate\-D\-O\-\_\-\-P\-W\-M@{\-Allocate\-D\-O\-\_\-\-P\-W\-M}!DigitalModule@{\-Digital\-Module}}
-\subsubsection[{\-Allocate\-D\-O\-\_\-\-P\-W\-M}]{\setlength{\rightskip}{0pt plus 5cm}\-U\-I\-N\-T32 {\bf \-Digital\-Module\-::\-Allocate\-D\-O\-\_\-\-P\-W\-M} (
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-)}}\label{classDigitalModule_a7289f380a40fa407f9b31f81fb8ed0f3}
-\-Allocate a \-D\-O \hyperlink{classPWM}{\-P\-W\-M} \-Generator. \-Allocate \hyperlink{classPWM}{\-P\-W\-M} generators so that they are not accidently reused. \hypertarget{classDigitalModule_a86f94ef21bf5a5b6dbdf66a18f8b8328}{\index{\-Digital\-Module@{\-Digital\-Module}!\-Free\-D\-I\-O@{\-Free\-D\-I\-O}}
-\index{\-Free\-D\-I\-O@{\-Free\-D\-I\-O}!DigitalModule@{\-Digital\-Module}}
-\subsubsection[{\-Free\-D\-I\-O}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Digital\-Module\-::\-Free\-D\-I\-O} (
-\begin{DoxyParamCaption}
-\item[{\-U\-I\-N\-T32}]{channel}
-\end{DoxyParamCaption}
-)}}\label{classDigitalModule_a86f94ef21bf5a5b6dbdf66a18f8b8328}
-\-Free the resource associated with a digital \-I/\-O channel. \hypertarget{classDigitalModule_a7e388e508e7de68a06868a127670a9da}{\index{\-Digital\-Module@{\-Digital\-Module}!\-Free\-D\-O\-\_\-\-P\-W\-M@{\-Free\-D\-O\-\_\-\-P\-W\-M}}
-\index{\-Free\-D\-O\-\_\-\-P\-W\-M@{\-Free\-D\-O\-\_\-\-P\-W\-M}!DigitalModule@{\-Digital\-Module}}
-\subsubsection[{\-Free\-D\-O\-\_\-\-P\-W\-M}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Digital\-Module\-::\-Free\-D\-O\-\_\-\-P\-W\-M} (
-\begin{DoxyParamCaption}
-\item[{\-U\-I\-N\-T32}]{pwm\-Generator}
-\end{DoxyParamCaption}
-)}}\label{classDigitalModule_a7e388e508e7de68a06868a127670a9da}
-\-Free the resource associated with a \-D\-O \hyperlink{classPWM}{\-P\-W\-M} generator. \hypertarget{classDigitalModule_aff95a87a6af8d7d1e76bb51c2de9fc35}{\index{\-Digital\-Module@{\-Digital\-Module}!\-Get\-D\-I\-O@{\-Get\-D\-I\-O}}
-\index{\-Get\-D\-I\-O@{\-Get\-D\-I\-O}!DigitalModule@{\-Digital\-Module}}
-\subsubsection[{\-Get\-D\-I\-O}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Digital\-Module\-::\-Get\-D\-I\-O} (
-\begin{DoxyParamCaption}
-\item[{\-U\-I\-N\-T32}]{channel}
-\end{DoxyParamCaption}
-)}}\label{classDigitalModule_aff95a87a6af8d7d1e76bb51c2de9fc35}
-\-Read a digital \-I/\-O bit from the \-F\-P\-G\-A. \-Get a single value from a digital \-I/\-O channel. \hypertarget{classDigitalModule_ae45042ea2f66527493bd8c5a39410612}{\index{\-Digital\-Module@{\-Digital\-Module}!\-Get\-D\-I\-O@{\-Get\-D\-I\-O}}
-\index{\-Get\-D\-I\-O@{\-Get\-D\-I\-O}!DigitalModule@{\-Digital\-Module}}
-\subsubsection[{\-Get\-D\-I\-O}]{\setlength{\rightskip}{0pt plus 5cm}\-U\-I\-N\-T16 {\bf \-Digital\-Module\-::\-Get\-D\-I\-O} (
-\begin{DoxyParamCaption}
-\item[{void}]{}
-\end{DoxyParamCaption}
-)}}\label{classDigitalModule_ae45042ea2f66527493bd8c5a39410612}
-\-Read the state of all the \-Digital \-I/\-O lines from the \-F\-P\-G\-A \-These are not remapped to logical order. \-They are still in hardware order. \hypertarget{classDigitalModule_a4d3a7e90d5cca4e77c745865683b2957}{\index{\-Digital\-Module@{\-Digital\-Module}!\-Get\-D\-I\-O\-Direction@{\-Get\-D\-I\-O\-Direction}}
-\index{\-Get\-D\-I\-O\-Direction@{\-Get\-D\-I\-O\-Direction}!DigitalModule@{\-Digital\-Module}}
-\subsubsection[{\-Get\-D\-I\-O\-Direction}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Digital\-Module\-::\-Get\-D\-I\-O\-Direction} (
-\begin{DoxyParamCaption}
-\item[{\-U\-I\-N\-T32}]{channel}
-\end{DoxyParamCaption}
-)}}\label{classDigitalModule_a4d3a7e90d5cca4e77c745865683b2957}
-\-Read the direction of a the \-Digital \-I/\-O lines \-A 1 bit means output and a 0 bit means input. \hypertarget{classDigitalModule_ace6f6291bc6772c4824d41ca4091570e}{\index{\-Digital\-Module@{\-Digital\-Module}!\-Get\-D\-I\-O\-Direction@{\-Get\-D\-I\-O\-Direction}}
-\index{\-Get\-D\-I\-O\-Direction@{\-Get\-D\-I\-O\-Direction}!DigitalModule@{\-Digital\-Module}}
-\subsubsection[{\-Get\-D\-I\-O\-Direction}]{\setlength{\rightskip}{0pt plus 5cm}\-U\-I\-N\-T16 {\bf \-Digital\-Module\-::\-Get\-D\-I\-O\-Direction} (
-\begin{DoxyParamCaption}
-\item[{void}]{}
-\end{DoxyParamCaption}
-)}}\label{classDigitalModule_ace6f6291bc6772c4824d41ca4091570e}
-\-Read the direction of all the \-Digital \-I/\-O lines from the \-F\-P\-G\-A \-A 1 bit means output and a 0 bit means input. \-These are not remapped to logical order. \-They are still in hardware order. \hypertarget{classDigitalModule_ae776c8449cf18b7f90fec0126b3e8373}{\index{\-Digital\-Module@{\-Digital\-Module}!\-Get\-I2\-C@{\-Get\-I2\-C}}
-\index{\-Get\-I2\-C@{\-Get\-I2\-C}!DigitalModule@{\-Digital\-Module}}
-\subsubsection[{\-Get\-I2\-C}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-I2\-C} $\ast$ {\bf \-Digital\-Module\-::\-Get\-I2\-C} (
-\begin{DoxyParamCaption}
-\item[{\-U\-I\-N\-T32}]{address}
-\end{DoxyParamCaption}
-)}}\label{classDigitalModule_ae776c8449cf18b7f90fec0126b3e8373}
-\-Return a pointer to an \hyperlink{classI2C}{\-I2\-C} object for this digital module \-The caller is responsible for deleting the pointer. \hypertarget{classDigitalModule_a75a820addf9d20b50be21d9387f1a698}{\index{\-Digital\-Module@{\-Digital\-Module}!\-Get\-Instance@{\-Get\-Instance}}
-\index{\-Get\-Instance@{\-Get\-Instance}!DigitalModule@{\-Digital\-Module}}
-\subsubsection[{\-Get\-Instance}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Digital\-Module} $\ast$ {\bf \-Digital\-Module\-::\-Get\-Instance} (
-\begin{DoxyParamCaption}
-\item[{\-U\-I\-N\-T32}]{slot}
-\end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{classDigitalModule_a75a820addf9d20b50be21d9387f1a698}
-\-Get an instance of an \-Digital \hyperlink{classModule}{\-Module}. \-Singleton digital module creation where a module is allocated on the first use and the same module is returned on subsequent uses. \hypertarget{classDigitalModule_a5478b09023e19893ac3829c653221089}{\index{\-Digital\-Module@{\-Digital\-Module}!\-Get\-P\-W\-M@{\-Get\-P\-W\-M}}
-\index{\-Get\-P\-W\-M@{\-Get\-P\-W\-M}!DigitalModule@{\-Digital\-Module}}
-\subsubsection[{\-Get\-P\-W\-M}]{\setlength{\rightskip}{0pt plus 5cm}\-U\-I\-N\-T8 {\bf \-Digital\-Module\-::\-Get\-P\-W\-M} (
-\begin{DoxyParamCaption}
-\item[{\-U\-I\-N\-T32}]{channel}
-\end{DoxyParamCaption}
-)}}\label{classDigitalModule_a5478b09023e19893ac3829c653221089}
-\-Get a value from a \hyperlink{classPWM}{\-P\-W\-M} channel. \-The values range from 0 to 255.
+)}}
+\label{classDigitalModule_a55769aca83a090e7869764829248561a}
+Allocate Digital I/O channels. Allocate channels so that they are not accidently reused. Also the direction is set at the time of the allocation.
 
 
-\begin{DoxyParams}{\-Parameters}
-{\em channel} & \-The \hyperlink{classPWM}{\-P\-W\-M} channel to read from. \\
+\begin{DoxyParams}{Parameters}
+{\em channel} & The Digital I/O channel \\
+\hline
+{\em input} & If true open as input; if false open as output \\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{\-Returns}
-\-The raw \hyperlink{classPWM}{\-P\-W\-M} value. 
+\begin{DoxyReturn}{Returns}
+Was successfully allocated 
 \end{DoxyReturn}
-\hypertarget{classDigitalModule_a521a7406eac1b38544f1eae056dd94bd}{\index{\-Digital\-Module@{\-Digital\-Module}!\-Get\-Relay\-Forward@{\-Get\-Relay\-Forward}}
-\index{\-Get\-Relay\-Forward@{\-Get\-Relay\-Forward}!DigitalModule@{\-Digital\-Module}}
-\subsubsection[{\-Get\-Relay\-Forward}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Digital\-Module\-::\-Get\-Relay\-Forward} (
-\begin{DoxyParamCaption}
-\item[{\-U\-I\-N\-T32}]{channel}
-\end{DoxyParamCaption}
-)}}\label{classDigitalModule_a521a7406eac1b38544f1eae056dd94bd}
-\-Get the current state of the forward relay channel \hypertarget{classDigitalModule_a07bc18b3c640ef225098f7e8bc3326d1}{\index{\-Digital\-Module@{\-Digital\-Module}!\-Get\-Relay\-Forward@{\-Get\-Relay\-Forward}}
-\index{\-Get\-Relay\-Forward@{\-Get\-Relay\-Forward}!DigitalModule@{\-Digital\-Module}}
-\subsubsection[{\-Get\-Relay\-Forward}]{\setlength{\rightskip}{0pt plus 5cm}\-U\-I\-N\-T8 {\bf \-Digital\-Module\-::\-Get\-Relay\-Forward} (
-\begin{DoxyParamCaption}
-\item[{void}]{}
-\end{DoxyParamCaption}
-)}}\label{classDigitalModule_a07bc18b3c640ef225098f7e8bc3326d1}
-\-Get the current state of all of the forward relay channels on this module. \hypertarget{classDigitalModule_a4f95a8b6be89d69091cc5d536ed22384}{\index{\-Digital\-Module@{\-Digital\-Module}!\-Get\-Relay\-Reverse@{\-Get\-Relay\-Reverse}}
-\index{\-Get\-Relay\-Reverse@{\-Get\-Relay\-Reverse}!DigitalModule@{\-Digital\-Module}}
-\subsubsection[{\-Get\-Relay\-Reverse}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Digital\-Module\-::\-Get\-Relay\-Reverse} (
-\begin{DoxyParamCaption}
-\item[{\-U\-I\-N\-T32}]{channel}
-\end{DoxyParamCaption}
-)}}\label{classDigitalModule_a4f95a8b6be89d69091cc5d536ed22384}
-\-Get the current state of the reverse relay channel \hypertarget{classDigitalModule_ab30dc33f4f7872588cb001cb91eb65c3}{\index{\-Digital\-Module@{\-Digital\-Module}!\-Get\-Relay\-Reverse@{\-Get\-Relay\-Reverse}}
-\index{\-Get\-Relay\-Reverse@{\-Get\-Relay\-Reverse}!DigitalModule@{\-Digital\-Module}}
-\subsubsection[{\-Get\-Relay\-Reverse}]{\setlength{\rightskip}{0pt plus 5cm}\-U\-I\-N\-T8 {\bf \-Digital\-Module\-::\-Get\-Relay\-Reverse} (
-\begin{DoxyParamCaption}
-\item[{void}]{}
-\end{DoxyParamCaption}
-)}}\label{classDigitalModule_ab30dc33f4f7872588cb001cb91eb65c3}
-\-Get the current state of all of the reverse relay channels on this module. \hypertarget{classDigitalModule_affabf884db92ab9290189cff53003480}{\index{\-Digital\-Module@{\-Digital\-Module}!\-Is\-Pulsing@{\-Is\-Pulsing}}
-\index{\-Is\-Pulsing@{\-Is\-Pulsing}!DigitalModule@{\-Digital\-Module}}
-\subsubsection[{\-Is\-Pulsing}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Digital\-Module\-::\-Is\-Pulsing} (
-\begin{DoxyParamCaption}
-\item[{\-U\-I\-N\-T32}]{channel}
-\end{DoxyParamCaption}
-)}}\label{classDigitalModule_affabf884db92ab9290189cff53003480}
-\-Check a \-D\-I\-O line to see if it is currently generating a pulse. \hypertarget{classDigitalModule_a16bfc42defa1aab106cfbc6fd722b28f}{\index{\-Digital\-Module@{\-Digital\-Module}!\-Is\-Pulsing@{\-Is\-Pulsing}}
-\index{\-Is\-Pulsing@{\-Is\-Pulsing}!DigitalModule@{\-Digital\-Module}}
-\subsubsection[{\-Is\-Pulsing}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Digital\-Module\-::\-Is\-Pulsing} (
+\hypertarget{classDigitalModule_a7289f380a40fa407f9b31f81fb8ed0f3}{
+\index{DigitalModule@{DigitalModule}!AllocateDO\_\-PWM@{AllocateDO\_\-PWM}}
+\index{AllocateDO\_\-PWM@{AllocateDO\_\-PWM}!DigitalModule@{DigitalModule}}
+\subsubsection[{AllocateDO\_\-PWM}]{\setlength{\rightskip}{0pt plus 5cm}UINT32 DigitalModule::AllocateDO\_\-PWM (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)}}\label{classDigitalModule_a16bfc42defa1aab106cfbc6fd722b28f}
-\-Check if any \-D\-I\-O line is currently generating a pulse. \hypertarget{classDigitalModule_a3651d475c592ed0330cfb08d1de00bc8}{\index{\-Digital\-Module@{\-Digital\-Module}!\-Pulse@{\-Pulse}}
-\index{\-Pulse@{\-Pulse}!DigitalModule@{\-Digital\-Module}}
-\subsubsection[{\-Pulse}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Digital\-Module\-::\-Pulse} (
+)}}
+\label{classDigitalModule_a7289f380a40fa407f9b31f81fb8ed0f3}
+Allocate a DO \hyperlink{classPWM}{PWM} Generator. Allocate \hyperlink{classPWM}{PWM} generators so that they are not accidently reused.
+
+\begin{DoxyReturn}{Returns}
+\hyperlink{classPWM}{PWM} Generator refnum 
+\end{DoxyReturn}
+\hypertarget{classDigitalModule_a86f94ef21bf5a5b6dbdf66a18f8b8328}{
+\index{DigitalModule@{DigitalModule}!FreeDIO@{FreeDIO}}
+\index{FreeDIO@{FreeDIO}!DigitalModule@{DigitalModule}}
+\subsubsection[{FreeDIO}]{\setlength{\rightskip}{0pt plus 5cm}void DigitalModule::FreeDIO (
 \begin{DoxyParamCaption}
-\item[{\-U\-I\-N\-T32}]{channel, }
-\item[{float}]{pulse\-Length}
+\item[{UINT32}]{channel}
 \end{DoxyParamCaption}
-)}}\label{classDigitalModule_a3651d475c592ed0330cfb08d1de00bc8}
-\-Generate a single pulse. \-Write a pulse to the specified digital output channel. \-There can only be a single pulse going at any time. \hypertarget{classDigitalModule_abd4f1500090e6e48cbbf8ad244d29fcd}{\index{\-Digital\-Module@{\-Digital\-Module}!\-Set\-D\-I\-O@{\-Set\-D\-I\-O}}
-\index{\-Set\-D\-I\-O@{\-Set\-D\-I\-O}!DigitalModule@{\-Digital\-Module}}
-\subsubsection[{\-Set\-D\-I\-O}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Digital\-Module\-::\-Set\-D\-I\-O} (
+)}}
+\label{classDigitalModule_a86f94ef21bf5a5b6dbdf66a18f8b8328}
+Free the resource associated with a digital I/O channel.
+
+
+\begin{DoxyParams}{Parameters}
+{\em channel} & The Digital I/O channel to free \\
+\hline
+\end{DoxyParams}
+\hypertarget{classDigitalModule_a7e388e508e7de68a06868a127670a9da}{
+\index{DigitalModule@{DigitalModule}!FreeDO\_\-PWM@{FreeDO\_\-PWM}}
+\index{FreeDO\_\-PWM@{FreeDO\_\-PWM}!DigitalModule@{DigitalModule}}
+\subsubsection[{FreeDO\_\-PWM}]{\setlength{\rightskip}{0pt plus 5cm}void DigitalModule::FreeDO\_\-PWM (
 \begin{DoxyParamCaption}
-\item[{\-U\-I\-N\-T32}]{channel, }
+\item[{UINT32}]{pwmGenerator}
+\end{DoxyParamCaption}
+)}}
+\label{classDigitalModule_a7e388e508e7de68a06868a127670a9da}
+Free the resource associated with a DO \hyperlink{classPWM}{PWM} generator.
+
+
+\begin{DoxyParams}{Parameters}
+{\em pwmGenerator} & The pwmGen to free that was allocated with \hyperlink{classDigitalModule_a7289f380a40fa407f9b31f81fb8ed0f3}{AllocateDO\_\-PWM()} \\
+\hline
+\end{DoxyParams}
+\hypertarget{classDigitalModule_aff95a87a6af8d7d1e76bb51c2de9fc35}{
+\index{DigitalModule@{DigitalModule}!GetDIO@{GetDIO}}
+\index{GetDIO@{GetDIO}!DigitalModule@{DigitalModule}}
+\subsubsection[{GetDIO}]{\setlength{\rightskip}{0pt plus 5cm}bool DigitalModule::GetDIO (
+\begin{DoxyParamCaption}
+\item[{UINT32}]{channel}
+\end{DoxyParamCaption}
+)}}
+\label{classDigitalModule_aff95a87a6af8d7d1e76bb51c2de9fc35}
+Read a digital I/O bit from the FPGA. Get a single value from a digital I/O channel.
+
+
+\begin{DoxyParams}{Parameters}
+{\em channel} & The digital I/O channel \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The state of the specified channel 
+\end{DoxyReturn}
+\hypertarget{classDigitalModule_afc2c26333c078645033206d3ee5d7f51}{
+\index{DigitalModule@{DigitalModule}!GetDIO@{GetDIO}}
+\index{GetDIO@{GetDIO}!DigitalModule@{DigitalModule}}
+\subsubsection[{GetDIO}]{\setlength{\rightskip}{0pt plus 5cm}UINT16 DigitalModule::GetDIO (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classDigitalModule_afc2c26333c078645033206d3ee5d7f51}
+Read the state of all the Digital I/O lines from the FPGA These are not remapped to logical order. They are still in hardware order. \hypertarget{classDigitalModule_af4acbac69f014df143d972512e014a0f}{
+\index{DigitalModule@{DigitalModule}!GetDIODirection@{GetDIODirection}}
+\index{GetDIODirection@{GetDIODirection}!DigitalModule@{DigitalModule}}
+\subsubsection[{GetDIODirection}]{\setlength{\rightskip}{0pt plus 5cm}UINT16 DigitalModule::GetDIODirection (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classDigitalModule_af4acbac69f014df143d972512e014a0f}
+Read the direction of all the Digital I/O lines from the FPGA A 1 bit means output and a 0 bit means input. These are not remapped to logical order. They are still in hardware order. \hypertarget{classDigitalModule_a4d3a7e90d5cca4e77c745865683b2957}{
+\index{DigitalModule@{DigitalModule}!GetDIODirection@{GetDIODirection}}
+\index{GetDIODirection@{GetDIODirection}!DigitalModule@{DigitalModule}}
+\subsubsection[{GetDIODirection}]{\setlength{\rightskip}{0pt plus 5cm}bool DigitalModule::GetDIODirection (
+\begin{DoxyParamCaption}
+\item[{UINT32}]{channel}
+\end{DoxyParamCaption}
+)}}
+\label{classDigitalModule_a4d3a7e90d5cca4e77c745865683b2957}
+Read the direction of a the Digital I/O lines A 1 bit means output and a 0 bit means input.
+
+
+\begin{DoxyParams}{Parameters}
+{\em channel} & The digital I/O channel \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The direction of the specified channel 
+\end{DoxyReturn}
+\hypertarget{classDigitalModule_ae776c8449cf18b7f90fec0126b3e8373}{
+\index{DigitalModule@{DigitalModule}!GetI2C@{GetI2C}}
+\index{GetI2C@{GetI2C}!DigitalModule@{DigitalModule}}
+\subsubsection[{GetI2C}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I2C} $\ast$ DigitalModule::GetI2C (
+\begin{DoxyParamCaption}
+\item[{UINT32}]{address}
+\end{DoxyParamCaption}
+)}}
+\label{classDigitalModule_ae776c8449cf18b7f90fec0126b3e8373}
+Return a pointer to an \hyperlink{classI2C}{I2C} object for this digital module The caller is responsible for deleting the pointer.
+
+
+\begin{DoxyParams}{Parameters}
+{\em address} & The address of the device on the \hyperlink{classI2C}{I2C} bus \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer to an \hyperlink{classI2C}{I2C} object to talk to the device at address 
+\end{DoxyReturn}
+\hypertarget{classDigitalModule_ad6384445078c80a3b77ef4d2e840f930}{
+\index{DigitalModule@{DigitalModule}!GetInstance@{GetInstance}}
+\index{GetInstance@{GetInstance}!DigitalModule@{DigitalModule}}
+\subsubsection[{GetInstance}]{\setlength{\rightskip}{0pt plus 5cm}{\bf DigitalModule} $\ast$ DigitalModule::GetInstance (
+\begin{DoxyParamCaption}
+\item[{UINT8}]{moduleNumber}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{classDigitalModule_ad6384445078c80a3b77ef4d2e840f930}
+Get an instance of an Digital \hyperlink{classModule}{Module}. Singleton digital module creation where a module is allocated on the first use and the same module is returned on subsequent uses.
+
+
+\begin{DoxyParams}{Parameters}
+{\em moduleNumber} & The digital module to get (1 or 2). \\
+\hline
+\end{DoxyParams}
+\hypertarget{classDigitalModule_a5478b09023e19893ac3829c653221089}{
+\index{DigitalModule@{DigitalModule}!GetPWM@{GetPWM}}
+\index{GetPWM@{GetPWM}!DigitalModule@{DigitalModule}}
+\subsubsection[{GetPWM}]{\setlength{\rightskip}{0pt plus 5cm}UINT8 DigitalModule::GetPWM (
+\begin{DoxyParamCaption}
+\item[{UINT32}]{channel}
+\end{DoxyParamCaption}
+)}}
+\label{classDigitalModule_a5478b09023e19893ac3829c653221089}
+Get a value from a \hyperlink{classPWM}{PWM} channel. The values range from 0 to 255.
+
+
+\begin{DoxyParams}{Parameters}
+{\em channel} & The \hyperlink{classPWM}{PWM} channel to read from. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The raw \hyperlink{classPWM}{PWM} value. 
+\end{DoxyReturn}
+\hypertarget{classDigitalModule_a521a7406eac1b38544f1eae056dd94bd}{
+\index{DigitalModule@{DigitalModule}!GetRelayForward@{GetRelayForward}}
+\index{GetRelayForward@{GetRelayForward}!DigitalModule@{DigitalModule}}
+\subsubsection[{GetRelayForward}]{\setlength{\rightskip}{0pt plus 5cm}bool DigitalModule::GetRelayForward (
+\begin{DoxyParamCaption}
+\item[{UINT32}]{channel}
+\end{DoxyParamCaption}
+)}}
+\label{classDigitalModule_a521a7406eac1b38544f1eae056dd94bd}
+Get the current state of the forward relay channel \hypertarget{classDigitalModule_a42c0a0ce307e655ee5a87c16bdaddc04}{
+\index{DigitalModule@{DigitalModule}!GetRelayForward@{GetRelayForward}}
+\index{GetRelayForward@{GetRelayForward}!DigitalModule@{DigitalModule}}
+\subsubsection[{GetRelayForward}]{\setlength{\rightskip}{0pt plus 5cm}UINT8 DigitalModule::GetRelayForward (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classDigitalModule_a42c0a0ce307e655ee5a87c16bdaddc04}
+Get the current state of all of the forward relay channels on this module. \hypertarget{classDigitalModule_afc5858981757c8ecba5f533e8c4b69a8}{
+\index{DigitalModule@{DigitalModule}!GetRelayReverse@{GetRelayReverse}}
+\index{GetRelayReverse@{GetRelayReverse}!DigitalModule@{DigitalModule}}
+\subsubsection[{GetRelayReverse}]{\setlength{\rightskip}{0pt plus 5cm}UINT8 DigitalModule::GetRelayReverse (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classDigitalModule_afc5858981757c8ecba5f533e8c4b69a8}
+Get the current state of all of the reverse relay channels on this module. \hypertarget{classDigitalModule_a4f95a8b6be89d69091cc5d536ed22384}{
+\index{DigitalModule@{DigitalModule}!GetRelayReverse@{GetRelayReverse}}
+\index{GetRelayReverse@{GetRelayReverse}!DigitalModule@{DigitalModule}}
+\subsubsection[{GetRelayReverse}]{\setlength{\rightskip}{0pt plus 5cm}bool DigitalModule::GetRelayReverse (
+\begin{DoxyParamCaption}
+\item[{UINT32}]{channel}
+\end{DoxyParamCaption}
+)}}
+\label{classDigitalModule_a4f95a8b6be89d69091cc5d536ed22384}
+Get the current state of the reverse relay channel \hypertarget{classDigitalModule_a16bfc42defa1aab106cfbc6fd722b28f}{
+\index{DigitalModule@{DigitalModule}!IsPulsing@{IsPulsing}}
+\index{IsPulsing@{IsPulsing}!DigitalModule@{DigitalModule}}
+\subsubsection[{IsPulsing}]{\setlength{\rightskip}{0pt plus 5cm}bool DigitalModule::IsPulsing (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classDigitalModule_a16bfc42defa1aab106cfbc6fd722b28f}
+Check if any DIO line is currently generating a pulse.
+
+\begin{DoxyReturn}{Returns}
+A pulse on some line is in progress 
+\end{DoxyReturn}
+\hypertarget{classDigitalModule_affabf884db92ab9290189cff53003480}{
+\index{DigitalModule@{DigitalModule}!IsPulsing@{IsPulsing}}
+\index{IsPulsing@{IsPulsing}!DigitalModule@{DigitalModule}}
+\subsubsection[{IsPulsing}]{\setlength{\rightskip}{0pt plus 5cm}bool DigitalModule::IsPulsing (
+\begin{DoxyParamCaption}
+\item[{UINT32}]{channel}
+\end{DoxyParamCaption}
+)}}
+\label{classDigitalModule_affabf884db92ab9290189cff53003480}
+Check a DIO line to see if it is currently generating a pulse.
+
+\begin{DoxyReturn}{Returns}
+A pulse is in progress 
+\end{DoxyReturn}
+\hypertarget{classDigitalModule_a3651d475c592ed0330cfb08d1de00bc8}{
+\index{DigitalModule@{DigitalModule}!Pulse@{Pulse}}
+\index{Pulse@{Pulse}!DigitalModule@{DigitalModule}}
+\subsubsection[{Pulse}]{\setlength{\rightskip}{0pt plus 5cm}void DigitalModule::Pulse (
+\begin{DoxyParamCaption}
+\item[{UINT32}]{channel, }
+\item[{float}]{pulseLength}
+\end{DoxyParamCaption}
+)}}
+\label{classDigitalModule_a3651d475c592ed0330cfb08d1de00bc8}
+Generate a single pulse. Write a pulse to the specified digital output channel. There can only be a single pulse going at any time.
+
+
+\begin{DoxyParams}{Parameters}
+{\em channel} & The Digital Output channel that the pulse should be output on \\
+\hline
+{\em pulseLength} & The active length of the pulse (in seconds) \\
+\hline
+\end{DoxyParams}
+\hypertarget{classDigitalModule_abd4f1500090e6e48cbbf8ad244d29fcd}{
+\index{DigitalModule@{DigitalModule}!SetDIO@{SetDIO}}
+\index{SetDIO@{SetDIO}!DigitalModule@{DigitalModule}}
+\subsubsection[{SetDIO}]{\setlength{\rightskip}{0pt plus 5cm}void DigitalModule::SetDIO (
+\begin{DoxyParamCaption}
+\item[{UINT32}]{channel, }
 \item[{short}]{value}
 \end{DoxyParamCaption}
-)}}\label{classDigitalModule_abd4f1500090e6e48cbbf8ad244d29fcd}
-\-Write a digital \-I/\-O bit to the \-F\-P\-G\-A. \-Set a single value on a digital \-I/\-O channel. \hypertarget{classDigitalModule_a74d6d4ae310213e91891de4b8940b917}{\index{\-Digital\-Module@{\-Digital\-Module}!\-Set\-D\-O\-\_\-\-P\-W\-M\-Duty\-Cycle@{\-Set\-D\-O\-\_\-\-P\-W\-M\-Duty\-Cycle}}
-\index{\-Set\-D\-O\-\_\-\-P\-W\-M\-Duty\-Cycle@{\-Set\-D\-O\-\_\-\-P\-W\-M\-Duty\-Cycle}!DigitalModule@{\-Digital\-Module}}
-\subsubsection[{\-Set\-D\-O\-\_\-\-P\-W\-M\-Duty\-Cycle}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Digital\-Module\-::\-Set\-D\-O\-\_\-\-P\-W\-M\-Duty\-Cycle} (
-\begin{DoxyParamCaption}
-\item[{\-U\-I\-N\-T32}]{pwm\-Generator, }
-\item[{float}]{duty\-Cycle}
-\end{DoxyParamCaption}
-)}}\label{classDigitalModule_a74d6d4ae310213e91891de4b8940b917}
-\-Configure the duty-\/cycle of the \hyperlink{classPWM}{\-P\-W\-M} generator 
-\begin{DoxyParams}{\-Parameters}
-{\em pwm\-Generator} & \-The generator index reserved by \hyperlink{classDigitalModule_a7289f380a40fa407f9b31f81fb8ed0f3}{\-Allocate\-D\-O\-\_\-\-P\-W\-M()} \\
+)}}
+\label{classDigitalModule_abd4f1500090e6e48cbbf8ad244d29fcd}
+Write a digital I/O bit to the FPGA. Set a single value on a digital I/O channel.
+
+
+\begin{DoxyParams}{Parameters}
+{\em channel} & The Digital I/O channel \\
 \hline
-{\em duty\-Cycle} & \-The percent duty cycle to output \mbox{[}0..1\mbox{]}. \\
+{\em value} & The state to set the digital channel (if it is configured as an output) \\
 \hline
 \end{DoxyParams}
-\hypertarget{classDigitalModule_ac9b8da9267956e905c9083dcfb6b4a8f}{\index{\-Digital\-Module@{\-Digital\-Module}!\-Set\-D\-O\-\_\-\-P\-W\-M\-Output\-Channel@{\-Set\-D\-O\-\_\-\-P\-W\-M\-Output\-Channel}}
-\index{\-Set\-D\-O\-\_\-\-P\-W\-M\-Output\-Channel@{\-Set\-D\-O\-\_\-\-P\-W\-M\-Output\-Channel}!DigitalModule@{\-Digital\-Module}}
-\subsubsection[{\-Set\-D\-O\-\_\-\-P\-W\-M\-Output\-Channel}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Digital\-Module\-::\-Set\-D\-O\-\_\-\-P\-W\-M\-Output\-Channel} (
+\hypertarget{classDigitalModule_a74d6d4ae310213e91891de4b8940b917}{
+\index{DigitalModule@{DigitalModule}!SetDO\_\-PWMDutyCycle@{SetDO\_\-PWMDutyCycle}}
+\index{SetDO\_\-PWMDutyCycle@{SetDO\_\-PWMDutyCycle}!DigitalModule@{DigitalModule}}
+\subsubsection[{SetDO\_\-PWMDutyCycle}]{\setlength{\rightskip}{0pt plus 5cm}void DigitalModule::SetDO\_\-PWMDutyCycle (
 \begin{DoxyParamCaption}
-\item[{\-U\-I\-N\-T32}]{pwm\-Generator, }
-\item[{\-U\-I\-N\-T32}]{channel}
+\item[{UINT32}]{pwmGenerator, }
+\item[{float}]{dutyCycle}
 \end{DoxyParamCaption}
-)}}\label{classDigitalModule_ac9b8da9267956e905c9083dcfb6b4a8f}
-\-Configure which \-D\-O channel the \hyperlink{classPWM}{\-P\-W\-M} siganl is output on 
-\begin{DoxyParams}{\-Parameters}
-{\em pwm\-Generator} & \-The generator index reserved by \hyperlink{classDigitalModule_a7289f380a40fa407f9b31f81fb8ed0f3}{\-Allocate\-D\-O\-\_\-\-P\-W\-M()} \\
+)}}
+\label{classDigitalModule_a74d6d4ae310213e91891de4b8940b917}
+Configure the duty-\/cycle of the \hyperlink{classPWM}{PWM} generator
+
+
+\begin{DoxyParams}{Parameters}
+{\em pwmGenerator} & The generator index reserved by \hyperlink{classDigitalModule_a7289f380a40fa407f9b31f81fb8ed0f3}{AllocateDO\_\-PWM()} \\
 \hline
-{\em channel} & \-The \-Digital \-Output channel to output on \\
+{\em dutyCycle} & The percent duty cycle to output \mbox{[}0..1\mbox{]}. \\
 \hline
 \end{DoxyParams}
-\hypertarget{classDigitalModule_a3419b44d9ab72e95df6c0917e5e7db72}{\index{\-Digital\-Module@{\-Digital\-Module}!\-Set\-D\-O\-\_\-\-P\-W\-M\-Rate@{\-Set\-D\-O\-\_\-\-P\-W\-M\-Rate}}
-\index{\-Set\-D\-O\-\_\-\-P\-W\-M\-Rate@{\-Set\-D\-O\-\_\-\-P\-W\-M\-Rate}!DigitalModule@{\-Digital\-Module}}
-\subsubsection[{\-Set\-D\-O\-\_\-\-P\-W\-M\-Rate}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Digital\-Module\-::\-Set\-D\-O\-\_\-\-P\-W\-M\-Rate} (
+\hypertarget{classDigitalModule_ac9b8da9267956e905c9083dcfb6b4a8f}{
+\index{DigitalModule@{DigitalModule}!SetDO\_\-PWMOutputChannel@{SetDO\_\-PWMOutputChannel}}
+\index{SetDO\_\-PWMOutputChannel@{SetDO\_\-PWMOutputChannel}!DigitalModule@{DigitalModule}}
+\subsubsection[{SetDO\_\-PWMOutputChannel}]{\setlength{\rightskip}{0pt plus 5cm}void DigitalModule::SetDO\_\-PWMOutputChannel (
+\begin{DoxyParamCaption}
+\item[{UINT32}]{pwmGenerator, }
+\item[{UINT32}]{channel}
+\end{DoxyParamCaption}
+)}}
+\label{classDigitalModule_ac9b8da9267956e905c9083dcfb6b4a8f}
+Configure which DO channel the \hyperlink{classPWM}{PWM} siganl is output on
+
+
+\begin{DoxyParams}{Parameters}
+{\em pwmGenerator} & The generator index reserved by \hyperlink{classDigitalModule_a7289f380a40fa407f9b31f81fb8ed0f3}{AllocateDO\_\-PWM()} \\
+\hline
+{\em channel} & The Digital Output channel to output on \\
+\hline
+\end{DoxyParams}
+\hypertarget{classDigitalModule_a3419b44d9ab72e95df6c0917e5e7db72}{
+\index{DigitalModule@{DigitalModule}!SetDO\_\-PWMRate@{SetDO\_\-PWMRate}}
+\index{SetDO\_\-PWMRate@{SetDO\_\-PWMRate}!DigitalModule@{DigitalModule}}
+\subsubsection[{SetDO\_\-PWMRate}]{\setlength{\rightskip}{0pt plus 5cm}void DigitalModule::SetDO\_\-PWMRate (
 \begin{DoxyParamCaption}
 \item[{float}]{rate}
 \end{DoxyParamCaption}
-)}}\label{classDigitalModule_a3419b44d9ab72e95df6c0917e5e7db72}
-\-Change the frequency of the \-D\-O \hyperlink{classPWM}{\-P\-W\-M} generator.
+)}}
+\label{classDigitalModule_a3419b44d9ab72e95df6c0917e5e7db72}
+Change the frequency of the DO \hyperlink{classPWM}{PWM} generator.
 
-\-The valid range is from 0.\-6 \-Hz to 19 k\-Hz. \-The frequency resolution is logarithmic.
+The valid range is from 0.6 Hz to 19 kHz. The frequency resolution is logarithmic.
 
 
-\begin{DoxyParams}{\-Parameters}
-{\em rate} & \-The frequency to output all digital output \hyperlink{classPWM}{\-P\-W\-M} signals on this module. \\
+\begin{DoxyParams}{Parameters}
+{\em rate} & The frequency to output all digital output \hyperlink{classPWM}{PWM} signals on this module. \\
 \hline
 \end{DoxyParams}
-\hypertarget{classDigitalModule_abc8303e66903fec0e24714f307cbb68c}{\index{\-Digital\-Module@{\-Digital\-Module}!\-Set\-P\-W\-M@{\-Set\-P\-W\-M}}
-\index{\-Set\-P\-W\-M@{\-Set\-P\-W\-M}!DigitalModule@{\-Digital\-Module}}
-\subsubsection[{\-Set\-P\-W\-M}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Digital\-Module\-::\-Set\-P\-W\-M} (
+\hypertarget{classDigitalModule_abc8303e66903fec0e24714f307cbb68c}{
+\index{DigitalModule@{DigitalModule}!SetPWM@{SetPWM}}
+\index{SetPWM@{SetPWM}!DigitalModule@{DigitalModule}}
+\subsubsection[{SetPWM}]{\setlength{\rightskip}{0pt plus 5cm}void DigitalModule::SetPWM (
 \begin{DoxyParamCaption}
-\item[{\-U\-I\-N\-T32}]{channel, }
-\item[{\-U\-I\-N\-T8}]{value}
+\item[{UINT32}]{channel, }
+\item[{UINT8}]{value}
 \end{DoxyParamCaption}
-)}}\label{classDigitalModule_abc8303e66903fec0e24714f307cbb68c}
-\-Set a \hyperlink{classPWM}{\-P\-W\-M} channel to the desired value. \-The values range from 0 to 255 and the period is controlled by the \hyperlink{classPWM}{\-P\-W\-M} \-Period and \-Min\-High registers.
+)}}
+\label{classDigitalModule_abc8303e66903fec0e24714f307cbb68c}
+Set a \hyperlink{classPWM}{PWM} channel to the desired value. The values range from 0 to 255 and the period is controlled by the \hyperlink{classPWM}{PWM} Period and MinHigh registers.
 
 
-\begin{DoxyParams}{\-Parameters}
-{\em channel} & \-The \hyperlink{classPWM}{\-P\-W\-M} channel to set. \\
+\begin{DoxyParams}{Parameters}
+{\em channel} & The \hyperlink{classPWM}{PWM} channel to set. \\
 \hline
-{\em value} & \-The \hyperlink{classPWM}{\-P\-W\-M} value to set. \\
+{\em value} & The \hyperlink{classPWM}{PWM} value to set. \\
 \hline
 \end{DoxyParams}
-\hypertarget{classDigitalModule_aaf1ce0fcdc44fa5b542a34c3c0f308c0}{\index{\-Digital\-Module@{\-Digital\-Module}!\-Set\-P\-W\-M\-Period\-Scale@{\-Set\-P\-W\-M\-Period\-Scale}}
-\index{\-Set\-P\-W\-M\-Period\-Scale@{\-Set\-P\-W\-M\-Period\-Scale}!DigitalModule@{\-Digital\-Module}}
-\subsubsection[{\-Set\-P\-W\-M\-Period\-Scale}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Digital\-Module\-::\-Set\-P\-W\-M\-Period\-Scale} (
+\hypertarget{classDigitalModule_aaf1ce0fcdc44fa5b542a34c3c0f308c0}{
+\index{DigitalModule@{DigitalModule}!SetPWMPeriodScale@{SetPWMPeriodScale}}
+\index{SetPWMPeriodScale@{SetPWMPeriodScale}!DigitalModule@{DigitalModule}}
+\subsubsection[{SetPWMPeriodScale}]{\setlength{\rightskip}{0pt plus 5cm}void DigitalModule::SetPWMPeriodScale (
 \begin{DoxyParamCaption}
-\item[{\-U\-I\-N\-T32}]{channel, }
-\item[{\-U\-I\-N\-T32}]{squelch\-Mask}
+\item[{UINT32}]{channel, }
+\item[{UINT32}]{squelchMask}
 \end{DoxyParamCaption}
-)}}\label{classDigitalModule_aaf1ce0fcdc44fa5b542a34c3c0f308c0}
-\-Set how how often the \hyperlink{classPWM}{\-P\-W\-M} signal is squelched, thus scaling the period.
+)}}
+\label{classDigitalModule_aaf1ce0fcdc44fa5b542a34c3c0f308c0}
+Set how how often the \hyperlink{classPWM}{PWM} signal is squelched, thus scaling the period.
 
 
-\begin{DoxyParams}{\-Parameters}
-{\em channel} & \-The \hyperlink{classPWM}{\-P\-W\-M} channel to configure. \\
+\begin{DoxyParams}{Parameters}
+{\em channel} & The \hyperlink{classPWM}{PWM} channel to configure. \\
 \hline
-{\em squelch\-Mask} & \-The 2-\/bit mask of outputs to squelch. \\
+{\em squelchMask} & The 2-\/bit mask of outputs to squelch. \\
 \hline
 \end{DoxyParams}
-\hypertarget{classDigitalModule_aef58ca9a278fae8525da6324ec0f0b1a}{\index{\-Digital\-Module@{\-Digital\-Module}!\-Set\-Relay\-Forward@{\-Set\-Relay\-Forward}}
-\index{\-Set\-Relay\-Forward@{\-Set\-Relay\-Forward}!DigitalModule@{\-Digital\-Module}}
-\subsubsection[{\-Set\-Relay\-Forward}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Digital\-Module\-::\-Set\-Relay\-Forward} (
+\hypertarget{classDigitalModule_aef58ca9a278fae8525da6324ec0f0b1a}{
+\index{DigitalModule@{DigitalModule}!SetRelayForward@{SetRelayForward}}
+\index{SetRelayForward@{SetRelayForward}!DigitalModule@{DigitalModule}}
+\subsubsection[{SetRelayForward}]{\setlength{\rightskip}{0pt plus 5cm}void DigitalModule::SetRelayForward (
 \begin{DoxyParamCaption}
-\item[{\-U\-I\-N\-T32}]{channel, }
+\item[{UINT32}]{channel, }
 \item[{bool}]{on}
 \end{DoxyParamCaption}
-)}}\label{classDigitalModule_aef58ca9a278fae8525da6324ec0f0b1a}
-\-Set the state of a relay. \-Set the state of a relay output to be forward. \-Relays have two outputs and each is independently set to 0v or 12v. \hypertarget{classDigitalModule_a6ce11154d9a4480ff1f017c9d8f0b9a5}{\index{\-Digital\-Module@{\-Digital\-Module}!\-Set\-Relay\-Reverse@{\-Set\-Relay\-Reverse}}
-\index{\-Set\-Relay\-Reverse@{\-Set\-Relay\-Reverse}!DigitalModule@{\-Digital\-Module}}
-\subsubsection[{\-Set\-Relay\-Reverse}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Digital\-Module\-::\-Set\-Relay\-Reverse} (
+)}}
+\label{classDigitalModule_aef58ca9a278fae8525da6324ec0f0b1a}
+Set the state of a relay. Set the state of a relay output to be forward. Relays have two outputs and each is independently set to 0v or 12v. \hypertarget{classDigitalModule_a6ce11154d9a4480ff1f017c9d8f0b9a5}{
+\index{DigitalModule@{DigitalModule}!SetRelayReverse@{SetRelayReverse}}
+\index{SetRelayReverse@{SetRelayReverse}!DigitalModule@{DigitalModule}}
+\subsubsection[{SetRelayReverse}]{\setlength{\rightskip}{0pt plus 5cm}void DigitalModule::SetRelayReverse (
 \begin{DoxyParamCaption}
-\item[{\-U\-I\-N\-T32}]{channel, }
+\item[{UINT32}]{channel, }
 \item[{bool}]{on}
 \end{DoxyParamCaption}
-)}}\label{classDigitalModule_a6ce11154d9a4480ff1f017c9d8f0b9a5}
-\-Set the state of a relay. \-Set the state of a relay output to be reverse. \-Relays have two outputs and each is independently set to 0v or 12v. 
+)}}
+\label{classDigitalModule_a6ce11154d9a4480ff1f017c9d8f0b9a5}
+Set the state of a relay. Set the state of a relay output to be reverse. Relays have two outputs and each is independently set to 0v or 12v. 
 
-\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
 \item 
-\-Digital\-Module.\-h\item 
-\-Digital\-Module.\-cpp\end{DoxyCompactItemize}
+DigitalModule.h\item 
+DigitalModule.cpp\end{DoxyCompactItemize}

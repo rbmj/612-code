@@ -1,419 +1,474 @@
-\hypertarget{classJoystick}{\section{\-Joystick \-Class \-Reference}
-\label{classJoystick}\index{\-Joystick@{\-Joystick}}
+\hypertarget{classJoystick}{
+\section{Joystick Class Reference}
+\label{classJoystick}\index{Joystick@{Joystick}}
 }
 
 
-{\ttfamily \#include $<$\-Joystick.\-h$>$}
+{\ttfamily \#include $<$Joystick.h$>$}
 
-\-Inheritance diagram for \-Joystick\-:\begin{figure}[H]
+Inheritance diagram for Joystick:\begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[height=2.000000cm]{classJoystick}
 \end{center}
 \end{figure}
-\subsection*{\-Public \-Types}
+\subsection*{Public Types}
 \begin{DoxyCompactItemize}
 \item 
-enum {\bfseries \-Axis\-Type} \{ \*
-{\bfseries k\-X\-Axis}, 
-{\bfseries k\-Y\-Axis}, 
-{\bfseries k\-Z\-Axis}, 
-{\bfseries k\-Twist\-Axis}, 
-\*
-{\bfseries k\-Throttle\-Axis}, 
-{\bfseries k\-Num\-Axis\-Types}
+enum {\bfseries AxisType} \{ \par
+{\bfseries kXAxis}, 
+{\bfseries kYAxis}, 
+{\bfseries kZAxis}, 
+{\bfseries kTwistAxis}, 
+\par
+{\bfseries kThrottleAxis}, 
+{\bfseries kNumAxisTypes}
  \}
 \item 
-enum {\bfseries \-Button\-Type} \{ {\bfseries k\-Trigger\-Button}, 
-{\bfseries k\-Top\-Button}, 
-{\bfseries k\-Num\-Button\-Types}
+enum {\bfseries ButtonType} \{ {\bfseries kTriggerButton}, 
+{\bfseries kTopButton}, 
+{\bfseries kNumButtonTypes}
  \}
 \end{DoxyCompactItemize}
-\subsection*{\-Public \-Member \-Functions}
+\subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{classJoystick_aa4677050870682d557768df0b697e338}{\-Joystick} (\-U\-I\-N\-T32 port)
+\hyperlink{classJoystick_aa4677050870682d557768df0b697e338}{Joystick} (UINT32 port)
 \item 
-\hyperlink{classJoystick_a2364b408bb646f19ca04ebb2a2249cb1}{\-Joystick} (\-U\-I\-N\-T32 port, \-U\-I\-N\-T32 num\-Axis\-Types, \-U\-I\-N\-T32 num\-Button\-Types)
+\hyperlink{classJoystick_a2364b408bb646f19ca04ebb2a2249cb1}{Joystick} (UINT32 port, UINT32 numAxisTypes, UINT32 numButtonTypes)
 \item 
-\-U\-I\-N\-T32 \hyperlink{classJoystick_a74e45168b9b71f6cd9b9bbe36f3bf29f}{\-Get\-Axis\-Channel} (\-Axis\-Type axis)
+UINT32 \hyperlink{classJoystick_a74e45168b9b71f6cd9b9bbe36f3bf29f}{GetAxisChannel} (AxisType axis)
 \item 
-void \hyperlink{classJoystick_a4909b232134c0748bc61e223e3552396}{\-Set\-Axis\-Channel} (\-Axis\-Type axis, \-U\-I\-N\-T32 channel)
+void \hyperlink{classJoystick_a4909b232134c0748bc61e223e3552396}{SetAxisChannel} (AxisType axis, UINT32 channel)
 \item 
-virtual float \hyperlink{classJoystick_a684f7ef395e7cf4d1137e816554446c9}{\-Get\-X} (\-Joystick\-Hand hand=k\-Right\-Hand)
+virtual float \hyperlink{classJoystick_a684f7ef395e7cf4d1137e816554446c9}{GetX} (JoystickHand hand=kRightHand)
 \item 
-virtual float \hyperlink{classJoystick_a6f413b0da6c62d848113409acc9cb971}{\-Get\-Y} (\-Joystick\-Hand hand=k\-Right\-Hand)
+virtual float \hyperlink{classJoystick_a6f413b0da6c62d848113409acc9cb971}{GetY} (JoystickHand hand=kRightHand)
 \item 
-virtual float \hyperlink{classJoystick_a4e8c04b243729f58bf360a6584eac775}{\-Get\-Z} ()
+virtual float \hyperlink{classJoystick_a4e8c04b243729f58bf360a6584eac775}{GetZ} ()
 \item 
-virtual float \hyperlink{classJoystick_a3b29a1a8121657bd3ba4aa95db050a5f}{\-Get\-Twist} ()
+virtual float \hyperlink{classJoystick_a3b29a1a8121657bd3ba4aa95db050a5f}{GetTwist} ()
 \item 
-virtual float \hyperlink{classJoystick_a3330cc651d36c58bffea669ff0b77161}{\-Get\-Throttle} ()
+virtual float \hyperlink{classJoystick_a3330cc651d36c58bffea669ff0b77161}{GetThrottle} ()
 \item 
-virtual float \hyperlink{classJoystick_a5f55e80b1399c3a04c5108488382dbc8}{\-Get\-Axis} (\-Axis\-Type axis)
+virtual float \hyperlink{classJoystick_a5f55e80b1399c3a04c5108488382dbc8}{GetAxis} (AxisType axis)
 \item 
-float \hyperlink{classJoystick_a392fb94197b2e25a4172b0fa91b49b04}{\-Get\-Raw\-Axis} (\-U\-I\-N\-T32 axis)
+float \hyperlink{classJoystick_a392fb94197b2e25a4172b0fa91b49b04}{GetRawAxis} (UINT32 axis)
 \item 
-virtual bool \hyperlink{classJoystick_a17c9682c8bbfd77d9377d2352fb836dd}{\-Get\-Trigger} (\-Joystick\-Hand hand=k\-Right\-Hand)
+virtual bool \hyperlink{classJoystick_a17c9682c8bbfd77d9377d2352fb836dd}{GetTrigger} (JoystickHand hand=kRightHand)
 \item 
-virtual bool \hyperlink{classJoystick_a451c9a35875271e7918af8843e39f3cc}{\-Get\-Top} (\-Joystick\-Hand hand=k\-Right\-Hand)
+virtual bool \hyperlink{classJoystick_a451c9a35875271e7918af8843e39f3cc}{GetTop} (JoystickHand hand=kRightHand)
 \item 
-virtual bool \hyperlink{classJoystick_a411e29a474092407733498198b3c79a2}{\-Get\-Bumper} (\-Joystick\-Hand hand=k\-Right\-Hand)
+virtual bool \hyperlink{classJoystick_a411e29a474092407733498198b3c79a2}{GetBumper} (JoystickHand hand=kRightHand)
 \item 
-virtual bool \hyperlink{classJoystick_ac8cf87154ee2b2241bc6d375dcebd728}{\-Get\-Button} (\-Button\-Type button)
+virtual bool \hyperlink{classJoystick_ac8cf87154ee2b2241bc6d375dcebd728}{GetButton} (ButtonType button)
 \item 
-bool \hyperlink{classJoystick_ae5af1b7f54545088da91894fd105e1e2}{\-Get\-Raw\-Button} (\-U\-I\-N\-T32 button)
+bool \hyperlink{classJoystick_ae5af1b7f54545088da91894fd105e1e2}{GetRawButton} (UINT32 button)
 \item 
-virtual float \hyperlink{classJoystick_a98ca6faf135eed78d1401f779ea862c2}{\-Get\-Magnitude} ()
+virtual float \hyperlink{classJoystick_a98ca6faf135eed78d1401f779ea862c2}{GetMagnitude} ()
 \item 
-virtual float \hyperlink{classJoystick_a1ffd1a1d97440eb1a611361bdcac33fc}{\-Get\-Direction\-Radians} ()
+virtual float \hyperlink{classJoystick_a1ffd1a1d97440eb1a611361bdcac33fc}{GetDirectionRadians} ()
 \item 
-virtual float \hyperlink{classJoystick_a0f49244825f4ce57aafde3830eba8e7f}{\-Get\-Direction\-Degrees} ()
+virtual float \hyperlink{classJoystick_a0f49244825f4ce57aafde3830eba8e7f}{GetDirectionDegrees} ()
 \end{DoxyCompactItemize}
-\subsection*{\-Static \-Public \-Member \-Functions}
+\subsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{classJoystick_a4e134a21fe02f9cb6124c6e0d1391db0}{static \hyperlink{classJoystick}{\-Joystick} $\ast$ {\bfseries \-Get\-Stick\-For\-Port} (\-U\-I\-N\-T32 port)}\label{classJoystick_a4e134a21fe02f9cb6124c6e0d1391db0}
+\hypertarget{classJoystick_a4e134a21fe02f9cb6124c6e0d1391db0}{
+static \hyperlink{classJoystick}{Joystick} $\ast$ {\bfseries GetStickForPort} (UINT32 port)}
+\label{classJoystick_a4e134a21fe02f9cb6124c6e0d1391db0}
 
 \end{DoxyCompactItemize}
-\subsection*{\-Static \-Public \-Attributes}
+\subsection*{Static Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{classJoystick_aca8b52e0227268a44e62000a995e6545}{static const \-U\-I\-N\-T32 {\bfseries k\-Default\-X\-Axis} = 1}\label{classJoystick_aca8b52e0227268a44e62000a995e6545}
+\hypertarget{classJoystick_aca8b52e0227268a44e62000a995e6545}{
+static const UINT32 {\bfseries kDefaultXAxis} = 1}
+\label{classJoystick_aca8b52e0227268a44e62000a995e6545}
 
 \item 
-\hypertarget{classJoystick_a1f0904da828bfe3d99f229ad39634984}{static const \-U\-I\-N\-T32 {\bfseries k\-Default\-Y\-Axis} = 2}\label{classJoystick_a1f0904da828bfe3d99f229ad39634984}
+\hypertarget{classJoystick_a1f0904da828bfe3d99f229ad39634984}{
+static const UINT32 {\bfseries kDefaultYAxis} = 2}
+\label{classJoystick_a1f0904da828bfe3d99f229ad39634984}
 
 \item 
-\hypertarget{classJoystick_a1318a7bfeb9134e7c6f024afcbe677c1}{static const \-U\-I\-N\-T32 {\bfseries k\-Default\-Z\-Axis} = 3}\label{classJoystick_a1318a7bfeb9134e7c6f024afcbe677c1}
+\hypertarget{classJoystick_a1318a7bfeb9134e7c6f024afcbe677c1}{
+static const UINT32 {\bfseries kDefaultZAxis} = 3}
+\label{classJoystick_a1318a7bfeb9134e7c6f024afcbe677c1}
 
 \item 
-\hypertarget{classJoystick_af8c4e12b864e53ee4a5b02c2d7f3999d}{static const \-U\-I\-N\-T32 {\bfseries k\-Default\-Twist\-Axis} = 4}\label{classJoystick_af8c4e12b864e53ee4a5b02c2d7f3999d}
+\hypertarget{classJoystick_af8c4e12b864e53ee4a5b02c2d7f3999d}{
+static const UINT32 {\bfseries kDefaultTwistAxis} = 4}
+\label{classJoystick_af8c4e12b864e53ee4a5b02c2d7f3999d}
 
 \item 
-\hypertarget{classJoystick_a8e8b23407e6daebec33f2302d1674d76}{static const \-U\-I\-N\-T32 {\bfseries k\-Default\-Throttle\-Axis} = 3}\label{classJoystick_a8e8b23407e6daebec33f2302d1674d76}
+\hypertarget{classJoystick_a8e8b23407e6daebec33f2302d1674d76}{
+static const UINT32 {\bfseries kDefaultThrottleAxis} = 3}
+\label{classJoystick_a8e8b23407e6daebec33f2302d1674d76}
 
 \item 
-\hypertarget{classJoystick_a4693bae107e007140460dd546a2ee135}{static const \-U\-I\-N\-T32 {\bfseries k\-Default\-Trigger\-Button} = 1}\label{classJoystick_a4693bae107e007140460dd546a2ee135}
+\hypertarget{classJoystick_a4693bae107e007140460dd546a2ee135}{
+static const UINT32 {\bfseries kDefaultTriggerButton} = 1}
+\label{classJoystick_a4693bae107e007140460dd546a2ee135}
 
 \item 
-\hypertarget{classJoystick_a4357a68c718d794a8b9b5a48bfa8cc07}{static const \-U\-I\-N\-T32 {\bfseries k\-Default\-Top\-Button} = 2}\label{classJoystick_a4357a68c718d794a8b9b5a48bfa8cc07}
+\hypertarget{classJoystick_a4357a68c718d794a8b9b5a48bfa8cc07}{
+static const UINT32 {\bfseries kDefaultTopButton} = 2}
+\label{classJoystick_a4357a68c718d794a8b9b5a48bfa8cc07}
 
 \end{DoxyCompactItemize}
 
 
-\subsection{\-Detailed \-Description}
-\-Handle input from standard \-Joysticks connected to the \-Driver \-Station. \-This class handles standard input that comes from the \-Driver \-Station. \-Each time a value is requested the most recent value is returned. \-There is a single class instance for each joystick and the mapping of ports to hardware buttons depends on the code in the driver station. 
+\subsection{Detailed Description}
+Handle input from standard Joysticks connected to the Driver Station. This class handles standard input that comes from the Driver Station. Each time a value is requested the most recent value is returned. There is a single class instance for each joystick and the mapping of ports to hardware buttons depends on the code in the driver station. 
 
-\subsection{\-Constructor \& \-Destructor \-Documentation}
-\hypertarget{classJoystick_aa4677050870682d557768df0b697e338}{\index{\-Joystick@{\-Joystick}!\-Joystick@{\-Joystick}}
-\index{\-Joystick@{\-Joystick}!Joystick@{\-Joystick}}
-\subsubsection[{\-Joystick}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Joystick\-::\-Joystick} (
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classJoystick_aa4677050870682d557768df0b697e338}{
+\index{Joystick@{Joystick}!Joystick@{Joystick}}
+\index{Joystick@{Joystick}!Joystick@{Joystick}}
+\subsubsection[{Joystick}]{\setlength{\rightskip}{0pt plus 5cm}Joystick::Joystick (
 \begin{DoxyParamCaption}
-\item[{\-U\-I\-N\-T32}]{port}
+\item[{UINT32}]{port}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily  \mbox{[}explicit\mbox{]}}}}\label{classJoystick_aa4677050870682d557768df0b697e338}
-\-Construct an instance of a joystick. \-The joystick index is the usb port on the drivers station.
+)\hspace{0.3cm}{\ttfamily  \mbox{[}explicit\mbox{]}}}}
+\label{classJoystick_aa4677050870682d557768df0b697e338}
+Construct an instance of a joystick. The joystick index is the usb port on the drivers station.
 
 
-\begin{DoxyParams}{\-Parameters}
-{\em port} & \-The port on the driver station that the joystick is plugged into. \\
+\begin{DoxyParams}{Parameters}
+{\em port} & The port on the driver station that the joystick is plugged into. \\
 \hline
 \end{DoxyParams}
-\hypertarget{classJoystick_a2364b408bb646f19ca04ebb2a2249cb1}{\index{\-Joystick@{\-Joystick}!\-Joystick@{\-Joystick}}
-\index{\-Joystick@{\-Joystick}!Joystick@{\-Joystick}}
-\subsubsection[{\-Joystick}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Joystick\-::\-Joystick} (
+\hypertarget{classJoystick_a2364b408bb646f19ca04ebb2a2249cb1}{
+\index{Joystick@{Joystick}!Joystick@{Joystick}}
+\index{Joystick@{Joystick}!Joystick@{Joystick}}
+\subsubsection[{Joystick}]{\setlength{\rightskip}{0pt plus 5cm}Joystick::Joystick (
 \begin{DoxyParamCaption}
-\item[{\-U\-I\-N\-T32}]{port, }
-\item[{\-U\-I\-N\-T32}]{num\-Axis\-Types, }
-\item[{\-U\-I\-N\-T32}]{num\-Button\-Types}
+\item[{UINT32}]{port, }
+\item[{UINT32}]{numAxisTypes, }
+\item[{UINT32}]{numButtonTypes}
 \end{DoxyParamCaption}
-)}}\label{classJoystick_a2364b408bb646f19ca04ebb2a2249cb1}
-\-Version of the constructor to be called by sub-\/classes.
+)}}
+\label{classJoystick_a2364b408bb646f19ca04ebb2a2249cb1}
+Version of the constructor to be called by sub-\/classes.
 
-\-This constructor allows the subclass to configure the number of constants for axes and buttons.
+This constructor allows the subclass to configure the number of constants for axes and buttons.
 
 
-\begin{DoxyParams}{\-Parameters}
-{\em port} & \-The port on the driver station that the joystick is plugged into. \\
+\begin{DoxyParams}{Parameters}
+{\em port} & The port on the driver station that the joystick is plugged into. \\
 \hline
-{\em num\-Axis\-Types} & \-The number of axis types in the enum. \\
+{\em numAxisTypes} & The number of axis types in the enum. \\
 \hline
-{\em num\-Button\-Types} & \-The number of button types in the enum. \\
+{\em numButtonTypes} & The number of button types in the enum. \\
 \hline
 \end{DoxyParams}
 
 
-\subsection{\-Member \-Function \-Documentation}
-\hypertarget{classJoystick_a5f55e80b1399c3a04c5108488382dbc8}{\index{\-Joystick@{\-Joystick}!\-Get\-Axis@{\-Get\-Axis}}
-\index{\-Get\-Axis@{\-Get\-Axis}!Joystick@{\-Joystick}}
-\subsubsection[{\-Get\-Axis}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf \-Joystick\-::\-Get\-Axis} (
+\subsection{Member Function Documentation}
+\hypertarget{classJoystick_a5f55e80b1399c3a04c5108488382dbc8}{
+\index{Joystick@{Joystick}!GetAxis@{GetAxis}}
+\index{GetAxis@{GetAxis}!Joystick@{Joystick}}
+\subsubsection[{GetAxis}]{\setlength{\rightskip}{0pt plus 5cm}float Joystick::GetAxis (
 \begin{DoxyParamCaption}
-\item[{\-Axis\-Type}]{axis}
+\item[{AxisType}]{axis}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{classJoystick_a5f55e80b1399c3a04c5108488382dbc8}
-\-For the current joystick, return the axis determined by the argument.
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classJoystick_a5f55e80b1399c3a04c5108488382dbc8}
+For the current joystick, return the axis determined by the argument.
 
-\-This is for cases where the joystick axis is returned programatically, otherwise one of the previous functions would be preferable (for example \hyperlink{classJoystick_a684f7ef395e7cf4d1137e816554446c9}{\-Get\-X()}).
+This is for cases where the joystick axis is returned programatically, otherwise one of the previous functions would be preferable (for example \hyperlink{classJoystick_a684f7ef395e7cf4d1137e816554446c9}{GetX()}).
 
 
-\begin{DoxyParams}{\-Parameters}
-{\em axis} & \-The axis to read. \\
+\begin{DoxyParams}{Parameters}
+{\em axis} & The axis to read. \\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{\-Returns}
-\-The value of the axis. 
+\begin{DoxyReturn}{Returns}
+The value of the axis. 
 \end{DoxyReturn}
-\hypertarget{classJoystick_a74e45168b9b71f6cd9b9bbe36f3bf29f}{\index{\-Joystick@{\-Joystick}!\-Get\-Axis\-Channel@{\-Get\-Axis\-Channel}}
-\index{\-Get\-Axis\-Channel@{\-Get\-Axis\-Channel}!Joystick@{\-Joystick}}
-\subsubsection[{\-Get\-Axis\-Channel}]{\setlength{\rightskip}{0pt plus 5cm}\-U\-I\-N\-T32 {\bf \-Joystick\-::\-Get\-Axis\-Channel} (
+\hypertarget{classJoystick_a74e45168b9b71f6cd9b9bbe36f3bf29f}{
+\index{Joystick@{Joystick}!GetAxisChannel@{GetAxisChannel}}
+\index{GetAxisChannel@{GetAxisChannel}!Joystick@{Joystick}}
+\subsubsection[{GetAxisChannel}]{\setlength{\rightskip}{0pt plus 5cm}UINT32 Joystick::GetAxisChannel (
 \begin{DoxyParamCaption}
-\item[{\-Axis\-Type}]{axis}
+\item[{AxisType}]{axis}
 \end{DoxyParamCaption}
-)}}\label{classJoystick_a74e45168b9b71f6cd9b9bbe36f3bf29f}
-\-Get the channel currently associated with the specified axis.
+)}}
+\label{classJoystick_a74e45168b9b71f6cd9b9bbe36f3bf29f}
+Get the channel currently associated with the specified axis.
 
 
-\begin{DoxyParams}{\-Parameters}
-{\em axis} & \-The axis to look up the channel for. \\
+\begin{DoxyParams}{Parameters}
+{\em axis} & The axis to look up the channel for. \\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{\-Returns}
-\-The channel fr the axis. 
+\begin{DoxyReturn}{Returns}
+The channel fr the axis. 
 \end{DoxyReturn}
-\hypertarget{classJoystick_a411e29a474092407733498198b3c79a2}{\index{\-Joystick@{\-Joystick}!\-Get\-Bumper@{\-Get\-Bumper}}
-\index{\-Get\-Bumper@{\-Get\-Bumper}!Joystick@{\-Joystick}}
-\subsubsection[{\-Get\-Bumper}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Joystick\-::\-Get\-Bumper} (
+\hypertarget{classJoystick_a411e29a474092407733498198b3c79a2}{
+\index{Joystick@{Joystick}!GetBumper@{GetBumper}}
+\index{GetBumper@{GetBumper}!Joystick@{Joystick}}
+\subsubsection[{GetBumper}]{\setlength{\rightskip}{0pt plus 5cm}bool Joystick::GetBumper (
 \begin{DoxyParamCaption}
-\item[{\-Joystick\-Hand}]{hand = {\ttfamily k\-Right\-Hand}}
+\item[{JoystickHand}]{hand = {\ttfamily kRightHand}}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{classJoystick_a411e29a474092407733498198b3c79a2}
-\-This is not supported for the \hyperlink{classJoystick}{\-Joystick}. \-This method is only here to complete the \hyperlink{classGenericHID}{\-Generic\-H\-I\-D} interface. 
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classJoystick_a411e29a474092407733498198b3c79a2}
+This is not supported for the \hyperlink{classJoystick}{Joystick}. This method is only here to complete the \hyperlink{classGenericHID}{GenericHID} interface. 
 
-\-Implements \hyperlink{classGenericHID}{\-Generic\-H\-I\-D}.
+Implements \hyperlink{classGenericHID}{GenericHID}.
 
-\hypertarget{classJoystick_ac8cf87154ee2b2241bc6d375dcebd728}{\index{\-Joystick@{\-Joystick}!\-Get\-Button@{\-Get\-Button}}
-\index{\-Get\-Button@{\-Get\-Button}!Joystick@{\-Joystick}}
-\subsubsection[{\-Get\-Button}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Joystick\-::\-Get\-Button} (
+\hypertarget{classJoystick_ac8cf87154ee2b2241bc6d375dcebd728}{
+\index{Joystick@{Joystick}!GetButton@{GetButton}}
+\index{GetButton@{GetButton}!Joystick@{Joystick}}
+\subsubsection[{GetButton}]{\setlength{\rightskip}{0pt plus 5cm}bool Joystick::GetButton (
 \begin{DoxyParamCaption}
-\item[{\-Button\-Type}]{button}
+\item[{ButtonType}]{button}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{classJoystick_ac8cf87154ee2b2241bc6d375dcebd728}
-\-Get buttons based on an enumerated type.
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classJoystick_ac8cf87154ee2b2241bc6d375dcebd728}
+Get buttons based on an enumerated type.
 
-\-The button type will be looked up in the list of buttons and then read.
+The button type will be looked up in the list of buttons and then read.
 
 
-\begin{DoxyParams}{\-Parameters}
-{\em button} & \-The type of button to read. \\
+\begin{DoxyParams}{Parameters}
+{\em button} & The type of button to read. \\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{\-Returns}
-\-The state of the button. 
+\begin{DoxyReturn}{Returns}
+The state of the button. 
 \end{DoxyReturn}
-\hypertarget{classJoystick_a0f49244825f4ce57aafde3830eba8e7f}{\index{\-Joystick@{\-Joystick}!\-Get\-Direction\-Degrees@{\-Get\-Direction\-Degrees}}
-\index{\-Get\-Direction\-Degrees@{\-Get\-Direction\-Degrees}!Joystick@{\-Joystick}}
-\subsubsection[{\-Get\-Direction\-Degrees}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf \-Joystick\-::\-Get\-Direction\-Degrees} (
+\hypertarget{classJoystick_a0f49244825f4ce57aafde3830eba8e7f}{
+\index{Joystick@{Joystick}!GetDirectionDegrees@{GetDirectionDegrees}}
+\index{GetDirectionDegrees@{GetDirectionDegrees}!Joystick@{Joystick}}
+\subsubsection[{GetDirectionDegrees}]{\setlength{\rightskip}{0pt plus 5cm}float Joystick::GetDirectionDegrees (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{classJoystick_a0f49244825f4ce57aafde3830eba8e7f}
-\-Get the direction of the vector formed by the joystick and its origin in degrees
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classJoystick_a0f49244825f4ce57aafde3830eba8e7f}
+Get the direction of the vector formed by the joystick and its origin in degrees
 
-uses acos(-\/1) to represent \-Pi due to absence of readily accessable \-Pi constant in \-C++
+uses acos(-\/1) to represent Pi due to absence of readily accessable Pi constant in C++
 
-\begin{DoxyReturn}{\-Returns}
-\-The direction of the vector in degrees 
+\begin{DoxyReturn}{Returns}
+The direction of the vector in degrees 
 \end{DoxyReturn}
-\hypertarget{classJoystick_a1ffd1a1d97440eb1a611361bdcac33fc}{\index{\-Joystick@{\-Joystick}!\-Get\-Direction\-Radians@{\-Get\-Direction\-Radians}}
-\index{\-Get\-Direction\-Radians@{\-Get\-Direction\-Radians}!Joystick@{\-Joystick}}
-\subsubsection[{\-Get\-Direction\-Radians}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf \-Joystick\-::\-Get\-Direction\-Radians} (
+\hypertarget{classJoystick_a1ffd1a1d97440eb1a611361bdcac33fc}{
+\index{Joystick@{Joystick}!GetDirectionRadians@{GetDirectionRadians}}
+\index{GetDirectionRadians@{GetDirectionRadians}!Joystick@{Joystick}}
+\subsubsection[{GetDirectionRadians}]{\setlength{\rightskip}{0pt plus 5cm}float Joystick::GetDirectionRadians (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{classJoystick_a1ffd1a1d97440eb1a611361bdcac33fc}
-\-Get the direction of the vector formed by the joystick and its origin in radians
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classJoystick_a1ffd1a1d97440eb1a611361bdcac33fc}
+Get the direction of the vector formed by the joystick and its origin in radians
 
-\begin{DoxyReturn}{\-Returns}
-\-The direction of the vector in radians 
+\begin{DoxyReturn}{Returns}
+The direction of the vector in radians 
 \end{DoxyReturn}
-\hypertarget{classJoystick_a98ca6faf135eed78d1401f779ea862c2}{\index{\-Joystick@{\-Joystick}!\-Get\-Magnitude@{\-Get\-Magnitude}}
-\index{\-Get\-Magnitude@{\-Get\-Magnitude}!Joystick@{\-Joystick}}
-\subsubsection[{\-Get\-Magnitude}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf \-Joystick\-::\-Get\-Magnitude} (
+\hypertarget{classJoystick_a98ca6faf135eed78d1401f779ea862c2}{
+\index{Joystick@{Joystick}!GetMagnitude@{GetMagnitude}}
+\index{GetMagnitude@{GetMagnitude}!Joystick@{Joystick}}
+\subsubsection[{GetMagnitude}]{\setlength{\rightskip}{0pt plus 5cm}float Joystick::GetMagnitude (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{classJoystick_a98ca6faf135eed78d1401f779ea862c2}
-\-Get the magnitude of the direction vector formed by the joystick's current position relative to its origin
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classJoystick_a98ca6faf135eed78d1401f779ea862c2}
+Get the magnitude of the direction vector formed by the joystick's current position relative to its origin
 
-\begin{DoxyReturn}{\-Returns}
-\-The magnitude of the direction vector 
+\begin{DoxyReturn}{Returns}
+The magnitude of the direction vector 
 \end{DoxyReturn}
-\hypertarget{classJoystick_a392fb94197b2e25a4172b0fa91b49b04}{\index{\-Joystick@{\-Joystick}!\-Get\-Raw\-Axis@{\-Get\-Raw\-Axis}}
-\index{\-Get\-Raw\-Axis@{\-Get\-Raw\-Axis}!Joystick@{\-Joystick}}
-\subsubsection[{\-Get\-Raw\-Axis}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf \-Joystick\-::\-Get\-Raw\-Axis} (
+\hypertarget{classJoystick_a392fb94197b2e25a4172b0fa91b49b04}{
+\index{Joystick@{Joystick}!GetRawAxis@{GetRawAxis}}
+\index{GetRawAxis@{GetRawAxis}!Joystick@{Joystick}}
+\subsubsection[{GetRawAxis}]{\setlength{\rightskip}{0pt plus 5cm}float Joystick::GetRawAxis (
 \begin{DoxyParamCaption}
-\item[{\-U\-I\-N\-T32}]{axis}
+\item[{UINT32}]{axis}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{classJoystick_a392fb94197b2e25a4172b0fa91b49b04}
-\-Get the value of the axis.
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classJoystick_a392fb94197b2e25a4172b0fa91b49b04}
+Get the value of the axis.
 
 
-\begin{DoxyParams}{\-Parameters}
-{\em axis} & \-The axis to read \mbox{[}1-\/6\mbox{]}. \\
+\begin{DoxyParams}{Parameters}
+{\em axis} & The axis to read \mbox{[}1-\/6\mbox{]}. \\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{\-Returns}
-\-The value of the axis. 
+\begin{DoxyReturn}{Returns}
+The value of the axis. 
 \end{DoxyReturn}
 
 
-\-Implements \hyperlink{classGenericHID}{\-Generic\-H\-I\-D}.
+Implements \hyperlink{classGenericHID}{GenericHID}.
 
-\hypertarget{classJoystick_ae5af1b7f54545088da91894fd105e1e2}{\index{\-Joystick@{\-Joystick}!\-Get\-Raw\-Button@{\-Get\-Raw\-Button}}
-\index{\-Get\-Raw\-Button@{\-Get\-Raw\-Button}!Joystick@{\-Joystick}}
-\subsubsection[{\-Get\-Raw\-Button}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Joystick\-::\-Get\-Raw\-Button} (
+\hypertarget{classJoystick_ae5af1b7f54545088da91894fd105e1e2}{
+\index{Joystick@{Joystick}!GetRawButton@{GetRawButton}}
+\index{GetRawButton@{GetRawButton}!Joystick@{Joystick}}
+\subsubsection[{GetRawButton}]{\setlength{\rightskip}{0pt plus 5cm}bool Joystick::GetRawButton (
 \begin{DoxyParamCaption}
-\item[{\-U\-I\-N\-T32}]{button}
+\item[{UINT32}]{button}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{classJoystick_ae5af1b7f54545088da91894fd105e1e2}
-\-Get the button value for buttons 1 through 12.
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classJoystick_ae5af1b7f54545088da91894fd105e1e2}
+Get the button value for buttons 1 through 12.
 
-\-The buttons are returned in a single 16 bit value with one bit representing the state of each button. \-The appropriate button is returned as a boolean value.
+The buttons are returned in a single 16 bit value with one bit representing the state of each button. The appropriate button is returned as a boolean value.
 
 
-\begin{DoxyParams}{\-Parameters}
-{\em button} & \-The button number to be read. \\
+\begin{DoxyParams}{Parameters}
+{\em button} & The button number to be read. \\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{\-Returns}
-\-The state of the button. 
+\begin{DoxyReturn}{Returns}
+The state of the button. 
 \end{DoxyReturn}
 
 
-\-Implements \hyperlink{classGenericHID}{\-Generic\-H\-I\-D}.
+Implements \hyperlink{classGenericHID}{GenericHID}.
 
-\hypertarget{classJoystick_a3330cc651d36c58bffea669ff0b77161}{\index{\-Joystick@{\-Joystick}!\-Get\-Throttle@{\-Get\-Throttle}}
-\index{\-Get\-Throttle@{\-Get\-Throttle}!Joystick@{\-Joystick}}
-\subsubsection[{\-Get\-Throttle}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf \-Joystick\-::\-Get\-Throttle} (
+\hypertarget{classJoystick_a3330cc651d36c58bffea669ff0b77161}{
+\index{Joystick@{Joystick}!GetThrottle@{GetThrottle}}
+\index{GetThrottle@{GetThrottle}!Joystick@{Joystick}}
+\subsubsection[{GetThrottle}]{\setlength{\rightskip}{0pt plus 5cm}float Joystick::GetThrottle (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{classJoystick_a3330cc651d36c58bffea669ff0b77161}
-\-Get the throttle value of the current joystick. \-This depends on the mapping of the joystick connected to the current port. 
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classJoystick_a3330cc651d36c58bffea669ff0b77161}
+Get the throttle value of the current joystick. This depends on the mapping of the joystick connected to the current port. 
 
-\-Implements \hyperlink{classGenericHID}{\-Generic\-H\-I\-D}.
+Implements \hyperlink{classGenericHID}{GenericHID}.
 
-\hypertarget{classJoystick_a451c9a35875271e7918af8843e39f3cc}{\index{\-Joystick@{\-Joystick}!\-Get\-Top@{\-Get\-Top}}
-\index{\-Get\-Top@{\-Get\-Top}!Joystick@{\-Joystick}}
-\subsubsection[{\-Get\-Top}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Joystick\-::\-Get\-Top} (
+\hypertarget{classJoystick_a451c9a35875271e7918af8843e39f3cc}{
+\index{Joystick@{Joystick}!GetTop@{GetTop}}
+\index{GetTop@{GetTop}!Joystick@{Joystick}}
+\subsubsection[{GetTop}]{\setlength{\rightskip}{0pt plus 5cm}bool Joystick::GetTop (
 \begin{DoxyParamCaption}
-\item[{\-Joystick\-Hand}]{hand = {\ttfamily k\-Right\-Hand}}
+\item[{JoystickHand}]{hand = {\ttfamily kRightHand}}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{classJoystick_a451c9a35875271e7918af8843e39f3cc}
-\-Read the state of the top button on the joystick.
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classJoystick_a451c9a35875271e7918af8843e39f3cc}
+Read the state of the top button on the joystick.
 
-\-Look up which button has been assigned to the top and read its state.
+Look up which button has been assigned to the top and read its state.
 
 
-\begin{DoxyParams}{\-Parameters}
-{\em hand} & \-This parameter is ignored for the \hyperlink{classJoystick}{\-Joystick} class and is only here to complete the \hyperlink{classGenericHID}{\-Generic\-H\-I\-D} interface. \\
+\begin{DoxyParams}{Parameters}
+{\em hand} & This parameter is ignored for the \hyperlink{classJoystick}{Joystick} class and is only here to complete the \hyperlink{classGenericHID}{GenericHID} interface. \\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{\-Returns}
-\-The state of the top button. 
+\begin{DoxyReturn}{Returns}
+The state of the top button. 
 \end{DoxyReturn}
 
 
-\-Implements \hyperlink{classGenericHID}{\-Generic\-H\-I\-D}.
+Implements \hyperlink{classGenericHID}{GenericHID}.
 
-\hypertarget{classJoystick_a17c9682c8bbfd77d9377d2352fb836dd}{\index{\-Joystick@{\-Joystick}!\-Get\-Trigger@{\-Get\-Trigger}}
-\index{\-Get\-Trigger@{\-Get\-Trigger}!Joystick@{\-Joystick}}
-\subsubsection[{\-Get\-Trigger}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Joystick\-::\-Get\-Trigger} (
+\hypertarget{classJoystick_a17c9682c8bbfd77d9377d2352fb836dd}{
+\index{Joystick@{Joystick}!GetTrigger@{GetTrigger}}
+\index{GetTrigger@{GetTrigger}!Joystick@{Joystick}}
+\subsubsection[{GetTrigger}]{\setlength{\rightskip}{0pt plus 5cm}bool Joystick::GetTrigger (
 \begin{DoxyParamCaption}
-\item[{\-Joystick\-Hand}]{hand = {\ttfamily k\-Right\-Hand}}
+\item[{JoystickHand}]{hand = {\ttfamily kRightHand}}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{classJoystick_a17c9682c8bbfd77d9377d2352fb836dd}
-\-Read the state of the trigger on the joystick.
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classJoystick_a17c9682c8bbfd77d9377d2352fb836dd}
+Read the state of the trigger on the joystick.
 
-\-Look up which button has been assigned to the trigger and read its state.
+Look up which button has been assigned to the trigger and read its state.
 
 
-\begin{DoxyParams}{\-Parameters}
-{\em hand} & \-This parameter is ignored for the \hyperlink{classJoystick}{\-Joystick} class and is only here to complete the \hyperlink{classGenericHID}{\-Generic\-H\-I\-D} interface. \\
+\begin{DoxyParams}{Parameters}
+{\em hand} & This parameter is ignored for the \hyperlink{classJoystick}{Joystick} class and is only here to complete the \hyperlink{classGenericHID}{GenericHID} interface. \\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{\-Returns}
-\-The state of the trigger. 
+\begin{DoxyReturn}{Returns}
+The state of the trigger. 
 \end{DoxyReturn}
 
 
-\-Implements \hyperlink{classGenericHID}{\-Generic\-H\-I\-D}.
+Implements \hyperlink{classGenericHID}{GenericHID}.
 
-\hypertarget{classJoystick_a3b29a1a8121657bd3ba4aa95db050a5f}{\index{\-Joystick@{\-Joystick}!\-Get\-Twist@{\-Get\-Twist}}
-\index{\-Get\-Twist@{\-Get\-Twist}!Joystick@{\-Joystick}}
-\subsubsection[{\-Get\-Twist}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf \-Joystick\-::\-Get\-Twist} (
+\hypertarget{classJoystick_a3b29a1a8121657bd3ba4aa95db050a5f}{
+\index{Joystick@{Joystick}!GetTwist@{GetTwist}}
+\index{GetTwist@{GetTwist}!Joystick@{Joystick}}
+\subsubsection[{GetTwist}]{\setlength{\rightskip}{0pt plus 5cm}float Joystick::GetTwist (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{classJoystick_a3b29a1a8121657bd3ba4aa95db050a5f}
-\-Get the twist value of the current joystick. \-This depends on the mapping of the joystick connected to the current port. 
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classJoystick_a3b29a1a8121657bd3ba4aa95db050a5f}
+Get the twist value of the current joystick. This depends on the mapping of the joystick connected to the current port. 
 
-\-Implements \hyperlink{classGenericHID}{\-Generic\-H\-I\-D}.
+Implements \hyperlink{classGenericHID}{GenericHID}.
 
-\hypertarget{classJoystick_a684f7ef395e7cf4d1137e816554446c9}{\index{\-Joystick@{\-Joystick}!\-Get\-X@{\-Get\-X}}
-\index{\-Get\-X@{\-Get\-X}!Joystick@{\-Joystick}}
-\subsubsection[{\-Get\-X}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf \-Joystick\-::\-Get\-X} (
+\hypertarget{classJoystick_a684f7ef395e7cf4d1137e816554446c9}{
+\index{Joystick@{Joystick}!GetX@{GetX}}
+\index{GetX@{GetX}!Joystick@{Joystick}}
+\subsubsection[{GetX}]{\setlength{\rightskip}{0pt plus 5cm}float Joystick::GetX (
 \begin{DoxyParamCaption}
-\item[{\-Joystick\-Hand}]{hand = {\ttfamily k\-Right\-Hand}}
+\item[{JoystickHand}]{hand = {\ttfamily kRightHand}}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{classJoystick_a684f7ef395e7cf4d1137e816554446c9}
-\-Get the \-X value of the joystick. \-This depends on the mapping of the joystick connected to the current port. 
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classJoystick_a684f7ef395e7cf4d1137e816554446c9}
+Get the X value of the joystick. This depends on the mapping of the joystick connected to the current port. 
 
-\-Implements \hyperlink{classGenericHID}{\-Generic\-H\-I\-D}.
+Implements \hyperlink{classGenericHID}{GenericHID}.
 
-\hypertarget{classJoystick_a6f413b0da6c62d848113409acc9cb971}{\index{\-Joystick@{\-Joystick}!\-Get\-Y@{\-Get\-Y}}
-\index{\-Get\-Y@{\-Get\-Y}!Joystick@{\-Joystick}}
-\subsubsection[{\-Get\-Y}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf \-Joystick\-::\-Get\-Y} (
+\hypertarget{classJoystick_a6f413b0da6c62d848113409acc9cb971}{
+\index{Joystick@{Joystick}!GetY@{GetY}}
+\index{GetY@{GetY}!Joystick@{Joystick}}
+\subsubsection[{GetY}]{\setlength{\rightskip}{0pt plus 5cm}float Joystick::GetY (
 \begin{DoxyParamCaption}
-\item[{\-Joystick\-Hand}]{hand = {\ttfamily k\-Right\-Hand}}
+\item[{JoystickHand}]{hand = {\ttfamily kRightHand}}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{classJoystick_a6f413b0da6c62d848113409acc9cb971}
-\-Get the \-Y value of the joystick. \-This depends on the mapping of the joystick connected to the current port. 
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classJoystick_a6f413b0da6c62d848113409acc9cb971}
+Get the Y value of the joystick. This depends on the mapping of the joystick connected to the current port. 
 
-\-Implements \hyperlink{classGenericHID}{\-Generic\-H\-I\-D}.
+Implements \hyperlink{classGenericHID}{GenericHID}.
 
-\hypertarget{classJoystick_a4e8c04b243729f58bf360a6584eac775}{\index{\-Joystick@{\-Joystick}!\-Get\-Z@{\-Get\-Z}}
-\index{\-Get\-Z@{\-Get\-Z}!Joystick@{\-Joystick}}
-\subsubsection[{\-Get\-Z}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf \-Joystick\-::\-Get\-Z} (
+\hypertarget{classJoystick_a4e8c04b243729f58bf360a6584eac775}{
+\index{Joystick@{Joystick}!GetZ@{GetZ}}
+\index{GetZ@{GetZ}!Joystick@{Joystick}}
+\subsubsection[{GetZ}]{\setlength{\rightskip}{0pt plus 5cm}float Joystick::GetZ (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{classJoystick_a4e8c04b243729f58bf360a6584eac775}
-\-Get the \-Z value of the current joystick. \-This depends on the mapping of the joystick connected to the current port. 
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classJoystick_a4e8c04b243729f58bf360a6584eac775}
+Get the Z value of the current joystick. This depends on the mapping of the joystick connected to the current port. 
 
-\-Implements \hyperlink{classGenericHID}{\-Generic\-H\-I\-D}.
+Implements \hyperlink{classGenericHID}{GenericHID}.
 
-\hypertarget{classJoystick_a4909b232134c0748bc61e223e3552396}{\index{\-Joystick@{\-Joystick}!\-Set\-Axis\-Channel@{\-Set\-Axis\-Channel}}
-\index{\-Set\-Axis\-Channel@{\-Set\-Axis\-Channel}!Joystick@{\-Joystick}}
-\subsubsection[{\-Set\-Axis\-Channel}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Joystick\-::\-Set\-Axis\-Channel} (
+\hypertarget{classJoystick_a4909b232134c0748bc61e223e3552396}{
+\index{Joystick@{Joystick}!SetAxisChannel@{SetAxisChannel}}
+\index{SetAxisChannel@{SetAxisChannel}!Joystick@{Joystick}}
+\subsubsection[{SetAxisChannel}]{\setlength{\rightskip}{0pt plus 5cm}void Joystick::SetAxisChannel (
 \begin{DoxyParamCaption}
-\item[{\-Axis\-Type}]{axis, }
-\item[{\-U\-I\-N\-T32}]{channel}
+\item[{AxisType}]{axis, }
+\item[{UINT32}]{channel}
 \end{DoxyParamCaption}
-)}}\label{classJoystick_a4909b232134c0748bc61e223e3552396}
-\-Set the channel associated with a specified axis.
+)}}
+\label{classJoystick_a4909b232134c0748bc61e223e3552396}
+Set the channel associated with a specified axis.
 
 
-\begin{DoxyParams}{\-Parameters}
-{\em axis} & \-The axis to set the channel for. \\
+\begin{DoxyParams}{Parameters}
+{\em axis} & The axis to set the channel for. \\
 \hline
-{\em channel} & \-The channel to set the axis to. \\
+{\em channel} & The channel to set the axis to. \\
 \hline
 \end{DoxyParams}
 
 
-\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
 \item 
-\-Joystick.\-h\item 
-\-Joystick.\-cpp\end{DoxyCompactItemize}
+Joystick.h\item 
+Joystick.cpp\end{DoxyCompactItemize}

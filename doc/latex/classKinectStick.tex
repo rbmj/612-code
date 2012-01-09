@@ -1,0 +1,200 @@
+\hypertarget{classKinectStick}{
+\section{KinectStick Class Reference}
+\label{classKinectStick}\index{KinectStick@{KinectStick}}
+}
+Inheritance diagram for KinectStick:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classKinectStick}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+union {\bfseries KinectStickData}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classKinectStick_a4063caee2fd310cc104684a30aff31e4}{KinectStick} (int id)
+\item 
+virtual float \hyperlink{classKinectStick_a81aec4d7e6f6202843911ef3a700f403}{GetX} (JoystickHand hand=kRightHand)
+\item 
+virtual float \hyperlink{classKinectStick_ade311519e1ad707b6a5003cbe64989f1}{GetY} (JoystickHand hand=kRightHand)
+\item 
+virtual float \hyperlink{classKinectStick_a43882b03749a3fc087ce7e632f5010a3}{GetZ} ()
+\item 
+virtual float \hyperlink{classKinectStick_aa7c2d706db00247c8faec0bcf68a69b6}{GetTwist} ()
+\item 
+virtual float \hyperlink{classKinectStick_a1b370b02304f499fd2d347ce2d6b6e5e}{GetThrottle} ()
+\item 
+virtual float \hyperlink{classKinectStick_a80f0f1ddfbe0c9ae5096bb575edb8a05}{GetRawAxis} (UINT32 axis)
+\item 
+virtual bool \hyperlink{classKinectStick_a372d0270fa3e9055596d97b370f69866}{GetTrigger} (JoystickHand hand=kRightHand)
+\item 
+virtual bool \hyperlink{classKinectStick_ad7127343b58e1085062430ee24b5cb2d}{GetTop} (JoystickHand hand=kRightHand)
+\item 
+\hypertarget{classKinectStick_a82313329ccd83e34771f3ea2f8de4fbe}{
+virtual bool {\bfseries GetBumper} (JoystickHand hand=kRightHand)}
+\label{classKinectStick_a82313329ccd83e34771f3ea2f8de4fbe}
+
+\item 
+\hypertarget{classKinectStick_a0fa75c3200f06145eb045b9897a7d570}{
+virtual bool {\bfseries GetRawButton} (UINT32 button)}
+\label{classKinectStick_a0fa75c3200f06145eb045b9897a7d570}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classKinectStick_a4063caee2fd310cc104684a30aff31e4}{
+\index{KinectStick@{KinectStick}!KinectStick@{KinectStick}}
+\index{KinectStick@{KinectStick}!KinectStick@{KinectStick}}
+\subsubsection[{KinectStick}]{\setlength{\rightskip}{0pt plus 5cm}KinectStick::KinectStick (
+\begin{DoxyParamCaption}
+\item[{int}]{id}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}explicit\mbox{]}}}}
+\label{classKinectStick_a4063caee2fd310cc104684a30aff31e4}
+\hyperlink{classKinect}{Kinect} joystick constructor 
+\begin{DoxyParams}{Parameters}
+{\em id} & value is either 1 or 2 for the left or right joystick decoded from gestures interpreted by the \hyperlink{classKinect}{Kinect} server on the Driver Station computer. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classKinectStick_a80f0f1ddfbe0c9ae5096bb575edb8a05}{
+\index{KinectStick@{KinectStick}!GetRawAxis@{GetRawAxis}}
+\index{GetRawAxis@{GetRawAxis}!KinectStick@{KinectStick}}
+\subsubsection[{GetRawAxis}]{\setlength{\rightskip}{0pt plus 5cm}float KinectStick::GetRawAxis (
+\begin{DoxyParamCaption}
+\item[{UINT32}]{axis}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classKinectStick_a80f0f1ddfbe0c9ae5096bb575edb8a05}
+Get the joystick axis value by axis number This is only supported for X in the default gestures and all others always returns 0 
+
+Implements \hyperlink{classGenericHID}{GenericHID}.
+
+\hypertarget{classKinectStick_a1b370b02304f499fd2d347ce2d6b6e5e}{
+\index{KinectStick@{KinectStick}!GetThrottle@{GetThrottle}}
+\index{GetThrottle@{GetThrottle}!KinectStick@{KinectStick}}
+\subsubsection[{GetThrottle}]{\setlength{\rightskip}{0pt plus 5cm}float KinectStick::GetThrottle (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classKinectStick_a1b370b02304f499fd2d347ce2d6b6e5e}
+Get the Throttle joystick value This is not supported in the default gestures and always returns 0 
+
+Implements \hyperlink{classGenericHID}{GenericHID}.
+
+\hypertarget{classKinectStick_ad7127343b58e1085062430ee24b5cb2d}{
+\index{KinectStick@{KinectStick}!GetTop@{GetTop}}
+\index{GetTop@{GetTop}!KinectStick@{KinectStick}}
+\subsubsection[{GetTop}]{\setlength{\rightskip}{0pt plus 5cm}bool KinectStick::GetTop (
+\begin{DoxyParamCaption}
+\item[{JoystickHand}]{hand = {\ttfamily kRightHand}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classKinectStick_ad7127343b58e1085062430ee24b5cb2d}
+Get the top button value for the joystick 
+\begin{DoxyParams}{Parameters}
+{\em hand} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the top button is pressed 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classGenericHID}{GenericHID}.
+
+\hypertarget{classKinectStick_a372d0270fa3e9055596d97b370f69866}{
+\index{KinectStick@{KinectStick}!GetTrigger@{GetTrigger}}
+\index{GetTrigger@{GetTrigger}!KinectStick@{KinectStick}}
+\subsubsection[{GetTrigger}]{\setlength{\rightskip}{0pt plus 5cm}bool KinectStick::GetTrigger (
+\begin{DoxyParamCaption}
+\item[{JoystickHand}]{hand = {\ttfamily kRightHand}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classKinectStick_a372d0270fa3e9055596d97b370f69866}
+Get the trigger value for the joystick 
+\begin{DoxyParams}{Parameters}
+{\em hand} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the triger is pressed 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classGenericHID}{GenericHID}.
+
+\hypertarget{classKinectStick_aa7c2d706db00247c8faec0bcf68a69b6}{
+\index{KinectStick@{KinectStick}!GetTwist@{GetTwist}}
+\index{GetTwist@{GetTwist}!KinectStick@{KinectStick}}
+\subsubsection[{GetTwist}]{\setlength{\rightskip}{0pt plus 5cm}float KinectStick::GetTwist (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classKinectStick_aa7c2d706db00247c8faec0bcf68a69b6}
+Get the Twist joystick value This is not supported in the default gestures and always returns 0 
+
+Implements \hyperlink{classGenericHID}{GenericHID}.
+
+\hypertarget{classKinectStick_a81aec4d7e6f6202843911ef3a700f403}{
+\index{KinectStick@{KinectStick}!GetX@{GetX}}
+\index{GetX@{GetX}!KinectStick@{KinectStick}}
+\subsubsection[{GetX}]{\setlength{\rightskip}{0pt plus 5cm}float KinectStick::GetX (
+\begin{DoxyParamCaption}
+\item[{JoystickHand}]{hand = {\ttfamily kRightHand}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classKinectStick_a81aec4d7e6f6202843911ef3a700f403}
+Get the X joystick value This is not supported in the default gestures and always returns 0 
+
+Implements \hyperlink{classGenericHID}{GenericHID}.
+
+\hypertarget{classKinectStick_ade311519e1ad707b6a5003cbe64989f1}{
+\index{KinectStick@{KinectStick}!GetY@{GetY}}
+\index{GetY@{GetY}!KinectStick@{KinectStick}}
+\subsubsection[{GetY}]{\setlength{\rightskip}{0pt plus 5cm}float KinectStick::GetY (
+\begin{DoxyParamCaption}
+\item[{JoystickHand}]{hand = {\ttfamily kRightHand}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classKinectStick_ade311519e1ad707b6a5003cbe64989f1}
+Get the joystick Y value 
+\begin{DoxyParams}{Parameters}
+{\em hand} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The floating point representation of the Y value 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classGenericHID}{GenericHID}.
+
+\hypertarget{classKinectStick_a43882b03749a3fc087ce7e632f5010a3}{
+\index{KinectStick@{KinectStick}!GetZ@{GetZ}}
+\index{GetZ@{GetZ}!KinectStick@{KinectStick}}
+\subsubsection[{GetZ}]{\setlength{\rightskip}{0pt plus 5cm}float KinectStick::GetZ (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classKinectStick_a43882b03749a3fc087ce7e632f5010a3}
+Get the Z joystick value This is not supported in the default gestures and always returns 0 
+
+Implements \hyperlink{classGenericHID}{GenericHID}.
+
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+KinectStick.h\item 
+KinectStick.cpp\end{DoxyCompactItemize}

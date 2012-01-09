@@ -1,386 +1,416 @@
-\hypertarget{classAnalogModule}{\section{\-Analog\-Module \-Class \-Reference}
-\label{classAnalogModule}\index{\-Analog\-Module@{\-Analog\-Module}}
+\hypertarget{classAnalogModule}{
+\section{AnalogModule Class Reference}
+\label{classAnalogModule}\index{AnalogModule@{AnalogModule}}
 }
 
 
-{\ttfamily \#include $<$\-Analog\-Module.\-h$>$}
+{\ttfamily \#include $<$AnalogModule.h$>$}
 
-\-Inheritance diagram for \-Analog\-Module\-:\begin{figure}[H]
+Inheritance diagram for AnalogModule:\begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[height=4.000000cm]{classAnalogModule}
 \end{center}
 \end{figure}
-\subsection*{\-Public \-Member \-Functions}
+\subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \hyperlink{classAnalogModule_a19bfb0c8ddf33573c4da105bee04b951}{\-Set\-Sample\-Rate} (float samples\-Per\-Second)
+void \hyperlink{classAnalogModule_a19bfb0c8ddf33573c4da105bee04b951}{SetSampleRate} (float samplesPerSecond)
 \item 
-float \hyperlink{classAnalogModule_ab063044c14383369726b80ce93c334be}{\-Get\-Sample\-Rate} ()
+float \hyperlink{classAnalogModule_ab063044c14383369726b80ce93c334be}{GetSampleRate} ()
 \item 
-void \hyperlink{classAnalogModule_a7c7f2eade6ca95f337d394c89f7f9da5}{\-Set\-Average\-Bits} (\-U\-I\-N\-T32 channel, \-U\-I\-N\-T32 bits)
+void \hyperlink{classAnalogModule_a7c7f2eade6ca95f337d394c89f7f9da5}{SetAverageBits} (UINT32 channel, UINT32 bits)
 \item 
-\-U\-I\-N\-T32 \hyperlink{classAnalogModule_a5b5a1104a3415b5960d521f402b68f91}{\-Get\-Average\-Bits} (\-U\-I\-N\-T32 channel)
+UINT32 \hyperlink{classAnalogModule_a5b5a1104a3415b5960d521f402b68f91}{GetAverageBits} (UINT32 channel)
 \item 
-void \hyperlink{classAnalogModule_a556054af12905bd3d38972d15ecd08dc}{\-Set\-Oversample\-Bits} (\-U\-I\-N\-T32 channel, \-U\-I\-N\-T32 bits)
+void \hyperlink{classAnalogModule_a556054af12905bd3d38972d15ecd08dc}{SetOversampleBits} (UINT32 channel, UINT32 bits)
 \item 
-\-U\-I\-N\-T32 \hyperlink{classAnalogModule_acf3aa82998c5f22099a79d24f6c77861}{\-Get\-Oversample\-Bits} (\-U\-I\-N\-T32 channel)
+UINT32 \hyperlink{classAnalogModule_acf3aa82998c5f22099a79d24f6c77861}{GetOversampleBits} (UINT32 channel)
 \item 
-\-I\-N\-T16 \hyperlink{classAnalogModule_a23f1793a4408e824b7d6b38295ea8be1}{\-Get\-Value} (\-U\-I\-N\-T32 channel)
+INT16 \hyperlink{classAnalogModule_a23f1793a4408e824b7d6b38295ea8be1}{GetValue} (UINT32 channel)
 \item 
-\-I\-N\-T32 \hyperlink{classAnalogModule_a501c32dcebccd03057b9f01683431f4b}{\-Get\-Average\-Value} (\-U\-I\-N\-T32 channel)
+INT32 \hyperlink{classAnalogModule_a501c32dcebccd03057b9f01683431f4b}{GetAverageValue} (UINT32 channel)
 \item 
-float \hyperlink{classAnalogModule_ae74bde5efa97807ce42ad9834bb5b4b2}{\-Get\-Average\-Voltage} (\-U\-I\-N\-T32 channel)
+float \hyperlink{classAnalogModule_ae74bde5efa97807ce42ad9834bb5b4b2}{GetAverageVoltage} (UINT32 channel)
 \item 
-float \hyperlink{classAnalogModule_a4c2875e0c44d93ea110bc3cf4f8d740e}{\-Get\-Voltage} (\-U\-I\-N\-T32 channel)
+float \hyperlink{classAnalogModule_a4c2875e0c44d93ea110bc3cf4f8d740e}{GetVoltage} (UINT32 channel)
 \item 
-\-U\-I\-N\-T32 \hyperlink{classAnalogModule_a1cc2b9f90b5abaa42ddfde7cbbbf7d7c}{\-Get\-L\-S\-B\-Weight} (\-U\-I\-N\-T32 channel)
+UINT32 \hyperlink{classAnalogModule_a1cc2b9f90b5abaa42ddfde7cbbbf7d7c}{GetLSBWeight} (UINT32 channel)
 \item 
-\-I\-N\-T32 \hyperlink{classAnalogModule_a3c428c04cb174c95dad6f2cb449b135f}{\-Get\-Offset} (\-U\-I\-N\-T32 channel)
+INT32 \hyperlink{classAnalogModule_a3c428c04cb174c95dad6f2cb449b135f}{GetOffset} (UINT32 channel)
 \item 
-\-I\-N\-T32 \hyperlink{classAnalogModule_a4d32e8352879088d4749efec89751313}{\-Volts\-To\-Value} (\-I\-N\-T32 channel, float voltage)
+INT32 \hyperlink{classAnalogModule_a4d32e8352879088d4749efec89751313}{VoltsToValue} (INT32 channel, float voltage)
 \end{DoxyCompactItemize}
-\subsection*{\-Static \-Public \-Member \-Functions}
+\subsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-static \-U\-I\-N\-T32 \hyperlink{classAnalogModule_abb75added412545431fbc6a8fb6d6fbc}{\-Slot\-To\-Index} (\-U\-I\-N\-T32 slot)
-\item 
-static \hyperlink{classAnalogModule}{\-Analog\-Module} $\ast$ \hyperlink{classAnalogModule_a394c796dfcd6fb22404bfc5a50ecd56e}{\-Get\-Instance} (\-U\-I\-N\-T32 slot)
+static \hyperlink{classAnalogModule}{AnalogModule} $\ast$ \hyperlink{classAnalogModule_a73ff2a8a74ce3371d73c701890cc422a}{GetInstance} (UINT8 moduleNumber)
 \end{DoxyCompactItemize}
-\subsection*{\-Static \-Public \-Attributes}
+\subsection*{Static Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{classAnalogModule_a93e13c1b5a181a92a660400c5c93c85c}{static const long \hyperlink{classAnalogModule_a93e13c1b5a181a92a660400c5c93c85c}{k\-Timebase} = 40000000}\label{classAnalogModule_a93e13c1b5a181a92a660400c5c93c85c}
+\hypertarget{classAnalogModule_a93e13c1b5a181a92a660400c5c93c85c}{
+static const long \hyperlink{classAnalogModule_a93e13c1b5a181a92a660400c5c93c85c}{kTimebase} = 40000000}
+\label{classAnalogModule_a93e13c1b5a181a92a660400c5c93c85c}
 
-\begin{DoxyCompactList}\small\item\em 40 \-M\-Hz clock \end{DoxyCompactList}\item 
-\hypertarget{classAnalogModule_a2168f18fda6489141cbac5dfcd2e8343}{static const long {\bfseries k\-Default\-Oversample\-Bits} = 0}\label{classAnalogModule_a2168f18fda6489141cbac5dfcd2e8343}
+\begin{DoxyCompactList}\small\item\em 40 MHz clock \end{DoxyCompactList}\item 
+\hypertarget{classAnalogModule_a2168f18fda6489141cbac5dfcd2e8343}{
+static const long {\bfseries kDefaultOversampleBits} = 0}
+\label{classAnalogModule_a2168f18fda6489141cbac5dfcd2e8343}
 
 \item 
-\hypertarget{classAnalogModule_a0b4f6d9fd0b08bbdbce1c5abd799a67e}{static const long {\bfseries k\-Default\-Average\-Bits} = 7}\label{classAnalogModule_a0b4f6d9fd0b08bbdbce1c5abd799a67e}
+\hypertarget{classAnalogModule_a0b4f6d9fd0b08bbdbce1c5abd799a67e}{
+static const long {\bfseries kDefaultAverageBits} = 7}
+\label{classAnalogModule_a0b4f6d9fd0b08bbdbce1c5abd799a67e}
 
 \item 
-\hypertarget{classAnalogModule_a0f67b2c3cd0471a85add1583ac5420e8}{static const float {\bfseries k\-Default\-Sample\-Rate} = 50000.\-0}\label{classAnalogModule_a0f67b2c3cd0471a85add1583ac5420e8}
+\hypertarget{classAnalogModule_a0f67b2c3cd0471a85add1583ac5420e8}{
+static const float {\bfseries kDefaultSampleRate} = 50000.0}
+\label{classAnalogModule_a0f67b2c3cd0471a85add1583ac5420e8}
 
 \end{DoxyCompactItemize}
-\subsection*{\-Protected \-Member \-Functions}
+\subsection*{Protected Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{classAnalogModule_a8b2f5297ee8fef5bffacf1e0c0d01ea6}{\-Analog\-Module} (\-U\-I\-N\-T32 slot)
+\hyperlink{classAnalogModule_acd4b2c7f4760aaf15f175a70efdd9911}{AnalogModule} (UINT8 moduleNumber)
 \item 
-virtual \hyperlink{classAnalogModule_a480eae8e68c3e5447e423939474b607c}{$\sim$\-Analog\-Module} ()
+virtual \hyperlink{classAnalogModule_a480eae8e68c3e5447e423939474b607c}{$\sim$AnalogModule} ()
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classAnalogModule_a21f639900c480510650969df9c74d17d}{
+class \hyperlink{classAnalogModule_a21f639900c480510650969df9c74d17d}{Module}}
+\label{classAnalogModule_a21f639900c480510650969df9c74d17d}
+
 \end{DoxyCompactItemize}
 
 
-\subsection{\-Detailed \-Description}
-\-Analog \hyperlink{classModule}{\-Module} class. \-Each module can independently sample its channels at a configurable rate. \-There is a 64-\/bit hardware accumulator associated with channel 1 on each module. \-The accumulator is attached to the output of the oversample and average engine so that the center value can be specified in higher resolution resulting in less error. 
+\subsection{Detailed Description}
+Analog \hyperlink{classModule}{Module} class. Each module can independently sample its channels at a configurable rate. There is a 64-\/bit hardware accumulator associated with channel 1 on each module. The accumulator is attached to the output of the oversample and average engine so that the center value can be specified in higher resolution resulting in less error. 
 
-\subsection{\-Constructor \& \-Destructor \-Documentation}
-\hypertarget{classAnalogModule_a8b2f5297ee8fef5bffacf1e0c0d01ea6}{\index{\-Analog\-Module@{\-Analog\-Module}!\-Analog\-Module@{\-Analog\-Module}}
-\index{\-Analog\-Module@{\-Analog\-Module}!AnalogModule@{\-Analog\-Module}}
-\subsubsection[{\-Analog\-Module}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Analog\-Module\-::\-Analog\-Module} (
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classAnalogModule_acd4b2c7f4760aaf15f175a70efdd9911}{
+\index{AnalogModule@{AnalogModule}!AnalogModule@{AnalogModule}}
+\index{AnalogModule@{AnalogModule}!AnalogModule@{AnalogModule}}
+\subsubsection[{AnalogModule}]{\setlength{\rightskip}{0pt plus 5cm}AnalogModule::AnalogModule (
 \begin{DoxyParamCaption}
-\item[{\-U\-I\-N\-T32}]{slot}
+\item[{UINT8}]{moduleNumber}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily  \mbox{[}explicit, protected\mbox{]}}}}\label{classAnalogModule_a8b2f5297ee8fef5bffacf1e0c0d01ea6}
-\-Create a new instance of an analog module.
+)\hspace{0.3cm}{\ttfamily  \mbox{[}explicit, protected\mbox{]}}}}
+\label{classAnalogModule_acd4b2c7f4760aaf15f175a70efdd9911}
+Create a new instance of an analog module.
 
-\-Create an instance of the analog module object. \-Initialize all the parameters to reasonable values on start. \-Setting a global value on an analog module can be done only once unless subsequent values are set the previously set value. \-Analog modules are a singleton, so the constructor is never called outside of this class.
+Create an instance of the analog module object. Initialize all the parameters to reasonable values on start. Setting a global value on an analog module can be done only once unless subsequent values are set the previously set value. Analog modules are a singleton, so the constructor is never called outside of this class.
 
 
-\begin{DoxyParams}{\-Parameters}
-{\em slot} & \-The slot in the chassis that the module is plugged into. \\
+\begin{DoxyParams}{Parameters}
+{\em moduleNumber} & The analog module to create (1 or 2). \\
 \hline
 \end{DoxyParams}
-\hypertarget{classAnalogModule_a480eae8e68c3e5447e423939474b607c}{\index{\-Analog\-Module@{\-Analog\-Module}!$\sim$\-Analog\-Module@{$\sim$\-Analog\-Module}}
-\index{$\sim$\-Analog\-Module@{$\sim$\-Analog\-Module}!AnalogModule@{\-Analog\-Module}}
-\subsubsection[{$\sim$\-Analog\-Module}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Analog\-Module\-::$\sim$\-Analog\-Module} (
+\hypertarget{classAnalogModule_a480eae8e68c3e5447e423939474b607c}{
+\index{AnalogModule@{AnalogModule}!$\sim$AnalogModule@{$\sim$AnalogModule}}
+\index{$\sim$AnalogModule@{$\sim$AnalogModule}!AnalogModule@{AnalogModule}}
+\subsubsection[{$\sim$AnalogModule}]{\setlength{\rightskip}{0pt plus 5cm}AnalogModule::$\sim$AnalogModule (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily  \mbox{[}protected, virtual\mbox{]}}}}\label{classAnalogModule_a480eae8e68c3e5447e423939474b607c}
-\-Destructor for \hyperlink{classAnalogModule}{\-Analog\-Module}. 
+)\hspace{0.3cm}{\ttfamily  \mbox{[}protected, virtual\mbox{]}}}}
+\label{classAnalogModule_a480eae8e68c3e5447e423939474b607c}
+Destructor for \hyperlink{classAnalogModule}{AnalogModule}. 
 
-\subsection{\-Member \-Function \-Documentation}
-\hypertarget{classAnalogModule_a5b5a1104a3415b5960d521f402b68f91}{\index{\-Analog\-Module@{\-Analog\-Module}!\-Get\-Average\-Bits@{\-Get\-Average\-Bits}}
-\index{\-Get\-Average\-Bits@{\-Get\-Average\-Bits}!AnalogModule@{\-Analog\-Module}}
-\subsubsection[{\-Get\-Average\-Bits}]{\setlength{\rightskip}{0pt plus 5cm}\-U\-I\-N\-T32 {\bf \-Analog\-Module\-::\-Get\-Average\-Bits} (
+\subsection{Member Function Documentation}
+\hypertarget{classAnalogModule_a5b5a1104a3415b5960d521f402b68f91}{
+\index{AnalogModule@{AnalogModule}!GetAverageBits@{GetAverageBits}}
+\index{GetAverageBits@{GetAverageBits}!AnalogModule@{AnalogModule}}
+\subsubsection[{GetAverageBits}]{\setlength{\rightskip}{0pt plus 5cm}UINT32 AnalogModule::GetAverageBits (
 \begin{DoxyParamCaption}
-\item[{\-U\-I\-N\-T32}]{channel}
+\item[{UINT32}]{channel}
 \end{DoxyParamCaption}
-)}}\label{classAnalogModule_a5b5a1104a3415b5960d521f402b68f91}
-\-Get the number of averaging bits.
+)}}
+\label{classAnalogModule_a5b5a1104a3415b5960d521f402b68f91}
+Get the number of averaging bits.
 
-\-This gets the number of averaging bits from the \-F\-P\-G\-A. \-The actual number of averaged samples is 2$\ast$$\ast$bits. \-The averaging is done automatically in the \-F\-P\-G\-A.
+This gets the number of averaging bits from the FPGA. The actual number of averaged samples is 2$\ast$$\ast$bits. The averaging is done automatically in the FPGA.
 
 
-\begin{DoxyParams}{\-Parameters}
-{\em channel} & \-Channel to address. \\
+\begin{DoxyParams}{Parameters}
+{\em channel} & Channel to address. \\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{\-Returns}
-\-Bits to average. 
+\begin{DoxyReturn}{Returns}
+Bits to average. 
 \end{DoxyReturn}
-\hypertarget{classAnalogModule_a501c32dcebccd03057b9f01683431f4b}{\index{\-Analog\-Module@{\-Analog\-Module}!\-Get\-Average\-Value@{\-Get\-Average\-Value}}
-\index{\-Get\-Average\-Value@{\-Get\-Average\-Value}!AnalogModule@{\-Analog\-Module}}
-\subsubsection[{\-Get\-Average\-Value}]{\setlength{\rightskip}{0pt plus 5cm}\-I\-N\-T32 {\bf \-Analog\-Module\-::\-Get\-Average\-Value} (
+\hypertarget{classAnalogModule_a501c32dcebccd03057b9f01683431f4b}{
+\index{AnalogModule@{AnalogModule}!GetAverageValue@{GetAverageValue}}
+\index{GetAverageValue@{GetAverageValue}!AnalogModule@{AnalogModule}}
+\subsubsection[{GetAverageValue}]{\setlength{\rightskip}{0pt plus 5cm}INT32 AnalogModule::GetAverageValue (
 \begin{DoxyParamCaption}
-\item[{\-U\-I\-N\-T32}]{channel}
+\item[{UINT32}]{channel}
 \end{DoxyParamCaption}
-)}}\label{classAnalogModule_a501c32dcebccd03057b9f01683431f4b}
-\-Get a sample from the output of the oversample and average engine for the channel.
+)}}
+\label{classAnalogModule_a501c32dcebccd03057b9f01683431f4b}
+Get a sample from the output of the oversample and average engine for the channel.
 
-\-The sample is 12-\/bit + the value configured in \hyperlink{classAnalogModule_a556054af12905bd3d38972d15ecd08dc}{\-Set\-Oversample\-Bits()}. \-The value configured in \hyperlink{classAnalogModule_a7c7f2eade6ca95f337d394c89f7f9da5}{\-Set\-Average\-Bits()} will cause this value to be averaged 2$\ast$$\ast$bits number of samples. \-This is not a sliding window. \-The sample will not change until 2$\ast$$\ast$(\-Oversampl\-Bits + \-Average\-Bits) samples have been acquired from the module on this channel. \-Use \hyperlink{classAnalogModule_ae74bde5efa97807ce42ad9834bb5b4b2}{\-Get\-Average\-Voltage()} to get the analog value in calibrated units.
+The sample is 12-\/bit + the value configured in \hyperlink{classAnalogModule_a556054af12905bd3d38972d15ecd08dc}{SetOversampleBits()}. The value configured in \hyperlink{classAnalogModule_a7c7f2eade6ca95f337d394c89f7f9da5}{SetAverageBits()} will cause this value to be averaged 2$\ast$$\ast$bits number of samples. This is not a sliding window. The sample will not change until 2$\ast$$\ast$(OversamplBits + AverageBits) samples have been acquired from the module on this channel. Use \hyperlink{classAnalogModule_ae74bde5efa97807ce42ad9834bb5b4b2}{GetAverageVoltage()} to get the analog value in calibrated units.
 
 
-\begin{DoxyParams}{\-Parameters}
-{\em channel} & \-Channel number to read. \\
+\begin{DoxyParams}{Parameters}
+{\em channel} & Channel number to read. \\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{\-Returns}
-\-A sample from the oversample and average engine for the channel. 
+\begin{DoxyReturn}{Returns}
+A sample from the oversample and average engine for the channel. 
 \end{DoxyReturn}
-\hypertarget{classAnalogModule_ae74bde5efa97807ce42ad9834bb5b4b2}{\index{\-Analog\-Module@{\-Analog\-Module}!\-Get\-Average\-Voltage@{\-Get\-Average\-Voltage}}
-\index{\-Get\-Average\-Voltage@{\-Get\-Average\-Voltage}!AnalogModule@{\-Analog\-Module}}
-\subsubsection[{\-Get\-Average\-Voltage}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf \-Analog\-Module\-::\-Get\-Average\-Voltage} (
+\hypertarget{classAnalogModule_ae74bde5efa97807ce42ad9834bb5b4b2}{
+\index{AnalogModule@{AnalogModule}!GetAverageVoltage@{GetAverageVoltage}}
+\index{GetAverageVoltage@{GetAverageVoltage}!AnalogModule@{AnalogModule}}
+\subsubsection[{GetAverageVoltage}]{\setlength{\rightskip}{0pt plus 5cm}float AnalogModule::GetAverageVoltage (
 \begin{DoxyParamCaption}
-\item[{\-U\-I\-N\-T32}]{channel}
+\item[{UINT32}]{channel}
 \end{DoxyParamCaption}
-)}}\label{classAnalogModule_ae74bde5efa97807ce42ad9834bb5b4b2}
-\-Get a scaled sample from the output of the oversample and average engine for the channel.
+)}}
+\label{classAnalogModule_ae74bde5efa97807ce42ad9834bb5b4b2}
+Get a scaled sample from the output of the oversample and average engine for the channel.
 
-\-The value is scaled to units of \-Volts using the calibrated scaling data from \hyperlink{classAnalogModule_a1cc2b9f90b5abaa42ddfde7cbbbf7d7c}{\-Get\-L\-S\-B\-Weight()} and \hyperlink{classAnalogModule_a3c428c04cb174c95dad6f2cb449b135f}{\-Get\-Offset()}. \-Using oversampling will cause this value to be higher resolution, but it will update more slowly. \-Using averaging will cause this value to be more stable, but it will update more slowly.
+The value is scaled to units of Volts using the calibrated scaling data from \hyperlink{classAnalogModule_a1cc2b9f90b5abaa42ddfde7cbbbf7d7c}{GetLSBWeight()} and \hyperlink{classAnalogModule_a3c428c04cb174c95dad6f2cb449b135f}{GetOffset()}. Using oversampling will cause this value to be higher resolution, but it will update more slowly. Using averaging will cause this value to be more stable, but it will update more slowly.
 
 
-\begin{DoxyParams}{\-Parameters}
-{\em channel} & \-The channel to read. \\
+\begin{DoxyParams}{Parameters}
+{\em channel} & The channel to read. \\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{\-Returns}
-\-A scaled sample from the output of the oversample and average engine for the channel. 
+\begin{DoxyReturn}{Returns}
+A scaled sample from the output of the oversample and average engine for the channel. 
 \end{DoxyReturn}
-\hypertarget{classAnalogModule_a394c796dfcd6fb22404bfc5a50ecd56e}{\index{\-Analog\-Module@{\-Analog\-Module}!\-Get\-Instance@{\-Get\-Instance}}
-\index{\-Get\-Instance@{\-Get\-Instance}!AnalogModule@{\-Analog\-Module}}
-\subsubsection[{\-Get\-Instance}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Analog\-Module} $\ast$ {\bf \-Analog\-Module\-::\-Get\-Instance} (
+\hypertarget{classAnalogModule_a73ff2a8a74ce3371d73c701890cc422a}{
+\index{AnalogModule@{AnalogModule}!GetInstance@{GetInstance}}
+\index{GetInstance@{GetInstance}!AnalogModule@{AnalogModule}}
+\subsubsection[{GetInstance}]{\setlength{\rightskip}{0pt plus 5cm}{\bf AnalogModule} $\ast$ AnalogModule::GetInstance (
 \begin{DoxyParamCaption}
-\item[{\-U\-I\-N\-T32}]{slot}
+\item[{UINT8}]{moduleNumber}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{classAnalogModule_a394c796dfcd6fb22404bfc5a50ecd56e}
-\-Get an instance of an \-Analog \hyperlink{classModule}{\-Module}.
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{classAnalogModule_a73ff2a8a74ce3371d73c701890cc422a}
+Get an instance of an Analog \hyperlink{classModule}{Module}.
 
-\-Singleton analog module creation where a module is allocated on the first use and the same module is returned on subsequent uses.
+Singleton analog module creation where a module is allocated on the first use and the same module is returned on subsequent uses.
 
 
-\begin{DoxyParams}{\-Parameters}
-{\em slot} & \-The physical slot in the c\-R\-I\-O chassis where this analog module is installed. \\
+\begin{DoxyParams}{Parameters}
+{\em moduleNumber} & The analog module to get (1 or 2). \\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{\-Returns}
-\-A pointer to the \hyperlink{classAnalogModule}{\-Analog\-Module}. 
+\begin{DoxyReturn}{Returns}
+A pointer to the \hyperlink{classAnalogModule}{AnalogModule}. 
 \end{DoxyReturn}
-\hypertarget{classAnalogModule_a1cc2b9f90b5abaa42ddfde7cbbbf7d7c}{\index{\-Analog\-Module@{\-Analog\-Module}!\-Get\-L\-S\-B\-Weight@{\-Get\-L\-S\-B\-Weight}}
-\index{\-Get\-L\-S\-B\-Weight@{\-Get\-L\-S\-B\-Weight}!AnalogModule@{\-Analog\-Module}}
-\subsubsection[{\-Get\-L\-S\-B\-Weight}]{\setlength{\rightskip}{0pt plus 5cm}\-U\-I\-N\-T32 {\bf \-Analog\-Module\-::\-Get\-L\-S\-B\-Weight} (
+\hypertarget{classAnalogModule_a1cc2b9f90b5abaa42ddfde7cbbbf7d7c}{
+\index{AnalogModule@{AnalogModule}!GetLSBWeight@{GetLSBWeight}}
+\index{GetLSBWeight@{GetLSBWeight}!AnalogModule@{AnalogModule}}
+\subsubsection[{GetLSBWeight}]{\setlength{\rightskip}{0pt plus 5cm}UINT32 AnalogModule::GetLSBWeight (
 \begin{DoxyParamCaption}
-\item[{\-U\-I\-N\-T32}]{channel}
+\item[{UINT32}]{channel}
 \end{DoxyParamCaption}
-)}}\label{classAnalogModule_a1cc2b9f90b5abaa42ddfde7cbbbf7d7c}
-\-Get the factory scaling least significant bit weight constant. \-The least significant bit weight constant for the channel that was calibrated in manufacturing and stored in an eeprom in the module.
+)}}
+\label{classAnalogModule_a1cc2b9f90b5abaa42ddfde7cbbbf7d7c}
+Get the factory scaling least significant bit weight constant. The least significant bit weight constant for the channel that was calibrated in manufacturing and stored in an eeprom in the module.
 
-\-Volts = ((\-L\-S\-B\-\_\-\-Weight $\ast$ 1e-\/9) $\ast$ raw) -\/ (\-Offset $\ast$ 1e-\/9)
+Volts = ((LSB\_\-Weight $\ast$ 1e-\/9) $\ast$ raw) -\/ (Offset $\ast$ 1e-\/9)
 
 
-\begin{DoxyParams}{\-Parameters}
-{\em channel} & \-The channel to get calibration data for. \\
+\begin{DoxyParams}{Parameters}
+{\em channel} & The channel to get calibration data for. \\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{\-Returns}
-\-Least significant bit weight. 
+\begin{DoxyReturn}{Returns}
+Least significant bit weight. 
 \end{DoxyReturn}
-\hypertarget{classAnalogModule_a3c428c04cb174c95dad6f2cb449b135f}{\index{\-Analog\-Module@{\-Analog\-Module}!\-Get\-Offset@{\-Get\-Offset}}
-\index{\-Get\-Offset@{\-Get\-Offset}!AnalogModule@{\-Analog\-Module}}
-\subsubsection[{\-Get\-Offset}]{\setlength{\rightskip}{0pt plus 5cm}\-I\-N\-T32 {\bf \-Analog\-Module\-::\-Get\-Offset} (
+\hypertarget{classAnalogModule_a3c428c04cb174c95dad6f2cb449b135f}{
+\index{AnalogModule@{AnalogModule}!GetOffset@{GetOffset}}
+\index{GetOffset@{GetOffset}!AnalogModule@{AnalogModule}}
+\subsubsection[{GetOffset}]{\setlength{\rightskip}{0pt plus 5cm}INT32 AnalogModule::GetOffset (
 \begin{DoxyParamCaption}
-\item[{\-U\-I\-N\-T32}]{channel}
+\item[{UINT32}]{channel}
 \end{DoxyParamCaption}
-)}}\label{classAnalogModule_a3c428c04cb174c95dad6f2cb449b135f}
-\-Get the factory scaling offset constant. \-The offset constant for the channel that was calibrated in manufacturing and stored in an eeprom in the module.
+)}}
+\label{classAnalogModule_a3c428c04cb174c95dad6f2cb449b135f}
+Get the factory scaling offset constant. The offset constant for the channel that was calibrated in manufacturing and stored in an eeprom in the module.
 
-\-Volts = ((\-L\-S\-B\-\_\-\-Weight $\ast$ 1e-\/9) $\ast$ raw) -\/ (\-Offset $\ast$ 1e-\/9)
+Volts = ((LSB\_\-Weight $\ast$ 1e-\/9) $\ast$ raw) -\/ (Offset $\ast$ 1e-\/9)
 
 
-\begin{DoxyParams}{\-Parameters}
-{\em channel} & \-The channel to get calibration data for. \\
+\begin{DoxyParams}{Parameters}
+{\em channel} & The channel to get calibration data for. \\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{\-Returns}
-\-Offset constant. 
+\begin{DoxyReturn}{Returns}
+Offset constant. 
 \end{DoxyReturn}
-\hypertarget{classAnalogModule_acf3aa82998c5f22099a79d24f6c77861}{\index{\-Analog\-Module@{\-Analog\-Module}!\-Get\-Oversample\-Bits@{\-Get\-Oversample\-Bits}}
-\index{\-Get\-Oversample\-Bits@{\-Get\-Oversample\-Bits}!AnalogModule@{\-Analog\-Module}}
-\subsubsection[{\-Get\-Oversample\-Bits}]{\setlength{\rightskip}{0pt plus 5cm}\-U\-I\-N\-T32 {\bf \-Analog\-Module\-::\-Get\-Oversample\-Bits} (
+\hypertarget{classAnalogModule_acf3aa82998c5f22099a79d24f6c77861}{
+\index{AnalogModule@{AnalogModule}!GetOversampleBits@{GetOversampleBits}}
+\index{GetOversampleBits@{GetOversampleBits}!AnalogModule@{AnalogModule}}
+\subsubsection[{GetOversampleBits}]{\setlength{\rightskip}{0pt plus 5cm}UINT32 AnalogModule::GetOversampleBits (
 \begin{DoxyParamCaption}
-\item[{\-U\-I\-N\-T32}]{channel}
+\item[{UINT32}]{channel}
 \end{DoxyParamCaption}
-)}}\label{classAnalogModule_acf3aa82998c5f22099a79d24f6c77861}
-\-Get the number of oversample bits.
+)}}
+\label{classAnalogModule_acf3aa82998c5f22099a79d24f6c77861}
+Get the number of oversample bits.
 
-\-This gets the number of oversample bits from the \-F\-P\-G\-A. \-The actual number of oversampled values is 2$\ast$$\ast$bits. \-The oversampling is done automatically in the \-F\-P\-G\-A.
+This gets the number of oversample bits from the FPGA. The actual number of oversampled values is 2$\ast$$\ast$bits. The oversampling is done automatically in the FPGA.
 
 
-\begin{DoxyParams}{\-Parameters}
-{\em channel} & \-Channel to address. \\
+\begin{DoxyParams}{Parameters}
+{\em channel} & Channel to address. \\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{\-Returns}
-\-Bits to oversample. 
+\begin{DoxyReturn}{Returns}
+Bits to oversample. 
 \end{DoxyReturn}
-\hypertarget{classAnalogModule_ab063044c14383369726b80ce93c334be}{\index{\-Analog\-Module@{\-Analog\-Module}!\-Get\-Sample\-Rate@{\-Get\-Sample\-Rate}}
-\index{\-Get\-Sample\-Rate@{\-Get\-Sample\-Rate}!AnalogModule@{\-Analog\-Module}}
-\subsubsection[{\-Get\-Sample\-Rate}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf \-Analog\-Module\-::\-Get\-Sample\-Rate} (
+\hypertarget{classAnalogModule_ab063044c14383369726b80ce93c334be}{
+\index{AnalogModule@{AnalogModule}!GetSampleRate@{GetSampleRate}}
+\index{GetSampleRate@{GetSampleRate}!AnalogModule@{AnalogModule}}
+\subsubsection[{GetSampleRate}]{\setlength{\rightskip}{0pt plus 5cm}float AnalogModule::GetSampleRate (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)}}\label{classAnalogModule_ab063044c14383369726b80ce93c334be}
-\-Get the current sample rate on the module.
+)}}
+\label{classAnalogModule_ab063044c14383369726b80ce93c334be}
+Get the current sample rate on the module.
 
-\-This assumes one entry in the scan list. \-This is a global setting for the module and effects all channels.
+This assumes one entry in the scan list. This is a global setting for the module and effects all channels.
 
-\begin{DoxyReturn}{\-Returns}
-\-Sample rate. 
+\begin{DoxyReturn}{Returns}
+Sample rate. 
 \end{DoxyReturn}
-\hypertarget{classAnalogModule_a23f1793a4408e824b7d6b38295ea8be1}{\index{\-Analog\-Module@{\-Analog\-Module}!\-Get\-Value@{\-Get\-Value}}
-\index{\-Get\-Value@{\-Get\-Value}!AnalogModule@{\-Analog\-Module}}
-\subsubsection[{\-Get\-Value}]{\setlength{\rightskip}{0pt plus 5cm}\-I\-N\-T16 {\bf \-Analog\-Module\-::\-Get\-Value} (
+\hypertarget{classAnalogModule_a23f1793a4408e824b7d6b38295ea8be1}{
+\index{AnalogModule@{AnalogModule}!GetValue@{GetValue}}
+\index{GetValue@{GetValue}!AnalogModule@{AnalogModule}}
+\subsubsection[{GetValue}]{\setlength{\rightskip}{0pt plus 5cm}INT16 AnalogModule::GetValue (
 \begin{DoxyParamCaption}
-\item[{\-U\-I\-N\-T32}]{channel}
+\item[{UINT32}]{channel}
 \end{DoxyParamCaption}
-)}}\label{classAnalogModule_a23f1793a4408e824b7d6b38295ea8be1}
-\-Get a sample straight from the channel on this module.
+)}}
+\label{classAnalogModule_a23f1793a4408e824b7d6b38295ea8be1}
+Get a sample straight from the channel on this module.
 
-\-The sample is a 12-\/bit value representing the -\/10\-V to 10\-V range of the \-A/\-D converter in the module. \-The units are in \-A/\-D converter codes. \-Use \hyperlink{classAnalogModule_a4c2875e0c44d93ea110bc3cf4f8d740e}{\-Get\-Voltage()} to get the analog value in calibrated units.
+The sample is a 12-\/bit value representing the -\/10V to 10V range of the A/D converter in the module. The units are in A/D converter codes. Use \hyperlink{classAnalogModule_a4c2875e0c44d93ea110bc3cf4f8d740e}{GetVoltage()} to get the analog value in calibrated units.
 
-\begin{DoxyReturn}{\-Returns}
-\-A sample straight from the channel on this module. 
+\begin{DoxyReturn}{Returns}
+A sample straight from the channel on this module. 
 \end{DoxyReturn}
-\hypertarget{classAnalogModule_a4c2875e0c44d93ea110bc3cf4f8d740e}{\index{\-Analog\-Module@{\-Analog\-Module}!\-Get\-Voltage@{\-Get\-Voltage}}
-\index{\-Get\-Voltage@{\-Get\-Voltage}!AnalogModule@{\-Analog\-Module}}
-\subsubsection[{\-Get\-Voltage}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf \-Analog\-Module\-::\-Get\-Voltage} (
+\hypertarget{classAnalogModule_a4c2875e0c44d93ea110bc3cf4f8d740e}{
+\index{AnalogModule@{AnalogModule}!GetVoltage@{GetVoltage}}
+\index{GetVoltage@{GetVoltage}!AnalogModule@{AnalogModule}}
+\subsubsection[{GetVoltage}]{\setlength{\rightskip}{0pt plus 5cm}float AnalogModule::GetVoltage (
 \begin{DoxyParamCaption}
-\item[{\-U\-I\-N\-T32}]{channel}
+\item[{UINT32}]{channel}
 \end{DoxyParamCaption}
-)}}\label{classAnalogModule_a4c2875e0c44d93ea110bc3cf4f8d740e}
-\-Get a scaled sample straight from the channel on this module.
+)}}
+\label{classAnalogModule_a4c2875e0c44d93ea110bc3cf4f8d740e}
+Get a scaled sample straight from the channel on this module.
 
-\-The value is scaled to units of \-Volts using the calibrated scaling data from \hyperlink{classAnalogModule_a1cc2b9f90b5abaa42ddfde7cbbbf7d7c}{\-Get\-L\-S\-B\-Weight()} and \hyperlink{classAnalogModule_a3c428c04cb174c95dad6f2cb449b135f}{\-Get\-Offset()}.
+The value is scaled to units of Volts using the calibrated scaling data from \hyperlink{classAnalogModule_a1cc2b9f90b5abaa42ddfde7cbbbf7d7c}{GetLSBWeight()} and \hyperlink{classAnalogModule_a3c428c04cb174c95dad6f2cb449b135f}{GetOffset()}.
 
 
-\begin{DoxyParams}{\-Parameters}
-{\em channel} & \-The channel to read. \\
+\begin{DoxyParams}{Parameters}
+{\em channel} & The channel to read. \\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{\-Returns}
-\-A scaled sample straight from the channel on this module. 
+\begin{DoxyReturn}{Returns}
+A scaled sample straight from the channel on this module. 
 \end{DoxyReturn}
-\hypertarget{classAnalogModule_a7c7f2eade6ca95f337d394c89f7f9da5}{\index{\-Analog\-Module@{\-Analog\-Module}!\-Set\-Average\-Bits@{\-Set\-Average\-Bits}}
-\index{\-Set\-Average\-Bits@{\-Set\-Average\-Bits}!AnalogModule@{\-Analog\-Module}}
-\subsubsection[{\-Set\-Average\-Bits}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Analog\-Module\-::\-Set\-Average\-Bits} (
+\hypertarget{classAnalogModule_a7c7f2eade6ca95f337d394c89f7f9da5}{
+\index{AnalogModule@{AnalogModule}!SetAverageBits@{SetAverageBits}}
+\index{SetAverageBits@{SetAverageBits}!AnalogModule@{AnalogModule}}
+\subsubsection[{SetAverageBits}]{\setlength{\rightskip}{0pt plus 5cm}void AnalogModule::SetAverageBits (
 \begin{DoxyParamCaption}
-\item[{\-U\-I\-N\-T32}]{channel, }
-\item[{\-U\-I\-N\-T32}]{bits}
+\item[{UINT32}]{channel, }
+\item[{UINT32}]{bits}
 \end{DoxyParamCaption}
-)}}\label{classAnalogModule_a7c7f2eade6ca95f337d394c89f7f9da5}
-\-Set the number of averaging bits.
+)}}
+\label{classAnalogModule_a7c7f2eade6ca95f337d394c89f7f9da5}
+Set the number of averaging bits.
 
-\-This sets the number of averaging bits. \-The actual number of averaged samples is 2$\ast$$\ast$bits. \-Use averaging to improve the stability of your measurement at the expense of sampling rate. \-The averaging is done automatically in the \-F\-P\-G\-A.
+This sets the number of averaging bits. The actual number of averaged samples is 2$\ast$$\ast$bits. Use averaging to improve the stability of your measurement at the expense of sampling rate. The averaging is done automatically in the FPGA.
 
 
-\begin{DoxyParams}{\-Parameters}
-{\em channel} & \-Analog channel to configure. \\
+\begin{DoxyParams}{Parameters}
+{\em channel} & Analog channel to configure. \\
 \hline
-{\em bits} & \-Number of bits to average. \\
+{\em bits} & Number of bits to average. \\
 \hline
 \end{DoxyParams}
-\hypertarget{classAnalogModule_a556054af12905bd3d38972d15ecd08dc}{\index{\-Analog\-Module@{\-Analog\-Module}!\-Set\-Oversample\-Bits@{\-Set\-Oversample\-Bits}}
-\index{\-Set\-Oversample\-Bits@{\-Set\-Oversample\-Bits}!AnalogModule@{\-Analog\-Module}}
-\subsubsection[{\-Set\-Oversample\-Bits}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Analog\-Module\-::\-Set\-Oversample\-Bits} (
+\hypertarget{classAnalogModule_a556054af12905bd3d38972d15ecd08dc}{
+\index{AnalogModule@{AnalogModule}!SetOversampleBits@{SetOversampleBits}}
+\index{SetOversampleBits@{SetOversampleBits}!AnalogModule@{AnalogModule}}
+\subsubsection[{SetOversampleBits}]{\setlength{\rightskip}{0pt plus 5cm}void AnalogModule::SetOversampleBits (
 \begin{DoxyParamCaption}
-\item[{\-U\-I\-N\-T32}]{channel, }
-\item[{\-U\-I\-N\-T32}]{bits}
+\item[{UINT32}]{channel, }
+\item[{UINT32}]{bits}
 \end{DoxyParamCaption}
-)}}\label{classAnalogModule_a556054af12905bd3d38972d15ecd08dc}
-\-Set the number of oversample bits.
+)}}
+\label{classAnalogModule_a556054af12905bd3d38972d15ecd08dc}
+Set the number of oversample bits.
 
-\-This sets the number of oversample bits. \-The actual number of oversampled values is 2$\ast$$\ast$bits. \-Use oversampling to improve the resolution of your measurements at the expense of sampling rate. \-The oversampling is done automatically in the \-F\-P\-G\-A.
+This sets the number of oversample bits. The actual number of oversampled values is 2$\ast$$\ast$bits. Use oversampling to improve the resolution of your measurements at the expense of sampling rate. The oversampling is done automatically in the FPGA.
 
 
-\begin{DoxyParams}{\-Parameters}
-{\em channel} & \-Analog channel to configure. \\
+\begin{DoxyParams}{Parameters}
+{\em channel} & Analog channel to configure. \\
 \hline
-{\em bits} & \-Number of bits to oversample. \\
+{\em bits} & Number of bits to oversample. \\
 \hline
 \end{DoxyParams}
-\hypertarget{classAnalogModule_a19bfb0c8ddf33573c4da105bee04b951}{\index{\-Analog\-Module@{\-Analog\-Module}!\-Set\-Sample\-Rate@{\-Set\-Sample\-Rate}}
-\index{\-Set\-Sample\-Rate@{\-Set\-Sample\-Rate}!AnalogModule@{\-Analog\-Module}}
-\subsubsection[{\-Set\-Sample\-Rate}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Analog\-Module\-::\-Set\-Sample\-Rate} (
+\hypertarget{classAnalogModule_a19bfb0c8ddf33573c4da105bee04b951}{
+\index{AnalogModule@{AnalogModule}!SetSampleRate@{SetSampleRate}}
+\index{SetSampleRate@{SetSampleRate}!AnalogModule@{AnalogModule}}
+\subsubsection[{SetSampleRate}]{\setlength{\rightskip}{0pt plus 5cm}void AnalogModule::SetSampleRate (
 \begin{DoxyParamCaption}
-\item[{float}]{samples\-Per\-Second}
+\item[{float}]{samplesPerSecond}
 \end{DoxyParamCaption}
-)}}\label{classAnalogModule_a19bfb0c8ddf33573c4da105bee04b951}
-\-Set the sample rate on the module.
+)}}
+\label{classAnalogModule_a19bfb0c8ddf33573c4da105bee04b951}
+Set the sample rate on the module.
 
-\-This is a global setting for the module and effects all channels.
+This is a global setting for the module and effects all channels.
 
 
-\begin{DoxyParams}{\-Parameters}
-{\em samples\-Per\-Second} & \-The number of samples per channel per second. \\
+\begin{DoxyParams}{Parameters}
+{\em samplesPerSecond} & The number of samples per channel per second. \\
 \hline
 \end{DoxyParams}
-\hypertarget{classAnalogModule_abb75added412545431fbc6a8fb6d6fbc}{\index{\-Analog\-Module@{\-Analog\-Module}!\-Slot\-To\-Index@{\-Slot\-To\-Index}}
-\index{\-Slot\-To\-Index@{\-Slot\-To\-Index}!AnalogModule@{\-Analog\-Module}}
-\subsubsection[{\-Slot\-To\-Index}]{\setlength{\rightskip}{0pt plus 5cm}\-U\-I\-N\-T32 {\bf \-Analog\-Module\-::\-Slot\-To\-Index} (
+\hypertarget{classAnalogModule_a4d32e8352879088d4749efec89751313}{
+\index{AnalogModule@{AnalogModule}!VoltsToValue@{VoltsToValue}}
+\index{VoltsToValue@{VoltsToValue}!AnalogModule@{AnalogModule}}
+\subsubsection[{VoltsToValue}]{\setlength{\rightskip}{0pt plus 5cm}INT32 AnalogModule::VoltsToValue (
 \begin{DoxyParamCaption}
-\item[{\-U\-I\-N\-T32}]{slot}
-\end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{classAnalogModule_abb75added412545431fbc6a8fb6d6fbc}
-\-Convert slot number to index.
-
-
-\begin{DoxyParams}{\-Parameters}
-{\em slot} & \-The slot in the chassis where the module is plugged in. \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{\-Returns}
-\-An index to represent the module internally. 
-\end{DoxyReturn}
-\hypertarget{classAnalogModule_a4d32e8352879088d4749efec89751313}{\index{\-Analog\-Module@{\-Analog\-Module}!\-Volts\-To\-Value@{\-Volts\-To\-Value}}
-\index{\-Volts\-To\-Value@{\-Volts\-To\-Value}!AnalogModule@{\-Analog\-Module}}
-\subsubsection[{\-Volts\-To\-Value}]{\setlength{\rightskip}{0pt plus 5cm}\-I\-N\-T32 {\bf \-Analog\-Module\-::\-Volts\-To\-Value} (
-\begin{DoxyParamCaption}
-\item[{\-I\-N\-T32}]{channel, }
+\item[{INT32}]{channel, }
 \item[{float}]{voltage}
 \end{DoxyParamCaption}
-)}}\label{classAnalogModule_a4d32e8352879088d4749efec89751313}
-\-Convert a voltage to a raw value for a specified channel.
+)}}
+\label{classAnalogModule_a4d32e8352879088d4749efec89751313}
+Convert a voltage to a raw value for a specified channel.
 
-\-This process depends on the calibration of each channel, so the channel must be specified.
+This process depends on the calibration of each channel, so the channel must be specified.
 
-\begin{DoxyRefDesc}{\-Todo}
-\item[\hyperlink{todo__todo000001}{\-Todo}]\-This assumes raw values. \-Oversampling not supported as is.\end{DoxyRefDesc}
+\begin{Desc}
+\item[\hyperlink{todo__todo000001}{Todo}]This assumes raw values. Oversampling not supported as is.\end{Desc}
 
 
 
-\begin{DoxyParams}{\-Parameters}
-{\em channel} & \-The channel to convert for. \\
+\begin{DoxyParams}{Parameters}
+{\em channel} & The channel to convert for. \\
 \hline
-{\em voltage} & \-The voltage to convert. \\
+{\em voltage} & The voltage to convert. \\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{\-Returns}
-\-The raw value for the channel. 
+\begin{DoxyReturn}{Returns}
+The raw value for the channel. 
 \end{DoxyReturn}
 
 
-\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
 \item 
-\-Analog\-Module.\-h\item 
-\-Analog\-Module.\-cpp\end{DoxyCompactItemize}
+AnalogModule.h\item 
+AnalogModule.cpp\end{DoxyCompactItemize}

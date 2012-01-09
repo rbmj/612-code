@@ -5,7 +5,7 @@
 %%For: 
 %Magnification: 1.00
 %%Orientation: Portrait
-%%BoundingBox: 0 0 500 1446.540881
+%%BoundingBox: 0 0 500 1509.433962
 %%Pages: 0
 %%BeginSetup
 %%EndSetup
@@ -19,12 +19,12 @@
 /marginwidth 10 def
 /distx 20 def
 /disty 40 def
-/boundaspect 0.345652 def  % aspect ratio of the BoundingBox (width/height)
+/boundaspect 0.331250 def  % aspect ratio of the BoundingBox (width/height)
 /boundx 500 def
 /boundy boundx boundaspect div def
 /xspacing 0 def
 /yspacing 0 def
-/rows 23 def
+/rows 24 def
 /cols 2 def
 /scalefactor 0 def
 /boxfont /Times-Roman findfont fontheight scalefont def
@@ -189,6 +189,7 @@ boxfont setfont
 (HiTechnicCompass) cw
 (I2C) cw
 (InterruptableSensorBase) cw
+(Kinect) cw
 (Module) cw
 (PWM) cw
 (Relay) cw
@@ -207,24 +208,25 @@ boundx scalefactor div boundy scalefactor div scale
 
 % ----- classes -----
 
- (SensorBase) 0.000000 21.000000 box
- (ErrorBase) 0.000000 22.000000 box
- (Accelerometer) 1.000000 20.000000 box
- (ADXL345_I2C) 1.000000 19.000000 box
- (ADXL345_SPI) 1.000000 18.000000 box
- (AnalogChannel) 1.000000 17.000000 box
- (AnalogTrigger) 1.000000 16.000000 box
- (Compressor) 1.000000 15.000000 box
- (Counter) 1.000000 14.000000 box
-1.000000 14.000000 mark
- (DriverStation) 1.000000 13.000000 box
- (DriverStationLCD) 1.000000 12.000000 box
- (Encoder) 1.000000 11.000000 box
- (Gyro) 1.000000 10.000000 box
- (HiTechnicCompass) 1.000000 9.000000 box
- (I2C) 1.000000 8.000000 box
- (InterruptableSensorBase) 1.000000 7.000000 box
-1.000000 7.000000 mark
+ (SensorBase) 0.000000 22.000000 box
+ (ErrorBase) 0.000000 23.000000 box
+ (Accelerometer) 1.000000 21.000000 box
+ (ADXL345_I2C) 1.000000 20.000000 box
+ (ADXL345_SPI) 1.000000 19.000000 box
+ (AnalogChannel) 1.000000 18.000000 box
+ (AnalogTrigger) 1.000000 17.000000 box
+ (Compressor) 1.000000 16.000000 box
+ (Counter) 1.000000 15.000000 box
+1.000000 15.000000 mark
+ (DriverStation) 1.000000 14.000000 box
+ (DriverStationLCD) 1.000000 13.000000 box
+ (Encoder) 1.000000 12.000000 box
+ (Gyro) 1.000000 11.000000 box
+ (HiTechnicCompass) 1.000000 10.000000 box
+ (I2C) 1.000000 9.000000 box
+ (InterruptableSensorBase) 1.000000 8.000000 box
+1.000000 8.000000 mark
+ (Kinect) 1.000000 7.000000 box
  (Module) 1.000000 6.000000 box
 1.000000 6.000000 mark
  (PWM) 1.000000 5.000000 box
@@ -239,11 +241,13 @@ boundx scalefactor div boundy scalefactor div scale
 % ----- relations -----
 
 solid
-0 0.000000 21.000000 out
+0 0.000000 22.000000 out
 solid
-1 0.000000 22.000000 in
+1 0.000000 23.000000 in
 solid
-1 0.000000 20.250000 out
+1 0.000000 21.250000 out
+solid
+0 0.000000 21.500000 hedge
 solid
 0 0.000000 20.500000 hedge
 solid
@@ -266,9 +270,9 @@ solid
 0 0.000000 11.500000 hedge
 solid
 0 0.000000 10.500000 hedge
-solid
-0 0.000000 9.500000 hedge
 dotted
+0 0.000000 9.500000 hedge
+solid
 0 0.000000 8.500000 hedge
 solid
 0 0.000000 7.500000 hedge
@@ -287,4 +291,4 @@ solid
 solid
 0 0.000000 0.500000 hedge
 solid
-0.000000 21.000000 0.500000 vedge
+0.000000 22.000000 0.500000 vedge

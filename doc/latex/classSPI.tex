@@ -1,478 +1,545 @@
-\hypertarget{classSPI}{\section{\-S\-P\-I \-Class \-Reference}
-\label{classSPI}\index{\-S\-P\-I@{\-S\-P\-I}}
+\hypertarget{classSPI}{
+\section{SPI Class Reference}
+\label{classSPI}\index{SPI@{SPI}}
 }
 
 
-{\ttfamily \#include $<$\-S\-P\-I.\-h$>$}
+{\ttfamily \#include $<$SPI.h$>$}
 
-\-Inheritance diagram for \-S\-P\-I\-:\begin{figure}[H]
+Inheritance diagram for SPI:\begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[height=3.000000cm]{classSPI}
 \end{center}
 \end{figure}
-\subsection*{\-Public \-Types}
+\subsection*{Public Types}
 \begin{DoxyCompactItemize}
 \item 
-enum {\bfseries t\-Frame\-Mode} \{ {\bfseries k\-Chip\-Select}, 
-{\bfseries k\-Pre\-Latch\-Pulse}, 
-{\bfseries k\-Post\-Latch\-Pulse}, 
-{\bfseries k\-Pre\-And\-Post\-Latch\-Pulse}
+enum {\bfseries tFrameMode} \{ {\bfseries kChipSelect}, 
+{\bfseries kPreLatchPulse}, 
+{\bfseries kPostLatchPulse}, 
+{\bfseries kPreAndPostLatchPulse}
  \}
 \item 
-enum {\bfseries t\-S\-P\-I\-Constants} \{ {\bfseries k\-Receive\-F\-I\-F\-O\-Depth} = 512, 
-{\bfseries k\-Transmit\-F\-I\-F\-O\-Depth} = 512
+enum {\bfseries tSPIConstants} \{ {\bfseries kReceiveFIFODepth} = 512, 
+{\bfseries kTransmitFIFODepth} = 512
  \}
 \end{DoxyCompactItemize}
-\subsection*{\-Public \-Member \-Functions}
+\subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{classSPI_ab8a031abcb911915f2221324211f37b4}{\-S\-P\-I} (\hyperlink{classDigitalOutput}{\-Digital\-Output} \&clk, \hyperlink{classDigitalOutput}{\-Digital\-Output} \&mosi, \hyperlink{classDigitalInput}{\-Digital\-Input} \&miso)
+\hyperlink{classSPI_ab8a031abcb911915f2221324211f37b4}{SPI} (\hyperlink{classDigitalOutput}{DigitalOutput} \&clk, \hyperlink{classDigitalOutput}{DigitalOutput} \&mosi, \hyperlink{classDigitalInput}{DigitalInput} \&miso)
 \item 
-\hyperlink{classSPI_a5a9ff16c1b36056d2bab48c8bb9dd58f}{\-S\-P\-I} (\hyperlink{classDigitalOutput}{\-Digital\-Output} $\ast$clk, \hyperlink{classDigitalOutput}{\-Digital\-Output} $\ast$mosi, \hyperlink{classDigitalInput}{\-Digital\-Input} $\ast$miso)
+\hyperlink{classSPI_a5a9ff16c1b36056d2bab48c8bb9dd58f}{SPI} (\hyperlink{classDigitalOutput}{DigitalOutput} $\ast$clk, \hyperlink{classDigitalOutput}{DigitalOutput} $\ast$mosi, \hyperlink{classDigitalInput}{DigitalInput} $\ast$miso)
 \item 
-\hyperlink{classSPI_aa99a1d66d364cb0ec749026660fb8bd2}{\-S\-P\-I} (\hyperlink{classDigitalOutput}{\-Digital\-Output} \&clk, \hyperlink{classDigitalOutput}{\-Digital\-Output} \&mosi)
+\hyperlink{classSPI_aa99a1d66d364cb0ec749026660fb8bd2}{SPI} (\hyperlink{classDigitalOutput}{DigitalOutput} \&clk, \hyperlink{classDigitalOutput}{DigitalOutput} \&mosi)
 \item 
-\hyperlink{classSPI_a8de2c7b9a8484df3e4588afa5ed47178}{\-S\-P\-I} (\hyperlink{classDigitalOutput}{\-Digital\-Output} $\ast$clk, \hyperlink{classDigitalOutput}{\-Digital\-Output} $\ast$mosi)
+\hyperlink{classSPI_a8de2c7b9a8484df3e4588afa5ed47178}{SPI} (\hyperlink{classDigitalOutput}{DigitalOutput} $\ast$clk, \hyperlink{classDigitalOutput}{DigitalOutput} $\ast$mosi)
 \item 
-\hyperlink{classSPI_a1ff8fa9eb4cf60ec5238c5797651afec}{\-S\-P\-I} (\hyperlink{classDigitalOutput}{\-Digital\-Output} \&clk, \hyperlink{classDigitalInput}{\-Digital\-Input} \&miso)
+\hyperlink{classSPI_a1ff8fa9eb4cf60ec5238c5797651afec}{SPI} (\hyperlink{classDigitalOutput}{DigitalOutput} \&clk, \hyperlink{classDigitalInput}{DigitalInput} \&miso)
 \item 
-\hyperlink{classSPI_a74dd16adaa9ca26845ebc2f8c61379fa}{\-S\-P\-I} (\hyperlink{classDigitalOutput}{\-Digital\-Output} $\ast$clk, \hyperlink{classDigitalInput}{\-Digital\-Input} $\ast$miso)
+\hyperlink{classSPI_a74dd16adaa9ca26845ebc2f8c61379fa}{SPI} (\hyperlink{classDigitalOutput}{DigitalOutput} $\ast$clk, \hyperlink{classDigitalInput}{DigitalInput} $\ast$miso)
 \item 
-virtual \hyperlink{classSPI_a6babebf1ea3e8ff0330f43a3e2312ac4}{$\sim$\-S\-P\-I} ()
+virtual \hyperlink{classSPI_a6babebf1ea3e8ff0330f43a3e2312ac4}{$\sim$SPI} ()
 \item 
-void \hyperlink{classSPI_af1d668c7056784c19d2d7b494e3c214a}{\-Set\-Bits\-Per\-Word} (\-U\-I\-N\-T32 bits)
+void \hyperlink{classSPI_af1d668c7056784c19d2d7b494e3c214a}{SetBitsPerWord} (UINT32 bits)
 \item 
-\-U\-I\-N\-T32 \hyperlink{classSPI_a6dea6f0679df0018fd19b52f0bb06347}{\-Get\-Bits\-Per\-Word} ()
+UINT32 \hyperlink{classSPI_a6dea6f0679df0018fd19b52f0bb06347}{GetBitsPerWord} ()
 \item 
-void \hyperlink{classSPI_a27b450354fc78eb4441e7d59f8fe65f2}{\-Set\-Clock\-Rate} (double hz)
+void \hyperlink{classSPI_a27b450354fc78eb4441e7d59f8fe65f2}{SetClockRate} (double hz)
 \item 
-void \hyperlink{classSPI_a66ed807d9a76400a74e815837b3ff32b}{\-Set\-M\-S\-B\-First} ()
+void \hyperlink{classSPI_a66ed807d9a76400a74e815837b3ff32b}{SetMSBFirst} ()
 \item 
-void \hyperlink{classSPI_acd12e6ca307ec0dc0fb80f4cc9aa6ee3}{\-Set\-L\-S\-B\-First} ()
+void \hyperlink{classSPI_acd12e6ca307ec0dc0fb80f4cc9aa6ee3}{SetLSBFirst} ()
 \item 
-void \hyperlink{classSPI_a463dc7cb26d0b865c44c73538bc23ae0}{\-Set\-Sample\-Data\-On\-Falling} ()
+void \hyperlink{classSPI_a463dc7cb26d0b865c44c73538bc23ae0}{SetSampleDataOnFalling} ()
 \item 
-void \hyperlink{classSPI_a00eec7d4310c18e8cfb4b36592b488d9}{\-Set\-Sample\-Data\-On\-Rising} ()
+void \hyperlink{classSPI_a00eec7d4310c18e8cfb4b36592b488d9}{SetSampleDataOnRising} ()
 \item 
-void \hyperlink{classSPI_af0a6cd80fbc758c2a8e344f044e1a59d}{\-Set\-Slave\-Select} (\hyperlink{classDigitalOutput}{\-Digital\-Output} $\ast$ss, t\-Frame\-Mode mode=k\-Chip\-Select, bool active\-Low=false)
+void \hyperlink{classSPI_af0a6cd80fbc758c2a8e344f044e1a59d}{SetSlaveSelect} (\hyperlink{classDigitalOutput}{DigitalOutput} $\ast$ss, tFrameMode mode=kChipSelect, bool activeLow=false)
 \item 
-void \hyperlink{classSPI_ad2745d268c7350f65d4657b6d558a67a}{\-Set\-Slave\-Select} (\hyperlink{classDigitalOutput}{\-Digital\-Output} \&ss, t\-Frame\-Mode mode=k\-Chip\-Select, bool active\-Low=false)
+void \hyperlink{classSPI_ad2745d268c7350f65d4657b6d558a67a}{SetSlaveSelect} (\hyperlink{classDigitalOutput}{DigitalOutput} \&ss, tFrameMode mode=kChipSelect, bool activeLow=false)
 \item 
-\hyperlink{classDigitalOutput}{\-Digital\-Output} $\ast$ \hyperlink{classSPI_a614dfabba0dcbb66d6c1a88ba40bd26c}{\-Get\-Slave\-Select} (t\-Frame\-Mode $\ast$mode=\-N\-U\-L\-L, bool $\ast$active\-Low=\-N\-U\-L\-L)
+\hyperlink{classDigitalOutput}{DigitalOutput} $\ast$ \hyperlink{classSPI_a614dfabba0dcbb66d6c1a88ba40bd26c}{GetSlaveSelect} (tFrameMode $\ast$mode=NULL, bool $\ast$activeLow=NULL)
 \item 
-void \hyperlink{classSPI_aa1b8cb48216e0a502bb34486636da047}{\-Set\-Clock\-Active\-Low} ()
+void \hyperlink{classSPI_aa1b8cb48216e0a502bb34486636da047}{SetClockActiveLow} ()
 \item 
-void \hyperlink{classSPI_a5581a5f70c8e49dd712d44f40ee81e6f}{\-Set\-Clock\-Active\-High} ()
+void \hyperlink{classSPI_a5581a5f70c8e49dd712d44f40ee81e6f}{SetClockActiveHigh} ()
 \item 
-virtual void \hyperlink{classSPI_a660a95177a0e69be2ae3b0f5ace85d2c}{\-Apply\-Config} ()
+virtual void \hyperlink{classSPI_a660a95177a0e69be2ae3b0f5ace85d2c}{ApplyConfig} ()
 \item 
-virtual \-U\-I\-N\-T16 \hyperlink{classSPI_a9154529287b4995e403ed110e76963cd}{\-Get\-Output\-F\-I\-F\-O\-Available} ()
+virtual UINT16 \hyperlink{classSPI_a9154529287b4995e403ed110e76963cd}{GetOutputFIFOAvailable} ()
 \item 
-virtual \-U\-I\-N\-T16 \hyperlink{classSPI_ab4de7fc2759b427c33af1aa0d79b1973}{\-Get\-Num\-Received} ()
+virtual UINT16 \hyperlink{classSPI_ab4de7fc2759b427c33af1aa0d79b1973}{GetNumReceived} ()
 \item 
-virtual bool \hyperlink{classSPI_a88ae50d03a0aeecac3045a4d5ca7fb81}{\-Is\-Done} ()
+virtual bool \hyperlink{classSPI_a88ae50d03a0aeecac3045a4d5ca7fb81}{IsDone} ()
 \item 
-bool \hyperlink{classSPI_aec0f909f191fec08bb1a069bdb35fd8e}{\-Had\-Receive\-Overflow} ()
+bool \hyperlink{classSPI_aec0f909f191fec08bb1a069bdb35fd8e}{HadReceiveOverflow} ()
 \item 
-virtual void \hyperlink{classSPI_a231184061058fc3924e0d5e3abb0dcb1}{\-Write} (\-U\-I\-N\-T32 data)
+virtual void \hyperlink{classSPI_a231184061058fc3924e0d5e3abb0dcb1}{Write} (UINT32 data)
 \item 
-virtual \-U\-I\-N\-T32 \hyperlink{classSPI_a748b582c349402ddc4ea0fb0034b00b3}{\-Read} (bool initiate=false)
+virtual UINT32 \hyperlink{classSPI_a748b582c349402ddc4ea0fb0034b00b3}{Read} (bool initiate=false)
 \item 
-virtual void \hyperlink{classSPI_a19bcc2d6206a4c54a62cd0a358ef1d1a}{\-Reset} ()
+virtual void \hyperlink{classSPI_a19bcc2d6206a4c54a62cd0a358ef1d1a}{Reset} ()
 \item 
-virtual void \hyperlink{classSPI_ae70ffd5d8cd8f973b9fc2103d2ee3474}{\-Clear\-Received\-Data} ()
+virtual void \hyperlink{classSPI_ae70ffd5d8cd8f973b9fc2103d2ee3474}{ClearReceivedData} ()
 \end{DoxyCompactItemize}
-\subsection*{\-Protected \-Attributes}
+\subsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{classSPI_a2e51fd2a5f60a207e1948fcce6ce4b6a}{t\-S\-P\-I $\ast$ {\bfseries m\-\_\-spi}}\label{classSPI_a2e51fd2a5f60a207e1948fcce6ce4b6a}
+\hypertarget{classSPI_a2e51fd2a5f60a207e1948fcce6ce4b6a}{
+tSPI $\ast$ {\bfseries m\_\-spi}}
+\label{classSPI_a2e51fd2a5f60a207e1948fcce6ce4b6a}
 
 \item 
-\hypertarget{classSPI_a246566dd89a56e47235573fa1cbf4650}{t\-S\-P\-I\-::t\-Config {\bfseries m\-\_\-config}}\label{classSPI_a246566dd89a56e47235573fa1cbf4650}
+\hypertarget{classSPI_a246566dd89a56e47235573fa1cbf4650}{
+tSPI::tConfig {\bfseries m\_\-config}}
+\label{classSPI_a246566dd89a56e47235573fa1cbf4650}
 
 \item 
-\hypertarget{classSPI_a400f5597cc5fa5d5ec4e53b16e7e563a}{t\-S\-P\-I\-::t\-Channels {\bfseries m\-\_\-channels}}\label{classSPI_a400f5597cc5fa5d5ec4e53b16e7e563a}
+\hypertarget{classSPI_a400f5597cc5fa5d5ec4e53b16e7e563a}{
+tSPI::tChannels {\bfseries m\_\-channels}}
+\label{classSPI_a400f5597cc5fa5d5ec4e53b16e7e563a}
 
 \item 
-\hypertarget{classSPI_abb5b7fdb1d7bd262f01f1955611dad04}{\hyperlink{classDigitalOutput}{\-Digital\-Output} $\ast$ {\bfseries m\-\_\-ss}}\label{classSPI_abb5b7fdb1d7bd262f01f1955611dad04}
+\hypertarget{classSPI_abb5b7fdb1d7bd262f01f1955611dad04}{
+\hyperlink{classDigitalOutput}{DigitalOutput} $\ast$ {\bfseries m\_\-ss}}
+\label{classSPI_abb5b7fdb1d7bd262f01f1955611dad04}
 
 \end{DoxyCompactItemize}
-\subsection*{\-Static \-Protected \-Attributes}
+\subsection*{Static Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{classSPI_a5526fc62f7ed652c65ab9e4a5f778062}{static \-S\-E\-M\-\_\-\-I\-D {\bfseries m\-\_\-semaphore} = \-N\-U\-L\-L}\label{classSPI_a5526fc62f7ed652c65ab9e4a5f778062}
+\hypertarget{classSPI_a5526fc62f7ed652c65ab9e4a5f778062}{
+static SEM\_\-ID {\bfseries m\_\-semaphore} = NULL}
+\label{classSPI_a5526fc62f7ed652c65ab9e4a5f778062}
 
 \end{DoxyCompactItemize}
 
 
-\subsection{\-Detailed \-Description}
-\hyperlink{classSPI}{\-S\-P\-I} bus interface class.
+\subsection{Detailed Description}
+\hyperlink{classSPI}{SPI} bus interface class.
 
-\-This class is intended to be used by sensor (and other \hyperlink{classSPI}{\-S\-P\-I} device) drivers. \-It probably should not be used directly.
+This class is intended to be used by sensor (and other \hyperlink{classSPI}{SPI} device) drivers. It probably should not be used directly.
 
-\-The \-F\-P\-G\-A only supports a single \hyperlink{classSPI}{\-S\-P\-I} interface. 
+The FPGA only supports a single \hyperlink{classSPI}{SPI} interface. 
 
-\subsection{\-Constructor \& \-Destructor \-Documentation}
-\hypertarget{classSPI_ab8a031abcb911915f2221324211f37b4}{\index{\-S\-P\-I@{\-S\-P\-I}!\-S\-P\-I@{\-S\-P\-I}}
-\index{\-S\-P\-I@{\-S\-P\-I}!SPI@{\-S\-P\-I}}
-\subsubsection[{\-S\-P\-I}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-S\-P\-I\-::\-S\-P\-I} (
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classSPI_ab8a031abcb911915f2221324211f37b4}{
+\index{SPI@{SPI}!SPI@{SPI}}
+\index{SPI@{SPI}!SPI@{SPI}}
+\subsubsection[{SPI}]{\setlength{\rightskip}{0pt plus 5cm}SPI::SPI (
 \begin{DoxyParamCaption}
-\item[{{\bf \-Digital\-Output} \&}]{clk, }
-\item[{{\bf \-Digital\-Output} \&}]{mosi, }
-\item[{{\bf \-Digital\-Input} \&}]{miso}
+\item[{{\bf DigitalOutput} \&}]{clk, }
+\item[{{\bf DigitalOutput} \&}]{mosi, }
+\item[{{\bf DigitalInput} \&}]{miso}
 \end{DoxyParamCaption}
-)}}\label{classSPI_ab8a031abcb911915f2221324211f37b4}
-\-Constructor for input and output.
+)}}
+\label{classSPI_ab8a031abcb911915f2221324211f37b4}
+Constructor for input and output.
 
 
-\begin{DoxyParams}{\-Parameters}
-{\em clk} & \-The digital output for the clock signal. \\
+\begin{DoxyParams}{Parameters}
+{\em clk} & The digital output for the clock signal. \\
 \hline
-{\em mosi} & \-The digital output for the written data to the slave (master-\/out slave-\/in). \\
+{\em mosi} & The digital output for the written data to the slave (master-\/out slave-\/in). \\
 \hline
-{\em miso} & \-The digital input for the input data from the slave (master-\/in slave-\/out). \\
+{\em miso} & The digital input for the input data from the slave (master-\/in slave-\/out). \\
 \hline
 \end{DoxyParams}
-\hypertarget{classSPI_a5a9ff16c1b36056d2bab48c8bb9dd58f}{\index{\-S\-P\-I@{\-S\-P\-I}!\-S\-P\-I@{\-S\-P\-I}}
-\index{\-S\-P\-I@{\-S\-P\-I}!SPI@{\-S\-P\-I}}
-\subsubsection[{\-S\-P\-I}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-S\-P\-I\-::\-S\-P\-I} (
+\hypertarget{classSPI_a5a9ff16c1b36056d2bab48c8bb9dd58f}{
+\index{SPI@{SPI}!SPI@{SPI}}
+\index{SPI@{SPI}!SPI@{SPI}}
+\subsubsection[{SPI}]{\setlength{\rightskip}{0pt plus 5cm}SPI::SPI (
 \begin{DoxyParamCaption}
-\item[{{\bf \-Digital\-Output} $\ast$}]{clk, }
-\item[{{\bf \-Digital\-Output} $\ast$}]{mosi, }
-\item[{{\bf \-Digital\-Input} $\ast$}]{miso}
+\item[{{\bf DigitalOutput} $\ast$}]{clk, }
+\item[{{\bf DigitalOutput} $\ast$}]{mosi, }
+\item[{{\bf DigitalInput} $\ast$}]{miso}
 \end{DoxyParamCaption}
-)}}\label{classSPI_a5a9ff16c1b36056d2bab48c8bb9dd58f}
-\-Constructor for input and output.
+)}}
+\label{classSPI_a5a9ff16c1b36056d2bab48c8bb9dd58f}
+Constructor for input and output.
 
 
-\begin{DoxyParams}{\-Parameters}
-{\em clk} & \-The digital output for the clock signal. \\
+\begin{DoxyParams}{Parameters}
+{\em clk} & The digital output for the clock signal. \\
 \hline
-{\em mosi} & \-The digital output for the written data to the slave (master-\/out slave-\/in). \\
+{\em mosi} & The digital output for the written data to the slave (master-\/out slave-\/in). \\
 \hline
-{\em miso} & \-The digital input for the input data from the slave (master-\/in slave-\/out). \\
+{\em miso} & The digital input for the input data from the slave (master-\/in slave-\/out). \\
 \hline
 \end{DoxyParams}
-\hypertarget{classSPI_aa99a1d66d364cb0ec749026660fb8bd2}{\index{\-S\-P\-I@{\-S\-P\-I}!\-S\-P\-I@{\-S\-P\-I}}
-\index{\-S\-P\-I@{\-S\-P\-I}!SPI@{\-S\-P\-I}}
-\subsubsection[{\-S\-P\-I}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-S\-P\-I\-::\-S\-P\-I} (
+\hypertarget{classSPI_aa99a1d66d364cb0ec749026660fb8bd2}{
+\index{SPI@{SPI}!SPI@{SPI}}
+\index{SPI@{SPI}!SPI@{SPI}}
+\subsubsection[{SPI}]{\setlength{\rightskip}{0pt plus 5cm}SPI::SPI (
 \begin{DoxyParamCaption}
-\item[{{\bf \-Digital\-Output} \&}]{clk, }
-\item[{{\bf \-Digital\-Output} \&}]{mosi}
+\item[{{\bf DigitalOutput} \&}]{clk, }
+\item[{{\bf DigitalOutput} \&}]{mosi}
 \end{DoxyParamCaption}
-)}}\label{classSPI_aa99a1d66d364cb0ec749026660fb8bd2}
-\-Constructor for output only.
+)}}
+\label{classSPI_aa99a1d66d364cb0ec749026660fb8bd2}
+Constructor for output only.
 
 
-\begin{DoxyParams}{\-Parameters}
-{\em clk} & \-The digital output for the clock signal. \\
+\begin{DoxyParams}{Parameters}
+{\em clk} & The digital output for the clock signal. \\
 \hline
-{\em mosi} & \-The digital output for the written data to the slave (master-\/out slave-\/in). \\
+{\em mosi} & The digital output for the written data to the slave (master-\/out slave-\/in). \\
 \hline
 \end{DoxyParams}
-\hypertarget{classSPI_a8de2c7b9a8484df3e4588afa5ed47178}{\index{\-S\-P\-I@{\-S\-P\-I}!\-S\-P\-I@{\-S\-P\-I}}
-\index{\-S\-P\-I@{\-S\-P\-I}!SPI@{\-S\-P\-I}}
-\subsubsection[{\-S\-P\-I}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-S\-P\-I\-::\-S\-P\-I} (
+\hypertarget{classSPI_a8de2c7b9a8484df3e4588afa5ed47178}{
+\index{SPI@{SPI}!SPI@{SPI}}
+\index{SPI@{SPI}!SPI@{SPI}}
+\subsubsection[{SPI}]{\setlength{\rightskip}{0pt plus 5cm}SPI::SPI (
 \begin{DoxyParamCaption}
-\item[{{\bf \-Digital\-Output} $\ast$}]{clk, }
-\item[{{\bf \-Digital\-Output} $\ast$}]{mosi}
+\item[{{\bf DigitalOutput} $\ast$}]{clk, }
+\item[{{\bf DigitalOutput} $\ast$}]{mosi}
 \end{DoxyParamCaption}
-)}}\label{classSPI_a8de2c7b9a8484df3e4588afa5ed47178}
-\-Constructor for output only.
+)}}
+\label{classSPI_a8de2c7b9a8484df3e4588afa5ed47178}
+Constructor for output only.
 
 
-\begin{DoxyParams}{\-Parameters}
-{\em clk} & \-The digital output for the clock signal. \\
+\begin{DoxyParams}{Parameters}
+{\em clk} & The digital output for the clock signal. \\
 \hline
-{\em mosi} & \-The digital output for the written data to the slave (master-\/out slave-\/in). \\
+{\em mosi} & The digital output for the written data to the slave (master-\/out slave-\/in). \\
 \hline
 \end{DoxyParams}
-\hypertarget{classSPI_a1ff8fa9eb4cf60ec5238c5797651afec}{\index{\-S\-P\-I@{\-S\-P\-I}!\-S\-P\-I@{\-S\-P\-I}}
-\index{\-S\-P\-I@{\-S\-P\-I}!SPI@{\-S\-P\-I}}
-\subsubsection[{\-S\-P\-I}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-S\-P\-I\-::\-S\-P\-I} (
+\hypertarget{classSPI_a1ff8fa9eb4cf60ec5238c5797651afec}{
+\index{SPI@{SPI}!SPI@{SPI}}
+\index{SPI@{SPI}!SPI@{SPI}}
+\subsubsection[{SPI}]{\setlength{\rightskip}{0pt plus 5cm}SPI::SPI (
 \begin{DoxyParamCaption}
-\item[{{\bf \-Digital\-Output} \&}]{clk, }
-\item[{{\bf \-Digital\-Input} \&}]{miso}
+\item[{{\bf DigitalOutput} \&}]{clk, }
+\item[{{\bf DigitalInput} \&}]{miso}
 \end{DoxyParamCaption}
-)}}\label{classSPI_a1ff8fa9eb4cf60ec5238c5797651afec}
-\-Constructor for input only.
+)}}
+\label{classSPI_a1ff8fa9eb4cf60ec5238c5797651afec}
+Constructor for input only.
 
 
-\begin{DoxyParams}{\-Parameters}
-{\em clk} & \-The digital output for the clock signal. \\
+\begin{DoxyParams}{Parameters}
+{\em clk} & The digital output for the clock signal. \\
 \hline
-{\em miso} & \-The digital input for the input data from the slave (master-\/in slave-\/out). \\
+{\em miso} & The digital input for the input data from the slave (master-\/in slave-\/out). \\
 \hline
 \end{DoxyParams}
-\hypertarget{classSPI_a74dd16adaa9ca26845ebc2f8c61379fa}{\index{\-S\-P\-I@{\-S\-P\-I}!\-S\-P\-I@{\-S\-P\-I}}
-\index{\-S\-P\-I@{\-S\-P\-I}!SPI@{\-S\-P\-I}}
-\subsubsection[{\-S\-P\-I}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-S\-P\-I\-::\-S\-P\-I} (
+\hypertarget{classSPI_a74dd16adaa9ca26845ebc2f8c61379fa}{
+\index{SPI@{SPI}!SPI@{SPI}}
+\index{SPI@{SPI}!SPI@{SPI}}
+\subsubsection[{SPI}]{\setlength{\rightskip}{0pt plus 5cm}SPI::SPI (
 \begin{DoxyParamCaption}
-\item[{{\bf \-Digital\-Output} $\ast$}]{clk, }
-\item[{{\bf \-Digital\-Input} $\ast$}]{miso}
+\item[{{\bf DigitalOutput} $\ast$}]{clk, }
+\item[{{\bf DigitalInput} $\ast$}]{miso}
 \end{DoxyParamCaption}
-)}}\label{classSPI_a74dd16adaa9ca26845ebc2f8c61379fa}
-\-Constructor for input only.
+)}}
+\label{classSPI_a74dd16adaa9ca26845ebc2f8c61379fa}
+Constructor for input only.
 
 
-\begin{DoxyParams}{\-Parameters}
-{\em clk} & \-The digital output for the clock signal. \\
+\begin{DoxyParams}{Parameters}
+{\em clk} & The digital output for the clock signal. \\
 \hline
-{\em miso} & \-The digital input for the input data from the slave (master-\/in slave-\/out). \\
+{\em miso} & The digital input for the input data from the slave (master-\/in slave-\/out). \\
 \hline
 \end{DoxyParams}
-\hypertarget{classSPI_a6babebf1ea3e8ff0330f43a3e2312ac4}{\index{\-S\-P\-I@{\-S\-P\-I}!$\sim$\-S\-P\-I@{$\sim$\-S\-P\-I}}
-\index{$\sim$\-S\-P\-I@{$\sim$\-S\-P\-I}!SPI@{\-S\-P\-I}}
-\subsubsection[{$\sim$\-S\-P\-I}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-S\-P\-I\-::$\sim$\-S\-P\-I} (
+\hypertarget{classSPI_a6babebf1ea3e8ff0330f43a3e2312ac4}{
+\index{SPI@{SPI}!$\sim$SPI@{$\sim$SPI}}
+\index{$\sim$SPI@{$\sim$SPI}!SPI@{SPI}}
+\subsubsection[{$\sim$SPI}]{\setlength{\rightskip}{0pt plus 5cm}SPI::$\sim$SPI (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{classSPI_a6babebf1ea3e8ff0330f43a3e2312ac4}
-\-Destructor. 
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classSPI_a6babebf1ea3e8ff0330f43a3e2312ac4}
+Destructor. 
 
-\subsection{\-Member \-Function \-Documentation}
-\hypertarget{classSPI_a660a95177a0e69be2ae3b0f5ace85d2c}{\index{\-S\-P\-I@{\-S\-P\-I}!\-Apply\-Config@{\-Apply\-Config}}
-\index{\-Apply\-Config@{\-Apply\-Config}!SPI@{\-S\-P\-I}}
-\subsubsection[{\-Apply\-Config}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-S\-P\-I\-::\-Apply\-Config} (
+\subsection{Member Function Documentation}
+\hypertarget{classSPI_a660a95177a0e69be2ae3b0f5ace85d2c}{
+\index{SPI@{SPI}!ApplyConfig@{ApplyConfig}}
+\index{ApplyConfig@{ApplyConfig}!SPI@{SPI}}
+\subsubsection[{ApplyConfig}]{\setlength{\rightskip}{0pt plus 5cm}void SPI::ApplyConfig (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{classSPI_a660a95177a0e69be2ae3b0f5ace85d2c}
-\-Apply configuration settings and reset the \hyperlink{classSPI}{\-S\-P\-I} logic. \hypertarget{classSPI_ae70ffd5d8cd8f973b9fc2103d2ee3474}{\index{\-S\-P\-I@{\-S\-P\-I}!\-Clear\-Received\-Data@{\-Clear\-Received\-Data}}
-\index{\-Clear\-Received\-Data@{\-Clear\-Received\-Data}!SPI@{\-S\-P\-I}}
-\subsubsection[{\-Clear\-Received\-Data}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-S\-P\-I\-::\-Clear\-Received\-Data} (
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classSPI_a660a95177a0e69be2ae3b0f5ace85d2c}
+Apply configuration settings and reset the \hyperlink{classSPI}{SPI} logic. \hypertarget{classSPI_ae70ffd5d8cd8f973b9fc2103d2ee3474}{
+\index{SPI@{SPI}!ClearReceivedData@{ClearReceivedData}}
+\index{ClearReceivedData@{ClearReceivedData}!SPI@{SPI}}
+\subsubsection[{ClearReceivedData}]{\setlength{\rightskip}{0pt plus 5cm}void SPI::ClearReceivedData (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{classSPI_ae70ffd5d8cd8f973b9fc2103d2ee3474}
-\-Empty the receive \-F\-I\-F\-O. \hypertarget{classSPI_a6dea6f0679df0018fd19b52f0bb06347}{\index{\-S\-P\-I@{\-S\-P\-I}!\-Get\-Bits\-Per\-Word@{\-Get\-Bits\-Per\-Word}}
-\index{\-Get\-Bits\-Per\-Word@{\-Get\-Bits\-Per\-Word}!SPI@{\-S\-P\-I}}
-\subsubsection[{\-Get\-Bits\-Per\-Word}]{\setlength{\rightskip}{0pt plus 5cm}\-U\-I\-N\-T32 {\bf \-S\-P\-I\-::\-Get\-Bits\-Per\-Word} (
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classSPI_ae70ffd5d8cd8f973b9fc2103d2ee3474}
+Empty the receive FIFO. \hypertarget{classSPI_a6dea6f0679df0018fd19b52f0bb06347}{
+\index{SPI@{SPI}!GetBitsPerWord@{GetBitsPerWord}}
+\index{GetBitsPerWord@{GetBitsPerWord}!SPI@{SPI}}
+\subsubsection[{GetBitsPerWord}]{\setlength{\rightskip}{0pt plus 5cm}UINT32 SPI::GetBitsPerWord (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)}}\label{classSPI_a6dea6f0679df0018fd19b52f0bb06347}
-\-Get the number of bits from each word that the slave transmits or receives.
+)}}
+\label{classSPI_a6dea6f0679df0018fd19b52f0bb06347}
+Get the number of bits from each word that the slave transmits or receives.
 
-\begin{DoxyReturn}{\-Returns}
-\-The number of bits in one frame (1 to 32 bits). 
+\begin{DoxyReturn}{Returns}
+The number of bits in one frame (1 to 32 bits). 
 \end{DoxyReturn}
-\hypertarget{classSPI_ab4de7fc2759b427c33af1aa0d79b1973}{\index{\-S\-P\-I@{\-S\-P\-I}!\-Get\-Num\-Received@{\-Get\-Num\-Received}}
-\index{\-Get\-Num\-Received@{\-Get\-Num\-Received}!SPI@{\-S\-P\-I}}
-\subsubsection[{\-Get\-Num\-Received}]{\setlength{\rightskip}{0pt plus 5cm}\-U\-I\-N\-T16 {\bf \-S\-P\-I\-::\-Get\-Num\-Received} (
+\hypertarget{classSPI_ab4de7fc2759b427c33af1aa0d79b1973}{
+\index{SPI@{SPI}!GetNumReceived@{GetNumReceived}}
+\index{GetNumReceived@{GetNumReceived}!SPI@{SPI}}
+\subsubsection[{GetNumReceived}]{\setlength{\rightskip}{0pt plus 5cm}UINT16 SPI::GetNumReceived (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{classSPI_ab4de7fc2759b427c33af1aa0d79b1973}
-\-Get the number of words received and currently available to be read from the receive \-F\-I\-F\-O.
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classSPI_ab4de7fc2759b427c33af1aa0d79b1973}
+Get the number of words received and currently available to be read from the receive FIFO.
 
-\begin{DoxyReturn}{\-Returns}
-\-The number of words available to read. 
+\begin{DoxyReturn}{Returns}
+The number of words available to read. 
 \end{DoxyReturn}
-\hypertarget{classSPI_a9154529287b4995e403ed110e76963cd}{\index{\-S\-P\-I@{\-S\-P\-I}!\-Get\-Output\-F\-I\-F\-O\-Available@{\-Get\-Output\-F\-I\-F\-O\-Available}}
-\index{\-Get\-Output\-F\-I\-F\-O\-Available@{\-Get\-Output\-F\-I\-F\-O\-Available}!SPI@{\-S\-P\-I}}
-\subsubsection[{\-Get\-Output\-F\-I\-F\-O\-Available}]{\setlength{\rightskip}{0pt plus 5cm}\-U\-I\-N\-T16 {\bf \-S\-P\-I\-::\-Get\-Output\-F\-I\-F\-O\-Available} (
+\hypertarget{classSPI_a9154529287b4995e403ed110e76963cd}{
+\index{SPI@{SPI}!GetOutputFIFOAvailable@{GetOutputFIFOAvailable}}
+\index{GetOutputFIFOAvailable@{GetOutputFIFOAvailable}!SPI@{SPI}}
+\subsubsection[{GetOutputFIFOAvailable}]{\setlength{\rightskip}{0pt plus 5cm}UINT16 SPI::GetOutputFIFOAvailable (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{classSPI_a9154529287b4995e403ed110e76963cd}
-\-Get the number of words that can currently be stored before being transmitted to the device.
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classSPI_a9154529287b4995e403ed110e76963cd}
+Get the number of words that can currently be stored before being transmitted to the device.
 
-\begin{DoxyReturn}{\-Returns}
-\-The number of words available to be written. 
+\begin{DoxyReturn}{Returns}
+The number of words available to be written. 
 \end{DoxyReturn}
-\hypertarget{classSPI_a614dfabba0dcbb66d6c1a88ba40bd26c}{\index{\-S\-P\-I@{\-S\-P\-I}!\-Get\-Slave\-Select@{\-Get\-Slave\-Select}}
-\index{\-Get\-Slave\-Select@{\-Get\-Slave\-Select}!SPI@{\-S\-P\-I}}
-\subsubsection[{\-Get\-Slave\-Select}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Digital\-Output} $\ast$ {\bf \-S\-P\-I\-::\-Get\-Slave\-Select} (
+\hypertarget{classSPI_a614dfabba0dcbb66d6c1a88ba40bd26c}{
+\index{SPI@{SPI}!GetSlaveSelect@{GetSlaveSelect}}
+\index{GetSlaveSelect@{GetSlaveSelect}!SPI@{SPI}}
+\subsubsection[{GetSlaveSelect}]{\setlength{\rightskip}{0pt plus 5cm}{\bf DigitalOutput} $\ast$ SPI::GetSlaveSelect (
 \begin{DoxyParamCaption}
-\item[{t\-Frame\-Mode $\ast$}]{mode = {\ttfamily \-N\-U\-L\-L}, }
-\item[{bool $\ast$}]{active\-Low = {\ttfamily \-N\-U\-L\-L}}
+\item[{tFrameMode $\ast$}]{mode = {\ttfamily NULL}, }
+\item[{bool $\ast$}]{activeLow = {\ttfamily NULL}}
 \end{DoxyParamCaption}
-)}}\label{classSPI_a614dfabba0dcbb66d6c1a88ba40bd26c}
-\-Get the slave select line behavior.
+)}}
+\label{classSPI_a614dfabba0dcbb66d6c1a88ba40bd26c}
+Get the slave select line behavior.
 
 
-\begin{DoxyParams}{\-Parameters}
-{\em mode} & \-Frame mode\-: k\-Chip\-Select\-: active for the duration of the frame. k\-Pre\-Latch\-Pulse\-: pulses before the transfer of each frame. k\-Post\-Latch\-Pulse\-: pulses after the transfer of each frame. k\-Pre\-And\-Post\-Latch\-Pulse\-: pulses before and after each frame. \\
+\begin{DoxyParams}{Parameters}
+{\em mode} & Frame mode: kChipSelect: active for the duration of the frame. kPreLatchPulse: pulses before the transfer of each frame. kPostLatchPulse: pulses after the transfer of each frame. kPreAndPostLatchPulse: pulses before and after each frame. \\
 \hline
-{\em active\-Low} & \-True if slave select line is active low. \\
+{\em activeLow} & True if slave select line is active low. \\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{\-Returns}
-\-The slave select digital output. 
+\begin{DoxyReturn}{Returns}
+The slave select digital output. 
 \end{DoxyReturn}
-\hypertarget{classSPI_aec0f909f191fec08bb1a069bdb35fd8e}{\index{\-S\-P\-I@{\-S\-P\-I}!\-Had\-Receive\-Overflow@{\-Had\-Receive\-Overflow}}
-\index{\-Had\-Receive\-Overflow@{\-Had\-Receive\-Overflow}!SPI@{\-S\-P\-I}}
-\subsubsection[{\-Had\-Receive\-Overflow}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-S\-P\-I\-::\-Had\-Receive\-Overflow} (
+\hypertarget{classSPI_aec0f909f191fec08bb1a069bdb35fd8e}{
+\index{SPI@{SPI}!HadReceiveOverflow@{HadReceiveOverflow}}
+\index{HadReceiveOverflow@{HadReceiveOverflow}!SPI@{SPI}}
+\subsubsection[{HadReceiveOverflow}]{\setlength{\rightskip}{0pt plus 5cm}bool SPI::HadReceiveOverflow (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)}}\label{classSPI_aec0f909f191fec08bb1a069bdb35fd8e}
-\-Determine if the receive \-F\-I\-F\-O was full when attempting to add new data at end of a transfer.
+)}}
+\label{classSPI_aec0f909f191fec08bb1a069bdb35fd8e}
+Determine if the receive FIFO was full when attempting to add new data at end of a transfer.
 
-\begin{DoxyReturn}{\-Returns}
-\-True if the receive \-F\-I\-F\-O overflowed. 
+\begin{DoxyReturn}{Returns}
+True if the receive FIFO overflowed. 
 \end{DoxyReturn}
-\hypertarget{classSPI_a88ae50d03a0aeecac3045a4d5ca7fb81}{\index{\-S\-P\-I@{\-S\-P\-I}!\-Is\-Done@{\-Is\-Done}}
-\index{\-Is\-Done@{\-Is\-Done}!SPI@{\-S\-P\-I}}
-\subsubsection[{\-Is\-Done}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-S\-P\-I\-::\-Is\-Done} (
+\hypertarget{classSPI_a88ae50d03a0aeecac3045a4d5ca7fb81}{
+\index{SPI@{SPI}!IsDone@{IsDone}}
+\index{IsDone@{IsDone}!SPI@{SPI}}
+\subsubsection[{IsDone}]{\setlength{\rightskip}{0pt plus 5cm}bool SPI::IsDone (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{classSPI_a88ae50d03a0aeecac3045a4d5ca7fb81}
-\-Have all pending transfers completed?
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classSPI_a88ae50d03a0aeecac3045a4d5ca7fb81}
+Have all pending transfers completed?
 
-\begin{DoxyReturn}{\-Returns}
-\-True if no transfers are pending. 
+\begin{DoxyReturn}{Returns}
+True if no transfers are pending. 
 \end{DoxyReturn}
-\hypertarget{classSPI_a748b582c349402ddc4ea0fb0034b00b3}{\index{\-S\-P\-I@{\-S\-P\-I}!\-Read@{\-Read}}
-\index{\-Read@{\-Read}!SPI@{\-S\-P\-I}}
-\subsubsection[{\-Read}]{\setlength{\rightskip}{0pt plus 5cm}\-U\-I\-N\-T32 {\bf \-S\-P\-I\-::\-Read} (
+\hypertarget{classSPI_a748b582c349402ddc4ea0fb0034b00b3}{
+\index{SPI@{SPI}!Read@{Read}}
+\index{Read@{Read}!SPI@{SPI}}
+\subsubsection[{Read}]{\setlength{\rightskip}{0pt plus 5cm}UINT32 SPI::Read (
 \begin{DoxyParamCaption}
 \item[{bool}]{initiate = {\ttfamily false}}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{classSPI_a748b582c349402ddc4ea0fb0034b00b3}
-\-Read a word from the receive \-F\-I\-F\-O.
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classSPI_a748b582c349402ddc4ea0fb0034b00b3}
+Read a word from the receive FIFO.
 
-\-Waits for the current transfer to complete if the receive \-F\-I\-F\-O is empty.
+Waits for the current transfer to complete if the receive FIFO is empty.
 
-\-If the receive \-F\-I\-F\-O is empty, there is no active transfer, and initiate is false, errors.
+If the receive FIFO is empty, there is no active transfer, and initiate is false, errors.
 
 
-\begin{DoxyParams}{\-Parameters}
-{\em initiate} & \-If true, this function pushes \char`\"{}0\char`\"{} into the transmit buffer and initiates a transfer. \-If false, this function assumes that data is already in the receive \-F\-I\-F\-O from a previous write. \\
+\begin{DoxyParams}{Parameters}
+{\em initiate} & If true, this function pushes \char`\"{}0\char`\"{} into the transmit buffer and initiates a transfer. If false, this function assumes that data is already in the receive FIFO from a previous write. \\
 \hline
 \end{DoxyParams}
-\hypertarget{classSPI_a19bcc2d6206a4c54a62cd0a358ef1d1a}{\index{\-S\-P\-I@{\-S\-P\-I}!\-Reset@{\-Reset}}
-\index{\-Reset@{\-Reset}!SPI@{\-S\-P\-I}}
-\subsubsection[{\-Reset}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-S\-P\-I\-::\-Reset} (
+\hypertarget{classSPI_a19bcc2d6206a4c54a62cd0a358ef1d1a}{
+\index{SPI@{SPI}!Reset@{Reset}}
+\index{Reset@{Reset}!SPI@{SPI}}
+\subsubsection[{Reset}]{\setlength{\rightskip}{0pt plus 5cm}void SPI::Reset (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{classSPI_a19bcc2d6206a4c54a62cd0a358ef1d1a}
-\-Stop any transfer in progress and empty the transmit \-F\-I\-F\-O. \hypertarget{classSPI_af1d668c7056784c19d2d7b494e3c214a}{\index{\-S\-P\-I@{\-S\-P\-I}!\-Set\-Bits\-Per\-Word@{\-Set\-Bits\-Per\-Word}}
-\index{\-Set\-Bits\-Per\-Word@{\-Set\-Bits\-Per\-Word}!SPI@{\-S\-P\-I}}
-\subsubsection[{\-Set\-Bits\-Per\-Word}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-S\-P\-I\-::\-Set\-Bits\-Per\-Word} (
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classSPI_a19bcc2d6206a4c54a62cd0a358ef1d1a}
+Stop any transfer in progress and empty the transmit FIFO. \hypertarget{classSPI_af1d668c7056784c19d2d7b494e3c214a}{
+\index{SPI@{SPI}!SetBitsPerWord@{SetBitsPerWord}}
+\index{SetBitsPerWord@{SetBitsPerWord}!SPI@{SPI}}
+\subsubsection[{SetBitsPerWord}]{\setlength{\rightskip}{0pt plus 5cm}void SPI::SetBitsPerWord (
 \begin{DoxyParamCaption}
-\item[{\-U\-I\-N\-T32}]{bits}
+\item[{UINT32}]{bits}
 \end{DoxyParamCaption}
-)}}\label{classSPI_af1d668c7056784c19d2d7b494e3c214a}
-\-Configure the number of bits from each word that the slave transmits or receives.
+)}}
+\label{classSPI_af1d668c7056784c19d2d7b494e3c214a}
+Configure the number of bits from each word that the slave transmits or receives.
 
 
-\begin{DoxyParams}{\-Parameters}
-{\em bits} & \-The number of bits in one frame (1 to 32 bits). \\
+\begin{DoxyParams}{Parameters}
+{\em bits} & The number of bits in one frame (1 to 32 bits). \\
 \hline
 \end{DoxyParams}
-\hypertarget{classSPI_a5581a5f70c8e49dd712d44f40ee81e6f}{\index{\-S\-P\-I@{\-S\-P\-I}!\-Set\-Clock\-Active\-High@{\-Set\-Clock\-Active\-High}}
-\index{\-Set\-Clock\-Active\-High@{\-Set\-Clock\-Active\-High}!SPI@{\-S\-P\-I}}
-\subsubsection[{\-Set\-Clock\-Active\-High}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-S\-P\-I\-::\-Set\-Clock\-Active\-High} (
+\hypertarget{classSPI_a5581a5f70c8e49dd712d44f40ee81e6f}{
+\index{SPI@{SPI}!SetClockActiveHigh@{SetClockActiveHigh}}
+\index{SetClockActiveHigh@{SetClockActiveHigh}!SPI@{SPI}}
+\subsubsection[{SetClockActiveHigh}]{\setlength{\rightskip}{0pt plus 5cm}void SPI::SetClockActiveHigh (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)}}\label{classSPI_a5581a5f70c8e49dd712d44f40ee81e6f}
-\-Configure the clock output line to be active high. \-This is sometimes called clock polarity low. \hypertarget{classSPI_aa1b8cb48216e0a502bb34486636da047}{\index{\-S\-P\-I@{\-S\-P\-I}!\-Set\-Clock\-Active\-Low@{\-Set\-Clock\-Active\-Low}}
-\index{\-Set\-Clock\-Active\-Low@{\-Set\-Clock\-Active\-Low}!SPI@{\-S\-P\-I}}
-\subsubsection[{\-Set\-Clock\-Active\-Low}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-S\-P\-I\-::\-Set\-Clock\-Active\-Low} (
+)}}
+\label{classSPI_a5581a5f70c8e49dd712d44f40ee81e6f}
+Configure the clock output line to be active high. This is sometimes called clock polarity low. \hypertarget{classSPI_aa1b8cb48216e0a502bb34486636da047}{
+\index{SPI@{SPI}!SetClockActiveLow@{SetClockActiveLow}}
+\index{SetClockActiveLow@{SetClockActiveLow}!SPI@{SPI}}
+\subsubsection[{SetClockActiveLow}]{\setlength{\rightskip}{0pt plus 5cm}void SPI::SetClockActiveLow (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)}}\label{classSPI_aa1b8cb48216e0a502bb34486636da047}
-\-Configure the clock output line to be active low. \-This is sometimes called clock polarity high. \hypertarget{classSPI_a27b450354fc78eb4441e7d59f8fe65f2}{\index{\-S\-P\-I@{\-S\-P\-I}!\-Set\-Clock\-Rate@{\-Set\-Clock\-Rate}}
-\index{\-Set\-Clock\-Rate@{\-Set\-Clock\-Rate}!SPI@{\-S\-P\-I}}
-\subsubsection[{\-Set\-Clock\-Rate}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-S\-P\-I\-::\-Set\-Clock\-Rate} (
+)}}
+\label{classSPI_aa1b8cb48216e0a502bb34486636da047}
+Configure the clock output line to be active low. This is sometimes called clock polarity high. \hypertarget{classSPI_a27b450354fc78eb4441e7d59f8fe65f2}{
+\index{SPI@{SPI}!SetClockRate@{SetClockRate}}
+\index{SetClockRate@{SetClockRate}!SPI@{SPI}}
+\subsubsection[{SetClockRate}]{\setlength{\rightskip}{0pt plus 5cm}void SPI::SetClockRate (
 \begin{DoxyParamCaption}
 \item[{double}]{hz}
 \end{DoxyParamCaption}
-)}}\label{classSPI_a27b450354fc78eb4441e7d59f8fe65f2}
-\-Configure the rate of the generated clock signal. \-The default and maximum value is 76,628.\-4 \-Hz.
+)}}
+\label{classSPI_a27b450354fc78eb4441e7d59f8fe65f2}
+Configure the rate of the generated clock signal. The default and maximum value is 76,628.4 Hz.
 
 
-\begin{DoxyParams}{\-Parameters}
-{\em hz} & \-The clock rate in \-Hertz. \\
+\begin{DoxyParams}{Parameters}
+{\em hz} & The clock rate in Hertz. \\
 \hline
 \end{DoxyParams}
-\hypertarget{classSPI_acd12e6ca307ec0dc0fb80f4cc9aa6ee3}{\index{\-S\-P\-I@{\-S\-P\-I}!\-Set\-L\-S\-B\-First@{\-Set\-L\-S\-B\-First}}
-\index{\-Set\-L\-S\-B\-First@{\-Set\-L\-S\-B\-First}!SPI@{\-S\-P\-I}}
-\subsubsection[{\-Set\-L\-S\-B\-First}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-S\-P\-I\-::\-Set\-L\-S\-B\-First} (
+\hypertarget{classSPI_acd12e6ca307ec0dc0fb80f4cc9aa6ee3}{
+\index{SPI@{SPI}!SetLSBFirst@{SetLSBFirst}}
+\index{SetLSBFirst@{SetLSBFirst}!SPI@{SPI}}
+\subsubsection[{SetLSBFirst}]{\setlength{\rightskip}{0pt plus 5cm}void SPI::SetLSBFirst (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)}}\label{classSPI_acd12e6ca307ec0dc0fb80f4cc9aa6ee3}
-\-Configure the order that bits are sent and received on the wire to be least significant bit first. \hypertarget{classSPI_a66ed807d9a76400a74e815837b3ff32b}{\index{\-S\-P\-I@{\-S\-P\-I}!\-Set\-M\-S\-B\-First@{\-Set\-M\-S\-B\-First}}
-\index{\-Set\-M\-S\-B\-First@{\-Set\-M\-S\-B\-First}!SPI@{\-S\-P\-I}}
-\subsubsection[{\-Set\-M\-S\-B\-First}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-S\-P\-I\-::\-Set\-M\-S\-B\-First} (
+)}}
+\label{classSPI_acd12e6ca307ec0dc0fb80f4cc9aa6ee3}
+Configure the order that bits are sent and received on the wire to be least significant bit first. \hypertarget{classSPI_a66ed807d9a76400a74e815837b3ff32b}{
+\index{SPI@{SPI}!SetMSBFirst@{SetMSBFirst}}
+\index{SetMSBFirst@{SetMSBFirst}!SPI@{SPI}}
+\subsubsection[{SetMSBFirst}]{\setlength{\rightskip}{0pt plus 5cm}void SPI::SetMSBFirst (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)}}\label{classSPI_a66ed807d9a76400a74e815837b3ff32b}
-\-Configure the order that bits are sent and received on the wire to be most significant bit first. \hypertarget{classSPI_a463dc7cb26d0b865c44c73538bc23ae0}{\index{\-S\-P\-I@{\-S\-P\-I}!\-Set\-Sample\-Data\-On\-Falling@{\-Set\-Sample\-Data\-On\-Falling}}
-\index{\-Set\-Sample\-Data\-On\-Falling@{\-Set\-Sample\-Data\-On\-Falling}!SPI@{\-S\-P\-I}}
-\subsubsection[{\-Set\-Sample\-Data\-On\-Falling}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-S\-P\-I\-::\-Set\-Sample\-Data\-On\-Falling} (
+)}}
+\label{classSPI_a66ed807d9a76400a74e815837b3ff32b}
+Configure the order that bits are sent and received on the wire to be most significant bit first. \hypertarget{classSPI_a463dc7cb26d0b865c44c73538bc23ae0}{
+\index{SPI@{SPI}!SetSampleDataOnFalling@{SetSampleDataOnFalling}}
+\index{SetSampleDataOnFalling@{SetSampleDataOnFalling}!SPI@{SPI}}
+\subsubsection[{SetSampleDataOnFalling}]{\setlength{\rightskip}{0pt plus 5cm}void SPI::SetSampleDataOnFalling (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)}}\label{classSPI_a463dc7cb26d0b865c44c73538bc23ae0}
-\-Configure that the data is stable on the falling edge and the data changes on the rising edge. \hypertarget{classSPI_a00eec7d4310c18e8cfb4b36592b488d9}{\index{\-S\-P\-I@{\-S\-P\-I}!\-Set\-Sample\-Data\-On\-Rising@{\-Set\-Sample\-Data\-On\-Rising}}
-\index{\-Set\-Sample\-Data\-On\-Rising@{\-Set\-Sample\-Data\-On\-Rising}!SPI@{\-S\-P\-I}}
-\subsubsection[{\-Set\-Sample\-Data\-On\-Rising}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-S\-P\-I\-::\-Set\-Sample\-Data\-On\-Rising} (
+)}}
+\label{classSPI_a463dc7cb26d0b865c44c73538bc23ae0}
+Configure that the data is stable on the falling edge and the data changes on the rising edge. \hypertarget{classSPI_a00eec7d4310c18e8cfb4b36592b488d9}{
+\index{SPI@{SPI}!SetSampleDataOnRising@{SetSampleDataOnRising}}
+\index{SetSampleDataOnRising@{SetSampleDataOnRising}!SPI@{SPI}}
+\subsubsection[{SetSampleDataOnRising}]{\setlength{\rightskip}{0pt plus 5cm}void SPI::SetSampleDataOnRising (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)}}\label{classSPI_a00eec7d4310c18e8cfb4b36592b488d9}
-\-Configure that the data is stable on the rising edge and the data changes on the falling edge. \hypertarget{classSPI_af0a6cd80fbc758c2a8e344f044e1a59d}{\index{\-S\-P\-I@{\-S\-P\-I}!\-Set\-Slave\-Select@{\-Set\-Slave\-Select}}
-\index{\-Set\-Slave\-Select@{\-Set\-Slave\-Select}!SPI@{\-S\-P\-I}}
-\subsubsection[{\-Set\-Slave\-Select}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-S\-P\-I\-::\-Set\-Slave\-Select} (
+)}}
+\label{classSPI_a00eec7d4310c18e8cfb4b36592b488d9}
+Configure that the data is stable on the rising edge and the data changes on the falling edge. \hypertarget{classSPI_af0a6cd80fbc758c2a8e344f044e1a59d}{
+\index{SPI@{SPI}!SetSlaveSelect@{SetSlaveSelect}}
+\index{SetSlaveSelect@{SetSlaveSelect}!SPI@{SPI}}
+\subsubsection[{SetSlaveSelect}]{\setlength{\rightskip}{0pt plus 5cm}void SPI::SetSlaveSelect (
 \begin{DoxyParamCaption}
-\item[{{\bf \-Digital\-Output} $\ast$}]{ss, }
-\item[{t\-Frame\-Mode}]{mode = {\ttfamily k\-Chip\-Select}, }
-\item[{bool}]{active\-Low = {\ttfamily false}}
+\item[{{\bf DigitalOutput} $\ast$}]{ss, }
+\item[{tFrameMode}]{mode = {\ttfamily kChipSelect}, }
+\item[{bool}]{activeLow = {\ttfamily false}}
 \end{DoxyParamCaption}
-)}}\label{classSPI_af0a6cd80fbc758c2a8e344f044e1a59d}
-\-Configure the slave select line behavior.
+)}}
+\label{classSPI_af0a6cd80fbc758c2a8e344f044e1a59d}
+Configure the slave select line behavior.
 
 
-\begin{DoxyParams}{\-Parameters}
+\begin{DoxyParams}{Parameters}
 {\em ss} & slave select digital output. \\
 \hline
-{\em mode} & \-Frame mode\-: k\-Chip\-Select\-: active for the duration of the frame. k\-Pre\-Latch\-Pulse\-: pulses before the transfer of each frame. k\-Post\-Latch\-Pulse\-: pulses after the transfer of each frame. k\-Pre\-And\-Post\-Latch\-Pulse\-: pulses before and after each frame. \\
+{\em mode} & Frame mode: kChipSelect: active for the duration of the frame. kPreLatchPulse: pulses before the transfer of each frame. kPostLatchPulse: pulses after the transfer of each frame. kPreAndPostLatchPulse: pulses before and after each frame. \\
 \hline
-{\em active\-Low} & \-True if slave select line is active low. \\
+{\em activeLow} & True if slave select line is active low. \\
 \hline
 \end{DoxyParams}
-\hypertarget{classSPI_ad2745d268c7350f65d4657b6d558a67a}{\index{\-S\-P\-I@{\-S\-P\-I}!\-Set\-Slave\-Select@{\-Set\-Slave\-Select}}
-\index{\-Set\-Slave\-Select@{\-Set\-Slave\-Select}!SPI@{\-S\-P\-I}}
-\subsubsection[{\-Set\-Slave\-Select}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-S\-P\-I\-::\-Set\-Slave\-Select} (
+\hypertarget{classSPI_ad2745d268c7350f65d4657b6d558a67a}{
+\index{SPI@{SPI}!SetSlaveSelect@{SetSlaveSelect}}
+\index{SetSlaveSelect@{SetSlaveSelect}!SPI@{SPI}}
+\subsubsection[{SetSlaveSelect}]{\setlength{\rightskip}{0pt plus 5cm}void SPI::SetSlaveSelect (
 \begin{DoxyParamCaption}
-\item[{{\bf \-Digital\-Output} \&}]{ss, }
-\item[{t\-Frame\-Mode}]{mode = {\ttfamily k\-Chip\-Select}, }
-\item[{bool}]{active\-Low = {\ttfamily false}}
+\item[{{\bf DigitalOutput} \&}]{ss, }
+\item[{tFrameMode}]{mode = {\ttfamily kChipSelect}, }
+\item[{bool}]{activeLow = {\ttfamily false}}
 \end{DoxyParamCaption}
-)}}\label{classSPI_ad2745d268c7350f65d4657b6d558a67a}
-\-Configure the slave select line behavior.
+)}}
+\label{classSPI_ad2745d268c7350f65d4657b6d558a67a}
+Configure the slave select line behavior.
 
 
-\begin{DoxyParams}{\-Parameters}
+\begin{DoxyParams}{Parameters}
 {\em ss} & slave select digital output. \\
 \hline
-{\em mode} & \-Frame mode\-: k\-Chip\-Select\-: active for the duration of the frame. k\-Pre\-Latch\-Pulse\-: pulses before the transfer of each frame. k\-Post\-Latch\-Pulse\-: pulses after the transfer of each frame. k\-Pre\-And\-Post\-Latch\-Pulse\-: pulses before and after each frame. \\
+{\em mode} & Frame mode: kChipSelect: active for the duration of the frame. kPreLatchPulse: pulses before the transfer of each frame. kPostLatchPulse: pulses after the transfer of each frame. kPreAndPostLatchPulse: pulses before and after each frame. \\
 \hline
-{\em active\-Low} & \-True if slave select line is active low. \\
+{\em activeLow} & True if slave select line is active low. \\
 \hline
 \end{DoxyParams}
-\hypertarget{classSPI_a231184061058fc3924e0d5e3abb0dcb1}{\index{\-S\-P\-I@{\-S\-P\-I}!\-Write@{\-Write}}
-\index{\-Write@{\-Write}!SPI@{\-S\-P\-I}}
-\subsubsection[{\-Write}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-S\-P\-I\-::\-Write} (
+\hypertarget{classSPI_a231184061058fc3924e0d5e3abb0dcb1}{
+\index{SPI@{SPI}!Write@{Write}}
+\index{Write@{Write}!SPI@{SPI}}
+\subsubsection[{Write}]{\setlength{\rightskip}{0pt plus 5cm}void SPI::Write (
 \begin{DoxyParamCaption}
-\item[{\-U\-I\-N\-T32}]{data}
+\item[{UINT32}]{data}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{classSPI_a231184061058fc3924e0d5e3abb0dcb1}
-\-Write a word to the slave device. \-Blocks until there is space in the output \-F\-I\-F\-O.
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classSPI_a231184061058fc3924e0d5e3abb0dcb1}
+Write a word to the slave device. Blocks until there is space in the output FIFO.
 
-\-If not running in output only mode, also saves the data received on the \-M\-I\-S\-O input during the transfer into the receive \-F\-I\-F\-O. 
+If not running in output only mode, also saves the data received on the MISO input during the transfer into the receive FIFO. 
 
-\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
 \item 
-\-S\-P\-I.\-h\item 
-\-S\-P\-I.\-cpp\end{DoxyCompactItemize}
+SPI.h\item 
+SPI.cpp\end{DoxyCompactItemize}

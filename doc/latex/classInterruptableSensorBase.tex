@@ -1,118 +1,141 @@
-\hypertarget{classInterruptableSensorBase}{\section{\-Interruptable\-Sensor\-Base \-Class \-Reference}
-\label{classInterruptableSensorBase}\index{\-Interruptable\-Sensor\-Base@{\-Interruptable\-Sensor\-Base}}
+\hypertarget{classInterruptableSensorBase}{
+\section{InterruptableSensorBase Class Reference}
+\label{classInterruptableSensorBase}\index{InterruptableSensorBase@{InterruptableSensorBase}}
 }
-\-Inheritance diagram for \-Interruptable\-Sensor\-Base\-:\begin{figure}[H]
+Inheritance diagram for InterruptableSensorBase:\begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[height=5.000000cm]{classInterruptableSensorBase}
 \end{center}
 \end{figure}
-\subsection*{\-Public \-Member \-Functions}
+\subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{classInterruptableSensorBase_a9a9cc4a6a409d77704b66d9bccdb5dc1}{virtual void \hyperlink{classInterruptableSensorBase_a9a9cc4a6a409d77704b66d9bccdb5dc1}{\-Request\-Interrupts} (t\-Interrupt\-Handler handler, void $\ast$param)=0}\label{classInterruptableSensorBase_a9a9cc4a6a409d77704b66d9bccdb5dc1}
+\hypertarget{classInterruptableSensorBase_a9a9cc4a6a409d77704b66d9bccdb5dc1}{
+virtual void \hyperlink{classInterruptableSensorBase_a9a9cc4a6a409d77704b66d9bccdb5dc1}{RequestInterrupts} (tInterruptHandler handler, void $\ast$param)=0}
+\label{classInterruptableSensorBase_a9a9cc4a6a409d77704b66d9bccdb5dc1}
 
-\begin{DoxyCompactList}\small\item\em \-Asynchronus handler version. \end{DoxyCompactList}\item 
-\hypertarget{classInterruptableSensorBase_a540fc3adfd8690e7e643956a9b1be39b}{virtual void \hyperlink{classInterruptableSensorBase_a540fc3adfd8690e7e643956a9b1be39b}{\-Request\-Interrupts} ()=0}\label{classInterruptableSensorBase_a540fc3adfd8690e7e643956a9b1be39b}
+\begin{DoxyCompactList}\small\item\em Asynchronus handler version. \end{DoxyCompactList}\item 
+\hypertarget{classInterruptableSensorBase_a540fc3adfd8690e7e643956a9b1be39b}{
+virtual void \hyperlink{classInterruptableSensorBase_a540fc3adfd8690e7e643956a9b1be39b}{RequestInterrupts} ()=0}
+\label{classInterruptableSensorBase_a540fc3adfd8690e7e643956a9b1be39b}
 
-\begin{DoxyCompactList}\small\item\em \-Synchronus \-Wait version. \end{DoxyCompactList}\item 
-virtual void \hyperlink{classInterruptableSensorBase_a3a520da3879ef6fa5e383783ba10c361}{\-Cancel\-Interrupts} ()
-\begin{DoxyCompactList}\small\item\em \-Free up the underlying chipobject functions. \end{DoxyCompactList}\item 
-virtual void \hyperlink{classInterruptableSensorBase_a22a2c4f1fa4e2b4a8dfed2151c4de160}{\-Wait\-For\-Interrupt} (float timeout)
-\begin{DoxyCompactList}\small\item\em \-Synchronus version. \end{DoxyCompactList}\item 
-virtual void \hyperlink{classInterruptableSensorBase_a2c340ba527bd05f588d356ed16ac48f3}{\-Enable\-Interrupts} ()
-\begin{DoxyCompactList}\small\item\em \-Enable interrupts -\/ after finishing setup. \end{DoxyCompactList}\item 
-virtual void \hyperlink{classInterruptableSensorBase_ad619428f0a23dbf9ccc87ab4c187702b}{\-Disable\-Interrupts} ()
-\begin{DoxyCompactList}\small\item\em \-Disable, but don't deallocate. \end{DoxyCompactList}\item 
-virtual double \hyperlink{classInterruptableSensorBase_ae3bd40c1b8329f35789b02881d9bc78d}{\-Read\-Interrupt\-Timestamp} ()
-\begin{DoxyCompactList}\small\item\em \-Return the timestamp for the interrupt that occurred. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\subsection*{\-Protected \-Member \-Functions}
+\begin{DoxyCompactList}\small\item\em Synchronus Wait version. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classInterruptableSensorBase_a3a520da3879ef6fa5e383783ba10c361}{CancelInterrupts} ()
+\begin{DoxyCompactList}\small\item\em Free up the underlying chipobject functions. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classInterruptableSensorBase_a22a2c4f1fa4e2b4a8dfed2151c4de160}{WaitForInterrupt} (float timeout)
+\begin{DoxyCompactList}\small\item\em Synchronus version. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classInterruptableSensorBase_a2c340ba527bd05f588d356ed16ac48f3}{EnableInterrupts} ()
+\begin{DoxyCompactList}\small\item\em Enable interrupts -\/ after finishing setup. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classInterruptableSensorBase_ad619428f0a23dbf9ccc87ab4c187702b}{DisableInterrupts} ()
+\begin{DoxyCompactList}\small\item\em Disable, but don't deallocate. \end{DoxyCompactList}\item 
+virtual double \hyperlink{classInterruptableSensorBase_ae3bd40c1b8329f35789b02881d9bc78d}{ReadInterruptTimestamp} ()
+\begin{DoxyCompactList}\small\item\em Return the timestamp for the interrupt that occurred. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{classInterruptableSensorBase_adff75b700f436833a3c06992d61ec6d0}{void {\bfseries \-Allocate\-Interrupts} (bool watcher)}\label{classInterruptableSensorBase_adff75b700f436833a3c06992d61ec6d0}
+\hypertarget{classInterruptableSensorBase_adff75b700f436833a3c06992d61ec6d0}{
+void {\bfseries AllocateInterrupts} (bool watcher)}
+\label{classInterruptableSensorBase_adff75b700f436833a3c06992d61ec6d0}
 
 \end{DoxyCompactItemize}
-\subsection*{\-Protected \-Attributes}
+\subsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{classInterruptableSensorBase_ab443458f081959a175f832682cea1ee8}{t\-Interrupt $\ast$ {\bfseries m\-\_\-interrupt}}\label{classInterruptableSensorBase_ab443458f081959a175f832682cea1ee8}
+\hypertarget{classInterruptableSensorBase_ab443458f081959a175f832682cea1ee8}{
+tInterrupt $\ast$ {\bfseries m\_\-interrupt}}
+\label{classInterruptableSensorBase_ab443458f081959a175f832682cea1ee8}
 
 \item 
-\hypertarget{classInterruptableSensorBase_af3c078d1557196e8eb85871038d2134e}{t\-Interrupt\-Manager $\ast$ {\bfseries m\-\_\-manager}}\label{classInterruptableSensorBase_af3c078d1557196e8eb85871038d2134e}
+\hypertarget{classInterruptableSensorBase_af3c078d1557196e8eb85871038d2134e}{
+tInterruptManager $\ast$ {\bfseries m\_\-manager}}
+\label{classInterruptableSensorBase_af3c078d1557196e8eb85871038d2134e}
 
 \item 
-\hypertarget{classInterruptableSensorBase_af7ee9d3bfd6810ea75cd0c250086f768}{\-U\-I\-N\-T32 {\bfseries m\-\_\-interrupt\-Index}}\label{classInterruptableSensorBase_af7ee9d3bfd6810ea75cd0c250086f768}
+\hypertarget{classInterruptableSensorBase_af7ee9d3bfd6810ea75cd0c250086f768}{
+UINT32 {\bfseries m\_\-interruptIndex}}
+\label{classInterruptableSensorBase_af7ee9d3bfd6810ea75cd0c250086f768}
 
 \end{DoxyCompactItemize}
 
 
-\subsection{\-Member \-Function \-Documentation}
-\hypertarget{classInterruptableSensorBase_a3a520da3879ef6fa5e383783ba10c361}{\index{\-Interruptable\-Sensor\-Base@{\-Interruptable\-Sensor\-Base}!\-Cancel\-Interrupts@{\-Cancel\-Interrupts}}
-\index{\-Cancel\-Interrupts@{\-Cancel\-Interrupts}!InterruptableSensorBase@{\-Interruptable\-Sensor\-Base}}
-\subsubsection[{\-Cancel\-Interrupts}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Interruptable\-Sensor\-Base\-::\-Cancel\-Interrupts} (
+\subsection{Member Function Documentation}
+\hypertarget{classInterruptableSensorBase_a3a520da3879ef6fa5e383783ba10c361}{
+\index{InterruptableSensorBase@{InterruptableSensorBase}!CancelInterrupts@{CancelInterrupts}}
+\index{CancelInterrupts@{CancelInterrupts}!InterruptableSensorBase@{InterruptableSensorBase}}
+\subsubsection[{CancelInterrupts}]{\setlength{\rightskip}{0pt plus 5cm}void InterruptableSensorBase::CancelInterrupts (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{classInterruptableSensorBase_a3a520da3879ef6fa5e383783ba10c361}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classInterruptableSensorBase_a3a520da3879ef6fa5e383783ba10c361}
 
 
-\-Free up the underlying chipobject functions. 
+Free up the underlying chipobject functions. 
 
-\-Cancel interrupts on this device. \-This deallocates all the chipobject structures and disables any interrupts. \hypertarget{classInterruptableSensorBase_ad619428f0a23dbf9ccc87ab4c187702b}{\index{\-Interruptable\-Sensor\-Base@{\-Interruptable\-Sensor\-Base}!\-Disable\-Interrupts@{\-Disable\-Interrupts}}
-\index{\-Disable\-Interrupts@{\-Disable\-Interrupts}!InterruptableSensorBase@{\-Interruptable\-Sensor\-Base}}
-\subsubsection[{\-Disable\-Interrupts}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Interruptable\-Sensor\-Base\-::\-Disable\-Interrupts} (
+Cancel interrupts on this device. This deallocates all the chipobject structures and disables any interrupts. \hypertarget{classInterruptableSensorBase_ad619428f0a23dbf9ccc87ab4c187702b}{
+\index{InterruptableSensorBase@{InterruptableSensorBase}!DisableInterrupts@{DisableInterrupts}}
+\index{DisableInterrupts@{DisableInterrupts}!InterruptableSensorBase@{InterruptableSensorBase}}
+\subsubsection[{DisableInterrupts}]{\setlength{\rightskip}{0pt plus 5cm}void InterruptableSensorBase::DisableInterrupts (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{classInterruptableSensorBase_ad619428f0a23dbf9ccc87ab4c187702b}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classInterruptableSensorBase_ad619428f0a23dbf9ccc87ab4c187702b}
 
 
-\-Disable, but don't deallocate. 
+Disable, but don't deallocate. 
 
-\-Disable \-Interrupts without without deallocating structures. \hypertarget{classInterruptableSensorBase_a2c340ba527bd05f588d356ed16ac48f3}{\index{\-Interruptable\-Sensor\-Base@{\-Interruptable\-Sensor\-Base}!\-Enable\-Interrupts@{\-Enable\-Interrupts}}
-\index{\-Enable\-Interrupts@{\-Enable\-Interrupts}!InterruptableSensorBase@{\-Interruptable\-Sensor\-Base}}
-\subsubsection[{\-Enable\-Interrupts}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Interruptable\-Sensor\-Base\-::\-Enable\-Interrupts} (
+Disable Interrupts without without deallocating structures. \hypertarget{classInterruptableSensorBase_a2c340ba527bd05f588d356ed16ac48f3}{
+\index{InterruptableSensorBase@{InterruptableSensorBase}!EnableInterrupts@{EnableInterrupts}}
+\index{EnableInterrupts@{EnableInterrupts}!InterruptableSensorBase@{InterruptableSensorBase}}
+\subsubsection[{EnableInterrupts}]{\setlength{\rightskip}{0pt plus 5cm}void InterruptableSensorBase::EnableInterrupts (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{classInterruptableSensorBase_a2c340ba527bd05f588d356ed16ac48f3}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classInterruptableSensorBase_a2c340ba527bd05f588d356ed16ac48f3}
 
 
-\-Enable interrupts -\/ after finishing setup. 
+Enable interrupts -\/ after finishing setup. 
 
-\-Enable interrupts to occur on this input. \-Interrupts are disabled when the \-Request\-Interrupt call is made. \-This gives time to do the setup of the other options before starting to field interrupts. \hypertarget{classInterruptableSensorBase_ae3bd40c1b8329f35789b02881d9bc78d}{\index{\-Interruptable\-Sensor\-Base@{\-Interruptable\-Sensor\-Base}!\-Read\-Interrupt\-Timestamp@{\-Read\-Interrupt\-Timestamp}}
-\index{\-Read\-Interrupt\-Timestamp@{\-Read\-Interrupt\-Timestamp}!InterruptableSensorBase@{\-Interruptable\-Sensor\-Base}}
-\subsubsection[{\-Read\-Interrupt\-Timestamp}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf \-Interruptable\-Sensor\-Base\-::\-Read\-Interrupt\-Timestamp} (
+Enable interrupts to occur on this input. Interrupts are disabled when the RequestInterrupt call is made. This gives time to do the setup of the other options before starting to field interrupts. \hypertarget{classInterruptableSensorBase_ae3bd40c1b8329f35789b02881d9bc78d}{
+\index{InterruptableSensorBase@{InterruptableSensorBase}!ReadInterruptTimestamp@{ReadInterruptTimestamp}}
+\index{ReadInterruptTimestamp@{ReadInterruptTimestamp}!InterruptableSensorBase@{InterruptableSensorBase}}
+\subsubsection[{ReadInterruptTimestamp}]{\setlength{\rightskip}{0pt plus 5cm}double InterruptableSensorBase::ReadInterruptTimestamp (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{classInterruptableSensorBase_ae3bd40c1b8329f35789b02881d9bc78d}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classInterruptableSensorBase_ae3bd40c1b8329f35789b02881d9bc78d}
 
 
-\-Return the timestamp for the interrupt that occurred. 
+Return the timestamp for the interrupt that occurred. 
 
-\-Return the timestamp for the interrupt that occurred most recently. \-This is in the same time domain as \-Get\-Clock(). \begin{DoxyReturn}{\-Returns}
-\-Timestamp in seconds since boot. 
+Return the timestamp for the interrupt that occurred most recently. This is in the same time domain as GetClock(). \begin{DoxyReturn}{Returns}
+Timestamp in seconds since boot. 
 \end{DoxyReturn}
-\hypertarget{classInterruptableSensorBase_a22a2c4f1fa4e2b4a8dfed2151c4de160}{\index{\-Interruptable\-Sensor\-Base@{\-Interruptable\-Sensor\-Base}!\-Wait\-For\-Interrupt@{\-Wait\-For\-Interrupt}}
-\index{\-Wait\-For\-Interrupt@{\-Wait\-For\-Interrupt}!InterruptableSensorBase@{\-Interruptable\-Sensor\-Base}}
-\subsubsection[{\-Wait\-For\-Interrupt}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Interruptable\-Sensor\-Base\-::\-Wait\-For\-Interrupt} (
+\hypertarget{classInterruptableSensorBase_a22a2c4f1fa4e2b4a8dfed2151c4de160}{
+\index{InterruptableSensorBase@{InterruptableSensorBase}!WaitForInterrupt@{WaitForInterrupt}}
+\index{WaitForInterrupt@{WaitForInterrupt}!InterruptableSensorBase@{InterruptableSensorBase}}
+\subsubsection[{WaitForInterrupt}]{\setlength{\rightskip}{0pt plus 5cm}void InterruptableSensorBase::WaitForInterrupt (
 \begin{DoxyParamCaption}
 \item[{float}]{timeout}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{classInterruptableSensorBase_a22a2c4f1fa4e2b4a8dfed2151c4de160}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classInterruptableSensorBase_a22a2c4f1fa4e2b4a8dfed2151c4de160}
 
 
-\-Synchronus version. 
+Synchronus version. 
 
-\-In synchronous mode, wait for the defined interrupt to occur. 
-\begin{DoxyParams}{\-Parameters}
-{\em timeout} & \-Timeout in seconds \\
+In synchronous mode, wait for the defined interrupt to occur. 
+\begin{DoxyParams}{Parameters}
+{\em timeout} & Timeout in seconds \\
 \hline
 \end{DoxyParams}
 
 
-\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
 \item 
-\-Interruptable\-Sensor\-Base.\-h\item 
-\-Interruptable\-Sensor\-Base.\-cpp\end{DoxyCompactItemize}
+InterruptableSensorBase.h\item 
+InterruptableSensorBase.cpp\end{DoxyCompactItemize}

@@ -1,61 +1,82 @@
-\hypertarget{classGenericHID}{\section{\-Generic\-H\-I\-D \-Class \-Reference}
-\label{classGenericHID}\index{\-Generic\-H\-I\-D@{\-Generic\-H\-I\-D}}
+\hypertarget{classGenericHID}{
+\section{GenericHID Class Reference}
+\label{classGenericHID}\index{GenericHID@{GenericHID}}
 }
 
 
-{\ttfamily \#include $<$\-Generic\-H\-I\-D.\-h$>$}
+{\ttfamily \#include $<$GenericHID.h$>$}
 
-\-Inheritance diagram for \-Generic\-H\-I\-D\-:\begin{figure}[H]
+Inheritance diagram for GenericHID:\begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[height=2.000000cm]{classGenericHID}
 \end{center}
 \end{figure}
-\subsection*{\-Public \-Types}
+\subsection*{Public Types}
 \begin{DoxyCompactItemize}
 \item 
-enum {\bfseries \-Joystick\-Hand} \{ {\bfseries k\-Left\-Hand} =  0, 
-{\bfseries k\-Right\-Hand} =  1
+enum {\bfseries JoystickHand} \{ {\bfseries kLeftHand} =  0, 
+{\bfseries kRightHand} =  1
  \}
 \end{DoxyCompactItemize}
-\subsection*{\-Public \-Member \-Functions}
+\subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{classGenericHID_aec37ad96a57c42d1673ae98e13950ff8}{virtual float {\bfseries \-Get\-X} (\-Joystick\-Hand hand=k\-Right\-Hand)=0}\label{classGenericHID_aec37ad96a57c42d1673ae98e13950ff8}
+\hypertarget{classGenericHID_aec37ad96a57c42d1673ae98e13950ff8}{
+virtual float {\bfseries GetX} (JoystickHand hand=kRightHand)=0}
+\label{classGenericHID_aec37ad96a57c42d1673ae98e13950ff8}
 
 \item 
-\hypertarget{classGenericHID_ae6f943cc10ca54b67bacff5df38254d5}{virtual float {\bfseries \-Get\-Y} (\-Joystick\-Hand hand=k\-Right\-Hand)=0}\label{classGenericHID_ae6f943cc10ca54b67bacff5df38254d5}
+\hypertarget{classGenericHID_ae6f943cc10ca54b67bacff5df38254d5}{
+virtual float {\bfseries GetY} (JoystickHand hand=kRightHand)=0}
+\label{classGenericHID_ae6f943cc10ca54b67bacff5df38254d5}
 
 \item 
-\hypertarget{classGenericHID_aaf7289ae45da867b5b4c5328e66b61c0}{virtual float {\bfseries \-Get\-Z} ()=0}\label{classGenericHID_aaf7289ae45da867b5b4c5328e66b61c0}
+\hypertarget{classGenericHID_aaf7289ae45da867b5b4c5328e66b61c0}{
+virtual float {\bfseries GetZ} ()=0}
+\label{classGenericHID_aaf7289ae45da867b5b4c5328e66b61c0}
 
 \item 
-\hypertarget{classGenericHID_ad0452a1517f47b28b5a6360b343df221}{virtual float {\bfseries \-Get\-Twist} ()=0}\label{classGenericHID_ad0452a1517f47b28b5a6360b343df221}
+\hypertarget{classGenericHID_ad0452a1517f47b28b5a6360b343df221}{
+virtual float {\bfseries GetTwist} ()=0}
+\label{classGenericHID_ad0452a1517f47b28b5a6360b343df221}
 
 \item 
-\hypertarget{classGenericHID_aa392c654c01b3379909ee25d0e37565a}{virtual float {\bfseries \-Get\-Throttle} ()=0}\label{classGenericHID_aa392c654c01b3379909ee25d0e37565a}
+\hypertarget{classGenericHID_aa392c654c01b3379909ee25d0e37565a}{
+virtual float {\bfseries GetThrottle} ()=0}
+\label{classGenericHID_aa392c654c01b3379909ee25d0e37565a}
 
 \item 
-\hypertarget{classGenericHID_aa705937a89375c73dbcdd18e177e9dfa}{virtual float {\bfseries \-Get\-Raw\-Axis} (\-U\-I\-N\-T32 axis)=0}\label{classGenericHID_aa705937a89375c73dbcdd18e177e9dfa}
+\hypertarget{classGenericHID_aa705937a89375c73dbcdd18e177e9dfa}{
+virtual float {\bfseries GetRawAxis} (UINT32 axis)=0}
+\label{classGenericHID_aa705937a89375c73dbcdd18e177e9dfa}
 
 \item 
-\hypertarget{classGenericHID_adec9a51569114af2f237a316dc394d51}{virtual bool {\bfseries \-Get\-Trigger} (\-Joystick\-Hand hand=k\-Right\-Hand)=0}\label{classGenericHID_adec9a51569114af2f237a316dc394d51}
+\hypertarget{classGenericHID_adec9a51569114af2f237a316dc394d51}{
+virtual bool {\bfseries GetTrigger} (JoystickHand hand=kRightHand)=0}
+\label{classGenericHID_adec9a51569114af2f237a316dc394d51}
 
 \item 
-\hypertarget{classGenericHID_a5991c05652c8f48f1bc200878d7cce50}{virtual bool {\bfseries \-Get\-Top} (\-Joystick\-Hand hand=k\-Right\-Hand)=0}\label{classGenericHID_a5991c05652c8f48f1bc200878d7cce50}
+\hypertarget{classGenericHID_a5991c05652c8f48f1bc200878d7cce50}{
+virtual bool {\bfseries GetTop} (JoystickHand hand=kRightHand)=0}
+\label{classGenericHID_a5991c05652c8f48f1bc200878d7cce50}
 
 \item 
-\hypertarget{classGenericHID_ae44948c457407b0f156bac3b27bb12ea}{virtual bool {\bfseries \-Get\-Bumper} (\-Joystick\-Hand hand=k\-Right\-Hand)=0}\label{classGenericHID_ae44948c457407b0f156bac3b27bb12ea}
+\hypertarget{classGenericHID_ae44948c457407b0f156bac3b27bb12ea}{
+virtual bool {\bfseries GetBumper} (JoystickHand hand=kRightHand)=0}
+\label{classGenericHID_ae44948c457407b0f156bac3b27bb12ea}
 
 \item 
-\hypertarget{classGenericHID_a1ae5396e0a5aa0bef70a75d1a823fa3f}{virtual bool {\bfseries \-Get\-Raw\-Button} (\-U\-I\-N\-T32 button)=0}\label{classGenericHID_a1ae5396e0a5aa0bef70a75d1a823fa3f}
+\hypertarget{classGenericHID_a1ae5396e0a5aa0bef70a75d1a823fa3f}{
+virtual bool {\bfseries GetRawButton} (UINT32 button)=0}
+\label{classGenericHID_a1ae5396e0a5aa0bef70a75d1a823fa3f}
 
 \end{DoxyCompactItemize}
 
 
-\subsection{\-Detailed \-Description}
-\hyperlink{classGenericHID}{\-Generic\-H\-I\-D} \-Interface 
+\subsection{Detailed Description}
+\hyperlink{classGenericHID}{GenericHID} Interface 
 
-\-The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
 \item 
-\-Generic\-H\-I\-D.\-h\end{DoxyCompactItemize}
+GenericHID.h\end{DoxyCompactItemize}

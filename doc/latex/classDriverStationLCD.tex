@@ -1,153 +1,174 @@
-\hypertarget{classDriverStationLCD}{\section{\-Driver\-Station\-L\-C\-D \-Class \-Reference}
-\label{classDriverStationLCD}\index{\-Driver\-Station\-L\-C\-D@{\-Driver\-Station\-L\-C\-D}}
+\hypertarget{classDriverStationLCD}{
+\section{DriverStationLCD Class Reference}
+\label{classDriverStationLCD}\index{DriverStationLCD@{DriverStationLCD}}
 }
 
 
-{\ttfamily \#include $<$\-Driver\-Station\-L\-C\-D.\-h$>$}
+{\ttfamily \#include $<$DriverStationLCD.h$>$}
 
-\-Inheritance diagram for \-Driver\-Station\-L\-C\-D\-:\begin{figure}[H]
+Inheritance diagram for DriverStationLCD:\begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[height=3.000000cm]{classDriverStationLCD}
 \end{center}
 \end{figure}
-\subsection*{\-Public \-Types}
+\subsection*{Public Types}
 \begin{DoxyCompactItemize}
 \item 
-enum {\bfseries \-Line} \{ \*
-{\bfseries k\-Main\-\_\-\-Line6} = 0, 
-{\bfseries k\-User\-\_\-\-Line1} = 0, 
-{\bfseries k\-User\-\_\-\-Line2} = 1, 
-{\bfseries k\-User\-\_\-\-Line3} = 2, 
-\*
-{\bfseries k\-User\-\_\-\-Line4} = 3, 
-{\bfseries k\-User\-\_\-\-Line5} = 4, 
-{\bfseries k\-User\-\_\-\-Line6} = 5
+enum {\bfseries Line} \{ \par
+{\bfseries kMain\_\-Line6} = 0, 
+{\bfseries kUser\_\-Line1} = 0, 
+{\bfseries kUser\_\-Line2} = 1, 
+{\bfseries kUser\_\-Line3} = 2, 
+\par
+{\bfseries kUser\_\-Line4} = 3, 
+{\bfseries kUser\_\-Line5} = 4, 
+{\bfseries kUser\_\-Line6} = 5
  \}
 \end{DoxyCompactItemize}
-\subsection*{\-Public \-Member \-Functions}
+\subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \hyperlink{classDriverStationLCD_ac80467f0853ddf9cc1a82a927a366bde}{\-Update\-L\-C\-D} ()
+void \hyperlink{classDriverStationLCD_ac80467f0853ddf9cc1a82a927a366bde}{UpdateLCD} ()
 \item 
-void \hyperlink{classDriverStationLCD_a57e0628e1335e70050a7de3e9419df42}{\-Printf} (\-Line line, \-I\-N\-T32 starting\-Column, const char $\ast$write\-Fmt,...)
+void \hyperlink{classDriverStationLCD_a57e0628e1335e70050a7de3e9419df42}{Printf} (Line line, INT32 startingColumn, const char $\ast$writeFmt,...)
 \item 
-void \hyperlink{classDriverStationLCD_a369fcb21952476eac121c5d76f4eb5b1}{\-Printf\-Line} (\-Line line, const char $\ast$write\-Fmt,...)
+void \hyperlink{classDriverStationLCD_a369fcb21952476eac121c5d76f4eb5b1}{PrintfLine} (Line line, const char $\ast$writeFmt,...)
 \item 
-void \hyperlink{classDriverStationLCD_a1d33a6a650592857f1ac605a87a5c0d5}{\-Clear} ()
+void \hyperlink{classDriverStationLCD_a1d33a6a650592857f1ac605a87a5c0d5}{Clear} ()
 \end{DoxyCompactItemize}
-\subsection*{\-Static \-Public \-Member \-Functions}
+\subsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-static \hyperlink{classDriverStationLCD}{\-Driver\-Station\-L\-C\-D} $\ast$ \hyperlink{classDriverStationLCD_a81d206a65012b4d84c3ce415ec13a5a3}{\-Get\-Instance} ()
+static \hyperlink{classDriverStationLCD}{DriverStationLCD} $\ast$ \hyperlink{classDriverStationLCD_a81d206a65012b4d84c3ce415ec13a5a3}{GetInstance} ()
 \end{DoxyCompactItemize}
-\subsection*{\-Static \-Public \-Attributes}
+\subsection*{Static Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{classDriverStationLCD_a45038d2c69d132c5c79a1badcc5946fc}{static const \-U\-I\-N\-T32 {\bfseries k\-Sync\-Timeout\-\_\-ms} = 20}\label{classDriverStationLCD_a45038d2c69d132c5c79a1badcc5946fc}
+\hypertarget{classDriverStationLCD_a45038d2c69d132c5c79a1badcc5946fc}{
+static const UINT32 {\bfseries kSyncTimeout\_\-ms} = 20}
+\label{classDriverStationLCD_a45038d2c69d132c5c79a1badcc5946fc}
 
 \item 
-\hypertarget{classDriverStationLCD_a26f33bcca9271380c8f2ce8f8c2b1347}{static const \-U\-I\-N\-T16 {\bfseries k\-Full\-Display\-Text\-Command} = 0x9\-F\-F\-F}\label{classDriverStationLCD_a26f33bcca9271380c8f2ce8f8c2b1347}
+\hypertarget{classDriverStationLCD_a26f33bcca9271380c8f2ce8f8c2b1347}{
+static const UINT16 {\bfseries kFullDisplayTextCommand} = 0x9FFF}
+\label{classDriverStationLCD_a26f33bcca9271380c8f2ce8f8c2b1347}
 
 \item 
-\hypertarget{classDriverStationLCD_a08e533705d5cea74ef59aa7f5bfddc69}{static const \-I\-N\-T32 {\bfseries k\-Line\-Length} = 21}\label{classDriverStationLCD_a08e533705d5cea74ef59aa7f5bfddc69}
+\hypertarget{classDriverStationLCD_a08e533705d5cea74ef59aa7f5bfddc69}{
+static const INT32 {\bfseries kLineLength} = 21}
+\label{classDriverStationLCD_a08e533705d5cea74ef59aa7f5bfddc69}
 
 \item 
-\hypertarget{classDriverStationLCD_a13103ae669faff5bf9b44317727143b9}{static const \-I\-N\-T32 {\bfseries k\-Num\-Lines} = 6}\label{classDriverStationLCD_a13103ae669faff5bf9b44317727143b9}
+\hypertarget{classDriverStationLCD_a13103ae669faff5bf9b44317727143b9}{
+static const INT32 {\bfseries kNumLines} = 6}
+\label{classDriverStationLCD_a13103ae669faff5bf9b44317727143b9}
 
 \end{DoxyCompactItemize}
-\subsection*{\-Protected \-Member \-Functions}
+\subsection*{Protected Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{classDriverStationLCD_ac94af42c92e3def74ed1005fdf0233d2}{\-Driver\-Station\-L\-C\-D} ()
+\hyperlink{classDriverStationLCD_ac94af42c92e3def74ed1005fdf0233d2}{DriverStationLCD} ()
 \end{DoxyCompactItemize}
 
 
-\subsection{\-Detailed \-Description}
-\-Provide access to \-L\-C\-D on the \-Driver \-Station.
+\subsection{Detailed Description}
+Provide access to LCD on the Driver Station.
 
-\-Buffer the printed data locally and then send it when \-Update\-L\-C\-D is called. 
+Buffer the printed data locally and then send it when UpdateLCD is called. 
 
-\subsection{\-Constructor \& \-Destructor \-Documentation}
-\hypertarget{classDriverStationLCD_ac94af42c92e3def74ed1005fdf0233d2}{\index{\-Driver\-Station\-L\-C\-D@{\-Driver\-Station\-L\-C\-D}!\-Driver\-Station\-L\-C\-D@{\-Driver\-Station\-L\-C\-D}}
-\index{\-Driver\-Station\-L\-C\-D@{\-Driver\-Station\-L\-C\-D}!DriverStationLCD@{\-Driver\-Station\-L\-C\-D}}
-\subsubsection[{\-Driver\-Station\-L\-C\-D}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Driver\-Station\-L\-C\-D\-::\-Driver\-Station\-L\-C\-D} (
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classDriverStationLCD_ac94af42c92e3def74ed1005fdf0233d2}{
+\index{DriverStationLCD@{DriverStationLCD}!DriverStationLCD@{DriverStationLCD}}
+\index{DriverStationLCD@{DriverStationLCD}!DriverStationLCD@{DriverStationLCD}}
+\subsubsection[{DriverStationLCD}]{\setlength{\rightskip}{0pt plus 5cm}DriverStationLCD::DriverStationLCD (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{classDriverStationLCD_ac94af42c92e3def74ed1005fdf0233d2}
-\hyperlink{classDriverStationLCD}{\-Driver\-Station\-L\-C\-D} contructor.
+)\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classDriverStationLCD_ac94af42c92e3def74ed1005fdf0233d2}
+\hyperlink{classDriverStationLCD}{DriverStationLCD} contructor.
 
-\-This is only called once the first time \hyperlink{classDriverStationLCD_a81d206a65012b4d84c3ce415ec13a5a3}{\-Get\-Instance()} is called 
+This is only called once the first time \hyperlink{classDriverStationLCD_a81d206a65012b4d84c3ce415ec13a5a3}{GetInstance()} is called 
 
-\subsection{\-Member \-Function \-Documentation}
-\hypertarget{classDriverStationLCD_a1d33a6a650592857f1ac605a87a5c0d5}{\index{\-Driver\-Station\-L\-C\-D@{\-Driver\-Station\-L\-C\-D}!\-Clear@{\-Clear}}
-\index{\-Clear@{\-Clear}!DriverStationLCD@{\-Driver\-Station\-L\-C\-D}}
-\subsubsection[{\-Clear}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Driver\-Station\-L\-C\-D\-::\-Clear} (
+\subsection{Member Function Documentation}
+\hypertarget{classDriverStationLCD_a1d33a6a650592857f1ac605a87a5c0d5}{
+\index{DriverStationLCD@{DriverStationLCD}!Clear@{Clear}}
+\index{Clear@{Clear}!DriverStationLCD@{DriverStationLCD}}
+\subsubsection[{Clear}]{\setlength{\rightskip}{0pt plus 5cm}void DriverStationLCD::Clear (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)}}\label{classDriverStationLCD_a1d33a6a650592857f1ac605a87a5c0d5}
-\-Clear all lines on the \-L\-C\-D. \hypertarget{classDriverStationLCD_a81d206a65012b4d84c3ce415ec13a5a3}{\index{\-Driver\-Station\-L\-C\-D@{\-Driver\-Station\-L\-C\-D}!\-Get\-Instance@{\-Get\-Instance}}
-\index{\-Get\-Instance@{\-Get\-Instance}!DriverStationLCD@{\-Driver\-Station\-L\-C\-D}}
-\subsubsection[{\-Get\-Instance}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Driver\-Station\-L\-C\-D} $\ast$ {\bf \-Driver\-Station\-L\-C\-D\-::\-Get\-Instance} (
+)}}
+\label{classDriverStationLCD_a1d33a6a650592857f1ac605a87a5c0d5}
+Clear all lines on the LCD. \hypertarget{classDriverStationLCD_a81d206a65012b4d84c3ce415ec13a5a3}{
+\index{DriverStationLCD@{DriverStationLCD}!GetInstance@{GetInstance}}
+\index{GetInstance@{GetInstance}!DriverStationLCD@{DriverStationLCD}}
+\subsubsection[{GetInstance}]{\setlength{\rightskip}{0pt plus 5cm}{\bf DriverStationLCD} $\ast$ DriverStationLCD::GetInstance (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{classDriverStationLCD_a81d206a65012b4d84c3ce415ec13a5a3}
-\-Return a pointer to the singleton \hyperlink{classDriverStationLCD}{\-Driver\-Station\-L\-C\-D}. \hypertarget{classDriverStationLCD_a57e0628e1335e70050a7de3e9419df42}{\index{\-Driver\-Station\-L\-C\-D@{\-Driver\-Station\-L\-C\-D}!\-Printf@{\-Printf}}
-\index{\-Printf@{\-Printf}!DriverStationLCD@{\-Driver\-Station\-L\-C\-D}}
-\subsubsection[{\-Printf}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Driver\-Station\-L\-C\-D\-::\-Printf} (
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{classDriverStationLCD_a81d206a65012b4d84c3ce415ec13a5a3}
+Return a pointer to the singleton \hyperlink{classDriverStationLCD}{DriverStationLCD}. \hypertarget{classDriverStationLCD_a57e0628e1335e70050a7de3e9419df42}{
+\index{DriverStationLCD@{DriverStationLCD}!Printf@{Printf}}
+\index{Printf@{Printf}!DriverStationLCD@{DriverStationLCD}}
+\subsubsection[{Printf}]{\setlength{\rightskip}{0pt plus 5cm}void DriverStationLCD::Printf (
 \begin{DoxyParamCaption}
-\item[{\-Line}]{line, }
-\item[{\-I\-N\-T32}]{starting\-Column, }
-\item[{const char $\ast$}]{write\-Fmt, }
+\item[{Line}]{line, }
+\item[{INT32}]{startingColumn, }
+\item[{const char $\ast$}]{writeFmt, }
 \item[{}]{...}
 \end{DoxyParamCaption}
-)}}\label{classDriverStationLCD_a57e0628e1335e70050a7de3e9419df42}
-\-Print formatted text to the \-Driver \-Station \-L\-C\-D text bufer.
+)}}
+\label{classDriverStationLCD_a57e0628e1335e70050a7de3e9419df42}
+Print formatted text to the Driver Station LCD text bufer.
 
-\-Use \hyperlink{classDriverStationLCD_ac80467f0853ddf9cc1a82a927a366bde}{\-Update\-L\-C\-D()} periodically to actually send the test to the \-Driver \-Station.
+Use \hyperlink{classDriverStationLCD_ac80467f0853ddf9cc1a82a927a366bde}{UpdateLCD()} periodically to actually send the test to the Driver Station.
 
 
-\begin{DoxyParams}{\-Parameters}
-{\em line} & \-The line on the \-L\-C\-D to print to. \\
+\begin{DoxyParams}{Parameters}
+{\em line} & The line on the LCD to print to. \\
 \hline
-{\em starting\-Column} & \-The column to start printing to. \-This is a 1-\/based number. \\
+{\em startingColumn} & The column to start printing to. This is a 1-\/based number. \\
 \hline
-{\em write\-Fmt} & \-The printf format string describing how to print. \\
+{\em writeFmt} & The printf format string describing how to print. \\
 \hline
 \end{DoxyParams}
-\hypertarget{classDriverStationLCD_a369fcb21952476eac121c5d76f4eb5b1}{\index{\-Driver\-Station\-L\-C\-D@{\-Driver\-Station\-L\-C\-D}!\-Printf\-Line@{\-Printf\-Line}}
-\index{\-Printf\-Line@{\-Printf\-Line}!DriverStationLCD@{\-Driver\-Station\-L\-C\-D}}
-\subsubsection[{\-Printf\-Line}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Driver\-Station\-L\-C\-D\-::\-Printf\-Line} (
+\hypertarget{classDriverStationLCD_a369fcb21952476eac121c5d76f4eb5b1}{
+\index{DriverStationLCD@{DriverStationLCD}!PrintfLine@{PrintfLine}}
+\index{PrintfLine@{PrintfLine}!DriverStationLCD@{DriverStationLCD}}
+\subsubsection[{PrintfLine}]{\setlength{\rightskip}{0pt plus 5cm}void DriverStationLCD::PrintfLine (
 \begin{DoxyParamCaption}
-\item[{\-Line}]{line, }
-\item[{const char $\ast$}]{write\-Fmt, }
+\item[{Line}]{line, }
+\item[{const char $\ast$}]{writeFmt, }
 \item[{}]{...}
 \end{DoxyParamCaption}
-)}}\label{classDriverStationLCD_a369fcb21952476eac121c5d76f4eb5b1}
-\-Print formatted text to the \-Driver \-Station \-L\-C\-D text bufer. \-This function pads the line with empty spaces.
+)}}
+\label{classDriverStationLCD_a369fcb21952476eac121c5d76f4eb5b1}
+Print formatted text to the Driver Station LCD text bufer. This function pads the line with empty spaces.
 
-\-Use \hyperlink{classDriverStationLCD_ac80467f0853ddf9cc1a82a927a366bde}{\-Update\-L\-C\-D()} periodically to actually send the test to the \-Driver \-Station.
+Use \hyperlink{classDriverStationLCD_ac80467f0853ddf9cc1a82a927a366bde}{UpdateLCD()} periodically to actually send the test to the Driver Station.
 
 
-\begin{DoxyParams}{\-Parameters}
-{\em line} & \-The line on the \-L\-C\-D to print to. \\
+\begin{DoxyParams}{Parameters}
+{\em line} & The line on the LCD to print to. \\
 \hline
-{\em write\-Fmt} & \-The printf format string describing how to print. \\
+{\em writeFmt} & The printf format string describing how to print. \\
 \hline
 \end{DoxyParams}
-\hypertarget{classDriverStationLCD_ac80467f0853ddf9cc1a82a927a366bde}{\index{\-Driver\-Station\-L\-C\-D@{\-Driver\-Station\-L\-C\-D}!\-Update\-L\-C\-D@{\-Update\-L\-C\-D}}
-\index{\-Update\-L\-C\-D@{\-Update\-L\-C\-D}!DriverStationLCD@{\-Driver\-Station\-L\-C\-D}}
-\subsubsection[{\-Update\-L\-C\-D}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Driver\-Station\-L\-C\-D\-::\-Update\-L\-C\-D} (
+\hypertarget{classDriverStationLCD_ac80467f0853ddf9cc1a82a927a366bde}{
+\index{DriverStationLCD@{DriverStationLCD}!UpdateLCD@{UpdateLCD}}
+\index{UpdateLCD@{UpdateLCD}!DriverStationLCD@{DriverStationLCD}}
+\subsubsection[{UpdateLCD}]{\setlength{\rightskip}{0pt plus 5cm}void DriverStationLCD::UpdateLCD (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)}}\label{classDriverStationLCD_ac80467f0853ddf9cc1a82a927a366bde}
-\-Send the text data to the \-Driver \-Station. 
+)}}
+\label{classDriverStationLCD_ac80467f0853ddf9cc1a82a927a366bde}
+Send the text data to the Driver Station. 
 
-\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
 \item 
-\-Driver\-Station\-L\-C\-D.\-h\item 
-\-Driver\-Station\-L\-C\-D.\-cpp\end{DoxyCompactItemize}
+DriverStationLCD.h\item 
+DriverStationLCD.cpp\end{DoxyCompactItemize}

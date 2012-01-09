@@ -1,171 +1,188 @@
-\hypertarget{classAnalogTriggerOutput}{\section{\-Analog\-Trigger\-Output \-Class \-Reference}
-\label{classAnalogTriggerOutput}\index{\-Analog\-Trigger\-Output@{\-Analog\-Trigger\-Output}}
+\hypertarget{classAnalogTriggerOutput}{
+\section{AnalogTriggerOutput Class Reference}
+\label{classAnalogTriggerOutput}\index{AnalogTriggerOutput@{AnalogTriggerOutput}}
 }
 
 
-{\ttfamily \#include $<$\-Analog\-Trigger\-Output.\-h$>$}
+{\ttfamily \#include $<$AnalogTriggerOutput.h$>$}
 
-\-Inheritance diagram for \-Analog\-Trigger\-Output\-:\begin{figure}[H]
+Inheritance diagram for AnalogTriggerOutput:\begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[height=5.000000cm]{classAnalogTriggerOutput}
 \end{center}
 \end{figure}
-\subsection*{\-Public \-Types}
+\subsection*{Public Types}
 \begin{DoxyCompactItemize}
 \item 
-enum {\bfseries \-Type} \{ {\bfseries k\-In\-Window} = 0, 
-{\bfseries k\-State} = 1, 
-{\bfseries k\-Rising\-Pulse} = 2, 
-{\bfseries k\-Falling\-Pulse} = 3
+enum {\bfseries Type} \{ {\bfseries kInWindow} = 0, 
+{\bfseries kState} = 1, 
+{\bfseries kRisingPulse} = 2, 
+{\bfseries kFallingPulse} = 3
  \}
 \end{DoxyCompactItemize}
-\subsection*{\-Public \-Member \-Functions}
+\subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-bool \hyperlink{classAnalogTriggerOutput_a932c64e6e662803108a6a951b3809ad0}{\-Get} ()
+bool \hyperlink{classAnalogTriggerOutput_a932c64e6e662803108a6a951b3809ad0}{Get} ()
 \item 
-virtual \-U\-I\-N\-T32 \hyperlink{classAnalogTriggerOutput_a5a3c5233ce579ae4d84098f08abd808a}{\-Get\-Channel\-For\-Routing} ()
+virtual UINT32 \hyperlink{classAnalogTriggerOutput_a5a3c5233ce579ae4d84098f08abd808a}{GetChannelForRouting} ()
 \item 
-virtual \-U\-I\-N\-T32 \hyperlink{classAnalogTriggerOutput_ae1805118b5d82d7937aadd438df949b8}{\-Get\-Module\-For\-Routing} ()
+virtual UINT32 \hyperlink{classAnalogTriggerOutput_ae1805118b5d82d7937aadd438df949b8}{GetModuleForRouting} ()
 \item 
-virtual bool \hyperlink{classAnalogTriggerOutput_a719c7a65061492d2378f3d5bef2e0275}{\-Get\-Analog\-Trigger\-For\-Routing} ()
+virtual bool \hyperlink{classAnalogTriggerOutput_a719c7a65061492d2378f3d5bef2e0275}{GetAnalogTriggerForRouting} ()
 \item 
-virtual void \hyperlink{classAnalogTriggerOutput_a36ef5c0664731e05e14cc9fad673a0f4}{\-Request\-Interrupts} (t\-Interrupt\-Handler handler, void $\ast$param=\-N\-U\-L\-L)
-\begin{DoxyCompactList}\small\item\em \-Asynchronus handler version. \end{DoxyCompactList}\item 
-virtual void \hyperlink{classAnalogTriggerOutput_a0630898833f66fcd671e7bb4561e4d81}{\-Request\-Interrupts} ()
-\begin{DoxyCompactList}\small\item\em \-Synchronus \-Wait version. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\subsection*{\-Protected \-Member \-Functions}
+virtual void \hyperlink{classAnalogTriggerOutput_a36ef5c0664731e05e14cc9fad673a0f4}{RequestInterrupts} (tInterruptHandler handler, void $\ast$param=NULL)
+\begin{DoxyCompactList}\small\item\em Asynchronus handler version. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classAnalogTriggerOutput_a0630898833f66fcd671e7bb4561e4d81}{RequestInterrupts} ()
+\begin{DoxyCompactList}\small\item\em Synchronus Wait version. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{classAnalogTriggerOutput_a1eabb0bac38ac9c3ec1ca6a2ab3050f9}{\-Analog\-Trigger\-Output} (\hyperlink{classAnalogTrigger}{\-Analog\-Trigger} $\ast$trigger, \-Type output\-Type)
+\hyperlink{classAnalogTriggerOutput_a1eabb0bac38ac9c3ec1ca6a2ab3050f9}{AnalogTriggerOutput} (\hyperlink{classAnalogTrigger}{AnalogTrigger} $\ast$trigger, Type outputType)
 \end{DoxyCompactItemize}
-\subsection*{\-Friends}
+\subsection*{Friends}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{classAnalogTriggerOutput_aaae5addbdfb60c5f834f1cd08e59dadd}{class {\bfseries \-Analog\-Trigger}}\label{classAnalogTriggerOutput_aaae5addbdfb60c5f834f1cd08e59dadd}
+\hypertarget{classAnalogTriggerOutput_aaae5addbdfb60c5f834f1cd08e59dadd}{
+class \hyperlink{classAnalogTriggerOutput_aaae5addbdfb60c5f834f1cd08e59dadd}{AnalogTrigger}}
+\label{classAnalogTriggerOutput_aaae5addbdfb60c5f834f1cd08e59dadd}
 
 \end{DoxyCompactItemize}
 
 
-\subsection{\-Detailed \-Description}
-\-Class to represent a specific output from an analog trigger. \-This class is used to get the current output value and also as a \hyperlink{classDigitalSource}{\-Digital\-Source} to provide routing of an output to digital subsystems on the \-F\-P\-G\-A such as \hyperlink{classCounter}{\-Counter}, \hyperlink{classEncoder}{\-Encoder}, and \-Interrupt.
+\subsection{Detailed Description}
+Class to represent a specific output from an analog trigger. This class is used to get the current output value and also as a \hyperlink{classDigitalSource}{DigitalSource} to provide routing of an output to digital subsystems on the FPGA such as \hyperlink{classCounter}{Counter}, \hyperlink{classEncoder}{Encoder}, and Interrupt.
 
-\-The \-Trigger\-State output indicates the primary output value of the trigger. \-If the analog signal is less than the lower limit, the output is false. \-If the analog value is greater than the upper limit, then the output is true. \-If the analog value is in between, then the trigger output state maintains its most recent value.
+The TriggerState output indicates the primary output value of the trigger. If the analog signal is less than the lower limit, the output is false. If the analog value is greater than the upper limit, then the output is true. If the analog value is in between, then the trigger output state maintains its most recent value.
 
-\-The \-In\-Window output indicates whether or not the analog signal is inside the range defined by the limits.
+The InWindow output indicates whether or not the analog signal is inside the range defined by the limits.
 
-\-The \-Rising\-Pulse and \-Falling\-Pulse outputs detect an instantaneous transition from above the upper limit to below the lower limit, and vise versa. \-These pulses represent a rollover condition of a sensor and can be routed to an up / down couter or to interrupts. \-Because the outputs generate a pulse, they cannot be read directly. \-To help ensure that a rollover condition is not missed, there is an average rejection filter available that operates on the upper 8 bits of a 12 bit number and selects the nearest outlyer of 3 samples. \-This will reject a sample that is (due to averaging or sampling) errantly between the two limits. \-This filter will fail if more than one sample in a row is errantly in between the two limits. \-You may see this problem if attempting to use this feature with a mechanical rollover sensor, such as a 360 degree no-\/stop potentiometer without signal conditioning, because the rollover transition is not sharp / clean enough. \-Using the averaging engine may help with this, but rotational speeds of the sensor will then be limited. 
+The RisingPulse and FallingPulse outputs detect an instantaneous transition from above the upper limit to below the lower limit, and vise versa. These pulses represent a rollover condition of a sensor and can be routed to an up / down couter or to interrupts. Because the outputs generate a pulse, they cannot be read directly. To help ensure that a rollover condition is not missed, there is an average rejection filter available that operates on the upper 8 bits of a 12 bit number and selects the nearest outlyer of 3 samples. This will reject a sample that is (due to averaging or sampling) errantly between the two limits. This filter will fail if more than one sample in a row is errantly in between the two limits. You may see this problem if attempting to use this feature with a mechanical rollover sensor, such as a 360 degree no-\/stop potentiometer without signal conditioning, because the rollover transition is not sharp / clean enough. Using the averaging engine may help with this, but rotational speeds of the sensor will then be limited. 
 
-\subsection{\-Constructor \& \-Destructor \-Documentation}
-\hypertarget{classAnalogTriggerOutput_a1eabb0bac38ac9c3ec1ca6a2ab3050f9}{\index{\-Analog\-Trigger\-Output@{\-Analog\-Trigger\-Output}!\-Analog\-Trigger\-Output@{\-Analog\-Trigger\-Output}}
-\index{\-Analog\-Trigger\-Output@{\-Analog\-Trigger\-Output}!AnalogTriggerOutput@{\-Analog\-Trigger\-Output}}
-\subsubsection[{\-Analog\-Trigger\-Output}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Analog\-Trigger\-Output\-::\-Analog\-Trigger\-Output} (
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classAnalogTriggerOutput_a1eabb0bac38ac9c3ec1ca6a2ab3050f9}{
+\index{AnalogTriggerOutput@{AnalogTriggerOutput}!AnalogTriggerOutput@{AnalogTriggerOutput}}
+\index{AnalogTriggerOutput@{AnalogTriggerOutput}!AnalogTriggerOutput@{AnalogTriggerOutput}}
+\subsubsection[{AnalogTriggerOutput}]{\setlength{\rightskip}{0pt plus 5cm}AnalogTriggerOutput::AnalogTriggerOutput (
 \begin{DoxyParamCaption}
-\item[{{\bf \-Analog\-Trigger} $\ast$}]{trigger, }
-\item[{\-Analog\-Trigger\-Output\-::\-Type}]{output\-Type}
+\item[{{\bf AnalogTrigger} $\ast$}]{trigger, }
+\item[{AnalogTriggerOutput::Type}]{outputType}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{classAnalogTriggerOutput_a1eabb0bac38ac9c3ec1ca6a2ab3050f9}
-\-Create an object that represents one of the four outputs from an analog trigger.
+)\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classAnalogTriggerOutput_a1eabb0bac38ac9c3ec1ca6a2ab3050f9}
+Create an object that represents one of the four outputs from an analog trigger.
 
-\-Because this class derives from \hyperlink{classDigitalSource}{\-Digital\-Source}, it can be passed into routing functions for \hyperlink{classCounter}{\-Counter}, \hyperlink{classEncoder}{\-Encoder}, etc.
+Because this class derives from \hyperlink{classDigitalSource}{DigitalSource}, it can be passed into routing functions for \hyperlink{classCounter}{Counter}, \hyperlink{classEncoder}{Encoder}, etc.
 
 
-\begin{DoxyParams}{\-Parameters}
-{\em trigger} & \-A pointer to the trigger for which this is an output. \\
+\begin{DoxyParams}{Parameters}
+{\em trigger} & A pointer to the trigger for which this is an output. \\
 \hline
-{\em output\-Type} & \-An enum that specifies the output on the trigger to represent. \\
+{\em outputType} & An enum that specifies the output on the trigger to represent. \\
 \hline
 \end{DoxyParams}
 
 
-\subsection{\-Member \-Function \-Documentation}
-\hypertarget{classAnalogTriggerOutput_a932c64e6e662803108a6a951b3809ad0}{\index{\-Analog\-Trigger\-Output@{\-Analog\-Trigger\-Output}!\-Get@{\-Get}}
-\index{\-Get@{\-Get}!AnalogTriggerOutput@{\-Analog\-Trigger\-Output}}
-\subsubsection[{\-Get}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Analog\-Trigger\-Output\-::\-Get} (
+\subsection{Member Function Documentation}
+\hypertarget{classAnalogTriggerOutput_a932c64e6e662803108a6a951b3809ad0}{
+\index{AnalogTriggerOutput@{AnalogTriggerOutput}!Get@{Get}}
+\index{Get@{Get}!AnalogTriggerOutput@{AnalogTriggerOutput}}
+\subsubsection[{Get}]{\setlength{\rightskip}{0pt plus 5cm}bool AnalogTriggerOutput::Get (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)}}\label{classAnalogTriggerOutput_a932c64e6e662803108a6a951b3809ad0}
-\-Get the state of the analog trigger output. \begin{DoxyReturn}{\-Returns}
-\-The state of the analog trigger output. 
+)}}
+\label{classAnalogTriggerOutput_a932c64e6e662803108a6a951b3809ad0}
+Get the state of the analog trigger output. \begin{DoxyReturn}{Returns}
+The state of the analog trigger output. 
 \end{DoxyReturn}
-\hypertarget{classAnalogTriggerOutput_a719c7a65061492d2378f3d5bef2e0275}{\index{\-Analog\-Trigger\-Output@{\-Analog\-Trigger\-Output}!\-Get\-Analog\-Trigger\-For\-Routing@{\-Get\-Analog\-Trigger\-For\-Routing}}
-\index{\-Get\-Analog\-Trigger\-For\-Routing@{\-Get\-Analog\-Trigger\-For\-Routing}!AnalogTriggerOutput@{\-Analog\-Trigger\-Output}}
-\subsubsection[{\-Get\-Analog\-Trigger\-For\-Routing}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Analog\-Trigger\-Output\-::\-Get\-Analog\-Trigger\-For\-Routing} (
+\hypertarget{classAnalogTriggerOutput_a719c7a65061492d2378f3d5bef2e0275}{
+\index{AnalogTriggerOutput@{AnalogTriggerOutput}!GetAnalogTriggerForRouting@{GetAnalogTriggerForRouting}}
+\index{GetAnalogTriggerForRouting@{GetAnalogTriggerForRouting}!AnalogTriggerOutput@{AnalogTriggerOutput}}
+\subsubsection[{GetAnalogTriggerForRouting}]{\setlength{\rightskip}{0pt plus 5cm}bool AnalogTriggerOutput::GetAnalogTriggerForRouting (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{classAnalogTriggerOutput_a719c7a65061492d2378f3d5bef2e0275}
-\begin{DoxyReturn}{\-Returns}
-\-The value to be written to the module field of a routing mux. 
-\end{DoxyReturn}
-
-
-\-Implements \hyperlink{classDigitalSource}{\-Digital\-Source}.
-
-\hypertarget{classAnalogTriggerOutput_a5a3c5233ce579ae4d84098f08abd808a}{\index{\-Analog\-Trigger\-Output@{\-Analog\-Trigger\-Output}!\-Get\-Channel\-For\-Routing@{\-Get\-Channel\-For\-Routing}}
-\index{\-Get\-Channel\-For\-Routing@{\-Get\-Channel\-For\-Routing}!AnalogTriggerOutput@{\-Analog\-Trigger\-Output}}
-\subsubsection[{\-Get\-Channel\-For\-Routing}]{\setlength{\rightskip}{0pt plus 5cm}\-U\-I\-N\-T32 {\bf \-Analog\-Trigger\-Output\-::\-Get\-Channel\-For\-Routing} (
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{classAnalogTriggerOutput_a5a3c5233ce579ae4d84098f08abd808a}
-\begin{DoxyReturn}{\-Returns}
-\-The value to be written to the channel field of a routing mux. 
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classAnalogTriggerOutput_a719c7a65061492d2378f3d5bef2e0275}
+\begin{DoxyReturn}{Returns}
+The value to be written to the module field of a routing mux. 
 \end{DoxyReturn}
 
 
-\-Implements \hyperlink{classDigitalSource}{\-Digital\-Source}.
+Implements \hyperlink{classDigitalSource}{DigitalSource}.
 
-\hypertarget{classAnalogTriggerOutput_ae1805118b5d82d7937aadd438df949b8}{\index{\-Analog\-Trigger\-Output@{\-Analog\-Trigger\-Output}!\-Get\-Module\-For\-Routing@{\-Get\-Module\-For\-Routing}}
-\index{\-Get\-Module\-For\-Routing@{\-Get\-Module\-For\-Routing}!AnalogTriggerOutput@{\-Analog\-Trigger\-Output}}
-\subsubsection[{\-Get\-Module\-For\-Routing}]{\setlength{\rightskip}{0pt plus 5cm}\-U\-I\-N\-T32 {\bf \-Analog\-Trigger\-Output\-::\-Get\-Module\-For\-Routing} (
+\hypertarget{classAnalogTriggerOutput_a5a3c5233ce579ae4d84098f08abd808a}{
+\index{AnalogTriggerOutput@{AnalogTriggerOutput}!GetChannelForRouting@{GetChannelForRouting}}
+\index{GetChannelForRouting@{GetChannelForRouting}!AnalogTriggerOutput@{AnalogTriggerOutput}}
+\subsubsection[{GetChannelForRouting}]{\setlength{\rightskip}{0pt plus 5cm}UINT32 AnalogTriggerOutput::GetChannelForRouting (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{classAnalogTriggerOutput_ae1805118b5d82d7937aadd438df949b8}
-\begin{DoxyReturn}{\-Returns}
-\-The value to be written to the module field of a routing mux. 
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classAnalogTriggerOutput_a5a3c5233ce579ae4d84098f08abd808a}
+\begin{DoxyReturn}{Returns}
+The value to be written to the channel field of a routing mux. 
 \end{DoxyReturn}
 
 
-\-Implements \hyperlink{classDigitalSource}{\-Digital\-Source}.
+Implements \hyperlink{classDigitalSource}{DigitalSource}.
 
-\hypertarget{classAnalogTriggerOutput_a36ef5c0664731e05e14cc9fad673a0f4}{\index{\-Analog\-Trigger\-Output@{\-Analog\-Trigger\-Output}!\-Request\-Interrupts@{\-Request\-Interrupts}}
-\index{\-Request\-Interrupts@{\-Request\-Interrupts}!AnalogTriggerOutput@{\-Analog\-Trigger\-Output}}
-\subsubsection[{\-Request\-Interrupts}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Analog\-Trigger\-Output\-::\-Request\-Interrupts} (
-\begin{DoxyParamCaption}
-\item[{t\-Interrupt\-Handler}]{handler, }
-\item[{void $\ast$}]{param = {\ttfamily \-N\-U\-L\-L}}
-\end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{classAnalogTriggerOutput_a36ef5c0664731e05e14cc9fad673a0f4}
-
-
-\-Asynchronus handler version. 
-
-\-Request interrupts asynchronously on this analog trigger output. \-T\-O\-D\-O\-: \-Hardware supports interrupts on \-Analog \-Trigger outputs... \-W\-P\-I\-Lib should too 
-
-\-Implements \hyperlink{classDigitalSource_aa34b225d5dc38355ff8bd0a11b6113d3}{\-Digital\-Source}.
-
-\hypertarget{classAnalogTriggerOutput_a0630898833f66fcd671e7bb4561e4d81}{\index{\-Analog\-Trigger\-Output@{\-Analog\-Trigger\-Output}!\-Request\-Interrupts@{\-Request\-Interrupts}}
-\index{\-Request\-Interrupts@{\-Request\-Interrupts}!AnalogTriggerOutput@{\-Analog\-Trigger\-Output}}
-\subsubsection[{\-Request\-Interrupts}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Analog\-Trigger\-Output\-::\-Request\-Interrupts} (
+\hypertarget{classAnalogTriggerOutput_ae1805118b5d82d7937aadd438df949b8}{
+\index{AnalogTriggerOutput@{AnalogTriggerOutput}!GetModuleForRouting@{GetModuleForRouting}}
+\index{GetModuleForRouting@{GetModuleForRouting}!AnalogTriggerOutput@{AnalogTriggerOutput}}
+\subsubsection[{GetModuleForRouting}]{\setlength{\rightskip}{0pt plus 5cm}UINT32 AnalogTriggerOutput::GetModuleForRouting (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{classAnalogTriggerOutput_a0630898833f66fcd671e7bb4561e4d81}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classAnalogTriggerOutput_ae1805118b5d82d7937aadd438df949b8}
+\begin{DoxyReturn}{Returns}
+The value to be written to the module field of a routing mux. 
+\end{DoxyReturn}
 
 
-\-Synchronus \-Wait version. 
+Implements \hyperlink{classDigitalSource}{DigitalSource}.
 
-\-Request interrupts synchronously on this analog trigger output. \-T\-O\-D\-O\-: \-Hardware supports interrupts on \-Analog \-Trigger outputs... \-W\-P\-I\-Lib should too 
+\hypertarget{classAnalogTriggerOutput_a0630898833f66fcd671e7bb4561e4d81}{
+\index{AnalogTriggerOutput@{AnalogTriggerOutput}!RequestInterrupts@{RequestInterrupts}}
+\index{RequestInterrupts@{RequestInterrupts}!AnalogTriggerOutput@{AnalogTriggerOutput}}
+\subsubsection[{RequestInterrupts}]{\setlength{\rightskip}{0pt plus 5cm}void AnalogTriggerOutput::RequestInterrupts (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classAnalogTriggerOutput_a0630898833f66fcd671e7bb4561e4d81}
 
-\-Implements \hyperlink{classDigitalSource_a693e9521e21758c8d5f3d221dc9e9b5b}{\-Digital\-Source}.
+
+Synchronus Wait version. 
+
+Request interrupts synchronously on this analog trigger output. TODO: Hardware supports interrupts on Analog Trigger outputs... WPILib should too 
+
+Implements \hyperlink{classDigitalSource_a693e9521e21758c8d5f3d221dc9e9b5b}{DigitalSource}.
+
+\hypertarget{classAnalogTriggerOutput_a36ef5c0664731e05e14cc9fad673a0f4}{
+\index{AnalogTriggerOutput@{AnalogTriggerOutput}!RequestInterrupts@{RequestInterrupts}}
+\index{RequestInterrupts@{RequestInterrupts}!AnalogTriggerOutput@{AnalogTriggerOutput}}
+\subsubsection[{RequestInterrupts}]{\setlength{\rightskip}{0pt plus 5cm}void AnalogTriggerOutput::RequestInterrupts (
+\begin{DoxyParamCaption}
+\item[{tInterruptHandler}]{handler, }
+\item[{void $\ast$}]{param = {\ttfamily NULL}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classAnalogTriggerOutput_a36ef5c0664731e05e14cc9fad673a0f4}
+
+
+Asynchronus handler version. 
+
+Request interrupts asynchronously on this analog trigger output. TODO: Hardware supports interrupts on Analog Trigger outputs... WPILib should too 
+
+Implements \hyperlink{classDigitalSource_aa34b225d5dc38355ff8bd0a11b6113d3}{DigitalSource}.
 
 
 
-\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
 \item 
-\-Analog\-Trigger\-Output.\-h\item 
-\-Analog\-Trigger\-Output.\-cpp\end{DoxyCompactItemize}
+AnalogTriggerOutput.h\item 
+AnalogTriggerOutput.cpp\end{DoxyCompactItemize}

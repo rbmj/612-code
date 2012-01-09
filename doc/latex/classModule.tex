@@ -1,64 +1,107 @@
-\hypertarget{classModule}{\section{\-Module \-Class \-Reference}
-\label{classModule}\index{\-Module@{\-Module}}
+\hypertarget{classModule}{
+\section{Module Class Reference}
+\label{classModule}\index{Module@{Module}}
 }
-\-Inheritance diagram for \-Module\-:\begin{figure}[H]
+Inheritance diagram for Module:\begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[height=4.000000cm]{classModule}
 \end{center}
 \end{figure}
-\subsection*{\-Public \-Member \-Functions}
+\subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{classModule_a694b4d2edcb697f3b618f6a261d9a444}{\-U\-I\-N\-T32 {\bfseries \-Get\-Slot} ()}\label{classModule_a694b4d2edcb697f3b618f6a261d9a444}
+\hypertarget{classModule_a2f5d1b9ba82cf4661ecf0306824fdce6}{
+nLoadOut::tModuleType {\bfseries GetType} ()}
+\label{classModule_a2f5d1b9ba82cf4661ecf0306824fdce6}
+
+\item 
+\hypertarget{classModule_ac414ba5cf992fdf69135d29cd3663fa6}{
+UINT8 {\bfseries GetNumber} ()}
+\label{classModule_ac414ba5cf992fdf69135d29cd3663fa6}
 
 \end{DoxyCompactItemize}
-\subsection*{\-Protected \-Member \-Functions}
+\subsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{classModule_a085618a4166d62b8e169a33b3c4c0f41}{\-Module} (\-U\-I\-N\-T32 slot)
-\item 
-virtual \hyperlink{classModule_a7c9d9c096786d127590fdd8aa2b7d681}{$\sim$\-Module} ()
+static \hyperlink{classModule}{Module} $\ast$ \hyperlink{classModule_a1f5bf14617d367a0cbe99d84a5eecb8b}{GetModule} (nLoadOut::tModuleType type, UINT8 number)
 \end{DoxyCompactItemize}
-\subsection*{\-Protected \-Attributes}
+\subsection*{Protected Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{classModule_a360f6185a865566b92e9574e9f51ef94}{\-U\-I\-N\-T32 \hyperlink{classModule_a360f6185a865566b92e9574e9f51ef94}{m\-\_\-slot}}\label{classModule_a360f6185a865566b92e9574e9f51ef94}
-
-\begin{DoxyCompactList}\small\item\em \-Slot number where the module is plugged into the chassis. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\subsection*{\-Static \-Protected \-Attributes}
-\begin{DoxyCompactItemize}
+\hyperlink{classModule_a0a7eb292c2e57e00bcda3c41decd7476}{Module} (nLoadOut::tModuleType type, UINT8 number)
 \item 
-\hypertarget{classModule_a61866ecc89e1bfb44ebf8e72614889f4}{static \hyperlink{classModule}{\-Module} $\ast$ {\bfseries m\-\_\-modules} \mbox{[}k\-Chassis\-Slots+1\mbox{]} = \{\-N\-U\-L\-L\}}\label{classModule_a61866ecc89e1bfb44ebf8e72614889f4}
-
+virtual \hyperlink{classModule_a7c9d9c096786d127590fdd8aa2b7d681}{$\sim$Module} ()
 \end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classModule_a6e69204d342f38bc56c5159e2050700f}{
+nLoadOut::tModuleType \hyperlink{classModule_a6e69204d342f38bc56c5159e2050700f}{m\_\-moduleType}}
+\label{classModule_a6e69204d342f38bc56c5159e2050700f}
+
+\begin{DoxyCompactList}\small\item\em The type of module represented. \end{DoxyCompactList}\item 
+\hypertarget{classModule_a6a32f13cc36a6db29504f886d50e58e5}{
+UINT8 \hyperlink{classModule_a6a32f13cc36a6db29504f886d50e58e5}{m\_\-moduleNumber}}
+\label{classModule_a6a32f13cc36a6db29504f886d50e58e5}
+
+\begin{DoxyCompactList}\small\item\em The module index within the module type. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
-\subsection{\-Constructor \& \-Destructor \-Documentation}
-\hypertarget{classModule_a085618a4166d62b8e169a33b3c4c0f41}{\index{\-Module@{\-Module}!\-Module@{\-Module}}
-\index{\-Module@{\-Module}!Module@{\-Module}}
-\subsubsection[{\-Module}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Module\-::\-Module} (
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classModule_a0a7eb292c2e57e00bcda3c41decd7476}{
+\index{Module@{Module}!Module@{Module}}
+\index{Module@{Module}!Module@{Module}}
+\subsubsection[{Module}]{\setlength{\rightskip}{0pt plus 5cm}Module::Module (
 \begin{DoxyParamCaption}
-\item[{\-U\-I\-N\-T32}]{slot}
+\item[{nLoadOut::tModuleType}]{type, }
+\item[{UINT8}]{number}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily  \mbox{[}explicit, protected\mbox{]}}}}\label{classModule_a085618a4166d62b8e169a33b3c4c0f41}
-\-Constructor.
+)\hspace{0.3cm}{\ttfamily  \mbox{[}explicit, protected\mbox{]}}}}
+\label{classModule_a0a7eb292c2e57e00bcda3c41decd7476}
+Constructor.
 
 
-\begin{DoxyParams}{\-Parameters}
-{\em slot} & \-The slot in the chassis where the module is plugged in. \\
+\begin{DoxyParams}{Parameters}
+{\em type} & The type of module represented. \\
+\hline
+{\em number} & The module index within the module type. \\
 \hline
 \end{DoxyParams}
-\hypertarget{classModule_a7c9d9c096786d127590fdd8aa2b7d681}{\index{\-Module@{\-Module}!$\sim$\-Module@{$\sim$\-Module}}
-\index{$\sim$\-Module@{$\sim$\-Module}!Module@{\-Module}}
-\subsubsection[{$\sim$\-Module}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Module\-::$\sim$\-Module} (
+\hypertarget{classModule_a7c9d9c096786d127590fdd8aa2b7d681}{
+\index{Module@{Module}!$\sim$Module@{$\sim$Module}}
+\index{$\sim$Module@{$\sim$Module}!Module@{Module}}
+\subsubsection[{$\sim$Module}]{\setlength{\rightskip}{0pt plus 5cm}Module::$\sim$Module (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily  \mbox{[}protected, virtual\mbox{]}}}}\label{classModule_a7c9d9c096786d127590fdd8aa2b7d681}
-\-Destructor. 
+)\hspace{0.3cm}{\ttfamily  \mbox{[}protected, virtual\mbox{]}}}}
+\label{classModule_a7c9d9c096786d127590fdd8aa2b7d681}
+Destructor. 
 
-\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\subsection{Member Function Documentation}
+\hypertarget{classModule_a1f5bf14617d367a0cbe99d84a5eecb8b}{
+\index{Module@{Module}!GetModule@{GetModule}}
+\index{GetModule@{GetModule}!Module@{Module}}
+\subsubsection[{GetModule}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Module} $\ast$ Module::GetModule (
+\begin{DoxyParamCaption}
+\item[{nLoadOut::tModuleType}]{type, }
+\item[{UINT8}]{number}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{classModule_a1f5bf14617d367a0cbe99d84a5eecb8b}
+Static module singleton factory.
+
+
+\begin{DoxyParams}{Parameters}
+{\em type} & The type of module represented. \\
+\hline
+{\em number} & The module index within the module type. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
 \item 
-\-Module.\-h\item 
-\-Module.\-cpp\end{DoxyCompactItemize}
+Module.h\item 
+Module.cpp\end{DoxyCompactItemize}

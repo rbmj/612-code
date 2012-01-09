@@ -1,186 +1,223 @@
-\hypertarget{classRobotBase}{\section{\-Robot\-Base \-Class \-Reference}
-\label{classRobotBase}\index{\-Robot\-Base@{\-Robot\-Base}}
+\hypertarget{classRobotBase}{
+\section{RobotBase Class Reference}
+\label{classRobotBase}\index{RobotBase@{RobotBase}}
 }
 
 
-{\ttfamily \#include $<$\-Robot\-Base.\-h$>$}
+{\ttfamily \#include $<$RobotBase.h$>$}
 
-\-Inheritance diagram for \-Robot\-Base\-:\begin{figure}[H]
+Inheritance diagram for RobotBase:\begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[height=2.000000cm]{classRobotBase}
 \end{center}
 \end{figure}
-\subsection*{\-Public \-Member \-Functions}
+\subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-bool \hyperlink{classRobotBase_a597e7b256dd4a950ff25e1823df5f2ae}{\-Is\-Enabled} ()
+bool \hyperlink{classRobotBase_a597e7b256dd4a950ff25e1823df5f2ae}{IsEnabled} ()
 \item 
-bool \hyperlink{classRobotBase_a75fb5e396eaee765e65d3bf24d5c2a08}{\-Is\-Disabled} ()
+bool \hyperlink{classRobotBase_a75fb5e396eaee765e65d3bf24d5c2a08}{IsDisabled} ()
 \item 
-bool \hyperlink{classRobotBase_a9eac80c5e53650e1e3e26e7b5f8cb5aa}{\-Is\-Autonomous} ()
+bool \hyperlink{classRobotBase_a9eac80c5e53650e1e3e26e7b5f8cb5aa}{IsAutonomous} ()
 \item 
-bool \hyperlink{classRobotBase_a05c699856acfe35b0ffb2172c39e23de}{\-Is\-Operator\-Control} ()
+bool \hyperlink{classRobotBase_a05c699856acfe35b0ffb2172c39e23de}{IsOperatorControl} ()
 \item 
-bool \hyperlink{classRobotBase_aa1e72e03aece3b789a65aa1b2d0f6ab7}{\-Is\-System\-Active} ()
+bool \hyperlink{classRobotBase_aa1e72e03aece3b789a65aa1b2d0f6ab7}{IsSystemActive} ()
 \item 
-bool \hyperlink{classRobotBase_aab2d7bd7aeb6567097498284a9509ecb}{\-Is\-New\-Data\-Available} ()
+bool \hyperlink{classRobotBase_aab2d7bd7aeb6567097498284a9509ecb}{IsNewDataAvailable} ()
 \item 
-\hyperlink{classWatchdog}{\-Watchdog} \& \hyperlink{classRobotBase_a2d6b5704b1f1de8ec4a78db9ee64d2d2}{\-Get\-Watchdog} ()
+\hyperlink{classWatchdog}{Watchdog} \& \hyperlink{classRobotBase_a2d6b5704b1f1de8ec4a78db9ee64d2d2}{GetWatchdog} ()
 \end{DoxyCompactItemize}
-\subsection*{\-Static \-Public \-Member \-Functions}
+\subsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{classRobotBase_a033b604c5513471b426655c125ec9c17}{static \hyperlink{classRobotBase}{\-Robot\-Base} \& {\bfseries get\-Instance} ()}\label{classRobotBase_a033b604c5513471b426655c125ec9c17}
+\hypertarget{classRobotBase_a033b604c5513471b426655c125ec9c17}{
+static \hyperlink{classRobotBase}{RobotBase} \& {\bfseries getInstance} ()}
+\label{classRobotBase_a033b604c5513471b426655c125ec9c17}
 
 \item 
-\hypertarget{classRobotBase_a2bc3fec3a452f5aaaa3d13b06dfc4798}{static void {\bfseries set\-Instance} (\hyperlink{classRobotBase}{\-Robot\-Base} $\ast$robot)}\label{classRobotBase_a2bc3fec3a452f5aaaa3d13b06dfc4798}
+\hypertarget{classRobotBase_a2bc3fec3a452f5aaaa3d13b06dfc4798}{
+static void {\bfseries setInstance} (\hyperlink{classRobotBase}{RobotBase} $\ast$robot)}
+\label{classRobotBase_a2bc3fec3a452f5aaaa3d13b06dfc4798}
 
 \item 
-static void \hyperlink{classRobotBase_a17eddc47e75e82e61b89afc9f6ce3fcb}{start\-Robot\-Task} (\-F\-U\-N\-C\-P\-T\-R factory)
+static void \hyperlink{classRobotBase_a17eddc47e75e82e61b89afc9f6ce3fcb}{startRobotTask} (FUNCPTR factory)
 \item 
-static void \hyperlink{classRobotBase_a005838dfd01d67d0b5947d3f5bbac0fe}{robot\-Task} (\-F\-U\-N\-C\-P\-T\-R factory, \hyperlink{classTask}{\-Task} $\ast$task)
+static void \hyperlink{classRobotBase_a005838dfd01d67d0b5947d3f5bbac0fe}{robotTask} (FUNCPTR factory, \hyperlink{classTask}{Task} $\ast$task)
 \end{DoxyCompactItemize}
-\subsection*{\-Protected \-Member \-Functions}
+\subsection*{Protected Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-virtual \hyperlink{classRobotBase_a2229cb79a79e0f4fc9fd600e33740a04}{$\sim$\-Robot\-Base} ()
+virtual \hyperlink{classRobotBase_a2229cb79a79e0f4fc9fd600e33740a04}{$\sim$RobotBase} ()
 \item 
-\hypertarget{classRobotBase_a4eadc124fd0004a681055a51223a4c7a}{virtual void {\bfseries \-Start\-Competition} ()=0}\label{classRobotBase_a4eadc124fd0004a681055a51223a4c7a}
+\hypertarget{classRobotBase_a4eadc124fd0004a681055a51223a4c7a}{
+virtual void {\bfseries StartCompetition} ()=0}
+\label{classRobotBase_a4eadc124fd0004a681055a51223a4c7a}
 
 \item 
-\hyperlink{classRobotBase_a3043a0a78f4ec0e1e449eeed0a5db6e5}{\-Robot\-Base} ()
+\hyperlink{classRobotBase_a3043a0a78f4ec0e1e449eeed0a5db6e5}{RobotBase} ()
 \end{DoxyCompactItemize}
-\subsection*{\-Protected \-Attributes}
+\subsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{classRobotBase_a213426ebf60e0d6987c801f44323e179}{\hyperlink{classTask}{\-Task} $\ast$ {\bfseries m\-\_\-task}}\label{classRobotBase_a213426ebf60e0d6987c801f44323e179}
+\hypertarget{classRobotBase_a213426ebf60e0d6987c801f44323e179}{
+\hyperlink{classTask}{Task} $\ast$ {\bfseries m\_\-task}}
+\label{classRobotBase_a213426ebf60e0d6987c801f44323e179}
 
 \item 
-\hypertarget{classRobotBase_aaec2f8b8d1f42b6ab500ae2ea6dd6dbe}{\hyperlink{classWatchdog}{\-Watchdog} {\bfseries m\-\_\-watchdog}}\label{classRobotBase_aaec2f8b8d1f42b6ab500ae2ea6dd6dbe}
+\hypertarget{classRobotBase_aaec2f8b8d1f42b6ab500ae2ea6dd6dbe}{
+\hyperlink{classWatchdog}{Watchdog} {\bfseries m\_\-watchdog}}
+\label{classRobotBase_aaec2f8b8d1f42b6ab500ae2ea6dd6dbe}
 
 \item 
-\hypertarget{classRobotBase_ae9b4f4ce5604f2ca54e549ae1bf8f3ff}{\hyperlink{classDriverStation}{\-Driver\-Station} $\ast$ {\bfseries m\-\_\-ds}}\label{classRobotBase_ae9b4f4ce5604f2ca54e549ae1bf8f3ff}
+\hypertarget{classRobotBase_ae9b4f4ce5604f2ca54e549ae1bf8f3ff}{
+\hyperlink{classDriverStation}{DriverStation} $\ast$ {\bfseries m\_\-ds}}
+\label{classRobotBase_ae9b4f4ce5604f2ca54e549ae1bf8f3ff}
 
 \end{DoxyCompactItemize}
-\subsection*{\-Friends}
+\subsection*{Friends}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{classRobotBase_a09a160df094cc13bfc13d732ba175eb3}{class {\bfseries \-Robot\-Deleter}}\label{classRobotBase_a09a160df094cc13bfc13d732ba175eb3}
+\hypertarget{classRobotBase_a09a160df094cc13bfc13d732ba175eb3}{
+class \hyperlink{classRobotBase_a09a160df094cc13bfc13d732ba175eb3}{RobotDeleter}}
+\label{classRobotBase_a09a160df094cc13bfc13d732ba175eb3}
 
 \end{DoxyCompactItemize}
 
 
-\subsection{\-Detailed \-Description}
-\-Implement a \-Robot \-Program framework. \-The \hyperlink{classRobotBase}{\-Robot\-Base} class is intended to be subclassed by a user creating a robot program. \-Overridden \-Autonomous() and \-Operator\-Control() methods are called at the appropriate time as the match proceeds. \-In the current implementation, the \-Autonomous code will run to completion before the \-Operator\-Control code could start. \-In the future the \-Autonomous code might be spawned as a task, then killed at the end of the \-Autonomous period. 
+\subsection{Detailed Description}
+Implement a Robot Program framework. The \hyperlink{classRobotBase}{RobotBase} class is intended to be subclassed by a user creating a robot program. Overridden Autonomous() and OperatorControl() methods are called at the appropriate time as the match proceeds. In the current implementation, the Autonomous code will run to completion before the OperatorControl code could start. In the future the Autonomous code might be spawned as a task, then killed at the end of the Autonomous period. 
 
-\subsection{\-Constructor \& \-Destructor \-Documentation}
-\hypertarget{classRobotBase_a2229cb79a79e0f4fc9fd600e33740a04}{\index{\-Robot\-Base@{\-Robot\-Base}!$\sim$\-Robot\-Base@{$\sim$\-Robot\-Base}}
-\index{$\sim$\-Robot\-Base@{$\sim$\-Robot\-Base}!RobotBase@{\-Robot\-Base}}
-\subsubsection[{$\sim$\-Robot\-Base}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Robot\-Base\-::$\sim$\-Robot\-Base} (
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classRobotBase_a2229cb79a79e0f4fc9fd600e33740a04}{
+\index{RobotBase@{RobotBase}!$\sim$RobotBase@{$\sim$RobotBase}}
+\index{$\sim$RobotBase@{$\sim$RobotBase}!RobotBase@{RobotBase}}
+\subsubsection[{$\sim$RobotBase}]{\setlength{\rightskip}{0pt plus 5cm}RobotBase::$\sim$RobotBase (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily  \mbox{[}protected, virtual\mbox{]}}}}\label{classRobotBase_a2229cb79a79e0f4fc9fd600e33740a04}
-\-Free the resources for a \hyperlink{classRobotBase}{\-Robot\-Base} class. \-This includes deleting all classes that might have been allocated as \-Singletons to they would never be deleted except here. \hypertarget{classRobotBase_a3043a0a78f4ec0e1e449eeed0a5db6e5}{\index{\-Robot\-Base@{\-Robot\-Base}!\-Robot\-Base@{\-Robot\-Base}}
-\index{\-Robot\-Base@{\-Robot\-Base}!RobotBase@{\-Robot\-Base}}
-\subsubsection[{\-Robot\-Base}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Robot\-Base\-::\-Robot\-Base} (
+)\hspace{0.3cm}{\ttfamily  \mbox{[}protected, virtual\mbox{]}}}}
+\label{classRobotBase_a2229cb79a79e0f4fc9fd600e33740a04}
+Free the resources for a \hyperlink{classRobotBase}{RobotBase} class. This includes deleting all classes that might have been allocated as Singletons to they would never be deleted except here. \hypertarget{classRobotBase_a3043a0a78f4ec0e1e449eeed0a5db6e5}{
+\index{RobotBase@{RobotBase}!RobotBase@{RobotBase}}
+\index{RobotBase@{RobotBase}!RobotBase@{RobotBase}}
+\subsubsection[{RobotBase}]{\setlength{\rightskip}{0pt plus 5cm}RobotBase::RobotBase (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{classRobotBase_a3043a0a78f4ec0e1e449eeed0a5db6e5}
-\-Constructor for a generic robot program. \-User code should be placed in the constuctor that runs before the \-Autonomous or \-Operator \-Control period starts. \-The constructor will run to completion before \-Autonomous is entered.
+)\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classRobotBase_a3043a0a78f4ec0e1e449eeed0a5db6e5}
+Constructor for a generic robot program. User code should be placed in the constuctor that runs before the Autonomous or Operator Control period starts. The constructor will run to completion before Autonomous is entered.
 
-\-This must be used to ensure that the communications code starts. \-In the future it would be nice to put this code into it's own task that loads on boot so ensure that it runs. 
+This must be used to ensure that the communications code starts. In the future it would be nice to put this code into it's own task that loads on boot so ensure that it runs. 
 
-\subsection{\-Member \-Function \-Documentation}
-\hypertarget{classRobotBase_a2d6b5704b1f1de8ec4a78db9ee64d2d2}{\index{\-Robot\-Base@{\-Robot\-Base}!\-Get\-Watchdog@{\-Get\-Watchdog}}
-\index{\-Get\-Watchdog@{\-Get\-Watchdog}!RobotBase@{\-Robot\-Base}}
-\subsubsection[{\-Get\-Watchdog}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Watchdog} \& {\bf \-Robot\-Base\-::\-Get\-Watchdog} (
+\subsection{Member Function Documentation}
+\hypertarget{classRobotBase_a2d6b5704b1f1de8ec4a78db9ee64d2d2}{
+\index{RobotBase@{RobotBase}!GetWatchdog@{GetWatchdog}}
+\index{GetWatchdog@{GetWatchdog}!RobotBase@{RobotBase}}
+\subsubsection[{GetWatchdog}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Watchdog} \& RobotBase::GetWatchdog (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)}}\label{classRobotBase_a2d6b5704b1f1de8ec4a78db9ee64d2d2}
-\-Return the instance of the \hyperlink{classWatchdog}{\-Watchdog} timer. \-Get the watchdog timer so the user program can either disable it or feed it when necessary. \hypertarget{classRobotBase_a9eac80c5e53650e1e3e26e7b5f8cb5aa}{\index{\-Robot\-Base@{\-Robot\-Base}!\-Is\-Autonomous@{\-Is\-Autonomous}}
-\index{\-Is\-Autonomous@{\-Is\-Autonomous}!RobotBase@{\-Robot\-Base}}
-\subsubsection[{\-Is\-Autonomous}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Robot\-Base\-::\-Is\-Autonomous} (
+)}}
+\label{classRobotBase_a2d6b5704b1f1de8ec4a78db9ee64d2d2}
+Return the instance of the \hyperlink{classWatchdog}{Watchdog} timer. Get the watchdog timer so the user program can either disable it or feed it when necessary. \hypertarget{classRobotBase_a9eac80c5e53650e1e3e26e7b5f8cb5aa}{
+\index{RobotBase@{RobotBase}!IsAutonomous@{IsAutonomous}}
+\index{IsAutonomous@{IsAutonomous}!RobotBase@{RobotBase}}
+\subsubsection[{IsAutonomous}]{\setlength{\rightskip}{0pt plus 5cm}bool RobotBase::IsAutonomous (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)}}\label{classRobotBase_a9eac80c5e53650e1e3e26e7b5f8cb5aa}
-\-Determine if the robot is currently in \-Autnomous mode. \begin{DoxyReturn}{\-Returns}
-\-True if the robot is currently operating \-Autonomously as determined by the field controls. 
+)}}
+\label{classRobotBase_a9eac80c5e53650e1e3e26e7b5f8cb5aa}
+Determine if the robot is currently in Autnomous mode. \begin{DoxyReturn}{Returns}
+True if the robot is currently operating Autonomously as determined by the field controls. 
 \end{DoxyReturn}
-\hypertarget{classRobotBase_a75fb5e396eaee765e65d3bf24d5c2a08}{\index{\-Robot\-Base@{\-Robot\-Base}!\-Is\-Disabled@{\-Is\-Disabled}}
-\index{\-Is\-Disabled@{\-Is\-Disabled}!RobotBase@{\-Robot\-Base}}
-\subsubsection[{\-Is\-Disabled}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Robot\-Base\-::\-Is\-Disabled} (
+\hypertarget{classRobotBase_a75fb5e396eaee765e65d3bf24d5c2a08}{
+\index{RobotBase@{RobotBase}!IsDisabled@{IsDisabled}}
+\index{IsDisabled@{IsDisabled}!RobotBase@{RobotBase}}
+\subsubsection[{IsDisabled}]{\setlength{\rightskip}{0pt plus 5cm}bool RobotBase::IsDisabled (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)}}\label{classRobotBase_a75fb5e396eaee765e65d3bf24d5c2a08}
-\-Determine if the \-Robot is currently disabled. \begin{DoxyReturn}{\-Returns}
-\-True if the \-Robot is currently disabled by the field controls. 
+)}}
+\label{classRobotBase_a75fb5e396eaee765e65d3bf24d5c2a08}
+Determine if the Robot is currently disabled. \begin{DoxyReturn}{Returns}
+True if the Robot is currently disabled by the field controls. 
 \end{DoxyReturn}
-\hypertarget{classRobotBase_a597e7b256dd4a950ff25e1823df5f2ae}{\index{\-Robot\-Base@{\-Robot\-Base}!\-Is\-Enabled@{\-Is\-Enabled}}
-\index{\-Is\-Enabled@{\-Is\-Enabled}!RobotBase@{\-Robot\-Base}}
-\subsubsection[{\-Is\-Enabled}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Robot\-Base\-::\-Is\-Enabled} (
+\hypertarget{classRobotBase_a597e7b256dd4a950ff25e1823df5f2ae}{
+\index{RobotBase@{RobotBase}!IsEnabled@{IsEnabled}}
+\index{IsEnabled@{IsEnabled}!RobotBase@{RobotBase}}
+\subsubsection[{IsEnabled}]{\setlength{\rightskip}{0pt plus 5cm}bool RobotBase::IsEnabled (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)}}\label{classRobotBase_a597e7b256dd4a950ff25e1823df5f2ae}
-\-Determine if the \-Robot is currently enabled. \begin{DoxyReturn}{\-Returns}
-\-True if the \-Robot is currently enabled by the field controls. 
+)}}
+\label{classRobotBase_a597e7b256dd4a950ff25e1823df5f2ae}
+Determine if the Robot is currently enabled. \begin{DoxyReturn}{Returns}
+True if the Robot is currently enabled by the field controls. 
 \end{DoxyReturn}
-\hypertarget{classRobotBase_aab2d7bd7aeb6567097498284a9509ecb}{\index{\-Robot\-Base@{\-Robot\-Base}!\-Is\-New\-Data\-Available@{\-Is\-New\-Data\-Available}}
-\index{\-Is\-New\-Data\-Available@{\-Is\-New\-Data\-Available}!RobotBase@{\-Robot\-Base}}
-\subsubsection[{\-Is\-New\-Data\-Available}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Robot\-Base\-::\-Is\-New\-Data\-Available} (
+\hypertarget{classRobotBase_aab2d7bd7aeb6567097498284a9509ecb}{
+\index{RobotBase@{RobotBase}!IsNewDataAvailable@{IsNewDataAvailable}}
+\index{IsNewDataAvailable@{IsNewDataAvailable}!RobotBase@{RobotBase}}
+\subsubsection[{IsNewDataAvailable}]{\setlength{\rightskip}{0pt plus 5cm}bool RobotBase::IsNewDataAvailable (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)}}\label{classRobotBase_aab2d7bd7aeb6567097498284a9509ecb}
-\-Indicates if new data is available from the driver station. \begin{DoxyReturn}{\-Returns}
-\-Has new data arrived over the network since the last time this function was called? 
+)}}
+\label{classRobotBase_aab2d7bd7aeb6567097498284a9509ecb}
+Indicates if new data is available from the driver station. \begin{DoxyReturn}{Returns}
+Has new data arrived over the network since the last time this function was called? 
 \end{DoxyReturn}
-\hypertarget{classRobotBase_a05c699856acfe35b0ffb2172c39e23de}{\index{\-Robot\-Base@{\-Robot\-Base}!\-Is\-Operator\-Control@{\-Is\-Operator\-Control}}
-\index{\-Is\-Operator\-Control@{\-Is\-Operator\-Control}!RobotBase@{\-Robot\-Base}}
-\subsubsection[{\-Is\-Operator\-Control}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Robot\-Base\-::\-Is\-Operator\-Control} (
+\hypertarget{classRobotBase_a05c699856acfe35b0ffb2172c39e23de}{
+\index{RobotBase@{RobotBase}!IsOperatorControl@{IsOperatorControl}}
+\index{IsOperatorControl@{IsOperatorControl}!RobotBase@{RobotBase}}
+\subsubsection[{IsOperatorControl}]{\setlength{\rightskip}{0pt plus 5cm}bool RobotBase::IsOperatorControl (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)}}\label{classRobotBase_a05c699856acfe35b0ffb2172c39e23de}
-\-Determine if the robot is currently in \-Operator \-Control mode. \begin{DoxyReturn}{\-Returns}
-\-True if the robot is currently operating in \-Tele-\/\-Op mode as determined by the field controls. 
+)}}
+\label{classRobotBase_a05c699856acfe35b0ffb2172c39e23de}
+Determine if the robot is currently in Operator Control mode. \begin{DoxyReturn}{Returns}
+True if the robot is currently operating in Tele-\/Op mode as determined by the field controls. 
 \end{DoxyReturn}
-\hypertarget{classRobotBase_aa1e72e03aece3b789a65aa1b2d0f6ab7}{\index{\-Robot\-Base@{\-Robot\-Base}!\-Is\-System\-Active@{\-Is\-System\-Active}}
-\index{\-Is\-System\-Active@{\-Is\-System\-Active}!RobotBase@{\-Robot\-Base}}
-\subsubsection[{\-Is\-System\-Active}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Robot\-Base\-::\-Is\-System\-Active} (
+\hypertarget{classRobotBase_aa1e72e03aece3b789a65aa1b2d0f6ab7}{
+\index{RobotBase@{RobotBase}!IsSystemActive@{IsSystemActive}}
+\index{IsSystemActive@{IsSystemActive}!RobotBase@{RobotBase}}
+\subsubsection[{IsSystemActive}]{\setlength{\rightskip}{0pt plus 5cm}bool RobotBase::IsSystemActive (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)}}\label{classRobotBase_aa1e72e03aece3b789a65aa1b2d0f6ab7}
-\-Check on the overall status of the system.
+)}}
+\label{classRobotBase_aa1e72e03aece3b789a65aa1b2d0f6ab7}
+Check on the overall status of the system.
 
-\begin{DoxyReturn}{\-Returns}
-\-Is the system active (i.\-e. \hyperlink{classPWM}{\-P\-W\-M} motor outputs, etc. enabled)? 
+\begin{DoxyReturn}{Returns}
+Is the system active (i.e. \hyperlink{classPWM}{PWM} motor outputs, etc. enabled)? 
 \end{DoxyReturn}
-\hypertarget{classRobotBase_a005838dfd01d67d0b5947d3f5bbac0fe}{\index{\-Robot\-Base@{\-Robot\-Base}!robot\-Task@{robot\-Task}}
-\index{robot\-Task@{robot\-Task}!RobotBase@{\-Robot\-Base}}
-\subsubsection[{robot\-Task}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Robot\-Base\-::robot\-Task} (
+\hypertarget{classRobotBase_a005838dfd01d67d0b5947d3f5bbac0fe}{
+\index{RobotBase@{RobotBase}!robotTask@{robotTask}}
+\index{robotTask@{robotTask}!RobotBase@{RobotBase}}
+\subsubsection[{robotTask}]{\setlength{\rightskip}{0pt plus 5cm}void RobotBase::robotTask (
 \begin{DoxyParamCaption}
-\item[{\-F\-U\-N\-C\-P\-T\-R}]{factory, }
-\item[{{\bf \-Task} $\ast$}]{task}
+\item[{FUNCPTR}]{factory, }
+\item[{{\bf Task} $\ast$}]{task}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{classRobotBase_a005838dfd01d67d0b5947d3f5bbac0fe}
-\-Static interface that will start the competition in the new task. \hypertarget{classRobotBase_a17eddc47e75e82e61b89afc9f6ce3fcb}{\index{\-Robot\-Base@{\-Robot\-Base}!start\-Robot\-Task@{start\-Robot\-Task}}
-\index{start\-Robot\-Task@{start\-Robot\-Task}!RobotBase@{\-Robot\-Base}}
-\subsubsection[{start\-Robot\-Task}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Robot\-Base\-::start\-Robot\-Task} (
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{classRobotBase_a005838dfd01d67d0b5947d3f5bbac0fe}
+Static interface that will start the competition in the new task. \hypertarget{classRobotBase_a17eddc47e75e82e61b89afc9f6ce3fcb}{
+\index{RobotBase@{RobotBase}!startRobotTask@{startRobotTask}}
+\index{startRobotTask@{startRobotTask}!RobotBase@{RobotBase}}
+\subsubsection[{startRobotTask}]{\setlength{\rightskip}{0pt plus 5cm}void RobotBase::startRobotTask (
 \begin{DoxyParamCaption}
-\item[{\-F\-U\-N\-C\-P\-T\-R}]{factory}
+\item[{FUNCPTR}]{factory}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{classRobotBase_a17eddc47e75e82e61b89afc9f6ce3fcb}
-\-Start the robot code. \-This function starts the robot code running by spawning a task. \-Currently tasks seemed to be started by \-L\-V\-R\-T without setting the \-V\-X\-\_\-\-F\-P\-\_\-\-T\-A\-S\-K flag so floating point context is not saved on interrupts. \-Therefore the program experiences hard to debug and unpredictable results. \-So the \-L\-V\-R\-T code starts this function, and it, in turn, starts the actual user program. 
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{classRobotBase_a17eddc47e75e82e61b89afc9f6ce3fcb}
+Start the robot code. This function starts the robot code running by spawning a task. Currently tasks seemed to be started by LVRT without setting the VX\_\-FP\_\-TASK flag so floating point context is not saved on interrupts. Therefore the program experiences hard to debug and unpredictable results. So the LVRT code starts this function, and it, in turn, starts the actual user program. 
 
-\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
 \item 
-\-Robot\-Base.\-h\item 
-\-Robot\-Base.\-cpp\end{DoxyCompactItemize}
+RobotBase.h\item 
+RobotBase.cpp\end{DoxyCompactItemize}

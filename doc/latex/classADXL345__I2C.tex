@@ -1,155 +1,176 @@
-\hypertarget{classADXL345__I2C}{\section{\-A\-D\-X\-L345\-\_\-\-I2\-C \-Class \-Reference}
-\label{classADXL345__I2C}\index{\-A\-D\-X\-L345\-\_\-\-I2\-C@{\-A\-D\-X\-L345\-\_\-\-I2\-C}}
+\hypertarget{classADXL345__I2C}{
+\section{ADXL345\_\-I2C Class Reference}
+\label{classADXL345__I2C}\index{ADXL345\_\-I2C@{ADXL345\_\-I2C}}
 }
 
 
-{\ttfamily \#include $<$\-A\-D\-X\-L345\-\_\-\-I2\-C.\-h$>$}
+{\ttfamily \#include $<$ADXL345\_\-I2C.h$>$}
 
-\-Inheritance diagram for \-A\-D\-X\-L345\-\_\-\-I2\-C\-:\begin{figure}[H]
+Inheritance diagram for ADXL345\_\-I2C:\begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[height=3.000000cm]{classADXL345__I2C}
 \end{center}
 \end{figure}
-\subsection*{\-Classes}
+\subsection*{Classes}
 \begin{DoxyCompactItemize}
 \item 
-struct \hyperlink{structADXL345__I2C_1_1AllAxes}{\-All\-Axes}
+struct \hyperlink{structADXL345__I2C_1_1AllAxes}{AllAxes}
 \end{DoxyCompactItemize}
-\subsection*{\-Public \-Types}
+\subsection*{Public Types}
 \begin{DoxyCompactItemize}
 \item 
-enum {\bfseries \-Data\-Format\-\_\-\-Range} \{ {\bfseries k\-Range\-\_\-2\-G} = 0x00, 
-{\bfseries k\-Range\-\_\-4\-G} = 0x01, 
-{\bfseries k\-Range\-\_\-8\-G} = 0x02, 
-{\bfseries k\-Range\-\_\-16\-G} = 0x03
+enum {\bfseries DataFormat\_\-Range} \{ {\bfseries kRange\_\-2G} = 0x00, 
+{\bfseries kRange\_\-4G} = 0x01, 
+{\bfseries kRange\_\-8G} = 0x02, 
+{\bfseries kRange\_\-16G} = 0x03
  \}
 \item 
-enum {\bfseries \-Axes} \{ {\bfseries k\-Axis\-\_\-\-X} = 0x00, 
-{\bfseries k\-Axis\-\_\-\-Y} = 0x02, 
-{\bfseries k\-Axis\-\_\-\-Z} = 0x04
+enum {\bfseries Axes} \{ {\bfseries kAxis\_\-X} = 0x00, 
+{\bfseries kAxis\_\-Y} = 0x02, 
+{\bfseries kAxis\_\-Z} = 0x04
  \}
 \end{DoxyCompactItemize}
-\subsection*{\-Public \-Member \-Functions}
+\subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{classADXL345__I2C_a6058a2534acec44c03d3b6f56198f60c}{\-A\-D\-X\-L345\-\_\-\-I2\-C} (\-U\-I\-N\-T32 slot, \-Data\-Format\-\_\-\-Range range=k\-Range\-\_\-2\-G)
+\hyperlink{classADXL345__I2C_a03820fed25e5d03a17406951434a04d5}{ADXL345\_\-I2C} (UINT8 moduleNumber, DataFormat\_\-Range range=kRange\_\-2G)
 \item 
-virtual \hyperlink{classADXL345__I2C_a3d56f96d66939a5cd6abbadaf94bcaae}{$\sim$\-A\-D\-X\-L345\-\_\-\-I2\-C} ()
+virtual \hyperlink{classADXL345__I2C_a3d56f96d66939a5cd6abbadaf94bcaae}{$\sim$ADXL345\_\-I2C} ()
 \item 
-virtual double \hyperlink{classADXL345__I2C_abc3a0bb889882e01cee781e3ab33af84}{\-Get\-Acceleration} (\-Axes axis)
+virtual double \hyperlink{classADXL345__I2C_abc3a0bb889882e01cee781e3ab33af84}{GetAcceleration} (Axes axis)
 \item 
-virtual \hyperlink{structADXL345__I2C_1_1AllAxes}{\-All\-Axes} \hyperlink{classADXL345__I2C_a6c36866e36c57e3aefd9ddc5685bcb2a}{\-Get\-Accelerations} ()
+virtual \hyperlink{structADXL345__I2C_1_1AllAxes}{AllAxes} \hyperlink{classADXL345__I2C_a6c36866e36c57e3aefd9ddc5685bcb2a}{GetAccelerations} ()
 \end{DoxyCompactItemize}
-\subsection*{\-Protected \-Types}
+\subsection*{Protected Types}
 \begin{DoxyCompactItemize}
 \item 
-enum {\bfseries \-Power\-Ctl\-Fields} \{ {\bfseries k\-Power\-Ctl\-\_\-\-Link} = 0x20, 
-{\bfseries k\-Power\-Ctl\-\_\-\-Auto\-Sleep} = 0x10, 
-{\bfseries k\-Power\-Ctl\-\_\-\-Measure} = 0x08, 
-{\bfseries k\-Power\-Ctl\-\_\-\-Sleep} = 0x04
+enum {\bfseries PowerCtlFields} \{ {\bfseries kPowerCtl\_\-Link} = 0x20, 
+{\bfseries kPowerCtl\_\-AutoSleep} = 0x10, 
+{\bfseries kPowerCtl\_\-Measure} = 0x08, 
+{\bfseries kPowerCtl\_\-Sleep} = 0x04
  \}
 \item 
-enum {\bfseries \-Data\-Format\-Fields} \{ \*
-{\bfseries k\-Data\-Format\-\_\-\-Self\-Test} = 0x80, 
-{\bfseries k\-Data\-Format\-\_\-\-S\-P\-I} = 0x40, 
-{\bfseries k\-Data\-Format\-\_\-\-Int\-Invert} = 0x20, 
-{\bfseries k\-Data\-Format\-\_\-\-Full\-Res} = 0x08, 
-\*
-{\bfseries k\-Data\-Format\-\_\-\-Justify} = 0x04
+enum {\bfseries DataFormatFields} \{ \par
+{\bfseries kDataFormat\_\-SelfTest} = 0x80, 
+{\bfseries kDataFormat\_\-SPI} = 0x40, 
+{\bfseries kDataFormat\_\-IntInvert} = 0x20, 
+{\bfseries kDataFormat\_\-FullRes} = 0x08, 
+\par
+{\bfseries kDataFormat\_\-Justify} = 0x04
  \}
 \end{DoxyCompactItemize}
-\subsection*{\-Protected \-Attributes}
+\subsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{classADXL345__I2C_a714765b5abc21ebffed4c28c18017f6a}{\hyperlink{classI2C}{\-I2\-C} $\ast$ {\bfseries m\-\_\-i2c}}\label{classADXL345__I2C_a714765b5abc21ebffed4c28c18017f6a}
+\hypertarget{classADXL345__I2C_a714765b5abc21ebffed4c28c18017f6a}{
+\hyperlink{classI2C}{I2C} $\ast$ {\bfseries m\_\-i2c}}
+\label{classADXL345__I2C_a714765b5abc21ebffed4c28c18017f6a}
 
 \end{DoxyCompactItemize}
-\subsection*{\-Static \-Protected \-Attributes}
+\subsection*{Static Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{classADXL345__I2C_a20a25b8eb9b276134dcc20e81bcd340b}{static const \-U\-I\-N\-T8 {\bfseries k\-Address} = 0x3\-A}\label{classADXL345__I2C_a20a25b8eb9b276134dcc20e81bcd340b}
+\hypertarget{classADXL345__I2C_a20a25b8eb9b276134dcc20e81bcd340b}{
+static const UINT8 {\bfseries kAddress} = 0x3A}
+\label{classADXL345__I2C_a20a25b8eb9b276134dcc20e81bcd340b}
 
 \item 
-\hypertarget{classADXL345__I2C_a2dce6a94c87536354d77580a077c3778}{static const \-U\-I\-N\-T8 {\bfseries k\-Power\-Ctl\-Register} = 0x2\-D}\label{classADXL345__I2C_a2dce6a94c87536354d77580a077c3778}
+\hypertarget{classADXL345__I2C_a2dce6a94c87536354d77580a077c3778}{
+static const UINT8 {\bfseries kPowerCtlRegister} = 0x2D}
+\label{classADXL345__I2C_a2dce6a94c87536354d77580a077c3778}
 
 \item 
-\hypertarget{classADXL345__I2C_a76a0e0b8c1e410712304de8ab43929fa}{static const \-U\-I\-N\-T8 {\bfseries k\-Data\-Format\-Register} = 0x31}\label{classADXL345__I2C_a76a0e0b8c1e410712304de8ab43929fa}
+\hypertarget{classADXL345__I2C_a76a0e0b8c1e410712304de8ab43929fa}{
+static const UINT8 {\bfseries kDataFormatRegister} = 0x31}
+\label{classADXL345__I2C_a76a0e0b8c1e410712304de8ab43929fa}
 
 \item 
-\hypertarget{classADXL345__I2C_a7d46af99a08cd5c900db158b0ea83141}{static const \-U\-I\-N\-T8 {\bfseries k\-Data\-Register} = 0x32}\label{classADXL345__I2C_a7d46af99a08cd5c900db158b0ea83141}
+\hypertarget{classADXL345__I2C_a7d46af99a08cd5c900db158b0ea83141}{
+static const UINT8 {\bfseries kDataRegister} = 0x32}
+\label{classADXL345__I2C_a7d46af99a08cd5c900db158b0ea83141}
 
 \item 
-\hypertarget{classADXL345__I2C_a01a8e14f6879111accaf89c922a29c96}{static const double {\bfseries k\-Gs\-Per\-L\-S\-B} = 0.\-00390625}\label{classADXL345__I2C_a01a8e14f6879111accaf89c922a29c96}
+\hypertarget{classADXL345__I2C_a01a8e14f6879111accaf89c922a29c96}{
+static const double {\bfseries kGsPerLSB} = 0.00390625}
+\label{classADXL345__I2C_a01a8e14f6879111accaf89c922a29c96}
 
 \end{DoxyCompactItemize}
 
 
-\subsection{\-Detailed \-Description}
-\-A\-D\-X\-L345 \hyperlink{classAccelerometer}{\-Accelerometer} on \hyperlink{classI2C}{\-I2\-C}.
+\subsection{Detailed Description}
+ADXL345 \hyperlink{classAccelerometer}{Accelerometer} on \hyperlink{classI2C}{I2C}.
 
-\-This class alows access to a \-Analog \-Devices \-A\-D\-X\-L345 3-\/axis accelerometer on an \hyperlink{classI2C}{\-I2\-C} bus. \-This class assumes the default (not alternate) sensor address of 0x3\-A (8-\/bit address). 
+This class alows access to a Analog Devices ADXL345 3-\/axis accelerometer on an \hyperlink{classI2C}{I2C} bus. This class assumes the default (not alternate) sensor address of 0x3A (8-\/bit address). 
 
-\subsection{\-Constructor \& \-Destructor \-Documentation}
-\hypertarget{classADXL345__I2C_a6058a2534acec44c03d3b6f56198f60c}{\index{\-A\-D\-X\-L345\-\_\-\-I2\-C@{\-A\-D\-X\-L345\-\_\-\-I2\-C}!\-A\-D\-X\-L345\-\_\-\-I2\-C@{\-A\-D\-X\-L345\-\_\-\-I2\-C}}
-\index{\-A\-D\-X\-L345\-\_\-\-I2\-C@{\-A\-D\-X\-L345\-\_\-\-I2\-C}!ADXL345_I2C@{\-A\-D\-X\-L345\-\_\-\-I2\-C}}
-\subsubsection[{\-A\-D\-X\-L345\-\_\-\-I2\-C}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-A\-D\-X\-L345\-\_\-\-I2\-C\-::\-A\-D\-X\-L345\-\_\-\-I2\-C} (
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classADXL345__I2C_a03820fed25e5d03a17406951434a04d5}{
+\index{ADXL345\_\-I2C@{ADXL345\_\-I2C}!ADXL345\_\-I2C@{ADXL345\_\-I2C}}
+\index{ADXL345\_\-I2C@{ADXL345\_\-I2C}!ADXL345_I2C@{ADXL345\_\-I2C}}
+\subsubsection[{ADXL345\_\-I2C}]{\setlength{\rightskip}{0pt plus 5cm}ADXL345\_\-I2C::ADXL345\_\-I2C (
 \begin{DoxyParamCaption}
-\item[{\-U\-I\-N\-T32}]{slot, }
-\item[{\-A\-D\-X\-L345\-\_\-\-I2\-C\-::\-Data\-Format\-\_\-\-Range}]{range = {\ttfamily k\-Range\-\_\-2\-G}}
+\item[{UINT8}]{moduleNumber, }
+\item[{ADXL345\_\-I2C::DataFormat\_\-Range}]{range = {\ttfamily kRange\_\-2G}}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily  \mbox{[}explicit\mbox{]}}}}\label{classADXL345__I2C_a6058a2534acec44c03d3b6f56198f60c}
-\-Constructor.
+)\hspace{0.3cm}{\ttfamily  \mbox{[}explicit\mbox{]}}}}
+\label{classADXL345__I2C_a03820fed25e5d03a17406951434a04d5}
+Constructor.
 
 
-\begin{DoxyParams}{\-Parameters}
-{\em slot} & \-The slot of the digital module that the sensor is plugged into. \\
+\begin{DoxyParams}{Parameters}
+{\em moduleNumber} & The digital module that the sensor is plugged into (1 or 2). \\
 \hline
-{\em range} & \-The range (+ or -\/) that the accelerometer will measure. \\
+{\em range} & The range (+ or -\/) that the accelerometer will measure. \\
 \hline
 \end{DoxyParams}
-\hypertarget{classADXL345__I2C_a3d56f96d66939a5cd6abbadaf94bcaae}{\index{\-A\-D\-X\-L345\-\_\-\-I2\-C@{\-A\-D\-X\-L345\-\_\-\-I2\-C}!$\sim$\-A\-D\-X\-L345\-\_\-\-I2\-C@{$\sim$\-A\-D\-X\-L345\-\_\-\-I2\-C}}
-\index{$\sim$\-A\-D\-X\-L345\-\_\-\-I2\-C@{$\sim$\-A\-D\-X\-L345\-\_\-\-I2\-C}!ADXL345_I2C@{\-A\-D\-X\-L345\-\_\-\-I2\-C}}
-\subsubsection[{$\sim$\-A\-D\-X\-L345\-\_\-\-I2\-C}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-A\-D\-X\-L345\-\_\-\-I2\-C\-::$\sim$\-A\-D\-X\-L345\-\_\-\-I2\-C} (
+\hypertarget{classADXL345__I2C_a3d56f96d66939a5cd6abbadaf94bcaae}{
+\index{ADXL345\_\-I2C@{ADXL345\_\-I2C}!$\sim$ADXL345\_\-I2C@{$\sim$ADXL345\_\-I2C}}
+\index{$\sim$ADXL345\_\-I2C@{$\sim$ADXL345\_\-I2C}!ADXL345_I2C@{ADXL345\_\-I2C}}
+\subsubsection[{$\sim$ADXL345\_\-I2C}]{\setlength{\rightskip}{0pt plus 5cm}ADXL345\_\-I2C::$\sim$ADXL345\_\-I2C (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{classADXL345__I2C_a3d56f96d66939a5cd6abbadaf94bcaae}
-\-Destructor. 
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classADXL345__I2C_a3d56f96d66939a5cd6abbadaf94bcaae}
+Destructor. 
 
-\subsection{\-Member \-Function \-Documentation}
-\hypertarget{classADXL345__I2C_abc3a0bb889882e01cee781e3ab33af84}{\index{\-A\-D\-X\-L345\-\_\-\-I2\-C@{\-A\-D\-X\-L345\-\_\-\-I2\-C}!\-Get\-Acceleration@{\-Get\-Acceleration}}
-\index{\-Get\-Acceleration@{\-Get\-Acceleration}!ADXL345_I2C@{\-A\-D\-X\-L345\-\_\-\-I2\-C}}
-\subsubsection[{\-Get\-Acceleration}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf \-A\-D\-X\-L345\-\_\-\-I2\-C\-::\-Get\-Acceleration} (
+\subsection{Member Function Documentation}
+\hypertarget{classADXL345__I2C_abc3a0bb889882e01cee781e3ab33af84}{
+\index{ADXL345\_\-I2C@{ADXL345\_\-I2C}!GetAcceleration@{GetAcceleration}}
+\index{GetAcceleration@{GetAcceleration}!ADXL345_I2C@{ADXL345\_\-I2C}}
+\subsubsection[{GetAcceleration}]{\setlength{\rightskip}{0pt plus 5cm}double ADXL345\_\-I2C::GetAcceleration (
 \begin{DoxyParamCaption}
-\item[{\-A\-D\-X\-L345\-\_\-\-I2\-C\-::\-Axes}]{axis}
+\item[{ADXL345\_\-I2C::Axes}]{axis}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{classADXL345__I2C_abc3a0bb889882e01cee781e3ab33af84}
-\-Get the acceleration of one axis in \-Gs.
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classADXL345__I2C_abc3a0bb889882e01cee781e3ab33af84}
+Get the acceleration of one axis in Gs.
 
 
-\begin{DoxyParams}{\-Parameters}
-{\em axis} & \-The axis to read from. \\
+\begin{DoxyParams}{Parameters}
+{\em axis} & The axis to read from. \\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{\-Returns}
-\-Acceleration of the \-A\-D\-X\-L345 in \-Gs. 
+\begin{DoxyReturn}{Returns}
+Acceleration of the ADXL345 in Gs. 
 \end{DoxyReturn}
-\hypertarget{classADXL345__I2C_a6c36866e36c57e3aefd9ddc5685bcb2a}{\index{\-A\-D\-X\-L345\-\_\-\-I2\-C@{\-A\-D\-X\-L345\-\_\-\-I2\-C}!\-Get\-Accelerations@{\-Get\-Accelerations}}
-\index{\-Get\-Accelerations@{\-Get\-Accelerations}!ADXL345_I2C@{\-A\-D\-X\-L345\-\_\-\-I2\-C}}
-\subsubsection[{\-Get\-Accelerations}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-A\-D\-X\-L345\-\_\-\-I2\-C\-::\-All\-Axes} {\bf \-A\-D\-X\-L345\-\_\-\-I2\-C\-::\-Get\-Accelerations} (
+\hypertarget{classADXL345__I2C_a6c36866e36c57e3aefd9ddc5685bcb2a}{
+\index{ADXL345\_\-I2C@{ADXL345\_\-I2C}!GetAccelerations@{GetAccelerations}}
+\index{GetAccelerations@{GetAccelerations}!ADXL345_I2C@{ADXL345\_\-I2C}}
+\subsubsection[{GetAccelerations}]{\setlength{\rightskip}{0pt plus 5cm}{\bf ADXL345\_\-I2C::AllAxes} ADXL345\_\-I2C::GetAccelerations (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{classADXL345__I2C_a6c36866e36c57e3aefd9ddc5685bcb2a}
-\-Get the acceleration of all axes in \-Gs.
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classADXL345__I2C_a6c36866e36c57e3aefd9ddc5685bcb2a}
+Get the acceleration of all axes in Gs.
 
-\begin{DoxyReturn}{\-Returns}
-\-Acceleration measured on all axes of the \-A\-D\-X\-L345 in \-Gs. 
+\begin{DoxyReturn}{Returns}
+Acceleration measured on all axes of the ADXL345 in Gs. 
 \end{DoxyReturn}
 
 
-\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
 \item 
-\-A\-D\-X\-L345\-\_\-\-I2\-C.\-h\item 
-\-A\-D\-X\-L345\-\_\-\-I2\-C.\-cpp\end{DoxyCompactItemize}
+ADXL345\_\-I2C.h\item 
+ADXL345\_\-I2C.cpp\end{DoxyCompactItemize}

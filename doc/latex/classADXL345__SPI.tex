@@ -1,252 +1,285 @@
-\hypertarget{classADXL345__SPI}{\section{\-A\-D\-X\-L345\-\_\-\-S\-P\-I \-Class \-Reference}
-\label{classADXL345__SPI}\index{\-A\-D\-X\-L345\-\_\-\-S\-P\-I@{\-A\-D\-X\-L345\-\_\-\-S\-P\-I}}
+\hypertarget{classADXL345__SPI}{
+\section{ADXL345\_\-SPI Class Reference}
+\label{classADXL345__SPI}\index{ADXL345\_\-SPI@{ADXL345\_\-SPI}}
 }
 
 
-{\ttfamily \#include $<$\-A\-D\-X\-L345\-\_\-\-S\-P\-I.\-h$>$}
+{\ttfamily \#include $<$ADXL345\_\-SPI.h$>$}
 
-\-Inheritance diagram for \-A\-D\-X\-L345\-\_\-\-S\-P\-I\-:\begin{figure}[H]
+Inheritance diagram for ADXL345\_\-SPI:\begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[height=3.000000cm]{classADXL345__SPI}
 \end{center}
 \end{figure}
-\subsection*{\-Classes}
+\subsection*{Classes}
 \begin{DoxyCompactItemize}
 \item 
-struct \hyperlink{structADXL345__SPI_1_1AllAxes}{\-All\-Axes}
+struct \hyperlink{structADXL345__SPI_1_1AllAxes}{AllAxes}
 \end{DoxyCompactItemize}
-\subsection*{\-Public \-Types}
+\subsection*{Public Types}
 \begin{DoxyCompactItemize}
 \item 
-enum {\bfseries \-Data\-Format\-\_\-\-Range} \{ {\bfseries k\-Range\-\_\-2\-G} = 0x00, 
-{\bfseries k\-Range\-\_\-4\-G} = 0x01, 
-{\bfseries k\-Range\-\_\-8\-G} = 0x02, 
-{\bfseries k\-Range\-\_\-16\-G} = 0x03
+enum {\bfseries DataFormat\_\-Range} \{ {\bfseries kRange\_\-2G} = 0x00, 
+{\bfseries kRange\_\-4G} = 0x01, 
+{\bfseries kRange\_\-8G} = 0x02, 
+{\bfseries kRange\_\-16G} = 0x03
  \}
 \item 
-enum {\bfseries \-Axes} \{ {\bfseries k\-Axis\-\_\-\-X} = 0x00, 
-{\bfseries k\-Axis\-\_\-\-Y} = 0x02, 
-{\bfseries k\-Axis\-\_\-\-Z} = 0x04
+enum {\bfseries Axes} \{ {\bfseries kAxis\_\-X} = 0x00, 
+{\bfseries kAxis\_\-Y} = 0x02, 
+{\bfseries kAxis\_\-Z} = 0x04
  \}
 \end{DoxyCompactItemize}
-\subsection*{\-Public \-Member \-Functions}
+\subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{classADXL345__SPI_a56b03c68f1cff2963acd666f3de5e376}{\-A\-D\-X\-L345\-\_\-\-S\-P\-I} (\hyperlink{classDigitalOutput}{\-Digital\-Output} \&clk, \hyperlink{classDigitalOutput}{\-Digital\-Output} \&mosi, \hyperlink{classDigitalInput}{\-Digital\-Input} \&miso, \hyperlink{classDigitalOutput}{\-Digital\-Output} \&cs, \-Data\-Format\-\_\-\-Range range=k\-Range\-\_\-2\-G)
+\hyperlink{classADXL345__SPI_a56b03c68f1cff2963acd666f3de5e376}{ADXL345\_\-SPI} (\hyperlink{classDigitalOutput}{DigitalOutput} \&clk, \hyperlink{classDigitalOutput}{DigitalOutput} \&mosi, \hyperlink{classDigitalInput}{DigitalInput} \&miso, \hyperlink{classDigitalOutput}{DigitalOutput} \&cs, DataFormat\_\-Range range=kRange\_\-2G)
 \item 
-\hyperlink{classADXL345__SPI_ab4e2856be2cdf061cedb9948e8394f66}{\-A\-D\-X\-L345\-\_\-\-S\-P\-I} (\hyperlink{classDigitalOutput}{\-Digital\-Output} $\ast$clk, \hyperlink{classDigitalOutput}{\-Digital\-Output} $\ast$mosi, \hyperlink{classDigitalInput}{\-Digital\-Input} $\ast$miso, \hyperlink{classDigitalOutput}{\-Digital\-Output} $\ast$cs, \-Data\-Format\-\_\-\-Range range=k\-Range\-\_\-2\-G)
+\hyperlink{classADXL345__SPI_ab4e2856be2cdf061cedb9948e8394f66}{ADXL345\_\-SPI} (\hyperlink{classDigitalOutput}{DigitalOutput} $\ast$clk, \hyperlink{classDigitalOutput}{DigitalOutput} $\ast$mosi, \hyperlink{classDigitalInput}{DigitalInput} $\ast$miso, \hyperlink{classDigitalOutput}{DigitalOutput} $\ast$cs, DataFormat\_\-Range range=kRange\_\-2G)
 \item 
-\hyperlink{classADXL345__SPI_a244c03e2234472d4f4b05342ed5bd17d}{\-A\-D\-X\-L345\-\_\-\-S\-P\-I} (\-U\-I\-N\-T32 slot, \-U\-I\-N\-T32 clk, \-U\-I\-N\-T32 mosi, \-U\-I\-N\-T32 miso, \-U\-I\-N\-T32 cs, \-Data\-Format\-\_\-\-Range range=k\-Range\-\_\-2\-G)
+\hyperlink{classADXL345__SPI_aa707d5049cb932ee664c6f16f2f56422}{ADXL345\_\-SPI} (UINT8 moduleNumber, UINT32 clk, UINT32 mosi, UINT32 miso, UINT32 cs, DataFormat\_\-Range range=kRange\_\-2G)
 \item 
-virtual \hyperlink{classADXL345__SPI_a1f906ecfc18f026b7f7163d8c8aedc53}{$\sim$\-A\-D\-X\-L345\-\_\-\-S\-P\-I} ()
+virtual \hyperlink{classADXL345__SPI_a1f906ecfc18f026b7f7163d8c8aedc53}{$\sim$ADXL345\_\-SPI} ()
 \item 
-virtual double \hyperlink{classADXL345__SPI_acae8aee7785e91d4efe1e695478ca727}{\-Get\-Acceleration} (\-Axes axis)
+virtual double \hyperlink{classADXL345__SPI_acae8aee7785e91d4efe1e695478ca727}{GetAcceleration} (Axes axis)
 \item 
-virtual \hyperlink{structADXL345__SPI_1_1AllAxes}{\-All\-Axes} \hyperlink{classADXL345__SPI_abbd9ef138325c23402189fde28aa61c3}{\-Get\-Accelerations} ()
+virtual \hyperlink{structADXL345__SPI_1_1AllAxes}{AllAxes} \hyperlink{classADXL345__SPI_abbd9ef138325c23402189fde28aa61c3}{GetAccelerations} ()
 \end{DoxyCompactItemize}
-\subsection*{\-Protected \-Types}
+\subsection*{Protected Types}
 \begin{DoxyCompactItemize}
 \item 
-enum {\bfseries \-S\-P\-I\-Address\-Fields} \{ {\bfseries k\-Address\-\_\-\-Read} = 0x80, 
-{\bfseries k\-Address\-\_\-\-Multi\-Byte} = 0x40
+enum {\bfseries SPIAddressFields} \{ {\bfseries kAddress\_\-Read} = 0x80, 
+{\bfseries kAddress\_\-MultiByte} = 0x40
  \}
 \item 
-enum {\bfseries \-Power\-Ctl\-Fields} \{ {\bfseries k\-Power\-Ctl\-\_\-\-Link} = 0x20, 
-{\bfseries k\-Power\-Ctl\-\_\-\-Auto\-Sleep} = 0x10, 
-{\bfseries k\-Power\-Ctl\-\_\-\-Measure} = 0x08, 
-{\bfseries k\-Power\-Ctl\-\_\-\-Sleep} = 0x04
+enum {\bfseries PowerCtlFields} \{ {\bfseries kPowerCtl\_\-Link} = 0x20, 
+{\bfseries kPowerCtl\_\-AutoSleep} = 0x10, 
+{\bfseries kPowerCtl\_\-Measure} = 0x08, 
+{\bfseries kPowerCtl\_\-Sleep} = 0x04
  \}
 \item 
-enum {\bfseries \-Data\-Format\-Fields} \{ \*
-{\bfseries k\-Data\-Format\-\_\-\-Self\-Test} = 0x80, 
-{\bfseries k\-Data\-Format\-\_\-\-S\-P\-I} = 0x40, 
-{\bfseries k\-Data\-Format\-\_\-\-Int\-Invert} = 0x20, 
-{\bfseries k\-Data\-Format\-\_\-\-Full\-Res} = 0x08, 
-\*
-{\bfseries k\-Data\-Format\-\_\-\-Justify} = 0x04
+enum {\bfseries DataFormatFields} \{ \par
+{\bfseries kDataFormat\_\-SelfTest} = 0x80, 
+{\bfseries kDataFormat\_\-SPI} = 0x40, 
+{\bfseries kDataFormat\_\-IntInvert} = 0x20, 
+{\bfseries kDataFormat\_\-FullRes} = 0x08, 
+\par
+{\bfseries kDataFormat\_\-Justify} = 0x04
  \}
 \end{DoxyCompactItemize}
-\subsection*{\-Protected \-Member \-Functions}
+\subsection*{Protected Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \hyperlink{classADXL345__SPI_affcf958cfc98994ea18a796832902ace}{\-Init} (\hyperlink{classDigitalOutput}{\-Digital\-Output} $\ast$clk, \hyperlink{classDigitalOutput}{\-Digital\-Output} $\ast$mosi, \hyperlink{classDigitalInput}{\-Digital\-Input} $\ast$miso, \hyperlink{classDigitalOutput}{\-Digital\-Output} $\ast$cs, \-Data\-Format\-\_\-\-Range range)
+void \hyperlink{classADXL345__SPI_affcf958cfc98994ea18a796832902ace}{Init} (\hyperlink{classDigitalOutput}{DigitalOutput} $\ast$clk, \hyperlink{classDigitalOutput}{DigitalOutput} $\ast$mosi, \hyperlink{classDigitalInput}{DigitalInput} $\ast$miso, \hyperlink{classDigitalOutput}{DigitalOutput} $\ast$cs, DataFormat\_\-Range range)
 \end{DoxyCompactItemize}
-\subsection*{\-Protected \-Attributes}
+\subsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{classADXL345__SPI_a4f24d4c77ac13f38eb46ba7ad1e2e5ba}{\hyperlink{classDigitalOutput}{\-Digital\-Output} $\ast$ {\bfseries m\-\_\-clk}}\label{classADXL345__SPI_a4f24d4c77ac13f38eb46ba7ad1e2e5ba}
+\hypertarget{classADXL345__SPI_a4f24d4c77ac13f38eb46ba7ad1e2e5ba}{
+\hyperlink{classDigitalOutput}{DigitalOutput} $\ast$ {\bfseries m\_\-clk}}
+\label{classADXL345__SPI_a4f24d4c77ac13f38eb46ba7ad1e2e5ba}
 
 \item 
-\hypertarget{classADXL345__SPI_ac416e3fe7c6324d86ac3707f21ac05fb}{\hyperlink{classDigitalOutput}{\-Digital\-Output} $\ast$ {\bfseries m\-\_\-mosi}}\label{classADXL345__SPI_ac416e3fe7c6324d86ac3707f21ac05fb}
+\hypertarget{classADXL345__SPI_ac416e3fe7c6324d86ac3707f21ac05fb}{
+\hyperlink{classDigitalOutput}{DigitalOutput} $\ast$ {\bfseries m\_\-mosi}}
+\label{classADXL345__SPI_ac416e3fe7c6324d86ac3707f21ac05fb}
 
 \item 
-\hypertarget{classADXL345__SPI_a4d5b0c98d4f5478d23c59d0a8c03608c}{\hyperlink{classDigitalInput}{\-Digital\-Input} $\ast$ {\bfseries m\-\_\-miso}}\label{classADXL345__SPI_a4d5b0c98d4f5478d23c59d0a8c03608c}
+\hypertarget{classADXL345__SPI_a4d5b0c98d4f5478d23c59d0a8c03608c}{
+\hyperlink{classDigitalInput}{DigitalInput} $\ast$ {\bfseries m\_\-miso}}
+\label{classADXL345__SPI_a4d5b0c98d4f5478d23c59d0a8c03608c}
 
 \item 
-\hypertarget{classADXL345__SPI_acd83d71262f368c3601a745fa39be3bb}{\hyperlink{classDigitalOutput}{\-Digital\-Output} $\ast$ {\bfseries m\-\_\-cs}}\label{classADXL345__SPI_acd83d71262f368c3601a745fa39be3bb}
+\hypertarget{classADXL345__SPI_acd83d71262f368c3601a745fa39be3bb}{
+\hyperlink{classDigitalOutput}{DigitalOutput} $\ast$ {\bfseries m\_\-cs}}
+\label{classADXL345__SPI_acd83d71262f368c3601a745fa39be3bb}
 
 \item 
-\hypertarget{classADXL345__SPI_a9173d0f036436b4dd7ce1a7a4bab7067}{\hyperlink{classSPI}{\-S\-P\-I} $\ast$ {\bfseries m\-\_\-spi}}\label{classADXL345__SPI_a9173d0f036436b4dd7ce1a7a4bab7067}
+\hypertarget{classADXL345__SPI_a9173d0f036436b4dd7ce1a7a4bab7067}{
+\hyperlink{classSPI}{SPI} $\ast$ {\bfseries m\_\-spi}}
+\label{classADXL345__SPI_a9173d0f036436b4dd7ce1a7a4bab7067}
 
 \end{DoxyCompactItemize}
-\subsection*{\-Static \-Protected \-Attributes}
+\subsection*{Static Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{classADXL345__SPI_a5df09125ebe5858dd8102a2eaa593339}{static const \-U\-I\-N\-T8 {\bfseries k\-Power\-Ctl\-Register} = 0x2\-D}\label{classADXL345__SPI_a5df09125ebe5858dd8102a2eaa593339}
+\hypertarget{classADXL345__SPI_a5df09125ebe5858dd8102a2eaa593339}{
+static const UINT8 {\bfseries kPowerCtlRegister} = 0x2D}
+\label{classADXL345__SPI_a5df09125ebe5858dd8102a2eaa593339}
 
 \item 
-\hypertarget{classADXL345__SPI_a676f2858d1e5bbcb6e15109fba7593e0}{static const \-U\-I\-N\-T8 {\bfseries k\-Data\-Format\-Register} = 0x31}\label{classADXL345__SPI_a676f2858d1e5bbcb6e15109fba7593e0}
+\hypertarget{classADXL345__SPI_a676f2858d1e5bbcb6e15109fba7593e0}{
+static const UINT8 {\bfseries kDataFormatRegister} = 0x31}
+\label{classADXL345__SPI_a676f2858d1e5bbcb6e15109fba7593e0}
 
 \item 
-\hypertarget{classADXL345__SPI_a4b2c02358b4e815ebfbf9eb3648e7bf0}{static const \-U\-I\-N\-T8 {\bfseries k\-Data\-Register} = 0x32}\label{classADXL345__SPI_a4b2c02358b4e815ebfbf9eb3648e7bf0}
+\hypertarget{classADXL345__SPI_a4b2c02358b4e815ebfbf9eb3648e7bf0}{
+static const UINT8 {\bfseries kDataRegister} = 0x32}
+\label{classADXL345__SPI_a4b2c02358b4e815ebfbf9eb3648e7bf0}
 
 \item 
-\hypertarget{classADXL345__SPI_a37f1c9b4814445f56d8da431182165c5}{static const double {\bfseries k\-Gs\-Per\-L\-S\-B} = 0.\-00390625}\label{classADXL345__SPI_a37f1c9b4814445f56d8da431182165c5}
+\hypertarget{classADXL345__SPI_a37f1c9b4814445f56d8da431182165c5}{
+static const double {\bfseries kGsPerLSB} = 0.00390625}
+\label{classADXL345__SPI_a37f1c9b4814445f56d8da431182165c5}
 
 \end{DoxyCompactItemize}
 
 
-\subsection{\-Detailed \-Description}
-\-A\-D\-X\-L345 \hyperlink{classAccelerometer}{\-Accelerometer} on \hyperlink{classSPI}{\-S\-P\-I}.
+\subsection{Detailed Description}
+ADXL345 \hyperlink{classAccelerometer}{Accelerometer} on \hyperlink{classSPI}{SPI}.
 
-\-This class alows access to an \-Analog \-Devices \-A\-D\-X\-L345 3-\/axis accelerometer via \hyperlink{classSPI}{\-S\-P\-I}. \-This class assumes the sensor is wired in 4-\/wire \hyperlink{classSPI}{\-S\-P\-I} mode. 
+This class alows access to an Analog Devices ADXL345 3-\/axis accelerometer via \hyperlink{classSPI}{SPI}. This class assumes the sensor is wired in 4-\/wire \hyperlink{classSPI}{SPI} mode. 
 
-\subsection{\-Constructor \& \-Destructor \-Documentation}
-\hypertarget{classADXL345__SPI_a56b03c68f1cff2963acd666f3de5e376}{\index{\-A\-D\-X\-L345\-\_\-\-S\-P\-I@{\-A\-D\-X\-L345\-\_\-\-S\-P\-I}!\-A\-D\-X\-L345\-\_\-\-S\-P\-I@{\-A\-D\-X\-L345\-\_\-\-S\-P\-I}}
-\index{\-A\-D\-X\-L345\-\_\-\-S\-P\-I@{\-A\-D\-X\-L345\-\_\-\-S\-P\-I}!ADXL345_SPI@{\-A\-D\-X\-L345\-\_\-\-S\-P\-I}}
-\subsubsection[{\-A\-D\-X\-L345\-\_\-\-S\-P\-I}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-A\-D\-X\-L345\-\_\-\-S\-P\-I\-::\-A\-D\-X\-L345\-\_\-\-S\-P\-I} (
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classADXL345__SPI_a56b03c68f1cff2963acd666f3de5e376}{
+\index{ADXL345\_\-SPI@{ADXL345\_\-SPI}!ADXL345\_\-SPI@{ADXL345\_\-SPI}}
+\index{ADXL345\_\-SPI@{ADXL345\_\-SPI}!ADXL345_SPI@{ADXL345\_\-SPI}}
+\subsubsection[{ADXL345\_\-SPI}]{\setlength{\rightskip}{0pt plus 5cm}ADXL345\_\-SPI::ADXL345\_\-SPI (
 \begin{DoxyParamCaption}
-\item[{{\bf \-Digital\-Output} \&}]{clk, }
-\item[{{\bf \-Digital\-Output} \&}]{mosi, }
-\item[{{\bf \-Digital\-Input} \&}]{miso, }
-\item[{{\bf \-Digital\-Output} \&}]{cs, }
-\item[{\-Data\-Format\-\_\-\-Range}]{range = {\ttfamily k\-Range\-\_\-2\-G}}
+\item[{{\bf DigitalOutput} \&}]{clk, }
+\item[{{\bf DigitalOutput} \&}]{mosi, }
+\item[{{\bf DigitalInput} \&}]{miso, }
+\item[{{\bf DigitalOutput} \&}]{cs, }
+\item[{DataFormat\_\-Range}]{range = {\ttfamily kRange\_\-2G}}
 \end{DoxyParamCaption}
-)}}\label{classADXL345__SPI_a56b03c68f1cff2963acd666f3de5e376}
-\-Constructor.
+)}}
+\label{classADXL345__SPI_a56b03c68f1cff2963acd666f3de5e376}
+Constructor.
 
 
-\begin{DoxyParams}{\-Parameters}
-{\em clk} & \-The \-G\-P\-I\-O the clock signal is wired to. \\
+\begin{DoxyParams}{Parameters}
+{\em clk} & The GPIO the clock signal is wired to. \\
 \hline
-{\em mosi} & \-The \-G\-P\-I\-O the \-M\-O\-S\-I (\-Master \-Out \-Slave \-In) signal is wired to. \\
+{\em mosi} & The GPIO the MOSI (Master Out Slave In) signal is wired to. \\
 \hline
-{\em miso} & \-The \-G\-P\-I\-O the \-M\-I\-S\-O (\-Master \-In \-Slave \-Out) signal is wired to. \\
+{\em miso} & The GPIO the MISO (Master In Slave Out) signal is wired to. \\
 \hline
-{\em cs} & \-The \-G\-P\-I\-O the \-C\-S (\-Chip \-Select) signal is wired to. \\
+{\em cs} & The GPIO the CS (Chip Select) signal is wired to. \\
 \hline
-{\em range} & \-The range (+ or -\/) that the accelerometer will measure. \\
+{\em range} & The range (+ or -\/) that the accelerometer will measure. \\
 \hline
 \end{DoxyParams}
-\hypertarget{classADXL345__SPI_ab4e2856be2cdf061cedb9948e8394f66}{\index{\-A\-D\-X\-L345\-\_\-\-S\-P\-I@{\-A\-D\-X\-L345\-\_\-\-S\-P\-I}!\-A\-D\-X\-L345\-\_\-\-S\-P\-I@{\-A\-D\-X\-L345\-\_\-\-S\-P\-I}}
-\index{\-A\-D\-X\-L345\-\_\-\-S\-P\-I@{\-A\-D\-X\-L345\-\_\-\-S\-P\-I}!ADXL345_SPI@{\-A\-D\-X\-L345\-\_\-\-S\-P\-I}}
-\subsubsection[{\-A\-D\-X\-L345\-\_\-\-S\-P\-I}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-A\-D\-X\-L345\-\_\-\-S\-P\-I\-::\-A\-D\-X\-L345\-\_\-\-S\-P\-I} (
+\hypertarget{classADXL345__SPI_ab4e2856be2cdf061cedb9948e8394f66}{
+\index{ADXL345\_\-SPI@{ADXL345\_\-SPI}!ADXL345\_\-SPI@{ADXL345\_\-SPI}}
+\index{ADXL345\_\-SPI@{ADXL345\_\-SPI}!ADXL345_SPI@{ADXL345\_\-SPI}}
+\subsubsection[{ADXL345\_\-SPI}]{\setlength{\rightskip}{0pt plus 5cm}ADXL345\_\-SPI::ADXL345\_\-SPI (
 \begin{DoxyParamCaption}
-\item[{{\bf \-Digital\-Output} $\ast$}]{clk, }
-\item[{{\bf \-Digital\-Output} $\ast$}]{mosi, }
-\item[{{\bf \-Digital\-Input} $\ast$}]{miso, }
-\item[{{\bf \-Digital\-Output} $\ast$}]{cs, }
-\item[{\-Data\-Format\-\_\-\-Range}]{range = {\ttfamily k\-Range\-\_\-2\-G}}
+\item[{{\bf DigitalOutput} $\ast$}]{clk, }
+\item[{{\bf DigitalOutput} $\ast$}]{mosi, }
+\item[{{\bf DigitalInput} $\ast$}]{miso, }
+\item[{{\bf DigitalOutput} $\ast$}]{cs, }
+\item[{DataFormat\_\-Range}]{range = {\ttfamily kRange\_\-2G}}
 \end{DoxyParamCaption}
-)}}\label{classADXL345__SPI_ab4e2856be2cdf061cedb9948e8394f66}
-\-Constructor.
+)}}
+\label{classADXL345__SPI_ab4e2856be2cdf061cedb9948e8394f66}
+Constructor.
 
 
-\begin{DoxyParams}{\-Parameters}
-{\em clk} & \-The \-G\-P\-I\-O the clock signal is wired to. \\
+\begin{DoxyParams}{Parameters}
+{\em clk} & The GPIO the clock signal is wired to. \\
 \hline
-{\em mosi} & \-The \-G\-P\-I\-O the \-M\-O\-S\-I (\-Master \-Out \-Slave \-In) signal is wired to. \\
+{\em mosi} & The GPIO the MOSI (Master Out Slave In) signal is wired to. \\
 \hline
-{\em miso} & \-The \-G\-P\-I\-O the \-M\-I\-S\-O (\-Master \-In \-Slave \-Out) signal is wired to. \\
+{\em miso} & The GPIO the MISO (Master In Slave Out) signal is wired to. \\
 \hline
-{\em cs} & \-The \-G\-P\-I\-O the \-C\-S (\-Chip \-Select) signal is wired to. \\
+{\em cs} & The GPIO the CS (Chip Select) signal is wired to. \\
 \hline
-{\em range} & \-The range (+ or -\/) that the accelerometer will measure. \\
+{\em range} & The range (+ or -\/) that the accelerometer will measure. \\
 \hline
 \end{DoxyParams}
-\hypertarget{classADXL345__SPI_a244c03e2234472d4f4b05342ed5bd17d}{\index{\-A\-D\-X\-L345\-\_\-\-S\-P\-I@{\-A\-D\-X\-L345\-\_\-\-S\-P\-I}!\-A\-D\-X\-L345\-\_\-\-S\-P\-I@{\-A\-D\-X\-L345\-\_\-\-S\-P\-I}}
-\index{\-A\-D\-X\-L345\-\_\-\-S\-P\-I@{\-A\-D\-X\-L345\-\_\-\-S\-P\-I}!ADXL345_SPI@{\-A\-D\-X\-L345\-\_\-\-S\-P\-I}}
-\subsubsection[{\-A\-D\-X\-L345\-\_\-\-S\-P\-I}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-A\-D\-X\-L345\-\_\-\-S\-P\-I\-::\-A\-D\-X\-L345\-\_\-\-S\-P\-I} (
+\hypertarget{classADXL345__SPI_aa707d5049cb932ee664c6f16f2f56422}{
+\index{ADXL345\_\-SPI@{ADXL345\_\-SPI}!ADXL345\_\-SPI@{ADXL345\_\-SPI}}
+\index{ADXL345\_\-SPI@{ADXL345\_\-SPI}!ADXL345_SPI@{ADXL345\_\-SPI}}
+\subsubsection[{ADXL345\_\-SPI}]{\setlength{\rightskip}{0pt plus 5cm}ADXL345\_\-SPI::ADXL345\_\-SPI (
 \begin{DoxyParamCaption}
-\item[{\-U\-I\-N\-T32}]{slot, }
-\item[{\-U\-I\-N\-T32}]{clk, }
-\item[{\-U\-I\-N\-T32}]{mosi, }
-\item[{\-U\-I\-N\-T32}]{miso, }
-\item[{\-U\-I\-N\-T32}]{cs, }
-\item[{\-A\-D\-X\-L345\-\_\-\-S\-P\-I\-::\-Data\-Format\-\_\-\-Range}]{range = {\ttfamily k\-Range\-\_\-2\-G}}
+\item[{UINT8}]{moduleNumber, }
+\item[{UINT32}]{clk, }
+\item[{UINT32}]{mosi, }
+\item[{UINT32}]{miso, }
+\item[{UINT32}]{cs, }
+\item[{ADXL345\_\-SPI::DataFormat\_\-Range}]{range = {\ttfamily kRange\_\-2G}}
 \end{DoxyParamCaption}
-)}}\label{classADXL345__SPI_a244c03e2234472d4f4b05342ed5bd17d}
-\-Constructor.
+)}}
+\label{classADXL345__SPI_aa707d5049cb932ee664c6f16f2f56422}
+Constructor.
 
 
-\begin{DoxyParams}{\-Parameters}
-{\em slot} & \-The slot that the digital module with the sensor attached is plugged into. \\
+\begin{DoxyParams}{Parameters}
+{\em moduleNumber} & The digital module with the sensor attached. \\
 \hline
-{\em clk} & \-The \-G\-P\-I\-O the clock signal is wired to. \\
+{\em clk} & The GPIO the clock signal is wired to. \\
 \hline
-{\em mosi} & \-The \-G\-P\-I\-O the \-M\-O\-S\-I (\-Master \-Out \-Slave \-In) signal is wired to. \\
+{\em mosi} & The GPIO the MOSI (Master Out Slave In) signal is wired to. \\
 \hline
-{\em miso} & \-The \-G\-P\-I\-O the \-M\-I\-S\-O (\-Master \-In \-Slave \-Out) signal is wired to. \\
+{\em miso} & The GPIO the MISO (Master In Slave Out) signal is wired to. \\
 \hline
-{\em cs} & \-The \-G\-P\-I\-O the \-C\-S (\-Chip \-Select) signal is wired to. \\
+{\em cs} & The GPIO the CS (Chip Select) signal is wired to. \\
 \hline
-{\em range} & \-The range (+ or -\/) that the accelerometer will measure. \\
+{\em range} & The range (+ or -\/) that the accelerometer will measure. \\
 \hline
 \end{DoxyParams}
-\hypertarget{classADXL345__SPI_a1f906ecfc18f026b7f7163d8c8aedc53}{\index{\-A\-D\-X\-L345\-\_\-\-S\-P\-I@{\-A\-D\-X\-L345\-\_\-\-S\-P\-I}!$\sim$\-A\-D\-X\-L345\-\_\-\-S\-P\-I@{$\sim$\-A\-D\-X\-L345\-\_\-\-S\-P\-I}}
-\index{$\sim$\-A\-D\-X\-L345\-\_\-\-S\-P\-I@{$\sim$\-A\-D\-X\-L345\-\_\-\-S\-P\-I}!ADXL345_SPI@{\-A\-D\-X\-L345\-\_\-\-S\-P\-I}}
-\subsubsection[{$\sim$\-A\-D\-X\-L345\-\_\-\-S\-P\-I}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-A\-D\-X\-L345\-\_\-\-S\-P\-I\-::$\sim$\-A\-D\-X\-L345\-\_\-\-S\-P\-I} (
+\hypertarget{classADXL345__SPI_a1f906ecfc18f026b7f7163d8c8aedc53}{
+\index{ADXL345\_\-SPI@{ADXL345\_\-SPI}!$\sim$ADXL345\_\-SPI@{$\sim$ADXL345\_\-SPI}}
+\index{$\sim$ADXL345\_\-SPI@{$\sim$ADXL345\_\-SPI}!ADXL345_SPI@{ADXL345\_\-SPI}}
+\subsubsection[{$\sim$ADXL345\_\-SPI}]{\setlength{\rightskip}{0pt plus 5cm}ADXL345\_\-SPI::$\sim$ADXL345\_\-SPI (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{classADXL345__SPI_a1f906ecfc18f026b7f7163d8c8aedc53}
-\-Destructor. 
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classADXL345__SPI_a1f906ecfc18f026b7f7163d8c8aedc53}
+Destructor. 
 
-\subsection{\-Member \-Function \-Documentation}
-\hypertarget{classADXL345__SPI_acae8aee7785e91d4efe1e695478ca727}{\index{\-A\-D\-X\-L345\-\_\-\-S\-P\-I@{\-A\-D\-X\-L345\-\_\-\-S\-P\-I}!\-Get\-Acceleration@{\-Get\-Acceleration}}
-\index{\-Get\-Acceleration@{\-Get\-Acceleration}!ADXL345_SPI@{\-A\-D\-X\-L345\-\_\-\-S\-P\-I}}
-\subsubsection[{\-Get\-Acceleration}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf \-A\-D\-X\-L345\-\_\-\-S\-P\-I\-::\-Get\-Acceleration} (
+\subsection{Member Function Documentation}
+\hypertarget{classADXL345__SPI_acae8aee7785e91d4efe1e695478ca727}{
+\index{ADXL345\_\-SPI@{ADXL345\_\-SPI}!GetAcceleration@{GetAcceleration}}
+\index{GetAcceleration@{GetAcceleration}!ADXL345_SPI@{ADXL345\_\-SPI}}
+\subsubsection[{GetAcceleration}]{\setlength{\rightskip}{0pt plus 5cm}double ADXL345\_\-SPI::GetAcceleration (
 \begin{DoxyParamCaption}
-\item[{\-A\-D\-X\-L345\-\_\-\-S\-P\-I\-::\-Axes}]{axis}
+\item[{ADXL345\_\-SPI::Axes}]{axis}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{classADXL345__SPI_acae8aee7785e91d4efe1e695478ca727}
-\-Get the acceleration of one axis in \-Gs.
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classADXL345__SPI_acae8aee7785e91d4efe1e695478ca727}
+Get the acceleration of one axis in Gs.
 
 
-\begin{DoxyParams}{\-Parameters}
-{\em axis} & \-The axis to read from. \\
+\begin{DoxyParams}{Parameters}
+{\em axis} & The axis to read from. \\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{\-Returns}
-\-Acceleration of the \-A\-D\-X\-L345 in \-Gs. 
+\begin{DoxyReturn}{Returns}
+Acceleration of the ADXL345 in Gs. 
 \end{DoxyReturn}
-\hypertarget{classADXL345__SPI_abbd9ef138325c23402189fde28aa61c3}{\index{\-A\-D\-X\-L345\-\_\-\-S\-P\-I@{\-A\-D\-X\-L345\-\_\-\-S\-P\-I}!\-Get\-Accelerations@{\-Get\-Accelerations}}
-\index{\-Get\-Accelerations@{\-Get\-Accelerations}!ADXL345_SPI@{\-A\-D\-X\-L345\-\_\-\-S\-P\-I}}
-\subsubsection[{\-Get\-Accelerations}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-A\-D\-X\-L345\-\_\-\-S\-P\-I\-::\-All\-Axes} {\bf \-A\-D\-X\-L345\-\_\-\-S\-P\-I\-::\-Get\-Accelerations} (
+\hypertarget{classADXL345__SPI_abbd9ef138325c23402189fde28aa61c3}{
+\index{ADXL345\_\-SPI@{ADXL345\_\-SPI}!GetAccelerations@{GetAccelerations}}
+\index{GetAccelerations@{GetAccelerations}!ADXL345_SPI@{ADXL345\_\-SPI}}
+\subsubsection[{GetAccelerations}]{\setlength{\rightskip}{0pt plus 5cm}{\bf ADXL345\_\-SPI::AllAxes} ADXL345\_\-SPI::GetAccelerations (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{classADXL345__SPI_abbd9ef138325c23402189fde28aa61c3}
-\-Get the acceleration of all axes in \-Gs.
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classADXL345__SPI_abbd9ef138325c23402189fde28aa61c3}
+Get the acceleration of all axes in Gs.
 
-\begin{DoxyReturn}{\-Returns}
-\-Acceleration measured on all axes of the \-A\-D\-X\-L345 in \-Gs. 
+\begin{DoxyReturn}{Returns}
+Acceleration measured on all axes of the ADXL345 in Gs. 
 \end{DoxyReturn}
-\hypertarget{classADXL345__SPI_affcf958cfc98994ea18a796832902ace}{\index{\-A\-D\-X\-L345\-\_\-\-S\-P\-I@{\-A\-D\-X\-L345\-\_\-\-S\-P\-I}!\-Init@{\-Init}}
-\index{\-Init@{\-Init}!ADXL345_SPI@{\-A\-D\-X\-L345\-\_\-\-S\-P\-I}}
-\subsubsection[{\-Init}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-A\-D\-X\-L345\-\_\-\-S\-P\-I\-::\-Init} (
+\hypertarget{classADXL345__SPI_affcf958cfc98994ea18a796832902ace}{
+\index{ADXL345\_\-SPI@{ADXL345\_\-SPI}!Init@{Init}}
+\index{Init@{Init}!ADXL345_SPI@{ADXL345\_\-SPI}}
+\subsubsection[{Init}]{\setlength{\rightskip}{0pt plus 5cm}void ADXL345\_\-SPI::Init (
 \begin{DoxyParamCaption}
-\item[{{\bf \-Digital\-Output} $\ast$}]{clk, }
-\item[{{\bf \-Digital\-Output} $\ast$}]{mosi, }
-\item[{{\bf \-Digital\-Input} $\ast$}]{miso, }
-\item[{{\bf \-Digital\-Output} $\ast$}]{cs, }
-\item[{\-Data\-Format\-\_\-\-Range}]{range}
+\item[{{\bf DigitalOutput} $\ast$}]{clk, }
+\item[{{\bf DigitalOutput} $\ast$}]{mosi, }
+\item[{{\bf DigitalInput} $\ast$}]{miso, }
+\item[{{\bf DigitalOutput} $\ast$}]{cs, }
+\item[{DataFormat\_\-Range}]{range}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{classADXL345__SPI_affcf958cfc98994ea18a796832902ace}
-\-Internal common init function. 
+)\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classADXL345__SPI_affcf958cfc98994ea18a796832902ace}
+Internal common init function. 
 
-\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
 \item 
-\-A\-D\-X\-L345\-\_\-\-S\-P\-I.\-h\item 
-\-A\-D\-X\-L345\-\_\-\-S\-P\-I.\-cpp\end{DoxyCompactItemize}
+ADXL345\_\-SPI.h\item 
+ADXL345\_\-SPI.cpp\end{DoxyCompactItemize}

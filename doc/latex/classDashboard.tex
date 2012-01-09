@@ -1,320 +1,363 @@
-\hypertarget{classDashboard}{\section{\-Dashboard \-Class \-Reference}
-\label{classDashboard}\index{\-Dashboard@{\-Dashboard}}
+\hypertarget{classDashboard}{
+\section{Dashboard Class Reference}
+\label{classDashboard}\index{Dashboard@{Dashboard}}
 }
 
 
-{\ttfamily \#include $<$\-Dashboard.\-h$>$}
+{\ttfamily \#include $<$Dashboard.h$>$}
 
-\-Inheritance diagram for \-Dashboard\-:\begin{figure}[H]
+Inheritance diagram for Dashboard:\begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[height=3.000000cm]{classDashboard}
 \end{center}
 \end{figure}
-\subsection*{\-Public \-Types}
+\subsection*{Public Types}
 \begin{DoxyCompactItemize}
 \item 
-enum {\bfseries \-Type} \{ \*
-{\bfseries k\-I8}, 
-{\bfseries k\-I16}, 
-{\bfseries k\-I32}, 
-{\bfseries k\-U8}, 
-\*
-{\bfseries k\-U16}, 
-{\bfseries k\-U32}, 
-{\bfseries k\-Float}, 
-{\bfseries k\-Double}, 
-\*
-{\bfseries k\-Boolean}, 
-{\bfseries k\-String}, 
-{\bfseries k\-Other}
+enum {\bfseries Type} \{ \par
+{\bfseries kI8}, 
+{\bfseries kI16}, 
+{\bfseries kI32}, 
+{\bfseries kU8}, 
+\par
+{\bfseries kU16}, 
+{\bfseries kU32}, 
+{\bfseries kFloat}, 
+{\bfseries kDouble}, 
+\par
+{\bfseries kBoolean}, 
+{\bfseries kString}, 
+{\bfseries kOther}
  \}
 \item 
-enum {\bfseries \-Complex\-Type} \{ {\bfseries k\-Array}, 
-{\bfseries k\-Cluster}
+enum {\bfseries ComplexType} \{ {\bfseries kArray}, 
+{\bfseries kCluster}
  \}
 \end{DoxyCompactItemize}
-\subsection*{\-Public \-Member \-Functions}
+\subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{classDashboard_aa424d4887cf702e75073a88a7ac4d0a7}{\-Dashboard} (\-S\-E\-M\-\_\-\-I\-D status\-Data\-Semaphore)
+\hyperlink{classDashboard_aa424d4887cf702e75073a88a7ac4d0a7}{Dashboard} (SEM\_\-ID statusDataSemaphore)
 \item 
-virtual \hyperlink{classDashboard_a43a9becd0adb8641b81174de35842690}{$\sim$\-Dashboard} ()
+virtual \hyperlink{classDashboard_a43a9becd0adb8641b81174de35842690}{$\sim$Dashboard} ()
 \item 
-void \hyperlink{classDashboard_ac568575b3dbece4aae029e82c5397238}{\-Add\-I8} (\-I\-N\-T8 value)
+void \hyperlink{classDashboard_ac568575b3dbece4aae029e82c5397238}{AddI8} (INT8 value)
 \item 
-void \hyperlink{classDashboard_a3d2314c2e037b8e37351796a09aa31d1}{\-Add\-I16} (\-I\-N\-T16 value)
+void \hyperlink{classDashboard_a3d2314c2e037b8e37351796a09aa31d1}{AddI16} (INT16 value)
 \item 
-void \hyperlink{classDashboard_ac1e993c3851ecc7f20917efb56673959}{\-Add\-I32} (\-I\-N\-T32 value)
+void \hyperlink{classDashboard_ac1e993c3851ecc7f20917efb56673959}{AddI32} (INT32 value)
 \item 
-void \hyperlink{classDashboard_a640538e7f8d38d9fe920ebcf7be46557}{\-Add\-U8} (\-U\-I\-N\-T8 value)
+void \hyperlink{classDashboard_a640538e7f8d38d9fe920ebcf7be46557}{AddU8} (UINT8 value)
 \item 
-void \hyperlink{classDashboard_ae9bad9b10e49d30da5fa94d74f074d1c}{\-Add\-U16} (\-U\-I\-N\-T16 value)
+void \hyperlink{classDashboard_ae9bad9b10e49d30da5fa94d74f074d1c}{AddU16} (UINT16 value)
 \item 
-void \hyperlink{classDashboard_a91962630887557f93fa4515d4a28ebf0}{\-Add\-U32} (\-U\-I\-N\-T32 value)
+void \hyperlink{classDashboard_a91962630887557f93fa4515d4a28ebf0}{AddU32} (UINT32 value)
 \item 
-void \hyperlink{classDashboard_a948fb34947acc01880f7d5eacec8cd2d}{\-Add\-Float} (float value)
+void \hyperlink{classDashboard_a948fb34947acc01880f7d5eacec8cd2d}{AddFloat} (float value)
 \item 
-void \hyperlink{classDashboard_a0e780e771771b87659c4055607056e11}{\-Add\-Double} (double value)
+void \hyperlink{classDashboard_a0e780e771771b87659c4055607056e11}{AddDouble} (double value)
 \item 
-void \hyperlink{classDashboard_ad082687e911a3267badaa34b40ee022c}{\-Add\-Boolean} (bool value)
+void \hyperlink{classDashboard_ad082687e911a3267badaa34b40ee022c}{AddBoolean} (bool value)
 \item 
-void \hyperlink{classDashboard_abee599f0ea1db73228f3f3361affa746}{\-Add\-String} (char $\ast$value)
+void \hyperlink{classDashboard_abee599f0ea1db73228f3f3361affa746}{AddString} (char $\ast$value)
 \item 
-void \hyperlink{classDashboard_a63eb885d150b0bc230659f6304a80efc}{\-Add\-String} (char $\ast$value, \-I\-N\-T32 length)
+void \hyperlink{classDashboard_a63eb885d150b0bc230659f6304a80efc}{AddString} (char $\ast$value, INT32 length)
 \item 
-void \hyperlink{classDashboard_ae1ef7fc0f3f5b5ae4af4401f224e98fc}{\-Add\-Array} (void)
+void \hyperlink{classDashboard_a1c200071216fc4bc5ca479e76b8d6d4d}{AddArray} ()
 \item 
-void \hyperlink{classDashboard_acc5aa17a45d364faef2f11c899089561}{\-Finalize\-Array} (void)
+void \hyperlink{classDashboard_af4d1fe589d5b503afc9017fbb072114a}{FinalizeArray} ()
 \item 
-void \hyperlink{classDashboard_a15ea9ceb6a28076ced563ce4a7337e83}{\-Add\-Cluster} (void)
+void \hyperlink{classDashboard_ae2967a58621c393b6afd58324801933f}{AddCluster} ()
 \item 
-void \hyperlink{classDashboard_a31f99f15994941129fe6be84844f6334}{\-Finalize\-Cluster} (void)
+void \hyperlink{classDashboard_aeca81fb65e4bb515b60eb55aa7c6aea5}{FinalizeCluster} ()
 \item 
-void \hyperlink{classDashboard_af6090d34e555c1fd33e8a6e0d3fec733}{\-Printf} (const char $\ast$write\-Fmt,...)
+void \hyperlink{classDashboard_af6090d34e555c1fd33e8a6e0d3fec733}{Printf} (const char $\ast$writeFmt,...)
 \item 
-\-I\-N\-T32 \hyperlink{classDashboard_ab5f01892b5e7b957f627b26764efa798}{\-Finalize} (void)
+INT32 \hyperlink{classDashboard_a033de13c5a7165c3455e7ec52115167c}{Finalize} ()
 \item 
-void \hyperlink{classDashboard_aeebae45281f0cfdb41f2085d9b55bcea}{\-Get\-Status\-Buffer} (char $\ast$$\ast$user\-Status\-Data, \-I\-N\-T32 $\ast$user\-Status\-Data\-Size)
+void \hyperlink{classDashboard_aeebae45281f0cfdb41f2085d9b55bcea}{GetStatusBuffer} (char $\ast$$\ast$userStatusData, INT32 $\ast$userStatusDataSize)
 \item 
-\hypertarget{classDashboard_a29364210709cd218cb22d8455923a853}{void {\bfseries \-Flush} ()}\label{classDashboard_a29364210709cd218cb22d8455923a853}
+\hypertarget{classDashboard_a29364210709cd218cb22d8455923a853}{
+void {\bfseries Flush} ()}
+\label{classDashboard_a29364210709cd218cb22d8455923a853}
 
 \end{DoxyCompactItemize}
 
 
-\subsection{\-Detailed \-Description}
-\-Pack data into the \char`\"{}user data\char`\"{} field that gets sent to the dashboard laptop via the driver station. 
+\subsection{Detailed Description}
+Pack data into the \char`\"{}user data\char`\"{} field that gets sent to the dashboard laptop via the driver station. 
 
-\subsection{\-Constructor \& \-Destructor \-Documentation}
-\hypertarget{classDashboard_aa424d4887cf702e75073a88a7ac4d0a7}{\index{\-Dashboard@{\-Dashboard}!\-Dashboard@{\-Dashboard}}
-\index{\-Dashboard@{\-Dashboard}!Dashboard@{\-Dashboard}}
-\subsubsection[{\-Dashboard}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Dashboard\-::\-Dashboard} (
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classDashboard_aa424d4887cf702e75073a88a7ac4d0a7}{
+\index{Dashboard@{Dashboard}!Dashboard@{Dashboard}}
+\index{Dashboard@{Dashboard}!Dashboard@{Dashboard}}
+\subsubsection[{Dashboard}]{\setlength{\rightskip}{0pt plus 5cm}Dashboard::Dashboard (
 \begin{DoxyParamCaption}
-\item[{\-S\-E\-M\-\_\-\-I\-D}]{status\-Data\-Sem}
+\item[{SEM\_\-ID}]{statusDataSem}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily  \mbox{[}explicit\mbox{]}}}}\label{classDashboard_aa424d4887cf702e75073a88a7ac4d0a7}
-\hyperlink{classDashboard}{\-Dashboard} contructor.
+)\hspace{0.3cm}{\ttfamily  \mbox{[}explicit\mbox{]}}}}
+\label{classDashboard_aa424d4887cf702e75073a88a7ac4d0a7}
+\hyperlink{classDashboard}{Dashboard} contructor.
 
-\-This is only called once when the \hyperlink{classDriverStation}{\-Driver\-Station} constructor is called. \hypertarget{classDashboard_a43a9becd0adb8641b81174de35842690}{\index{\-Dashboard@{\-Dashboard}!$\sim$\-Dashboard@{$\sim$\-Dashboard}}
-\index{$\sim$\-Dashboard@{$\sim$\-Dashboard}!Dashboard@{\-Dashboard}}
-\subsubsection[{$\sim$\-Dashboard}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Dashboard\-::$\sim$\-Dashboard} (
+This is only called once when the \hyperlink{classDriverStation}{DriverStation} constructor is called. \hypertarget{classDashboard_a43a9becd0adb8641b81174de35842690}{
+\index{Dashboard@{Dashboard}!$\sim$Dashboard@{$\sim$Dashboard}}
+\index{$\sim$Dashboard@{$\sim$Dashboard}!Dashboard@{Dashboard}}
+\subsubsection[{$\sim$Dashboard}]{\setlength{\rightskip}{0pt plus 5cm}Dashboard::$\sim$Dashboard (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{classDashboard_a43a9becd0adb8641b81174de35842690}
-\hyperlink{classDashboard}{\-Dashboard} destructor.
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classDashboard_a43a9becd0adb8641b81174de35842690}
+\hyperlink{classDashboard}{Dashboard} destructor.
 
-\-Called only when the \hyperlink{classDriverStation}{\-Driver\-Station} class is destroyed. 
+Called only when the \hyperlink{classDriverStation}{DriverStation} class is destroyed. 
 
-\subsection{\-Member \-Function \-Documentation}
-\hypertarget{classDashboard_ae1ef7fc0f3f5b5ae4af4401f224e98fc}{\index{\-Dashboard@{\-Dashboard}!\-Add\-Array@{\-Add\-Array}}
-\index{\-Add\-Array@{\-Add\-Array}!Dashboard@{\-Dashboard}}
-\subsubsection[{\-Add\-Array}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Dashboard\-::\-Add\-Array} (
+\subsection{Member Function Documentation}
+\hypertarget{classDashboard_a1c200071216fc4bc5ca479e76b8d6d4d}{
+\index{Dashboard@{Dashboard}!AddArray@{AddArray}}
+\index{AddArray@{AddArray}!Dashboard@{Dashboard}}
+\subsubsection[{AddArray}]{\setlength{\rightskip}{0pt plus 5cm}void Dashboard::AddArray (
 \begin{DoxyParamCaption}
-\item[{void}]{}
+{}
 \end{DoxyParamCaption}
-)}}\label{classDashboard_ae1ef7fc0f3f5b5ae4af4401f224e98fc}
-\-Start an array in the packed dashboard data structure.
+)}}
+\label{classDashboard_a1c200071216fc4bc5ca479e76b8d6d4d}
+Start an array in the packed dashboard data structure.
 
-\-After calling \hyperlink{classDashboard_ae1ef7fc0f3f5b5ae4af4401f224e98fc}{\-Add\-Array()}, call the appropriate \-Add method for each element of the array. \-Make sure you call the same add each time. \-An array must contain elements of the same type. \-You can use clusters inside of arrays to make each element of the array contain a structure of values. \-You can also nest arrays inside of other arrays. \-Every call to \hyperlink{classDashboard_ae1ef7fc0f3f5b5ae4af4401f224e98fc}{\-Add\-Array()} must have a matching call to \hyperlink{classDashboard_acc5aa17a45d364faef2f11c899089561}{\-Finalize\-Array()}. \hypertarget{classDashboard_ad082687e911a3267badaa34b40ee022c}{\index{\-Dashboard@{\-Dashboard}!\-Add\-Boolean@{\-Add\-Boolean}}
-\index{\-Add\-Boolean@{\-Add\-Boolean}!Dashboard@{\-Dashboard}}
-\subsubsection[{\-Add\-Boolean}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Dashboard\-::\-Add\-Boolean} (
+After calling \hyperlink{classDashboard_a1c200071216fc4bc5ca479e76b8d6d4d}{AddArray()}, call the appropriate Add method for each element of the array. Make sure you call the same add each time. An array must contain elements of the same type. You can use clusters inside of arrays to make each element of the array contain a structure of values. You can also nest arrays inside of other arrays. Every call to \hyperlink{classDashboard_a1c200071216fc4bc5ca479e76b8d6d4d}{AddArray()} must have a matching call to \hyperlink{classDashboard_af4d1fe589d5b503afc9017fbb072114a}{FinalizeArray()}. \hypertarget{classDashboard_ad082687e911a3267badaa34b40ee022c}{
+\index{Dashboard@{Dashboard}!AddBoolean@{AddBoolean}}
+\index{AddBoolean@{AddBoolean}!Dashboard@{Dashboard}}
+\subsubsection[{AddBoolean}]{\setlength{\rightskip}{0pt plus 5cm}void Dashboard::AddBoolean (
 \begin{DoxyParamCaption}
 \item[{bool}]{value}
 \end{DoxyParamCaption}
-)}}\label{classDashboard_ad082687e911a3267badaa34b40ee022c}
-\-Pack a boolean into the dashboard data structure. 
-\begin{DoxyParams}{\-Parameters}
-{\em value} & \-Data to be packed into the structure. \\
+)}}
+\label{classDashboard_ad082687e911a3267badaa34b40ee022c}
+Pack a boolean into the dashboard data structure. 
+\begin{DoxyParams}{Parameters}
+{\em value} & Data to be packed into the structure. \\
 \hline
 \end{DoxyParams}
-\hypertarget{classDashboard_a15ea9ceb6a28076ced563ce4a7337e83}{\index{\-Dashboard@{\-Dashboard}!\-Add\-Cluster@{\-Add\-Cluster}}
-\index{\-Add\-Cluster@{\-Add\-Cluster}!Dashboard@{\-Dashboard}}
-\subsubsection[{\-Add\-Cluster}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Dashboard\-::\-Add\-Cluster} (
+\hypertarget{classDashboard_ae2967a58621c393b6afd58324801933f}{
+\index{Dashboard@{Dashboard}!AddCluster@{AddCluster}}
+\index{AddCluster@{AddCluster}!Dashboard@{Dashboard}}
+\subsubsection[{AddCluster}]{\setlength{\rightskip}{0pt plus 5cm}void Dashboard::AddCluster (
 \begin{DoxyParamCaption}
-\item[{void}]{}
+{}
 \end{DoxyParamCaption}
-)}}\label{classDashboard_a15ea9ceb6a28076ced563ce4a7337e83}
-\-Start a cluster in the packed dashboard data structure.
+)}}
+\label{classDashboard_ae2967a58621c393b6afd58324801933f}
+Start a cluster in the packed dashboard data structure.
 
-\-After calling \hyperlink{classDashboard_a15ea9ceb6a28076ced563ce4a7337e83}{\-Add\-Cluster()}, call the appropriate \-Add method for each element of the cluster. \-You can use clusters inside of arrays to make each element of the array contain a structure of values. \-Every call to \hyperlink{classDashboard_a15ea9ceb6a28076ced563ce4a7337e83}{\-Add\-Cluster()} must have a matching call to \hyperlink{classDashboard_a31f99f15994941129fe6be84844f6334}{\-Finalize\-Cluster()}. \hypertarget{classDashboard_a0e780e771771b87659c4055607056e11}{\index{\-Dashboard@{\-Dashboard}!\-Add\-Double@{\-Add\-Double}}
-\index{\-Add\-Double@{\-Add\-Double}!Dashboard@{\-Dashboard}}
-\subsubsection[{\-Add\-Double}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Dashboard\-::\-Add\-Double} (
+After calling \hyperlink{classDashboard_ae2967a58621c393b6afd58324801933f}{AddCluster()}, call the appropriate Add method for each element of the cluster. You can use clusters inside of arrays to make each element of the array contain a structure of values. Every call to \hyperlink{classDashboard_ae2967a58621c393b6afd58324801933f}{AddCluster()} must have a matching call to \hyperlink{classDashboard_aeca81fb65e4bb515b60eb55aa7c6aea5}{FinalizeCluster()}. \hypertarget{classDashboard_a0e780e771771b87659c4055607056e11}{
+\index{Dashboard@{Dashboard}!AddDouble@{AddDouble}}
+\index{AddDouble@{AddDouble}!Dashboard@{Dashboard}}
+\subsubsection[{AddDouble}]{\setlength{\rightskip}{0pt plus 5cm}void Dashboard::AddDouble (
 \begin{DoxyParamCaption}
 \item[{double}]{value}
 \end{DoxyParamCaption}
-)}}\label{classDashboard_a0e780e771771b87659c4055607056e11}
-\-Pack a 64-\/bit floating point number into the dashboard data structure. 
-\begin{DoxyParams}{\-Parameters}
-{\em value} & \-Data to be packed into the structure. \\
+)}}
+\label{classDashboard_a0e780e771771b87659c4055607056e11}
+Pack a 64-\/bit floating point number into the dashboard data structure. 
+\begin{DoxyParams}{Parameters}
+{\em value} & Data to be packed into the structure. \\
 \hline
 \end{DoxyParams}
-\hypertarget{classDashboard_a948fb34947acc01880f7d5eacec8cd2d}{\index{\-Dashboard@{\-Dashboard}!\-Add\-Float@{\-Add\-Float}}
-\index{\-Add\-Float@{\-Add\-Float}!Dashboard@{\-Dashboard}}
-\subsubsection[{\-Add\-Float}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Dashboard\-::\-Add\-Float} (
+\hypertarget{classDashboard_a948fb34947acc01880f7d5eacec8cd2d}{
+\index{Dashboard@{Dashboard}!AddFloat@{AddFloat}}
+\index{AddFloat@{AddFloat}!Dashboard@{Dashboard}}
+\subsubsection[{AddFloat}]{\setlength{\rightskip}{0pt plus 5cm}void Dashboard::AddFloat (
 \begin{DoxyParamCaption}
 \item[{float}]{value}
 \end{DoxyParamCaption}
-)}}\label{classDashboard_a948fb34947acc01880f7d5eacec8cd2d}
-\-Pack a 32-\/bit floating point number into the dashboard data structure. 
-\begin{DoxyParams}{\-Parameters}
-{\em value} & \-Data to be packed into the structure. \\
+)}}
+\label{classDashboard_a948fb34947acc01880f7d5eacec8cd2d}
+Pack a 32-\/bit floating point number into the dashboard data structure. 
+\begin{DoxyParams}{Parameters}
+{\em value} & Data to be packed into the structure. \\
 \hline
 \end{DoxyParams}
-\hypertarget{classDashboard_a3d2314c2e037b8e37351796a09aa31d1}{\index{\-Dashboard@{\-Dashboard}!\-Add\-I16@{\-Add\-I16}}
-\index{\-Add\-I16@{\-Add\-I16}!Dashboard@{\-Dashboard}}
-\subsubsection[{\-Add\-I16}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Dashboard\-::\-Add\-I16} (
+\hypertarget{classDashboard_a3d2314c2e037b8e37351796a09aa31d1}{
+\index{Dashboard@{Dashboard}!AddI16@{AddI16}}
+\index{AddI16@{AddI16}!Dashboard@{Dashboard}}
+\subsubsection[{AddI16}]{\setlength{\rightskip}{0pt plus 5cm}void Dashboard::AddI16 (
 \begin{DoxyParamCaption}
-\item[{\-I\-N\-T16}]{value}
+\item[{INT16}]{value}
 \end{DoxyParamCaption}
-)}}\label{classDashboard_a3d2314c2e037b8e37351796a09aa31d1}
-\-Pack a signed 16-\/bit int into the dashboard data structure. 
-\begin{DoxyParams}{\-Parameters}
-{\em value} & \-Data to be packed into the structure. \\
+)}}
+\label{classDashboard_a3d2314c2e037b8e37351796a09aa31d1}
+Pack a signed 16-\/bit int into the dashboard data structure. 
+\begin{DoxyParams}{Parameters}
+{\em value} & Data to be packed into the structure. \\
 \hline
 \end{DoxyParams}
-\hypertarget{classDashboard_ac1e993c3851ecc7f20917efb56673959}{\index{\-Dashboard@{\-Dashboard}!\-Add\-I32@{\-Add\-I32}}
-\index{\-Add\-I32@{\-Add\-I32}!Dashboard@{\-Dashboard}}
-\subsubsection[{\-Add\-I32}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Dashboard\-::\-Add\-I32} (
+\hypertarget{classDashboard_ac1e993c3851ecc7f20917efb56673959}{
+\index{Dashboard@{Dashboard}!AddI32@{AddI32}}
+\index{AddI32@{AddI32}!Dashboard@{Dashboard}}
+\subsubsection[{AddI32}]{\setlength{\rightskip}{0pt plus 5cm}void Dashboard::AddI32 (
 \begin{DoxyParamCaption}
-\item[{\-I\-N\-T32}]{value}
+\item[{INT32}]{value}
 \end{DoxyParamCaption}
-)}}\label{classDashboard_ac1e993c3851ecc7f20917efb56673959}
-\-Pack a signed 32-\/bit int into the dashboard data structure. 
-\begin{DoxyParams}{\-Parameters}
-{\em value} & \-Data to be packed into the structure. \\
+)}}
+\label{classDashboard_ac1e993c3851ecc7f20917efb56673959}
+Pack a signed 32-\/bit int into the dashboard data structure. 
+\begin{DoxyParams}{Parameters}
+{\em value} & Data to be packed into the structure. \\
 \hline
 \end{DoxyParams}
-\hypertarget{classDashboard_ac568575b3dbece4aae029e82c5397238}{\index{\-Dashboard@{\-Dashboard}!\-Add\-I8@{\-Add\-I8}}
-\index{\-Add\-I8@{\-Add\-I8}!Dashboard@{\-Dashboard}}
-\subsubsection[{\-Add\-I8}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Dashboard\-::\-Add\-I8} (
+\hypertarget{classDashboard_ac568575b3dbece4aae029e82c5397238}{
+\index{Dashboard@{Dashboard}!AddI8@{AddI8}}
+\index{AddI8@{AddI8}!Dashboard@{Dashboard}}
+\subsubsection[{AddI8}]{\setlength{\rightskip}{0pt plus 5cm}void Dashboard::AddI8 (
 \begin{DoxyParamCaption}
-\item[{\-I\-N\-T8}]{value}
+\item[{INT8}]{value}
 \end{DoxyParamCaption}
-)}}\label{classDashboard_ac568575b3dbece4aae029e82c5397238}
-\-Pack a signed 8-\/bit int into the dashboard data structure. 
-\begin{DoxyParams}{\-Parameters}
-{\em value} & \-Data to be packed into the structure. \\
+)}}
+\label{classDashboard_ac568575b3dbece4aae029e82c5397238}
+Pack a signed 8-\/bit int into the dashboard data structure. 
+\begin{DoxyParams}{Parameters}
+{\em value} & Data to be packed into the structure. \\
 \hline
 \end{DoxyParams}
-\hypertarget{classDashboard_abee599f0ea1db73228f3f3361affa746}{\index{\-Dashboard@{\-Dashboard}!\-Add\-String@{\-Add\-String}}
-\index{\-Add\-String@{\-Add\-String}!Dashboard@{\-Dashboard}}
-\subsubsection[{\-Add\-String}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Dashboard\-::\-Add\-String} (
+\hypertarget{classDashboard_abee599f0ea1db73228f3f3361affa746}{
+\index{Dashboard@{Dashboard}!AddString@{AddString}}
+\index{AddString@{AddString}!Dashboard@{Dashboard}}
+\subsubsection[{AddString}]{\setlength{\rightskip}{0pt plus 5cm}void Dashboard::AddString (
 \begin{DoxyParamCaption}
 \item[{char $\ast$}]{value}
 \end{DoxyParamCaption}
-)}}\label{classDashboard_abee599f0ea1db73228f3f3361affa746}
-\-Pack a \-N\-U\-L\-L-\/terminated string of 8-\/bit characters into the dashboard data structure. 
-\begin{DoxyParams}{\-Parameters}
-{\em value} & \-Data to be packed into the structure. \\
+)}}
+\label{classDashboard_abee599f0ea1db73228f3f3361affa746}
+Pack a NULL-\/terminated string of 8-\/bit characters into the dashboard data structure. 
+\begin{DoxyParams}{Parameters}
+{\em value} & Data to be packed into the structure. \\
 \hline
 \end{DoxyParams}
-\hypertarget{classDashboard_a63eb885d150b0bc230659f6304a80efc}{\index{\-Dashboard@{\-Dashboard}!\-Add\-String@{\-Add\-String}}
-\index{\-Add\-String@{\-Add\-String}!Dashboard@{\-Dashboard}}
-\subsubsection[{\-Add\-String}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Dashboard\-::\-Add\-String} (
+\hypertarget{classDashboard_a63eb885d150b0bc230659f6304a80efc}{
+\index{Dashboard@{Dashboard}!AddString@{AddString}}
+\index{AddString@{AddString}!Dashboard@{Dashboard}}
+\subsubsection[{AddString}]{\setlength{\rightskip}{0pt plus 5cm}void Dashboard::AddString (
 \begin{DoxyParamCaption}
 \item[{char $\ast$}]{value, }
-\item[{\-I\-N\-T32}]{length}
+\item[{INT32}]{length}
 \end{DoxyParamCaption}
-)}}\label{classDashboard_a63eb885d150b0bc230659f6304a80efc}
-\-Pack a string of 8-\/bit characters of specified length into the dashboard data structure. 
-\begin{DoxyParams}{\-Parameters}
-{\em value} & \-Data to be packed into the structure. \\
+)}}
+\label{classDashboard_a63eb885d150b0bc230659f6304a80efc}
+Pack a string of 8-\/bit characters of specified length into the dashboard data structure. 
+\begin{DoxyParams}{Parameters}
+{\em value} & Data to be packed into the structure. \\
 \hline
-{\em length} & \-The number of bytes in the string to pack. \\
-\hline
-\end{DoxyParams}
-\hypertarget{classDashboard_ae9bad9b10e49d30da5fa94d74f074d1c}{\index{\-Dashboard@{\-Dashboard}!\-Add\-U16@{\-Add\-U16}}
-\index{\-Add\-U16@{\-Add\-U16}!Dashboard@{\-Dashboard}}
-\subsubsection[{\-Add\-U16}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Dashboard\-::\-Add\-U16} (
-\begin{DoxyParamCaption}
-\item[{\-U\-I\-N\-T16}]{value}
-\end{DoxyParamCaption}
-)}}\label{classDashboard_ae9bad9b10e49d30da5fa94d74f074d1c}
-\-Pack an unsigned 16-\/bit int into the dashboard data structure. 
-\begin{DoxyParams}{\-Parameters}
-{\em value} & \-Data to be packed into the structure. \\
+{\em length} & The number of bytes in the string to pack. \\
 \hline
 \end{DoxyParams}
-\hypertarget{classDashboard_a91962630887557f93fa4515d4a28ebf0}{\index{\-Dashboard@{\-Dashboard}!\-Add\-U32@{\-Add\-U32}}
-\index{\-Add\-U32@{\-Add\-U32}!Dashboard@{\-Dashboard}}
-\subsubsection[{\-Add\-U32}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Dashboard\-::\-Add\-U32} (
+\hypertarget{classDashboard_ae9bad9b10e49d30da5fa94d74f074d1c}{
+\index{Dashboard@{Dashboard}!AddU16@{AddU16}}
+\index{AddU16@{AddU16}!Dashboard@{Dashboard}}
+\subsubsection[{AddU16}]{\setlength{\rightskip}{0pt plus 5cm}void Dashboard::AddU16 (
 \begin{DoxyParamCaption}
-\item[{\-U\-I\-N\-T32}]{value}
+\item[{UINT16}]{value}
 \end{DoxyParamCaption}
-)}}\label{classDashboard_a91962630887557f93fa4515d4a28ebf0}
-\-Pack an unsigned 32-\/bit int into the dashboard data structure. 
-\begin{DoxyParams}{\-Parameters}
-{\em value} & \-Data to be packed into the structure. \\
+)}}
+\label{classDashboard_ae9bad9b10e49d30da5fa94d74f074d1c}
+Pack an unsigned 16-\/bit int into the dashboard data structure. 
+\begin{DoxyParams}{Parameters}
+{\em value} & Data to be packed into the structure. \\
 \hline
 \end{DoxyParams}
-\hypertarget{classDashboard_a640538e7f8d38d9fe920ebcf7be46557}{\index{\-Dashboard@{\-Dashboard}!\-Add\-U8@{\-Add\-U8}}
-\index{\-Add\-U8@{\-Add\-U8}!Dashboard@{\-Dashboard}}
-\subsubsection[{\-Add\-U8}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Dashboard\-::\-Add\-U8} (
+\hypertarget{classDashboard_a91962630887557f93fa4515d4a28ebf0}{
+\index{Dashboard@{Dashboard}!AddU32@{AddU32}}
+\index{AddU32@{AddU32}!Dashboard@{Dashboard}}
+\subsubsection[{AddU32}]{\setlength{\rightskip}{0pt plus 5cm}void Dashboard::AddU32 (
 \begin{DoxyParamCaption}
-\item[{\-U\-I\-N\-T8}]{value}
+\item[{UINT32}]{value}
 \end{DoxyParamCaption}
-)}}\label{classDashboard_a640538e7f8d38d9fe920ebcf7be46557}
-\-Pack an unsigned 8-\/bit int into the dashboard data structure. 
-\begin{DoxyParams}{\-Parameters}
-{\em value} & \-Data to be packed into the structure. \\
+)}}
+\label{classDashboard_a91962630887557f93fa4515d4a28ebf0}
+Pack an unsigned 32-\/bit int into the dashboard data structure. 
+\begin{DoxyParams}{Parameters}
+{\em value} & Data to be packed into the structure. \\
 \hline
 \end{DoxyParams}
-\hypertarget{classDashboard_ab5f01892b5e7b957f627b26764efa798}{\index{\-Dashboard@{\-Dashboard}!\-Finalize@{\-Finalize}}
-\index{\-Finalize@{\-Finalize}!Dashboard@{\-Dashboard}}
-\subsubsection[{\-Finalize}]{\setlength{\rightskip}{0pt plus 5cm}\-I\-N\-T32 {\bf \-Dashboard\-::\-Finalize} (
+\hypertarget{classDashboard_a640538e7f8d38d9fe920ebcf7be46557}{
+\index{Dashboard@{Dashboard}!AddU8@{AddU8}}
+\index{AddU8@{AddU8}!Dashboard@{Dashboard}}
+\subsubsection[{AddU8}]{\setlength{\rightskip}{0pt plus 5cm}void Dashboard::AddU8 (
 \begin{DoxyParamCaption}
-\item[{void}]{}
+\item[{UINT8}]{value}
 \end{DoxyParamCaption}
-)}}\label{classDashboard_ab5f01892b5e7b957f627b26764efa798}
-\-Indicate that the packing is complete and commit the buffer to the \hyperlink{classDriverStation}{\-Driver\-Station}.
+)}}
+\label{classDashboard_a640538e7f8d38d9fe920ebcf7be46557}
+Pack an unsigned 8-\/bit int into the dashboard data structure. 
+\begin{DoxyParams}{Parameters}
+{\em value} & Data to be packed into the structure. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classDashboard_a033de13c5a7165c3455e7ec52115167c}{
+\index{Dashboard@{Dashboard}!Finalize@{Finalize}}
+\index{Finalize@{Finalize}!Dashboard@{Dashboard}}
+\subsubsection[{Finalize}]{\setlength{\rightskip}{0pt plus 5cm}INT32 Dashboard::Finalize (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classDashboard_a033de13c5a7165c3455e7ec52115167c}
+Indicate that the packing is complete and commit the buffer to the \hyperlink{classDriverStation}{DriverStation}.
 
-\-The packing of the dashboard packet is complete. \-If you are not using the packed dashboard data, you can call \hyperlink{classDashboard_ab5f01892b5e7b957f627b26764efa798}{\-Finalize()} to commit the \hyperlink{classDashboard_af6090d34e555c1fd33e8a6e0d3fec733}{\-Printf()} buffer and the error string buffer. \-In effect, you are packing an empty structure. \-Prepares a packet to go to the dashboard... \begin{DoxyReturn}{\-Returns}
-\-The total size of the data packed into the user\-Data field of the status packet. 
+The packing of the dashboard packet is complete. If you are not using the packed dashboard data, you can call \hyperlink{classDashboard_a033de13c5a7165c3455e7ec52115167c}{Finalize()} to commit the \hyperlink{classDashboard_af6090d34e555c1fd33e8a6e0d3fec733}{Printf()} buffer and the error string buffer. In effect, you are packing an empty structure. Prepares a packet to go to the dashboard... \begin{DoxyReturn}{Returns}
+The total size of the data packed into the userData field of the status packet. 
 \end{DoxyReturn}
-\hypertarget{classDashboard_acc5aa17a45d364faef2f11c899089561}{\index{\-Dashboard@{\-Dashboard}!\-Finalize\-Array@{\-Finalize\-Array}}
-\index{\-Finalize\-Array@{\-Finalize\-Array}!Dashboard@{\-Dashboard}}
-\subsubsection[{\-Finalize\-Array}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Dashboard\-::\-Finalize\-Array} (
+\hypertarget{classDashboard_af4d1fe589d5b503afc9017fbb072114a}{
+\index{Dashboard@{Dashboard}!FinalizeArray@{FinalizeArray}}
+\index{FinalizeArray@{FinalizeArray}!Dashboard@{Dashboard}}
+\subsubsection[{FinalizeArray}]{\setlength{\rightskip}{0pt plus 5cm}void Dashboard::FinalizeArray (
 \begin{DoxyParamCaption}
-\item[{void}]{}
+{}
 \end{DoxyParamCaption}
-)}}\label{classDashboard_acc5aa17a45d364faef2f11c899089561}
-\-Indicate the end of an array packed into the dashboard data structure.
+)}}
+\label{classDashboard_af4d1fe589d5b503afc9017fbb072114a}
+Indicate the end of an array packed into the dashboard data structure.
 
-\-After packing data into the array, call \hyperlink{classDashboard_acc5aa17a45d364faef2f11c899089561}{\-Finalize\-Array()}. \-Every call to \hyperlink{classDashboard_ae1ef7fc0f3f5b5ae4af4401f224e98fc}{\-Add\-Array()} must have a matching call to \hyperlink{classDashboard_acc5aa17a45d364faef2f11c899089561}{\-Finalize\-Array()}. \hypertarget{classDashboard_a31f99f15994941129fe6be84844f6334}{\index{\-Dashboard@{\-Dashboard}!\-Finalize\-Cluster@{\-Finalize\-Cluster}}
-\index{\-Finalize\-Cluster@{\-Finalize\-Cluster}!Dashboard@{\-Dashboard}}
-\subsubsection[{\-Finalize\-Cluster}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Dashboard\-::\-Finalize\-Cluster} (
+After packing data into the array, call \hyperlink{classDashboard_af4d1fe589d5b503afc9017fbb072114a}{FinalizeArray()}. Every call to \hyperlink{classDashboard_a1c200071216fc4bc5ca479e76b8d6d4d}{AddArray()} must have a matching call to \hyperlink{classDashboard_af4d1fe589d5b503afc9017fbb072114a}{FinalizeArray()}. \hypertarget{classDashboard_aeca81fb65e4bb515b60eb55aa7c6aea5}{
+\index{Dashboard@{Dashboard}!FinalizeCluster@{FinalizeCluster}}
+\index{FinalizeCluster@{FinalizeCluster}!Dashboard@{Dashboard}}
+\subsubsection[{FinalizeCluster}]{\setlength{\rightskip}{0pt plus 5cm}void Dashboard::FinalizeCluster (
 \begin{DoxyParamCaption}
-\item[{void}]{}
+{}
 \end{DoxyParamCaption}
-)}}\label{classDashboard_a31f99f15994941129fe6be84844f6334}
-\-Indicate the end of a cluster packed into the dashboard data structure.
+)}}
+\label{classDashboard_aeca81fb65e4bb515b60eb55aa7c6aea5}
+Indicate the end of a cluster packed into the dashboard data structure.
 
-\-After packing data into the cluster, call \hyperlink{classDashboard_a31f99f15994941129fe6be84844f6334}{\-Finalize\-Cluster()}. \-Every call to \hyperlink{classDashboard_a15ea9ceb6a28076ced563ce4a7337e83}{\-Add\-Cluster()} must have a matching call to \hyperlink{classDashboard_a31f99f15994941129fe6be84844f6334}{\-Finalize\-Cluster()}. \hypertarget{classDashboard_aeebae45281f0cfdb41f2085d9b55bcea}{\index{\-Dashboard@{\-Dashboard}!\-Get\-Status\-Buffer@{\-Get\-Status\-Buffer}}
-\index{\-Get\-Status\-Buffer@{\-Get\-Status\-Buffer}!Dashboard@{\-Dashboard}}
-\subsubsection[{\-Get\-Status\-Buffer}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Dashboard\-::\-Get\-Status\-Buffer} (
+After packing data into the cluster, call \hyperlink{classDashboard_aeca81fb65e4bb515b60eb55aa7c6aea5}{FinalizeCluster()}. Every call to \hyperlink{classDashboard_ae2967a58621c393b6afd58324801933f}{AddCluster()} must have a matching call to \hyperlink{classDashboard_aeca81fb65e4bb515b60eb55aa7c6aea5}{FinalizeCluster()}. \hypertarget{classDashboard_aeebae45281f0cfdb41f2085d9b55bcea}{
+\index{Dashboard@{Dashboard}!GetStatusBuffer@{GetStatusBuffer}}
+\index{GetStatusBuffer@{GetStatusBuffer}!Dashboard@{Dashboard}}
+\subsubsection[{GetStatusBuffer}]{\setlength{\rightskip}{0pt plus 5cm}void Dashboard::GetStatusBuffer (
 \begin{DoxyParamCaption}
-\item[{char $\ast$$\ast$}]{user\-Status\-Data, }
-\item[{\-I\-N\-T32 $\ast$}]{user\-Status\-Data\-Size}
+\item[{char $\ast$$\ast$}]{userStatusData, }
+\item[{INT32 $\ast$}]{userStatusDataSize}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{classDashboard_aeebae45281f0cfdb41f2085d9b55bcea}
-\-Called by the \hyperlink{classDriverStation}{\-Driver\-Station} class to retrieve buffers, sizes, etc. for writing to the \-Network\-Communication task. \-This function is called while holding the m\-\_\-status\-Data\-Semaphore. 
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classDashboard_aeebae45281f0cfdb41f2085d9b55bcea}
+Called by the \hyperlink{classDriverStation}{DriverStation} class to retrieve buffers, sizes, etc. for writing to the NetworkCommunication task. This function is called while holding the m\_\-statusDataSemaphore. 
 
-\-Implements \hyperlink{classDashboardBase}{\-Dashboard\-Base}.
+Implements \hyperlink{classDashboardBase}{DashboardBase}.
 
-\hypertarget{classDashboard_af6090d34e555c1fd33e8a6e0d3fec733}{\index{\-Dashboard@{\-Dashboard}!\-Printf@{\-Printf}}
-\index{\-Printf@{\-Printf}!Dashboard@{\-Dashboard}}
-\subsubsection[{\-Printf}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Dashboard\-::\-Printf} (
+\hypertarget{classDashboard_af6090d34e555c1fd33e8a6e0d3fec733}{
+\index{Dashboard@{Dashboard}!Printf@{Printf}}
+\index{Printf@{Printf}!Dashboard@{Dashboard}}
+\subsubsection[{Printf}]{\setlength{\rightskip}{0pt plus 5cm}void Dashboard::Printf (
 \begin{DoxyParamCaption}
-\item[{const char $\ast$}]{write\-Fmt, }
+\item[{const char $\ast$}]{writeFmt, }
 \item[{}]{...}
 \end{DoxyParamCaption}
-)}}\label{classDashboard_af6090d34e555c1fd33e8a6e0d3fec733}
-\-Print a string to the \-User\-Data text on the \hyperlink{classDashboard}{\-Dashboard}.
+)}}
+\label{classDashboard_af6090d34e555c1fd33e8a6e0d3fec733}
+Print a string to the UserData text on the \hyperlink{classDashboard}{Dashboard}.
 
-\-This will add text to the buffer to send to the dashboard. \-You must call \hyperlink{classDashboard_ab5f01892b5e7b957f627b26764efa798}{\-Finalize()} periodically to actually send the buffer to the dashboard if you are not using the packed dashboard data. 
+This will add text to the buffer to send to the dashboard. You must call \hyperlink{classDashboard_a033de13c5a7165c3455e7ec52115167c}{Finalize()} periodically to actually send the buffer to the dashboard if you are not using the packed dashboard data. 
 
-\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
 \item 
-\-Dashboard.\-h\item 
-\-Dashboard.\-cpp\end{DoxyCompactItemize}
+Dashboard.h\item 
+Dashboard.cpp\end{DoxyCompactItemize}

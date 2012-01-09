@@ -1,232 +1,310 @@
-\hypertarget{classSensorBase}{\section{\-Sensor\-Base \-Class \-Reference}
-\label{classSensorBase}\index{\-Sensor\-Base@{\-Sensor\-Base}}
+\hypertarget{classSensorBase}{
+\section{SensorBase Class Reference}
+\label{classSensorBase}\index{SensorBase@{SensorBase}}
 }
 
 
-{\ttfamily \#include $<$\-Sensor\-Base.\-h$>$}
+{\ttfamily \#include $<$SensorBase.h$>$}
 
-\-Inheritance diagram for \-Sensor\-Base\-:\begin{figure}[H]
+Inheritance diagram for SensorBase:\begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[height=12.000000cm]{classSensorBase}
 \end{center}
 \end{figure}
-\subsection*{\-Public \-Member \-Functions}
+\subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{classSensorBase_a4e1878930538022da5ac42038d754e0e}{\-Sensor\-Base} ()
+\hyperlink{classSensorBase_a4e1878930538022da5ac42038d754e0e}{SensorBase} ()
 \item 
-virtual \hyperlink{classSensorBase_af38b2b0e047cb4f0304fc4c204c420fa}{$\sim$\-Sensor\-Base} ()
+virtual \hyperlink{classSensorBase_af38b2b0e047cb4f0304fc4c204c420fa}{$\sim$SensorBase} ()
 \end{DoxyCompactItemize}
-\subsection*{\-Static \-Public \-Member \-Functions}
+\subsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-static void \hyperlink{classSensorBase_a8c49fc685a6e7f75c8b96e3b3c16a576}{\-Set\-Default\-Analog\-Module} (\-U\-I\-N\-T32 slot)
+static void \hyperlink{classSensorBase_aac521c8617e84c41c3e7c921302cdcc6}{DeleteSingletons} ()
 \item 
-static void \hyperlink{classSensorBase_a9918cc94af5adbaa73d92fe5cce66eab}{\-Set\-Default\-Digital\-Module} (\-U\-I\-N\-T32 slot)
-\item 
-static void \hyperlink{classSensorBase_a960a069e2bdca4896dd1049fd4ae4aa1}{\-Set\-Default\-Solenoid\-Module} (\-U\-I\-N\-T32 slot)
-\item 
-static void \hyperlink{classSensorBase_aac521c8617e84c41c3e7c921302cdcc6}{\-Delete\-Singletons} ()
-\item 
-\hypertarget{classSensorBase_ac4b2b62295f1b7e43124c63340c2957b}{static \-U\-I\-N\-T32 {\bfseries \-Get\-Default\-Analog\-Module} ()}\label{classSensorBase_ac4b2b62295f1b7e43124c63340c2957b}
+\hypertarget{classSensorBase_ac4b2b62295f1b7e43124c63340c2957b}{
+static UINT32 {\bfseries GetDefaultAnalogModule} ()}
+\label{classSensorBase_ac4b2b62295f1b7e43124c63340c2957b}
 
 \item 
-\hypertarget{classSensorBase_a58b76ce72e9d70bf88b613b9f979a555}{static \-U\-I\-N\-T32 {\bfseries \-Get\-Default\-Digital\-Module} ()}\label{classSensorBase_a58b76ce72e9d70bf88b613b9f979a555}
+\hypertarget{classSensorBase_a58b76ce72e9d70bf88b613b9f979a555}{
+static UINT32 {\bfseries GetDefaultDigitalModule} ()}
+\label{classSensorBase_a58b76ce72e9d70bf88b613b9f979a555}
 
 \item 
-\hypertarget{classSensorBase_a75c14f39c43663aca647876cece69fa0}{static \-U\-I\-N\-T32 {\bfseries \-Get\-Default\-Solenoid\-Module} ()}\label{classSensorBase_a75c14f39c43663aca647876cece69fa0}
+\hypertarget{classSensorBase_a75c14f39c43663aca647876cece69fa0}{
+static UINT32 {\bfseries GetDefaultSolenoidModule} ()}
+\label{classSensorBase_a75c14f39c43663aca647876cece69fa0}
 
 \item 
-static bool \hyperlink{classSensorBase_a0a3490a89f61ba323a7b1a2a3fe163be}{\-Check\-Digital\-Module} (\-U\-I\-N\-T32 slot)
+static bool \hyperlink{classSensorBase_a010ca97e0517a7dcaaf81b3d60c7c409}{CheckAnalogModule} (UINT8 moduleNumber)
 \item 
-static bool \hyperlink{classSensorBase_aa9055a030e59812f3a406c5a41366f23}{\-Check\-Relay\-Module} (\-U\-I\-N\-T32 slot)
+static bool \hyperlink{classSensorBase_a4a80dc8b3693bb5720f03f06e05cd0bc}{CheckDigitalModule} (UINT8 moduleNumber)
 \item 
-static bool \hyperlink{classSensorBase_ad19aa0ab3feef1999770e986ce157cf2}{\-Check\-P\-W\-M\-Module} (\-U\-I\-N\-T32 slot)
+static bool \hyperlink{classSensorBase_a273815e624f63a1ec6817a6b734832b5}{CheckPWMModule} (UINT8 moduleNumber)
 \item 
-static bool \hyperlink{classSensorBase_a6e712e05403980ee62ba858f10926496}{\-Check\-Solenoid\-Module} (\-U\-I\-N\-T32 slot)
+static bool \hyperlink{classSensorBase_aa720a37953f69dd8a742e3707cbbb8ac}{CheckRelayModule} (UINT8 moduleNumber)
 \item 
-static bool \hyperlink{classSensorBase_a4c55295d5a2c87af65e17ebcff40a1d3}{\-Check\-Analog\-Module} (\-U\-I\-N\-T32 slot)
+static bool \hyperlink{classSensorBase_a93b945da6cc5fc0e8eca68bf2749ff65}{CheckSolenoidModule} (UINT8 moduleNumber)
 \item 
-static bool \hyperlink{classSensorBase_a6b38ec81d351403492b0449dd4615e12}{\-Check\-Digital\-Channel} (\-U\-I\-N\-T32 channel)
+static bool \hyperlink{classSensorBase_a6b38ec81d351403492b0449dd4615e12}{CheckDigitalChannel} (UINT32 channel)
 \item 
-static bool \hyperlink{classSensorBase_af83a99ec4a84a9265a5a077d200c6275}{\-Check\-Relay\-Channel} (\-U\-I\-N\-T32 channel)
+static bool \hyperlink{classSensorBase_af83a99ec4a84a9265a5a077d200c6275}{CheckRelayChannel} (UINT32 channel)
 \item 
-static bool \hyperlink{classSensorBase_ac4319058432968761cd72470b82644ae}{\-Check\-P\-W\-M\-Channel} (\-U\-I\-N\-T32 channel)
+static bool \hyperlink{classSensorBase_ac4319058432968761cd72470b82644ae}{CheckPWMChannel} (UINT32 channel)
 \item 
-static bool \hyperlink{classSensorBase_a8c15101dc7a785d81eafa22644cdd02e}{\-Check\-Analog\-Channel} (\-U\-I\-N\-T32 channel)
+static bool \hyperlink{classSensorBase_a8c15101dc7a785d81eafa22644cdd02e}{CheckAnalogChannel} (UINT32 channel)
 \item 
-static bool \hyperlink{classSensorBase_a41deb3044c6a075226fa6e4840265b92}{\-Check\-Solenoid\-Channel} (\-U\-I\-N\-T32 channel)
+static bool \hyperlink{classSensorBase_a41deb3044c6a075226fa6e4840265b92}{CheckSolenoidChannel} (UINT32 channel)
 \end{DoxyCompactItemize}
-\subsection*{\-Static \-Public \-Attributes}
+\subsection*{Static Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{classSensorBase_a62b93c02393e42cb99cb02f2ea5c3210}{static const \-U\-I\-N\-T32 {\bfseries k\-System\-Clock\-Ticks\-Per\-Microsecond} = 40}\label{classSensorBase_a62b93c02393e42cb99cb02f2ea5c3210}
+\hypertarget{classSensorBase_a62b93c02393e42cb99cb02f2ea5c3210}{
+static const UINT32 {\bfseries kSystemClockTicksPerMicrosecond} = 40}
+\label{classSensorBase_a62b93c02393e42cb99cb02f2ea5c3210}
 
 \item 
-\hypertarget{classSensorBase_a7f940856e53b128fdf79e02a0847f698}{static const \-U\-I\-N\-T32 {\bfseries k\-Digital\-Channels} = 14}\label{classSensorBase_a7f940856e53b128fdf79e02a0847f698}
+\hypertarget{classSensorBase_a7f940856e53b128fdf79e02a0847f698}{
+static const UINT32 {\bfseries kDigitalChannels} = 14}
+\label{classSensorBase_a7f940856e53b128fdf79e02a0847f698}
 
 \item 
-\hypertarget{classSensorBase_ab2640677a9876b6d9931a64e49fe1854}{static const \-U\-I\-N\-T32 {\bfseries k\-Analog\-Channels} = 8}\label{classSensorBase_ab2640677a9876b6d9931a64e49fe1854}
+\hypertarget{classSensorBase_ab2640677a9876b6d9931a64e49fe1854}{
+static const UINT32 {\bfseries kAnalogChannels} = 8}
+\label{classSensorBase_ab2640677a9876b6d9931a64e49fe1854}
 
 \item 
-\hypertarget{classSensorBase_ae26b98f1438498ca476792ed36885717}{static const \-U\-I\-N\-T32 {\bfseries k\-Analog\-Modules} = 2}\label{classSensorBase_ae26b98f1438498ca476792ed36885717}
+\hypertarget{classSensorBase_ae26b98f1438498ca476792ed36885717}{
+static const UINT32 {\bfseries kAnalogModules} = 2}
+\label{classSensorBase_ae26b98f1438498ca476792ed36885717}
 
 \item 
-\hypertarget{classSensorBase_a61358418acb62c70a31e34c2066ae005}{static const \-U\-I\-N\-T32 {\bfseries k\-Digital\-Modules} = 2}\label{classSensorBase_a61358418acb62c70a31e34c2066ae005}
+\hypertarget{classSensorBase_a61358418acb62c70a31e34c2066ae005}{
+static const UINT32 {\bfseries kDigitalModules} = 2}
+\label{classSensorBase_a61358418acb62c70a31e34c2066ae005}
 
 \item 
-\hypertarget{classSensorBase_a94aa98723f06c8d3db4392a3570c37ee}{static const \-U\-I\-N\-T32 {\bfseries k\-Solenoid\-Channels} = 8}\label{classSensorBase_a94aa98723f06c8d3db4392a3570c37ee}
+\hypertarget{classSensorBase_a94aa98723f06c8d3db4392a3570c37ee}{
+static const UINT32 {\bfseries kSolenoidChannels} = 8}
+\label{classSensorBase_a94aa98723f06c8d3db4392a3570c37ee}
 
 \item 
-\hypertarget{classSensorBase_ac2bbf6ee96fced8af6e08459461c377a}{static const \-U\-I\-N\-T32 {\bfseries k\-Solenoid\-Modules} = 2}\label{classSensorBase_ac2bbf6ee96fced8af6e08459461c377a}
+\hypertarget{classSensorBase_ac2bbf6ee96fced8af6e08459461c377a}{
+static const UINT32 {\bfseries kSolenoidModules} = 2}
+\label{classSensorBase_ac2bbf6ee96fced8af6e08459461c377a}
 
 \item 
-\hypertarget{classSensorBase_a245dda830a4dbc0de6e3482aa17c5681}{static const \-U\-I\-N\-T32 {\bfseries k\-Pwm\-Channels} = 10}\label{classSensorBase_a245dda830a4dbc0de6e3482aa17c5681}
+\hypertarget{classSensorBase_a245dda830a4dbc0de6e3482aa17c5681}{
+static const UINT32 {\bfseries kPwmChannels} = 10}
+\label{classSensorBase_a245dda830a4dbc0de6e3482aa17c5681}
 
 \item 
-\hypertarget{classSensorBase_aa9042b498388c6ab62378a8672d81ddf}{static const \-U\-I\-N\-T32 {\bfseries k\-Relay\-Channels} = 8}\label{classSensorBase_aa9042b498388c6ab62378a8672d81ddf}
+\hypertarget{classSensorBase_aa9042b498388c6ab62378a8672d81ddf}{
+static const UINT32 {\bfseries kRelayChannels} = 8}
+\label{classSensorBase_aa9042b498388c6ab62378a8672d81ddf}
 
 \item 
-\hypertarget{classSensorBase_a6a758308e49ed0f04b34d3f39c7db91a}{static const \-U\-I\-N\-T32 {\bfseries k\-Chassis\-Slots} = 8}\label{classSensorBase_a6a758308e49ed0f04b34d3f39c7db91a}
+\hypertarget{classSensorBase_a6a758308e49ed0f04b34d3f39c7db91a}{
+static const UINT32 {\bfseries kChassisSlots} = 8}
+\label{classSensorBase_a6a758308e49ed0f04b34d3f39c7db91a}
 
 \end{DoxyCompactItemize}
-\subsection*{\-Protected \-Member \-Functions}
+\subsection*{Protected Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \hyperlink{classSensorBase_a97a6a31683483f3fe3f6f1d971ca9615}{\-Add\-To\-Singleton\-List} ()
+void \hyperlink{classSensorBase_a97a6a31683483f3fe3f6f1d971ca9615}{AddToSingletonList} ()
 \end{DoxyCompactItemize}
 
 
-\subsection{\-Detailed \-Description}
-\-Base class for all sensors. \-Stores most recent status information as well as containing utility functions for checking channels and error processing. 
+\subsection{Detailed Description}
+Base class for all sensors. Stores most recent status information as well as containing utility functions for checking channels and error processing. 
 
-\subsection{\-Constructor \& \-Destructor \-Documentation}
-\hypertarget{classSensorBase_a4e1878930538022da5ac42038d754e0e}{\index{\-Sensor\-Base@{\-Sensor\-Base}!\-Sensor\-Base@{\-Sensor\-Base}}
-\index{\-Sensor\-Base@{\-Sensor\-Base}!SensorBase@{\-Sensor\-Base}}
-\subsubsection[{\-Sensor\-Base}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Sensor\-Base\-::\-Sensor\-Base} (
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classSensorBase_a4e1878930538022da5ac42038d754e0e}{
+\index{SensorBase@{SensorBase}!SensorBase@{SensorBase}}
+\index{SensorBase@{SensorBase}!SensorBase@{SensorBase}}
+\subsubsection[{SensorBase}]{\setlength{\rightskip}{0pt plus 5cm}SensorBase::SensorBase (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)}}\label{classSensorBase_a4e1878930538022da5ac42038d754e0e}
-\-Creates an instance of the sensor base and gets an \-F\-P\-G\-A handle \hypertarget{classSensorBase_af38b2b0e047cb4f0304fc4c204c420fa}{\index{\-Sensor\-Base@{\-Sensor\-Base}!$\sim$\-Sensor\-Base@{$\sim$\-Sensor\-Base}}
-\index{$\sim$\-Sensor\-Base@{$\sim$\-Sensor\-Base}!SensorBase@{\-Sensor\-Base}}
-\subsubsection[{$\sim$\-Sensor\-Base}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Sensor\-Base\-::$\sim$\-Sensor\-Base} (
+)}}
+\label{classSensorBase_a4e1878930538022da5ac42038d754e0e}
+Creates an instance of the sensor base and gets an FPGA handle \hypertarget{classSensorBase_af38b2b0e047cb4f0304fc4c204c420fa}{
+\index{SensorBase@{SensorBase}!$\sim$SensorBase@{$\sim$SensorBase}}
+\index{$\sim$SensorBase@{$\sim$SensorBase}!SensorBase@{SensorBase}}
+\subsubsection[{$\sim$SensorBase}]{\setlength{\rightskip}{0pt plus 5cm}SensorBase::$\sim$SensorBase (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{classSensorBase_af38b2b0e047cb4f0304fc4c204c420fa}
-\-Frees the resources for a \hyperlink{classSensorBase}{\-Sensor\-Base}. 
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classSensorBase_af38b2b0e047cb4f0304fc4c204c420fa}
+Frees the resources for a \hyperlink{classSensorBase}{SensorBase}. 
 
-\subsection{\-Member \-Function \-Documentation}
-\hypertarget{classSensorBase_a97a6a31683483f3fe3f6f1d971ca9615}{\index{\-Sensor\-Base@{\-Sensor\-Base}!\-Add\-To\-Singleton\-List@{\-Add\-To\-Singleton\-List}}
-\index{\-Add\-To\-Singleton\-List@{\-Add\-To\-Singleton\-List}!SensorBase@{\-Sensor\-Base}}
-\subsubsection[{\-Add\-To\-Singleton\-List}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Sensor\-Base\-::\-Add\-To\-Singleton\-List} (
+\subsection{Member Function Documentation}
+\hypertarget{classSensorBase_a97a6a31683483f3fe3f6f1d971ca9615}{
+\index{SensorBase@{SensorBase}!AddToSingletonList@{AddToSingletonList}}
+\index{AddToSingletonList@{AddToSingletonList}!SensorBase@{SensorBase}}
+\subsubsection[{AddToSingletonList}]{\setlength{\rightskip}{0pt plus 5cm}void SensorBase::AddToSingletonList (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{classSensorBase_a97a6a31683483f3fe3f6f1d971ca9615}
-\-Add sensor to the singleton list. \-Add this sensor to the list of singletons that need to be deleted when the robot program exits. \-Each of the sensors on this list are singletons, that is they aren't allocated directly with new, but instead are allocated by the static \-Get\-Instance method. \-As a result, they are never deleted when the program exits. \-Consequently these sensors may still be holding onto resources and need to have their destructors called at the end of the program. \hypertarget{classSensorBase_a8c15101dc7a785d81eafa22644cdd02e}{\index{\-Sensor\-Base@{\-Sensor\-Base}!\-Check\-Analog\-Channel@{\-Check\-Analog\-Channel}}
-\index{\-Check\-Analog\-Channel@{\-Check\-Analog\-Channel}!SensorBase@{\-Sensor\-Base}}
-\subsubsection[{\-Check\-Analog\-Channel}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Sensor\-Base\-::\-Check\-Analog\-Channel} (
+)\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classSensorBase_a97a6a31683483f3fe3f6f1d971ca9615}
+Add sensor to the singleton list. Add this sensor to the list of singletons that need to be deleted when the robot program exits. Each of the sensors on this list are singletons, that is they aren't allocated directly with new, but instead are allocated by the static GetInstance method. As a result, they are never deleted when the program exits. Consequently these sensors may still be holding onto resources and need to have their destructors called at the end of the program. \hypertarget{classSensorBase_a8c15101dc7a785d81eafa22644cdd02e}{
+\index{SensorBase@{SensorBase}!CheckAnalogChannel@{CheckAnalogChannel}}
+\index{CheckAnalogChannel@{CheckAnalogChannel}!SensorBase@{SensorBase}}
+\subsubsection[{CheckAnalogChannel}]{\setlength{\rightskip}{0pt plus 5cm}bool SensorBase::CheckAnalogChannel (
 \begin{DoxyParamCaption}
-\item[{\-U\-I\-N\-T32}]{channel}
+\item[{UINT32}]{channel}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{classSensorBase_a8c15101dc7a785d81eafa22644cdd02e}
-\-Check that the analog channel number is value. \-Verify that the analog channel number is one of the legal channel numbers. \-Channel numbers are 1-\/based. \hypertarget{classSensorBase_a4c55295d5a2c87af65e17ebcff40a1d3}{\index{\-Sensor\-Base@{\-Sensor\-Base}!\-Check\-Analog\-Module@{\-Check\-Analog\-Module}}
-\index{\-Check\-Analog\-Module@{\-Check\-Analog\-Module}!SensorBase@{\-Sensor\-Base}}
-\subsubsection[{\-Check\-Analog\-Module}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Sensor\-Base\-::\-Check\-Analog\-Module} (
-\begin{DoxyParamCaption}
-\item[{\-U\-I\-N\-T32}]{slot}
-\end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{classSensorBase_a4c55295d5a2c87af65e17ebcff40a1d3}
-\-Check that the analog module number is valid. \hyperlink{classModule}{\-Module} numbers are the slot numbers that they are inserted in. \hypertarget{classSensorBase_a6b38ec81d351403492b0449dd4615e12}{\index{\-Sensor\-Base@{\-Sensor\-Base}!\-Check\-Digital\-Channel@{\-Check\-Digital\-Channel}}
-\index{\-Check\-Digital\-Channel@{\-Check\-Digital\-Channel}!SensorBase@{\-Sensor\-Base}}
-\subsubsection[{\-Check\-Digital\-Channel}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Sensor\-Base\-::\-Check\-Digital\-Channel} (
-\begin{DoxyParamCaption}
-\item[{\-U\-I\-N\-T32}]{channel}
-\end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{classSensorBase_a6b38ec81d351403492b0449dd4615e12}
-\-Check that the digital channel number is valid. \-Verify that the channel number is one of the legal channel numbers. \-Channel numbers are 1-\/based. \hypertarget{classSensorBase_a0a3490a89f61ba323a7b1a2a3fe163be}{\index{\-Sensor\-Base@{\-Sensor\-Base}!\-Check\-Digital\-Module@{\-Check\-Digital\-Module}}
-\index{\-Check\-Digital\-Module@{\-Check\-Digital\-Module}!SensorBase@{\-Sensor\-Base}}
-\subsubsection[{\-Check\-Digital\-Module}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Sensor\-Base\-::\-Check\-Digital\-Module} (
-\begin{DoxyParamCaption}
-\item[{\-U\-I\-N\-T32}]{slot}
-\end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{classSensorBase_a0a3490a89f61ba323a7b1a2a3fe163be}
-\-Check that the digital module number is valid. \hyperlink{classModule}{\-Module} numbers are the slot number that they are inserted in. \hypertarget{classSensorBase_ac4319058432968761cd72470b82644ae}{\index{\-Sensor\-Base@{\-Sensor\-Base}!\-Check\-P\-W\-M\-Channel@{\-Check\-P\-W\-M\-Channel}}
-\index{\-Check\-P\-W\-M\-Channel@{\-Check\-P\-W\-M\-Channel}!SensorBase@{\-Sensor\-Base}}
-\subsubsection[{\-Check\-P\-W\-M\-Channel}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Sensor\-Base\-::\-Check\-P\-W\-M\-Channel} (
-\begin{DoxyParamCaption}
-\item[{\-U\-I\-N\-T32}]{channel}
-\end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{classSensorBase_ac4319058432968761cd72470b82644ae}
-\-Check that the digital channel number is valid. \-Verify that the channel number is one of the legal channel numbers. \-Channel numbers are 1-\/based. \hypertarget{classSensorBase_ad19aa0ab3feef1999770e986ce157cf2}{\index{\-Sensor\-Base@{\-Sensor\-Base}!\-Check\-P\-W\-M\-Module@{\-Check\-P\-W\-M\-Module}}
-\index{\-Check\-P\-W\-M\-Module@{\-Check\-P\-W\-M\-Module}!SensorBase@{\-Sensor\-Base}}
-\subsubsection[{\-Check\-P\-W\-M\-Module}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Sensor\-Base\-::\-Check\-P\-W\-M\-Module} (
-\begin{DoxyParamCaption}
-\item[{\-U\-I\-N\-T32}]{slot}
-\end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{classSensorBase_ad19aa0ab3feef1999770e986ce157cf2}
-\-Check that the digital module number is valid. \hyperlink{classModule}{\-Module} numbers are the slot number that they are inserted in. \hypertarget{classSensorBase_af83a99ec4a84a9265a5a077d200c6275}{\index{\-Sensor\-Base@{\-Sensor\-Base}!\-Check\-Relay\-Channel@{\-Check\-Relay\-Channel}}
-\index{\-Check\-Relay\-Channel@{\-Check\-Relay\-Channel}!SensorBase@{\-Sensor\-Base}}
-\subsubsection[{\-Check\-Relay\-Channel}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Sensor\-Base\-::\-Check\-Relay\-Channel} (
-\begin{DoxyParamCaption}
-\item[{\-U\-I\-N\-T32}]{channel}
-\end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{classSensorBase_af83a99ec4a84a9265a5a077d200c6275}
-\-Check that the digital channel number is valid. \-Verify that the channel number is one of the legal channel numbers. \-Channel numbers are 1-\/based. \hypertarget{classSensorBase_aa9055a030e59812f3a406c5a41366f23}{\index{\-Sensor\-Base@{\-Sensor\-Base}!\-Check\-Relay\-Module@{\-Check\-Relay\-Module}}
-\index{\-Check\-Relay\-Module@{\-Check\-Relay\-Module}!SensorBase@{\-Sensor\-Base}}
-\subsubsection[{\-Check\-Relay\-Module}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Sensor\-Base\-::\-Check\-Relay\-Module} (
-\begin{DoxyParamCaption}
-\item[{\-U\-I\-N\-T32}]{slot}
-\end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{classSensorBase_aa9055a030e59812f3a406c5a41366f23}
-\-Check that the digital module number is valid. \hyperlink{classModule}{\-Module} numbers are the slot number that they are inserted in. \hypertarget{classSensorBase_a41deb3044c6a075226fa6e4840265b92}{\index{\-Sensor\-Base@{\-Sensor\-Base}!\-Check\-Solenoid\-Channel@{\-Check\-Solenoid\-Channel}}
-\index{\-Check\-Solenoid\-Channel@{\-Check\-Solenoid\-Channel}!SensorBase@{\-Sensor\-Base}}
-\subsubsection[{\-Check\-Solenoid\-Channel}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Sensor\-Base\-::\-Check\-Solenoid\-Channel} (
-\begin{DoxyParamCaption}
-\item[{\-U\-I\-N\-T32}]{channel}
-\end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{classSensorBase_a41deb3044c6a075226fa6e4840265b92}
-\-Verify that the solenoid channel number is within limits. \hypertarget{classSensorBase_a6e712e05403980ee62ba858f10926496}{\index{\-Sensor\-Base@{\-Sensor\-Base}!\-Check\-Solenoid\-Module@{\-Check\-Solenoid\-Module}}
-\index{\-Check\-Solenoid\-Module@{\-Check\-Solenoid\-Module}!SensorBase@{\-Sensor\-Base}}
-\subsubsection[{\-Check\-Solenoid\-Module}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Sensor\-Base\-::\-Check\-Solenoid\-Module} (
-\begin{DoxyParamCaption}
-\item[{\-U\-I\-N\-T32}]{slot}
-\end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{classSensorBase_a6e712e05403980ee62ba858f10926496}
-\-Verify that the solenoid module is correct. \-Verify that the solenoid module is slot 8 or 7. \hypertarget{classSensorBase_aac521c8617e84c41c3e7c921302cdcc6}{\index{\-Sensor\-Base@{\-Sensor\-Base}!\-Delete\-Singletons@{\-Delete\-Singletons}}
-\index{\-Delete\-Singletons@{\-Delete\-Singletons}!SensorBase@{\-Sensor\-Base}}
-\subsubsection[{\-Delete\-Singletons}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Sensor\-Base\-::\-Delete\-Singletons} (
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{classSensorBase_aac521c8617e84c41c3e7c921302cdcc6}
-\-Delete all the singleton classes on the list. \-All the classes that were allocated as singletons need to be deleted so their resources can be freed. \hypertarget{classSensorBase_a8c49fc685a6e7f75c8b96e3b3c16a576}{\index{\-Sensor\-Base@{\-Sensor\-Base}!\-Set\-Default\-Analog\-Module@{\-Set\-Default\-Analog\-Module}}
-\index{\-Set\-Default\-Analog\-Module@{\-Set\-Default\-Analog\-Module}!SensorBase@{\-Sensor\-Base}}
-\subsubsection[{\-Set\-Default\-Analog\-Module}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Sensor\-Base\-::\-Set\-Default\-Analog\-Module} (
-\begin{DoxyParamCaption}
-\item[{\-U\-I\-N\-T32}]{slot}
-\end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{classSensorBase_a8c49fc685a6e7f75c8b96e3b3c16a576}
-\-Sets the default \-Analog module. \-This sets the default analog module to use for objects that are created without specifying the analog module in the constructor. \-The default module is initialized to the first module in the chassis. \hypertarget{classSensorBase_a9918cc94af5adbaa73d92fe5cce66eab}{\index{\-Sensor\-Base@{\-Sensor\-Base}!\-Set\-Default\-Digital\-Module@{\-Set\-Default\-Digital\-Module}}
-\index{\-Set\-Default\-Digital\-Module@{\-Set\-Default\-Digital\-Module}!SensorBase@{\-Sensor\-Base}}
-\subsubsection[{\-Set\-Default\-Digital\-Module}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Sensor\-Base\-::\-Set\-Default\-Digital\-Module} (
-\begin{DoxyParamCaption}
-\item[{\-U\-I\-N\-T32}]{slot}
-\end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{classSensorBase_a9918cc94af5adbaa73d92fe5cce66eab}
-\-Sets the default \-Digital \hyperlink{classModule}{\-Module}. \-This sets the default digital module to use for objects that are created without specifying the digital module in the constructor. \-The default module is initialized to the first module in the chassis. \hypertarget{classSensorBase_a960a069e2bdca4896dd1049fd4ae4aa1}{\index{\-Sensor\-Base@{\-Sensor\-Base}!\-Set\-Default\-Solenoid\-Module@{\-Set\-Default\-Solenoid\-Module}}
-\index{\-Set\-Default\-Solenoid\-Module@{\-Set\-Default\-Solenoid\-Module}!SensorBase@{\-Sensor\-Base}}
-\subsubsection[{\-Set\-Default\-Solenoid\-Module}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Sensor\-Base\-::\-Set\-Default\-Solenoid\-Module} (
-\begin{DoxyParamCaption}
-\item[{\-U\-I\-N\-T32}]{slot}
-\end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{classSensorBase_a960a069e2bdca4896dd1049fd4ae4aa1}
-\-Set the default location for the \hyperlink{classSolenoid}{\-Solenoid} (9472) module. \-Currently the module must be in slot 8, but it might change in the future. 
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{classSensorBase_a8c15101dc7a785d81eafa22644cdd02e}
+Check that the analog channel number is value. Verify that the analog channel number is one of the legal channel numbers. Channel numbers are 1-\/based.
 
-\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\begin{DoxyReturn}{Returns}
+Analog channel is valid 
+\end{DoxyReturn}
+\hypertarget{classSensorBase_a010ca97e0517a7dcaaf81b3d60c7c409}{
+\index{SensorBase@{SensorBase}!CheckAnalogModule@{CheckAnalogModule}}
+\index{CheckAnalogModule@{CheckAnalogModule}!SensorBase@{SensorBase}}
+\subsubsection[{CheckAnalogModule}]{\setlength{\rightskip}{0pt plus 5cm}bool SensorBase::CheckAnalogModule (
+\begin{DoxyParamCaption}
+\item[{UINT8}]{moduleNumber}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{classSensorBase_a010ca97e0517a7dcaaf81b3d60c7c409}
+Check that the analog module number is valid.
+
+\begin{DoxyReturn}{Returns}
+Analog module is valid and present 
+\end{DoxyReturn}
+\hypertarget{classSensorBase_a6b38ec81d351403492b0449dd4615e12}{
+\index{SensorBase@{SensorBase}!CheckDigitalChannel@{CheckDigitalChannel}}
+\index{CheckDigitalChannel@{CheckDigitalChannel}!SensorBase@{SensorBase}}
+\subsubsection[{CheckDigitalChannel}]{\setlength{\rightskip}{0pt plus 5cm}bool SensorBase::CheckDigitalChannel (
+\begin{DoxyParamCaption}
+\item[{UINT32}]{channel}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{classSensorBase_a6b38ec81d351403492b0449dd4615e12}
+Check that the digital channel number is valid. Verify that the channel number is one of the legal channel numbers. Channel numbers are 1-\/based.
+
+\begin{DoxyReturn}{Returns}
+Digital channel is valid 
+\end{DoxyReturn}
+\hypertarget{classSensorBase_a4a80dc8b3693bb5720f03f06e05cd0bc}{
+\index{SensorBase@{SensorBase}!CheckDigitalModule@{CheckDigitalModule}}
+\index{CheckDigitalModule@{CheckDigitalModule}!SensorBase@{SensorBase}}
+\subsubsection[{CheckDigitalModule}]{\setlength{\rightskip}{0pt plus 5cm}bool SensorBase::CheckDigitalModule (
+\begin{DoxyParamCaption}
+\item[{UINT8}]{moduleNumber}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{classSensorBase_a4a80dc8b3693bb5720f03f06e05cd0bc}
+Check that the digital module number is valid.
+
+\begin{DoxyReturn}{Returns}
+Digital module is valid and present 
+\end{DoxyReturn}
+\hypertarget{classSensorBase_ac4319058432968761cd72470b82644ae}{
+\index{SensorBase@{SensorBase}!CheckPWMChannel@{CheckPWMChannel}}
+\index{CheckPWMChannel@{CheckPWMChannel}!SensorBase@{SensorBase}}
+\subsubsection[{CheckPWMChannel}]{\setlength{\rightskip}{0pt plus 5cm}bool SensorBase::CheckPWMChannel (
+\begin{DoxyParamCaption}
+\item[{UINT32}]{channel}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{classSensorBase_ac4319058432968761cd72470b82644ae}
+Check that the digital channel number is valid. Verify that the channel number is one of the legal channel numbers. Channel numbers are 1-\/based.
+
+\begin{DoxyReturn}{Returns}
+\hyperlink{classPWM}{PWM} channel is valid 
+\end{DoxyReturn}
+\hypertarget{classSensorBase_a273815e624f63a1ec6817a6b734832b5}{
+\index{SensorBase@{SensorBase}!CheckPWMModule@{CheckPWMModule}}
+\index{CheckPWMModule@{CheckPWMModule}!SensorBase@{SensorBase}}
+\subsubsection[{CheckPWMModule}]{\setlength{\rightskip}{0pt plus 5cm}bool SensorBase::CheckPWMModule (
+\begin{DoxyParamCaption}
+\item[{UINT8}]{moduleNumber}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{classSensorBase_a273815e624f63a1ec6817a6b734832b5}
+Check that the digital module number is valid.
+
+\begin{DoxyReturn}{Returns}
+Digital module is valid and present 
+\end{DoxyReturn}
+\hypertarget{classSensorBase_af83a99ec4a84a9265a5a077d200c6275}{
+\index{SensorBase@{SensorBase}!CheckRelayChannel@{CheckRelayChannel}}
+\index{CheckRelayChannel@{CheckRelayChannel}!SensorBase@{SensorBase}}
+\subsubsection[{CheckRelayChannel}]{\setlength{\rightskip}{0pt plus 5cm}bool SensorBase::CheckRelayChannel (
+\begin{DoxyParamCaption}
+\item[{UINT32}]{channel}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{classSensorBase_af83a99ec4a84a9265a5a077d200c6275}
+Check that the digital channel number is valid. Verify that the channel number is one of the legal channel numbers. Channel numbers are 1-\/based.
+
+\begin{DoxyReturn}{Returns}
+\hyperlink{classRelay}{Relay} channel is valid 
+\end{DoxyReturn}
+\hypertarget{classSensorBase_aa720a37953f69dd8a742e3707cbbb8ac}{
+\index{SensorBase@{SensorBase}!CheckRelayModule@{CheckRelayModule}}
+\index{CheckRelayModule@{CheckRelayModule}!SensorBase@{SensorBase}}
+\subsubsection[{CheckRelayModule}]{\setlength{\rightskip}{0pt plus 5cm}bool SensorBase::CheckRelayModule (
+\begin{DoxyParamCaption}
+\item[{UINT8}]{moduleNumber}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{classSensorBase_aa720a37953f69dd8a742e3707cbbb8ac}
+Check that the digital module number is valid.
+
+\begin{DoxyReturn}{Returns}
+Digital module is valid and present 
+\end{DoxyReturn}
+\hypertarget{classSensorBase_a41deb3044c6a075226fa6e4840265b92}{
+\index{SensorBase@{SensorBase}!CheckSolenoidChannel@{CheckSolenoidChannel}}
+\index{CheckSolenoidChannel@{CheckSolenoidChannel}!SensorBase@{SensorBase}}
+\subsubsection[{CheckSolenoidChannel}]{\setlength{\rightskip}{0pt plus 5cm}bool SensorBase::CheckSolenoidChannel (
+\begin{DoxyParamCaption}
+\item[{UINT32}]{channel}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{classSensorBase_a41deb3044c6a075226fa6e4840265b92}
+Verify that the solenoid channel number is within limits.
+
+\begin{DoxyReturn}{Returns}
+\hyperlink{classSolenoid}{Solenoid} channel is valid 
+\end{DoxyReturn}
+\hypertarget{classSensorBase_a93b945da6cc5fc0e8eca68bf2749ff65}{
+\index{SensorBase@{SensorBase}!CheckSolenoidModule@{CheckSolenoidModule}}
+\index{CheckSolenoidModule@{CheckSolenoidModule}!SensorBase@{SensorBase}}
+\subsubsection[{CheckSolenoidModule}]{\setlength{\rightskip}{0pt plus 5cm}bool SensorBase::CheckSolenoidModule (
+\begin{DoxyParamCaption}
+\item[{UINT8}]{moduleNumber}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{classSensorBase_a93b945da6cc5fc0e8eca68bf2749ff65}
+Check that the solenoid module number is valid.
+
+\begin{DoxyReturn}{Returns}
+\hyperlink{classSolenoid}{Solenoid} module is valid and present 
+\end{DoxyReturn}
+\hypertarget{classSensorBase_aac521c8617e84c41c3e7c921302cdcc6}{
+\index{SensorBase@{SensorBase}!DeleteSingletons@{DeleteSingletons}}
+\index{DeleteSingletons@{DeleteSingletons}!SensorBase@{SensorBase}}
+\subsubsection[{DeleteSingletons}]{\setlength{\rightskip}{0pt plus 5cm}void SensorBase::DeleteSingletons (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{classSensorBase_aac521c8617e84c41c3e7c921302cdcc6}
+Delete all the singleton classes on the list. All the classes that were allocated as singletons need to be deleted so their resources can be freed. 
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
 \item 
-\-Sensor\-Base.\-h\item 
-\-Sensor\-Base.\-cpp\end{DoxyCompactItemize}
+SensorBase.h\item 
+SensorBase.cpp\end{DoxyCompactItemize}
