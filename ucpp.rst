@@ -11,7 +11,7 @@ easy as::
 
    $ git clone https://github.com/nikitakit/ucpp.git
 
-If you want to clone in the /usr hierarchy (like /usr/local/share):
+If you want to clone in the /usr hierarchy (like /usr/local/share)::
 
    $ sudo mkdir ucpp
    $ sudo chown 'YOUR SYSTEM USER NAME HERE' ucpp
