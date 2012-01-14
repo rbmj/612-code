@@ -1,4 +1,4 @@
-/* main.h
+/* update.cpp
  *
  * Copyright (c) 2011, 2012 Chantilly Robotics <chantilly612@gmail.com>
  *
@@ -16,39 +16,18 @@
  */
 
 /*
- * Define robot_class, which inherits from IterativeRobot and is used
- * to provide the WPILib Framework with the code for the robot.
+ * Implement registry.  This is really easy.
  */
+ 
+#include "update.h"
 
-#ifndef INC_MAIN_H_INC
-#define INC_MAIN_H_INC
+void update_registry::register_func(update_registry::update_func f, void * a) {
+	registry.push_back(registry_entry(f, a));
+}
 
-#include <IterativeRobot.h>
-#include <RobotDrive.h>
-
-class robot_class : public IterativeRobot {
-public:
-    //ctor
-    robot_class();
-
-    //Virtual Overrides:
-    //init
-    void RobotInit();
-    void DisabledInit();
-    void AutonomousInit();
-    void TeleopInit();
-    //periodics
-    void DisabledPeriodic();
-    void AutonomousPeriodic();
-    void TeleopPeriodic();
-    //continuous
-    void DisabledContinuous();
-    void AutonomousContinuous();
-    void TeleopContinuous();
-
-    //added methods
-    void update_sensors();
-
-};
-
-#endif
+void update_registry::update() {
+	unsigned upper = registry.size();
+	for (unsigned i = 0; i < upper; ++i) {
+		registry[i]();
+	}
+}	

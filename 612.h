@@ -1,4 +1,4 @@
-/* main.h
+/* 612.h
  *
  * Copyright (c) 2011, 2012 Chantilly Robotics <chantilly612@gmail.com>
  *
@@ -16,39 +16,12 @@
  */
 
 /*
- * Define robot_class, which inherits from IterativeRobot and is used
- * to provide the WPILib Framework with the code for the robot.
+ * Project-Wide defines!
  */
+ 
+#ifndef INC_612_H
+#define INC_612_H
 
-#ifndef INC_MAIN_H_INC
-#define INC_MAIN_H_INC
-
-#include <IterativeRobot.h>
-#include <RobotDrive.h>
-
-class robot_class : public IterativeRobot {
-public:
-    //ctor
-    robot_class();
-
-    //Virtual Overrides:
-    //init
-    void RobotInit();
-    void DisabledInit();
-    void AutonomousInit();
-    void TeleopInit();
-    //periodics
-    void DisabledPeriodic();
-    void AutonomousPeriodic();
-    void TeleopPeriodic();
-    //continuous
-    void DisabledContinuous();
-    void AutonomousContinuous();
-    void TeleopContinuous();
-
-    //added methods
-    void update_sensors();
-
-};
+typedef UINT32 uinteger;
 
 #endif

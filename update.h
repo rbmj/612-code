@@ -1,4 +1,4 @@
-/* main.h
+/* update.h
  *
  * Copyright (c) 2011, 2012 Chantilly Robotics <chantilly612@gmail.com>
  *
@@ -16,39 +16,32 @@
  */
 
 /*
- * Define robot_class, which inherits from IterativeRobot and is used
- * to provide the WPILib Framework with the code for the robot.
+ * Provide registry for update functions.  Just make a function and it'll
+ * automagically get called when you register it!!!
  */
+ 
+#ifndef UPDATE_H_INC
+#define UPDATE_H_INC
 
-#ifndef INC_MAIN_H_INC
-#define INC_MAIN_H_INC
+#include <vector>
 
-#include <IterativeRobot.h>
-#include <RobotDrive.h>
-
-class robot_class : public IterativeRobot {
+class update_registry {
 public:
-    //ctor
-    robot_class();
-
-    //Virtual Overrides:
-    //init
-    void RobotInit();
-    void DisabledInit();
-    void AutonomousInit();
-    void TeleopInit();
-    //periodics
-    void DisabledPeriodic();
-    void AutonomousPeriodic();
-    void TeleopPeriodic();
-    //continuous
-    void DisabledContinuous();
-    void AutonomousContinuous();
-    void TeleopContinuous();
-
-    //added methods
-    void update_sensors();
-
+	typedef void(*update_func)(void*);
+	void register_func(update_func, void*);
+	void update();
+private:
+	class registry_entry {
+	private:
+		update_func func;
+		void * arg;
+	public:
+		void operator()() {
+			func(arg);
+		}
+		registry_entry(update_func f, void * v) : func(f), arg(v) {}
+	};
+	std::vector<registry_entry> registry;
 };
 
 #endif

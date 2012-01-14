@@ -23,13 +23,7 @@
 #include "ports.h"
 
 //constructor - initialize drive
-robot_class::robot_class() :
-    drive (     left_front_motor.jag,  //KEEP THIS ORDER!  IT'S IMPORTANT!
-                left_rear_motor.jag,   //LF, LR, RF, RR -- see documentation
-                right_front_motor.jag, //for more details
-                right_rear_motor.jag
-    )
-{
+robot_class::robot_class() {
     GetWatchdog().SetEnabled(false); //we don't want Watchdog
     //now set the necessary inversions
     drive.SetInvertedMotor(left_front_motor.type,  left_front_motor.reverse);
@@ -88,19 +82,12 @@ void robot_class::TeleopContinuous() {
         //explicitly state drive power is based on Y axis of that side joy
         drive.TankDrive(left, right);
     }
-    if (left_joystick.GetRawButton(6)) {        // button 6 on left  joystick move arm forward
-		minibot_jag.Set(0.2);
-	} else if (left_joystick.GetRawButton(7)) { // button 7 on right joystick move arm backward
-		minibot_jag.Set(-0.2);
-	} else {
-		minibot_jag.Set(0);
-	}
     Wait(0.005); //let the CPU rest a little - 5 ms isn't too long
 }
 
 void robot_class::update_sensors() {
-    //update all sensor values
-    //currently, no sensors to update!
+    //run functions in update registry
+    registry.update();
 }
 
 //the following macro tells the library that we want to generate code

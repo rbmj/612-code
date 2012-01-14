@@ -26,6 +26,7 @@
 #include <RobotDrive.h>
 #include <Jaguar.h>
 #include <Joystick.h>
+#include "update.h"
 
 //bundle a reference to a Jaguar and some constants to aid in setting up the
 //robot's drivetrain.  Use this for jaguars that will be used in the RobotDrive
@@ -44,7 +45,6 @@ extern drive_jaguar left_front_motor;
 extern drive_jaguar right_front_motor;
 extern drive_jaguar left_rear_motor;
 extern drive_jaguar right_rear_motor;
-extern Jaguar       minibot_jag;
 
 //DIOs
 
@@ -56,5 +56,9 @@ extern Jaguar       minibot_jag;
 extern Joystick left_joystick;
 extern Joystick right_joystick;
 extern Joystick gunner_joystick;
+
+//Virtual Devices
+extern RobotDrive drive;
+extern update_registry registry;
 
 #endif

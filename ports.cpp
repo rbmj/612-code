@@ -23,6 +23,7 @@
  */
 
 #include "ports.h"
+#include "update.h"
 
 //just define & initialize all of the consts in ports.h
 
@@ -33,7 +34,6 @@ Jaguar left_rear_jag        ( 4,     2 );
 Jaguar right_rear_jag       ( 4,     3 );
 Jaguar right_front_jag      ( 4,     4 );
 Jaguar left_front_jag       ( 4,     5 );
-Jaguar minibot_jag          ( 4,     1 );
 
 //DIOs                       SLOT   PORT
 //sample_dio                ( 4,     1,
@@ -48,7 +48,18 @@ Joystick            left_joystick  ( 1 );
 Joystick            right_joystick ( 2 );
 Joystick            gunner_joystick( 3 );
 
-//initialization of custom structs:
+//initialization of virtual devices:
+
+//RobotDrive
+RobotDrive drive (
+    left_front_motor.jag,  //KEEP THIS ORDER!  IT'S IMPORTANT!
+    left_rear_motor.jag,   //LF, LR, RF, RR -- see documentation
+    right_front_motor.jag, //for more details
+    right_rear_motor.jag
+);
+
+//update_registry
+update_registry registry;
 
 //drive_jaguar                           JAGUAR&                 TYPE               REVERSE
 drive_jaguar left_front_motor =     { left_front_jag,  RobotDrive::kFrontLeftMotor,  true };
