@@ -29,6 +29,7 @@ class update_registry {
 public:
 	typedef void(*update_func)(void*);
 	void register_func(update_func, void*);
+    void unregister_func(update_func, void*);
 	void update();
 private:
 	class registry_entry {
@@ -39,9 +40,19 @@ private:
 		void operator()() {
 			func(arg);
 		}
+        bool isNULL() {
+            return (func == NULL);
+        }
+        bool operator==(const registry_entry& other) const {
+            return (func == other.func && arg == other.arg);
+        }
+        bool operator!=(const registry_entry& other) const {
+            return !(*this == other);
+        }
 		registry_entry(update_func f, void * v) : func(f), arg(v) {}
 	};
 	std::vector<registry_entry> registry;
+    std::vector<registry_entry>::iterator find_entry(const registry_entry&);
 };
 
 #endif

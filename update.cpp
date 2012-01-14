@@ -19,10 +19,22 @@
  * Implement registry.  This is really easy.
  */
  
+#include <algorithm>
 #include "update.h"
 
 void update_registry::register_func(update_registry::update_func f, void * a) {
-	registry.push_back(registry_entry(f, a));
+    update_registry::registry_entry e(f, a);
+    if (find_entry(e) == registry.end()) {
+        registry.push_back(registry_entry(f, a));
+    }
+}
+
+void update_registry::unregister_func(update_registry::update_func f, void * a) {
+    update_registry::registry_entry e(f, a);
+    std::vector<update_registry::registry_entry>::iterator i = find_entry(e);
+    if (i != registry.end()) {
+        registry.remove(i);
+    }
 }
 
 void update_registry::update() {
@@ -30,4 +42,9 @@ void update_registry::update() {
 	for (unsigned i = 0; i < upper; ++i) {
 		registry[i]();
 	}
-}	
+}
+
+std::vector<update_registry::registry_entry>::iterator
+find_entry(const update_registry::registry_entry& e) {
+    return std::find(registry.begin(), registry.end(), e);
+}
