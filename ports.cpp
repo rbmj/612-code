@@ -29,24 +29,39 @@
 
 //PORTS TABLE
 
-//PWMs                       SLOT   PORT
-Jaguar left_rear_jag        ( 4,     2 );
-Jaguar right_rear_jag       ( 4,     3 );
-Jaguar right_front_jag      ( 4,     4 );
-Jaguar left_front_jag       ( 4,     5 );
+//PWMs                                  SLOT   PORT
+Jaguar right_front_jag                  ( 4,     1 );
+Jaguar right_rear_jag                   ( 4,     2 );
+Jaguar left_front_jag                   ( 4,     3 );
+Jaguar left_rear_jag                    ( 4,     4 );
+Jaguar right_launcher_jag               ( 4,     5 );
+Jaguar left_launcher_jag                ( 4,     6 );
+Jaguar turret_XY_control_jag            ( 4,     7 );
+Jaguar turret_Z_control_jag             ( 4,     8 );
 
-//DIOs                       SLOT   PORT
-//sample_dio                ( 4,     1,
-//                                   2 );
+//DIOs                                  SLOT   PORT
+Encoder right_drive                     ( 4,     1,
+                                                 2 );
+Encoder left_drive                      ( 4,     3
+                                                 4 );
+Encoder launcher_wheel                  ( 4,     5,
+                                                 6 );
+Encoder launch_angle                    ( 4,     7,
+                                                 8 );
+DigitalInput launch_angle_limit_switch  ( 6,     1 );
+Ultrasonic front_sensor                 ( 6,     2,
+                                                 3 );
 
-//AIOs                       SLOT   PORT
+//AIOs                                  SLOT   PORT
 
-//Relays                     SLOT   PORT
+//Relays                                SLOT   PORT
+Relay roller_spike_1                    ( 4,     1 );
+Relay roller_spike_2                    ( 4,     2 );
 
-//USBs (on driver station)         PORT
-Joystick            left_joystick  ( 1 );
-Joystick            right_joystick ( 2 );
-Joystick            gunner_joystick( 3 );
+//USBs (on driver station)                     PORT
+Joystick left_joystick                         ( 1 );
+Joystick right_joystick                        ( 2 );
+Joystick gunner_joystick                       ( 3 );
 
 //initialization of virtual devices:
 

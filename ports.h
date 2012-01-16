@@ -45,12 +45,24 @@ extern drive_jaguar left_front_motor;
 extern drive_jaguar right_front_motor;
 extern drive_jaguar left_rear_motor;
 extern drive_jaguar right_rear_motor;
+extern Jaguar left_launcher_jag;
+extern Jaguar right_launcher_jag;
+extern Jaguar turret_XY_control_jag;
+extern Jaguar turret_Z_control_jag;
 
 //DIOs
+extern Encoder right_drive;
+extern Encoder left_drive;
+extern Encoder launcher_wheel;
+extern Encoder launch_angle;
+extern Ultrasonic front_sensor;
+extern DigitalInput launch_angle_limit_switch;
 
 //AIOs
 
 //Relays
+extern Relay roller_spike_1;
+extern Relay roller_spike_2;
 
 //USBs (on driver station)
 extern Joystick left_joystick;
