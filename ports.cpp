@@ -48,6 +48,7 @@ Encoder launcher_wheel                  ( 4,     5,
                                                  6 );
 Encoder launch_angle                    ( 4,     7,
                                                  8 );
+
 DigitalInput launch_angle_limit_switch  ( 6,     1 );
 Ultrasonic front_sensor                 ( 6,     2,
                                                  3 );
