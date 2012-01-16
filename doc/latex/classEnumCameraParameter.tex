@@ -1,0 +1,100 @@
+\hypertarget{classEnumCameraParameter}{
+\section{EnumCameraParameter Class Reference}
+\label{classEnumCameraParameter}\index{EnumCameraParameter@{EnumCameraParameter}}
+}
+
+
+{\ttfamily \#include $<$EnumCameraParameter.h$>$}
+
+Inheritance diagram for EnumCameraParameter:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classEnumCameraParameter}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classEnumCameraParameter_ae53765dea6e8418732b3b0d855c741d4}{EnumCameraParameter} (const char $\ast$setString, const char $\ast$getString, bool requiresRestart, const char $\ast$const $\ast$choices, int numChoices)
+\item 
+virtual bool \hyperlink{classEnumCameraParameter_a56ccba7b3ce50b5ea37601d661ae69fb}{CheckChanged} (bool \&changed, char $\ast$param)
+\item 
+virtual void \hyperlink{classEnumCameraParameter_ac7ffca634a3cd7091cebc2384bdc6873}{GetParamFromString} (const char $\ast$string, int stringLength)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Enumerated camera parameter. This class represents a camera parameter that takes an enumerated type for a value. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classEnumCameraParameter_ae53765dea6e8418732b3b0d855c741d4}{
+\index{EnumCameraParameter@{EnumCameraParameter}!EnumCameraParameter@{EnumCameraParameter}}
+\index{EnumCameraParameter@{EnumCameraParameter}!EnumCameraParameter@{EnumCameraParameter}}
+\subsubsection[{EnumCameraParameter}]{\setlength{\rightskip}{0pt plus 5cm}EnumCameraParameter::EnumCameraParameter (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{setString, }
+\item[{const char $\ast$}]{getString, }
+\item[{bool}]{requiresRestart, }
+\item[{const char $\ast$const $\ast$}]{choices, }
+\item[{int}]{numChoices}
+\end{DoxyParamCaption}
+)}}
+\label{classEnumCameraParameter_ae53765dea6e8418732b3b0d855c741d4}
+Constructor for an enumeration camera parameter. Enumeration camera parameters have lists of value choices and strings that go with them. There are also C++ enumerations to go along with them. 
+\begin{DoxyParams}{Parameters}
+{\em setString} & The string for an HTTP request to set the value. \\
+\hline
+{\em getString} & The string for an HTTP request to get the value. \\
+\hline
+{\em choices} & An array of strings of the parameter choices set in the http strings. \\
+\hline
+{\em numChoices} & The number of choices in the enumeration set. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classEnumCameraParameter_a56ccba7b3ce50b5ea37601d661ae69fb}{
+\index{EnumCameraParameter@{EnumCameraParameter}!CheckChanged@{CheckChanged}}
+\index{CheckChanged@{CheckChanged}!EnumCameraParameter@{EnumCameraParameter}}
+\subsubsection[{CheckChanged}]{\setlength{\rightskip}{0pt plus 5cm}bool EnumCameraParameter::CheckChanged (
+\begin{DoxyParamCaption}
+\item[{bool \&}]{changed, }
+\item[{char $\ast$}]{param}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classEnumCameraParameter_a56ccba7b3ce50b5ea37601d661ae69fb}
+Check if a parameter has changed and update. Check if a parameter has changed and send the update string if it has changed. This is called from the loop in the parameter task loop. \begin{DoxyReturn}{Returns}
+true if the camera needs to restart 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{classIntCameraParameter_ad3413a2b04463911f435e8d927b8a490}{IntCameraParameter}.
+
+\hypertarget{classEnumCameraParameter_ac7ffca634a3cd7091cebc2384bdc6873}{
+\index{EnumCameraParameter@{EnumCameraParameter}!GetParamFromString@{GetParamFromString}}
+\index{GetParamFromString@{GetParamFromString}!EnumCameraParameter@{EnumCameraParameter}}
+\subsubsection[{GetParamFromString}]{\setlength{\rightskip}{0pt plus 5cm}void EnumCameraParameter::GetParamFromString (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{string, }
+\item[{int}]{stringLength}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classEnumCameraParameter_ac7ffca634a3cd7091cebc2384bdc6873}
+Extract the parameter value from a string. Extract the parameter value from the camera status message. 
+\begin{DoxyParams}{Parameters}
+{\em string} & The string returned from the camera. \\
+\hline
+{\em length} & The length of the string from the camera. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{classIntCameraParameter_a12c5199693d1971c6feaaf634d50cca9}{IntCameraParameter}.
+
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+Vision/EnumCameraParameter.h\item 
+Vision/EnumCameraParameter.cpp\end{DoxyCompactItemize}

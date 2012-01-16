@@ -1,0 +1,117 @@
+\hypertarget{classPIDCommand}{
+\section{PIDCommand Class Reference}
+\label{classPIDCommand}\index{PIDCommand@{PIDCommand}}
+}
+Inheritance diagram for PIDCommand:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.010753cm]{classPIDCommand}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classPIDCommand_a3e1faabb2c85d21103f6f93e10c1d7bf}{
+{\bfseries PIDCommand} (const char $\ast$name, double p, double i, double d)}
+\label{classPIDCommand_a3e1faabb2c85d21103f6f93e10c1d7bf}
+
+\item 
+\hypertarget{classPIDCommand_a5f4d67e2fc239c4ceb3d4fb6855d6482}{
+{\bfseries PIDCommand} (const char $\ast$name, double p, double i, double d, double period)}
+\label{classPIDCommand_a5f4d67e2fc239c4ceb3d4fb6855d6482}
+
+\item 
+\hypertarget{classPIDCommand_a34235b8d38c75427e7c21e9e8dca4fdc}{
+{\bfseries PIDCommand} (double p, double i, double d)}
+\label{classPIDCommand_a34235b8d38c75427e7c21e9e8dca4fdc}
+
+\item 
+\hypertarget{classPIDCommand_a75eaf6a6fe768760b62f4f7fab412234}{
+{\bfseries PIDCommand} (double p, double i, double d, double period)}
+\label{classPIDCommand_a75eaf6a6fe768760b62f4f7fab412234}
+
+\item 
+\hypertarget{classPIDCommand_ab20c7fb893cf98b084e069d35bf45df8}{
+void {\bfseries SetSetpointRelative} (double deltaSetpoint)}
+\label{classPIDCommand_ab20c7fb893cf98b084e069d35bf45df8}
+
+\item 
+\hypertarget{classPIDCommand_ac37ce85a4755062fb68ec9b01d595155}{
+virtual void {\bfseries PIDWrite} (float output)}
+\label{classPIDCommand_ac37ce85a4755062fb68ec9b01d595155}
+
+\item 
+\hypertarget{classPIDCommand_a8cb2b16bfc3154864a3ba26e2bd8c435}{
+virtual double {\bfseries PIDGet} ()}
+\label{classPIDCommand_a8cb2b16bfc3154864a3ba26e2bd8c435}
+
+\item 
+\hypertarget{classPIDCommand_aebeecf89c7294085cf807b8c7e07b996}{
+\hyperlink{classNetworkTable}{NetworkTable} $\ast$ {\bfseries GetControllerTable} ()}
+\label{classPIDCommand_aebeecf89c7294085cf807b8c7e07b996}
+
+\item 
+\hypertarget{classPIDCommand_a7ffb451ea1e01a718b7df7f1dbc51ae0}{
+virtual std::string {\bfseries GetType} ()}
+\label{classPIDCommand_a7ffb451ea1e01a718b7df7f1dbc51ae0}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classPIDCommand_ac00fd41bf3d9a190f05aea9a668306ca}{
+\hyperlink{classPIDController}{PIDController} $\ast$ {\bfseries GetPIDController} ()}
+\label{classPIDCommand_ac00fd41bf3d9a190f05aea9a668306ca}
+
+\item 
+\hypertarget{classPIDCommand_a80cefbe5802ad9f939932075ecf9aea6}{
+virtual void {\bfseries \_\-Initialize} ()}
+\label{classPIDCommand_a80cefbe5802ad9f939932075ecf9aea6}
+
+\item 
+\hypertarget{classPIDCommand_ac1c216bd406a5ec5a38157072067c15b}{
+virtual void {\bfseries \_\-Interrupted} ()}
+\label{classPIDCommand_ac1c216bd406a5ec5a38157072067c15b}
+
+\item 
+\hypertarget{classPIDCommand_a00c14fa58eb555ca6b566b83c5108d35}{
+virtual void {\bfseries \_\-End} ()}
+\label{classPIDCommand_a00c14fa58eb555ca6b566b83c5108d35}
+
+\item 
+\hypertarget{classPIDCommand_a2273f901bc79b081dadfe18f629ea4e5}{
+void {\bfseries SetSetpoint} (double setpoint)}
+\label{classPIDCommand_a2273f901bc79b081dadfe18f629ea4e5}
+
+\item 
+\hypertarget{classPIDCommand_adadad2058b4449eb812dd1056454e866}{
+double {\bfseries GetSetpoint} ()}
+\label{classPIDCommand_adadad2058b4449eb812dd1056454e866}
+
+\item 
+\hypertarget{classPIDCommand_a246177822d70068c8675b4ae7ccd8d66}{
+double {\bfseries GetPosition} ()}
+\label{classPIDCommand_a246177822d70068c8675b4ae7ccd8d66}
+
+\item 
+\hypertarget{classPIDCommand_a6cb74d9a50b3da9258a2d6fdd2696e56}{
+void {\bfseries SetSetpointRange} (double a, double b)}
+\label{classPIDCommand_a6cb74d9a50b3da9258a2d6fdd2696e56}
+
+\item 
+\hypertarget{classPIDCommand_ab7ed9a7dc35984f9d0382c0b53a043e3}{
+virtual double {\bfseries ReturnPIDInput} ()=0}
+\label{classPIDCommand_ab7ed9a7dc35984f9d0382c0b53a043e3}
+
+\item 
+\hypertarget{classPIDCommand_acff5c0d103980c440aa72415002287ac}{
+virtual void {\bfseries UsePIDOutput} (double output)=0}
+\label{classPIDCommand_acff5c0d103980c440aa72415002287ac}
+
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+Commands/PIDCommand.h\item 
+Commands/PIDCommand.cpp\end{DoxyCompactItemize}

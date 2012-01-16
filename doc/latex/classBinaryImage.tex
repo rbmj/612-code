@@ -1,0 +1,108 @@
+\hypertarget{classBinaryImage}{
+\section{BinaryImage Class Reference}
+\label{classBinaryImage}\index{BinaryImage@{BinaryImage}}
+}
+Inheritance diagram for BinaryImage:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{classBinaryImage}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{classBinaryImage_a3fd87b1afd71c9b11df7c093160446bb}{GetNumberParticles} ()
+\item 
+\hyperlink{structParticleAnalysisReport__struct}{ParticleAnalysisReport} \hyperlink{classBinaryImage_af4081d0bdd38f0a7bc61dfc847e37bab}{GetParticleAnalysisReport} (int particleNumber)
+\item 
+void \hyperlink{classBinaryImage_ab6ac2e623b1c674ae29a49bb8581d687}{GetParticleAnalysisReport} (int particleNumber, \hyperlink{structParticleAnalysisReport__struct}{ParticleAnalysisReport} $\ast$par)
+\item 
+vector$<$ \hyperlink{structParticleAnalysisReport__struct}{ParticleAnalysisReport} $>$ $\ast$ \hyperlink{classBinaryImage_acbb38776ca7e84365b0fe6a84d81bd08}{GetOrderedParticleAnalysisReports} ()
+\item 
+virtual void \hyperlink{classBinaryImage_a90af62ef3e71b4b2b487ebad7410042f}{Write} (const char $\ast$fileName)
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classBinaryImage_a3fd87b1afd71c9b11df7c093160446bb}{
+\index{BinaryImage@{BinaryImage}!GetNumberParticles@{GetNumberParticles}}
+\index{GetNumberParticles@{GetNumberParticles}!BinaryImage@{BinaryImage}}
+\subsubsection[{GetNumberParticles}]{\setlength{\rightskip}{0pt plus 5cm}int BinaryImage::GetNumberParticles (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classBinaryImage_a3fd87b1afd71c9b11df7c093160446bb}
+Get then number of particles for the image. \begin{DoxyReturn}{Returns}
+the number of particles found for the image. 
+\end{DoxyReturn}
+\hypertarget{classBinaryImage_acbb38776ca7e84365b0fe6a84d81bd08}{
+\index{BinaryImage@{BinaryImage}!GetOrderedParticleAnalysisReports@{GetOrderedParticleAnalysisReports}}
+\index{GetOrderedParticleAnalysisReports@{GetOrderedParticleAnalysisReports}!BinaryImage@{BinaryImage}}
+\subsubsection[{GetOrderedParticleAnalysisReports}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$ {\bf ParticleAnalysisReport} $>$ $\ast$ BinaryImage::GetOrderedParticleAnalysisReports (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classBinaryImage_acbb38776ca7e84365b0fe6a84d81bd08}
+Get an ordered vector of particles for the image. Create a vector of particle analysis reports sorted by size for an image. The vector contains the actual report structures. \begin{DoxyReturn}{Returns}
+a pointer to the vector of particle analysis reports. The caller must delete the vector when finished using it. 
+\end{DoxyReturn}
+\hypertarget{classBinaryImage_af4081d0bdd38f0a7bc61dfc847e37bab}{
+\index{BinaryImage@{BinaryImage}!GetParticleAnalysisReport@{GetParticleAnalysisReport}}
+\index{GetParticleAnalysisReport@{GetParticleAnalysisReport}!BinaryImage@{BinaryImage}}
+\subsubsection[{GetParticleAnalysisReport}]{\setlength{\rightskip}{0pt plus 5cm}{\bf ParticleAnalysisReport} BinaryImage::GetParticleAnalysisReport (
+\begin{DoxyParamCaption}
+\item[{int}]{particleNumber}
+\end{DoxyParamCaption}
+)}}
+\label{classBinaryImage_af4081d0bdd38f0a7bc61dfc847e37bab}
+Get a single particle analysis report. Get one (of possibly many) particle analysis reports for an image. 
+\begin{DoxyParams}{Parameters}
+{\em particleNumber} & Which particle analysis report to return. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the selected particle analysis report 
+\end{DoxyReturn}
+\hypertarget{classBinaryImage_ab6ac2e623b1c674ae29a49bb8581d687}{
+\index{BinaryImage@{BinaryImage}!GetParticleAnalysisReport@{GetParticleAnalysisReport}}
+\index{GetParticleAnalysisReport@{GetParticleAnalysisReport}!BinaryImage@{BinaryImage}}
+\subsubsection[{GetParticleAnalysisReport}]{\setlength{\rightskip}{0pt plus 5cm}void BinaryImage::GetParticleAnalysisReport (
+\begin{DoxyParamCaption}
+\item[{int}]{particleNumber, }
+\item[{{\bf ParticleAnalysisReport} $\ast$}]{par}
+\end{DoxyParamCaption}
+)}}
+\label{classBinaryImage_ab6ac2e623b1c674ae29a49bb8581d687}
+Get a single particle analysis report. Get one (of possibly many) particle analysis reports for an image. This version could be more efficient when copying many reports. 
+\begin{DoxyParams}{Parameters}
+{\em particleNumber} & Which particle analysis report to return. \\
+\hline
+{\em par} & the selected particle analysis report \\
+\hline
+\end{DoxyParams}
+\hypertarget{classBinaryImage_a90af62ef3e71b4b2b487ebad7410042f}{
+\index{BinaryImage@{BinaryImage}!Write@{Write}}
+\index{Write@{Write}!BinaryImage@{BinaryImage}}
+\subsubsection[{Write}]{\setlength{\rightskip}{0pt plus 5cm}void BinaryImage::Write (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{fileName}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classBinaryImage_a90af62ef3e71b4b2b487ebad7410042f}
+Write a binary image to flash. Writes the binary image to flash on the cRIO for later inspection. 
+\begin{DoxyParams}{Parameters}
+{\em fileName} & the name of the image file written to the flash. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{classImageBase_a46b36b2c97e4f8c3646d15f83be6b269}{ImageBase}.
+
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+Vision/BinaryImage.h\item 
+Vision/BinaryImage.cpp\end{DoxyCompactItemize}

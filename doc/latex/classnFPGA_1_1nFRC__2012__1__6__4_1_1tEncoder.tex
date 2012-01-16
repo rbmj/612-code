@@ -1,0 +1,267 @@
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tEncoder}{
+\section{nFPGA::nFRC\_\-2012\_\-1\_\-6\_\-4::tEncoder Class Reference}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tEncoder}\index{nFPGA::nFRC\_\-2012\_\-1\_\-6\_\-4::tEncoder@{nFPGA::nFRC\_\-2012\_\-1\_\-6\_\-4::tEncoder}}
+}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+union \hyperlink{unionnFPGA_1_1nFRC__2012__1__6__4_1_1tEncoder_1_1tConfig}{tConfig}
+\item 
+union \hyperlink{unionnFPGA_1_1nFRC__2012__1__6__4_1_1tEncoder_1_1tOutput}{tOutput}
+\item 
+union \hyperlink{unionnFPGA_1_1nFRC__2012__1__6__4_1_1tEncoder_1_1tTimerConfig}{tTimerConfig}
+\item 
+union \hyperlink{unionnFPGA_1_1nFRC__2012__1__6__4_1_1tEncoder_1_1tTimerOutput}{tTimerOutput}
+\end{DoxyCompactItemize}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum {\bfseries tIfaceConstants} \{ {\bfseries kNumSystems} =  4
+ \}
+\item 
+enum {\bfseries tOutput\_\-IfaceConstants} 
+\item 
+enum {\bfseries tConfig\_\-IfaceConstants} 
+\item 
+enum {\bfseries tReset\_\-IfaceConstants} 
+\item 
+enum {\bfseries tTimerOutput\_\-IfaceConstants} 
+\item 
+enum {\bfseries tTimerConfig\_\-IfaceConstants} 
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tEncoder_a9fff1f12a74329c7e7bf2a7acacb2f79}{
+virtual \hyperlink{classnFPGA_1_1tSystemInterface}{tSystemInterface} $\ast$ {\bfseries getSystemInterface} ()=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tEncoder_a9fff1f12a74329c7e7bf2a7acacb2f79}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tEncoder_a530ee0c17e283796e573a24862e05292}{
+virtual unsigned char {\bfseries getSystemIndex} ()=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tEncoder_a530ee0c17e283796e573a24862e05292}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tEncoder_ad726298f4ed3161c0c657296289b8432}{
+virtual \hyperlink{unionnFPGA_1_1nFRC__2012__1__6__4_1_1tEncoder_1_1tOutput}{tOutput} {\bfseries readOutput} (tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tEncoder_ad726298f4ed3161c0c657296289b8432}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tEncoder_a8705ebbf0b026154591aa9bd48729d9f}{
+virtual bool {\bfseries readOutput\_\-Direction} (tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tEncoder_a8705ebbf0b026154591aa9bd48729d9f}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tEncoder_a8751d7c950e1b56ce55f53e1fec8fb00}{
+virtual signed int {\bfseries readOutput\_\-Value} (tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tEncoder_a8751d7c950e1b56ce55f53e1fec8fb00}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tEncoder_a9cf83e7263e39fcf34b2e7f9e24c0c91}{
+virtual void {\bfseries writeConfig} (\hyperlink{unionnFPGA_1_1nFRC__2012__1__6__4_1_1tEncoder_1_1tConfig}{tConfig} value, tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tEncoder_a9cf83e7263e39fcf34b2e7f9e24c0c91}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tEncoder_a8077fffa1522b40840febea770cca973}{
+virtual void {\bfseries writeConfig\_\-ASource\_\-Channel} (unsigned char value, tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tEncoder_a8077fffa1522b40840febea770cca973}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tEncoder_a4d2380a7752faa45b0afdb3c3f92474f}{
+virtual void {\bfseries writeConfig\_\-ASource\_\-Module} (unsigned char value, tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tEncoder_a4d2380a7752faa45b0afdb3c3f92474f}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tEncoder_ab337af09776a63fb64d309b715f9b5d0}{
+virtual void {\bfseries writeConfig\_\-ASource\_\-AnalogTrigger} (bool value, tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tEncoder_ab337af09776a63fb64d309b715f9b5d0}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tEncoder_a48b5143f0096d4488873b598382e6296}{
+virtual void {\bfseries writeConfig\_\-BSource\_\-Channel} (unsigned char value, tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tEncoder_a48b5143f0096d4488873b598382e6296}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tEncoder_a8bea9f36ae458ba4689ac98b9535da2a}{
+virtual void {\bfseries writeConfig\_\-BSource\_\-Module} (unsigned char value, tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tEncoder_a8bea9f36ae458ba4689ac98b9535da2a}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tEncoder_a39f7c75cc03f1b10692ad83e6dad42fd}{
+virtual void {\bfseries writeConfig\_\-BSource\_\-AnalogTrigger} (bool value, tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tEncoder_a39f7c75cc03f1b10692ad83e6dad42fd}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tEncoder_a354b81d8787ee25a67ad5fcb3bcf717b}{
+virtual void {\bfseries writeConfig\_\-IndexSource\_\-Channel} (unsigned char value, tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tEncoder_a354b81d8787ee25a67ad5fcb3bcf717b}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tEncoder_ab75692d25c79950c79886d1b899dd2be}{
+virtual void {\bfseries writeConfig\_\-IndexSource\_\-Module} (unsigned char value, tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tEncoder_ab75692d25c79950c79886d1b899dd2be}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tEncoder_aa260053fd48a2d1c53411064e0f80675}{
+virtual void {\bfseries writeConfig\_\-IndexSource\_\-AnalogTrigger} (bool value, tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tEncoder_aa260053fd48a2d1c53411064e0f80675}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tEncoder_af666616074045f1655628e71856d4f1f}{
+virtual void {\bfseries writeConfig\_\-IndexActiveHigh} (bool value, tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tEncoder_af666616074045f1655628e71856d4f1f}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tEncoder_a053265b989464cf121b9dea8fe95acc1}{
+virtual void {\bfseries writeConfig\_\-Reverse} (bool value, tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tEncoder_a053265b989464cf121b9dea8fe95acc1}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tEncoder_aab42f4f35bd59260545610055b52a676}{
+virtual void {\bfseries writeConfig\_\-Enable} (bool value, tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tEncoder_aab42f4f35bd59260545610055b52a676}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tEncoder_afee29c9f7782da98fefaac1278e8bcfc}{
+virtual \hyperlink{unionnFPGA_1_1nFRC__2012__1__6__4_1_1tEncoder_1_1tConfig}{tConfig} {\bfseries readConfig} (tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tEncoder_afee29c9f7782da98fefaac1278e8bcfc}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tEncoder_a65974420203694df6433f40b21bcfaeb}{
+virtual unsigned char {\bfseries readConfig\_\-ASource\_\-Channel} (tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tEncoder_a65974420203694df6433f40b21bcfaeb}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tEncoder_a0c199f326fc257b9ef9885067e09708c}{
+virtual unsigned char {\bfseries readConfig\_\-ASource\_\-Module} (tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tEncoder_a0c199f326fc257b9ef9885067e09708c}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tEncoder_a5299abfb561e2f72871ab7107a4f99f8}{
+virtual bool {\bfseries readConfig\_\-ASource\_\-AnalogTrigger} (tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tEncoder_a5299abfb561e2f72871ab7107a4f99f8}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tEncoder_a355be70275dfa1ddf1a43995107dbbc3}{
+virtual unsigned char {\bfseries readConfig\_\-BSource\_\-Channel} (tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tEncoder_a355be70275dfa1ddf1a43995107dbbc3}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tEncoder_a55fbb265074e4d2c65cae172dd9ef6ee}{
+virtual unsigned char {\bfseries readConfig\_\-BSource\_\-Module} (tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tEncoder_a55fbb265074e4d2c65cae172dd9ef6ee}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tEncoder_a153534c8f510f5fb49f3ea7883834fae}{
+virtual bool {\bfseries readConfig\_\-BSource\_\-AnalogTrigger} (tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tEncoder_a153534c8f510f5fb49f3ea7883834fae}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tEncoder_ac4de46761aef1a50c1f8de262d5d8085}{
+virtual unsigned char {\bfseries readConfig\_\-IndexSource\_\-Channel} (tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tEncoder_ac4de46761aef1a50c1f8de262d5d8085}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tEncoder_a2ad3d2fc369073c36e501da450e48ed4}{
+virtual unsigned char {\bfseries readConfig\_\-IndexSource\_\-Module} (tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tEncoder_a2ad3d2fc369073c36e501da450e48ed4}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tEncoder_aa56105c620a42301a357fbf1a8f4ad32}{
+virtual bool {\bfseries readConfig\_\-IndexSource\_\-AnalogTrigger} (tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tEncoder_aa56105c620a42301a357fbf1a8f4ad32}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tEncoder_aae64697b7156aac735483b2329f9b8a8}{
+virtual bool {\bfseries readConfig\_\-IndexActiveHigh} (tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tEncoder_aae64697b7156aac735483b2329f9b8a8}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tEncoder_a3c8d820a645cceee709e12047f53e865}{
+virtual bool {\bfseries readConfig\_\-Reverse} (tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tEncoder_a3c8d820a645cceee709e12047f53e865}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tEncoder_add11decc5f48b33e333053e4c6a29ca4}{
+virtual bool {\bfseries readConfig\_\-Enable} (tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tEncoder_add11decc5f48b33e333053e4c6a29ca4}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tEncoder_a48b6afefc850d24fe7c6cf1fe08b48be}{
+virtual void {\bfseries strobeReset} (tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tEncoder_a48b6afefc850d24fe7c6cf1fe08b48be}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tEncoder_aec9f75027f5f89367fe26007cc874433}{
+virtual \hyperlink{unionnFPGA_1_1nFRC__2012__1__6__4_1_1tEncoder_1_1tTimerOutput}{tTimerOutput} {\bfseries readTimerOutput} (tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tEncoder_aec9f75027f5f89367fe26007cc874433}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tEncoder_a8c1ceda6b67f97d9185d7f051efaaf82}{
+virtual unsigned int {\bfseries readTimerOutput\_\-Period} (tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tEncoder_a8c1ceda6b67f97d9185d7f051efaaf82}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tEncoder_ac38ab72f7ba2314a36b8302e2079b560}{
+virtual signed char {\bfseries readTimerOutput\_\-Count} (tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tEncoder_ac38ab72f7ba2314a36b8302e2079b560}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tEncoder_a6f6616dbfed16d42832a0c38d6eb0c25}{
+virtual bool {\bfseries readTimerOutput\_\-Stalled} (tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tEncoder_a6f6616dbfed16d42832a0c38d6eb0c25}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tEncoder_a819ad903337f126aba6ec47f3334785f}{
+virtual void {\bfseries writeTimerConfig} (\hyperlink{unionnFPGA_1_1nFRC__2012__1__6__4_1_1tEncoder_1_1tTimerConfig}{tTimerConfig} value, tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tEncoder_a819ad903337f126aba6ec47f3334785f}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tEncoder_adbb446acc342f3e33a5a6098b4b92158}{
+virtual void {\bfseries writeTimerConfig\_\-StallPeriod} (unsigned int value, tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tEncoder_adbb446acc342f3e33a5a6098b4b92158}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tEncoder_a9b013cbaff49dd715c32fd440e758314}{
+virtual void {\bfseries writeTimerConfig\_\-AverageSize} (unsigned char value, tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tEncoder_a9b013cbaff49dd715c32fd440e758314}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tEncoder_a40cbde48de46ad4b8236f930c6abecf7}{
+virtual void {\bfseries writeTimerConfig\_\-UpdateWhenEmpty} (bool value, tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tEncoder_a40cbde48de46ad4b8236f930c6abecf7}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tEncoder_a250b01a27edf2ec63981a0bd56243751}{
+virtual \hyperlink{unionnFPGA_1_1nFRC__2012__1__6__4_1_1tEncoder_1_1tTimerConfig}{tTimerConfig} {\bfseries readTimerConfig} (tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tEncoder_a250b01a27edf2ec63981a0bd56243751}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tEncoder_a073656f9979640cb9620612669af1600}{
+virtual unsigned int {\bfseries readTimerConfig\_\-StallPeriod} (tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tEncoder_a073656f9979640cb9620612669af1600}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tEncoder_aa2f750df94feafcb04aafdff611c0e5f}{
+virtual unsigned char {\bfseries readTimerConfig\_\-AverageSize} (tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tEncoder_aa2f750df94feafcb04aafdff611c0e5f}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tEncoder_ae2b6169fd8b2aee892b9e7b3aa27b440}{
+virtual bool {\bfseries readTimerConfig\_\-UpdateWhenEmpty} (tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tEncoder_ae2b6169fd8b2aee892b9e7b3aa27b440}
+
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tEncoder_a3b56898db32875748862f154e083e887}{
+static \hyperlink{classnFPGA_1_1nFRC__2012__1__6__4_1_1tEncoder}{tEncoder} $\ast$ {\bfseries create} (unsigned char sys\_\-index, tRioStatusCode $\ast$status)}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tEncoder_a3b56898db32875748862f154e083e887}
+
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+ChipObject/tEncoder.h\end{DoxyCompactItemize}

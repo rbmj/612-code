@@ -1,0 +1,141 @@
+\hypertarget{classSubsystem}{
+\section{Subsystem Class Reference}
+\label{classSubsystem}\index{Subsystem@{Subsystem}}
+}
+Inheritance diagram for Subsystem:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{classSubsystem}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classSubsystem_ad2df571da0438beacb3c1800c0316477}{Subsystem} (const char $\ast$name)
+\item 
+\hypertarget{classSubsystem_a1a571943173d3bc47317fc50deab4e13}{
+virtual std::string {\bfseries GetName} ()}
+\label{classSubsystem_a1a571943173d3bc47317fc50deab4e13}
+
+\item 
+\hypertarget{classSubsystem_a75dbfe31d014bf2773cf72ae23594ec6}{
+virtual std::string {\bfseries GetType} ()}
+\label{classSubsystem_a75dbfe31d014bf2773cf72ae23594ec6}
+
+\item 
+\hypertarget{classSubsystem_ac1291a98c0e8dd5602e39a8e98704aa6}{
+virtual \hyperlink{classNetworkTable}{NetworkTable} $\ast$ {\bfseries GetTable} ()}
+\label{classSubsystem_ac1291a98c0e8dd5602e39a8e98704aa6}
+
+\item 
+void \hyperlink{classSubsystem_aeb73b1829ac913e95035064d1b46c6f2}{SetDefaultCommand} (\hyperlink{classCommand}{Command} $\ast$command)
+\item 
+\hyperlink{classCommand}{Command} $\ast$ \hyperlink{classSubsystem_a50f7f4a6bb9befcd222e629b0c2c18b7}{GetDefaultCommand} ()
+\item 
+void \hyperlink{classSubsystem_a5caed10655c42424ef731c2a12681d9a}{SetCurrentCommand} (\hyperlink{classCommand}{Command} $\ast$command)
+\item 
+\hyperlink{classCommand}{Command} $\ast$ \hyperlink{classSubsystem_a3acb9f816199df44fd1dc5f452a2a6c8}{GetCurrentCommand} ()
+\item 
+virtual void \hyperlink{classSubsystem_a3e459cd7c50c21fad4dfa640b8b5bf65}{InitDefaultCommand} ()
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classSubsystem_afb88c77ea5daaefa6c8fa6bc5b9aa5c1}{
+class \hyperlink{classSubsystem_afb88c77ea5daaefa6c8fa6bc5b9aa5c1}{Scheduler}}
+\label{classSubsystem_afb88c77ea5daaefa6c8fa6bc5b9aa5c1}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classSubsystem_ad2df571da0438beacb3c1800c0316477}{
+\index{Subsystem@{Subsystem}!Subsystem@{Subsystem}}
+\index{Subsystem@{Subsystem}!Subsystem@{Subsystem}}
+\subsubsection[{Subsystem}]{\setlength{\rightskip}{0pt plus 5cm}Subsystem::Subsystem (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{name}
+\end{DoxyParamCaption}
+)}}
+\label{classSubsystem_ad2df571da0438beacb3c1800c0316477}
+Creates a subsystem with the given name 
+\begin{DoxyParams}{Parameters}
+{\em name} & the name of the subsystem \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classSubsystem_a3acb9f816199df44fd1dc5f452a2a6c8}{
+\index{Subsystem@{Subsystem}!GetCurrentCommand@{GetCurrentCommand}}
+\index{GetCurrentCommand@{GetCurrentCommand}!Subsystem@{Subsystem}}
+\subsubsection[{GetCurrentCommand}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Command} $\ast$ Subsystem::GetCurrentCommand (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classSubsystem_a3acb9f816199df44fd1dc5f452a2a6c8}
+Returns the command which currently claims this subsystem. \begin{DoxyReturn}{Returns}
+the command which currently claims this subsystem 
+\end{DoxyReturn}
+\hypertarget{classSubsystem_a50f7f4a6bb9befcd222e629b0c2c18b7}{
+\index{Subsystem@{Subsystem}!GetDefaultCommand@{GetDefaultCommand}}
+\index{GetDefaultCommand@{GetDefaultCommand}!Subsystem@{Subsystem}}
+\subsubsection[{GetDefaultCommand}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Command} $\ast$ Subsystem::GetDefaultCommand (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classSubsystem_a50f7f4a6bb9befcd222e629b0c2c18b7}
+Returns the default command (or null if there is none). \begin{DoxyReturn}{Returns}
+the default command 
+\end{DoxyReturn}
+\hypertarget{classSubsystem_a3e459cd7c50c21fad4dfa640b8b5bf65}{
+\index{Subsystem@{Subsystem}!InitDefaultCommand@{InitDefaultCommand}}
+\index{InitDefaultCommand@{InitDefaultCommand}!Subsystem@{Subsystem}}
+\subsubsection[{InitDefaultCommand}]{\setlength{\rightskip}{0pt plus 5cm}void Subsystem::InitDefaultCommand (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classSubsystem_a3e459cd7c50c21fad4dfa640b8b5bf65}
+Initialize the default command for this subsystem This is meant to be the place to call SetDefaultCommand in a subsystem and will be called on all the subsystems by the CommandBase method before the program starts running by using the list of all registered Subsystems inside the \hyperlink{classScheduler}{Scheduler}.
+
+This should be overridden by a \hyperlink{classSubsystem}{Subsystem} that has a default \hyperlink{classCommand}{Command} \hypertarget{classSubsystem_a5caed10655c42424ef731c2a12681d9a}{
+\index{Subsystem@{Subsystem}!SetCurrentCommand@{SetCurrentCommand}}
+\index{SetCurrentCommand@{SetCurrentCommand}!Subsystem@{Subsystem}}
+\subsubsection[{SetCurrentCommand}]{\setlength{\rightskip}{0pt plus 5cm}void Subsystem::SetCurrentCommand (
+\begin{DoxyParamCaption}
+\item[{{\bf Command} $\ast$}]{command}
+\end{DoxyParamCaption}
+)}}
+\label{classSubsystem_a5caed10655c42424ef731c2a12681d9a}
+Sets the current command 
+\begin{DoxyParams}{Parameters}
+{\em command} & the new current command \\
+\hline
+\end{DoxyParams}
+\hypertarget{classSubsystem_aeb73b1829ac913e95035064d1b46c6f2}{
+\index{Subsystem@{Subsystem}!SetDefaultCommand@{SetDefaultCommand}}
+\index{SetDefaultCommand@{SetDefaultCommand}!Subsystem@{Subsystem}}
+\subsubsection[{SetDefaultCommand}]{\setlength{\rightskip}{0pt plus 5cm}void Subsystem::SetDefaultCommand (
+\begin{DoxyParamCaption}
+\item[{{\bf Command} $\ast$}]{command}
+\end{DoxyParamCaption}
+)}}
+\label{classSubsystem_aeb73b1829ac913e95035064d1b46c6f2}
+Sets the default command. If this is not called or is called with null, then there will be no default command for the subsystem.
+
+{\bfseries WARNING:} This should {\bfseries NOT} be called in a constructor if the subsystem is a singleton.
+
+
+\begin{DoxyParams}{Parameters}
+{\em command} & the default command (or null if there should be none) \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+Commands/Subsystem.h\item 
+Commands/Subsystem.cpp\end{DoxyCompactItemize}

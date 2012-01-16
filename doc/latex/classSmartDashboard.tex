@@ -1,167 +1,494 @@
-\hypertarget{classSmartDashboard}{\section{\-Smart\-Dashboard \-Class \-Reference}
-\label{classSmartDashboard}\index{\-Smart\-Dashboard@{\-Smart\-Dashboard}}
+\hypertarget{classSmartDashboard}{
+\section{SmartDashboard Class Reference}
+\label{classSmartDashboard}\index{SmartDashboard@{SmartDashboard}}
 }
-\-Inheritance diagram for \-Smart\-Dashboard\-:\begin{figure}[H]
+Inheritance diagram for SmartDashboard:\begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[height=3.000000cm]{classSmartDashboard}
 \end{center}
 \end{figure}
-\subsection*{\-Classes}
+\subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-class \hyperlink{classSmartDashboard_1_1Buffer}{\-Buffer}
+void \hyperlink{classSmartDashboard_a3e7cb12569b31c239ed5d5a68f29c2b0}{PutData} (const char $\ast$keyName, \hyperlink{classSmartDashboardData}{SmartDashboardData} $\ast$value)
 \item 
-struct {\bfseries \-C\-String\-Less\-Than}
+void \hyperlink{classSmartDashboard_a9a6f92d68911111789ab8c1f1c96973f}{PutData} (\hyperlink{classSmartDashboardNamedData}{SmartDashboardNamedData} $\ast$value)
 \item 
-struct {\bfseries \-Field\-Record}
+\hyperlink{classSmartDashboardData}{SmartDashboardData} $\ast$ \hyperlink{classSmartDashboard_a9324d4ce00b92d2181e61dcb01b7a8cb}{GetData} (const char $\ast$keyName)
+\item 
+void \hyperlink{classSmartDashboard_afece0d9b59b122580b6167d1c7faa29b}{PutBoolean} (const char $\ast$keyName, bool value)
+\item 
+bool \hyperlink{classSmartDashboard_affd05014cc8281e01e049c53a329b38d}{GetBoolean} (const char $\ast$keyName)
+\item 
+void \hyperlink{classSmartDashboard_afc4fcbf4522a461be5254a1fe4b8ff7d}{PutInt} (const char $\ast$keyName, int value)
+\item 
+int \hyperlink{classSmartDashboard_a232c20ebcdd000d1c74db943f20eac0b}{GetInt} (const char $\ast$keyName)
+\item 
+void \hyperlink{classSmartDashboard_ad52d7edbc2dee91e9d7d10f381620a39}{PutDouble} (const char $\ast$keyName, double value)
+\item 
+double \hyperlink{classSmartDashboard_ae9b0b4c077bfd6dc72f2494688a44ed5}{GetDouble} (const char $\ast$keyName)
+\item 
+void \hyperlink{classSmartDashboard_af30da1e01120617de30cfa1f62e8e9a2}{PutString} (const char $\ast$keyName, const char $\ast$value)
+\item 
+int \hyperlink{classSmartDashboard_ac6b875f74b563388ada75261e8f84a46}{GetString} (const char $\ast$keyName, char $\ast$value, int valueLen)
+\item 
+std::string \hyperlink{classSmartDashboard_ab8b1a0f045d3d92263c21774f79e8d85}{GetString} (std::string keyName)
+\item 
+void \hyperlink{classSmartDashboard_a5a445bba77b5c398020e5c29c3b24d21}{PutString} (std::string keyName, std::string value)
+\item 
+void \hyperlink{classSmartDashboard_ae8ea8b62acfb5174bc70185b0e5021de}{init} ()
 \end{DoxyCompactItemize}
-\subsection*{\-Public \-Types}
+\subsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-enum {\bfseries \-F\-I\-E\-L\-D\-\_\-\-T\-Y\-P\-E} \{ \*
-{\bfseries \-B\-Y\-T\-E\-\_\-\-T\-Y\-P\-E} =  0, 
-{\bfseries \-C\-H\-A\-R\-\_\-\-U\-T\-F16\-\_\-\-T\-Y\-P\-E} =  1, 
-{\bfseries \-I\-N\-T\-\_\-\-T\-Y\-P\-E} =  2, 
-{\bfseries \-L\-O\-N\-G\-\_\-\-T\-Y\-P\-E} =  3, 
-\*
-{\bfseries \-S\-H\-O\-R\-T\-\_\-\-T\-Y\-P\-E} =  4, 
-{\bfseries \-F\-L\-O\-A\-T\-\_\-\-T\-Y\-P\-E} =  5, 
-{\bfseries \-D\-O\-U\-B\-L\-E\-\_\-\-T\-Y\-P\-E} =  6, 
-{\bfseries \-S\-T\-R\-I\-N\-G\-\_\-\-U\-T\-F16\-\_\-\-T\-Y\-P\-E} =  7, 
-\*
-{\bfseries \-B\-O\-O\-L\-\_\-\-T\-Y\-P\-E} =  8, 
-{\bfseries \-S\-T\-R\-I\-N\-G\-\_\-\-U\-T\-F8\-\_\-\-T\-Y\-P\-E} =  9
- \}
+static \hyperlink{classSmartDashboard}{SmartDashboard} $\ast$ \hyperlink{classSmartDashboard_a7ae43e0ad39b62d997626b2011cf76ee}{GetInstance} ()
 \item 
-enum {\bfseries \-R\-E\-T\-C\-O\-D\-E} \{ {\bfseries \-S\-U\-C\-C\-E\-S\-S}, 
-{\bfseries \-E\-R\-R\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-F\-U\-L\-L}, 
-{\bfseries \-E\-R\-R\-O\-R\-\_\-\-S\-T\-R\-I\-N\-G\-\_\-\-T\-O\-O\-\_\-\-L\-O\-N\-G}
- \}
-\end{DoxyCompactItemize}
-\subsection*{\-Public \-Member \-Functions}
-\begin{DoxyCompactItemize}
+static int \hyperlink{classSmartDashboard_aaf01cf3a3e9aeb5a24c3268a765dd210}{LogChar} (char value, const char $\ast$name)
 \item 
-\hypertarget{classSmartDashboard_a8ea30571169aaa8d656765084d14221d}{{\bfseries \-Smart\-Dashboard} (\-S\-E\-M\-\_\-\-I\-D status\-Data\-Semaphore)}\label{classSmartDashboard_a8ea30571169aaa8d656765084d14221d}
-
+static int \hyperlink{classSmartDashboard_ab50c033c84036bd3924c5b00a53d495c}{LogChar} (wchar\_\-t value, const char $\ast$name)
 \item 
-void \hyperlink{classSmartDashboard_aeaa051b9d8715ac4ccb02833c6623a1d}{\-Get\-Status\-Buffer} (char $\ast$$\ast$user\-Status\-Data, \-I\-N\-T32 $\ast$user\-Status\-Data\-Size)
+static int \hyperlink{classSmartDashboard_a1bdecea4cdeb839fb1cbd476b043f6d6}{Log} (INT32 value, const char $\ast$name)
 \item 
-\hypertarget{classSmartDashboard_a91f1e0d6dbf314a7443b536cb55b1ae8}{void {\bfseries \-Flush} ()}\label{classSmartDashboard_a91f1e0d6dbf314a7443b536cb55b1ae8}
-
-\end{DoxyCompactItemize}
-\subsection*{\-Static \-Public \-Member \-Functions}
-\begin{DoxyCompactItemize}
+static int \hyperlink{classSmartDashboard_a75d16bd65e394c8e11a92201ee6d5b18}{Log} (INT64 value, const char $\ast$name)
 \item 
-\hypertarget{classSmartDashboard_ae8ea8b62acfb5174bc70185b0e5021de}{static void {\bfseries init} ()}\label{classSmartDashboard_ae8ea8b62acfb5174bc70185b0e5021de}
-
+static int \hyperlink{classSmartDashboard_a1d804fdc5d0c362de99414532142e741}{Log} (bool value, const char $\ast$name)
 \item 
-static \-R\-E\-T\-C\-O\-D\-E \hyperlink{classSmartDashboard_a2036dedc4a797d69a5982eb9594d4cd7}{\-Log\-Char} (char value, const char $\ast$name)
+static int \hyperlink{classSmartDashboard_a641f1715d0333bc72d38bdfaad2db1f7}{Log} (float value, const char $\ast$name)
 \item 
-static \-R\-E\-T\-C\-O\-D\-E \hyperlink{classSmartDashboard_a04cff49d968f0ac391bb0f94d10ab6b0}{\-Log\-Char} (wchar\-\_\-t value, const char $\ast$name)
+static int \hyperlink{classSmartDashboard_a253f9156ef7f9b5b20cb6f22319d3f91}{Log} (double value, const char $\ast$name)
 \item 
-static \-R\-E\-T\-C\-O\-D\-E \hyperlink{classSmartDashboard_a66ec21b3b33082b9fda0203f724009bd}{\-Log} (\-I\-N\-T32 value, const char $\ast$name)
-\item 
-static \-R\-E\-T\-C\-O\-D\-E \hyperlink{classSmartDashboard_abb3257d3f00cd3fd316c048e1b947c4b}{\-Log} (\-I\-N\-T64 value, const char $\ast$name)
-\item 
-static \-R\-E\-T\-C\-O\-D\-E \hyperlink{classSmartDashboard_a3da92a382181f248281a8849390004b3}{\-Log} (bool value, const char $\ast$name)
-\item 
-static \-R\-E\-T\-C\-O\-D\-E \hyperlink{classSmartDashboard_a569006a79c2ec72854e30010eb947c9c}{\-Log} (float value, const char $\ast$name)
-\item 
-static \-R\-E\-T\-C\-O\-D\-E \hyperlink{classSmartDashboard_ae404f47bce2723a32a46714ce8ebff82}{\-Log} (double value, const char $\ast$name)
-\item 
-static \-R\-E\-T\-C\-O\-D\-E \hyperlink{classSmartDashboard_ac739e3f781eab8b8e509beff12ac0dbc}{\-Log} (const char $\ast$value, const char $\ast$name)
-\end{DoxyCompactItemize}
-\subsection*{\-Static \-Public \-Attributes}
-\begin{DoxyCompactItemize}
-\item 
-\hypertarget{classSmartDashboard_a6f4f0c6679e2901bcef055b503814b9a}{static const \-I\-N\-T32 {\bfseries \-B\-U\-F\-F\-E\-R\-\_\-\-S\-I\-Z\-E} = 768}\label{classSmartDashboard_a6f4f0c6679e2901bcef055b503814b9a}
-
+static int \hyperlink{classSmartDashboard_ad22eabf2070046656f9757b17d789bc6}{Log} (const char $\ast$value, const char $\ast$name)
 \end{DoxyCompactItemize}
 
 
-\subsection{\-Member \-Function \-Documentation}
-\hypertarget{classSmartDashboard_aeaa051b9d8715ac4ccb02833c6623a1d}{\index{\-Smart\-Dashboard@{\-Smart\-Dashboard}!\-Get\-Status\-Buffer@{\-Get\-Status\-Buffer}}
-\index{\-Get\-Status\-Buffer@{\-Get\-Status\-Buffer}!SmartDashboard@{\-Smart\-Dashboard}}
-\subsubsection[{\-Get\-Status\-Buffer}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Smart\-Dashboard\-::\-Get\-Status\-Buffer} (
+\subsection{Member Function Documentation}
+\hypertarget{classSmartDashboard_affd05014cc8281e01e049c53a329b38d}{
+\index{SmartDashboard@{SmartDashboard}!GetBoolean@{GetBoolean}}
+\index{GetBoolean@{GetBoolean}!SmartDashboard@{SmartDashboard}}
+\subsubsection[{GetBoolean}]{\setlength{\rightskip}{0pt plus 5cm}bool SmartDashboard::GetBoolean (
 \begin{DoxyParamCaption}
-\item[{char $\ast$$\ast$}]{user\-Status\-Data, }
-\item[{\-I\-N\-T32 $\ast$}]{user\-Status\-Data\-Size}
+\item[{const char $\ast$}]{keyName}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{classSmartDashboard_aeaa051b9d8715ac4ccb02833c6623a1d}
-\-Called by the \hyperlink{classDriverStation}{\-Driver\-Station} class to retrieve buffers, sizes, etc. for writing to the \-Network\-Communication task. \-This function is called while holding the m\-\_\-status\-Data\-Semaphore. 
-
-\-Implements \hyperlink{classDashboardBase}{\-Dashboard\-Base}.
-
-\hypertarget{classSmartDashboard_a66ec21b3b33082b9fda0203f724009bd}{\index{\-Smart\-Dashboard@{\-Smart\-Dashboard}!\-Log@{\-Log}}
-\index{\-Log@{\-Log}!SmartDashboard@{\-Smart\-Dashboard}}
-\subsubsection[{\-Log}]{\setlength{\rightskip}{0pt plus 5cm}\-Smart\-Dashboard\-::\-R\-E\-T\-C\-O\-D\-E {\bf \-Smart\-Dashboard\-::\-Log} (
+)}}
+\label{classSmartDashboard_affd05014cc8281e01e049c53a329b38d}
+Returns the value at the specified key. 
+\begin{DoxyParams}{Parameters}
+{\em keyName} & the key \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the value 
+\end{DoxyReturn}
+\hypertarget{classSmartDashboard_a9324d4ce00b92d2181e61dcb01b7a8cb}{
+\index{SmartDashboard@{SmartDashboard}!GetData@{GetData}}
+\index{GetData@{GetData}!SmartDashboard@{SmartDashboard}}
+\subsubsection[{GetData}]{\setlength{\rightskip}{0pt plus 5cm}{\bf SmartDashboardData} $\ast$ SmartDashboard::GetData (
 \begin{DoxyParamCaption}
-\item[{\-I\-N\-T32}]{value, }
+\item[{const char $\ast$}]{keyName}
+\end{DoxyParamCaption}
+)}}
+\label{classSmartDashboard_a9324d4ce00b92d2181e61dcb01b7a8cb}
+Returns the value at the specified key. 
+\begin{DoxyParams}{Parameters}
+{\em keyName} & the key \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the value 
+\end{DoxyReturn}
+\hypertarget{classSmartDashboard_ae9b0b4c077bfd6dc72f2494688a44ed5}{
+\index{SmartDashboard@{SmartDashboard}!GetDouble@{GetDouble}}
+\index{GetDouble@{GetDouble}!SmartDashboard@{SmartDashboard}}
+\subsubsection[{GetDouble}]{\setlength{\rightskip}{0pt plus 5cm}double SmartDashboard::GetDouble (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{keyName}
+\end{DoxyParamCaption}
+)}}
+\label{classSmartDashboard_ae9b0b4c077bfd6dc72f2494688a44ed5}
+Returns the value at the specified key. 
+\begin{DoxyParams}{Parameters}
+{\em keyName} & the key \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the value 
+\end{DoxyReturn}
+\hypertarget{classSmartDashboard_a7ae43e0ad39b62d997626b2011cf76ee}{
+\index{SmartDashboard@{SmartDashboard}!GetInstance@{GetInstance}}
+\index{GetInstance@{GetInstance}!SmartDashboard@{SmartDashboard}}
+\subsubsection[{GetInstance}]{\setlength{\rightskip}{0pt plus 5cm}{\bf SmartDashboard} $\ast$ SmartDashboard::GetInstance (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{classSmartDashboard_a7ae43e0ad39b62d997626b2011cf76ee}
+Get the one and only \hyperlink{classSmartDashboard}{SmartDashboard} object \begin{DoxyReturn}{Returns}
+pointer to the \hyperlink{classSmartDashboard}{SmartDashboard} 
+\end{DoxyReturn}
+\hypertarget{classSmartDashboard_a232c20ebcdd000d1c74db943f20eac0b}{
+\index{SmartDashboard@{SmartDashboard}!GetInt@{GetInt}}
+\index{GetInt@{GetInt}!SmartDashboard@{SmartDashboard}}
+\subsubsection[{GetInt}]{\setlength{\rightskip}{0pt plus 5cm}int SmartDashboard::GetInt (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{keyName}
+\end{DoxyParamCaption}
+)}}
+\label{classSmartDashboard_a232c20ebcdd000d1c74db943f20eac0b}
+Returns the value at the specified key. 
+\begin{DoxyParams}{Parameters}
+{\em keyName} & the key \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the value 
+\end{DoxyReturn}
+\hypertarget{classSmartDashboard_ac6b875f74b563388ada75261e8f84a46}{
+\index{SmartDashboard@{SmartDashboard}!GetString@{GetString}}
+\index{GetString@{GetString}!SmartDashboard@{SmartDashboard}}
+\subsubsection[{GetString}]{\setlength{\rightskip}{0pt plus 5cm}int SmartDashboard::GetString (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{keyName, }
+\item[{char $\ast$}]{value, }
+\item[{int}]{valueLen}
+\end{DoxyParamCaption}
+)}}
+\label{classSmartDashboard_ac6b875f74b563388ada75261e8f84a46}
+Returns the value at the specified key. 
+\begin{DoxyParams}{Parameters}
+{\em keyName} & the key \\
+\hline
+{\em value} & the buffer to fill with the value \\
+\hline
+{\em valueLen} & the size of the buffer pointed to by value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the length of the string 
+\end{DoxyReturn}
+\hypertarget{classSmartDashboard_ab8b1a0f045d3d92263c21774f79e8d85}{
+\index{SmartDashboard@{SmartDashboard}!GetString@{GetString}}
+\index{GetString@{GetString}!SmartDashboard@{SmartDashboard}}
+\subsubsection[{GetString}]{\setlength{\rightskip}{0pt plus 5cm}std::string SmartDashboard::GetString (
+\begin{DoxyParamCaption}
+\item[{std::string}]{keyName}
+\end{DoxyParamCaption}
+)}}
+\label{classSmartDashboard_ab8b1a0f045d3d92263c21774f79e8d85}
+Returns the value at the specified key. 
+\begin{DoxyParams}{Parameters}
+{\em keyName} & the key \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the value 
+\end{DoxyReturn}
+\hypertarget{classSmartDashboard_ae8ea8b62acfb5174bc70185b0e5021de}{
+\index{SmartDashboard@{SmartDashboard}!init@{init}}
+\index{init@{init}!SmartDashboard@{SmartDashboard}}
+\subsubsection[{init}]{\setlength{\rightskip}{0pt plus 5cm}void SmartDashboard::init (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classSmartDashboard_ae8ea8b62acfb5174bc70185b0e5021de}
+\begin{Desc}
+\item[\hyperlink{deprecated__deprecated000012}{Deprecated}]no longer necessary \end{Desc}
+\hypertarget{classSmartDashboard_a1bdecea4cdeb839fb1cbd476b043f6d6}{
+\index{SmartDashboard@{SmartDashboard}!Log@{Log}}
+\index{Log@{Log}!SmartDashboard@{SmartDashboard}}
+\subsubsection[{Log}]{\setlength{\rightskip}{0pt plus 5cm}int SmartDashboard::Log (
+\begin{DoxyParamCaption}
+\item[{INT32}]{value, }
 \item[{const char $\ast$}]{name}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{classSmartDashboard_a66ec21b3b33082b9fda0203f724009bd}
-\-Log a 32-\/bit signed integer value. \hyperlink{classSmartDashboard}{\-Smart\-Dashboard} assumes the name string will remain valid. \-It does not make a copy. \hypertarget{classSmartDashboard_abb3257d3f00cd3fd316c048e1b947c4b}{\index{\-Smart\-Dashboard@{\-Smart\-Dashboard}!\-Log@{\-Log}}
-\index{\-Log@{\-Log}!SmartDashboard@{\-Smart\-Dashboard}}
-\subsubsection[{\-Log}]{\setlength{\rightskip}{0pt plus 5cm}\-Smart\-Dashboard\-::\-R\-E\-T\-C\-O\-D\-E {\bf \-Smart\-Dashboard\-::\-Log} (
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{classSmartDashboard_a1bdecea4cdeb839fb1cbd476b043f6d6}
+Sends the given int value to the client as the field with the given name. 
+\begin{DoxyParams}{Parameters}
+{\em value} & The value to send. \\
+\hline
+{\em name} & The name of the field. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An integer status code. 
+\end{DoxyReturn}
+\begin{Desc}
+\item[\hyperlink{deprecated__deprecated000015}{Deprecated}]use \hyperlink{classSmartDashboard_afc4fcbf4522a461be5254a1fe4b8ff7d}{SmartDashboard\#PutInt(const char$\ast$, int)} \end{Desc}
+\hypertarget{classSmartDashboard_a75d16bd65e394c8e11a92201ee6d5b18}{
+\index{SmartDashboard@{SmartDashboard}!Log@{Log}}
+\index{Log@{Log}!SmartDashboard@{SmartDashboard}}
+\subsubsection[{Log}]{\setlength{\rightskip}{0pt plus 5cm}int SmartDashboard::Log (
 \begin{DoxyParamCaption}
-\item[{\-I\-N\-T64}]{value, }
+\item[{INT64}]{value, }
 \item[{const char $\ast$}]{name}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{classSmartDashboard_abb3257d3f00cd3fd316c048e1b947c4b}
-\-Log a 64-\/bit signed integer value. \hyperlink{classSmartDashboard}{\-Smart\-Dashboard} assumes the name string will remain valid. \-It does not make a copy. \hypertarget{classSmartDashboard_a3da92a382181f248281a8849390004b3}{\index{\-Smart\-Dashboard@{\-Smart\-Dashboard}!\-Log@{\-Log}}
-\index{\-Log@{\-Log}!SmartDashboard@{\-Smart\-Dashboard}}
-\subsubsection[{\-Log}]{\setlength{\rightskip}{0pt plus 5cm}\-Smart\-Dashboard\-::\-R\-E\-T\-C\-O\-D\-E {\bf \-Smart\-Dashboard\-::\-Log} (
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{classSmartDashboard_a75d16bd65e394c8e11a92201ee6d5b18}
+Sends the given long value to the client as the field with the given name. 
+\begin{DoxyParams}{Parameters}
+{\em value} & The value to send. \\
+\hline
+{\em name} & The name of the field. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An integer status code. 
+\end{DoxyReturn}
+\begin{Desc}
+\item[\hyperlink{deprecated__deprecated000016}{Deprecated}]use \hyperlink{classSmartDashboard_ad52d7edbc2dee91e9d7d10f381620a39}{SmartDashboard\#PutDouble(const char$\ast$, double)} \end{Desc}
+\hypertarget{classSmartDashboard_a1d804fdc5d0c362de99414532142e741}{
+\index{SmartDashboard@{SmartDashboard}!Log@{Log}}
+\index{Log@{Log}!SmartDashboard@{SmartDashboard}}
+\subsubsection[{Log}]{\setlength{\rightskip}{0pt plus 5cm}int SmartDashboard::Log (
 \begin{DoxyParamCaption}
 \item[{bool}]{value, }
 \item[{const char $\ast$}]{name}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{classSmartDashboard_a3da92a382181f248281a8849390004b3}
-\-Log a boolean value. \hyperlink{classSmartDashboard}{\-Smart\-Dashboard} assumes the name string will remain valid. \-It does not make a copy. \hypertarget{classSmartDashboard_a569006a79c2ec72854e30010eb947c9c}{\index{\-Smart\-Dashboard@{\-Smart\-Dashboard}!\-Log@{\-Log}}
-\index{\-Log@{\-Log}!SmartDashboard@{\-Smart\-Dashboard}}
-\subsubsection[{\-Log}]{\setlength{\rightskip}{0pt plus 5cm}\-Smart\-Dashboard\-::\-R\-E\-T\-C\-O\-D\-E {\bf \-Smart\-Dashboard\-::\-Log} (
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{classSmartDashboard_a1d804fdc5d0c362de99414532142e741}
+Sends the given boolean value to the client as the field with the given name. 
+\begin{DoxyParams}{Parameters}
+{\em value} & The value to send. \\
+\hline
+{\em name} & The name of the field. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An integer status code. 
+\end{DoxyReturn}
+\begin{Desc}
+\item[\hyperlink{deprecated__deprecated000017}{Deprecated}]use \hyperlink{classSmartDashboard_afece0d9b59b122580b6167d1c7faa29b}{SmartDashboard\#PutBoolean(const char$\ast$, bool)} instead \end{Desc}
+\hypertarget{classSmartDashboard_a641f1715d0333bc72d38bdfaad2db1f7}{
+\index{SmartDashboard@{SmartDashboard}!Log@{Log}}
+\index{Log@{Log}!SmartDashboard@{SmartDashboard}}
+\subsubsection[{Log}]{\setlength{\rightskip}{0pt plus 5cm}int SmartDashboard::Log (
 \begin{DoxyParamCaption}
 \item[{float}]{value, }
 \item[{const char $\ast$}]{name}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{classSmartDashboard_a569006a79c2ec72854e30010eb947c9c}
-\-Log a single precision floating point value. \hyperlink{classSmartDashboard}{\-Smart\-Dashboard} assumes the name string will remain valid. \-It does not make a copy. \hypertarget{classSmartDashboard_ae404f47bce2723a32a46714ce8ebff82}{\index{\-Smart\-Dashboard@{\-Smart\-Dashboard}!\-Log@{\-Log}}
-\index{\-Log@{\-Log}!SmartDashboard@{\-Smart\-Dashboard}}
-\subsubsection[{\-Log}]{\setlength{\rightskip}{0pt plus 5cm}\-Smart\-Dashboard\-::\-R\-E\-T\-C\-O\-D\-E {\bf \-Smart\-Dashboard\-::\-Log} (
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{classSmartDashboard_a641f1715d0333bc72d38bdfaad2db1f7}
+Sends the given float value to the client as the field with the given name. 
+\begin{DoxyParams}{Parameters}
+{\em value} & The value to send. \\
+\hline
+{\em name} & The name of the field. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An integer status code. 
+\end{DoxyReturn}
+\begin{Desc}
+\item[\hyperlink{deprecated__deprecated000018}{Deprecated}]use \hyperlink{classSmartDashboard_ad52d7edbc2dee91e9d7d10f381620a39}{SmartDashboard\#PutDouble(const char$\ast$, double)} \end{Desc}
+\hypertarget{classSmartDashboard_a253f9156ef7f9b5b20cb6f22319d3f91}{
+\index{SmartDashboard@{SmartDashboard}!Log@{Log}}
+\index{Log@{Log}!SmartDashboard@{SmartDashboard}}
+\subsubsection[{Log}]{\setlength{\rightskip}{0pt plus 5cm}int SmartDashboard::Log (
 \begin{DoxyParamCaption}
 \item[{double}]{value, }
 \item[{const char $\ast$}]{name}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{classSmartDashboard_ae404f47bce2723a32a46714ce8ebff82}
-\-Log a double precision floating point value. \hyperlink{classSmartDashboard}{\-Smart\-Dashboard} assumes the name string will remain valid. \-It does not make a copy. \hypertarget{classSmartDashboard_ac739e3f781eab8b8e509beff12ac0dbc}{\index{\-Smart\-Dashboard@{\-Smart\-Dashboard}!\-Log@{\-Log}}
-\index{\-Log@{\-Log}!SmartDashboard@{\-Smart\-Dashboard}}
-\subsubsection[{\-Log}]{\setlength{\rightskip}{0pt plus 5cm}\-Smart\-Dashboard\-::\-R\-E\-T\-C\-O\-D\-E {\bf \-Smart\-Dashboard\-::\-Log} (
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{classSmartDashboard_a253f9156ef7f9b5b20cb6f22319d3f91}
+Sends the given double value to the client as the field with the given name. 
+\begin{DoxyParams}{Parameters}
+{\em value} & The value to send. \\
+\hline
+{\em name} & The name of the field. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An integer status code. 
+\end{DoxyReturn}
+\begin{Desc}
+\item[\hyperlink{deprecated__deprecated000019}{Deprecated}]use \hyperlink{classSmartDashboard_ad52d7edbc2dee91e9d7d10f381620a39}{SmartDashboard\#PutDouble(const char$\ast$, double)} \end{Desc}
+\hypertarget{classSmartDashboard_ad22eabf2070046656f9757b17d789bc6}{
+\index{SmartDashboard@{SmartDashboard}!Log@{Log}}
+\index{Log@{Log}!SmartDashboard@{SmartDashboard}}
+\subsubsection[{Log}]{\setlength{\rightskip}{0pt plus 5cm}int SmartDashboard::Log (
 \begin{DoxyParamCaption}
 \item[{const char $\ast$}]{value, }
 \item[{const char $\ast$}]{name}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{classSmartDashboard_ac739e3f781eab8b8e509beff12ac0dbc}
-\-Log a \-C string value (7-\/bit \-A\-S\-C\-I\-I or 8-\/bit \-L\-A\-T\-I\-N-\/1 encoding). \hyperlink{classSmartDashboard}{\-Smart\-Dashboard} assumes the name string will remain valid. \-It does not make a copy. \-It does copy the value string. \hypertarget{classSmartDashboard_a2036dedc4a797d69a5982eb9594d4cd7}{\index{\-Smart\-Dashboard@{\-Smart\-Dashboard}!\-Log\-Char@{\-Log\-Char}}
-\index{\-Log\-Char@{\-Log\-Char}!SmartDashboard@{\-Smart\-Dashboard}}
-\subsubsection[{\-Log\-Char}]{\setlength{\rightskip}{0pt plus 5cm}\-Smart\-Dashboard\-::\-R\-E\-T\-C\-O\-D\-E {\bf \-Smart\-Dashboard\-::\-Log\-Char} (
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{classSmartDashboard_ad22eabf2070046656f9757b17d789bc6}
+Sends the given string value to the client as the field with the given name. 
+\begin{DoxyParams}{Parameters}
+{\em value} & The value to send. This may be at most 63 characters in length. \\
+\hline
+{\em name} & The name of the field. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An integer status code. 
+\end{DoxyReturn}
+\begin{Desc}
+\item[\hyperlink{deprecated__deprecated000020}{Deprecated}]use \hyperlink{classSmartDashboard_af30da1e01120617de30cfa1f62e8e9a2}{SmartDashboard\#PutString(const char$\ast$, const char$\ast$)} \end{Desc}
+\hypertarget{classSmartDashboard_aaf01cf3a3e9aeb5a24c3268a765dd210}{
+\index{SmartDashboard@{SmartDashboard}!LogChar@{LogChar}}
+\index{LogChar@{LogChar}!SmartDashboard@{SmartDashboard}}
+\subsubsection[{LogChar}]{\setlength{\rightskip}{0pt plus 5cm}int SmartDashboard::LogChar (
 \begin{DoxyParamCaption}
 \item[{char}]{value, }
 \item[{const char $\ast$}]{name}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{classSmartDashboard_a2036dedc4a797d69a5982eb9594d4cd7}
-\-Send a value with the given name to the dashboard.
-
-\-Log a character (7-\/bit \-A\-S\-C\-I\-I or 8-\/bit \-L\-A\-T\-I\-N-\/1 encoding). \hyperlink{classSmartDashboard}{\-Smart\-Dashboard} assumes the name string will remain valid. \-It does not make a copy. \hypertarget{classSmartDashboard_a04cff49d968f0ac391bb0f94d10ab6b0}{\index{\-Smart\-Dashboard@{\-Smart\-Dashboard}!\-Log\-Char@{\-Log\-Char}}
-\index{\-Log\-Char@{\-Log\-Char}!SmartDashboard@{\-Smart\-Dashboard}}
-\subsubsection[{\-Log\-Char}]{\setlength{\rightskip}{0pt plus 5cm}\-Smart\-Dashboard\-::\-R\-E\-T\-C\-O\-D\-E {\bf \-Smart\-Dashboard\-::\-Log\-Char} (
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{classSmartDashboard_aaf01cf3a3e9aeb5a24c3268a765dd210}
+Send the given byte value to the client as the field with the given name. 
+\begin{DoxyParams}{Parameters}
+{\em value} & The value to be displayed on the client. \\
+\hline
+{\em name} & The name of the field. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An integer status code. 
+\end{DoxyReturn}
+\begin{Desc}
+\item[\hyperlink{deprecated__deprecated000013}{Deprecated}]use \hyperlink{classSmartDashboard_afc4fcbf4522a461be5254a1fe4b8ff7d}{SmartDashboard\#PutInt(const char$\ast$, int)} \end{Desc}
+\hypertarget{classSmartDashboard_ab50c033c84036bd3924c5b00a53d495c}{
+\index{SmartDashboard@{SmartDashboard}!LogChar@{LogChar}}
+\index{LogChar@{LogChar}!SmartDashboard@{SmartDashboard}}
+\subsubsection[{LogChar}]{\setlength{\rightskip}{0pt plus 5cm}int SmartDashboard::LogChar (
 \begin{DoxyParamCaption}
-\item[{wchar\-\_\-t}]{value, }
+\item[{wchar\_\-t}]{value, }
 \item[{const char $\ast$}]{name}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{classSmartDashboard_a04cff49d968f0ac391bb0f94d10ab6b0}
-\-Log a wide character (\-Unicode's \-U\-T\-F-\/16 encoding). \hyperlink{classSmartDashboard}{\-Smart\-Dashboard} assumes the name string will remain valid. \-It does not make a copy. 
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{classSmartDashboard_ab50c033c84036bd3924c5b00a53d495c}
+Send the given UTF-\/16 char value to the client as the field with the given name. 
+\begin{DoxyParams}{Parameters}
+{\em value} & The value to be displayed on the client. \\
+\hline
+{\em name} & The name of the field. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An integer status code. 
+\end{DoxyReturn}
+\begin{Desc}
+\item[\hyperlink{deprecated__deprecated000014}{Deprecated}]use \hyperlink{classSmartDashboard_afc4fcbf4522a461be5254a1fe4b8ff7d}{SmartDashboard\#PutInt(const char$\ast$, int)} \end{Desc}
+\hypertarget{classSmartDashboard_afece0d9b59b122580b6167d1c7faa29b}{
+\index{SmartDashboard@{SmartDashboard}!PutBoolean@{PutBoolean}}
+\index{PutBoolean@{PutBoolean}!SmartDashboard@{SmartDashboard}}
+\subsubsection[{PutBoolean}]{\setlength{\rightskip}{0pt plus 5cm}void SmartDashboard::PutBoolean (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{keyName, }
+\item[{bool}]{value}
+\end{DoxyParamCaption}
+)}}
+\label{classSmartDashboard_afece0d9b59b122580b6167d1c7faa29b}
+Maps the specified key to the specified value in this table. The key can not be NULL. The value can be retrieved by calling the get method with a key that is equal to the original key. 
+\begin{DoxyParams}{Parameters}
+{\em keyName} & the key \\
+\hline
+{\em value} & the value \\
+\hline
+\end{DoxyParams}
+\hypertarget{classSmartDashboard_a3e7cb12569b31c239ed5d5a68f29c2b0}{
+\index{SmartDashboard@{SmartDashboard}!PutData@{PutData}}
+\index{PutData@{PutData}!SmartDashboard@{SmartDashboard}}
+\subsubsection[{PutData}]{\setlength{\rightskip}{0pt plus 5cm}void SmartDashboard::PutData (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{keyName, }
+\item[{{\bf SmartDashboardData} $\ast$}]{value}
+\end{DoxyParamCaption}
+)}}
+\label{classSmartDashboard_a3e7cb12569b31c239ed5d5a68f29c2b0}
+Maps the specified key to the specified value in this table. The key can not be NULL. The value can be retrieved by calling the get method with a key that is equal to the original key. 
+\begin{DoxyParams}{Parameters}
+{\em keyName} & the key \\
+\hline
+{\em value} & the value \\
+\hline
+\end{DoxyParams}
+\hypertarget{classSmartDashboard_a9a6f92d68911111789ab8c1f1c96973f}{
+\index{SmartDashboard@{SmartDashboard}!PutData@{PutData}}
+\index{PutData@{PutData}!SmartDashboard@{SmartDashboard}}
+\subsubsection[{PutData}]{\setlength{\rightskip}{0pt plus 5cm}void SmartDashboard::PutData (
+\begin{DoxyParamCaption}
+\item[{{\bf SmartDashboardNamedData} $\ast$}]{value}
+\end{DoxyParamCaption}
+)}}
+\label{classSmartDashboard_a9a6f92d68911111789ab8c1f1c96973f}
+Maps the specified key (where the key is the name of the \hyperlink{classSmartDashboardNamedData}{SmartDashboardNamedData} to the specified value in this table. The value can be retrieved by calling the get method with a key that is equal to the original key. 
+\begin{DoxyParams}{Parameters}
+{\em value} & the value \\
+\hline
+\end{DoxyParams}
+\hypertarget{classSmartDashboard_ad52d7edbc2dee91e9d7d10f381620a39}{
+\index{SmartDashboard@{SmartDashboard}!PutDouble@{PutDouble}}
+\index{PutDouble@{PutDouble}!SmartDashboard@{SmartDashboard}}
+\subsubsection[{PutDouble}]{\setlength{\rightskip}{0pt plus 5cm}void SmartDashboard::PutDouble (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{keyName, }
+\item[{double}]{value}
+\end{DoxyParamCaption}
+)}}
+\label{classSmartDashboard_ad52d7edbc2dee91e9d7d10f381620a39}
+Maps the specified key to the specified value in this table. The key can not be NULL. The value can be retrieved by calling the get method with a key that is equal to the original key. 
+\begin{DoxyParams}{Parameters}
+{\em keyName} & the key \\
+\hline
+{\em value} & the value \\
+\hline
+\end{DoxyParams}
+\hypertarget{classSmartDashboard_afc4fcbf4522a461be5254a1fe4b8ff7d}{
+\index{SmartDashboard@{SmartDashboard}!PutInt@{PutInt}}
+\index{PutInt@{PutInt}!SmartDashboard@{SmartDashboard}}
+\subsubsection[{PutInt}]{\setlength{\rightskip}{0pt plus 5cm}void SmartDashboard::PutInt (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{keyName, }
+\item[{int}]{value}
+\end{DoxyParamCaption}
+)}}
+\label{classSmartDashboard_afc4fcbf4522a461be5254a1fe4b8ff7d}
+Maps the specified key to the specified value in this table. The keyName can not be NULL. The value can be retrieved by calling the get method with a key that is equal to the original key. 
+\begin{DoxyParams}{Parameters}
+{\em keyName} & the key \\
+\hline
+{\em value} & the value \\
+\hline
+\end{DoxyParams}
+\hypertarget{classSmartDashboard_a5a445bba77b5c398020e5c29c3b24d21}{
+\index{SmartDashboard@{SmartDashboard}!PutString@{PutString}}
+\index{PutString@{PutString}!SmartDashboard@{SmartDashboard}}
+\subsubsection[{PutString}]{\setlength{\rightskip}{0pt plus 5cm}void SmartDashboard::PutString (
+\begin{DoxyParamCaption}
+\item[{std::string}]{keyName, }
+\item[{std::string}]{value}
+\end{DoxyParamCaption}
+)}}
+\label{classSmartDashboard_a5a445bba77b5c398020e5c29c3b24d21}
+Maps the specified key to the specified value in this table. Neither the key nor the value can be NULL. The value can be retrieved by calling the get method with a key that is equal to the original key. 
+\begin{DoxyParams}{Parameters}
+{\em keyName} & the key \\
+\hline
+{\em value} & the value \\
+\hline
+\end{DoxyParams}
+\hypertarget{classSmartDashboard_af30da1e01120617de30cfa1f62e8e9a2}{
+\index{SmartDashboard@{SmartDashboard}!PutString@{PutString}}
+\index{PutString@{PutString}!SmartDashboard@{SmartDashboard}}
+\subsubsection[{PutString}]{\setlength{\rightskip}{0pt plus 5cm}void SmartDashboard::PutString (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{keyName, }
+\item[{const char $\ast$}]{value}
+\end{DoxyParamCaption}
+)}}
+\label{classSmartDashboard_af30da1e01120617de30cfa1f62e8e9a2}
+Maps the specified key to the specified value in this table. Neither the key nor the value can be NULL. The value can be retrieved by calling the get method with a key that is equal to the original key. 
+\begin{DoxyParams}{Parameters}
+{\em keyName} & the key \\
+\hline
+{\em value} & the value \\
+\hline
+\end{DoxyParams}
 
-\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
 \item 
-\-Smart\-Dashboard.\-h\item 
-\-Smart\-Dashboard.\-cpp\end{DoxyCompactItemize}
+SmartDashboard/SmartDashboard.h\item 
+SmartDashboard/SmartDashboard.cpp\end{DoxyCompactItemize}

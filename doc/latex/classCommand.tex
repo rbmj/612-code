@@ -1,0 +1,568 @@
+\hypertarget{classCommand}{
+\section{Command Class Reference}
+\label{classCommand}\index{Command@{Command}}
+}
+
+
+{\ttfamily \#include $<$Command.h$>$}
+
+Inheritance diagram for Command:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.720430cm]{classCommand}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classCommand_a189a03bfe86bc5cf292994ba141a8b25}{
+typedef std::set$<$ \hyperlink{classSubsystem}{Subsystem} $\ast$ $>$ {\bfseries SubsystemSet}}
+\label{classCommand_a189a03bfe86bc5cf292994ba141a8b25}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classCommand_a18df2d81039392daeb0b78c346a70537}{Command} ()
+\item 
+\hyperlink{classCommand_a1f2fe9a6d3496d00b74b303d7deafbdc}{Command} (const char $\ast$name)
+\item 
+\hyperlink{classCommand_a1a988669308fd15c9d067ffc44b29f4a}{Command} (double timeout)
+\item 
+\hyperlink{classCommand_a532edf679f684826aa6b01a1b048fdd4}{Command} (const char $\ast$name, double timeout)
+\item 
+double \hyperlink{classCommand_a9e73c88648f4bb0f4ea6a4affa72344d}{TimeSinceInitialized} ()
+\item 
+void \hyperlink{classCommand_abd1739c4b238ca209d98552276247969}{Requires} (\hyperlink{classSubsystem}{Subsystem} $\ast$s)
+\item 
+bool \hyperlink{classCommand_aa8b9db0daa4b2bcc77f17a6aed08ed18}{IsCanceled} ()
+\item 
+void \hyperlink{classCommand_ad61704023f2e6acfcfda4bc88c0b77fc}{Start} ()
+\item 
+bool \hyperlink{classCommand_ae10d99a6cec39f82aa9cb3dc289a45eb}{Run} ()
+\item 
+void \hyperlink{classCommand_af566114c4b517ef22d8c7820c171b8b2}{Cancel} ()
+\item 
+bool \hyperlink{classCommand_a2885369af7a278b59c6941b1df23ac86}{IsRunning} ()
+\item 
+bool \hyperlink{classCommand_ad9ec101c651f2a591bcdebe5db2f0d27}{IsInterruptible} ()
+\item 
+void \hyperlink{classCommand_abe119aabd648e16fa4ac781a11c8a783}{SetInterruptible} (bool interruptible)
+\item 
+bool \hyperlink{classCommand_a123a105353e91112a00a838da44901d9}{DoesRequire} (\hyperlink{classSubsystem}{Subsystem} $\ast$subsystem)
+\item 
+SubsystemSet \hyperlink{classCommand_afb520de2e4173f9342a94dd98d76dc0f}{GetRequirements} ()
+\item 
+\hyperlink{classCommandGroup}{CommandGroup} $\ast$ \hyperlink{classCommand_af60d2448ba7db9fe4f0d220e9a7df267}{GetGroup} ()
+\item 
+void \hyperlink{classCommand_afdc73b7597141bd075df8d08c815bb99}{SetRunWhenDisabled} (bool run)
+\item 
+bool \hyperlink{classCommand_a10193abfc2983232d59461dc12d90a8c}{WillRunWhenDisabled} ()
+\item 
+\hypertarget{classCommand_a68535903fc61c641f4ab2fdbd11d4257}{
+virtual std::string {\bfseries GetName} ()}
+\label{classCommand_a68535903fc61c641f4ab2fdbd11d4257}
+
+\item 
+\hypertarget{classCommand_a36d05a368c69528229a6b4938bc4dadd}{
+virtual std::string {\bfseries GetType} ()}
+\label{classCommand_a36d05a368c69528229a6b4938bc4dadd}
+
+\item 
+\hypertarget{classCommand_ac9a018d88222c9c2b9e8f4a73f46fa23}{
+virtual \hyperlink{classNetworkTable}{NetworkTable} $\ast$ {\bfseries GetTable} ()}
+\label{classCommand_ac9a018d88222c9c2b9e8f4a73f46fa23}
+
+\item 
+\hypertarget{classCommand_a18ebf33e40641b7305abcb3109593382}{
+virtual void {\bfseries ValueChanged} (\hyperlink{classNetworkTable}{NetworkTable} $\ast$table, const char $\ast$name, NetworkTables\_\-Types type)}
+\label{classCommand_a18ebf33e40641b7305abcb3109593382}
+
+\item 
+\hypertarget{classCommand_a64031d0cff1615ec0f42b37b764232b8}{
+virtual void {\bfseries ValueConfirmed} (\hyperlink{classNetworkTable}{NetworkTable} $\ast$table, const char $\ast$name, NetworkTables\_\-Types type)}
+\label{classCommand_a64031d0cff1615ec0f42b37b764232b8}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classCommand_a44e6ef53469416e3b91e445a34988c5b}{SetTimeout} (double timeout)
+\item 
+bool \hyperlink{classCommand_ad1283feb94bb07985eaafe1586ab2ff7}{IsTimedOut} ()
+\item 
+bool \hyperlink{classCommand_a51e42d83c96de891fc5f9b7b40be52bd}{AssertUnlocked} (const char $\ast$message)
+\item 
+void \hyperlink{classCommand_a5992f2282e4132517e933cc39cb3c774}{SetParent} (\hyperlink{classCommandGroup}{CommandGroup} $\ast$parent)
+\item 
+virtual void \hyperlink{classCommand_a35b4c5ab42d8190791863cc8f1224231}{Initialize} ()=0
+\item 
+virtual void \hyperlink{classCommand_a484c34647660fcfc8ee46b04ad5b32b6}{Execute} ()=0
+\item 
+virtual bool \hyperlink{classCommand_a350a1e6657cd59f177f55e8451e60aa9}{IsFinished} ()=0
+\item 
+virtual void \hyperlink{classCommand_aafdfd2fd2f1d005c20b7f9e60450dc7a}{End} ()=0
+\item 
+virtual void \hyperlink{classCommand_adaad5530c4dfdaac5e503ca373548a8e}{Interrupted} ()=0
+\item 
+\hypertarget{classCommand_a5633a101ed7e5baa81787bb68cbe7f2a}{
+virtual void {\bfseries \_\-Initialize} ()}
+\label{classCommand_a5633a101ed7e5baa81787bb68cbe7f2a}
+
+\item 
+\hypertarget{classCommand_a134fe548f337d8caa1f26e0a322e3e74}{
+virtual void {\bfseries \_\-Interrupted} ()}
+\label{classCommand_a134fe548f337d8caa1f26e0a322e3e74}
+
+\item 
+\hypertarget{classCommand_a54d80458f016277275706316c55ca484}{
+virtual void {\bfseries \_\-Execute} ()}
+\label{classCommand_a54d80458f016277275706316c55ca484}
+
+\item 
+\hypertarget{classCommand_a3115f0e20e980e935fb3746b33e94368}{
+virtual void {\bfseries \_\-End} ()}
+\label{classCommand_a3115f0e20e980e935fb3746b33e94368}
+
+\item 
+virtual void \hyperlink{classCommand_a2e36a819254da2bb9badb3227bdfe336}{\_\-Cancel} ()
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classCommand_a74a5eec0a51871fda0db6a47a7eae304}{
+class \hyperlink{classCommand_a74a5eec0a51871fda0db6a47a7eae304}{CommandGroup}}
+\label{classCommand_a74a5eec0a51871fda0db6a47a7eae304}
+
+\item 
+\hypertarget{classCommand_afb88c77ea5daaefa6c8fa6bc5b9aa5c1}{
+class \hyperlink{classCommand_afb88c77ea5daaefa6c8fa6bc5b9aa5c1}{Scheduler}}
+\label{classCommand_afb88c77ea5daaefa6c8fa6bc5b9aa5c1}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The \hyperlink{classCommand}{Command} class is at the very core of the entire command framework. Every command can be started with a call to \hyperlink{classCommand_ad61704023f2e6acfcfda4bc88c0b77fc}{Start()}. Once a command is started it will call \hyperlink{classCommand_a35b4c5ab42d8190791863cc8f1224231}{Initialize()}, and then will repeatedly call \hyperlink{classCommand_a484c34647660fcfc8ee46b04ad5b32b6}{Execute()} until the \hyperlink{classCommand_a350a1e6657cd59f177f55e8451e60aa9}{IsFinished()} returns true. Once it does, \hyperlink{classCommand_aafdfd2fd2f1d005c20b7f9e60450dc7a}{End()} will be called.
+
+However, if at any point while it is running \hyperlink{classCommand_af566114c4b517ef22d8c7820c171b8b2}{Cancel()} is called, then the command will be stopped and \hyperlink{classCommand_adaad5530c4dfdaac5e503ca373548a8e}{Interrupted()} will be called.
+
+If a command uses a \hyperlink{classSubsystem}{Subsystem}, then it should specify that it does so by calling the \hyperlink{}{Requires(...)} method in its constructor. Note that a \hyperlink{classCommand}{Command} may have multiple requirements, and \hyperlink{}{Requires(...)} should be called for each one.
+
+If a command is running and a new command with shared requirements is started, then one of two things will happen. If the active command is interruptible, then \hyperlink{classCommand_af566114c4b517ef22d8c7820c171b8b2}{Cancel()} will be called and the command will be removed to make way for the new one. If the active command is not interruptible, the other one will not even be started, and the active one will continue functioning.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classCommandGroup}{CommandGroup} 
+
+\hyperlink{classSubsystem}{Subsystem} 
+\end{DoxySeeAlso}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classCommand_a18df2d81039392daeb0b78c346a70537}{
+\index{Command@{Command}!Command@{Command}}
+\index{Command@{Command}!Command@{Command}}
+\subsubsection[{Command}]{\setlength{\rightskip}{0pt plus 5cm}Command::Command (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classCommand_a18df2d81039392daeb0b78c346a70537}
+Creates a new command. The name of this command will be default. \hypertarget{classCommand_a1f2fe9a6d3496d00b74b303d7deafbdc}{
+\index{Command@{Command}!Command@{Command}}
+\index{Command@{Command}!Command@{Command}}
+\subsubsection[{Command}]{\setlength{\rightskip}{0pt plus 5cm}Command::Command (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{name}
+\end{DoxyParamCaption}
+)}}
+\label{classCommand_a1f2fe9a6d3496d00b74b303d7deafbdc}
+Creates a new command with the given name and no timeout. 
+\begin{DoxyParams}{Parameters}
+{\em name} & the name for this command \\
+\hline
+\end{DoxyParams}
+\hypertarget{classCommand_a1a988669308fd15c9d067ffc44b29f4a}{
+\index{Command@{Command}!Command@{Command}}
+\index{Command@{Command}!Command@{Command}}
+\subsubsection[{Command}]{\setlength{\rightskip}{0pt plus 5cm}Command::Command (
+\begin{DoxyParamCaption}
+\item[{double}]{timeout}
+\end{DoxyParamCaption}
+)}}
+\label{classCommand_a1a988669308fd15c9d067ffc44b29f4a}
+Creates a new command with the given timeout and a default name. 
+\begin{DoxyParams}{Parameters}
+{\em timeout} & the time (in seconds) before this command \char`\"{}times out\char`\"{} \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+Command::isTimedOut() isTimedOut() 
+\end{DoxySeeAlso}
+\hypertarget{classCommand_a532edf679f684826aa6b01a1b048fdd4}{
+\index{Command@{Command}!Command@{Command}}
+\index{Command@{Command}!Command@{Command}}
+\subsubsection[{Command}]{\setlength{\rightskip}{0pt plus 5cm}Command::Command (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{name, }
+\item[{double}]{timeout}
+\end{DoxyParamCaption}
+)}}
+\label{classCommand_a532edf679f684826aa6b01a1b048fdd4}
+Creates a new command with the given name and timeout. 
+\begin{DoxyParams}{Parameters}
+{\em name} & the name of the command \\
+\hline
+{\em timeout} & the time (in seconds) before this command \char`\"{}times out\char`\"{} \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+Command::isTimedOut() isTimedOut() 
+\end{DoxySeeAlso}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classCommand_a2e36a819254da2bb9badb3227bdfe336}{
+\index{Command@{Command}!\_\-Cancel@{\_\-Cancel}}
+\index{\_\-Cancel@{\_\-Cancel}!Command@{Command}}
+\subsubsection[{\_\-Cancel}]{\setlength{\rightskip}{0pt plus 5cm}void Command::\_\-Cancel (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}protected, virtual\mbox{]}}}}
+\label{classCommand_a2e36a819254da2bb9badb3227bdfe336}
+This works like cancel(), except that it doesn't throw an exception if it is a part of a command group. Should only be called by the parent command group. \hypertarget{classCommand_a51e42d83c96de891fc5f9b7b40be52bd}{
+\index{Command@{Command}!AssertUnlocked@{AssertUnlocked}}
+\index{AssertUnlocked@{AssertUnlocked}!Command@{Command}}
+\subsubsection[{AssertUnlocked}]{\setlength{\rightskip}{0pt plus 5cm}bool Command::AssertUnlocked (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{message}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classCommand_a51e42d83c96de891fc5f9b7b40be52bd}
+If changes are locked, then this will generate a CommandIllegalUse error. 
+\begin{DoxyParams}{Parameters}
+{\em message} & the message to report on error (it is appended by a default message) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if assert passed, false if assert failed 
+\end{DoxyReturn}
+\hypertarget{classCommand_af566114c4b517ef22d8c7820c171b8b2}{
+\index{Command@{Command}!Cancel@{Cancel}}
+\index{Cancel@{Cancel}!Command@{Command}}
+\subsubsection[{Cancel}]{\setlength{\rightskip}{0pt plus 5cm}void Command::Cancel (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classCommand_af566114c4b517ef22d8c7820c171b8b2}
+This will cancel the current command. 
+
+This will cancel the current command eventually. It can be called multiple times. And it can be called when the command is not running. If the command is running though, then the command will be marked as canceled and eventually removed. 
+
+A command can not be canceled if it is a part of a command group, you must cancel the command group instead. \hypertarget{classCommand_a123a105353e91112a00a838da44901d9}{
+\index{Command@{Command}!DoesRequire@{DoesRequire}}
+\index{DoesRequire@{DoesRequire}!Command@{Command}}
+\subsubsection[{DoesRequire}]{\setlength{\rightskip}{0pt plus 5cm}bool Command::DoesRequire (
+\begin{DoxyParamCaption}
+\item[{{\bf Subsystem} $\ast$}]{system}
+\end{DoxyParamCaption}
+)}}
+\label{classCommand_a123a105353e91112a00a838da44901d9}
+Checks if the command requires the given \hyperlink{classSubsystem}{Subsystem}. 
+\begin{DoxyParams}{Parameters}
+{\em system} & the system \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+whether or not the subsystem is required (false if given NULL) 
+\end{DoxyReturn}
+\hypertarget{classCommand_aafdfd2fd2f1d005c20b7f9e60450dc7a}{
+\index{Command@{Command}!End@{End}}
+\index{End@{End}!Command@{Command}}
+\subsubsection[{End}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Command::End (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}protected, pure virtual\mbox{]}}}}
+\label{classCommand_aafdfd2fd2f1d005c20b7f9e60450dc7a}
+Called when the command ended peacefully. This is where you may want to wrap up loose ends, like shutting off a motor that was being used in the command. 
+
+Implemented in \hyperlink{classCommandGroup_a340f5e4fc0ca9ee2d4eaf1c09e5dfe7b}{CommandGroup}, \hyperlink{classPrintCommand_a50f0803940fc8bc14f72a743d7b82ecb}{PrintCommand}, \hyperlink{classStartCommand_a0115112b1fe5041d40000f74da97c32c}{StartCommand}, \hyperlink{classWaitCommand_a440032f840a2f61bba2a9be2699227bf}{WaitCommand}, \hyperlink{classWaitForChildren_a2e4795974df040aa4e93cae57f081bf4}{WaitForChildren}, and \hyperlink{classWaitUntilCommand_aba53383b0516939f352f86aef61467c0}{WaitUntilCommand}.
+
+\hypertarget{classCommand_a484c34647660fcfc8ee46b04ad5b32b6}{
+\index{Command@{Command}!Execute@{Execute}}
+\index{Execute@{Execute}!Command@{Command}}
+\subsubsection[{Execute}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Command::Execute (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}protected, pure virtual\mbox{]}}}}
+\label{classCommand_a484c34647660fcfc8ee46b04ad5b32b6}
+The execute method is called repeatedly until this \hyperlink{classCommand}{Command} either finishes or is canceled. 
+
+Implemented in \hyperlink{classCommandGroup_ab59b32de7a4daeb4d27e5ce1f8dd6895}{CommandGroup}, \hyperlink{classPrintCommand_a7d2c8116303839094accf68329050358}{PrintCommand}, \hyperlink{classStartCommand_aa6e8b7450ffe7af7a894cb35011ac093}{StartCommand}, \hyperlink{classWaitCommand_ae86cf56da58179704fefe8f3a72e76b2}{WaitCommand}, \hyperlink{classWaitForChildren_a0fa66dfbfc9d1add4cce927390bd3516}{WaitForChildren}, and \hyperlink{classWaitUntilCommand_aeecc3b6e8fe480786bbb40a486e9812e}{WaitUntilCommand}.
+
+\hypertarget{classCommand_af60d2448ba7db9fe4f0d220e9a7df267}{
+\index{Command@{Command}!GetGroup@{GetGroup}}
+\index{GetGroup@{GetGroup}!Command@{Command}}
+\subsubsection[{GetGroup}]{\setlength{\rightskip}{0pt plus 5cm}{\bf CommandGroup} $\ast$ Command::GetGroup (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classCommand_af60d2448ba7db9fe4f0d220e9a7df267}
+Returns the \hyperlink{classCommandGroup}{CommandGroup} that this command is a part of. Will return null if this \hyperlink{classCommand}{Command} is not in a group. \begin{DoxyReturn}{Returns}
+the \hyperlink{classCommandGroup}{CommandGroup} that this command is a part of (or null if not in group) 
+\end{DoxyReturn}
+\hypertarget{classCommand_afb520de2e4173f9342a94dd98d76dc0f}{
+\index{Command@{Command}!GetRequirements@{GetRequirements}}
+\index{GetRequirements@{GetRequirements}!Command@{Command}}
+\subsubsection[{GetRequirements}]{\setlength{\rightskip}{0pt plus 5cm}Command::SubsystemSet Command::GetRequirements (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classCommand_afb520de2e4173f9342a94dd98d76dc0f}
+Returns the requirements (as an std::set of \hyperlink{classSubsystem}{Subsystems} pointers) of this command \begin{DoxyReturn}{Returns}
+the requirements (as an std::set of \hyperlink{classSubsystem}{Subsystems} pointers) of this command 
+\end{DoxyReturn}
+\hypertarget{classCommand_a35b4c5ab42d8190791863cc8f1224231}{
+\index{Command@{Command}!Initialize@{Initialize}}
+\index{Initialize@{Initialize}!Command@{Command}}
+\subsubsection[{Initialize}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Command::Initialize (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}protected, pure virtual\mbox{]}}}}
+\label{classCommand_a35b4c5ab42d8190791863cc8f1224231}
+The initialize method is called the first time this \hyperlink{classCommand}{Command} is run after being started. 
+
+Implemented in \hyperlink{classCommandGroup_a931fcdff139e228e5aa977eba9c42c6b}{CommandGroup}, \hyperlink{classPrintCommand_a0fbf0d5d89e85a800ac776c0fc7ec8f5}{PrintCommand}, \hyperlink{classStartCommand_a7e0382765f67e6c31e1786f43c6d4c4d}{StartCommand}, \hyperlink{classWaitCommand_a272bb9b16371f8ca22c5fc807d76f1e7}{WaitCommand}, \hyperlink{classWaitForChildren_a1c66bfd3d5fd9d8896bee72abde428e8}{WaitForChildren}, and \hyperlink{classWaitUntilCommand_a30821833969223f43bbd99aaec21c8e8}{WaitUntilCommand}.
+
+\hypertarget{classCommand_adaad5530c4dfdaac5e503ca373548a8e}{
+\index{Command@{Command}!Interrupted@{Interrupted}}
+\index{Interrupted@{Interrupted}!Command@{Command}}
+\subsubsection[{Interrupted}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Command::Interrupted (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}protected, pure virtual\mbox{]}}}}
+\label{classCommand_adaad5530c4dfdaac5e503ca373548a8e}
+Called when the command ends because somebody called \hyperlink{}{cancel()} or another command shared the same requirements as this one, and booted it out.
+
+This is where you may want to wrap up loose ends, like shutting off a motor that was being used in the command.
+
+Generally, it is useful to simply call the \hyperlink{}{end()} method within this method 
+
+Implemented in \hyperlink{classCommandGroup_a56d224d9b9e4f7790f7ca42a2b277e0d}{CommandGroup}, \hyperlink{classPrintCommand_abb7f06b8993b40fad56e646516571f9e}{PrintCommand}, \hyperlink{classStartCommand_a9e6d49b15e6ca602cc621408cc4b035c}{StartCommand}, \hyperlink{classWaitCommand_a5c88fdb4af42a240002d92eb3d9059d6}{WaitCommand}, \hyperlink{classWaitForChildren_a68a22a01292ce96d7413cba66d0da486}{WaitForChildren}, and \hyperlink{classWaitUntilCommand_ac60f29d6f35a3f40375536ec7f8c0141}{WaitUntilCommand}.
+
+\hypertarget{classCommand_aa8b9db0daa4b2bcc77f17a6aed08ed18}{
+\index{Command@{Command}!IsCanceled@{IsCanceled}}
+\index{IsCanceled@{IsCanceled}!Command@{Command}}
+\subsubsection[{IsCanceled}]{\setlength{\rightskip}{0pt plus 5cm}bool Command::IsCanceled (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classCommand_aa8b9db0daa4b2bcc77f17a6aed08ed18}
+Returns whether or not this has been canceled. \begin{DoxyReturn}{Returns}
+whether or not this has been canceled 
+\end{DoxyReturn}
+\hypertarget{classCommand_a350a1e6657cd59f177f55e8451e60aa9}{
+\index{Command@{Command}!IsFinished@{IsFinished}}
+\index{IsFinished@{IsFinished}!Command@{Command}}
+\subsubsection[{IsFinished}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool Command::IsFinished (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}protected, pure virtual\mbox{]}}}}
+\label{classCommand_a350a1e6657cd59f177f55e8451e60aa9}
+Returns whether this command is finished. If it is, then the command will be removed and \hyperlink{}{end()} will be called.
+
+It may be useful for a team to reference the \hyperlink{}{isTimedOut()} method for time-\/sensitive commands. \begin{DoxyReturn}{Returns}
+whether this command is finished. 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+Command::isTimedOut() isTimedOut() 
+\end{DoxySeeAlso}
+
+
+Implemented in \hyperlink{classCommandGroup_a708bf0bb9ca1285bdfb9a548f3437811}{CommandGroup}, \hyperlink{classPrintCommand_ae138104f498d0804633395f541955f90}{PrintCommand}, \hyperlink{classStartCommand_aa9bb1889310d8fd8ffe18889cc14b4c6}{StartCommand}, \hyperlink{classWaitCommand_a118c9fa181b03cd80969a1a2b16508a5}{WaitCommand}, \hyperlink{classWaitForChildren_a9aac8a80a26f41cfa1032b3d08bda332}{WaitForChildren}, and \hyperlink{classWaitUntilCommand_aa176f72313e401526cd617714fe4594f}{WaitUntilCommand}.
+
+\hypertarget{classCommand_ad9ec101c651f2a591bcdebe5db2f0d27}{
+\index{Command@{Command}!IsInterruptible@{IsInterruptible}}
+\index{IsInterruptible@{IsInterruptible}!Command@{Command}}
+\subsubsection[{IsInterruptible}]{\setlength{\rightskip}{0pt plus 5cm}bool Command::IsInterruptible (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classCommand_ad9ec101c651f2a591bcdebe5db2f0d27}
+Returns whether or not this command can be interrupted. \begin{DoxyReturn}{Returns}
+whether or not this command can be interrupted 
+\end{DoxyReturn}
+
+
+Reimplemented in \hyperlink{classCommandGroup_ab02206bb10bc9ef6784ec08037580b75}{CommandGroup}.
+
+\hypertarget{classCommand_a2885369af7a278b59c6941b1df23ac86}{
+\index{Command@{Command}!IsRunning@{IsRunning}}
+\index{IsRunning@{IsRunning}!Command@{Command}}
+\subsubsection[{IsRunning}]{\setlength{\rightskip}{0pt plus 5cm}bool Command::IsRunning (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classCommand_a2885369af7a278b59c6941b1df23ac86}
+Returns whether or not the command is running. This may return true even if the command has just been canceled, as it may not have yet called \hyperlink{}{Command\#interrupted()}. \begin{DoxyReturn}{Returns}
+whether or not the command is running 
+\end{DoxyReturn}
+\hypertarget{classCommand_ad1283feb94bb07985eaafe1586ab2ff7}{
+\index{Command@{Command}!IsTimedOut@{IsTimedOut}}
+\index{IsTimedOut@{IsTimedOut}!Command@{Command}}
+\subsubsection[{IsTimedOut}]{\setlength{\rightskip}{0pt plus 5cm}bool Command::IsTimedOut (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classCommand_ad1283feb94bb07985eaafe1586ab2ff7}
+Returns whether or not the \hyperlink{}{timeSinceInitialized()} method returns a number which is greater than or equal to the timeout for the command. If there is no timeout, this will always return false. \begin{DoxyReturn}{Returns}
+whether the time has expired 
+\end{DoxyReturn}
+\hypertarget{classCommand_abd1739c4b238ca209d98552276247969}{
+\index{Command@{Command}!Requires@{Requires}}
+\index{Requires@{Requires}!Command@{Command}}
+\subsubsection[{Requires}]{\setlength{\rightskip}{0pt plus 5cm}void Command::Requires (
+\begin{DoxyParamCaption}
+\item[{{\bf Subsystem} $\ast$}]{subsystem}
+\end{DoxyParamCaption}
+)}}
+\label{classCommand_abd1739c4b238ca209d98552276247969}
+This method specifies that the given \hyperlink{classSubsystem}{Subsystem} is used by this command. This method is crucial to the functioning of the \hyperlink{classCommand}{Command} System in general.
+
+Note that the recommended way to call this method is in the constructor.
+
+
+\begin{DoxyParams}{Parameters}
+{\em subsystem} & the \hyperlink{classSubsystem}{Subsystem} required \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classSubsystem}{Subsystem} 
+\end{DoxySeeAlso}
+\hypertarget{classCommand_ae10d99a6cec39f82aa9cb3dc289a45eb}{
+\index{Command@{Command}!Run@{Run}}
+\index{Run@{Run}!Command@{Command}}
+\subsubsection[{Run}]{\setlength{\rightskip}{0pt plus 5cm}bool Command::Run (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classCommand_ae10d99a6cec39f82aa9cb3dc289a45eb}
+The run method is used internally to actually run the commands. \begin{DoxyReturn}{Returns}
+whether or not the command should stay within the \hyperlink{classScheduler}{Scheduler}. 
+\end{DoxyReturn}
+\hypertarget{classCommand_abe119aabd648e16fa4ac781a11c8a783}{
+\index{Command@{Command}!SetInterruptible@{SetInterruptible}}
+\index{SetInterruptible@{SetInterruptible}!Command@{Command}}
+\subsubsection[{SetInterruptible}]{\setlength{\rightskip}{0pt plus 5cm}void Command::SetInterruptible (
+\begin{DoxyParamCaption}
+\item[{bool}]{interruptible}
+\end{DoxyParamCaption}
+)}}
+\label{classCommand_abe119aabd648e16fa4ac781a11c8a783}
+Sets whether or not this command can be interrupted. 
+\begin{DoxyParams}{Parameters}
+{\em interruptible} & whether or not this command can be interrupted \\
+\hline
+\end{DoxyParams}
+\hypertarget{classCommand_a5992f2282e4132517e933cc39cb3c774}{
+\index{Command@{Command}!SetParent@{SetParent}}
+\index{SetParent@{SetParent}!Command@{Command}}
+\subsubsection[{SetParent}]{\setlength{\rightskip}{0pt plus 5cm}void Command::SetParent (
+\begin{DoxyParamCaption}
+\item[{{\bf CommandGroup} $\ast$}]{parent}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classCommand_a5992f2282e4132517e933cc39cb3c774}
+Sets the parent of this command. No actual change is made to the group. 
+\begin{DoxyParams}{Parameters}
+{\em parent} & the parent \\
+\hline
+\end{DoxyParams}
+\hypertarget{classCommand_afdc73b7597141bd075df8d08c815bb99}{
+\index{Command@{Command}!SetRunWhenDisabled@{SetRunWhenDisabled}}
+\index{SetRunWhenDisabled@{SetRunWhenDisabled}!Command@{Command}}
+\subsubsection[{SetRunWhenDisabled}]{\setlength{\rightskip}{0pt plus 5cm}void Command::SetRunWhenDisabled (
+\begin{DoxyParamCaption}
+\item[{bool}]{run}
+\end{DoxyParamCaption}
+)}}
+\label{classCommand_afdc73b7597141bd075df8d08c815bb99}
+Sets whether or not this \hyperlink{classCommand}{Command} should run when the robot is disabled.
+
+By default a command will not run when the robot is disabled, and will in fact be canceled. 
+\begin{DoxyParams}{Parameters}
+{\em run} & whether or not this command should run when the robot is disabled \\
+\hline
+\end{DoxyParams}
+\hypertarget{classCommand_a44e6ef53469416e3b91e445a34988c5b}{
+\index{Command@{Command}!SetTimeout@{SetTimeout}}
+\index{SetTimeout@{SetTimeout}!Command@{Command}}
+\subsubsection[{SetTimeout}]{\setlength{\rightskip}{0pt plus 5cm}void Command::SetTimeout (
+\begin{DoxyParamCaption}
+\item[{double}]{timeout}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classCommand_a44e6ef53469416e3b91e445a34988c5b}
+Sets the timeout of this command. 
+\begin{DoxyParams}{Parameters}
+{\em timeout} & the timeout (in seconds) \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+Command::isTimedOut() isTimedOut() 
+\end{DoxySeeAlso}
+\hypertarget{classCommand_ad61704023f2e6acfcfda4bc88c0b77fc}{
+\index{Command@{Command}!Start@{Start}}
+\index{Start@{Start}!Command@{Command}}
+\subsubsection[{Start}]{\setlength{\rightskip}{0pt plus 5cm}void Command::Start (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classCommand_ad61704023f2e6acfcfda4bc88c0b77fc}
+Starts up the command. Gets the command ready to start. 
+
+Note that the command will eventually start, however it will not necessarily do so immediately, and may in fact be canceled before initialize is even called. \hypertarget{classCommand_a9e73c88648f4bb0f4ea6a4affa72344d}{
+\index{Command@{Command}!TimeSinceInitialized@{TimeSinceInitialized}}
+\index{TimeSinceInitialized@{TimeSinceInitialized}!Command@{Command}}
+\subsubsection[{TimeSinceInitialized}]{\setlength{\rightskip}{0pt plus 5cm}double Command::TimeSinceInitialized (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classCommand_a9e73c88648f4bb0f4ea6a4affa72344d}
+Returns the time since this command was initialized (in seconds). This function will work even if there is no specified timeout. \begin{DoxyReturn}{Returns}
+the time since this command was initialized (in seconds). 
+\end{DoxyReturn}
+\hypertarget{classCommand_a10193abfc2983232d59461dc12d90a8c}{
+\index{Command@{Command}!WillRunWhenDisabled@{WillRunWhenDisabled}}
+\index{WillRunWhenDisabled@{WillRunWhenDisabled}!Command@{Command}}
+\subsubsection[{WillRunWhenDisabled}]{\setlength{\rightskip}{0pt plus 5cm}bool Command::WillRunWhenDisabled (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classCommand_a10193abfc2983232d59461dc12d90a8c}
+Returns whether or not this \hyperlink{classCommand}{Command} will run when the robot is disabled, or if it will cancel itself. \begin{DoxyReturn}{Returns}
+whether or not this \hyperlink{classCommand}{Command} will run when the robot is disabled, or if it will cancel itself 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+Commands/Command.h\item 
+Commands/Command.cpp\end{DoxyCompactItemize}

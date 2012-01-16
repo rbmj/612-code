@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<title>Deprecated List</title>
+<title>WPILib: Deprecated List</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/search.js"></script>
@@ -19,7 +19,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-   <div id="projectbrief">WPIRoboticsLibraryforFRC</div>
+   <div id="projectname">WPILib&#160;<span id="projectnumber">2012</span></div>
+   <div id="projectbrief">WPILibRoboticsLibraryforFRC</div>
   </td>
  </tr>
  </tbody>
@@ -70,15 +71,60 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <dt>Member <a class="el" href="classCANJaguar.html#a5ce4840f1e80913836cfb2ddb2d7d50b">CANJaguar::StopMotor</a> () </dt>
 <dd>Call DisableControl instead. </dd>
 </dl>
-<p><a class="anchor" id="_deprecated000004"></a> </p>
+<p><a class="anchor" id="_deprecated000010"></a> </p>
 <dl>
 <dt>Member <a class="el" href="classEncoder.html#a9825883787337876f6d62951d7eaac24">Encoder::GetPeriod</a> () </dt>
 <dd>Use GetRate() in favor of this method. This returns unscaled periods and GetRate() scales using value from SetDistancePerPulse().</dd>
 </dl>
-<p><a class="anchor" id="_deprecated000005"></a> </p>
+<p><a class="anchor" id="_deprecated000011"></a> </p>
 <dl>
 <dt>Member <a class="el" href="classEncoder.html#a53e9481bd248b04a00809a3ea69d97c1">Encoder::SetMaxPeriod</a> (double maxPeriod) </dt>
 <dd>Use SetMinRate() in favor of this method. This takes unscaled periods and SetMinRate() scales using value from SetDistancePerPulse().</dd>
+</dl>
+<p><a class="anchor" id="_deprecated000012"></a> </p>
+<dl>
+<dt>Member <a class="el" href="classSmartDashboard.html#ae8ea8b62acfb5174bc70185b0e5021de">SmartDashboard::init</a> () </dt>
+<dd>no longer necessary </dd>
+</dl>
+<p><a class="anchor" id="_deprecated000017"></a> </p>
+<dl>
+<dt>Member <a class="el" href="classSmartDashboard.html#a1d804fdc5d0c362de99414532142e741">SmartDashboard::Log</a> (bool value, const char *name) </dt>
+<dd>use <a class="el" href="classSmartDashboard.html#afece0d9b59b122580b6167d1c7faa29b">SmartDashboard#PutBoolean(const char*, bool)</a> instead </dd>
+</dl>
+<p><a class="anchor" id="_deprecated000015"></a> </p>
+<dl>
+<dt>Member <a class="el" href="classSmartDashboard.html#a1bdecea4cdeb839fb1cbd476b043f6d6">SmartDashboard::Log</a> (INT32 value, const char *name) </dt>
+<dd>use <a class="el" href="classSmartDashboard.html#afc4fcbf4522a461be5254a1fe4b8ff7d">SmartDashboard#PutInt(const char*, int)</a> </dd>
+</dl>
+<p><a class="anchor" id="_deprecated000020"></a> </p>
+<dl>
+<dt>Member <a class="el" href="classSmartDashboard.html#ad22eabf2070046656f9757b17d789bc6">SmartDashboard::Log</a> (const char *value, const char *name) </dt>
+<dd>use <a class="el" href="classSmartDashboard.html#af30da1e01120617de30cfa1f62e8e9a2">SmartDashboard#PutString(const char*, const char*)</a> </dd>
+</dl>
+<p><a class="anchor" id="_deprecated000019"></a> </p>
+<dl>
+<dt>Member <a class="el" href="classSmartDashboard.html#a253f9156ef7f9b5b20cb6f22319d3f91">SmartDashboard::Log</a> (double value, const char *name) </dt>
+<dd>use <a class="el" href="classSmartDashboard.html#ad52d7edbc2dee91e9d7d10f381620a39">SmartDashboard#PutDouble(const char*, double)</a> </dd>
+</dl>
+<p><a class="anchor" id="_deprecated000018"></a> </p>
+<dl>
+<dt>Member <a class="el" href="classSmartDashboard.html#a641f1715d0333bc72d38bdfaad2db1f7">SmartDashboard::Log</a> (float value, const char *name) </dt>
+<dd>use <a class="el" href="classSmartDashboard.html#ad52d7edbc2dee91e9d7d10f381620a39">SmartDashboard#PutDouble(const char*, double)</a> </dd>
+</dl>
+<p><a class="anchor" id="_deprecated000016"></a> </p>
+<dl>
+<dt>Member <a class="el" href="classSmartDashboard.html#a75d16bd65e394c8e11a92201ee6d5b18">SmartDashboard::Log</a> (INT64 value, const char *name) </dt>
+<dd>use <a class="el" href="classSmartDashboard.html#ad52d7edbc2dee91e9d7d10f381620a39">SmartDashboard#PutDouble(const char*, double)</a> </dd>
+</dl>
+<p><a class="anchor" id="_deprecated000013"></a> </p>
+<dl>
+<dt>Member <a class="el" href="classSmartDashboard.html#aaf01cf3a3e9aeb5a24c3268a765dd210">SmartDashboard::LogChar</a> (char value, const char *name) </dt>
+<dd>use <a class="el" href="classSmartDashboard.html#afc4fcbf4522a461be5254a1fe4b8ff7d">SmartDashboard#PutInt(const char*, int)</a> </dd>
+</dl>
+<p><a class="anchor" id="_deprecated000014"></a> </p>
+<dl>
+<dt>Member <a class="el" href="classSmartDashboard.html#ab50c033c84036bd3924c5b00a53d495c">SmartDashboard::LogChar</a> (wchar_t value, const char *name) </dt>
+<dd>use <a class="el" href="classSmartDashboard.html#afc4fcbf4522a461be5254a1fe4b8ff7d">SmartDashboard#PutInt(const char*, int)</a> </dd>
 </dl>
 </div></div>
 <!-- window showing the filter options -->
@@ -95,7 +141,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Mon Jan 9 2012 14:57:03 by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Mon Jan 16 2012 16:29:29 for WPILib by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
 </body>

@@ -1,0 +1,307 @@
+\hypertarget{classCommandGroup}{
+\section{CommandGroup Class Reference}
+\label{classCommandGroup}\index{CommandGroup@{CommandGroup}}
+}
+
+
+{\ttfamily \#include $<$CommandGroup.h$>$}
+
+Inheritance diagram for CommandGroup:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{classCommandGroup}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classCommandGroup_a862143e691209986739c234cb0fc4cc8}{CommandGroup} ()
+\item 
+\hyperlink{classCommandGroup_a050293db5f70536289063006684d9d48}{CommandGroup} (const char $\ast$name)
+\item 
+void \hyperlink{classCommandGroup_a37206a473a9a01ba8098d73f452de71b}{AddSequential} (\hyperlink{classCommand}{Command} $\ast$command)
+\item 
+void \hyperlink{classCommandGroup_ab4995b5b0bb694f79bcef0b84c893b80}{AddSequential} (\hyperlink{classCommand}{Command} $\ast$command, double timeout)
+\item 
+void \hyperlink{classCommandGroup_a3c7e096849f7586389769454b3148be3}{AddParallel} (\hyperlink{classCommand}{Command} $\ast$command)
+\item 
+void \hyperlink{classCommandGroup_a843c4cc19eeb1d55615c017dac511c82}{AddParallel} (\hyperlink{classCommand}{Command} $\ast$command, double timeout)
+\item 
+bool \hyperlink{classCommandGroup_ab02206bb10bc9ef6784ec08037580b75}{IsInterruptible} ()
+\item 
+\hypertarget{classCommandGroup_a8d10c609973d9de158ae46d9374cef56}{
+int {\bfseries GetSize} ()}
+\label{classCommandGroup_a8d10c609973d9de158ae46d9374cef56}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{classCommandGroup_a931fcdff139e228e5aa977eba9c42c6b}{Initialize} ()
+\item 
+virtual void \hyperlink{classCommandGroup_ab59b32de7a4daeb4d27e5ce1f8dd6895}{Execute} ()
+\item 
+virtual bool \hyperlink{classCommandGroup_a708bf0bb9ca1285bdfb9a548f3437811}{IsFinished} ()
+\item 
+virtual void \hyperlink{classCommandGroup_a340f5e4fc0ca9ee2d4eaf1c09e5dfe7b}{End} ()
+\item 
+virtual void \hyperlink{classCommandGroup_a56d224d9b9e4f7790f7ca42a2b277e0d}{Interrupted} ()
+\item 
+\hypertarget{classCommandGroup_a28b8b3ff819a64555fd6341589cfc455}{
+virtual void {\bfseries \_\-Initialize} ()}
+\label{classCommandGroup_a28b8b3ff819a64555fd6341589cfc455}
+
+\item 
+\hypertarget{classCommandGroup_ad3ff13abeb2f4b051e88cb5d3c874347}{
+virtual void {\bfseries \_\-Interrupted} ()}
+\label{classCommandGroup_ad3ff13abeb2f4b051e88cb5d3c874347}
+
+\item 
+\hypertarget{classCommandGroup_ad9b5deb4bcefe5e00a63e0eec9300523}{
+virtual void {\bfseries \_\-Execute} ()}
+\label{classCommandGroup_ad9b5deb4bcefe5e00a63e0eec9300523}
+
+\item 
+\hypertarget{classCommandGroup_a7c85be5c78703c542bbda74fc4173202}{
+virtual void {\bfseries \_\-End} ()}
+\label{classCommandGroup_a7c85be5c78703c542bbda74fc4173202}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A \hyperlink{classCommandGroup}{CommandGroup} is a list of commands which are executed in sequence.
+
+Commands in a \hyperlink{classCommandGroup}{CommandGroup} are added using the \hyperlink{}{AddSequential(...)} method and are called sequentially. \hyperlink{classCommandGroup}{CommandGroups} are themselves \hyperlink{classCommand}{Commands} and can be given to other \hyperlink{classCommandGroup}{CommandGroups}.
+
+\hyperlink{classCommandGroup}{CommandGroups} will carry all of the requirements of their \hyperlink{classCommand}{subcommands}. Additional requirements can be specified by calling \hyperlink{}{Requires(...)} normally in the constructor.
+
+CommandGroups can also execute commands in parallel, simply by adding them using \hyperlink{}{AddParallel(...)}.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classCommand}{Command} 
+
+\hyperlink{classSubsystem}{Subsystem} 
+\end{DoxySeeAlso}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classCommandGroup_a862143e691209986739c234cb0fc4cc8}{
+\index{CommandGroup@{CommandGroup}!CommandGroup@{CommandGroup}}
+\index{CommandGroup@{CommandGroup}!CommandGroup@{CommandGroup}}
+\subsubsection[{CommandGroup}]{\setlength{\rightskip}{0pt plus 5cm}CommandGroup::CommandGroup (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classCommandGroup_a862143e691209986739c234cb0fc4cc8}
+Creates a new \hyperlink{classCommandGroup}{CommandGroup}. \hypertarget{classCommandGroup_a050293db5f70536289063006684d9d48}{
+\index{CommandGroup@{CommandGroup}!CommandGroup@{CommandGroup}}
+\index{CommandGroup@{CommandGroup}!CommandGroup@{CommandGroup}}
+\subsubsection[{CommandGroup}]{\setlength{\rightskip}{0pt plus 5cm}CommandGroup::CommandGroup (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{name}
+\end{DoxyParamCaption}
+)}}
+\label{classCommandGroup_a050293db5f70536289063006684d9d48}
+Creates a new \hyperlink{classCommandGroup}{CommandGroup} with the given name. 
+\begin{DoxyParams}{Parameters}
+{\em name} & the name for this command group \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classCommandGroup_a843c4cc19eeb1d55615c017dac511c82}{
+\index{CommandGroup@{CommandGroup}!AddParallel@{AddParallel}}
+\index{AddParallel@{AddParallel}!CommandGroup@{CommandGroup}}
+\subsubsection[{AddParallel}]{\setlength{\rightskip}{0pt plus 5cm}void CommandGroup::AddParallel (
+\begin{DoxyParamCaption}
+\item[{{\bf Command} $\ast$}]{command, }
+\item[{double}]{timeout}
+\end{DoxyParamCaption}
+)}}
+\label{classCommandGroup_a843c4cc19eeb1d55615c017dac511c82}
+Adds a new child \hyperlink{classCommand}{Command} to the group with the given timeout. The \hyperlink{classCommand}{Command} will be started after all the previously added \hyperlink{classCommand}{Commands}.
+
+Once the \hyperlink{classCommand}{Command} is started, it will run until it finishes, is interrupted, or the time expires, whichever is sooner. Note that the given \hyperlink{classCommand}{Command} will have no knowledge that it is on a timer.
+
+Instead of waiting for the child to finish, a \hyperlink{classCommandGroup}{CommandGroup} will have it run at the same time as the subsequent \hyperlink{classCommand}{Commands}. The child will run until either it finishes, the timeout expires, a new child with conflicting requirements is started, or the main sequence runs a \hyperlink{classCommand}{Command} with conflicting requirements. In the latter two cases, the child will be canceled even if it says it can't be interrupted.
+
+Note that any requirements the given \hyperlink{classCommand}{Command} has will be added to the group. For this reason, a \hyperlink{classCommand}{Command's} requirements can not be changed after being added to a group.
+
+It is recommended that this method be called in the constructor.
+
+
+\begin{DoxyParams}{Parameters}
+{\em command} & The command to be added \\
+\hline
+{\em timeout} & The timeout (in seconds) \\
+\hline
+\end{DoxyParams}
+\hypertarget{classCommandGroup_a3c7e096849f7586389769454b3148be3}{
+\index{CommandGroup@{CommandGroup}!AddParallel@{AddParallel}}
+\index{AddParallel@{AddParallel}!CommandGroup@{CommandGroup}}
+\subsubsection[{AddParallel}]{\setlength{\rightskip}{0pt plus 5cm}void CommandGroup::AddParallel (
+\begin{DoxyParamCaption}
+\item[{{\bf Command} $\ast$}]{command}
+\end{DoxyParamCaption}
+)}}
+\label{classCommandGroup_a3c7e096849f7586389769454b3148be3}
+Adds a new child \hyperlink{classCommand}{Command} to the group. The \hyperlink{classCommand}{Command} will be started after all the previously added \hyperlink{classCommand}{Commands}.
+
+Instead of waiting for the child to finish, a \hyperlink{classCommandGroup}{CommandGroup} will have it run at the same time as the subsequent \hyperlink{classCommand}{Commands}. The child will run until either it finishes, a new child with conflicting requirements is started, or the main sequence runs a \hyperlink{classCommand}{Command} with conflicting requirements. In the latter two cases, the child will be canceled even if it says it can't be interrupted.
+
+Note that any requirements the given \hyperlink{classCommand}{Command} has will be added to the group. For this reason, a \hyperlink{classCommand}{Command's} requirements can not be changed after being added to a group.
+
+It is recommended that this method be called in the constructor.
+
+
+\begin{DoxyParams}{Parameters}
+{\em command} & The command to be added \\
+\hline
+\end{DoxyParams}
+\hypertarget{classCommandGroup_ab4995b5b0bb694f79bcef0b84c893b80}{
+\index{CommandGroup@{CommandGroup}!AddSequential@{AddSequential}}
+\index{AddSequential@{AddSequential}!CommandGroup@{CommandGroup}}
+\subsubsection[{AddSequential}]{\setlength{\rightskip}{0pt plus 5cm}void CommandGroup::AddSequential (
+\begin{DoxyParamCaption}
+\item[{{\bf Command} $\ast$}]{command, }
+\item[{double}]{timeout}
+\end{DoxyParamCaption}
+)}}
+\label{classCommandGroup_ab4995b5b0bb694f79bcef0b84c893b80}
+Adds a new \hyperlink{classCommand}{Command} to the group with a given timeout. The \hyperlink{classCommand}{Command} will be started after all the previously added commands.
+
+Once the \hyperlink{classCommand}{Command} is started, it will be run until it finishes or the time expires, whichever is sooner. Note that the given \hyperlink{classCommand}{Command} will have no knowledge that it is on a timer.
+
+Note that any requirements the given \hyperlink{classCommand}{Command} has will be added to the group. For this reason, a \hyperlink{classCommand}{Command's} requirements can not be changed after being added to a group.
+
+It is recommended that this method be called in the constructor.
+
+
+\begin{DoxyParams}{Parameters}
+{\em command} & The \hyperlink{classCommand}{Command} to be added \\
+\hline
+{\em timeout} & The timeout (in seconds) \\
+\hline
+\end{DoxyParams}
+\hypertarget{classCommandGroup_a37206a473a9a01ba8098d73f452de71b}{
+\index{CommandGroup@{CommandGroup}!AddSequential@{AddSequential}}
+\index{AddSequential@{AddSequential}!CommandGroup@{CommandGroup}}
+\subsubsection[{AddSequential}]{\setlength{\rightskip}{0pt plus 5cm}void CommandGroup::AddSequential (
+\begin{DoxyParamCaption}
+\item[{{\bf Command} $\ast$}]{command}
+\end{DoxyParamCaption}
+)}}
+\label{classCommandGroup_a37206a473a9a01ba8098d73f452de71b}
+Adds a new \hyperlink{classCommand}{Command} to the group. The \hyperlink{classCommand}{Command} will be started after all the previously added \hyperlink{classCommand}{Commands}.
+
+Note that any requirements the given \hyperlink{classCommand}{Command} has will be added to the group. For this reason, a \hyperlink{classCommand}{Command's} requirements can not be changed after being added to a group.
+
+It is recommended that this method be called in the constructor.
+
+
+\begin{DoxyParams}{Parameters}
+{\em command} & The \hyperlink{classCommand}{Command} to be added \\
+\hline
+\end{DoxyParams}
+\hypertarget{classCommandGroup_a340f5e4fc0ca9ee2d4eaf1c09e5dfe7b}{
+\index{CommandGroup@{CommandGroup}!End@{End}}
+\index{End@{End}!CommandGroup@{CommandGroup}}
+\subsubsection[{End}]{\setlength{\rightskip}{0pt plus 5cm}void CommandGroup::End (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}protected, virtual\mbox{]}}}}
+\label{classCommandGroup_a340f5e4fc0ca9ee2d4eaf1c09e5dfe7b}
+Called when the command ended peacefully. This is where you may want to wrap up loose ends, like shutting off a motor that was being used in the command. 
+
+Implements \hyperlink{classCommand_aafdfd2fd2f1d005c20b7f9e60450dc7a}{Command}.
+
+\hypertarget{classCommandGroup_ab59b32de7a4daeb4d27e5ce1f8dd6895}{
+\index{CommandGroup@{CommandGroup}!Execute@{Execute}}
+\index{Execute@{Execute}!CommandGroup@{CommandGroup}}
+\subsubsection[{Execute}]{\setlength{\rightskip}{0pt plus 5cm}void CommandGroup::Execute (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}protected, virtual\mbox{]}}}}
+\label{classCommandGroup_ab59b32de7a4daeb4d27e5ce1f8dd6895}
+The execute method is called repeatedly until this \hyperlink{classCommand}{Command} either finishes or is canceled. 
+
+Implements \hyperlink{classCommand_a484c34647660fcfc8ee46b04ad5b32b6}{Command}.
+
+\hypertarget{classCommandGroup_a931fcdff139e228e5aa977eba9c42c6b}{
+\index{CommandGroup@{CommandGroup}!Initialize@{Initialize}}
+\index{Initialize@{Initialize}!CommandGroup@{CommandGroup}}
+\subsubsection[{Initialize}]{\setlength{\rightskip}{0pt plus 5cm}void CommandGroup::Initialize (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}protected, virtual\mbox{]}}}}
+\label{classCommandGroup_a931fcdff139e228e5aa977eba9c42c6b}
+The initialize method is called the first time this \hyperlink{classCommand}{Command} is run after being started. 
+
+Implements \hyperlink{classCommand_a35b4c5ab42d8190791863cc8f1224231}{Command}.
+
+\hypertarget{classCommandGroup_a56d224d9b9e4f7790f7ca42a2b277e0d}{
+\index{CommandGroup@{CommandGroup}!Interrupted@{Interrupted}}
+\index{Interrupted@{Interrupted}!CommandGroup@{CommandGroup}}
+\subsubsection[{Interrupted}]{\setlength{\rightskip}{0pt plus 5cm}void CommandGroup::Interrupted (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}protected, virtual\mbox{]}}}}
+\label{classCommandGroup_a56d224d9b9e4f7790f7ca42a2b277e0d}
+Called when the command ends because somebody called \hyperlink{}{cancel()} or another command shared the same requirements as this one, and booted it out.
+
+This is where you may want to wrap up loose ends, like shutting off a motor that was being used in the command.
+
+Generally, it is useful to simply call the \hyperlink{}{end()} method within this method 
+
+Implements \hyperlink{classCommand_adaad5530c4dfdaac5e503ca373548a8e}{Command}.
+
+\hypertarget{classCommandGroup_a708bf0bb9ca1285bdfb9a548f3437811}{
+\index{CommandGroup@{CommandGroup}!IsFinished@{IsFinished}}
+\index{IsFinished@{IsFinished}!CommandGroup@{CommandGroup}}
+\subsubsection[{IsFinished}]{\setlength{\rightskip}{0pt plus 5cm}bool CommandGroup::IsFinished (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}protected, virtual\mbox{]}}}}
+\label{classCommandGroup_a708bf0bb9ca1285bdfb9a548f3437811}
+Returns whether this command is finished. If it is, then the command will be removed and \hyperlink{}{end()} will be called.
+
+It may be useful for a team to reference the \hyperlink{}{isTimedOut()} method for time-\/sensitive commands. \begin{DoxyReturn}{Returns}
+whether this command is finished. 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+Command::isTimedOut() isTimedOut() 
+\end{DoxySeeAlso}
+
+
+Implements \hyperlink{classCommand_a350a1e6657cd59f177f55e8451e60aa9}{Command}.
+
+\hypertarget{classCommandGroup_ab02206bb10bc9ef6784ec08037580b75}{
+\index{CommandGroup@{CommandGroup}!IsInterruptible@{IsInterruptible}}
+\index{IsInterruptible@{IsInterruptible}!CommandGroup@{CommandGroup}}
+\subsubsection[{IsInterruptible}]{\setlength{\rightskip}{0pt plus 5cm}bool CommandGroup::IsInterruptible (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classCommandGroup_ab02206bb10bc9ef6784ec08037580b75}
+Returns whether or not this command can be interrupted. \begin{DoxyReturn}{Returns}
+whether or not this command can be interrupted 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{classCommand_ad9ec101c651f2a591bcdebe5db2f0d27}{Command}.
+
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+Commands/CommandGroup.h\item 
+Commands/CommandGroup.cpp\end{DoxyCompactItemize}

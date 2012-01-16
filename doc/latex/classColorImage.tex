@@ -1,0 +1,525 @@
+\hypertarget{classColorImage}{
+\section{ColorImage Class Reference}
+\label{classColorImage}\index{ColorImage@{ColorImage}}
+}
+Inheritance diagram for ColorImage:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{classColorImage}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classColorImage_adc4d76dfbd554a0e0d0c634d65222cae}{
+{\bfseries ColorImage} (ImageType type)}
+\label{classColorImage_adc4d76dfbd554a0e0d0c634d65222cae}
+
+\item 
+\hyperlink{classBinaryImage}{BinaryImage} $\ast$ \hyperlink{classColorImage_a3f38ef317578522db35e6218b06815c2}{ThresholdRGB} (int redLow, int redHigh, int greenLow, int greenHigh, int blueLow, int blueHigh)
+\item 
+\hyperlink{classBinaryImage}{BinaryImage} $\ast$ \hyperlink{classColorImage_afff88ecb9f4f1325af4b2ca59066f31a}{ThresholdHSL} (int hueLow, int hueHigh, int saturationLow, int saturationHigh, int luminenceLow, int luminenceHigh)
+\item 
+\hyperlink{classBinaryImage}{BinaryImage} $\ast$ \hyperlink{classColorImage_a57dd0579fa6e5aa5a7a63e0bd5076477}{ThresholdHSV} (int hueLow, int hueHigh, int saturationLow, int saturationHigh, int valueHigh, int valueLow)
+\item 
+\hyperlink{classBinaryImage}{BinaryImage} $\ast$ \hyperlink{classColorImage_a7e00f9e1cf08c3aee82c498933d2a48b}{ThresholdHSI} (int hueLow, int hueHigh, int saturationLow, int saturationHigh, int intensityLow, int intensityHigh)
+\item 
+\hyperlink{classBinaryImage}{BinaryImage} $\ast$ \hyperlink{classColorImage_a3babade187f4bb8d657263b5033025f3}{ThresholdRGB} (\hyperlink{classThreshold}{Threshold} \&threshold)
+\item 
+\hyperlink{classBinaryImage}{BinaryImage} $\ast$ \hyperlink{classColorImage_a8ef8b6a681141e13c1771799f98cb900}{ThresholdHSL} (\hyperlink{classThreshold}{Threshold} \&threshold)
+\item 
+\hyperlink{classBinaryImage}{BinaryImage} $\ast$ \hyperlink{classColorImage_adc9b0feffd8248c96d4cfbda59cf56fb}{ThresholdHSV} (\hyperlink{classThreshold}{Threshold} \&threshold)
+\item 
+\hyperlink{classBinaryImage}{BinaryImage} $\ast$ \hyperlink{classColorImage_a3c9fcc98a7b820e44f20fc959b20c562}{ThresholdHSI} (\hyperlink{classThreshold}{Threshold} \&threshold)
+\item 
+\hypertarget{classColorImage_aa420019076ed33187d931c492f62faf6}{
+\hyperlink{classMonoImage}{MonoImage} $\ast$ {\bfseries GetRedPlane} ()}
+\label{classColorImage_aa420019076ed33187d931c492f62faf6}
+
+\item 
+\hypertarget{classColorImage_ae5cd2af9d2123eb30156ff114cba5f86}{
+\hyperlink{classMonoImage}{MonoImage} $\ast$ {\bfseries GetGreenPlane} ()}
+\label{classColorImage_ae5cd2af9d2123eb30156ff114cba5f86}
+
+\item 
+\hypertarget{classColorImage_ab0469af201ebee659775aecb5b21a428}{
+\hyperlink{classMonoImage}{MonoImage} $\ast$ {\bfseries GetBluePlane} ()}
+\label{classColorImage_ab0469af201ebee659775aecb5b21a428}
+
+\item 
+\hypertarget{classColorImage_afc13aef01cae36e83bf4f1f162506051}{
+\hyperlink{classMonoImage}{MonoImage} $\ast$ {\bfseries GetHSLHuePlane} ()}
+\label{classColorImage_afc13aef01cae36e83bf4f1f162506051}
+
+\item 
+\hypertarget{classColorImage_abf5e1fce962a97c4c808e9785affc6e9}{
+\hyperlink{classMonoImage}{MonoImage} $\ast$ {\bfseries GetHSVHuePlane} ()}
+\label{classColorImage_abf5e1fce962a97c4c808e9785affc6e9}
+
+\item 
+\hypertarget{classColorImage_a9af756d0191da6c4b135c0efed38fd53}{
+\hyperlink{classMonoImage}{MonoImage} $\ast$ {\bfseries GetHSIHuePlane} ()}
+\label{classColorImage_a9af756d0191da6c4b135c0efed38fd53}
+
+\item 
+\hypertarget{classColorImage_a352966ea596f14d181fc1628b8dea534}{
+\hyperlink{classMonoImage}{MonoImage} $\ast$ {\bfseries GetHSLSaturationPlane} ()}
+\label{classColorImage_a352966ea596f14d181fc1628b8dea534}
+
+\item 
+\hypertarget{classColorImage_afa7bdf72fcdd23a557212dad3854032d}{
+\hyperlink{classMonoImage}{MonoImage} $\ast$ {\bfseries GetHSVSaturationPlane} ()}
+\label{classColorImage_afa7bdf72fcdd23a557212dad3854032d}
+
+\item 
+\hypertarget{classColorImage_a925c26886d93e95ba9dd1a94d702c6d3}{
+\hyperlink{classMonoImage}{MonoImage} $\ast$ {\bfseries GetHSISaturationPlane} ()}
+\label{classColorImage_a925c26886d93e95ba9dd1a94d702c6d3}
+
+\item 
+\hypertarget{classColorImage_a2d413f77a52c496da5356b12d927cf44}{
+\hyperlink{classMonoImage}{MonoImage} $\ast$ {\bfseries GetLuminancePlane} ()}
+\label{classColorImage_a2d413f77a52c496da5356b12d927cf44}
+
+\item 
+\hypertarget{classColorImage_a6e3343f0ee935e4f886cefdc88ca630d}{
+\hyperlink{classMonoImage}{MonoImage} $\ast$ {\bfseries GetValuePlane} ()}
+\label{classColorImage_a6e3343f0ee935e4f886cefdc88ca630d}
+
+\item 
+\hypertarget{classColorImage_a807bce226f6c3aa5c8a93fb5529076e5}{
+\hyperlink{classMonoImage}{MonoImage} $\ast$ {\bfseries GetIntensityPlane} ()}
+\label{classColorImage_a807bce226f6c3aa5c8a93fb5529076e5}
+
+\item 
+void \hyperlink{classColorImage_a55052912bd0ffdc235f58716da9f61b1}{ReplaceRedPlane} (\hyperlink{classMonoImage}{MonoImage} $\ast$plane)
+\item 
+void \hyperlink{classColorImage_a1f4101a81cc10874824cf1ab015a4075}{ReplaceGreenPlane} (\hyperlink{classMonoImage}{MonoImage} $\ast$plane)
+\item 
+void \hyperlink{classColorImage_a27b3fefaf49e394cb2b2c55dbeb3bc4c}{ReplaceBluePlane} (\hyperlink{classMonoImage}{MonoImage} $\ast$plane)
+\item 
+void \hyperlink{classColorImage_a1ec3310a38bfc9c154867bdb96d17c6c}{ReplaceHSLHuePlane} (\hyperlink{classMonoImage}{MonoImage} $\ast$plane)
+\item 
+void \hyperlink{classColorImage_a1ca28fb183bf9b43e53aa19d6a057e05}{ReplaceHSVHuePlane} (\hyperlink{classMonoImage}{MonoImage} $\ast$plane)
+\item 
+void \hyperlink{classColorImage_af7ebf5ca05ea094f0a5d2f458d9e77a4}{ReplaceHSIHuePlane} (\hyperlink{classMonoImage}{MonoImage} $\ast$plane)
+\item 
+void \hyperlink{classColorImage_a78ac142deade419e4976aef3e7f416fa}{ReplaceHSLSaturationPlane} (\hyperlink{classMonoImage}{MonoImage} $\ast$plane)
+\item 
+void \hyperlink{classColorImage_aae250be4d72a84126d4824654f1f229c}{ReplaceHSVSaturationPlane} (\hyperlink{classMonoImage}{MonoImage} $\ast$plane)
+\item 
+void \hyperlink{classColorImage_a02c2a04b2f69525d53aa5abfec04577d}{ReplaceHSISaturationPlane} (\hyperlink{classMonoImage}{MonoImage} $\ast$plane)
+\item 
+void \hyperlink{classColorImage_aaf1efe726cc254fe848bd8586a30a556}{ReplaceLuminancePlane} (\hyperlink{classMonoImage}{MonoImage} $\ast$plane)
+\item 
+void \hyperlink{classColorImage_ac1b98c5f7d2854e5b6c9d1582da935b0}{ReplaceValuePlane} (\hyperlink{classMonoImage}{MonoImage} $\ast$plane)
+\item 
+void \hyperlink{classColorImage_a6ea360d276e60f3df6f494ef9b5031c8}{ReplaceIntensityPlane} (\hyperlink{classMonoImage}{MonoImage} $\ast$plane)
+\item 
+\hypertarget{classColorImage_afac91d2ea99088e36672cfffe02b65da}{
+void {\bfseries ColorEqualize} ()}
+\label{classColorImage_afac91d2ea99088e36672cfffe02b65da}
+
+\item 
+\hypertarget{classColorImage_ab4c1f19425e11228eb3b2f25779b1a14}{
+void {\bfseries LuminanceEqualize} ()}
+\label{classColorImage_ab4c1f19425e11228eb3b2f25779b1a14}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classColorImage_a27b3fefaf49e394cb2b2c55dbeb3bc4c}{
+\index{ColorImage@{ColorImage}!ReplaceBluePlane@{ReplaceBluePlane}}
+\index{ReplaceBluePlane@{ReplaceBluePlane}!ColorImage@{ColorImage}}
+\subsubsection[{ReplaceBluePlane}]{\setlength{\rightskip}{0pt plus 5cm}void ColorImage::ReplaceBluePlane (
+\begin{DoxyParamCaption}
+\item[{{\bf MonoImage} $\ast$}]{plane}
+\end{DoxyParamCaption}
+)}}
+\label{classColorImage_a27b3fefaf49e394cb2b2c55dbeb3bc4c}
+Replace the blue color plane with a \hyperlink{classMonoImage}{MonoImage}. 
+\begin{DoxyParams}{Parameters}
+{\em mode} & The color mode in which to operate. \\
+\hline
+{\em plane} & A pointer to a \hyperlink{classMonoImage}{MonoImage} that will replace the specified color plane. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classColorImage_a1f4101a81cc10874824cf1ab015a4075}{
+\index{ColorImage@{ColorImage}!ReplaceGreenPlane@{ReplaceGreenPlane}}
+\index{ReplaceGreenPlane@{ReplaceGreenPlane}!ColorImage@{ColorImage}}
+\subsubsection[{ReplaceGreenPlane}]{\setlength{\rightskip}{0pt plus 5cm}void ColorImage::ReplaceGreenPlane (
+\begin{DoxyParamCaption}
+\item[{{\bf MonoImage} $\ast$}]{plane}
+\end{DoxyParamCaption}
+)}}
+\label{classColorImage_a1f4101a81cc10874824cf1ab015a4075}
+Replace the green color plane with a \hyperlink{classMonoImage}{MonoImage}. 
+\begin{DoxyParams}{Parameters}
+{\em mode} & The color mode in which to operate. \\
+\hline
+{\em plane} & A pointer to a \hyperlink{classMonoImage}{MonoImage} that will replace the specified color plane. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classColorImage_af7ebf5ca05ea094f0a5d2f458d9e77a4}{
+\index{ColorImage@{ColorImage}!ReplaceHSIHuePlane@{ReplaceHSIHuePlane}}
+\index{ReplaceHSIHuePlane@{ReplaceHSIHuePlane}!ColorImage@{ColorImage}}
+\subsubsection[{ReplaceHSIHuePlane}]{\setlength{\rightskip}{0pt plus 5cm}void ColorImage::ReplaceHSIHuePlane (
+\begin{DoxyParamCaption}
+\item[{{\bf MonoImage} $\ast$}]{plane}
+\end{DoxyParamCaption}
+)}}
+\label{classColorImage_af7ebf5ca05ea094f0a5d2f458d9e77a4}
+Replace the first Hue plane in a HSI image with a \hyperlink{classMonoImage}{MonoImage}. 
+\begin{DoxyParams}{Parameters}
+{\em mode} & The color mode in which to operate. \\
+\hline
+{\em plane} & A pointer to a \hyperlink{classMonoImage}{MonoImage} that will replace the specified color plane. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classColorImage_a02c2a04b2f69525d53aa5abfec04577d}{
+\index{ColorImage@{ColorImage}!ReplaceHSISaturationPlane@{ReplaceHSISaturationPlane}}
+\index{ReplaceHSISaturationPlane@{ReplaceHSISaturationPlane}!ColorImage@{ColorImage}}
+\subsubsection[{ReplaceHSISaturationPlane}]{\setlength{\rightskip}{0pt plus 5cm}void ColorImage::ReplaceHSISaturationPlane (
+\begin{DoxyParamCaption}
+\item[{{\bf MonoImage} $\ast$}]{plane}
+\end{DoxyParamCaption}
+)}}
+\label{classColorImage_a02c2a04b2f69525d53aa5abfec04577d}
+Replace the Saturation color plane in a HSI image with a \hyperlink{classMonoImage}{MonoImage}. 
+\begin{DoxyParams}{Parameters}
+{\em mode} & The color mode in which to operate. \\
+\hline
+{\em plane} & A pointer to a \hyperlink{classMonoImage}{MonoImage} that will replace the specified color plane. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classColorImage_a1ec3310a38bfc9c154867bdb96d17c6c}{
+\index{ColorImage@{ColorImage}!ReplaceHSLHuePlane@{ReplaceHSLHuePlane}}
+\index{ReplaceHSLHuePlane@{ReplaceHSLHuePlane}!ColorImage@{ColorImage}}
+\subsubsection[{ReplaceHSLHuePlane}]{\setlength{\rightskip}{0pt plus 5cm}void ColorImage::ReplaceHSLHuePlane (
+\begin{DoxyParamCaption}
+\item[{{\bf MonoImage} $\ast$}]{plane}
+\end{DoxyParamCaption}
+)}}
+\label{classColorImage_a1ec3310a38bfc9c154867bdb96d17c6c}
+Replace the Hue color plane in a HSL image with a \hyperlink{classMonoImage}{MonoImage}. 
+\begin{DoxyParams}{Parameters}
+{\em mode} & The color mode in which to operate. \\
+\hline
+{\em plane} & A pointer to a \hyperlink{classMonoImage}{MonoImage} that will replace the specified color plane. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classColorImage_a78ac142deade419e4976aef3e7f416fa}{
+\index{ColorImage@{ColorImage}!ReplaceHSLSaturationPlane@{ReplaceHSLSaturationPlane}}
+\index{ReplaceHSLSaturationPlane@{ReplaceHSLSaturationPlane}!ColorImage@{ColorImage}}
+\subsubsection[{ReplaceHSLSaturationPlane}]{\setlength{\rightskip}{0pt plus 5cm}void ColorImage::ReplaceHSLSaturationPlane (
+\begin{DoxyParamCaption}
+\item[{{\bf MonoImage} $\ast$}]{plane}
+\end{DoxyParamCaption}
+)}}
+\label{classColorImage_a78ac142deade419e4976aef3e7f416fa}
+Replace the Saturation color plane in an HSL image with a \hyperlink{classMonoImage}{MonoImage}. 
+\begin{DoxyParams}{Parameters}
+{\em mode} & The color mode in which to operate. \\
+\hline
+{\em plane} & A pointer to a \hyperlink{classMonoImage}{MonoImage} that will replace the specified color plane. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classColorImage_a1ca28fb183bf9b43e53aa19d6a057e05}{
+\index{ColorImage@{ColorImage}!ReplaceHSVHuePlane@{ReplaceHSVHuePlane}}
+\index{ReplaceHSVHuePlane@{ReplaceHSVHuePlane}!ColorImage@{ColorImage}}
+\subsubsection[{ReplaceHSVHuePlane}]{\setlength{\rightskip}{0pt plus 5cm}void ColorImage::ReplaceHSVHuePlane (
+\begin{DoxyParamCaption}
+\item[{{\bf MonoImage} $\ast$}]{plane}
+\end{DoxyParamCaption}
+)}}
+\label{classColorImage_a1ca28fb183bf9b43e53aa19d6a057e05}
+Replace the Hue color plane in a HSV image with a \hyperlink{classMonoImage}{MonoImage}. 
+\begin{DoxyParams}{Parameters}
+{\em mode} & The color mode in which to operate. \\
+\hline
+{\em plane} & A pointer to a \hyperlink{classMonoImage}{MonoImage} that will replace the specified color plane. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classColorImage_aae250be4d72a84126d4824654f1f229c}{
+\index{ColorImage@{ColorImage}!ReplaceHSVSaturationPlane@{ReplaceHSVSaturationPlane}}
+\index{ReplaceHSVSaturationPlane@{ReplaceHSVSaturationPlane}!ColorImage@{ColorImage}}
+\subsubsection[{ReplaceHSVSaturationPlane}]{\setlength{\rightskip}{0pt plus 5cm}void ColorImage::ReplaceHSVSaturationPlane (
+\begin{DoxyParamCaption}
+\item[{{\bf MonoImage} $\ast$}]{plane}
+\end{DoxyParamCaption}
+)}}
+\label{classColorImage_aae250be4d72a84126d4824654f1f229c}
+Replace the Saturation color plane in a HSV image with a \hyperlink{classMonoImage}{MonoImage}. 
+\begin{DoxyParams}{Parameters}
+{\em mode} & The color mode in which to operate. \\
+\hline
+{\em plane} & A pointer to a \hyperlink{classMonoImage}{MonoImage} that will replace the specified color plane. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classColorImage_a6ea360d276e60f3df6f494ef9b5031c8}{
+\index{ColorImage@{ColorImage}!ReplaceIntensityPlane@{ReplaceIntensityPlane}}
+\index{ReplaceIntensityPlane@{ReplaceIntensityPlane}!ColorImage@{ColorImage}}
+\subsubsection[{ReplaceIntensityPlane}]{\setlength{\rightskip}{0pt plus 5cm}void ColorImage::ReplaceIntensityPlane (
+\begin{DoxyParamCaption}
+\item[{{\bf MonoImage} $\ast$}]{plane}
+\end{DoxyParamCaption}
+)}}
+\label{classColorImage_a6ea360d276e60f3df6f494ef9b5031c8}
+Replace the Intensity color plane in a HSI image with a \hyperlink{classMonoImage}{MonoImage}. 
+\begin{DoxyParams}{Parameters}
+{\em mode} & The color mode in which to operate. \\
+\hline
+{\em plane} & A pointer to a \hyperlink{classMonoImage}{MonoImage} that will replace the specified color plane. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classColorImage_aaf1efe726cc254fe848bd8586a30a556}{
+\index{ColorImage@{ColorImage}!ReplaceLuminancePlane@{ReplaceLuminancePlane}}
+\index{ReplaceLuminancePlane@{ReplaceLuminancePlane}!ColorImage@{ColorImage}}
+\subsubsection[{ReplaceLuminancePlane}]{\setlength{\rightskip}{0pt plus 5cm}void ColorImage::ReplaceLuminancePlane (
+\begin{DoxyParamCaption}
+\item[{{\bf MonoImage} $\ast$}]{plane}
+\end{DoxyParamCaption}
+)}}
+\label{classColorImage_aaf1efe726cc254fe848bd8586a30a556}
+Replace the Luminance color plane in an HSL image with a \hyperlink{classMonoImage}{MonoImage}. 
+\begin{DoxyParams}{Parameters}
+{\em mode} & The color mode in which to operate. \\
+\hline
+{\em plane} & A pointer to a \hyperlink{classMonoImage}{MonoImage} that will replace the specified color plane. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classColorImage_a55052912bd0ffdc235f58716da9f61b1}{
+\index{ColorImage@{ColorImage}!ReplaceRedPlane@{ReplaceRedPlane}}
+\index{ReplaceRedPlane@{ReplaceRedPlane}!ColorImage@{ColorImage}}
+\subsubsection[{ReplaceRedPlane}]{\setlength{\rightskip}{0pt plus 5cm}void ColorImage::ReplaceRedPlane (
+\begin{DoxyParamCaption}
+\item[{{\bf MonoImage} $\ast$}]{plane}
+\end{DoxyParamCaption}
+)}}
+\label{classColorImage_a55052912bd0ffdc235f58716da9f61b1}
+Replace the red color plane with a \hyperlink{classMonoImage}{MonoImage}. 
+\begin{DoxyParams}{Parameters}
+{\em mode} & The color mode in which to operate. \\
+\hline
+{\em plane} & A pointer to a \hyperlink{classMonoImage}{MonoImage} that will replace the specified color plane. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classColorImage_ac1b98c5f7d2854e5b6c9d1582da935b0}{
+\index{ColorImage@{ColorImage}!ReplaceValuePlane@{ReplaceValuePlane}}
+\index{ReplaceValuePlane@{ReplaceValuePlane}!ColorImage@{ColorImage}}
+\subsubsection[{ReplaceValuePlane}]{\setlength{\rightskip}{0pt plus 5cm}void ColorImage::ReplaceValuePlane (
+\begin{DoxyParamCaption}
+\item[{{\bf MonoImage} $\ast$}]{plane}
+\end{DoxyParamCaption}
+)}}
+\label{classColorImage_ac1b98c5f7d2854e5b6c9d1582da935b0}
+Replace the Value color plane in an HSV with a \hyperlink{classMonoImage}{MonoImage}. 
+\begin{DoxyParams}{Parameters}
+{\em mode} & The color mode in which to operate. \\
+\hline
+{\em plane} & A pointer to a \hyperlink{classMonoImage}{MonoImage} that will replace the specified color plane. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classColorImage_a3c9fcc98a7b820e44f20fc959b20c562}{
+\index{ColorImage@{ColorImage}!ThresholdHSI@{ThresholdHSI}}
+\index{ThresholdHSI@{ThresholdHSI}!ColorImage@{ColorImage}}
+\subsubsection[{ThresholdHSI}]{\setlength{\rightskip}{0pt plus 5cm}{\bf BinaryImage} $\ast$ ColorImage::ThresholdHSI (
+\begin{DoxyParamCaption}
+\item[{{\bf Threshold} \&}]{t}
+\end{DoxyParamCaption}
+)}}
+\label{classColorImage_a3c9fcc98a7b820e44f20fc959b20c562}
+Perform a threshold in HSI space. 
+\begin{DoxyParams}{Parameters}
+{\em threshold} & a reference to the \hyperlink{classThreshold}{Threshold} object to use. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer to a \hyperlink{classBinaryImage}{BinaryImage} that represents the result of the threshold operation. 
+\end{DoxyReturn}
+\hypertarget{classColorImage_a7e00f9e1cf08c3aee82c498933d2a48b}{
+\index{ColorImage@{ColorImage}!ThresholdHSI@{ThresholdHSI}}
+\index{ThresholdHSI@{ThresholdHSI}!ColorImage@{ColorImage}}
+\subsubsection[{ThresholdHSI}]{\setlength{\rightskip}{0pt plus 5cm}{\bf BinaryImage} $\ast$ ColorImage::ThresholdHSI (
+\begin{DoxyParamCaption}
+\item[{int}]{hueLow, }
+\item[{int}]{hueHigh, }
+\item[{int}]{saturationLow, }
+\item[{int}]{saturationHigh, }
+\item[{int}]{intensityLow, }
+\item[{int}]{intensityHigh}
+\end{DoxyParamCaption}
+)}}
+\label{classColorImage_a7e00f9e1cf08c3aee82c498933d2a48b}
+Perform a threshold in HSI space. 
+\begin{DoxyParams}{Parameters}
+{\em hueLow} & Low value for hue \\
+\hline
+{\em hueHigh} & High value for hue \\
+\hline
+{\em saturationLow} & Low value for saturation \\
+\hline
+{\em saturationHigh} & High value for saturation \\
+\hline
+{\em valueLow} & Low intensity \\
+\hline
+{\em valueHigh} & High intensity \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a pointer to a \hyperlink{classBinaryImage}{BinaryImage} that represents the result of the threshold operation. 
+\end{DoxyReturn}
+\hypertarget{classColorImage_afff88ecb9f4f1325af4b2ca59066f31a}{
+\index{ColorImage@{ColorImage}!ThresholdHSL@{ThresholdHSL}}
+\index{ThresholdHSL@{ThresholdHSL}!ColorImage@{ColorImage}}
+\subsubsection[{ThresholdHSL}]{\setlength{\rightskip}{0pt plus 5cm}{\bf BinaryImage} $\ast$ ColorImage::ThresholdHSL (
+\begin{DoxyParamCaption}
+\item[{int}]{hueLow, }
+\item[{int}]{hueHigh, }
+\item[{int}]{saturationLow, }
+\item[{int}]{saturationHigh, }
+\item[{int}]{luminenceLow, }
+\item[{int}]{luminenceHigh}
+\end{DoxyParamCaption}
+)}}
+\label{classColorImage_afff88ecb9f4f1325af4b2ca59066f31a}
+Perform a threshold in HSL space. 
+\begin{DoxyParams}{Parameters}
+{\em hueLow} & Low value for hue \\
+\hline
+{\em hueHigh} & High value for hue \\
+\hline
+{\em saturationLow} & Low value for saturation \\
+\hline
+{\em saturationHigh} & High value for saturation \\
+\hline
+{\em luminenceLow} & Low value for luminence \\
+\hline
+{\em luminenceHigh} & High value for luminence \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a pointer to a \hyperlink{classBinaryImage}{BinaryImage} that represents the result of the threshold operation. 
+\end{DoxyReturn}
+\hypertarget{classColorImage_a8ef8b6a681141e13c1771799f98cb900}{
+\index{ColorImage@{ColorImage}!ThresholdHSL@{ThresholdHSL}}
+\index{ThresholdHSL@{ThresholdHSL}!ColorImage@{ColorImage}}
+\subsubsection[{ThresholdHSL}]{\setlength{\rightskip}{0pt plus 5cm}{\bf BinaryImage} $\ast$ ColorImage::ThresholdHSL (
+\begin{DoxyParamCaption}
+\item[{{\bf Threshold} \&}]{t}
+\end{DoxyParamCaption}
+)}}
+\label{classColorImage_a8ef8b6a681141e13c1771799f98cb900}
+Perform a threshold in HSL space. 
+\begin{DoxyParams}{Parameters}
+{\em threshold} & a reference to the \hyperlink{classThreshold}{Threshold} object to use. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer to a \hyperlink{classBinaryImage}{BinaryImage} that represents the result of the threshold operation. 
+\end{DoxyReturn}
+\hypertarget{classColorImage_adc9b0feffd8248c96d4cfbda59cf56fb}{
+\index{ColorImage@{ColorImage}!ThresholdHSV@{ThresholdHSV}}
+\index{ThresholdHSV@{ThresholdHSV}!ColorImage@{ColorImage}}
+\subsubsection[{ThresholdHSV}]{\setlength{\rightskip}{0pt plus 5cm}{\bf BinaryImage} $\ast$ ColorImage::ThresholdHSV (
+\begin{DoxyParamCaption}
+\item[{{\bf Threshold} \&}]{t}
+\end{DoxyParamCaption}
+)}}
+\label{classColorImage_adc9b0feffd8248c96d4cfbda59cf56fb}
+Perform a threshold in HSV space. 
+\begin{DoxyParams}{Parameters}
+{\em threshold} & a reference to the \hyperlink{classThreshold}{Threshold} object to use. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer to a \hyperlink{classBinaryImage}{BinaryImage} that represents the result of the threshold operation. 
+\end{DoxyReturn}
+\hypertarget{classColorImage_a57dd0579fa6e5aa5a7a63e0bd5076477}{
+\index{ColorImage@{ColorImage}!ThresholdHSV@{ThresholdHSV}}
+\index{ThresholdHSV@{ThresholdHSV}!ColorImage@{ColorImage}}
+\subsubsection[{ThresholdHSV}]{\setlength{\rightskip}{0pt plus 5cm}{\bf BinaryImage} $\ast$ ColorImage::ThresholdHSV (
+\begin{DoxyParamCaption}
+\item[{int}]{hueLow, }
+\item[{int}]{hueHigh, }
+\item[{int}]{saturationLow, }
+\item[{int}]{saturationHigh, }
+\item[{int}]{valueLow, }
+\item[{int}]{valueHigh}
+\end{DoxyParamCaption}
+)}}
+\label{classColorImage_a57dd0579fa6e5aa5a7a63e0bd5076477}
+Perform a threshold in HSV space. 
+\begin{DoxyParams}{Parameters}
+{\em hueLow} & Low value for hue \\
+\hline
+{\em hueHigh} & High value for hue \\
+\hline
+{\em saturationLow} & Low value for saturation \\
+\hline
+{\em saturationHigh} & High value for saturation \\
+\hline
+{\em valueLow} & Low value \\
+\hline
+{\em valueHigh} & High value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a pointer to a \hyperlink{classBinaryImage}{BinaryImage} that represents the result of the threshold operation. 
+\end{DoxyReturn}
+\hypertarget{classColorImage_a3babade187f4bb8d657263b5033025f3}{
+\index{ColorImage@{ColorImage}!ThresholdRGB@{ThresholdRGB}}
+\index{ThresholdRGB@{ThresholdRGB}!ColorImage@{ColorImage}}
+\subsubsection[{ThresholdRGB}]{\setlength{\rightskip}{0pt plus 5cm}{\bf BinaryImage} $\ast$ ColorImage::ThresholdRGB (
+\begin{DoxyParamCaption}
+\item[{{\bf Threshold} \&}]{t}
+\end{DoxyParamCaption}
+)}}
+\label{classColorImage_a3babade187f4bb8d657263b5033025f3}
+Perform a threshold in RGB space. 
+\begin{DoxyParams}{Parameters}
+{\em threshold} & a reference to the \hyperlink{classThreshold}{Threshold} object to use. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer to a \hyperlink{classBinaryImage}{BinaryImage} that represents the result of the threshold operation. 
+\end{DoxyReturn}
+\hypertarget{classColorImage_a3f38ef317578522db35e6218b06815c2}{
+\index{ColorImage@{ColorImage}!ThresholdRGB@{ThresholdRGB}}
+\index{ThresholdRGB@{ThresholdRGB}!ColorImage@{ColorImage}}
+\subsubsection[{ThresholdRGB}]{\setlength{\rightskip}{0pt plus 5cm}{\bf BinaryImage} $\ast$ ColorImage::ThresholdRGB (
+\begin{DoxyParamCaption}
+\item[{int}]{redLow, }
+\item[{int}]{redHigh, }
+\item[{int}]{greenLow, }
+\item[{int}]{greenHigh, }
+\item[{int}]{blueLow, }
+\item[{int}]{blueHigh}
+\end{DoxyParamCaption}
+)}}
+\label{classColorImage_a3f38ef317578522db35e6218b06815c2}
+Perform a threshold in RGB space. 
+\begin{DoxyParams}{Parameters}
+{\em redLow} & Red low value \\
+\hline
+{\em redHigh} & Red high value \\
+\hline
+{\em greenLow} & Green low value \\
+\hline
+{\em greenHigh} & Green high value \\
+\hline
+{\em blueLow} & Blue low value \\
+\hline
+{\em blueHigh} & Blue high value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer to a \hyperlink{classBinaryImage}{BinaryImage} that represents the result of the threshold operation. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+Vision/ColorImage.h\item 
+Vision/ColorImage.cpp\end{DoxyCompactItemize}

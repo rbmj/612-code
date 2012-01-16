@@ -1,0 +1,117 @@
+\hypertarget{classPrintCommand}{
+\section{PrintCommand Class Reference}
+\label{classPrintCommand}\index{PrintCommand@{PrintCommand}}
+}
+Inheritance diagram for PrintCommand:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{classPrintCommand}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classPrintCommand_a42dbf8de60f87c0925e73bd083ee2849}{
+{\bfseries PrintCommand} (const char $\ast$message)}
+\label{classPrintCommand_a42dbf8de60f87c0925e73bd083ee2849}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{classPrintCommand_a0fbf0d5d89e85a800ac776c0fc7ec8f5}{Initialize} ()
+\item 
+virtual void \hyperlink{classPrintCommand_a7d2c8116303839094accf68329050358}{Execute} ()
+\item 
+virtual bool \hyperlink{classPrintCommand_ae138104f498d0804633395f541955f90}{IsFinished} ()
+\item 
+virtual void \hyperlink{classPrintCommand_a50f0803940fc8bc14f72a743d7b82ecb}{End} ()
+\item 
+virtual void \hyperlink{classPrintCommand_abb7f06b8993b40fad56e646516571f9e}{Interrupted} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classPrintCommand_a50f0803940fc8bc14f72a743d7b82ecb}{
+\index{PrintCommand@{PrintCommand}!End@{End}}
+\index{End@{End}!PrintCommand@{PrintCommand}}
+\subsubsection[{End}]{\setlength{\rightskip}{0pt plus 5cm}void PrintCommand::End (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}protected, virtual\mbox{]}}}}
+\label{classPrintCommand_a50f0803940fc8bc14f72a743d7b82ecb}
+Called when the command ended peacefully. This is where you may want to wrap up loose ends, like shutting off a motor that was being used in the command. 
+
+Implements \hyperlink{classCommand_aafdfd2fd2f1d005c20b7f9e60450dc7a}{Command}.
+
+\hypertarget{classPrintCommand_a7d2c8116303839094accf68329050358}{
+\index{PrintCommand@{PrintCommand}!Execute@{Execute}}
+\index{Execute@{Execute}!PrintCommand@{PrintCommand}}
+\subsubsection[{Execute}]{\setlength{\rightskip}{0pt plus 5cm}void PrintCommand::Execute (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}protected, virtual\mbox{]}}}}
+\label{classPrintCommand_a7d2c8116303839094accf68329050358}
+The execute method is called repeatedly until this \hyperlink{classCommand}{Command} either finishes or is canceled. 
+
+Implements \hyperlink{classCommand_a484c34647660fcfc8ee46b04ad5b32b6}{Command}.
+
+\hypertarget{classPrintCommand_a0fbf0d5d89e85a800ac776c0fc7ec8f5}{
+\index{PrintCommand@{PrintCommand}!Initialize@{Initialize}}
+\index{Initialize@{Initialize}!PrintCommand@{PrintCommand}}
+\subsubsection[{Initialize}]{\setlength{\rightskip}{0pt plus 5cm}void PrintCommand::Initialize (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}protected, virtual\mbox{]}}}}
+\label{classPrintCommand_a0fbf0d5d89e85a800ac776c0fc7ec8f5}
+The initialize method is called the first time this \hyperlink{classCommand}{Command} is run after being started. 
+
+Implements \hyperlink{classCommand_a35b4c5ab42d8190791863cc8f1224231}{Command}.
+
+\hypertarget{classPrintCommand_abb7f06b8993b40fad56e646516571f9e}{
+\index{PrintCommand@{PrintCommand}!Interrupted@{Interrupted}}
+\index{Interrupted@{Interrupted}!PrintCommand@{PrintCommand}}
+\subsubsection[{Interrupted}]{\setlength{\rightskip}{0pt plus 5cm}void PrintCommand::Interrupted (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}protected, virtual\mbox{]}}}}
+\label{classPrintCommand_abb7f06b8993b40fad56e646516571f9e}
+Called when the command ends because somebody called \hyperlink{}{cancel()} or another command shared the same requirements as this one, and booted it out.
+
+This is where you may want to wrap up loose ends, like shutting off a motor that was being used in the command.
+
+Generally, it is useful to simply call the \hyperlink{}{end()} method within this method 
+
+Implements \hyperlink{classCommand_adaad5530c4dfdaac5e503ca373548a8e}{Command}.
+
+\hypertarget{classPrintCommand_ae138104f498d0804633395f541955f90}{
+\index{PrintCommand@{PrintCommand}!IsFinished@{IsFinished}}
+\index{IsFinished@{IsFinished}!PrintCommand@{PrintCommand}}
+\subsubsection[{IsFinished}]{\setlength{\rightskip}{0pt plus 5cm}bool PrintCommand::IsFinished (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}protected, virtual\mbox{]}}}}
+\label{classPrintCommand_ae138104f498d0804633395f541955f90}
+Returns whether this command is finished. If it is, then the command will be removed and \hyperlink{}{end()} will be called.
+
+It may be useful for a team to reference the \hyperlink{}{isTimedOut()} method for time-\/sensitive commands. \begin{DoxyReturn}{Returns}
+whether this command is finished. 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+Command::isTimedOut() isTimedOut() 
+\end{DoxySeeAlso}
+
+
+Implements \hyperlink{classCommand_a350a1e6657cd59f177f55e8451e60aa9}{Command}.
+
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+Commands/PrintCommand.h\item 
+Commands/PrintCommand.cpp\end{DoxyCompactItemize}

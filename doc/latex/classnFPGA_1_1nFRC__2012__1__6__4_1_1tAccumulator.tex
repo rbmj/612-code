@@ -1,0 +1,89 @@
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tAccumulator}{
+\section{nFPGA::nFRC\_\-2012\_\-1\_\-6\_\-4::tAccumulator Class Reference}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tAccumulator}\index{nFPGA::nFRC\_\-2012\_\-1\_\-6\_\-4::tAccumulator@{nFPGA::nFRC\_\-2012\_\-1\_\-6\_\-4::tAccumulator}}
+}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+union \hyperlink{unionnFPGA_1_1nFRC__2012__1__6__4_1_1tAccumulator_1_1tOutput}{tOutput}
+\end{DoxyCompactItemize}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum {\bfseries tIfaceConstants} \{ {\bfseries kNumSystems} =  2
+ \}
+\item 
+enum {\bfseries tOutput\_\-IfaceConstants} 
+\item 
+enum {\bfseries tCenter\_\-IfaceConstants} 
+\item 
+enum {\bfseries tReset\_\-IfaceConstants} 
+\item 
+enum {\bfseries tDeadband\_\-IfaceConstants} 
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tAccumulator_af4f19b9e0f63a57d7d0e717601fde476}{
+virtual \hyperlink{classnFPGA_1_1tSystemInterface}{tSystemInterface} $\ast$ {\bfseries getSystemInterface} ()=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tAccumulator_af4f19b9e0f63a57d7d0e717601fde476}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tAccumulator_ad1aaba6fedf5195aee6abab5887bf07a}{
+virtual unsigned char {\bfseries getSystemIndex} ()=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tAccumulator_ad1aaba6fedf5195aee6abab5887bf07a}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tAccumulator_a32ae5fcc8d6cc004004b2a18a773a06f}{
+virtual \hyperlink{unionnFPGA_1_1nFRC__2012__1__6__4_1_1tAccumulator_1_1tOutput}{tOutput} {\bfseries readOutput} (tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tAccumulator_a32ae5fcc8d6cc004004b2a18a773a06f}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tAccumulator_a7141aeac4a36b5afff09ba36902ee671}{
+virtual signed long long {\bfseries readOutput\_\-Value} (tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tAccumulator_a7141aeac4a36b5afff09ba36902ee671}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tAccumulator_a68de7c6d9ca7782da68dd9b445196036}{
+virtual unsigned int {\bfseries readOutput\_\-Count} (tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tAccumulator_a68de7c6d9ca7782da68dd9b445196036}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tAccumulator_aeeca574573489e46aee0c8afdda9956a}{
+virtual void {\bfseries writeCenter} (signed int value, tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tAccumulator_aeeca574573489e46aee0c8afdda9956a}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tAccumulator_af6f2d9a27417846113c82481f70082c5}{
+virtual signed int {\bfseries readCenter} (tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tAccumulator_af6f2d9a27417846113c82481f70082c5}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tAccumulator_a11bb93d66ef5ddbe3b33f552726ef2e7}{
+virtual void {\bfseries strobeReset} (tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tAccumulator_a11bb93d66ef5ddbe3b33f552726ef2e7}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tAccumulator_a810a322838f77acc07910ea7aa97cc73}{
+virtual void {\bfseries writeDeadband} (signed int value, tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tAccumulator_a810a322838f77acc07910ea7aa97cc73}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tAccumulator_ae72f1367c15e021c6c6cbe86626a0a54}{
+virtual signed int {\bfseries readDeadband} (tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tAccumulator_ae72f1367c15e021c6c6cbe86626a0a54}
+
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tAccumulator_a6a6654455814a6e2e6030087b5ea2ffd}{
+static \hyperlink{classnFPGA_1_1nFRC__2012__1__6__4_1_1tAccumulator}{tAccumulator} $\ast$ {\bfseries create} (unsigned char sys\_\-index, tRioStatusCode $\ast$status)}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tAccumulator_a6a6654455814a6e2e6030087b5ea2ffd}
+
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+ChipObject/tAccumulator.h\end{DoxyCompactItemize}

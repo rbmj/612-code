@@ -1,0 +1,182 @@
+\hypertarget{classSendableGyro}{
+\section{SendableGyro Class Reference}
+\label{classSendableGyro}\index{SendableGyro@{SendableGyro}}
+}
+
+
+{\ttfamily \#include $<$SendableGyro.h$>$}
+
+Inheritance diagram for SendableGyro:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.010753cm]{classSendableGyro}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classSendableGyro_a317b683f65844d1eedaf9aab1c02af39}{SendableGyro} (UINT8 moduleNumber, UINT32 channel)
+\item 
+\hyperlink{classSendableGyro_a1489cd920da51fac531eba8619482603}{SendableGyro} (UINT32 channel)
+\item 
+\hyperlink{classSendableGyro_ae75ba3153bda30c839294a0e8b9df104}{SendableGyro} (\hyperlink{classAnalogChannel}{AnalogChannel} $\ast$channel)
+\item 
+virtual float \hyperlink{classSendableGyro_a1e192b880ff0590e431ca933b6ca0dc9}{GetAngle} ()
+\item 
+virtual void \hyperlink{classSendableGyro_acd4b377b5b5d71613f2209715ab29093}{Reset} ()
+\item 
+void \hyperlink{classSendableGyro_a6f9dfe13cc48629141b32676f1aa54e6}{SetUpdatePeriod} (double period)
+\item 
+double \hyperlink{classSendableGyro_a7117fec26909a23d25cb734e528beca8}{GetUpdatePeriod} ()
+\item 
+void \hyperlink{classSendableGyro_a028d543e7c2b8f75a4411d37b0cb89d1}{ResetToAngle} (double angle)
+\item 
+\hypertarget{classSendableGyro_aa781e34f50eb2710ced6a7b6d733fd1e}{
+virtual std::string {\bfseries GetType} ()}
+\label{classSendableGyro_aa781e34f50eb2710ced6a7b6d733fd1e}
+
+\item 
+\hypertarget{classSendableGyro_a32e99fd9df135da8aa7132ad5cdf89ca}{
+virtual \hyperlink{classNetworkTable}{NetworkTable} $\ast$ {\bfseries GetTable} ()}
+\label{classSendableGyro_a32e99fd9df135da8aa7132ad5cdf89ca}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The \hyperlink{classSendableGyro}{SendableGyro} class behaves exactly the same as a \hyperlink{classGyro}{Gyro} except that it also implements \hyperlink{classSmartDashboardData}{SmartDashboardData} so that it can be sent over to the \hyperlink{classSmartDashboard}{SmartDashboard}. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classSendableGyro_a317b683f65844d1eedaf9aab1c02af39}{
+\index{SendableGyro@{SendableGyro}!SendableGyro@{SendableGyro}}
+\index{SendableGyro@{SendableGyro}!SendableGyro@{SendableGyro}}
+\subsubsection[{SendableGyro}]{\setlength{\rightskip}{0pt plus 5cm}SendableGyro::SendableGyro (
+\begin{DoxyParamCaption}
+\item[{UINT8}]{moduleNumber, }
+\item[{UINT32}]{channel}
+\end{DoxyParamCaption}
+)}}
+\label{classSendableGyro_a317b683f65844d1eedaf9aab1c02af39}
+\hyperlink{classGyro}{Gyro} constructor given a moduleNumber and a channel.
+
+
+\begin{DoxyParams}{Parameters}
+{\em moduleNumber} & The analog module the gyro is connected to. \\
+\hline
+{\em channel} & The analog channel the gyro is connected to. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classSendableGyro_a1489cd920da51fac531eba8619482603}{
+\index{SendableGyro@{SendableGyro}!SendableGyro@{SendableGyro}}
+\index{SendableGyro@{SendableGyro}!SendableGyro@{SendableGyro}}
+\subsubsection[{SendableGyro}]{\setlength{\rightskip}{0pt plus 5cm}SendableGyro::SendableGyro (
+\begin{DoxyParamCaption}
+\item[{UINT32}]{channel}
+\end{DoxyParamCaption}
+)}}
+\label{classSendableGyro_a1489cd920da51fac531eba8619482603}
+\hyperlink{classGyro}{Gyro} constructor with only a channel.
+
+Use the default analog module slot.
+
+
+\begin{DoxyParams}{Parameters}
+{\em channel} & The analog channel the gyro is connected to. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classSendableGyro_ae75ba3153bda30c839294a0e8b9df104}{
+\index{SendableGyro@{SendableGyro}!SendableGyro@{SendableGyro}}
+\index{SendableGyro@{SendableGyro}!SendableGyro@{SendableGyro}}
+\subsubsection[{SendableGyro}]{\setlength{\rightskip}{0pt plus 5cm}SendableGyro::SendableGyro (
+\begin{DoxyParamCaption}
+\item[{{\bf AnalogChannel} $\ast$}]{channel}
+\end{DoxyParamCaption}
+)}}
+\label{classSendableGyro_ae75ba3153bda30c839294a0e8b9df104}
+\hyperlink{classGyro}{Gyro} constructor with a precreated analog channel object. Use this constructor when the analog channel needs to be shared. There is no reference counting when an \hyperlink{classAnalogChannel}{AnalogChannel} is passed to the gyro. 
+\begin{DoxyParams}{Parameters}
+{\em channel} & The \hyperlink{classAnalogChannel}{AnalogChannel} object that the gyro is connected to. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classSendableGyro_a1e192b880ff0590e431ca933b6ca0dc9}{
+\index{SendableGyro@{SendableGyro}!GetAngle@{GetAngle}}
+\index{GetAngle@{GetAngle}!SendableGyro@{SendableGyro}}
+\subsubsection[{GetAngle}]{\setlength{\rightskip}{0pt plus 5cm}float SendableGyro::GetAngle (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classSendableGyro_a1e192b880ff0590e431ca933b6ca0dc9}
+Return the actual angle in degrees that the robot is currently facing.
+
+The angle is based on the current accumulator value corrected by the oversampling rate, the gyro type and the A/D calibration values. The angle is continuous, that is can go beyond 360 degrees. This make algorithms that wouldn't want to see a discontinuity in the gyro output as it sweeps past 0 on the second time around.
+
+\begin{DoxyReturn}{Returns}
+the current heading of the robot in degrees. This heading is based on integration of the returned rate from the gyro. 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{classGyro_a37c29b42b58b90fe1ed11f04c2635d4f}{Gyro}.
+
+\hypertarget{classSendableGyro_a7117fec26909a23d25cb734e528beca8}{
+\index{SendableGyro@{SendableGyro}!GetUpdatePeriod@{GetUpdatePeriod}}
+\index{GetUpdatePeriod@{GetUpdatePeriod}!SendableGyro@{SendableGyro}}
+\subsubsection[{GetUpdatePeriod}]{\setlength{\rightskip}{0pt plus 5cm}double SendableGyro::GetUpdatePeriod (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classSendableGyro_a7117fec26909a23d25cb734e528beca8}
+Returns the period (in seconds) between updates to the \hyperlink{classSmartDashboard}{SmartDashboard}. This value is independent of whether or not this \hyperlink{classSendableGyro}{SendableGyro} is connected to the \hyperlink{classSmartDashboard}{SmartDashboard}. The default value is 0.2 seconds. \begin{DoxyReturn}{Returns}
+the period (in seconds) 
+\end{DoxyReturn}
+\hypertarget{classSendableGyro_acd4b377b5b5d71613f2209715ab29093}{
+\index{SendableGyro@{SendableGyro}!Reset@{Reset}}
+\index{Reset@{Reset}!SendableGyro@{SendableGyro}}
+\subsubsection[{Reset}]{\setlength{\rightskip}{0pt plus 5cm}void SendableGyro::Reset (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classSendableGyro_acd4b377b5b5d71613f2209715ab29093}
+Reset the gyro. Resets the gyro to a heading of zero. This can be used if there is significant drift in the gyro and it needs to be recalibrated after it has been running. 
+
+Reimplemented from \hyperlink{classGyro_ae13fc1c339cb0267740b86c0585ceac7}{Gyro}.
+
+\hypertarget{classSendableGyro_a028d543e7c2b8f75a4411d37b0cb89d1}{
+\index{SendableGyro@{SendableGyro}!ResetToAngle@{ResetToAngle}}
+\index{ResetToAngle@{ResetToAngle}!SendableGyro@{SendableGyro}}
+\subsubsection[{ResetToAngle}]{\setlength{\rightskip}{0pt plus 5cm}void SendableGyro::ResetToAngle (
+\begin{DoxyParamCaption}
+\item[{double}]{angle}
+\end{DoxyParamCaption}
+)}}
+\label{classSendableGyro_a028d543e7c2b8f75a4411d37b0cb89d1}
+Reset the gyro. Resets the gyro to the given heading. This can be used if there is significant drift in the gyro and it needs to be recalibrated after it has been running. 
+\begin{DoxyParams}{Parameters}
+{\em angle} & the angle the gyro should believe it is pointing \\
+\hline
+\end{DoxyParams}
+\hypertarget{classSendableGyro_a6f9dfe13cc48629141b32676f1aa54e6}{
+\index{SendableGyro@{SendableGyro}!SetUpdatePeriod@{SetUpdatePeriod}}
+\index{SetUpdatePeriod@{SetUpdatePeriod}!SendableGyro@{SendableGyro}}
+\subsubsection[{SetUpdatePeriod}]{\setlength{\rightskip}{0pt plus 5cm}void SendableGyro::SetUpdatePeriod (
+\begin{DoxyParamCaption}
+\item[{double}]{period}
+\end{DoxyParamCaption}
+)}}
+\label{classSendableGyro_a6f9dfe13cc48629141b32676f1aa54e6}
+Sets the time (in seconds) between updates to the \hyperlink{classSmartDashboard}{SmartDashboard}. The default is 0.2 seconds. 
+\begin{DoxyParams}{Parameters}
+{\em period} & the new time between updates \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+SmartDashboard/SendableGyro.h\item 
+SmartDashboard/SendableGyro.cpp\end{DoxyCompactItemize}

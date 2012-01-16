@@ -1,0 +1,112 @@
+\hypertarget{classPIDSubsystem}{
+\section{PIDSubsystem Class Reference}
+\label{classPIDSubsystem}\index{PIDSubsystem@{PIDSubsystem}}
+}
+Inheritance diagram for PIDSubsystem:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.128492cm]{classPIDSubsystem}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classPIDSubsystem_a05439854c4c3e33d57b3f05680d0954e}{
+{\bfseries PIDSubsystem} (const char $\ast$name, double p, double i, double d)}
+\label{classPIDSubsystem_a05439854c4c3e33d57b3f05680d0954e}
+
+\item 
+\hypertarget{classPIDSubsystem_a4f29feae98e02cb4b48e0f2a7744bd3b}{
+{\bfseries PIDSubsystem} (const char $\ast$name, double p, double i, double d, double period)}
+\label{classPIDSubsystem_a4f29feae98e02cb4b48e0f2a7744bd3b}
+
+\item 
+\hypertarget{classPIDSubsystem_aebd38088d4de22db6ce256be08d5bd13}{
+{\bfseries PIDSubsystem} (double p, double i, double d)}
+\label{classPIDSubsystem_aebd38088d4de22db6ce256be08d5bd13}
+
+\item 
+\hypertarget{classPIDSubsystem_a14cb58e08eb54245e5f4c8a4efcb6586}{
+{\bfseries PIDSubsystem} (double p, double i, double d, double period)}
+\label{classPIDSubsystem_a14cb58e08eb54245e5f4c8a4efcb6586}
+
+\item 
+\hypertarget{classPIDSubsystem_a4a6d988326940c4cfb25c26ace2e5fc5}{
+void {\bfseries Enable} ()}
+\label{classPIDSubsystem_a4a6d988326940c4cfb25c26ace2e5fc5}
+
+\item 
+\hypertarget{classPIDSubsystem_ae1e15d6e0dbbb3fa7368beba4866e64e}{
+void {\bfseries Disable} ()}
+\label{classPIDSubsystem_ae1e15d6e0dbbb3fa7368beba4866e64e}
+
+\item 
+\hypertarget{classPIDSubsystem_af5ff70d270f677fbba25f03ccc7135c8}{
+\hyperlink{classNetworkTable}{NetworkTable} $\ast$ {\bfseries GetControllerTable} ()}
+\label{classPIDSubsystem_af5ff70d270f677fbba25f03ccc7135c8}
+
+\item 
+\hypertarget{classPIDSubsystem_a8e61ebdadeda0f6709fb4442402904fe}{
+virtual std::string {\bfseries GetType} ()}
+\label{classPIDSubsystem_a8e61ebdadeda0f6709fb4442402904fe}
+
+\item 
+\hypertarget{classPIDSubsystem_a2abe9351404409ad312675bbe02d2261}{
+virtual void {\bfseries PIDWrite} (float output)}
+\label{classPIDSubsystem_a2abe9351404409ad312675bbe02d2261}
+
+\item 
+\hypertarget{classPIDSubsystem_a5fcbfb3ca1e53fe9c91efba1771ffb15}{
+virtual double {\bfseries PIDGet} ()}
+\label{classPIDSubsystem_a5fcbfb3ca1e53fe9c91efba1771ffb15}
+
+\item 
+\hypertarget{classPIDSubsystem_a87323aaa4b95fe9dc544157f04f66867}{
+void {\bfseries SetSetpoint} (double setpoint)}
+\label{classPIDSubsystem_a87323aaa4b95fe9dc544157f04f66867}
+
+\item 
+\hypertarget{classPIDSubsystem_aca4dcf990caeff9dcbc0d8c66d476316}{
+void {\bfseries SetSetpointRelative} (double deltaSetpoint)}
+\label{classPIDSubsystem_aca4dcf990caeff9dcbc0d8c66d476316}
+
+\item 
+\hypertarget{classPIDSubsystem_a0d319cc2a1b26128376c51d66a9e0ca4}{
+double {\bfseries GetSetpoint} ()}
+\label{classPIDSubsystem_a0d319cc2a1b26128376c51d66a9e0ca4}
+
+\item 
+\hypertarget{classPIDSubsystem_af646dedfa2c6ed7355a9242be65d844a}{
+double {\bfseries GetPosition} ()}
+\label{classPIDSubsystem_af646dedfa2c6ed7355a9242be65d844a}
+
+\item 
+\hypertarget{classPIDSubsystem_a6a254fb684669b4e33a553650ae2ae91}{
+void {\bfseries SetSetpointRange} (double a, double b)}
+\label{classPIDSubsystem_a6a254fb684669b4e33a553650ae2ae91}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classPIDSubsystem_abc33f5534d764995fd769ccfd4dc51a7}{
+\hyperlink{classPIDController}{PIDController} $\ast$ {\bfseries GetPIDController} ()}
+\label{classPIDSubsystem_abc33f5534d764995fd769ccfd4dc51a7}
+
+\item 
+\hypertarget{classPIDSubsystem_a53cc637e0f64f37031e238ca785dd3e0}{
+virtual double {\bfseries ReturnPIDInput} ()=0}
+\label{classPIDSubsystem_a53cc637e0f64f37031e238ca785dd3e0}
+
+\item 
+\hypertarget{classPIDSubsystem_a6a374b62609ebb1979e43b136658e4ef}{
+virtual void {\bfseries UsePIDOutput} (double output)=0}
+\label{classPIDSubsystem_a6a374b62609ebb1979e43b136658e4ef}
+
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+Commands/PIDSubsystem.h\item 
+Commands/PIDSubsystem.cpp\end{DoxyCompactItemize}

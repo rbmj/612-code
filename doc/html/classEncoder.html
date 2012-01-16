@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<title>Encoder Class Reference</title>
+<title>WPILib: Encoder Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/search.js"></script>
@@ -19,7 +19,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-   <div id="projectbrief">WPIRoboticsLibraryforFRC</div>
+   <div id="projectname">WPILib&#160;<span id="projectnumber">2012</span></div>
+   <div id="projectbrief">WPILibRoboticsLibraryforFRC</div>
   </td>
  </tr>
  </tbody>
@@ -415,7 +416,7 @@ Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 <p>Returns the period of the most recent pulse. Returns the period of the most recent <a class="el" href="classEncoder.html">Encoder</a> pulse in seconds. This method compenstates for the decoding type.</p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000004">Deprecated:</a></b></dt><dd>Use <a class="el" href="classEncoder.html#a72423acddb85ee347fc213b8600843f7">GetRate()</a> in favor of this method. This returns unscaled periods and <a class="el" href="classEncoder.html#a72423acddb85ee347fc213b8600843f7">GetRate()</a> scales using value from <a class="el" href="classEncoder.html#a0bfacc84063e402077f1f620ea863ce5">SetDistancePerPulse()</a>.</dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000010">Deprecated:</a></b></dt><dd>Use <a class="el" href="classEncoder.html#a72423acddb85ee347fc213b8600843f7">GetRate()</a> in favor of this method. This returns unscaled periods and <a class="el" href="classEncoder.html#a72423acddb85ee347fc213b8600843f7">GetRate()</a> scales using value from <a class="el" href="classEncoder.html#a0bfacc84063e402077f1f620ea863ce5">SetDistancePerPulse()</a>.</dd></dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>Period in seconds of the most recent pulse. </dd></dl>
 
 <p>Implements <a class="el" href="classCounterBase.html">CounterBase</a>.</p>
@@ -556,7 +557,7 @@ Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 <p>Sets the maximum period for stopped detection. Sets the value that represents the maximum period of the <a class="el" href="classEncoder.html">Encoder</a> before it will assume that the attached device is stopped. This timeout allows users to determine if the wheels or other shaft has stopped rotating. This method compensates for the decoding type.</p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000005">Deprecated:</a></b></dt><dd>Use <a class="el" href="classEncoder.html#aed57d1224b55a28c666f2888102efbec">SetMinRate()</a> in favor of this method. This takes unscaled periods and <a class="el" href="classEncoder.html#aed57d1224b55a28c666f2888102efbec">SetMinRate()</a> scales using value from <a class="el" href="classEncoder.html#a0bfacc84063e402077f1f620ea863ce5">SetDistancePerPulse()</a>.</dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000011">Deprecated:</a></b></dt><dd>Use <a class="el" href="classEncoder.html#aed57d1224b55a28c666f2888102efbec">SetMinRate()</a> in favor of this method. This takes unscaled periods and <a class="el" href="classEncoder.html#aed57d1224b55a28c666f2888102efbec">SetMinRate()</a> scales using value from <a class="el" href="classEncoder.html#a0bfacc84063e402077f1f620ea863ce5">SetDistancePerPulse()</a>.</dd></dl>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramname">maxPeriod</td><td>The maximum time between rising and falling edges before the FPGA will report the device stopped. This is expressed in seconds. </td></tr>
@@ -697,7 +698,7 @@ Public Member Functions</h2></td></tr>
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Mon Jan 9 2012 14:57:08 by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Mon Jan 16 2012 16:29:36 for WPILib by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
 </body>

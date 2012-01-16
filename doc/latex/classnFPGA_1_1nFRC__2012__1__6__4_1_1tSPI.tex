@@ -1,0 +1,312 @@
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tSPI}{
+\section{nFPGA::nFRC\_\-2012\_\-1\_\-6\_\-4::tSPI Class Reference}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tSPI}\index{nFPGA::nFRC\_\-2012\_\-1\_\-6\_\-4::tSPI@{nFPGA::nFRC\_\-2012\_\-1\_\-6\_\-4::tSPI}}
+}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+union \hyperlink{unionnFPGA_1_1nFRC__2012__1__6__4_1_1tSPI_1_1tChannels}{tChannels}
+\item 
+union \hyperlink{unionnFPGA_1_1nFRC__2012__1__6__4_1_1tSPI_1_1tConfig}{tConfig}
+\item 
+union \hyperlink{unionnFPGA_1_1nFRC__2012__1__6__4_1_1tSPI_1_1tStatus}{tStatus}
+\end{DoxyCompactItemize}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum {\bfseries tIfaceConstants} \{ {\bfseries kNumSystems} =  1
+ \}
+\item 
+enum {\bfseries tStatus\_\-IfaceConstants} 
+\item 
+enum {\bfseries tReadReceivedData\_\-IfaceConstants} 
+\item 
+enum {\bfseries tConfig\_\-IfaceConstants} 
+\item 
+enum {\bfseries tReceivedData\_\-IfaceConstants} 
+\item 
+enum {\bfseries tDataToLoad\_\-IfaceConstants} 
+\item 
+enum {\bfseries tReset\_\-IfaceConstants} 
+\item 
+enum {\bfseries tChannels\_\-IfaceConstants} 
+\item 
+enum {\bfseries tClearReceivedData\_\-IfaceConstants} 
+\item 
+enum {\bfseries tReceivedElements\_\-IfaceConstants} 
+\item 
+enum {\bfseries tLoad\_\-IfaceConstants} 
+\item 
+enum {\bfseries tAvailableToLoad\_\-IfaceConstants} 
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tSPI_a51199de8d623ff7748b047d9a5299aa9}{
+virtual \hyperlink{classnFPGA_1_1tSystemInterface}{tSystemInterface} $\ast$ {\bfseries getSystemInterface} ()=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tSPI_a51199de8d623ff7748b047d9a5299aa9}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tSPI_acaf1a2c8e87e8b6b2ced068460437c9b}{
+virtual \hyperlink{unionnFPGA_1_1nFRC__2012__1__6__4_1_1tSPI_1_1tStatus}{tStatus} {\bfseries readStatus} (tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tSPI_acaf1a2c8e87e8b6b2ced068460437c9b}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tSPI_abd39e6c9d7ac1aa7e2a12f5b26fa793a}{
+virtual bool {\bfseries readStatus\_\-ReceivedDataOverflow} (tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tSPI_abd39e6c9d7ac1aa7e2a12f5b26fa793a}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tSPI_afcb0a741056d5644d88b9f88df8a850a}{
+virtual bool {\bfseries readStatus\_\-Idle} (tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tSPI_afcb0a741056d5644d88b9f88df8a850a}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tSPI_ae41a928d32f85ee50963909b6f92883c}{
+virtual void {\bfseries strobeReadReceivedData} (tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tSPI_ae41a928d32f85ee50963909b6f92883c}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tSPI_ac054ee7004fa7844dc70ddc77057f55f}{
+virtual void {\bfseries writeConfig} (\hyperlink{unionnFPGA_1_1nFRC__2012__1__6__4_1_1tSPI_1_1tConfig}{tConfig} value, tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tSPI_ac054ee7004fa7844dc70ddc77057f55f}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tSPI_ac1223ff9af4be6ebd7d8efdbbb00262f}{
+virtual void {\bfseries writeConfig\_\-BusBitWidth} (unsigned char value, tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tSPI_ac1223ff9af4be6ebd7d8efdbbb00262f}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tSPI_a3964c8c1757711dc0a5b061fa7a9b864}{
+virtual void {\bfseries writeConfig\_\-ClockHalfPeriodDelay} (unsigned char value, tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tSPI_a3964c8c1757711dc0a5b061fa7a9b864}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tSPI_a85842a725e55e5b80d83de17c6160d10}{
+virtual void {\bfseries writeConfig\_\-MSBfirst} (bool value, tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tSPI_a85842a725e55e5b80d83de17c6160d10}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tSPI_a12ed545eb51089e19dd6742b05415339}{
+virtual void {\bfseries writeConfig\_\-DataOnFalling} (bool value, tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tSPI_a12ed545eb51089e19dd6742b05415339}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tSPI_a7b830c2cfb1c9b1da55f8e4f37d92450}{
+virtual void {\bfseries writeConfig\_\-LatchFirst} (bool value, tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tSPI_a7b830c2cfb1c9b1da55f8e4f37d92450}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tSPI_acb1920dc0b1295bb7d3854db684db8b0}{
+virtual void {\bfseries writeConfig\_\-LatchLast} (bool value, tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tSPI_acb1920dc0b1295bb7d3854db684db8b0}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tSPI_ae5c112a63bc5f4f13fc6b8d9ef40e261}{
+virtual void {\bfseries writeConfig\_\-FramePolarity} (bool value, tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tSPI_ae5c112a63bc5f4f13fc6b8d9ef40e261}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tSPI_a79e7492849bec0d6eccf49eb879709dc}{
+virtual void {\bfseries writeConfig\_\-WriteOnly} (bool value, tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tSPI_a79e7492849bec0d6eccf49eb879709dc}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tSPI_a6ddfcc0bbb2e94212a068be40f63950c}{
+virtual void {\bfseries writeConfig\_\-ClockPolarity} (bool value, tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tSPI_a6ddfcc0bbb2e94212a068be40f63950c}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tSPI_a4a8b165e516c2994eff55b68dd859ab1}{
+virtual \hyperlink{unionnFPGA_1_1nFRC__2012__1__6__4_1_1tSPI_1_1tConfig}{tConfig} {\bfseries readConfig} (tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tSPI_a4a8b165e516c2994eff55b68dd859ab1}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tSPI_a93b1af4a95f3c44eb4814183779f8951}{
+virtual unsigned char {\bfseries readConfig\_\-BusBitWidth} (tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tSPI_a93b1af4a95f3c44eb4814183779f8951}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tSPI_a6815feb7fb8c6bc62e2c08228a84001b}{
+virtual unsigned char {\bfseries readConfig\_\-ClockHalfPeriodDelay} (tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tSPI_a6815feb7fb8c6bc62e2c08228a84001b}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tSPI_a41f13536c59934a0bb2fd079c9522321}{
+virtual bool {\bfseries readConfig\_\-MSBfirst} (tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tSPI_a41f13536c59934a0bb2fd079c9522321}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tSPI_a5d50ebef3eaf5acca7aba56053414405}{
+virtual bool {\bfseries readConfig\_\-DataOnFalling} (tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tSPI_a5d50ebef3eaf5acca7aba56053414405}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tSPI_a4999b71a32a2073604019f4dd0b8ea93}{
+virtual bool {\bfseries readConfig\_\-LatchFirst} (tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tSPI_a4999b71a32a2073604019f4dd0b8ea93}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tSPI_a1d02e121db1b5c35646e5a32ea7175f0}{
+virtual bool {\bfseries readConfig\_\-LatchLast} (tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tSPI_a1d02e121db1b5c35646e5a32ea7175f0}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tSPI_a930d4a3c3f0ca8865970620b7257fda5}{
+virtual bool {\bfseries readConfig\_\-FramePolarity} (tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tSPI_a930d4a3c3f0ca8865970620b7257fda5}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tSPI_a209d54ae9c464884bf66febef5d64fe5}{
+virtual bool {\bfseries readConfig\_\-WriteOnly} (tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tSPI_a209d54ae9c464884bf66febef5d64fe5}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tSPI_a987db3e80ceec178023e5eb252cab4a2}{
+virtual bool {\bfseries readConfig\_\-ClockPolarity} (tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tSPI_a987db3e80ceec178023e5eb252cab4a2}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tSPI_a3029a218e28cb641303ad04e356a9efb}{
+virtual unsigned int {\bfseries readReceivedData} (tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tSPI_a3029a218e28cb641303ad04e356a9efb}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tSPI_a8b981ee7db49c28bb6ecb0ea34d1cc67}{
+virtual void {\bfseries writeDataToLoad} (unsigned int value, tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tSPI_a8b981ee7db49c28bb6ecb0ea34d1cc67}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tSPI_a6495e5cb6ed399f1e6f4ba7d16610988}{
+virtual unsigned int {\bfseries readDataToLoad} (tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tSPI_a6495e5cb6ed399f1e6f4ba7d16610988}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tSPI_a759b9b12b4feef0cba5435c2fcc2104f}{
+virtual void {\bfseries strobeReset} (tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tSPI_a759b9b12b4feef0cba5435c2fcc2104f}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tSPI_a12ac147040cdabc467ffd2f01dcf5773}{
+virtual void {\bfseries writeChannels} (\hyperlink{unionnFPGA_1_1nFRC__2012__1__6__4_1_1tSPI_1_1tChannels}{tChannels} value, tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tSPI_a12ac147040cdabc467ffd2f01dcf5773}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tSPI_a5872a62007246f225df4d2bbe28de9b8}{
+virtual void {\bfseries writeChannels\_\-SCLK\_\-Channel} (unsigned char value, tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tSPI_a5872a62007246f225df4d2bbe28de9b8}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tSPI_a3b84f7e89d03a0fdc6b289d5c286b09c}{
+virtual void {\bfseries writeChannels\_\-SCLK\_\-Module} (unsigned char value, tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tSPI_a3b84f7e89d03a0fdc6b289d5c286b09c}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tSPI_a7c6e461cf782b657a48d96d1e4776ccf}{
+virtual void {\bfseries writeChannels\_\-MOSI\_\-Channel} (unsigned char value, tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tSPI_a7c6e461cf782b657a48d96d1e4776ccf}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tSPI_a1c72e47b92f64e7ab631dc0c997ae9b1}{
+virtual void {\bfseries writeChannels\_\-MOSI\_\-Module} (unsigned char value, tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tSPI_a1c72e47b92f64e7ab631dc0c997ae9b1}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tSPI_ad668b3a114db76c2ac0a7d48dbac8b80}{
+virtual void {\bfseries writeChannels\_\-MISO\_\-Channel} (unsigned char value, tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tSPI_ad668b3a114db76c2ac0a7d48dbac8b80}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tSPI_a6cf2b7ffa625c486ef837f7161b0cf22}{
+virtual void {\bfseries writeChannels\_\-MISO\_\-Module} (unsigned char value, tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tSPI_a6cf2b7ffa625c486ef837f7161b0cf22}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tSPI_a919eea02211579380d1f97badfa75ada}{
+virtual void {\bfseries writeChannels\_\-SS\_\-Channel} (unsigned char value, tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tSPI_a919eea02211579380d1f97badfa75ada}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tSPI_a3e82f2556be34b6f1ea5a8f1e8a424f2}{
+virtual void {\bfseries writeChannels\_\-SS\_\-Module} (unsigned char value, tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tSPI_a3e82f2556be34b6f1ea5a8f1e8a424f2}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tSPI_a83380635709415b225a82f2938d31d15}{
+virtual \hyperlink{unionnFPGA_1_1nFRC__2012__1__6__4_1_1tSPI_1_1tChannels}{tChannels} {\bfseries readChannels} (tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tSPI_a83380635709415b225a82f2938d31d15}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tSPI_a1e9616a215d7d41ca0de91dca03b5b41}{
+virtual unsigned char {\bfseries readChannels\_\-SCLK\_\-Channel} (tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tSPI_a1e9616a215d7d41ca0de91dca03b5b41}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tSPI_a3d60ef4b3b385f141c8cda7885faa0c8}{
+virtual unsigned char {\bfseries readChannels\_\-SCLK\_\-Module} (tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tSPI_a3d60ef4b3b385f141c8cda7885faa0c8}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tSPI_ac35b36a7b4f2bbff55900e1704cdb2c8}{
+virtual unsigned char {\bfseries readChannels\_\-MOSI\_\-Channel} (tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tSPI_ac35b36a7b4f2bbff55900e1704cdb2c8}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tSPI_a17b686953a9839a88ff0ea1408c3c70f}{
+virtual unsigned char {\bfseries readChannels\_\-MOSI\_\-Module} (tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tSPI_a17b686953a9839a88ff0ea1408c3c70f}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tSPI_a6f22b95d13cf4565528abbf314f38854}{
+virtual unsigned char {\bfseries readChannels\_\-MISO\_\-Channel} (tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tSPI_a6f22b95d13cf4565528abbf314f38854}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tSPI_a6432d54698afccd131442b8f8a214ddd}{
+virtual unsigned char {\bfseries readChannels\_\-MISO\_\-Module} (tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tSPI_a6432d54698afccd131442b8f8a214ddd}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tSPI_a14ec0a2e4dcb65c1a6c6ed2d32af62a9}{
+virtual unsigned char {\bfseries readChannels\_\-SS\_\-Channel} (tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tSPI_a14ec0a2e4dcb65c1a6c6ed2d32af62a9}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tSPI_aade7252b6768857bfa1790d7a1220722}{
+virtual unsigned char {\bfseries readChannels\_\-SS\_\-Module} (tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tSPI_aade7252b6768857bfa1790d7a1220722}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tSPI_a5540828ae24138ed0d86cfd00c115fc0}{
+virtual void {\bfseries strobeClearReceivedData} (tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tSPI_a5540828ae24138ed0d86cfd00c115fc0}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tSPI_a29d85b5ca0bca94e7161838ea92a7f5a}{
+virtual unsigned short {\bfseries readReceivedElements} (tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tSPI_a29d85b5ca0bca94e7161838ea92a7f5a}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tSPI_a6cb5b61b48f57bb9e85f20c0902d92ff}{
+virtual void {\bfseries strobeLoad} (tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tSPI_a6cb5b61b48f57bb9e85f20c0902d92ff}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tSPI_aa19bdf308fa945499db4063cf67d0a72}{
+virtual unsigned short {\bfseries readAvailableToLoad} (tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tSPI_aa19bdf308fa945499db4063cf67d0a72}
+
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tSPI_a5119000c5da9ed05b53c9e76f62f4c61}{
+static \hyperlink{classnFPGA_1_1nFRC__2012__1__6__4_1_1tSPI}{tSPI} $\ast$ {\bfseries create} (tRioStatusCode $\ast$status)}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tSPI_a5119000c5da9ed05b53c9e76f62f4c61}
+
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+ChipObject/tSPI.h\end{DoxyCompactItemize}

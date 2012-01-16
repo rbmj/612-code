@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<title>Gyro Class Reference</title>
+<title>WPILib: Gyro Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/search.js"></script>
@@ -19,7 +19,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-   <div id="projectbrief">WPIRoboticsLibraryforFRC</div>
+   <div id="projectname">WPILib&#160;<span id="projectnumber">2012</span></div>
+   <div id="projectbrief">WPILibRoboticsLibraryforFRC</div>
   </td>
  </tr>
  </tbody>
@@ -74,9 +75,10 @@ Inheritance diagram for Gyro:</div>
  <div class="center">
   <img src="classGyro.png" usemap="#Gyro_map" alt=""/>
   <map id="Gyro_map" name="Gyro_map">
-<area href="classSensorBase.html" alt="SensorBase" shape="rect" coords="0,56,80,80"/>
-<area href="classPIDSource.html" alt="PIDSource" shape="rect" coords="90,56,170,80"/>
-<area href="classErrorBase.html" alt="ErrorBase" shape="rect" coords="0,0,80,24"/>
+<area href="classSensorBase.html" alt="SensorBase" shape="rect" coords="0,56,93,80"/>
+<area href="classPIDSource.html" alt="PIDSource" shape="rect" coords="103,56,196,80"/>
+<area href="classErrorBase.html" alt="ErrorBase" shape="rect" coords="0,0,93,24"/>
+<area href="classSendableGyro.html" alt="SendableGyro" shape="rect" coords="51,168,144,192"/>
 </map>
  </div></div>
 
@@ -230,6 +232,8 @@ static const float&#160;</td><td class="memItemRight" valign="bottom"><b>kDefaul
 <p>The angle is based on the current accumulator value corrected by the oversampling rate, the gyro type and the A/D calibration values. The angle is continuous, that is can go beyond 360 degrees. This make algorithms that wouldn't want to see a discontinuity in the gyro output as it sweeps past 0 on the second time around.</p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>the current heading of the robot in degrees. This heading is based on integration of the returned rate from the gyro. </dd></dl>
 
+<p>Reimplemented in <a class="el" href="classSendableGyro.html#a1e192b880ff0590e431ca933b6ca0dc9">SendableGyro</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="aca619c0201c5fb85e2bbaeef0f39e8e6"></a><!-- doxytag: member="Gyro::PIDGet" ref="aca619c0201c5fb85e2bbaeef0f39e8e6" args="()" -->
@@ -266,6 +270,8 @@ static const float&#160;</td><td class="memItemRight" valign="bottom"><b>kDefaul
 </div>
 <div class="memdoc">
 <p>Reset the gyro. Resets the gyro to a heading of zero. This can be used if there is significant drift in the gyro and it needs to be recalibrated after it has been running. </p>
+
+<p>Reimplemented in <a class="el" href="classSendableGyro.html#acd4b377b5b5d71613f2209715ab29093">SendableGyro</a>.</p>
 
 </div>
 </div>
@@ -312,7 +318,7 @@ static const float&#160;</td><td class="memItemRight" valign="bottom"><b>kDefaul
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Mon Jan 9 2012 14:57:09 by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Mon Jan 16 2012 16:29:37 for WPILib by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
 </body>

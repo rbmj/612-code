@@ -1,0 +1,177 @@
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tAI}{
+\section{nFPGA::nFRC\_\-2012\_\-1\_\-6\_\-4::tAI Class Reference}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tAI}\index{nFPGA::nFRC\_\-2012\_\-1\_\-6\_\-4::tAI@{nFPGA::nFRC\_\-2012\_\-1\_\-6\_\-4::tAI}}
+}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+union \hyperlink{unionnFPGA_1_1nFRC__2012__1__6__4_1_1tAI_1_1tConfig}{tConfig}
+\item 
+union \hyperlink{unionnFPGA_1_1nFRC__2012__1__6__4_1_1tAI_1_1tReadSelect}{tReadSelect}
+\end{DoxyCompactItemize}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum {\bfseries tIfaceConstants} \{ {\bfseries kNumSystems} =  2
+ \}
+\item 
+enum {\bfseries tConfig\_\-IfaceConstants} 
+\item 
+enum {\bfseries tScanList\_\-IfaceConstants} \{ {\bfseries kNumScanListElements} =  8
+ \}
+\item 
+enum {\bfseries tLoopTiming\_\-IfaceConstants} 
+\item 
+enum {\bfseries tAverageBits\_\-IfaceConstants} \{ {\bfseries kNumAverageBitsElements} =  8
+ \}
+\item 
+enum {\bfseries tOversampleBits\_\-IfaceConstants} \{ {\bfseries kNumOversampleBitsElements} =  8
+ \}
+\item 
+enum {\bfseries tOutput\_\-IfaceConstants} 
+\item 
+enum {\bfseries tReadSelect\_\-IfaceConstants} 
+\item 
+enum {\bfseries tLatchOutput\_\-IfaceConstants} 
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tAI_a76d1f09154c32a286efb9b761e9c6c1f}{
+virtual \hyperlink{classnFPGA_1_1tSystemInterface}{tSystemInterface} $\ast$ {\bfseries getSystemInterface} ()=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tAI_a76d1f09154c32a286efb9b761e9c6c1f}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tAI_acd910b94bb83f7946c18b4b094653348}{
+virtual unsigned char {\bfseries getSystemIndex} ()=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tAI_acd910b94bb83f7946c18b4b094653348}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tAI_a01815576f3e7ca500025a5982db04bcd}{
+virtual void {\bfseries writeConfig} (\hyperlink{unionnFPGA_1_1nFRC__2012__1__6__4_1_1tAI_1_1tConfig}{tConfig} value, tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tAI_a01815576f3e7ca500025a5982db04bcd}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tAI_a4e68cc06e076c9d27cc611507b61291e}{
+virtual void {\bfseries writeConfig\_\-ScanSize} (unsigned char value, tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tAI_a4e68cc06e076c9d27cc611507b61291e}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tAI_ab3e453bdecba7951f5f599f9a0049fb7}{
+virtual void {\bfseries writeConfig\_\-ConvertRate} (unsigned int value, tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tAI_ab3e453bdecba7951f5f599f9a0049fb7}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tAI_a177669c9660beee26adf4d3fc1bc0f49}{
+virtual \hyperlink{unionnFPGA_1_1nFRC__2012__1__6__4_1_1tAI_1_1tConfig}{tConfig} {\bfseries readConfig} (tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tAI_a177669c9660beee26adf4d3fc1bc0f49}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tAI_a8389244e11e33f3afc54c7ff5f278126}{
+virtual unsigned char {\bfseries readConfig\_\-ScanSize} (tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tAI_a8389244e11e33f3afc54c7ff5f278126}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tAI_a49c169683a9dc631a04ddafe43a89f0a}{
+virtual unsigned int {\bfseries readConfig\_\-ConvertRate} (tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tAI_a49c169683a9dc631a04ddafe43a89f0a}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tAI_aab1c8f1e4bbe3381b1803459d8c10f02}{
+virtual void {\bfseries writeScanList} (unsigned char bitfield\_\-index, unsigned char value, tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tAI_aab1c8f1e4bbe3381b1803459d8c10f02}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tAI_acfdaf6d3e9c32fcdc0d117c6797a31c5}{
+virtual unsigned char {\bfseries readScanList} (unsigned char bitfield\_\-index, tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tAI_acfdaf6d3e9c32fcdc0d117c6797a31c5}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tAI_a1afb0028afbe9f40a64784dc5d71e931}{
+virtual unsigned int {\bfseries readLoopTiming} (tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tAI_a1afb0028afbe9f40a64784dc5d71e931}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tAI_a70305b35097258611e3d449ac26263d3}{
+virtual void {\bfseries writeAverageBits} (unsigned char bitfield\_\-index, unsigned char value, tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tAI_a70305b35097258611e3d449ac26263d3}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tAI_a4b29efae19a86a6837d30ceb6f492040}{
+virtual unsigned char {\bfseries readAverageBits} (unsigned char bitfield\_\-index, tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tAI_a4b29efae19a86a6837d30ceb6f492040}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tAI_adb6ee41cee889e40fbf229e736eef954}{
+virtual void {\bfseries writeOversampleBits} (unsigned char bitfield\_\-index, unsigned char value, tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tAI_adb6ee41cee889e40fbf229e736eef954}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tAI_aac928814777d8f171b3ada495d3f0879}{
+virtual unsigned char {\bfseries readOversampleBits} (unsigned char bitfield\_\-index, tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tAI_aac928814777d8f171b3ada495d3f0879}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tAI_a5e48bafe8b2246b522c40021cea3313d}{
+virtual signed int {\bfseries readOutput} (tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tAI_a5e48bafe8b2246b522c40021cea3313d}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tAI_a38aeb2d9175e0e34d871b7fe3adbfa0a}{
+virtual void {\bfseries writeReadSelect} (\hyperlink{unionnFPGA_1_1nFRC__2012__1__6__4_1_1tAI_1_1tReadSelect}{tReadSelect} value, tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tAI_a38aeb2d9175e0e34d871b7fe3adbfa0a}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tAI_a16a2566d89b67d4e27b354f9780abfd6}{
+virtual void {\bfseries writeReadSelect\_\-Channel} (unsigned char value, tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tAI_a16a2566d89b67d4e27b354f9780abfd6}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tAI_abacc2e5ed23419214cc11356934c124c}{
+virtual void {\bfseries writeReadSelect\_\-Module} (unsigned char value, tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tAI_abacc2e5ed23419214cc11356934c124c}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tAI_a22327784c345e21c09010f8a020cdf4f}{
+virtual void {\bfseries writeReadSelect\_\-Averaged} (bool value, tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tAI_a22327784c345e21c09010f8a020cdf4f}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tAI_ac89353f51c105d1a12824c89aa52a061}{
+virtual \hyperlink{unionnFPGA_1_1nFRC__2012__1__6__4_1_1tAI_1_1tReadSelect}{tReadSelect} {\bfseries readReadSelect} (tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tAI_ac89353f51c105d1a12824c89aa52a061}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tAI_a8022dc07bbde29a8aca4b13b82d812e0}{
+virtual unsigned char {\bfseries readReadSelect\_\-Channel} (tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tAI_a8022dc07bbde29a8aca4b13b82d812e0}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tAI_a39baf45ed1622d63c3a803e78ece1a39}{
+virtual unsigned char {\bfseries readReadSelect\_\-Module} (tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tAI_a39baf45ed1622d63c3a803e78ece1a39}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tAI_ae13bb3bef9b94ebacafd4e9bdfd33b00}{
+virtual bool {\bfseries readReadSelect\_\-Averaged} (tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tAI_ae13bb3bef9b94ebacafd4e9bdfd33b00}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tAI_a537128f97a018a2cfed4dd64cdecd10a}{
+virtual void {\bfseries strobeLatchOutput} (tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tAI_a537128f97a018a2cfed4dd64cdecd10a}
+
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tAI_ae52d734e177fcaa6f89217cae955b7f2}{
+static \hyperlink{classnFPGA_1_1nFRC__2012__1__6__4_1_1tAI}{tAI} $\ast$ {\bfseries create} (unsigned char sys\_\-index, tRioStatusCode $\ast$status)}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tAI_ae52d734e177fcaa6f89217cae955b7f2}
+
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+ChipObject/tAI.h\end{DoxyCompactItemize}

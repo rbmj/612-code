@@ -1,0 +1,317 @@
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tCounter}{
+\section{nFPGA::nFRC\_\-2012\_\-1\_\-6\_\-4::tCounter Class Reference}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tCounter}\index{nFPGA::nFRC\_\-2012\_\-1\_\-6\_\-4::tCounter@{nFPGA::nFRC\_\-2012\_\-1\_\-6\_\-4::tCounter}}
+}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+union \hyperlink{unionnFPGA_1_1nFRC__2012__1__6__4_1_1tCounter_1_1tConfig}{tConfig}
+\item 
+union \hyperlink{unionnFPGA_1_1nFRC__2012__1__6__4_1_1tCounter_1_1tOutput}{tOutput}
+\item 
+union \hyperlink{unionnFPGA_1_1nFRC__2012__1__6__4_1_1tCounter_1_1tTimerConfig}{tTimerConfig}
+\item 
+union \hyperlink{unionnFPGA_1_1nFRC__2012__1__6__4_1_1tCounter_1_1tTimerOutput}{tTimerOutput}
+\end{DoxyCompactItemize}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum {\bfseries tIfaceConstants} \{ {\bfseries kNumSystems} =  8
+ \}
+\item 
+enum {\bfseries tOutput\_\-IfaceConstants} 
+\item 
+enum {\bfseries tConfig\_\-IfaceConstants} 
+\item 
+enum {\bfseries tReset\_\-IfaceConstants} 
+\item 
+enum {\bfseries tTimerOutput\_\-IfaceConstants} 
+\item 
+enum {\bfseries tTimerConfig\_\-IfaceConstants} 
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tCounter_ad2c535103dac1a85c6676fec0b52ccfc}{
+virtual \hyperlink{classnFPGA_1_1tSystemInterface}{tSystemInterface} $\ast$ {\bfseries getSystemInterface} ()=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tCounter_ad2c535103dac1a85c6676fec0b52ccfc}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tCounter_a1a9ccd3cfd6c8d0e6d8342b39c9840e9}{
+virtual unsigned char {\bfseries getSystemIndex} ()=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tCounter_a1a9ccd3cfd6c8d0e6d8342b39c9840e9}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tCounter_afb3b5e6224c4c5584004ffba6ae46534}{
+virtual \hyperlink{unionnFPGA_1_1nFRC__2012__1__6__4_1_1tCounter_1_1tOutput}{tOutput} {\bfseries readOutput} (tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tCounter_afb3b5e6224c4c5584004ffba6ae46534}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tCounter_a172cd4889d7779e3677e075567390ab8}{
+virtual bool {\bfseries readOutput\_\-Direction} (tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tCounter_a172cd4889d7779e3677e075567390ab8}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tCounter_a5a2e812ed239a154f3b3830a6343dfa5}{
+virtual signed int {\bfseries readOutput\_\-Value} (tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tCounter_a5a2e812ed239a154f3b3830a6343dfa5}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tCounter_a9dcc577f73572ab0b361498ec2190903}{
+virtual void {\bfseries writeConfig} (\hyperlink{unionnFPGA_1_1nFRC__2012__1__6__4_1_1tCounter_1_1tConfig}{tConfig} value, tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tCounter_a9dcc577f73572ab0b361498ec2190903}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tCounter_adcb932439c291f05e4500689629a7f57}{
+virtual void {\bfseries writeConfig\_\-UpSource\_\-Channel} (unsigned char value, tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tCounter_adcb932439c291f05e4500689629a7f57}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tCounter_a3dd26bd7ab48f570d9443bb4198bf02d}{
+virtual void {\bfseries writeConfig\_\-UpSource\_\-Module} (unsigned char value, tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tCounter_a3dd26bd7ab48f570d9443bb4198bf02d}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tCounter_a3326635dd597eeb8c2d2c0c2ea53e4c1}{
+virtual void {\bfseries writeConfig\_\-UpSource\_\-AnalogTrigger} (bool value, tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tCounter_a3326635dd597eeb8c2d2c0c2ea53e4c1}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tCounter_a58c69d36903a65822b65f2aec3d075a0}{
+virtual void {\bfseries writeConfig\_\-DownSource\_\-Channel} (unsigned char value, tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tCounter_a58c69d36903a65822b65f2aec3d075a0}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tCounter_afad9d348f6477a2f6411311620d3b5be}{
+virtual void {\bfseries writeConfig\_\-DownSource\_\-Module} (unsigned char value, tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tCounter_afad9d348f6477a2f6411311620d3b5be}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tCounter_ac17d9ca308a551113e43649078450ea4}{
+virtual void {\bfseries writeConfig\_\-DownSource\_\-AnalogTrigger} (bool value, tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tCounter_ac17d9ca308a551113e43649078450ea4}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tCounter_ab7ec3a095e5033ad48dab587c8df2f32}{
+virtual void {\bfseries writeConfig\_\-IndexSource\_\-Channel} (unsigned char value, tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tCounter_ab7ec3a095e5033ad48dab587c8df2f32}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tCounter_a2c4a94a927bb0475b94504731ecb57d4}{
+virtual void {\bfseries writeConfig\_\-IndexSource\_\-Module} (unsigned char value, tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tCounter_a2c4a94a927bb0475b94504731ecb57d4}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tCounter_ad03db9ff9f48d67f1595a1c8d3b588aa}{
+virtual void {\bfseries writeConfig\_\-IndexSource\_\-AnalogTrigger} (bool value, tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tCounter_ad03db9ff9f48d67f1595a1c8d3b588aa}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tCounter_ae39e2f5f96f1052ef96d53181992181a}{
+virtual void {\bfseries writeConfig\_\-IndexActiveHigh} (bool value, tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tCounter_ae39e2f5f96f1052ef96d53181992181a}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tCounter_aeb59a5a98113fbf942f50ac3be8585b2}{
+virtual void {\bfseries writeConfig\_\-UpRisingEdge} (bool value, tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tCounter_aeb59a5a98113fbf942f50ac3be8585b2}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tCounter_acbb2b6f8e53f82a1be96b80454abe710}{
+virtual void {\bfseries writeConfig\_\-UpFallingEdge} (bool value, tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tCounter_acbb2b6f8e53f82a1be96b80454abe710}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tCounter_aa7fee146234fb6336c890e75c3d72048}{
+virtual void {\bfseries writeConfig\_\-DownRisingEdge} (bool value, tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tCounter_aa7fee146234fb6336c890e75c3d72048}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tCounter_a5d58c9ebce55b1a359ee305a42a89d24}{
+virtual void {\bfseries writeConfig\_\-DownFallingEdge} (bool value, tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tCounter_a5d58c9ebce55b1a359ee305a42a89d24}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tCounter_aed81240ffbf0d27d474054fdb3ad267d}{
+virtual void {\bfseries writeConfig\_\-Mode} (unsigned char value, tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tCounter_aed81240ffbf0d27d474054fdb3ad267d}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tCounter_ad5db78701eae135854f0a0038aea883e}{
+virtual void {\bfseries writeConfig\_\-PulseLengthThreshold} (unsigned short value, tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tCounter_ad5db78701eae135854f0a0038aea883e}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tCounter_a9c17303d4e54b1de01b31c98b3286d18}{
+virtual void {\bfseries writeConfig\_\-Enable} (bool value, tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tCounter_a9c17303d4e54b1de01b31c98b3286d18}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tCounter_a16050b23adc7f302ecfa76e6cab45ad9}{
+virtual \hyperlink{unionnFPGA_1_1nFRC__2012__1__6__4_1_1tCounter_1_1tConfig}{tConfig} {\bfseries readConfig} (tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tCounter_a16050b23adc7f302ecfa76e6cab45ad9}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tCounter_a04fd886d283ebb98789505e31e38e2b4}{
+virtual unsigned char {\bfseries readConfig\_\-UpSource\_\-Channel} (tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tCounter_a04fd886d283ebb98789505e31e38e2b4}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tCounter_a33b33855addff82ab215fd3c5f6c3e6d}{
+virtual unsigned char {\bfseries readConfig\_\-UpSource\_\-Module} (tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tCounter_a33b33855addff82ab215fd3c5f6c3e6d}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tCounter_a6d9a0d9cd54102a5ecfc9cbab3a64749}{
+virtual bool {\bfseries readConfig\_\-UpSource\_\-AnalogTrigger} (tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tCounter_a6d9a0d9cd54102a5ecfc9cbab3a64749}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tCounter_a844702f32f51a7cef7c916c2306d0df2}{
+virtual unsigned char {\bfseries readConfig\_\-DownSource\_\-Channel} (tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tCounter_a844702f32f51a7cef7c916c2306d0df2}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tCounter_a6b01b5fb0297417d8f576f1f939dcee2}{
+virtual unsigned char {\bfseries readConfig\_\-DownSource\_\-Module} (tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tCounter_a6b01b5fb0297417d8f576f1f939dcee2}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tCounter_af5b4daab77c592ecaa6887b6a5efa8d2}{
+virtual bool {\bfseries readConfig\_\-DownSource\_\-AnalogTrigger} (tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tCounter_af5b4daab77c592ecaa6887b6a5efa8d2}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tCounter_a290fb9b1aaec9fd3b4bdfac887bf0c2d}{
+virtual unsigned char {\bfseries readConfig\_\-IndexSource\_\-Channel} (tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tCounter_a290fb9b1aaec9fd3b4bdfac887bf0c2d}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tCounter_abf83dc3831944299debcbc85a22c62ef}{
+virtual unsigned char {\bfseries readConfig\_\-IndexSource\_\-Module} (tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tCounter_abf83dc3831944299debcbc85a22c62ef}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tCounter_a2ab94be1fc90c71c52d8109a43b00e9d}{
+virtual bool {\bfseries readConfig\_\-IndexSource\_\-AnalogTrigger} (tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tCounter_a2ab94be1fc90c71c52d8109a43b00e9d}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tCounter_a1501e1cf46eabc35f2df33555f8c6f8b}{
+virtual bool {\bfseries readConfig\_\-IndexActiveHigh} (tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tCounter_a1501e1cf46eabc35f2df33555f8c6f8b}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tCounter_adc95697fe6d0427e3b05f20160fb18a5}{
+virtual bool {\bfseries readConfig\_\-UpRisingEdge} (tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tCounter_adc95697fe6d0427e3b05f20160fb18a5}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tCounter_ab91ce08da36fcc0a3c212f0b369c46a4}{
+virtual bool {\bfseries readConfig\_\-UpFallingEdge} (tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tCounter_ab91ce08da36fcc0a3c212f0b369c46a4}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tCounter_a33c846102a571aa72fe35418099147ef}{
+virtual bool {\bfseries readConfig\_\-DownRisingEdge} (tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tCounter_a33c846102a571aa72fe35418099147ef}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tCounter_af9ac2a88682356fd9b574961d634a646}{
+virtual bool {\bfseries readConfig\_\-DownFallingEdge} (tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tCounter_af9ac2a88682356fd9b574961d634a646}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tCounter_ac9e64d4c8377c82751c23480938ae615}{
+virtual unsigned char {\bfseries readConfig\_\-Mode} (tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tCounter_ac9e64d4c8377c82751c23480938ae615}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tCounter_a9aa3d8c09d4a2f9f25574711d77bbf0f}{
+virtual unsigned short {\bfseries readConfig\_\-PulseLengthThreshold} (tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tCounter_a9aa3d8c09d4a2f9f25574711d77bbf0f}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tCounter_a08242043cfde766f578e9c58998a4f5a}{
+virtual bool {\bfseries readConfig\_\-Enable} (tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tCounter_a08242043cfde766f578e9c58998a4f5a}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tCounter_acdc4b46b62200bf8fb40b159afc5ad79}{
+virtual void {\bfseries strobeReset} (tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tCounter_acdc4b46b62200bf8fb40b159afc5ad79}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tCounter_abea3ab2b29e94e619aca238d87609aa6}{
+virtual \hyperlink{unionnFPGA_1_1nFRC__2012__1__6__4_1_1tCounter_1_1tTimerOutput}{tTimerOutput} {\bfseries readTimerOutput} (tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tCounter_abea3ab2b29e94e619aca238d87609aa6}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tCounter_a990a382a447e36013ed42db0a995059e}{
+virtual unsigned int {\bfseries readTimerOutput\_\-Period} (tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tCounter_a990a382a447e36013ed42db0a995059e}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tCounter_a33838e37449a10c3a0ff7f8e32ca8db4}{
+virtual signed char {\bfseries readTimerOutput\_\-Count} (tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tCounter_a33838e37449a10c3a0ff7f8e32ca8db4}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tCounter_a4e0af0c1eaa730cd8ae8430799ca9d42}{
+virtual bool {\bfseries readTimerOutput\_\-Stalled} (tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tCounter_a4e0af0c1eaa730cd8ae8430799ca9d42}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tCounter_a2571c9b4071dbae9b34de9900983787f}{
+virtual void {\bfseries writeTimerConfig} (\hyperlink{unionnFPGA_1_1nFRC__2012__1__6__4_1_1tCounter_1_1tTimerConfig}{tTimerConfig} value, tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tCounter_a2571c9b4071dbae9b34de9900983787f}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tCounter_ac605b1caff2f1168f5f5666911e660f5}{
+virtual void {\bfseries writeTimerConfig\_\-StallPeriod} (unsigned int value, tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tCounter_ac605b1caff2f1168f5f5666911e660f5}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tCounter_a47ab313193c39faf54c4f3f106ea8720}{
+virtual void {\bfseries writeTimerConfig\_\-AverageSize} (unsigned char value, tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tCounter_a47ab313193c39faf54c4f3f106ea8720}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tCounter_aaaea9a17264e260007bc717a1a093a6f}{
+virtual void {\bfseries writeTimerConfig\_\-UpdateWhenEmpty} (bool value, tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tCounter_aaaea9a17264e260007bc717a1a093a6f}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tCounter_a2871656fbeca2f2fbe143d2bc0b5e937}{
+virtual \hyperlink{unionnFPGA_1_1nFRC__2012__1__6__4_1_1tCounter_1_1tTimerConfig}{tTimerConfig} {\bfseries readTimerConfig} (tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tCounter_a2871656fbeca2f2fbe143d2bc0b5e937}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tCounter_ac90f9b63a9e0abb54bd0fa40942f32cd}{
+virtual unsigned int {\bfseries readTimerConfig\_\-StallPeriod} (tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tCounter_ac90f9b63a9e0abb54bd0fa40942f32cd}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tCounter_ac4706141121e3f6778c9c47f4f4a52c5}{
+virtual unsigned char {\bfseries readTimerConfig\_\-AverageSize} (tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tCounter_ac4706141121e3f6778c9c47f4f4a52c5}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tCounter_ab6169c391f675ea7b8244b6fbb36513c}{
+virtual bool {\bfseries readTimerConfig\_\-UpdateWhenEmpty} (tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tCounter_ab6169c391f675ea7b8244b6fbb36513c}
+
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tCounter_af4022f3eb7c13fa3b2e48ff026ee351a}{
+static \hyperlink{classnFPGA_1_1nFRC__2012__1__6__4_1_1tCounter}{tCounter} $\ast$ {\bfseries create} (unsigned char sys\_\-index, tRioStatusCode $\ast$status)}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tCounter_af4022f3eb7c13fa3b2e48ff026ee351a}
+
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+ChipObject/tCounter.h\end{DoxyCompactItemize}

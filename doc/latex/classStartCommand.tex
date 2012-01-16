@@ -1,0 +1,117 @@
+\hypertarget{classStartCommand}{
+\section{StartCommand Class Reference}
+\label{classStartCommand}\index{StartCommand@{StartCommand}}
+}
+Inheritance diagram for StartCommand:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{classStartCommand}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classStartCommand_a3e7ccbd1ec878b8f6fd57ce9c04e9c9b}{
+{\bfseries StartCommand} (\hyperlink{classCommand}{Command} $\ast$commandToStart)}
+\label{classStartCommand_a3e7ccbd1ec878b8f6fd57ce9c04e9c9b}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{classStartCommand_a7e0382765f67e6c31e1786f43c6d4c4d}{Initialize} ()
+\item 
+virtual void \hyperlink{classStartCommand_aa6e8b7450ffe7af7a894cb35011ac093}{Execute} ()
+\item 
+virtual bool \hyperlink{classStartCommand_aa9bb1889310d8fd8ffe18889cc14b4c6}{IsFinished} ()
+\item 
+virtual void \hyperlink{classStartCommand_a0115112b1fe5041d40000f74da97c32c}{End} ()
+\item 
+virtual void \hyperlink{classStartCommand_a9e6d49b15e6ca602cc621408cc4b035c}{Interrupted} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classStartCommand_a0115112b1fe5041d40000f74da97c32c}{
+\index{StartCommand@{StartCommand}!End@{End}}
+\index{End@{End}!StartCommand@{StartCommand}}
+\subsubsection[{End}]{\setlength{\rightskip}{0pt plus 5cm}void StartCommand::End (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}protected, virtual\mbox{]}}}}
+\label{classStartCommand_a0115112b1fe5041d40000f74da97c32c}
+Called when the command ended peacefully. This is where you may want to wrap up loose ends, like shutting off a motor that was being used in the command. 
+
+Implements \hyperlink{classCommand_aafdfd2fd2f1d005c20b7f9e60450dc7a}{Command}.
+
+\hypertarget{classStartCommand_aa6e8b7450ffe7af7a894cb35011ac093}{
+\index{StartCommand@{StartCommand}!Execute@{Execute}}
+\index{Execute@{Execute}!StartCommand@{StartCommand}}
+\subsubsection[{Execute}]{\setlength{\rightskip}{0pt plus 5cm}void StartCommand::Execute (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}protected, virtual\mbox{]}}}}
+\label{classStartCommand_aa6e8b7450ffe7af7a894cb35011ac093}
+The execute method is called repeatedly until this \hyperlink{classCommand}{Command} either finishes or is canceled. 
+
+Implements \hyperlink{classCommand_a484c34647660fcfc8ee46b04ad5b32b6}{Command}.
+
+\hypertarget{classStartCommand_a7e0382765f67e6c31e1786f43c6d4c4d}{
+\index{StartCommand@{StartCommand}!Initialize@{Initialize}}
+\index{Initialize@{Initialize}!StartCommand@{StartCommand}}
+\subsubsection[{Initialize}]{\setlength{\rightskip}{0pt plus 5cm}void StartCommand::Initialize (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}protected, virtual\mbox{]}}}}
+\label{classStartCommand_a7e0382765f67e6c31e1786f43c6d4c4d}
+The initialize method is called the first time this \hyperlink{classCommand}{Command} is run after being started. 
+
+Implements \hyperlink{classCommand_a35b4c5ab42d8190791863cc8f1224231}{Command}.
+
+\hypertarget{classStartCommand_a9e6d49b15e6ca602cc621408cc4b035c}{
+\index{StartCommand@{StartCommand}!Interrupted@{Interrupted}}
+\index{Interrupted@{Interrupted}!StartCommand@{StartCommand}}
+\subsubsection[{Interrupted}]{\setlength{\rightskip}{0pt plus 5cm}void StartCommand::Interrupted (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}protected, virtual\mbox{]}}}}
+\label{classStartCommand_a9e6d49b15e6ca602cc621408cc4b035c}
+Called when the command ends because somebody called \hyperlink{}{cancel()} or another command shared the same requirements as this one, and booted it out.
+
+This is where you may want to wrap up loose ends, like shutting off a motor that was being used in the command.
+
+Generally, it is useful to simply call the \hyperlink{}{end()} method within this method 
+
+Implements \hyperlink{classCommand_adaad5530c4dfdaac5e503ca373548a8e}{Command}.
+
+\hypertarget{classStartCommand_aa9bb1889310d8fd8ffe18889cc14b4c6}{
+\index{StartCommand@{StartCommand}!IsFinished@{IsFinished}}
+\index{IsFinished@{IsFinished}!StartCommand@{StartCommand}}
+\subsubsection[{IsFinished}]{\setlength{\rightskip}{0pt plus 5cm}bool StartCommand::IsFinished (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}protected, virtual\mbox{]}}}}
+\label{classStartCommand_aa9bb1889310d8fd8ffe18889cc14b4c6}
+Returns whether this command is finished. If it is, then the command will be removed and \hyperlink{}{end()} will be called.
+
+It may be useful for a team to reference the \hyperlink{}{isTimedOut()} method for time-\/sensitive commands. \begin{DoxyReturn}{Returns}
+whether this command is finished. 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+Command::isTimedOut() isTimedOut() 
+\end{DoxySeeAlso}
+
+
+Implements \hyperlink{classCommand_a350a1e6657cd59f177f55e8451e60aa9}{Command}.
+
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+Commands/StartCommand.h\item 
+Commands/StartCommand.cpp\end{DoxyCompactItemize}

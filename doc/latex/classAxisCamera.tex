@@ -1,0 +1,184 @@
+\hypertarget{classAxisCamera}{
+\section{AxisCamera Class Reference}
+\label{classAxisCamera}\index{AxisCamera@{AxisCamera}}
+}
+
+
+{\ttfamily \#include $<$AxisCamera.h$>$}
+
+Inheritance diagram for AxisCamera:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classAxisCamera}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \hyperlink{classAxisCamera_af3cfcbe46afbf5e736856ab3416c4093}{$\sim$AxisCamera} ()
+\item 
+bool \hyperlink{classAxisCamera_a2841ee4826be6e2780132cb886cb0fce}{IsFreshImage} ()
+\item 
+SEM\_\-ID \hyperlink{classAxisCamera_a3ac658a9b7a8e6ac88dfe643a4affc6f}{GetNewImageSem} ()
+\item 
+int \hyperlink{classAxisCamera_a6434eefd970c81af8d12bc2e40db7219}{GetImage} (Image $\ast$imaqImage)
+\item 
+int \hyperlink{classAxisCamera_aa23454100abdc01129f43f77e92ff3d6}{GetImage} (\hyperlink{classColorImage}{ColorImage} $\ast$image)
+\item 
+\hyperlink{classHSLImage}{HSLImage} $\ast$ \hyperlink{classAxisCamera_a471281984345a79176e4920d5e6dea8a}{GetImage} ()
+\item 
+int \hyperlink{classAxisCamera_a0e608c3e60d76029b9f0fda094ba2735}{CopyJPEG} (char $\ast$$\ast$destImage, int \&destImageSize, int \&destImageBufferSize)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{classAxisCamera}{AxisCamera} \& \hyperlink{classAxisCamera_ac0ded6e2137ed5b704ad3b6fba041078}{GetInstance} (const char $\ast$cameraIP=NULL)
+\item 
+static void \hyperlink{classAxisCamera_aa78c5611fb79057a41460bda0ff4d4ae}{DeleteInstance} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{classAxisCamera}{AxisCamera} class. This class handles everything about the Axis 206 FRC Camera. It starts up 2 tasks each using a different connection to the camera:
+\begin{DoxyItemize}
+\item image reading task that reads images repeatedly from the camera
+\item parameter handler task in the base class that monitors for changes to parameters and updates the camera 
+\end{DoxyItemize}
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classAxisCamera_af3cfcbe46afbf5e736856ab3416c4093}{
+\index{AxisCamera@{AxisCamera}!$\sim$AxisCamera@{$\sim$AxisCamera}}
+\index{$\sim$AxisCamera@{$\sim$AxisCamera}!AxisCamera@{AxisCamera}}
+\subsubsection[{$\sim$AxisCamera}]{\setlength{\rightskip}{0pt plus 5cm}AxisCamera::$\sim$AxisCamera (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classAxisCamera_af3cfcbe46afbf5e736856ab3416c4093}
+Destructor 
+
+\subsection{Member Function Documentation}
+\hypertarget{classAxisCamera_a0e608c3e60d76029b9f0fda094ba2735}{
+\index{AxisCamera@{AxisCamera}!CopyJPEG@{CopyJPEG}}
+\index{CopyJPEG@{CopyJPEG}!AxisCamera@{AxisCamera}}
+\subsubsection[{CopyJPEG}]{\setlength{\rightskip}{0pt plus 5cm}int AxisCamera::CopyJPEG (
+\begin{DoxyParamCaption}
+\item[{char $\ast$$\ast$}]{destImage, }
+\item[{int \&}]{destImageSize, }
+\item[{int \&}]{destImageBufferSize}
+\end{DoxyParamCaption}
+)}}
+\label{classAxisCamera_a0e608c3e60d76029b9f0fda094ba2735}
+Copy an image into an existing buffer. This copies an image into an existing buffer rather than creating a new image in memory. That way a new image is only allocated when the image being copied is larger than the destination. This method is called by the \hyperlink{classPCVideoServer}{PCVideoServer} class. 
+\begin{DoxyParams}{Parameters}
+{\em imageData} & The destination image. \\
+\hline
+{\em numBytes} & The size of the destination image. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if failed (no source image or no memory), 1 if success. 
+\end{DoxyReturn}
+\hypertarget{classAxisCamera_aa78c5611fb79057a41460bda0ff4d4ae}{
+\index{AxisCamera@{AxisCamera}!DeleteInstance@{DeleteInstance}}
+\index{DeleteInstance@{DeleteInstance}!AxisCamera@{AxisCamera}}
+\subsubsection[{DeleteInstance}]{\setlength{\rightskip}{0pt plus 5cm}void AxisCamera::DeleteInstance (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{classAxisCamera_aa78c5611fb79057a41460bda0ff4d4ae}
+Called by Java to delete the camera... how thoughtful \hypertarget{classAxisCamera_a471281984345a79176e4920d5e6dea8a}{
+\index{AxisCamera@{AxisCamera}!GetImage@{GetImage}}
+\index{GetImage@{GetImage}!AxisCamera@{AxisCamera}}
+\subsubsection[{GetImage}]{\setlength{\rightskip}{0pt plus 5cm}{\bf HSLImage} $\ast$ AxisCamera::GetImage (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classAxisCamera_a471281984345a79176e4920d5e6dea8a}
+Instantiate a new image object and fill it with the latest image from the camera.
+
+The returned pointer is owned by the caller and is their responsibility to delete. \begin{DoxyReturn}{Returns}
+a pointer to an \hyperlink{classHSLImage}{HSLImage} object 
+\end{DoxyReturn}
+\hypertarget{classAxisCamera_a6434eefd970c81af8d12bc2e40db7219}{
+\index{AxisCamera@{AxisCamera}!GetImage@{GetImage}}
+\index{GetImage@{GetImage}!AxisCamera@{AxisCamera}}
+\subsubsection[{GetImage}]{\setlength{\rightskip}{0pt plus 5cm}int AxisCamera::GetImage (
+\begin{DoxyParamCaption}
+\item[{Image $\ast$}]{imaqImage}
+\end{DoxyParamCaption}
+)}}
+\label{classAxisCamera_a6434eefd970c81af8d12bc2e40db7219}
+Get an image from the camera and store it in the provided image. 
+\begin{DoxyParams}{Parameters}
+{\em image} & The imaq image to store the result in. This must be an HSL or RGB image This function is called by Java. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 upon success, zero on a failure 
+\end{DoxyReturn}
+\hypertarget{classAxisCamera_aa23454100abdc01129f43f77e92ff3d6}{
+\index{AxisCamera@{AxisCamera}!GetImage@{GetImage}}
+\index{GetImage@{GetImage}!AxisCamera@{AxisCamera}}
+\subsubsection[{GetImage}]{\setlength{\rightskip}{0pt plus 5cm}int AxisCamera::GetImage (
+\begin{DoxyParamCaption}
+\item[{{\bf ColorImage} $\ast$}]{image}
+\end{DoxyParamCaption}
+)}}
+\label{classAxisCamera_aa23454100abdc01129f43f77e92ff3d6}
+Get an image from the camera and store it in the provided image. 
+\begin{DoxyParams}{Parameters}
+{\em image} & The image to store the result in. This must be an HSL or RGB image \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 upon success, zero on a failure 
+\end{DoxyReturn}
+\hypertarget{classAxisCamera_ac0ded6e2137ed5b704ad3b6fba041078}{
+\index{AxisCamera@{AxisCamera}!GetInstance@{GetInstance}}
+\index{GetInstance@{GetInstance}!AxisCamera@{AxisCamera}}
+\subsubsection[{GetInstance}]{\setlength{\rightskip}{0pt plus 5cm}{\bf AxisCamera} \& AxisCamera::GetInstance (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{cameraIP = {\ttfamily NULL}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{classAxisCamera_ac0ded6e2137ed5b704ad3b6fba041078}
+Get a pointer to the \hyperlink{classAxisCamera}{AxisCamera} object, if the object does not exist, create it To use the camera on port 2 of a cRIO-\/FRC, pass \char`\"{}192.168.0.90\char`\"{} to the first GetInstance call. \begin{DoxyReturn}{Returns}
+reference to \hyperlink{classAxisCamera}{AxisCamera} object 
+\end{DoxyReturn}
+\hypertarget{classAxisCamera_a3ac658a9b7a8e6ac88dfe643a4affc6f}{
+\index{AxisCamera@{AxisCamera}!GetNewImageSem@{GetNewImageSem}}
+\index{GetNewImageSem@{GetNewImageSem}!AxisCamera@{AxisCamera}}
+\subsubsection[{GetNewImageSem}]{\setlength{\rightskip}{0pt plus 5cm}SEM\_\-ID AxisCamera::GetNewImageSem (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classAxisCamera_a3ac658a9b7a8e6ac88dfe643a4affc6f}
+Get the semaphore to be used to synchronize image access with camera acquisition
+
+Call semTake on the returned semaphore to block until a new image is acquired.
+
+The semaphore is owned by the \hyperlink{classAxisCamera}{AxisCamera} class and will be deleted when the class is destroyed. \begin{DoxyReturn}{Returns}
+A semaphore to notify when new image is received 
+\end{DoxyReturn}
+\hypertarget{classAxisCamera_a2841ee4826be6e2780132cb886cb0fce}{
+\index{AxisCamera@{AxisCamera}!IsFreshImage@{IsFreshImage}}
+\index{IsFreshImage@{IsFreshImage}!AxisCamera@{AxisCamera}}
+\subsubsection[{IsFreshImage}]{\setlength{\rightskip}{0pt plus 5cm}bool AxisCamera::IsFreshImage (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classAxisCamera_a2841ee4826be6e2780132cb886cb0fce}
+Return true if the latest image from the camera has not been retrieved by calling \hyperlink{classAxisCamera_a471281984345a79176e4920d5e6dea8a}{GetImage()} yet. \begin{DoxyReturn}{Returns}
+true if the image has not been retrieved yet. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+Vision/AxisCamera.h\item 
+Vision/AxisCamera.cpp\end{DoxyCompactItemize}

@@ -1,0 +1,214 @@
+\hypertarget{structFRCCommonControlData}{
+\section{FRCCommonControlData Struct Reference}
+\label{structFRCCommonControlData}\index{FRCCommonControlData@{FRCCommonControlData}}
+}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{structFRCCommonControlData_af4d2e73306788da445320a5027d0b1bb}{
+UINT16 {\bfseries packetIndex}}
+\label{structFRCCommonControlData_af4d2e73306788da445320a5027d0b1bb}
+
+\item 
+\hypertarget{structFRCCommonControlData_aa4feb950f67b6a79f782df7d71e2b68f}{
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+union \{\\
+\>UINT8 {\bfseries control}\\
+\hypertarget{unionFRCCommonControlData_1_1@106_a256b5ca7c66b6532e1b3233c0b716539}{
+\>struct \{\\
+\>\>UINT8 {\bfseries reset}: 1\\
+\>\>UINT8 {\bfseries notEStop}: 1\\
+\>\>UINT8 {\bfseries enabled}: 1\\
+\>\>UINT8 {\bfseries autonomous}: 1\\
+\>\>UINT8 {\bfseries fmsAttached}:1\\
+\>\>UINT8 {\bfseries resync}: 1\\
+\>\>UINT8 {\bfseries cRIOChkSum}:1\\
+\>\>UINT8 {\bfseries fpgaChkSum}:1\\
+\>\} }
+\label{unionFRCCommonControlData_1_1@106_a256b5ca7c66b6532e1b3233c0b716539}
+\\
+\}; }
+\label{structFRCCommonControlData_aa4feb950f67b6a79f782df7d71e2b68f}
+\\
+
+\end{tabbing}\item 
+\hypertarget{structFRCCommonControlData_aa03365428941aed875ab16d5662b3235}{
+UINT8 {\bfseries dsDigitalIn}}
+\label{structFRCCommonControlData_aa03365428941aed875ab16d5662b3235}
+
+\item 
+\hypertarget{structFRCCommonControlData_a08e5b75cfd35ad2b43f672e45c5e3784}{
+UINT16 {\bfseries teamID}}
+\label{structFRCCommonControlData_a08e5b75cfd35ad2b43f672e45c5e3784}
+
+\item 
+\hypertarget{structFRCCommonControlData_a6927838563d8fa8b0d6196006b708c17}{
+char {\bfseries dsID\_\-Alliance}}
+\label{structFRCCommonControlData_a6927838563d8fa8b0d6196006b708c17}
+
+\item 
+\hypertarget{structFRCCommonControlData_a3e5a1dcb0060321f8154bf106c8f69b9}{
+char {\bfseries dsID\_\-Position}}
+\label{structFRCCommonControlData_a3e5a1dcb0060321f8154bf106c8f69b9}
+
+\item 
+\hypertarget{structFRCCommonControlData_ac2779bbf1fa90a8457054b3657f0e49f}{
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+union \{\\
+\>INT8 {\bfseries stick0Axes} \mbox{[}6\mbox{]}\\
+\hypertarget{unionFRCCommonControlData_1_1@108_ace456dc72dc2ef8ada7b153ce2d03feb}{
+\>struct \{\\
+\>\>INT8 {\bfseries stick0Axis1}\\
+\>\>INT8 {\bfseries stick0Axis2}\\
+\>\>INT8 {\bfseries stick0Axis3}\\
+\>\>INT8 {\bfseries stick0Axis4}\\
+\>\>INT8 {\bfseries stick0Axis5}\\
+\>\>INT8 {\bfseries stick0Axis6}\\
+\>\} }
+\label{unionFRCCommonControlData_1_1@108_ace456dc72dc2ef8ada7b153ce2d03feb}
+\\
+\}; }
+\label{structFRCCommonControlData_ac2779bbf1fa90a8457054b3657f0e49f}
+\\
+
+\end{tabbing}\item 
+\hypertarget{structFRCCommonControlData_a2df3136e81e88d9543accca8f0b9ce13}{
+UINT16 {\bfseries stick0Buttons}}
+\label{structFRCCommonControlData_a2df3136e81e88d9543accca8f0b9ce13}
+
+\item 
+\hypertarget{structFRCCommonControlData_a1989c90c6315100c604dfe307647092f}{
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+union \{\\
+\>INT8 {\bfseries stick1Axes} \mbox{[}6\mbox{]}\\
+\hypertarget{unionFRCCommonControlData_1_1@110_a76ad266e44785f260c51a91e9400de15}{
+\>struct \{\\
+\>\>INT8 {\bfseries stick1Axis1}\\
+\>\>INT8 {\bfseries stick1Axis2}\\
+\>\>INT8 {\bfseries stick1Axis3}\\
+\>\>INT8 {\bfseries stick1Axis4}\\
+\>\>INT8 {\bfseries stick1Axis5}\\
+\>\>INT8 {\bfseries stick1Axis6}\\
+\>\} }
+\label{unionFRCCommonControlData_1_1@110_a76ad266e44785f260c51a91e9400de15}
+\\
+\}; }
+\label{structFRCCommonControlData_a1989c90c6315100c604dfe307647092f}
+\\
+
+\end{tabbing}\item 
+\hypertarget{structFRCCommonControlData_a4f410c3ccbbdab7d5046867427834a2d}{
+UINT16 {\bfseries stick1Buttons}}
+\label{structFRCCommonControlData_a4f410c3ccbbdab7d5046867427834a2d}
+
+\item 
+\hypertarget{structFRCCommonControlData_a1cd2cb38dfb2edcd419bf6730ba8261f}{
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+union \{\\
+\>INT8 {\bfseries stick2Axes} \mbox{[}6\mbox{]}\\
+\hypertarget{unionFRCCommonControlData_1_1@112_acb172947dbf072e6af768d3e654dbe09}{
+\>struct \{\\
+\>\>INT8 {\bfseries stick2Axis1}\\
+\>\>INT8 {\bfseries stick2Axis2}\\
+\>\>INT8 {\bfseries stick2Axis3}\\
+\>\>INT8 {\bfseries stick2Axis4}\\
+\>\>INT8 {\bfseries stick2Axis5}\\
+\>\>INT8 {\bfseries stick2Axis6}\\
+\>\} }
+\label{unionFRCCommonControlData_1_1@112_acb172947dbf072e6af768d3e654dbe09}
+\\
+\}; }
+\label{structFRCCommonControlData_a1cd2cb38dfb2edcd419bf6730ba8261f}
+\\
+
+\end{tabbing}\item 
+\hypertarget{structFRCCommonControlData_addbf57e538259960063ea414537464e8}{
+UINT16 {\bfseries stick2Buttons}}
+\label{structFRCCommonControlData_addbf57e538259960063ea414537464e8}
+
+\item 
+\hypertarget{structFRCCommonControlData_a3325144076a98d8dcba746cab7096d4c}{
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+union \{\\
+\>INT8 {\bfseries stick3Axes} \mbox{[}6\mbox{]}\\
+\hypertarget{unionFRCCommonControlData_1_1@114_a4fa9c040bdf2f20835bcf038042a26b0}{
+\>struct \{\\
+\>\>INT8 {\bfseries stick3Axis1}\\
+\>\>INT8 {\bfseries stick3Axis2}\\
+\>\>INT8 {\bfseries stick3Axis3}\\
+\>\>INT8 {\bfseries stick3Axis4}\\
+\>\>INT8 {\bfseries stick3Axis5}\\
+\>\>INT8 {\bfseries stick3Axis6}\\
+\>\} }
+\label{unionFRCCommonControlData_1_1@114_a4fa9c040bdf2f20835bcf038042a26b0}
+\\
+\}; }
+\label{structFRCCommonControlData_a3325144076a98d8dcba746cab7096d4c}
+\\
+
+\end{tabbing}\item 
+\hypertarget{structFRCCommonControlData_a6011ab2bc37d4ba30ea4edfd158c1c38}{
+UINT16 {\bfseries stick3Buttons}}
+\label{structFRCCommonControlData_a6011ab2bc37d4ba30ea4edfd158c1c38}
+
+\item 
+\hypertarget{structFRCCommonControlData_af5b16ccc155a10a4d6005302b6d6919b}{
+UINT16 {\bfseries analog1}}
+\label{structFRCCommonControlData_af5b16ccc155a10a4d6005302b6d6919b}
+
+\item 
+\hypertarget{structFRCCommonControlData_a65e8322fea91ae8ab11ace9618371a65}{
+UINT16 {\bfseries analog2}}
+\label{structFRCCommonControlData_a65e8322fea91ae8ab11ace9618371a65}
+
+\item 
+\hypertarget{structFRCCommonControlData_ab88cf69de15df72720a371665014f6db}{
+UINT16 {\bfseries analog3}}
+\label{structFRCCommonControlData_ab88cf69de15df72720a371665014f6db}
+
+\item 
+\hypertarget{structFRCCommonControlData_a32a21b07de4106854729fe016cbc9039}{
+UINT16 {\bfseries analog4}}
+\label{structFRCCommonControlData_a32a21b07de4106854729fe016cbc9039}
+
+\item 
+\hypertarget{structFRCCommonControlData_a84c9a809c628aa9ed3160fa1a05dc1e8}{
+UINT64 {\bfseries cRIOChecksum}}
+\label{structFRCCommonControlData_a84c9a809c628aa9ed3160fa1a05dc1e8}
+
+\item 
+\hypertarget{structFRCCommonControlData_a41640fdb898e421cce9c6ba18c816c29}{
+UINT32 {\bfseries FPGAChecksum0}}
+\label{structFRCCommonControlData_a41640fdb898e421cce9c6ba18c816c29}
+
+\item 
+\hypertarget{structFRCCommonControlData_ab2449f7abc4ec749910907e8b4c3e8c6}{
+UINT32 {\bfseries FPGAChecksum1}}
+\label{structFRCCommonControlData_ab2449f7abc4ec749910907e8b4c3e8c6}
+
+\item 
+\hypertarget{structFRCCommonControlData_ab8a5cf208b2f8069f141f515d395a298}{
+UINT32 {\bfseries FPGAChecksum2}}
+\label{structFRCCommonControlData_ab8a5cf208b2f8069f141f515d395a298}
+
+\item 
+\hypertarget{structFRCCommonControlData_a18944259dbea36dd7393f89d84c6c0b4}{
+UINT32 {\bfseries FPGAChecksum3}}
+\label{structFRCCommonControlData_a18944259dbea36dd7393f89d84c6c0b4}
+
+\item 
+\hypertarget{structFRCCommonControlData_a30c3c66101268b0bcb51861932a8b6a9}{
+char {\bfseries versionData} \mbox{[}8\mbox{]}}
+\label{structFRCCommonControlData_a30c3c66101268b0bcb51861932a8b6a9}
+
+\end{DoxyCompactItemize}
+
+
+The documentation for this struct was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+NetworkCommunication/FRCComm.h\end{DoxyCompactItemize}

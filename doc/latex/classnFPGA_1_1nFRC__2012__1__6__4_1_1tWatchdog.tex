@@ -1,0 +1,108 @@
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tWatchdog}{
+\section{nFPGA::nFRC\_\-2012\_\-1\_\-6\_\-4::tWatchdog Class Reference}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tWatchdog}\index{nFPGA::nFRC\_\-2012\_\-1\_\-6\_\-4::tWatchdog@{nFPGA::nFRC\_\-2012\_\-1\_\-6\_\-4::tWatchdog}}
+}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+union \hyperlink{unionnFPGA_1_1nFRC__2012__1__6__4_1_1tWatchdog_1_1tStatus}{tStatus}
+\end{DoxyCompactItemize}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum {\bfseries tIfaceConstants} \{ {\bfseries kNumSystems} =  1
+ \}
+\item 
+enum {\bfseries tStatus\_\-IfaceConstants} 
+\item 
+enum {\bfseries tImmortal\_\-IfaceConstants} 
+\item 
+enum {\bfseries tKill\_\-IfaceConstants} 
+\item 
+enum {\bfseries tFeed\_\-IfaceConstants} 
+\item 
+enum {\bfseries tExpiration\_\-IfaceConstants} 
+\item 
+enum {\bfseries tTimer\_\-IfaceConstants} 
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tWatchdog_a0fe37330503ecba480e19fe7e78fe72e}{
+virtual \hyperlink{classnFPGA_1_1tSystemInterface}{tSystemInterface} $\ast$ {\bfseries getSystemInterface} ()=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tWatchdog_a0fe37330503ecba480e19fe7e78fe72e}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tWatchdog_aba2ad1b443fc70c030e6d2fa2d89327f}{
+virtual \hyperlink{unionnFPGA_1_1nFRC__2012__1__6__4_1_1tWatchdog_1_1tStatus}{tStatus} {\bfseries readStatus} (tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tWatchdog_aba2ad1b443fc70c030e6d2fa2d89327f}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tWatchdog_a6fe9bd98661a73fc8b67f10fae9da962}{
+virtual bool {\bfseries readStatus\_\-SystemActive} (tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tWatchdog_a6fe9bd98661a73fc8b67f10fae9da962}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tWatchdog_a6914fa58f1dd8206c21426c8f64acb54}{
+virtual bool {\bfseries readStatus\_\-Alive} (tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tWatchdog_a6914fa58f1dd8206c21426c8f64acb54}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tWatchdog_a570ac2db7095b0a7822b4d56efb71b1f}{
+virtual unsigned short {\bfseries readStatus\_\-SysDisableCount} (tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tWatchdog_a570ac2db7095b0a7822b4d56efb71b1f}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tWatchdog_ad100b0a247a57933a94b51fc0ff058ca}{
+virtual unsigned short {\bfseries readStatus\_\-DisableCount} (tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tWatchdog_ad100b0a247a57933a94b51fc0ff058ca}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tWatchdog_ad15b1a8c3425a58c1a013dc62d05b31c}{
+virtual void {\bfseries writeImmortal} (bool value, tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tWatchdog_ad15b1a8c3425a58c1a013dc62d05b31c}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tWatchdog_a539f6b415d5c16cc2d07d67ee18cf022}{
+virtual bool {\bfseries readImmortal} (tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tWatchdog_a539f6b415d5c16cc2d07d67ee18cf022}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tWatchdog_ae96a16f93953ca7f12c24b0ff6fa3549}{
+virtual void {\bfseries strobeKill} (tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tWatchdog_ae96a16f93953ca7f12c24b0ff6fa3549}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tWatchdog_ac86abe1374ba2d685c282a479a095330}{
+virtual void {\bfseries strobeFeed} (tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tWatchdog_ac86abe1374ba2d685c282a479a095330}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tWatchdog_ac64c86f4bfe7da1299a6d5c63dd2dc7e}{
+virtual void {\bfseries writeExpiration} (unsigned int value, tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tWatchdog_ac64c86f4bfe7da1299a6d5c63dd2dc7e}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tWatchdog_a7b0bc2c3c9c3240fb2c2007bade985a6}{
+virtual unsigned int {\bfseries readExpiration} (tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tWatchdog_a7b0bc2c3c9c3240fb2c2007bade985a6}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tWatchdog_a065c99c6e837f382bac05436dcbcb8fd}{
+virtual unsigned int {\bfseries readTimer} (tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tWatchdog_a065c99c6e837f382bac05436dcbcb8fd}
+
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tWatchdog_a465d396203bb206c268f81a9f6f5204b}{
+static \hyperlink{classnFPGA_1_1nFRC__2012__1__6__4_1_1tWatchdog}{tWatchdog} $\ast$ {\bfseries create} (tRioStatusCode $\ast$status)}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tWatchdog_a465d396203bb206c268f81a9f6f5204b}
+
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+ChipObject/tWatchdog.h\end{DoxyCompactItemize}

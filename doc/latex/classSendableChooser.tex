@@ -1,0 +1,89 @@
+\hypertarget{classSendableChooser}{
+\section{SendableChooser Class Reference}
+\label{classSendableChooser}\index{SendableChooser@{SendableChooser}}
+}
+
+
+{\ttfamily \#include $<$SendableChooser.h$>$}
+
+Inheritance diagram for SendableChooser:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classSendableChooser}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classSendableChooser_aacaffd7663116d16ef33f2d0d0964c9f}{AddObject} (const char $\ast$name, void $\ast$object)
+\item 
+void \hyperlink{classSendableChooser_a89291124e5927cba8a208ddfde09cbb8}{AddDefault} (const char $\ast$name, void $\ast$object)
+\item 
+\hypertarget{classSendableChooser_affd859e1b97db54c04b754ec1451c0a9}{
+void $\ast$ {\bfseries GetSelected} ()}
+\label{classSendableChooser_affd859e1b97db54c04b754ec1451c0a9}
+
+\item 
+\hypertarget{classSendableChooser_a563e695a4998286504217e62fac117a5}{
+virtual std::string {\bfseries GetType} ()}
+\label{classSendableChooser_a563e695a4998286504217e62fac117a5}
+
+\item 
+\hypertarget{classSendableChooser_abd52a5e189602371ae369406cf6e3035}{
+virtual \hyperlink{classNetworkTable}{NetworkTable} $\ast$ {\bfseries GetTable} ()}
+\label{classSendableChooser_abd52a5e189602371ae369406cf6e3035}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The \hyperlink{classSendableChooser}{SendableChooser} class is a useful tool for presenting a selection of options to the \hyperlink{classSmartDashboard}{SmartDashboard}.
+
+For instance, you may wish to be able to select between multiple autonomous modes. You can do this by putting every possible \hyperlink{classCommand}{Command} you want to run as an autonomous into a \hyperlink{classSendableChooser}{SendableChooser} and then put it into the \hyperlink{classSmartDashboard}{SmartDashboard} to have a list of options appear on the laptop. Once autonomous starts, simply ask the \hyperlink{classSendableChooser}{SendableChooser} what the selected value is.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classSmartDashboard}{SmartDashboard} 
+\end{DoxySeeAlso}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classSendableChooser_a89291124e5927cba8a208ddfde09cbb8}{
+\index{SendableChooser@{SendableChooser}!AddDefault@{AddDefault}}
+\index{AddDefault@{AddDefault}!SendableChooser@{SendableChooser}}
+\subsubsection[{AddDefault}]{\setlength{\rightskip}{0pt plus 5cm}void SendableChooser::AddDefault (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{name, }
+\item[{void $\ast$}]{object}
+\end{DoxyParamCaption}
+)}}
+\label{classSendableChooser_a89291124e5927cba8a208ddfde09cbb8}
+Add the given object to the list of options and marks it as the default. Functionally, this is very close to \hyperlink{classSendableChooser_aacaffd7663116d16ef33f2d0d0964c9f}{AddObject(...)} except that it will use this as the default option if none other is explicitly selected. 
+\begin{DoxyParams}{Parameters}
+{\em name} & the name of the option \\
+\hline
+{\em object} & the option \\
+\hline
+\end{DoxyParams}
+\hypertarget{classSendableChooser_aacaffd7663116d16ef33f2d0d0964c9f}{
+\index{SendableChooser@{SendableChooser}!AddObject@{AddObject}}
+\index{AddObject@{AddObject}!SendableChooser@{SendableChooser}}
+\subsubsection[{AddObject}]{\setlength{\rightskip}{0pt plus 5cm}void SendableChooser::AddObject (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{name, }
+\item[{void $\ast$}]{object}
+\end{DoxyParamCaption}
+)}}
+\label{classSendableChooser_aacaffd7663116d16ef33f2d0d0964c9f}
+Adds the given object to the list of options. On the \hyperlink{classSmartDashboard}{SmartDashboard} on the desktop, the object will appear as the given name. 
+\begin{DoxyParams}{Parameters}
+{\em name} & the name of the option \\
+\hline
+{\em object} & the option \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+SmartDashboard/SendableChooser.h\item 
+SmartDashboard/SendableChooser.cpp\end{DoxyCompactItemize}

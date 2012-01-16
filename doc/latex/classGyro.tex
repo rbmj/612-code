@@ -9,7 +9,7 @@
 Inheritance diagram for Gyro:\begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[height=3.000000cm]{classGyro}
+\includegraphics[height=4.000000cm]{classGyro}
 \end{center}
 \end{figure}
 \subsection*{Public Member Functions}
@@ -149,6 +149,10 @@ The angle is based on the current accumulator value corrected by the oversamplin
 \begin{DoxyReturn}{Returns}
 the current heading of the robot in degrees. This heading is based on integration of the returned rate from the gyro. 
 \end{DoxyReturn}
+
+
+Reimplemented in \hyperlink{classSendableGyro_a1e192b880ff0590e431ca933b6ca0dc9}{SendableGyro}.
+
 \hypertarget{classGyro_aca619c0201c5fb85e2bbaeef0f39e8e6}{
 \index{Gyro@{Gyro}!PIDGet@{PIDGet}}
 \index{PIDGet@{PIDGet}!Gyro@{Gyro}}
@@ -176,7 +180,11 @@ Implements \hyperlink{classPIDSource}{PIDSource}.
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
 \label{classGyro_ae13fc1c339cb0267740b86c0585ceac7}
-Reset the gyro. Resets the gyro to a heading of zero. This can be used if there is significant drift in the gyro and it needs to be recalibrated after it has been running. \hypertarget{classGyro_aaf5c11137c5428c427b2a2162cd43f09}{
+Reset the gyro. Resets the gyro to a heading of zero. This can be used if there is significant drift in the gyro and it needs to be recalibrated after it has been running. 
+
+Reimplemented in \hyperlink{classSendableGyro_acd4b377b5b5d71613f2209715ab29093}{SendableGyro}.
+
+\hypertarget{classGyro_aaf5c11137c5428c427b2a2162cd43f09}{
 \index{Gyro@{Gyro}!SetSensitivity@{SetSensitivity}}
 \index{SetSensitivity@{SetSensitivity}!Gyro@{Gyro}}
 \subsubsection[{SetSensitivity}]{\setlength{\rightskip}{0pt plus 5cm}void Gyro::SetSensitivity (

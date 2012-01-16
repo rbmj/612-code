@@ -1,0 +1,124 @@
+\hypertarget{classImageBase}{
+\section{ImageBase Class Reference}
+\label{classImageBase}\index{ImageBase@{ImageBase}}
+}
+Inheritance diagram for ImageBase:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{classImageBase}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classImageBase_ae7b60d1f993176af583793777fc5e77c}{ImageBase} (ImageType type)
+\item 
+virtual \hyperlink{classImageBase_ab0ff98f0be1117315fd3a347baef849f}{$\sim$ImageBase} ()
+\item 
+virtual void \hyperlink{classImageBase_a46b36b2c97e4f8c3646d15f83be6b269}{Write} (const char $\ast$fileName)
+\item 
+int \hyperlink{classImageBase_a9e7e9ccf53a83a7ffe4058871a7f1780}{GetHeight} ()
+\item 
+int \hyperlink{classImageBase_ab064981a8450f1241630b205e8586b60}{GetWidth} ()
+\item 
+Image $\ast$ \hyperlink{classImageBase_a938fe24b9e96b1cb95e3d93f9ac9f492}{GetImaqImage} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classImageBase_acd73b184af200acbccc7dddd6ff985f1}{
+Image $\ast$ {\bfseries m\_\-imaqImage}}
+\label{classImageBase_acd73b184af200acbccc7dddd6ff985f1}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classImageBase_ae7b60d1f993176af583793777fc5e77c}{
+\index{ImageBase@{ImageBase}!ImageBase@{ImageBase}}
+\index{ImageBase@{ImageBase}!ImageBase@{ImageBase}}
+\subsubsection[{ImageBase}]{\setlength{\rightskip}{0pt plus 5cm}ImageBase::ImageBase (
+\begin{DoxyParamCaption}
+\item[{ImageType}]{type}
+\end{DoxyParamCaption}
+)}}
+\label{classImageBase_ae7b60d1f993176af583793777fc5e77c}
+Create a new instance of an \hyperlink{classImageBase}{ImageBase}. Imagebase is the base of all the other image classes. The constructor creates any type of image and stores the pointer to it in the class. 
+\begin{DoxyParams}{Parameters}
+{\em type} & The type of image to create \\
+\hline
+\end{DoxyParams}
+\hypertarget{classImageBase_ab0ff98f0be1117315fd3a347baef849f}{
+\index{ImageBase@{ImageBase}!$\sim$ImageBase@{$\sim$ImageBase}}
+\index{$\sim$ImageBase@{$\sim$ImageBase}!ImageBase@{ImageBase}}
+\subsubsection[{$\sim$ImageBase}]{\setlength{\rightskip}{0pt plus 5cm}ImageBase::$\sim$ImageBase (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classImageBase_ab0ff98f0be1117315fd3a347baef849f}
+Frees memory associated with an \hyperlink{classImageBase}{ImageBase}. Destructor frees the imaq image allocated with the class. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classImageBase_a9e7e9ccf53a83a7ffe4058871a7f1780}{
+\index{ImageBase@{ImageBase}!GetHeight@{GetHeight}}
+\index{GetHeight@{GetHeight}!ImageBase@{ImageBase}}
+\subsubsection[{GetHeight}]{\setlength{\rightskip}{0pt plus 5cm}int ImageBase::GetHeight (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classImageBase_a9e7e9ccf53a83a7ffe4058871a7f1780}
+Gets the height of an image. \begin{DoxyReturn}{Returns}
+The height of the image in pixels. 
+\end{DoxyReturn}
+\hypertarget{classImageBase_a938fe24b9e96b1cb95e3d93f9ac9f492}{
+\index{ImageBase@{ImageBase}!GetImaqImage@{GetImaqImage}}
+\index{GetImaqImage@{GetImaqImage}!ImageBase@{ImageBase}}
+\subsubsection[{GetImaqImage}]{\setlength{\rightskip}{0pt plus 5cm}Image $\ast$ ImageBase::GetImaqImage (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classImageBase_a938fe24b9e96b1cb95e3d93f9ac9f492}
+Access the internal IMAQ Image data structure.
+
+\begin{DoxyReturn}{Returns}
+A pointer to the internal IMAQ Image data structure. 
+\end{DoxyReturn}
+\hypertarget{classImageBase_ab064981a8450f1241630b205e8586b60}{
+\index{ImageBase@{ImageBase}!GetWidth@{GetWidth}}
+\index{GetWidth@{GetWidth}!ImageBase@{ImageBase}}
+\subsubsection[{GetWidth}]{\setlength{\rightskip}{0pt plus 5cm}int ImageBase::GetWidth (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classImageBase_ab064981a8450f1241630b205e8586b60}
+Gets the width of an image. \begin{DoxyReturn}{Returns}
+The width of the image in pixels. 
+\end{DoxyReturn}
+\hypertarget{classImageBase_a46b36b2c97e4f8c3646d15f83be6b269}{
+\index{ImageBase@{ImageBase}!Write@{Write}}
+\index{Write@{Write}!ImageBase@{ImageBase}}
+\subsubsection[{Write}]{\setlength{\rightskip}{0pt plus 5cm}void ImageBase::Write (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{fileName}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classImageBase_a46b36b2c97e4f8c3646d15f83be6b269}
+Writes an image to a file with the given filename. Write the image to a file in the flash on the cRIO. 
+\begin{DoxyParams}{Parameters}
+{\em fileName} & The name of the file to write \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \hyperlink{classBinaryImage_a90af62ef3e71b4b2b487ebad7410042f}{BinaryImage}.
+
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+Vision/ImageBase.h\item 
+Vision/ImageBase.cpp\end{DoxyCompactItemize}

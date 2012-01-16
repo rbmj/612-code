@@ -6,6 +6,12 @@
 
 {\ttfamily \#include $<$PIDController.h$>$}
 
+Inheritance diagram for PIDController:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classPIDController}
+\end{center}
+\end{figure}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -111,7 +117,11 @@ Free the PID object
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
 \label{classPIDController_ad13d5e8f8b465a00ad2c21a14cb832c4}
-Stop running the \hyperlink{classPIDController}{PIDController}, this sets the output to zero before stopping. \hypertarget{classPIDController_a1b272c08b669b2a86f47958aa839b656}{
+Stop running the \hyperlink{classPIDController}{PIDController}, this sets the output to zero before stopping. 
+
+Reimplemented in \hyperlink{classSendablePIDController_a82a46d297b6199c4aa98957c48ec75f0}{SendablePIDController}.
+
+\hypertarget{classPIDController_a1b272c08b669b2a86f47958aa839b656}{
 \index{PIDController@{PIDController}!Enable@{Enable}}
 \index{Enable@{Enable}!PIDController@{PIDController}}
 \subsubsection[{Enable}]{\setlength{\rightskip}{0pt plus 5cm}void PIDController::Enable (
@@ -120,7 +130,11 @@ Stop running the \hyperlink{classPIDController}{PIDController}, this sets the ou
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
 \label{classPIDController_a1b272c08b669b2a86f47958aa839b656}
-Begin running the \hyperlink{classPIDController}{PIDController} \hypertarget{classPIDController_a5d096c87981f6612fe0cf496cea9772a}{
+Begin running the \hyperlink{classPIDController}{PIDController} 
+
+Reimplemented in \hyperlink{classSendablePIDController_a08782e10dfdb2941016c1a55afeca8b2}{SendablePIDController}.
+
+\hypertarget{classPIDController_a5d096c87981f6612fe0cf496cea9772a}{
 \index{PIDController@{PIDController}!Get@{Get}}
 \index{Get@{Get}!PIDController@{PIDController}}
 \subsubsection[{Get}]{\setlength{\rightskip}{0pt plus 5cm}float PIDController::Get (
@@ -296,6 +310,10 @@ Set the setpoint for the \hyperlink{classPIDController}{PIDController}
 {\em setpoint} & the desired setpoint \\
 \hline
 \end{DoxyParams}
+
+
+Reimplemented in \hyperlink{classSendablePIDController_a1698ad2f4e608211458d7eb17d9c29bc}{SendablePIDController}.
+
 
 
 The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}

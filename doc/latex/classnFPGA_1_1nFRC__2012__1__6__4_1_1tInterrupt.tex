@@ -1,0 +1,120 @@
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tInterrupt}{
+\section{nFPGA::nFRC\_\-2012\_\-1\_\-6\_\-4::tInterrupt Class Reference}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tInterrupt}\index{nFPGA::nFRC\_\-2012\_\-1\_\-6\_\-4::tInterrupt@{nFPGA::nFRC\_\-2012\_\-1\_\-6\_\-4::tInterrupt}}
+}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+union \hyperlink{unionnFPGA_1_1nFRC__2012__1__6__4_1_1tInterrupt_1_1tConfig}{tConfig}
+\end{DoxyCompactItemize}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum {\bfseries tIfaceConstants} \{ {\bfseries kNumSystems} =  8
+ \}
+\item 
+enum {\bfseries tTimeStamp\_\-IfaceConstants} 
+\item 
+enum {\bfseries tConfig\_\-IfaceConstants} 
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tInterrupt_ab0677b164021bd1b7e6ce4b491f88a0c}{
+virtual \hyperlink{classnFPGA_1_1tSystemInterface}{tSystemInterface} $\ast$ {\bfseries getSystemInterface} ()=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tInterrupt_ab0677b164021bd1b7e6ce4b491f88a0c}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tInterrupt_ae74969da09f72f2d4c30b662534596c0}{
+virtual unsigned char {\bfseries getSystemIndex} ()=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tInterrupt_ae74969da09f72f2d4c30b662534596c0}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tInterrupt_a92919c9ff488aa681a5ccea284222b05}{
+virtual unsigned int {\bfseries readTimeStamp} (tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tInterrupt_a92919c9ff488aa681a5ccea284222b05}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tInterrupt_aac3e23a2b12736aa66208fcc709287d8}{
+virtual void {\bfseries writeConfig} (\hyperlink{unionnFPGA_1_1nFRC__2012__1__6__4_1_1tInterrupt_1_1tConfig}{tConfig} value, tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tInterrupt_aac3e23a2b12736aa66208fcc709287d8}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tInterrupt_ac5c44eabac08cd6f5c2c16ffd8ffee2f}{
+virtual void {\bfseries writeConfig\_\-Source\_\-Channel} (unsigned char value, tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tInterrupt_ac5c44eabac08cd6f5c2c16ffd8ffee2f}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tInterrupt_a375ac198acf274e223a221a008aa67b8}{
+virtual void {\bfseries writeConfig\_\-Source\_\-Module} (unsigned char value, tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tInterrupt_a375ac198acf274e223a221a008aa67b8}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tInterrupt_a9501ff0733815e075fbc03a2807a1cbe}{
+virtual void {\bfseries writeConfig\_\-Source\_\-AnalogTrigger} (bool value, tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tInterrupt_a9501ff0733815e075fbc03a2807a1cbe}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tInterrupt_aef3a2b19251f7c46f32e2e4eb31c9787}{
+virtual void {\bfseries writeConfig\_\-RisingEdge} (bool value, tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tInterrupt_aef3a2b19251f7c46f32e2e4eb31c9787}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tInterrupt_a7edc214820cc2dcdb4797ca3b7406041}{
+virtual void {\bfseries writeConfig\_\-FallingEdge} (bool value, tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tInterrupt_a7edc214820cc2dcdb4797ca3b7406041}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tInterrupt_aeb90a300359697fbd41a15a098867219}{
+virtual void {\bfseries writeConfig\_\-WaitForAck} (bool value, tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tInterrupt_aeb90a300359697fbd41a15a098867219}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tInterrupt_afa6f12cce24068fd854ae536b6fdf292}{
+virtual \hyperlink{unionnFPGA_1_1nFRC__2012__1__6__4_1_1tInterrupt_1_1tConfig}{tConfig} {\bfseries readConfig} (tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tInterrupt_afa6f12cce24068fd854ae536b6fdf292}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tInterrupt_a80d66c555b620a14ece18d6f569c544a}{
+virtual unsigned char {\bfseries readConfig\_\-Source\_\-Channel} (tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tInterrupt_a80d66c555b620a14ece18d6f569c544a}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tInterrupt_a070d4eb3c8b3dcde8690a59f9c470efe}{
+virtual unsigned char {\bfseries readConfig\_\-Source\_\-Module} (tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tInterrupt_a070d4eb3c8b3dcde8690a59f9c470efe}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tInterrupt_adf63e24028897755b35c419c0f19b227}{
+virtual bool {\bfseries readConfig\_\-Source\_\-AnalogTrigger} (tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tInterrupt_adf63e24028897755b35c419c0f19b227}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tInterrupt_a57dce5d084b9355fdc165af51b6fe3b4}{
+virtual bool {\bfseries readConfig\_\-RisingEdge} (tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tInterrupt_a57dce5d084b9355fdc165af51b6fe3b4}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tInterrupt_a3dc0870832a706655d2d037e7c81ce08}{
+virtual bool {\bfseries readConfig\_\-FallingEdge} (tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tInterrupt_a3dc0870832a706655d2d037e7c81ce08}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tInterrupt_a75d691ef050c533c0caaf1909fea2cc1}{
+virtual bool {\bfseries readConfig\_\-WaitForAck} (tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tInterrupt_a75d691ef050c533c0caaf1909fea2cc1}
+
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tInterrupt_adc59e88de67f82b51aa6d8fe9d0f62c8}{
+static \hyperlink{classnFPGA_1_1nFRC__2012__1__6__4_1_1tInterrupt}{tInterrupt} $\ast$ {\bfseries create} (unsigned char sys\_\-index, tRioStatusCode $\ast$status)}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tInterrupt_adc59e88de67f82b51aa6d8fe9d0f62c8}
+
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+ChipObject/tInterrupt.h\end{DoxyCompactItemize}

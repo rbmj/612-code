@@ -1,0 +1,491 @@
+\hypertarget{classAxisCameraParams}{
+\section{AxisCameraParams Class Reference}
+\label{classAxisCameraParams}\index{AxisCameraParams@{AxisCameraParams}}
+}
+
+
+{\ttfamily \#include $<$AxisCameraParams.h$>$}
+
+Inheritance diagram for AxisCameraParams:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classAxisCameraParams}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum {\bfseries Exposure\_\-t} \{ {\bfseries kExposure\_\-Automatic}, 
+{\bfseries kExposure\_\-Hold}, 
+{\bfseries kExposure\_\-FlickerFree50Hz}, 
+{\bfseries kExposure\_\-FlickerFree60Hz}
+ \}
+\item 
+enum {\bfseries WhiteBalance\_\-t} \{ \par
+{\bfseries kWhiteBalance\_\-Automatic}, 
+{\bfseries kWhiteBalance\_\-Hold}, 
+{\bfseries kWhiteBalance\_\-FixedOutdoor1}, 
+{\bfseries kWhiteBalance\_\-FixedOutdoor2}, 
+\par
+{\bfseries kWhiteBalance\_\-FixedIndoor}, 
+{\bfseries kWhiteBalance\_\-FixedFlourescent1}, 
+{\bfseries kWhiteBalance\_\-FixedFlourescent2}
+ \}
+\item 
+enum {\bfseries Resolution\_\-t} \{ {\bfseries kResolution\_\-640x480}, 
+{\bfseries kResolution\_\-640x360}, 
+{\bfseries kResolution\_\-320x240}, 
+{\bfseries kResolution\_\-160x120}
+ \}
+\item 
+enum {\bfseries Rotation\_\-t} \{ {\bfseries kRotation\_\-0}, 
+{\bfseries kRotation\_\-180}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classAxisCameraParams_a7fd3c5fc07e8f0e6dd323cf964409b35}{WriteBrightness} (int)
+\item 
+int \hyperlink{classAxisCameraParams_a1ed50b120204eea065a0b826583ada36}{GetBrightness} ()
+\item 
+void \hyperlink{classAxisCameraParams_a3d167599fd9deb2be3db6b6710eeb966}{WriteWhiteBalance} (WhiteBalance\_\-t whiteBalance)
+\item 
+WhiteBalance\_\-t \hyperlink{classAxisCameraParams_a8882b5443c334290f9ab8e623c9a3808}{GetWhiteBalance} ()
+\item 
+void \hyperlink{classAxisCameraParams_a7e30277c5bbae801f4c2f7a878812e23}{WriteColorLevel} (int)
+\item 
+int \hyperlink{classAxisCameraParams_a9b39e22cc32acca291c4a30261d8a757}{GetColorLevel} ()
+\item 
+void \hyperlink{classAxisCameraParams_ae926afa551f52066170d60d60b9ca2ad}{WriteExposureControl} (Exposure\_\-t)
+\item 
+Exposure\_\-t \hyperlink{classAxisCameraParams_a4c1c2dbac6e7c2584b1f2383fed2aa8a}{GetExposureControl} ()
+\item 
+void \hyperlink{classAxisCameraParams_ac8910a14a43f6e175abb1ee481e2c512}{WriteExposurePriority} (int)
+\item 
+\hypertarget{classAxisCameraParams_a4357e2b510c111b310f3ed3dba8c32b5}{
+int {\bfseries GetExposurePriority} ()}
+\label{classAxisCameraParams_a4357e2b510c111b310f3ed3dba8c32b5}
+
+\item 
+void \hyperlink{classAxisCameraParams_a47f7e3af5902af073b294602b81105d5}{WriteMaxFPS} (int)
+\item 
+int \hyperlink{classAxisCameraParams_aa20be419668fcadc2358c452700242df}{GetMaxFPS} ()
+\item 
+void \hyperlink{classAxisCameraParams_a4c51df266cdd5e23b8098b995aea64a8}{WriteResolution} (Resolution\_\-t)
+\item 
+Resolution\_\-t \hyperlink{classAxisCameraParams_a3c5895df6d60c62c44dfbbe8dd6ebfe6}{GetResolution} ()
+\item 
+void \hyperlink{classAxisCameraParams_a6b834280394c194f2890745348912792}{WriteCompression} (int)
+\item 
+int \hyperlink{classAxisCameraParams_ae751dec06a4ebebc2777b0210791283d}{GetCompression} ()
+\item 
+void \hyperlink{classAxisCameraParams_aa6e7b6f0d86231add3588977eed08109}{WriteRotation} (Rotation\_\-t)
+\item 
+Rotation\_\-t \hyperlink{classAxisCameraParams_a6ede159b8dc37561bc47b6631fd99037}{GetRotation} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Types}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classAxisCameraParams_afe977853ce1a00394682deccc5724b79}{
+typedef std::vector$<$ \hyperlink{classIntCameraParameter}{IntCameraParameter} $\ast$ $>$ {\bfseries ParameterVector\_\-t}}
+\label{classAxisCameraParams_afe977853ce1a00394682deccc5724b79}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classAxisCameraParams_a3a2ad3b9311c62ed4e0dea45d38e8491}{AxisCameraParams} (const char $\ast$ipAddress)
+\item 
+virtual \hyperlink{classAxisCameraParams_ac22b45836e3850b9487b5948c133ca3f}{$\sim$AxisCameraParams} ()
+\item 
+\hypertarget{classAxisCameraParams_a9eca0d513a80dad5b773b50ed28fc00f}{
+virtual void {\bfseries RestartCameraTask} ()=0}
+\label{classAxisCameraParams_a9eca0d513a80dad5b773b50ed28fc00f}
+
+\item 
+\hypertarget{classAxisCameraParams_a80975cc9e014ba7c4d10c1b0e90095d9}{
+int {\bfseries CreateCameraSocket} (const char $\ast$requestString)}
+\label{classAxisCameraParams_a80975cc9e014ba7c4d10c1b0e90095d9}
+
+\item 
+int \hyperlink{classAxisCameraParams_a722d8d9c928800ed855d36e93675e455}{ParamTaskFunction} ()
+\item 
+int \hyperlink{classAxisCameraParams_a9fd81064b29af41bd912ba53c3811f65}{UpdateCamParam} (const char $\ast$param)
+\item 
+int \hyperlink{classAxisCameraParams_abad7df9daf125123d55d4fee4ae55d49}{ReadCamParams} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static int \hyperlink{classAxisCameraParams_abae30b97480c964c5862572837dad21a}{s\_\-ParamTaskFunction} (\hyperlink{classAxisCameraParams}{AxisCameraParams} $\ast$thisPtr)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classAxisCameraParams_a1602f53258b24bf7d52d8c020e969ea6}{
+\hyperlink{classTask}{Task} {\bfseries m\_\-paramTask}}
+\label{classAxisCameraParams_a1602f53258b24bf7d52d8c020e969ea6}
+
+\item 
+\hypertarget{classAxisCameraParams_a13ab99635565e3a983d874dd613179b5}{
+UINT32 {\bfseries m\_\-ipAddress}}
+\label{classAxisCameraParams_a13ab99635565e3a983d874dd613179b5}
+
+\item 
+\hypertarget{classAxisCameraParams_a2d4865d824f0b862f8dedb0b656d5a2f}{
+SEM\_\-ID {\bfseries m\_\-paramChangedSem}}
+\label{classAxisCameraParams_a2d4865d824f0b862f8dedb0b656d5a2f}
+
+\item 
+\hypertarget{classAxisCameraParams_ad702e34a959e3fc73d489b7d76c15479}{
+SEM\_\-ID {\bfseries m\_\-socketPossessionSem}}
+\label{classAxisCameraParams_ad702e34a959e3fc73d489b7d76c15479}
+
+\item 
+\hypertarget{classAxisCameraParams_a10c8e47483d4243ccadb7600608a6ee9}{
+\hyperlink{classIntCameraParameter}{IntCameraParameter} $\ast$ {\bfseries m\_\-brightnessParam}}
+\label{classAxisCameraParams_a10c8e47483d4243ccadb7600608a6ee9}
+
+\item 
+\hypertarget{classAxisCameraParams_a4b7d3810a215d68f66c65c64d35e1e0d}{
+\hyperlink{classIntCameraParameter}{IntCameraParameter} $\ast$ {\bfseries m\_\-compressionParam}}
+\label{classAxisCameraParams_a4b7d3810a215d68f66c65c64d35e1e0d}
+
+\item 
+\hypertarget{classAxisCameraParams_a85006a629bed719321252b800e1748fd}{
+\hyperlink{classIntCameraParameter}{IntCameraParameter} $\ast$ {\bfseries m\_\-exposurePriorityParam}}
+\label{classAxisCameraParams_a85006a629bed719321252b800e1748fd}
+
+\item 
+\hypertarget{classAxisCameraParams_ae7a40a153ca161aa95193105cdaebc57}{
+\hyperlink{classIntCameraParameter}{IntCameraParameter} $\ast$ {\bfseries m\_\-colorLevelParam}}
+\label{classAxisCameraParams_ae7a40a153ca161aa95193105cdaebc57}
+
+\item 
+\hypertarget{classAxisCameraParams_af008f92f88afb5dfad929d373a303ee1}{
+\hyperlink{classIntCameraParameter}{IntCameraParameter} $\ast$ {\bfseries m\_\-maxFPSParam}}
+\label{classAxisCameraParams_af008f92f88afb5dfad929d373a303ee1}
+
+\item 
+\hypertarget{classAxisCameraParams_a9960bf68e4e87de1c32469331afad393}{
+\hyperlink{classEnumCameraParameter}{EnumCameraParameter} $\ast$ {\bfseries m\_\-rotationParam}}
+\label{classAxisCameraParams_a9960bf68e4e87de1c32469331afad393}
+
+\item 
+\hypertarget{classAxisCameraParams_a165e64fcc5194e04cd632d1a39403d1b}{
+\hyperlink{classEnumCameraParameter}{EnumCameraParameter} $\ast$ {\bfseries m\_\-resolutionParam}}
+\label{classAxisCameraParams_a165e64fcc5194e04cd632d1a39403d1b}
+
+\item 
+\hypertarget{classAxisCameraParams_afa3b2d103987aff5c6e897ca7dc1dd96}{
+\hyperlink{classEnumCameraParameter}{EnumCameraParameter} $\ast$ {\bfseries m\_\-exposureControlParam}}
+\label{classAxisCameraParams_afa3b2d103987aff5c6e897ca7dc1dd96}
+
+\item 
+\hypertarget{classAxisCameraParams_a81de1ce026ef6f19f1cf55473f569e47}{
+\hyperlink{classEnumCameraParameter}{EnumCameraParameter} $\ast$ {\bfseries m\_\-whiteBalanceParam}}
+\label{classAxisCameraParams_a81de1ce026ef6f19f1cf55473f569e47}
+
+\item 
+\hypertarget{classAxisCameraParams_af7251b0b481fd7305d5e7a2fc63e94bc}{
+ParameterVector\_\-t {\bfseries m\_\-parameters}}
+\label{classAxisCameraParams_af7251b0b481fd7305d5e7a2fc63e94bc}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{classAxisCameraParams}{AxisCameraParams} class. This class handles parameter configuration the Axis 206 Ethernet Camera. It starts up a tasks with an independent connection to the camera that monitors for changes to parameters and updates the camera. It is only separate from \hyperlink{classAxisCamera}{AxisCamera} to isolate the parameter code from the image streaming code. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classAxisCameraParams_a3a2ad3b9311c62ed4e0dea45d38e8491}{
+\index{AxisCameraParams@{AxisCameraParams}!AxisCameraParams@{AxisCameraParams}}
+\index{AxisCameraParams@{AxisCameraParams}!AxisCameraParams@{AxisCameraParams}}
+\subsubsection[{AxisCameraParams}]{\setlength{\rightskip}{0pt plus 5cm}AxisCameraParams::AxisCameraParams (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{ipAddress}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classAxisCameraParams_a3a2ad3b9311c62ed4e0dea45d38e8491}
+\hyperlink{classAxisCamera}{AxisCamera} constructor \hypertarget{classAxisCameraParams_ac22b45836e3850b9487b5948c133ca3f}{
+\index{AxisCameraParams@{AxisCameraParams}!$\sim$AxisCameraParams@{$\sim$AxisCameraParams}}
+\index{$\sim$AxisCameraParams@{$\sim$AxisCameraParams}!AxisCameraParams@{AxisCameraParams}}
+\subsubsection[{$\sim$AxisCameraParams}]{\setlength{\rightskip}{0pt plus 5cm}AxisCameraParams::$\sim$AxisCameraParams (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}protected, virtual\mbox{]}}}}
+\label{classAxisCameraParams_ac22b45836e3850b9487b5948c133ca3f}
+Destructor 
+
+\subsection{Member Function Documentation}
+\hypertarget{classAxisCameraParams_a1ed50b120204eea065a0b826583ada36}{
+\index{AxisCameraParams@{AxisCameraParams}!GetBrightness@{GetBrightness}}
+\index{GetBrightness@{GetBrightness}!AxisCameraParams@{AxisCameraParams}}
+\subsubsection[{GetBrightness}]{\setlength{\rightskip}{0pt plus 5cm}int AxisCameraParams::GetBrightness (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classAxisCameraParams_a1ed50b120204eea065a0b826583ada36}
+Get the brightness value. \begin{DoxyReturn}{Returns}
+Brightness value from the camera. 
+\end{DoxyReturn}
+\hypertarget{classAxisCameraParams_a9b39e22cc32acca291c4a30261d8a757}{
+\index{AxisCameraParams@{AxisCameraParams}!GetColorLevel@{GetColorLevel}}
+\index{GetColorLevel@{GetColorLevel}!AxisCameraParams@{AxisCameraParams}}
+\subsubsection[{GetColorLevel}]{\setlength{\rightskip}{0pt plus 5cm}int AxisCameraParams::GetColorLevel (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classAxisCameraParams_a9b39e22cc32acca291c4a30261d8a757}
+Retrieve the color level from the camera.  the camera color level. \hypertarget{classAxisCameraParams_ae751dec06a4ebebc2777b0210791283d}{
+\index{AxisCameraParams@{AxisCameraParams}!GetCompression@{GetCompression}}
+\index{GetCompression@{GetCompression}!AxisCameraParams@{AxisCameraParams}}
+\subsubsection[{GetCompression}]{\setlength{\rightskip}{0pt plus 5cm}int AxisCameraParams::GetCompression (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classAxisCameraParams_ae751dec06a4ebebc2777b0210791283d}
+Get the compression value from the camera. \begin{DoxyReturn}{Returns}
+The cached compression value from the camera. 
+\end{DoxyReturn}
+\hypertarget{classAxisCameraParams_a4c1c2dbac6e7c2584b1f2383fed2aa8a}{
+\index{AxisCameraParams@{AxisCameraParams}!GetExposureControl@{GetExposureControl}}
+\index{GetExposureControl@{GetExposureControl}!AxisCameraParams@{AxisCameraParams}}
+\subsubsection[{GetExposureControl}]{\setlength{\rightskip}{0pt plus 5cm}AxisCameraParams::Exposure\_\-t AxisCameraParams::GetExposureControl (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classAxisCameraParams_a4c1c2dbac6e7c2584b1f2383fed2aa8a}
+Get the exposure value from the camera. \begin{DoxyReturn}{Returns}
+the exposure value from the camera. 
+\end{DoxyReturn}
+\hypertarget{classAxisCameraParams_aa20be419668fcadc2358c452700242df}{
+\index{AxisCameraParams@{AxisCameraParams}!GetMaxFPS@{GetMaxFPS}}
+\index{GetMaxFPS@{GetMaxFPS}!AxisCameraParams@{AxisCameraParams}}
+\subsubsection[{GetMaxFPS}]{\setlength{\rightskip}{0pt plus 5cm}int AxisCameraParams::GetMaxFPS (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classAxisCameraParams_aa20be419668fcadc2358c452700242df}
+Get the max number of frames per second that the camera will send \begin{DoxyReturn}{Returns}
+Maximum frames per second. 
+\end{DoxyReturn}
+\hypertarget{classAxisCameraParams_a3c5895df6d60c62c44dfbbe8dd6ebfe6}{
+\index{AxisCameraParams@{AxisCameraParams}!GetResolution@{GetResolution}}
+\index{GetResolution@{GetResolution}!AxisCameraParams@{AxisCameraParams}}
+\subsubsection[{GetResolution}]{\setlength{\rightskip}{0pt plus 5cm}AxisCameraParams::Resolution\_\-t AxisCameraParams::GetResolution (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classAxisCameraParams_a3c5895df6d60c62c44dfbbe8dd6ebfe6}
+Get the resolution value from the camera. \begin{DoxyReturn}{Returns}
+resultion value for the camera. 
+\end{DoxyReturn}
+\hypertarget{classAxisCameraParams_a6ede159b8dc37561bc47b6631fd99037}{
+\index{AxisCameraParams@{AxisCameraParams}!GetRotation@{GetRotation}}
+\index{GetRotation@{GetRotation}!AxisCameraParams@{AxisCameraParams}}
+\subsubsection[{GetRotation}]{\setlength{\rightskip}{0pt plus 5cm}AxisCameraParams::Rotation\_\-t AxisCameraParams::GetRotation (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classAxisCameraParams_a6ede159b8dc37561bc47b6631fd99037}
+Get the rotation value from the camera. \begin{DoxyReturn}{Returns}
+The rotation value from the camera (Rotation\_\-t). 
+\end{DoxyReturn}
+\hypertarget{classAxisCameraParams_a8882b5443c334290f9ab8e623c9a3808}{
+\index{AxisCameraParams@{AxisCameraParams}!GetWhiteBalance@{GetWhiteBalance}}
+\index{GetWhiteBalance@{GetWhiteBalance}!AxisCameraParams@{AxisCameraParams}}
+\subsubsection[{GetWhiteBalance}]{\setlength{\rightskip}{0pt plus 5cm}AxisCameraParams::WhiteBalance\_\-t AxisCameraParams::GetWhiteBalance (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classAxisCameraParams_a8882b5443c334290f9ab8e623c9a3808}
+Retrieve the current white balance parameter. \begin{DoxyReturn}{Returns}
+The white balance value. 
+\end{DoxyReturn}
+\hypertarget{classAxisCameraParams_a722d8d9c928800ed855d36e93675e455}{
+\index{AxisCameraParams@{AxisCameraParams}!ParamTaskFunction@{ParamTaskFunction}}
+\index{ParamTaskFunction@{ParamTaskFunction}!AxisCameraParams@{AxisCameraParams}}
+\subsubsection[{ParamTaskFunction}]{\setlength{\rightskip}{0pt plus 5cm}int AxisCameraParams::ParamTaskFunction (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classAxisCameraParams_a722d8d9c928800ed855d36e93675e455}
+Main loop of the parameter task. This loop runs continuously checking parameters from the camera for posted changes and updating them if necessary. \hypertarget{classAxisCameraParams_abad7df9daf125123d55d4fee4ae55d49}{
+\index{AxisCameraParams@{AxisCameraParams}!ReadCamParams@{ReadCamParams}}
+\index{ReadCamParams@{ReadCamParams}!AxisCameraParams@{AxisCameraParams}}
+\subsubsection[{ReadCamParams}]{\setlength{\rightskip}{0pt plus 5cm}int AxisCameraParams::ReadCamParams (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classAxisCameraParams_abad7df9daf125123d55d4fee4ae55d49}
+Read the full param list from camera, use regular expressions to find the bits we care about assign values to member variables. \hypertarget{classAxisCameraParams_abae30b97480c964c5862572837dad21a}{
+\index{AxisCameraParams@{AxisCameraParams}!s\_\-ParamTaskFunction@{s\_\-ParamTaskFunction}}
+\index{s\_\-ParamTaskFunction@{s\_\-ParamTaskFunction}!AxisCameraParams@{AxisCameraParams}}
+\subsubsection[{s\_\-ParamTaskFunction}]{\setlength{\rightskip}{0pt plus 5cm}int AxisCameraParams::s\_\-ParamTaskFunction (
+\begin{DoxyParamCaption}
+\item[{{\bf AxisCameraParams} $\ast$}]{thisPtr}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static, protected\mbox{]}}}}
+\label{classAxisCameraParams_abae30b97480c964c5862572837dad21a}
+Static function to start the parameter updating task \hypertarget{classAxisCameraParams_a9fd81064b29af41bd912ba53c3811f65}{
+\index{AxisCameraParams@{AxisCameraParams}!UpdateCamParam@{UpdateCamParam}}
+\index{UpdateCamParam@{UpdateCamParam}!AxisCameraParams@{AxisCameraParams}}
+\subsubsection[{UpdateCamParam}]{\setlength{\rightskip}{0pt plus 5cm}int AxisCameraParams::UpdateCamParam (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{param}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classAxisCameraParams_a9fd81064b29af41bd912ba53c3811f65}
+Update a camera parameter. Write a camera parameter to the camera when it has bene changed. 
+\begin{DoxyParams}{Parameters}
+{\em param} & the string to insert into the http request. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if it failed, otherwise nonzero. 
+\end{DoxyReturn}
+\hypertarget{classAxisCameraParams_a7fd3c5fc07e8f0e6dd323cf964409b35}{
+\index{AxisCameraParams@{AxisCameraParams}!WriteBrightness@{WriteBrightness}}
+\index{WriteBrightness@{WriteBrightness}!AxisCameraParams@{AxisCameraParams}}
+\subsubsection[{WriteBrightness}]{\setlength{\rightskip}{0pt plus 5cm}void AxisCameraParams::WriteBrightness (
+\begin{DoxyParamCaption}
+\item[{int}]{brightness}
+\end{DoxyParamCaption}
+)}}
+\label{classAxisCameraParams_a7fd3c5fc07e8f0e6dd323cf964409b35}
+Write the brightness value to the camera. 
+\begin{DoxyParams}{Parameters}
+{\em brightness} & valid values 0 .. 100 \\
+\hline
+\end{DoxyParams}
+\hypertarget{classAxisCameraParams_a7e30277c5bbae801f4c2f7a878812e23}{
+\index{AxisCameraParams@{AxisCameraParams}!WriteColorLevel@{WriteColorLevel}}
+\index{WriteColorLevel@{WriteColorLevel}!AxisCameraParams@{AxisCameraParams}}
+\subsubsection[{WriteColorLevel}]{\setlength{\rightskip}{0pt plus 5cm}void AxisCameraParams::WriteColorLevel (
+\begin{DoxyParamCaption}
+\item[{int}]{colorLevel}
+\end{DoxyParamCaption}
+)}}
+\label{classAxisCameraParams_a7e30277c5bbae801f4c2f7a878812e23}
+Write the color level to the camera. 
+\begin{DoxyParams}{Parameters}
+{\em colorLevel} & valid values are 0 .. 100 \\
+\hline
+\end{DoxyParams}
+\hypertarget{classAxisCameraParams_a6b834280394c194f2890745348912792}{
+\index{AxisCameraParams@{AxisCameraParams}!WriteCompression@{WriteCompression}}
+\index{WriteCompression@{WriteCompression}!AxisCameraParams@{AxisCameraParams}}
+\subsubsection[{WriteCompression}]{\setlength{\rightskip}{0pt plus 5cm}void AxisCameraParams::WriteCompression (
+\begin{DoxyParamCaption}
+\item[{int}]{compression}
+\end{DoxyParamCaption}
+)}}
+\label{classAxisCameraParams_a6b834280394c194f2890745348912792}
+Write the compression value to the camera. 
+\begin{DoxyParams}{Parameters}
+{\em compression} & Values between 0 and 100. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classAxisCameraParams_ae926afa551f52066170d60d60b9ca2ad}{
+\index{AxisCameraParams@{AxisCameraParams}!WriteExposureControl@{WriteExposureControl}}
+\index{WriteExposureControl@{WriteExposureControl}!AxisCameraParams@{AxisCameraParams}}
+\subsubsection[{WriteExposureControl}]{\setlength{\rightskip}{0pt plus 5cm}void AxisCameraParams::WriteExposureControl (
+\begin{DoxyParamCaption}
+\item[{Exposure\_\-t}]{exposureControl}
+\end{DoxyParamCaption}
+)}}
+\label{classAxisCameraParams_ae926afa551f52066170d60d60b9ca2ad}
+Write the exposure control value to the camera. 
+\begin{DoxyParams}{Parameters}
+{\em exposureControl} & A mode to write in the Exposure\_\-t enum. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classAxisCameraParams_ac8910a14a43f6e175abb1ee481e2c512}{
+\index{AxisCameraParams@{AxisCameraParams}!WriteExposurePriority@{WriteExposurePriority}}
+\index{WriteExposurePriority@{WriteExposurePriority}!AxisCameraParams@{AxisCameraParams}}
+\subsubsection[{WriteExposurePriority}]{\setlength{\rightskip}{0pt plus 5cm}void AxisCameraParams::WriteExposurePriority (
+\begin{DoxyParamCaption}
+\item[{int}]{exposurePriority}
+\end{DoxyParamCaption}
+)}}
+\label{classAxisCameraParams_ac8910a14a43f6e175abb1ee481e2c512}
+Write the exposre priority value to the camera. 
+\begin{DoxyParams}{Parameters}
+{\em exposurePriority} & Valid values are 0, 50, 100. 0 = Prioritize image quality 50 = None 100 = Prioritize frame rate \\
+\hline
+\end{DoxyParams}
+\hypertarget{classAxisCameraParams_a47f7e3af5902af073b294602b81105d5}{
+\index{AxisCameraParams@{AxisCameraParams}!WriteMaxFPS@{WriteMaxFPS}}
+\index{WriteMaxFPS@{WriteMaxFPS}!AxisCameraParams@{AxisCameraParams}}
+\subsubsection[{WriteMaxFPS}]{\setlength{\rightskip}{0pt plus 5cm}void AxisCameraParams::WriteMaxFPS (
+\begin{DoxyParamCaption}
+\item[{int}]{maxFPS}
+\end{DoxyParamCaption}
+)}}
+\label{classAxisCameraParams_a47f7e3af5902af073b294602b81105d5}
+Write the maximum frames per second that the camera should send Write 0 to send as many as possible. 
+\begin{DoxyParams}{Parameters}
+{\em maxFPS} & The number of frames the camera should send in a second, exposure permitting. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classAxisCameraParams_a4c51df266cdd5e23b8098b995aea64a8}{
+\index{AxisCameraParams@{AxisCameraParams}!WriteResolution@{WriteResolution}}
+\index{WriteResolution@{WriteResolution}!AxisCameraParams@{AxisCameraParams}}
+\subsubsection[{WriteResolution}]{\setlength{\rightskip}{0pt plus 5cm}void AxisCameraParams::WriteResolution (
+\begin{DoxyParamCaption}
+\item[{Resolution\_\-t}]{resolution}
+\end{DoxyParamCaption}
+)}}
+\label{classAxisCameraParams_a4c51df266cdd5e23b8098b995aea64a8}
+Write resolution value to camera. 
+\begin{DoxyParams}{Parameters}
+{\em resolution} & The camera resolution value to write to the camera. Use the Resolution\_\-t enum. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classAxisCameraParams_aa6e7b6f0d86231add3588977eed08109}{
+\index{AxisCameraParams@{AxisCameraParams}!WriteRotation@{WriteRotation}}
+\index{WriteRotation@{WriteRotation}!AxisCameraParams@{AxisCameraParams}}
+\subsubsection[{WriteRotation}]{\setlength{\rightskip}{0pt plus 5cm}void AxisCameraParams::WriteRotation (
+\begin{DoxyParamCaption}
+\item[{Rotation\_\-t}]{rotation}
+\end{DoxyParamCaption}
+)}}
+\label{classAxisCameraParams_aa6e7b6f0d86231add3588977eed08109}
+Write the rotation value to the camera. If you mount your camera upside down, use this to adjust the image for you. 
+\begin{DoxyParams}{Parameters}
+{\em rotation} & The image from the Rotation\_\-t enum in \hyperlink{classAxisCameraParams}{AxisCameraParams} (kRotation\_\-0 or kRotation\_\-180) \\
+\hline
+\end{DoxyParams}
+\hypertarget{classAxisCameraParams_a3d167599fd9deb2be3db6b6710eeb966}{
+\index{AxisCameraParams@{AxisCameraParams}!WriteWhiteBalance@{WriteWhiteBalance}}
+\index{WriteWhiteBalance@{WriteWhiteBalance}!AxisCameraParams@{AxisCameraParams}}
+\subsubsection[{WriteWhiteBalance}]{\setlength{\rightskip}{0pt plus 5cm}void AxisCameraParams::WriteWhiteBalance (
+\begin{DoxyParamCaption}
+\item[{WhiteBalance\_\-t}]{whiteBalance}
+\end{DoxyParamCaption}
+)}}
+\label{classAxisCameraParams_a3d167599fd9deb2be3db6b6710eeb966}
+Set the white balance value. 
+\begin{DoxyParams}{Parameters}
+{\em whiteBalance} & Valid values from the WhiteBalance\_\-t enum. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+Vision/AxisCameraParams.h\item 
+Vision/AxisCameraParams.cpp\end{DoxyCompactItemize}

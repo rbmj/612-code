@@ -1,0 +1,116 @@
+\hypertarget{classScheduler}{
+\section{Scheduler Class Reference}
+\label{classScheduler}\index{Scheduler@{Scheduler}}
+}
+Inheritance diagram for Scheduler:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classScheduler}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classScheduler_a9323d5cc1fbd858b82ea44b85d65ca7f}{
+virtual std::string {\bfseries GetName} ()}
+\label{classScheduler_a9323d5cc1fbd858b82ea44b85d65ca7f}
+
+\item 
+\hypertarget{classScheduler_ac438553a653fe439ac9764011610d9c8}{
+virtual std::string {\bfseries GetType} ()}
+\label{classScheduler_ac438553a653fe439ac9764011610d9c8}
+
+\item 
+\hypertarget{classScheduler_ac93630d9158c67a4f2f2e46b6a48b6e8}{
+virtual \hyperlink{classNetworkTable}{NetworkTable} $\ast$ {\bfseries GetTable} ()}
+\label{classScheduler_ac93630d9158c67a4f2f2e46b6a48b6e8}
+
+\item 
+\hypertarget{classScheduler_a748d4035dafc39002b7f03a4504d3150}{
+void {\bfseries AddCommand} (\hyperlink{classCommand}{Command} $\ast$command)}
+\label{classScheduler_a748d4035dafc39002b7f03a4504d3150}
+
+\item 
+\hypertarget{classScheduler_a5ee42f6fbe43cd34cf463be23107a079}{
+void {\bfseries AddButton} (\hyperlink{classButtonScheduler}{ButtonScheduler} $\ast$button)}
+\label{classScheduler_a5ee42f6fbe43cd34cf463be23107a079}
+
+\item 
+void \hyperlink{classScheduler_a639c534a0655c5ab230046669e5aa081}{RegisterSubsystem} (\hyperlink{classSubsystem}{Subsystem} $\ast$subsystem)
+\item 
+void \hyperlink{classScheduler_a6e17233143754873d7f29860047de2c1}{Run} ()
+\item 
+void \hyperlink{classScheduler_a5fd987a5f7a9ba180207a1289a7bd477}{Remove} (\hyperlink{classCommand}{Command} $\ast$command)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{classScheduler}{Scheduler} $\ast$ \hyperlink{classScheduler_a5cc7ff43cb79880d28586b07ec967070}{GetInstance} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classScheduler_a5cc7ff43cb79880d28586b07ec967070}{
+\index{Scheduler@{Scheduler}!GetInstance@{GetInstance}}
+\index{GetInstance@{GetInstance}!Scheduler@{Scheduler}}
+\subsubsection[{GetInstance}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Scheduler} $\ast$ Scheduler::GetInstance (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{classScheduler_a5cc7ff43cb79880d28586b07ec967070}
+Returns the \hyperlink{classScheduler}{Scheduler}, creating it if one does not exist. \begin{DoxyReturn}{Returns}
+the \hyperlink{classScheduler}{Scheduler} 
+\end{DoxyReturn}
+\hypertarget{classScheduler_a639c534a0655c5ab230046669e5aa081}{
+\index{Scheduler@{Scheduler}!RegisterSubsystem@{RegisterSubsystem}}
+\index{RegisterSubsystem@{RegisterSubsystem}!Scheduler@{Scheduler}}
+\subsubsection[{RegisterSubsystem}]{\setlength{\rightskip}{0pt plus 5cm}void Scheduler::RegisterSubsystem (
+\begin{DoxyParamCaption}
+\item[{{\bf Subsystem} $\ast$}]{subsystem}
+\end{DoxyParamCaption}
+)}}
+\label{classScheduler_a639c534a0655c5ab230046669e5aa081}
+Registers a \hyperlink{classSubsystem}{Subsystem} to this \hyperlink{classScheduler}{Scheduler}, so that the \hyperlink{classScheduler}{Scheduler} might know if a default \hyperlink{classCommand}{Command} needs to be run. All \hyperlink{classSubsystem}{Subsystems} should call this. 
+\begin{DoxyParams}{Parameters}
+{\em system} & the system \\
+\hline
+\end{DoxyParams}
+\hypertarget{classScheduler_a5fd987a5f7a9ba180207a1289a7bd477}{
+\index{Scheduler@{Scheduler}!Remove@{Remove}}
+\index{Remove@{Remove}!Scheduler@{Scheduler}}
+\subsubsection[{Remove}]{\setlength{\rightskip}{0pt plus 5cm}void Scheduler::Remove (
+\begin{DoxyParamCaption}
+\item[{{\bf Command} $\ast$}]{command}
+\end{DoxyParamCaption}
+)}}
+\label{classScheduler_a5fd987a5f7a9ba180207a1289a7bd477}
+Removes the \hyperlink{classCommand}{Command} from the \hyperlink{classScheduler}{Scheduler}. 
+\begin{DoxyParams}{Parameters}
+{\em command} & the command to remove \\
+\hline
+\end{DoxyParams}
+\hypertarget{classScheduler_a6e17233143754873d7f29860047de2c1}{
+\index{Scheduler@{Scheduler}!Run@{Run}}
+\index{Run@{Run}!Scheduler@{Scheduler}}
+\subsubsection[{Run}]{\setlength{\rightskip}{0pt plus 5cm}void Scheduler::Run (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classScheduler_a6e17233143754873d7f29860047de2c1}
+Runs a single iteration of the loop. This method should be called often in order to have a functioning \hyperlink{classCommand}{Command} system. The loop has five stages:
+
+
+\begin{DoxyEnumerate}
+\item Poll the Buttons  
+\item Execute/Remove the Commands  
+\item Send values to \hyperlink{classSmartDashboard}{SmartDashboard}  
+\item Add Commands  
+\item Add Defaults  
+\end{DoxyEnumerate}
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+Commands/Scheduler.h\item 
+Commands/Scheduler.cpp\end{DoxyCompactItemize}

@@ -1,0 +1,167 @@
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tAnalogTrigger}{
+\section{nFPGA::nFRC\_\-2012\_\-1\_\-6\_\-4::tAnalogTrigger Class Reference}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tAnalogTrigger}\index{nFPGA::nFRC\_\-2012\_\-1\_\-6\_\-4::tAnalogTrigger@{nFPGA::nFRC\_\-2012\_\-1\_\-6\_\-4::tAnalogTrigger}}
+}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+union \hyperlink{unionnFPGA_1_1nFRC__2012__1__6__4_1_1tAnalogTrigger_1_1tOutput}{tOutput}
+\item 
+union \hyperlink{unionnFPGA_1_1nFRC__2012__1__6__4_1_1tAnalogTrigger_1_1tSourceSelect}{tSourceSelect}
+\end{DoxyCompactItemize}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum {\bfseries tIfaceConstants} \{ {\bfseries kNumSystems} =  8
+ \}
+\item 
+enum {\bfseries tSourceSelect\_\-IfaceConstants} 
+\item 
+enum {\bfseries tUpperLimit\_\-IfaceConstants} 
+\item 
+enum {\bfseries tLowerLimit\_\-IfaceConstants} 
+\item 
+enum {\bfseries tOutput\_\-IfaceConstants} \{ {\bfseries kNumOutputElements} =  8
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tAnalogTrigger_a314fa4ff3c023d2de8503a0b93340bd9}{
+virtual \hyperlink{classnFPGA_1_1tSystemInterface}{tSystemInterface} $\ast$ {\bfseries getSystemInterface} ()=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tAnalogTrigger_a314fa4ff3c023d2de8503a0b93340bd9}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tAnalogTrigger_a52fd7aab1c07a98e846da8d71e36a84f}{
+virtual unsigned char {\bfseries getSystemIndex} ()=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tAnalogTrigger_a52fd7aab1c07a98e846da8d71e36a84f}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tAnalogTrigger_ac5c2891b2d6250fa5fca37d2a5b8557b}{
+virtual void {\bfseries writeSourceSelect} (\hyperlink{unionnFPGA_1_1nFRC__2012__1__6__4_1_1tAnalogTrigger_1_1tSourceSelect}{tSourceSelect} value, tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tAnalogTrigger_ac5c2891b2d6250fa5fca37d2a5b8557b}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tAnalogTrigger_a5b716925d6169680c6a0448c5809dca0}{
+virtual void {\bfseries writeSourceSelect\_\-Channel} (unsigned char value, tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tAnalogTrigger_a5b716925d6169680c6a0448c5809dca0}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tAnalogTrigger_a9eadad9a603d0171e92c1f6758b31e8e}{
+virtual void {\bfseries writeSourceSelect\_\-Module} (unsigned char value, tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tAnalogTrigger_a9eadad9a603d0171e92c1f6758b31e8e}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tAnalogTrigger_ae6574efd37539d20c6a6e14898a70560}{
+virtual void {\bfseries writeSourceSelect\_\-Averaged} (bool value, tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tAnalogTrigger_ae6574efd37539d20c6a6e14898a70560}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tAnalogTrigger_a183d32683378e6e434ad2df7b1ef86e3}{
+virtual void {\bfseries writeSourceSelect\_\-Filter} (bool value, tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tAnalogTrigger_a183d32683378e6e434ad2df7b1ef86e3}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tAnalogTrigger_aaf884d77038a01ca2124cbf866f3843f}{
+virtual void {\bfseries writeSourceSelect\_\-FloatingRollover} (bool value, tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tAnalogTrigger_aaf884d77038a01ca2124cbf866f3843f}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tAnalogTrigger_aa5ac1f0ff0b1ccab9e44bfe392ce3aeb}{
+virtual void {\bfseries writeSourceSelect\_\-RolloverLimit} (signed short value, tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tAnalogTrigger_aa5ac1f0ff0b1ccab9e44bfe392ce3aeb}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tAnalogTrigger_a4989f92f70def5e6d3eda7fdbc5ac47e}{
+virtual \hyperlink{unionnFPGA_1_1nFRC__2012__1__6__4_1_1tAnalogTrigger_1_1tSourceSelect}{tSourceSelect} {\bfseries readSourceSelect} (tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tAnalogTrigger_a4989f92f70def5e6d3eda7fdbc5ac47e}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tAnalogTrigger_ae149d88f231c04cf32ae5e245637209f}{
+virtual unsigned char {\bfseries readSourceSelect\_\-Channel} (tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tAnalogTrigger_ae149d88f231c04cf32ae5e245637209f}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tAnalogTrigger_a3bd8de6cdcd78a46f9f22039baee218b}{
+virtual unsigned char {\bfseries readSourceSelect\_\-Module} (tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tAnalogTrigger_a3bd8de6cdcd78a46f9f22039baee218b}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tAnalogTrigger_acede5eb53bf74eb9989f3d03ac174094}{
+virtual bool {\bfseries readSourceSelect\_\-Averaged} (tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tAnalogTrigger_acede5eb53bf74eb9989f3d03ac174094}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tAnalogTrigger_ad7dd51f87101555af1ab379e8393aa50}{
+virtual bool {\bfseries readSourceSelect\_\-Filter} (tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tAnalogTrigger_ad7dd51f87101555af1ab379e8393aa50}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tAnalogTrigger_a629c929a177855fc423429bf69fb5b91}{
+virtual bool {\bfseries readSourceSelect\_\-FloatingRollover} (tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tAnalogTrigger_a629c929a177855fc423429bf69fb5b91}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tAnalogTrigger_a8591c519caf58876c25a082796bc1e97}{
+virtual signed short {\bfseries readSourceSelect\_\-RolloverLimit} (tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tAnalogTrigger_a8591c519caf58876c25a082796bc1e97}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tAnalogTrigger_a895a831716ca9b48eae344771d5f3fa5}{
+virtual void {\bfseries writeUpperLimit} (signed int value, tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tAnalogTrigger_a895a831716ca9b48eae344771d5f3fa5}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tAnalogTrigger_a754a8c15ccb43787b38e53c7245cd36c}{
+virtual signed int {\bfseries readUpperLimit} (tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tAnalogTrigger_a754a8c15ccb43787b38e53c7245cd36c}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tAnalogTrigger_abaeb199c22a8f1bb575f819660c5f356}{
+virtual void {\bfseries writeLowerLimit} (signed int value, tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tAnalogTrigger_abaeb199c22a8f1bb575f819660c5f356}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tAnalogTrigger_a407b96e4898151162b0208b42a91735c}{
+virtual signed int {\bfseries readLowerLimit} (tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tAnalogTrigger_a407b96e4898151162b0208b42a91735c}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tAnalogTrigger_a9ab3faff149c871c6a4f8ed57ac83e0a}{
+virtual \hyperlink{unionnFPGA_1_1nFRC__2012__1__6__4_1_1tAnalogTrigger_1_1tOutput}{tOutput} {\bfseries readOutput} (unsigned char bitfield\_\-index, tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tAnalogTrigger_a9ab3faff149c871c6a4f8ed57ac83e0a}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tAnalogTrigger_a2cb93d277fd95a012e5e69c13529ab9c}{
+virtual bool {\bfseries readOutput\_\-InHysteresis} (unsigned char bitfield\_\-index, tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tAnalogTrigger_a2cb93d277fd95a012e5e69c13529ab9c}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tAnalogTrigger_ac5a1e24e85a0075e298d184fe84221d6}{
+virtual bool {\bfseries readOutput\_\-OverLimit} (unsigned char bitfield\_\-index, tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tAnalogTrigger_ac5a1e24e85a0075e298d184fe84221d6}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tAnalogTrigger_a997f4440dca5445862b17fa78c94a990}{
+virtual bool {\bfseries readOutput\_\-Rising} (unsigned char bitfield\_\-index, tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tAnalogTrigger_a997f4440dca5445862b17fa78c94a990}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tAnalogTrigger_a9fcdcd7463c7e3d0c35a2fe4955f1b6c}{
+virtual bool {\bfseries readOutput\_\-Falling} (unsigned char bitfield\_\-index, tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tAnalogTrigger_a9fcdcd7463c7e3d0c35a2fe4955f1b6c}
+
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tAnalogTrigger_aefe34df7872be42f5a3d98b23c40f968}{
+static \hyperlink{classnFPGA_1_1nFRC__2012__1__6__4_1_1tAnalogTrigger}{tAnalogTrigger} $\ast$ {\bfseries create} (unsigned char sys\_\-index, tRioStatusCode $\ast$status)}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tAnalogTrigger_aefe34df7872be42f5a3d98b23c40f968}
+
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+ChipObject/tAnalogTrigger.h\end{DoxyCompactItemize}

@@ -1,0 +1,55 @@
+\hypertarget{classMonoImage}{
+\section{MonoImage Class Reference}
+\label{classMonoImage}\index{MonoImage@{MonoImage}}
+}
+Inheritance diagram for MonoImage:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{classMonoImage}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+vector$<$ \hyperlink{structEllipseMatch__struct}{EllipseMatch} $>$ $\ast$ \hyperlink{classMonoImage_a967be5bee5832a54152c85c7633b3be8}{DetectEllipses} (\hyperlink{structEllipseDescriptor__struct}{EllipseDescriptor} $\ast$ellipseDescriptor, \hyperlink{structCurveOptions__struct}{CurveOptions} $\ast$curveOptions, \hyperlink{structShapeDetectionOptions__struct}{ShapeDetectionOptions} $\ast$shapeDetectionOptions, ROI $\ast$roi)
+\item 
+\hypertarget{classMonoImage_abda23726c4abc9f32a8211d50b166d7c}{
+vector$<$ \hyperlink{structEllipseMatch__struct}{EllipseMatch} $>$ $\ast$ {\bfseries DetectEllipses} (\hyperlink{structEllipseDescriptor__struct}{EllipseDescriptor} $\ast$ellipseDescriptor)}
+\label{classMonoImage_abda23726c4abc9f32a8211d50b166d7c}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classMonoImage_a967be5bee5832a54152c85c7633b3be8}{
+\index{MonoImage@{MonoImage}!DetectEllipses@{DetectEllipses}}
+\index{DetectEllipses@{DetectEllipses}!MonoImage@{MonoImage}}
+\subsubsection[{DetectEllipses}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$ {\bf EllipseMatch} $>$ $\ast$ MonoImage::DetectEllipses (
+\begin{DoxyParamCaption}
+\item[{{\bf EllipseDescriptor} $\ast$}]{ellipseDescriptor, }
+\item[{{\bf CurveOptions} $\ast$}]{curveOptions, }
+\item[{{\bf ShapeDetectionOptions} $\ast$}]{shapeDetectionOptions, }
+\item[{ROI $\ast$}]{roi}
+\end{DoxyParamCaption}
+)}}
+\label{classMonoImage_a967be5bee5832a54152c85c7633b3be8}
+Look for ellipses in an image. Given some input parameters, look for any number of ellipses in an image. 
+\begin{DoxyParams}{Parameters}
+{\em ellipseDescriptor} & Ellipse descriptor \\
+\hline
+{\em curveOptions} & Curve options \\
+\hline
+{\em shapeDetectionOptions} & Shape detection options \\
+\hline
+{\em roi} & Region of Interest \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a vector of EllipseMatch structures (0 length vector on no match) 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+Vision/MonoImage.h\item 
+Vision/MonoImage.cpp\end{DoxyCompactItemize}

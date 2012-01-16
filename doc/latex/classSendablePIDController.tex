@@ -1,0 +1,190 @@
+\hypertarget{classSendablePIDController}{
+\section{SendablePIDController Class Reference}
+\label{classSendablePIDController}\index{SendablePIDController@{SendablePIDController}}
+}
+
+
+{\ttfamily \#include $<$SendablePIDController.h$>$}
+
+Inheritance diagram for SendablePIDController:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classSendablePIDController}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classSendablePIDController_a2b1112562b5283e9e5774890f2e1c029}{SendablePIDController} (double p, double i, double d, \hyperlink{classPIDSource}{PIDSource} $\ast$source, \hyperlink{classPIDOutput}{PIDOutput} $\ast$output)
+\item 
+\hyperlink{classSendablePIDController_a77118bbfcf49796898d9f52f6c500e06}{SendablePIDController} (double p, double i, double d, \hyperlink{classPIDSource}{PIDSource} $\ast$source, \hyperlink{classPIDOutput}{PIDOutput} $\ast$output, double period)
+\item 
+virtual void \hyperlink{classSendablePIDController_a1698ad2f4e608211458d7eb17d9c29bc}{SetSetpoint} (float setpoint)
+\item 
+virtual void \hyperlink{classSendablePIDController_a4386f8c1af6063189b8f0db2ec4e6228}{SetPID} (double p, double i, double d)
+\item 
+virtual void \hyperlink{classSendablePIDController_a08782e10dfdb2941016c1a55afeca8b2}{Enable} ()
+\item 
+virtual void \hyperlink{classSendablePIDController_a82a46d297b6199c4aa98957c48ec75f0}{Disable} ()
+\item 
+\hypertarget{classSendablePIDController_aebfe601b8a982b00aa8ff027fcb7c4cf}{
+virtual std::string {\bfseries GetType} ()}
+\label{classSendablePIDController_aebfe601b8a982b00aa8ff027fcb7c4cf}
+
+\item 
+\hypertarget{classSendablePIDController_ac2a0b98de04feecfd788cd6973456258}{
+virtual \hyperlink{classNetworkTable}{NetworkTable} $\ast$ {\bfseries GetTable} ()}
+\label{classSendablePIDController_ac2a0b98de04feecfd788cd6973456258}
+
+\item 
+\hypertarget{classSendablePIDController_a060ea84fe40e527d71edb00e74f2ca9c}{
+virtual void {\bfseries ValueChanged} (\hyperlink{classNetworkTable}{NetworkTable} $\ast$table, const char $\ast$name, NetworkTables\_\-Types type)}
+\label{classSendablePIDController_a060ea84fe40e527d71edb00e74f2ca9c}
+
+\item 
+\hypertarget{classSendablePIDController_aea36a5e164404b794447f46b7e82bcb7}{
+virtual void {\bfseries ValueConfirmed} (\hyperlink{classNetworkTable}{NetworkTable} $\ast$table, const char $\ast$name, NetworkTables\_\-Types type)}
+\label{classSendablePIDController_aea36a5e164404b794447f46b7e82bcb7}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A \hyperlink{classSendablePIDController}{SendablePIDController} is a \hyperlink{classPIDController}{PIDController} that can be sent over to the \hyperlink{classSmartDashboard}{SmartDashboard} using the \hyperlink{classSmartDashboard_a3e7cb12569b31c239ed5d5a68f29c2b0}{PutData(...)} method.
+
+It is useful if you want to test values of a \hyperlink{classPIDController}{PIDController} without having to recompile code between tests. Also, consider using \hyperlink{classPreferences}{Preferences} to save the important values between matches.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classSmartDashboard}{SmartDashboard} 
+\end{DoxySeeAlso}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classSendablePIDController_a2b1112562b5283e9e5774890f2e1c029}{
+\index{SendablePIDController@{SendablePIDController}!SendablePIDController@{SendablePIDController}}
+\index{SendablePIDController@{SendablePIDController}!SendablePIDController@{SendablePIDController}}
+\subsubsection[{SendablePIDController}]{\setlength{\rightskip}{0pt plus 5cm}SendablePIDController::SendablePIDController (
+\begin{DoxyParamCaption}
+\item[{double}]{p, }
+\item[{double}]{i, }
+\item[{double}]{d, }
+\item[{{\bf PIDSource} $\ast$}]{source, }
+\item[{{\bf PIDOutput} $\ast$}]{output}
+\end{DoxyParamCaption}
+)}}
+\label{classSendablePIDController_a2b1112562b5283e9e5774890f2e1c029}
+Allocate a PID object with the given constants for P, I, D, using a 50ms period. 
+\begin{DoxyParams}{Parameters}
+{\em p} & the proportional coefficient \\
+\hline
+{\em i} & the integral coefficient \\
+\hline
+{\em d} & the derivative coefficient \\
+\hline
+{\em source} & The \hyperlink{classPIDSource}{PIDSource} object that is used to get values \\
+\hline
+{\em output} & The \hyperlink{classPIDOutput}{PIDOutput} object that is set to the output value \\
+\hline
+\end{DoxyParams}
+\hypertarget{classSendablePIDController_a77118bbfcf49796898d9f52f6c500e06}{
+\index{SendablePIDController@{SendablePIDController}!SendablePIDController@{SendablePIDController}}
+\index{SendablePIDController@{SendablePIDController}!SendablePIDController@{SendablePIDController}}
+\subsubsection[{SendablePIDController}]{\setlength{\rightskip}{0pt plus 5cm}SendablePIDController::SendablePIDController (
+\begin{DoxyParamCaption}
+\item[{double}]{p, }
+\item[{double}]{i, }
+\item[{double}]{d, }
+\item[{{\bf PIDSource} $\ast$}]{source, }
+\item[{{\bf PIDOutput} $\ast$}]{output, }
+\item[{double}]{period}
+\end{DoxyParamCaption}
+)}}
+\label{classSendablePIDController_a77118bbfcf49796898d9f52f6c500e06}
+Allocate a PID object with the given constants for P, I, D 
+\begin{DoxyParams}{Parameters}
+{\em p} & the proportional coefficient \\
+\hline
+{\em i} & the integral coefficient \\
+\hline
+{\em d} & the derivative coefficient \\
+\hline
+{\em source} & The \hyperlink{classPIDSource}{PIDSource} object that is used to get values \\
+\hline
+{\em output} & The \hyperlink{classPIDOutput}{PIDOutput} object that is set to the output value \\
+\hline
+{\em period} & the loop time for doing calculations in seconds. This particularly effects calculations of the integral and differential terms. The default is 50ms. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classSendablePIDController_a82a46d297b6199c4aa98957c48ec75f0}{
+\index{SendablePIDController@{SendablePIDController}!Disable@{Disable}}
+\index{Disable@{Disable}!SendablePIDController@{SendablePIDController}}
+\subsubsection[{Disable}]{\setlength{\rightskip}{0pt plus 5cm}void SendablePIDController::Disable (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classSendablePIDController_a82a46d297b6199c4aa98957c48ec75f0}
+Stop running the \hyperlink{classPIDController}{PIDController}, this sets the output to zero before stopping. 
+
+Reimplemented from \hyperlink{classPIDController_ad13d5e8f8b465a00ad2c21a14cb832c4}{PIDController}.
+
+\hypertarget{classSendablePIDController_a08782e10dfdb2941016c1a55afeca8b2}{
+\index{SendablePIDController@{SendablePIDController}!Enable@{Enable}}
+\index{Enable@{Enable}!SendablePIDController@{SendablePIDController}}
+\subsubsection[{Enable}]{\setlength{\rightskip}{0pt plus 5cm}void SendablePIDController::Enable (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classSendablePIDController_a08782e10dfdb2941016c1a55afeca8b2}
+Begin running the \hyperlink{classPIDController}{PIDController} 
+
+Reimplemented from \hyperlink{classPIDController_a1b272c08b669b2a86f47958aa839b656}{PIDController}.
+
+\hypertarget{classSendablePIDController_a4386f8c1af6063189b8f0db2ec4e6228}{
+\index{SendablePIDController@{SendablePIDController}!SetPID@{SetPID}}
+\index{SetPID@{SetPID}!SendablePIDController@{SendablePIDController}}
+\subsubsection[{SetPID}]{\setlength{\rightskip}{0pt plus 5cm}void SendablePIDController::SetPID (
+\begin{DoxyParamCaption}
+\item[{double}]{p, }
+\item[{double}]{i, }
+\item[{double}]{d}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classSendablePIDController_a4386f8c1af6063189b8f0db2ec4e6228}
+Set the PID Controller gain parameters. Set the proportional, integral, and differential coefficients. 
+\begin{DoxyParams}{Parameters}
+{\em p} & Proportional coefficient \\
+\hline
+{\em i} & Integral coefficient \\
+\hline
+{\em d} & Differential coefficient \\
+\hline
+\end{DoxyParams}
+\hypertarget{classSendablePIDController_a1698ad2f4e608211458d7eb17d9c29bc}{
+\index{SendablePIDController@{SendablePIDController}!SetSetpoint@{SetSetpoint}}
+\index{SetSetpoint@{SetSetpoint}!SendablePIDController@{SendablePIDController}}
+\subsubsection[{SetSetpoint}]{\setlength{\rightskip}{0pt plus 5cm}void SendablePIDController::SetSetpoint (
+\begin{DoxyParamCaption}
+\item[{float}]{setpoint}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classSendablePIDController_a1698ad2f4e608211458d7eb17d9c29bc}
+Set the setpoint for the \hyperlink{classPIDController}{PIDController} 
+\begin{DoxyParams}{Parameters}
+{\em setpoint} & the desired setpoint \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{classPIDController_a60e89182f28d2cc1ee5adf481c2003c9}{PIDController}.
+
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+SmartDashboard/SendablePIDController.h\item 
+SmartDashboard/SendablePIDController.cpp\end{DoxyCompactItemize}

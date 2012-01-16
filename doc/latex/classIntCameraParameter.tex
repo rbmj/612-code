@@ -1,0 +1,168 @@
+\hypertarget{classIntCameraParameter}{
+\section{IntCameraParameter Class Reference}
+\label{classIntCameraParameter}\index{IntCameraParameter@{IntCameraParameter}}
+}
+
+
+{\ttfamily \#include $<$IntCameraParameter.h$>$}
+
+Inheritance diagram for IntCameraParameter:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classIntCameraParameter}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classIntCameraParameter_a3bbf3fddef980503c8caad2b97761364}{IntCameraParameter} (const char $\ast$setString, const char $\ast$getString, bool requiresRestart)
+\item 
+int \hyperlink{classIntCameraParameter_a93c7c5b5d2afd44b87859715ad93dd0e}{GetValue} ()
+\item 
+void \hyperlink{classIntCameraParameter_a3d41b2aafcafd18e21d59009c18fcf3c}{SetValue} (int value)
+\item 
+virtual bool \hyperlink{classIntCameraParameter_ad3413a2b04463911f435e8d927b8a490}{CheckChanged} (bool \&changed, char $\ast$param)
+\item 
+virtual void \hyperlink{classIntCameraParameter_a12c5199693d1971c6feaaf634d50cca9}{GetParamFromString} (const char $\ast$string, int stringLength)
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{classIntCameraParameter_a4dbe484356293bd2acef171982b14cf7}{SearchForParam} (const char $\ast$pattern, const char $\ast$searchString, int searchStringLen, char $\ast$result)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classIntCameraParameter_aef59bab75d17772001e7d37077f74692}{
+const char $\ast$ {\bfseries m\_\-setString}}
+\label{classIntCameraParameter_aef59bab75d17772001e7d37077f74692}
+
+\item 
+\hypertarget{classIntCameraParameter_aba04374f4f6c16e906434f7156c35a30}{
+const char $\ast$ {\bfseries m\_\-getString}}
+\label{classIntCameraParameter_aba04374f4f6c16e906434f7156c35a30}
+
+\item 
+\hypertarget{classIntCameraParameter_a09476ec7be001a682f65bb15c6288a35}{
+bool {\bfseries m\_\-changed}}
+\label{classIntCameraParameter_a09476ec7be001a682f65bb15c6288a35}
+
+\item 
+\hypertarget{classIntCameraParameter_add027a6f99ab10d8e4ace36fc1ea4114}{
+bool {\bfseries m\_\-requiresRestart}}
+\label{classIntCameraParameter_add027a6f99ab10d8e4ace36fc1ea4114}
+
+\item 
+\hypertarget{classIntCameraParameter_afa07051193466a67f72b8dcb7ec26c24}{
+int {\bfseries m\_\-value}}
+\label{classIntCameraParameter_afa07051193466a67f72b8dcb7ec26c24}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Integer camera parameter. This class represents a camera parameter that takes an integer value. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classIntCameraParameter_a3bbf3fddef980503c8caad2b97761364}{
+\index{IntCameraParameter@{IntCameraParameter}!IntCameraParameter@{IntCameraParameter}}
+\index{IntCameraParameter@{IntCameraParameter}!IntCameraParameter@{IntCameraParameter}}
+\subsubsection[{IntCameraParameter}]{\setlength{\rightskip}{0pt plus 5cm}IntCameraParameter::IntCameraParameter (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{setString, }
+\item[{const char $\ast$}]{getString, }
+\item[{bool}]{requiresRestart}
+\end{DoxyParamCaption}
+)}}
+\label{classIntCameraParameter_a3bbf3fddef980503c8caad2b97761364}
+Constructor for an integer camera parameter. 
+\begin{DoxyParams}{Parameters}
+{\em setString} & The string to set a value in the HTTP request \\
+\hline
+{\em getString} & The string to retrieve a value in the HTTP request \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classIntCameraParameter_ad3413a2b04463911f435e8d927b8a490}{
+\index{IntCameraParameter@{IntCameraParameter}!CheckChanged@{CheckChanged}}
+\index{CheckChanged@{CheckChanged}!IntCameraParameter@{IntCameraParameter}}
+\subsubsection[{CheckChanged}]{\setlength{\rightskip}{0pt plus 5cm}bool IntCameraParameter::CheckChanged (
+\begin{DoxyParamCaption}
+\item[{bool \&}]{changed, }
+\item[{char $\ast$}]{param}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classIntCameraParameter_ad3413a2b04463911f435e8d927b8a490}
+Check if a parameter has changed and update. Check if a parameter has changed and send the update string if it has changed. This is called from the loop in the parameter task loop. \begin{DoxyReturn}{Returns}
+true if the camera needs to restart 
+\end{DoxyReturn}
+
+
+Reimplemented in \hyperlink{classEnumCameraParameter_a56ccba7b3ce50b5ea37601d661ae69fb}{EnumCameraParameter}.
+
+\hypertarget{classIntCameraParameter_a12c5199693d1971c6feaaf634d50cca9}{
+\index{IntCameraParameter@{IntCameraParameter}!GetParamFromString@{GetParamFromString}}
+\index{GetParamFromString@{GetParamFromString}!IntCameraParameter@{IntCameraParameter}}
+\subsubsection[{GetParamFromString}]{\setlength{\rightskip}{0pt plus 5cm}void IntCameraParameter::GetParamFromString (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{string, }
+\item[{int}]{stringLength}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classIntCameraParameter_a12c5199693d1971c6feaaf634d50cca9}
+Get a parameter value from the string. Get a parameter value from the camera status string. If it has been changed been changed by the program, then don't update it. Program values have precedence over those written in the camera. 
+
+Reimplemented in \hyperlink{classEnumCameraParameter_ac7ffca634a3cd7091cebc2384bdc6873}{EnumCameraParameter}.
+
+\hypertarget{classIntCameraParameter_a93c7c5b5d2afd44b87859715ad93dd0e}{
+\index{IntCameraParameter@{IntCameraParameter}!GetValue@{GetValue}}
+\index{GetValue@{GetValue}!IntCameraParameter@{IntCameraParameter}}
+\subsubsection[{GetValue}]{\setlength{\rightskip}{0pt plus 5cm}int IntCameraParameter::GetValue (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classIntCameraParameter_a93c7c5b5d2afd44b87859715ad93dd0e}
+Get a value for a camera parameter. \begin{DoxyReturn}{Returns}
+The camera parameter cached valued. 
+\end{DoxyReturn}
+\hypertarget{classIntCameraParameter_a4dbe484356293bd2acef171982b14cf7}{
+\index{IntCameraParameter@{IntCameraParameter}!SearchForParam@{SearchForParam}}
+\index{SearchForParam@{SearchForParam}!IntCameraParameter@{IntCameraParameter}}
+\subsubsection[{SearchForParam}]{\setlength{\rightskip}{0pt plus 5cm}int IntCameraParameter::SearchForParam (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{pattern, }
+\item[{const char $\ast$}]{searchString, }
+\item[{int}]{searchStringLen, }
+\item[{char $\ast$}]{result}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classIntCameraParameter_a4dbe484356293bd2acef171982b14cf7}
+
+\begin{DoxyParams}{Parameters}
+{\em pattern,:} & the regular expression \\
+\hline
+{\em searchString} & the text to search \\
+\hline
+{\em searchStringLen} & the length of searchString \\
+\hline
+{\em result} & buffer to put resulting text into, must be pre-\/allocated \\
+\hline
+\end{DoxyParams}
+\hypertarget{classIntCameraParameter_a3d41b2aafcafd18e21d59009c18fcf3c}{
+\index{IntCameraParameter@{IntCameraParameter}!SetValue@{SetValue}}
+\index{SetValue@{SetValue}!IntCameraParameter@{IntCameraParameter}}
+\subsubsection[{SetValue}]{\setlength{\rightskip}{0pt plus 5cm}void IntCameraParameter::SetValue (
+\begin{DoxyParamCaption}
+\item[{int}]{value}
+\end{DoxyParamCaption}
+)}}
+\label{classIntCameraParameter_a3d41b2aafcafd18e21d59009c18fcf3c}
+Set a value for a camera parameter. Mark the value for change. The value will be updated in the parameter change loop. 
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+Vision/IntCameraParameter.h\item 
+Vision/IntCameraParameter.cpp\end{DoxyCompactItemize}

@@ -5,7 +5,7 @@
 %%For: 
 %Magnification: 1.00
 %%Orientation: Portrait
-%%BoundingBox: 0 0 500 853.658537
+%%BoundingBox: 0 0 500 1445.086705
 %%Pages: 0
 %%BeginSetup
 %%EndSetup
@@ -19,12 +19,12 @@
 /marginwidth 10 def
 /distx 20 def
 /disty 40 def
-/boundaspect 0.585714 def  % aspect ratio of the BoundingBox (width/height)
+/boundaspect 0.346000 def  % aspect ratio of the BoundingBox (width/height)
 /boundx 500 def
 /boundy boundx boundaspect div def
 /xspacing 0 def
 /yspacing 0 def
-/rows 14 def
+/rows 25 def
 /cols 2 def
 /scalefactor 0 def
 /boxfont /Times-Roman findfont fontheight scalefont def
@@ -174,18 +174,29 @@
 boxfont setfont
 1 boundaspect scale
 (ErrorBase) cw
+(AxisCameraParams) cw
 (CANJaguar) cw
+(CError) cw
+(Command) cw
 (DashboardBase) cw
 (DriverStationEnhancedIO) cw
+(ImageBase) cw
 (Joystick) cw
 (KinectStick) cw
 (MotorSafetyHelper) cw
+(NetworkTable) cw
+(NetworkTables::Buffer) cw
+(NetworkTables::Connection) cw
+(NetworkTables::Entry) cw
 (Notifier) cw
+(PCVideoServer) cw
 (Preferences) cw
 (Resource) cw
 (RobotDrive) cw
+(Scheduler) cw
 (SensorBase) cw
 (SerialPort) cw
+(Subsystem) cw
 (Task) cw
 /boxwidth boxwidth marginwidth 2 mul add def
 /xspacing boxwidth distx add def
@@ -198,27 +209,65 @@ boundx scalefactor div boundy scalefactor div scale
 
 % ----- classes -----
 
- (ErrorBase) 0.000000 13.000000 box
- (CANJaguar) 1.000000 12.000000 box
- (DashboardBase) 1.000000 11.000000 box
-1.000000 11.000000 mark
- (DriverStationEnhancedIO) 1.000000 10.000000 box
- (Joystick) 1.000000 9.000000 box
- (KinectStick) 1.000000 8.000000 box
- (MotorSafetyHelper) 1.000000 7.000000 box
- (Notifier) 1.000000 6.000000 box
- (Preferences) 1.000000 5.000000 box
- (Resource) 1.000000 4.000000 box
- (RobotDrive) 1.000000 3.000000 box
- (SensorBase) 1.000000 2.000000 box
-1.000000 2.000000 mark
- (SerialPort) 1.000000 1.000000 box
+ (ErrorBase) 0.000000 24.000000 box
+ (AxisCameraParams) 1.000000 23.000000 box
+1.000000 23.000000 mark
+ (CANJaguar) 1.000000 22.000000 box
+ (CError) 1.000000 21.000000 box
+ (Command) 1.000000 20.000000 box
+1.000000 20.000000 mark
+ (DashboardBase) 1.000000 19.000000 box
+1.000000 19.000000 mark
+ (DriverStationEnhancedIO) 1.000000 18.000000 box
+ (ImageBase) 1.000000 17.000000 box
+1.000000 17.000000 mark
+ (Joystick) 1.000000 16.000000 box
+ (KinectStick) 1.000000 15.000000 box
+ (MotorSafetyHelper) 1.000000 14.000000 box
+ (NetworkTable) 1.000000 13.000000 box
+ (NetworkTables::Buffer) 1.000000 12.000000 box
+ (NetworkTables::Connection) 1.000000 11.000000 box
+ (NetworkTables::Entry) 1.000000 10.000000 box
+1.000000 10.000000 mark
+ (Notifier) 1.000000 9.000000 box
+ (PCVideoServer) 1.000000 8.000000 box
+ (Preferences) 1.000000 7.000000 box
+ (Resource) 1.000000 6.000000 box
+ (RobotDrive) 1.000000 5.000000 box
+ (Scheduler) 1.000000 4.000000 box
+ (SensorBase) 1.000000 3.000000 box
+1.000000 3.000000 mark
+ (SerialPort) 1.000000 2.000000 box
+ (Subsystem) 1.000000 1.000000 box
+1.000000 1.000000 mark
  (Task) 1.000000 0.000000 box
 
 % ----- relations -----
 
 solid
-1 0.000000 12.250000 out
+1 0.000000 23.250000 out
+solid
+0 0.000000 23.500000 hedge
+solid
+0 0.000000 22.500000 hedge
+solid
+0 0.000000 21.500000 hedge
+solid
+0 0.000000 20.500000 hedge
+solid
+0 0.000000 19.500000 hedge
+solid
+0 0.000000 18.500000 hedge
+solid
+0 0.000000 17.500000 hedge
+solid
+0 0.000000 16.500000 hedge
+solid
+0 0.000000 15.500000 hedge
+solid
+0 0.000000 14.500000 hedge
+solid
+0 0.000000 13.500000 hedge
 solid
 0 0.000000 12.500000 hedge
 solid
@@ -246,4 +295,4 @@ solid
 solid
 0 0.000000 0.500000 hedge
 solid
-0.000000 13.000000 0.500000 vedge
+0.000000 24.000000 0.500000 vedge

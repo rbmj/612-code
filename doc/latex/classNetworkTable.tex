@@ -1,0 +1,507 @@
+\hypertarget{classNetworkTable}{
+\section{NetworkTable Class Reference}
+\label{classNetworkTable}\index{NetworkTable@{NetworkTable}}
+}
+Inheritance diagram for NetworkTable:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classNetworkTable}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classNetworkTable_a2582187d27e5d4b179c7f8609bfd6966}{
+std::vector$<$ const char $\ast$ $>$ {\bfseries GetKeys} ()}
+\label{classNetworkTable_a2582187d27e5d4b179c7f8609bfd6966}
+
+\item 
+void \hyperlink{classNetworkTable_aad62de896f38d7685debeec344443bf9}{BeginTransaction} ()
+\item 
+\hypertarget{classNetworkTable_a27054ba709b7e14f9133b9f7452bb111}{
+void {\bfseries EndTransaction} ()}
+\label{classNetworkTable_a27054ba709b7e14f9133b9f7452bb111}
+
+\item 
+void \hyperlink{classNetworkTable_a4299ab2f82343a10d383d124e48b7fd7}{AddChangeListener} (const char $\ast$keyName, \hyperlink{classNetworkTableChangeListener}{NetworkTableChangeListener} $\ast$listener)
+\item 
+void \hyperlink{classNetworkTable_a4ddce7fe697fc353f29081be309b70f0}{AddChangeListenerAny} (\hyperlink{classNetworkTableChangeListener}{NetworkTableChangeListener} $\ast$listener)
+\item 
+void \hyperlink{classNetworkTable_a4d5550ae57067f0719fc70b079fb37f2}{RemoveChangeListener} (const char $\ast$keyName, \hyperlink{classNetworkTableChangeListener}{NetworkTableChangeListener} $\ast$listener)
+\item 
+void \hyperlink{classNetworkTable_aba3ab188d07587e51dcdb64b0602ae72}{RemoveChangeListenerAny} (\hyperlink{classNetworkTableChangeListener}{NetworkTableChangeListener} $\ast$listener)
+\item 
+void \hyperlink{classNetworkTable_adfbdab51566db8de0aa13cf12a282a4f}{AddAdditionListener} (\hyperlink{classNetworkTableAdditionListener}{NetworkTableAdditionListener} $\ast$listener)
+\item 
+void \hyperlink{classNetworkTable_a6f4293d410e8530ebb6d510ed896a165}{RemoveAdditionListener} (\hyperlink{classNetworkTableAdditionListener}{NetworkTableAdditionListener} $\ast$listener)
+\item 
+void \hyperlink{classNetworkTable_ad4a248973f11e2cfba103ad1fec6d564}{AddConnectionListener} (\hyperlink{classNetworkTableConnectionListener}{NetworkTableConnectionListener} $\ast$listener, bool immediateNotify)
+\item 
+void \hyperlink{classNetworkTable_ac8a8666f2eef96064bb2c4a77d667f98}{RemoveConnectionListener} (\hyperlink{classNetworkTableConnectionListener}{NetworkTableConnectionListener} $\ast$listener)
+\item 
+bool \hyperlink{classNetworkTable_a9ff833b20c5734863225b05fff9d3cca}{IsConnected} ()
+\item 
+\hypertarget{classNetworkTable_ad98ee019e389b6b616767412b6dc20e7}{
+bool {\bfseries ContainsKey} (const char $\ast$keyName)}
+\label{classNetworkTable_ad98ee019e389b6b616767412b6dc20e7}
+
+\item 
+\hyperlink{classNetworkTables_1_1Entry}{NetworkTables::Entry} $\ast$ \hyperlink{classNetworkTable_ab1d185782e5ff4e952a3ba971b123e09}{GetEntry} (const char $\ast$keyName)
+\item 
+int \hyperlink{classNetworkTable_a96fac0b010b3762ca76f9a7266ea4ea8}{GetInt} (const char $\ast$keyName)
+\item 
+bool \hyperlink{classNetworkTable_a8388a7c761af8aa9df26929a42a1984a}{GetBoolean} (const char $\ast$keyName)
+\item 
+double \hyperlink{classNetworkTable_a0064df0b72ce042bb51bebbda2b396f4}{GetDouble} (const char $\ast$keyName)
+\item 
+int \hyperlink{classNetworkTable_a8a165994e25e3fade757779330440c47}{GetString} (const char $\ast$keyName, char $\ast$value, int len)
+\item 
+\hypertarget{classNetworkTable_aa5aad73483c4393e4af3f5f6a154c679}{
+std::string {\bfseries GetString} (std::string keyName)}
+\label{classNetworkTable_aa5aad73483c4393e4af3f5f6a154c679}
+
+\item 
+\hyperlink{classNetworkTable}{NetworkTable} $\ast$ \hyperlink{classNetworkTable_a990ee7c518e453af4a679d35908e6821}{GetSubTable} (const char $\ast$keyName)
+\item 
+void \hyperlink{classNetworkTable_a150bef04c2df6d6b4adea7657bc6ec1e}{PutInt} (const char $\ast$keyName, int value)
+\item 
+void \hyperlink{classNetworkTable_ae5244280852af3478d9902268854c4ae}{PutBoolean} (const char $\ast$keyName, bool value)
+\item 
+void \hyperlink{classNetworkTable_a0bc059a8f6b65712ecba839e3286789c}{PutDouble} (const char $\ast$keyName, double value)
+\item 
+void \hyperlink{classNetworkTable_a3a3a0df1a3d71dc87841c2bc0d27afa0}{PutString} (const char $\ast$keyName, const char $\ast$value)
+\item 
+\hypertarget{classNetworkTable_a2cbadf9a7abea60470bd0202260832b7}{
+void {\bfseries PutString} (std::string keyName, std::string value)}
+\label{classNetworkTable_a2cbadf9a7abea60470bd0202260832b7}
+
+\item 
+void \hyperlink{classNetworkTable_a5a290e9425f7062b8e72a1042f9447fd}{PutSubTable} (const char $\ast$keyName, \hyperlink{classNetworkTable}{NetworkTable} $\ast$value)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{classNetworkTable_a333b5dd0e5cedf562eb64b1d34053954}{Initialize} ()
+\item 
+static \hyperlink{classNetworkTable}{NetworkTable} $\ast$ \hyperlink{classNetworkTable_ab4df628cbe15e2a4fcc49e3393239f9b}{GetTable} (const char $\ast$tableName)
+\item 
+\hypertarget{classNetworkTable_a960c4b62fb40a99dd8498f49ee6144d7}{
+static \hyperlink{classNetworkTable}{NetworkTable} $\ast$ {\bfseries GetTable} (int id)}
+\label{classNetworkTable_a960c4b62fb40a99dd8498f49ee6144d7}
+
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classNetworkTable_a3c88fc4701008243e251a4f7eace851b}{
+class \hyperlink{classNetworkTable_a3c88fc4701008243e251a4f7eace851b}{NetworkTables::Connection}}
+\label{classNetworkTable_a3c88fc4701008243e251a4f7eace851b}
+
+\item 
+\hypertarget{classNetworkTable_a8f69679fff9c3d64107b7cd01e8b5f92}{
+class \hyperlink{classNetworkTable_a8f69679fff9c3d64107b7cd01e8b5f92}{NetworkTables::Key}}
+\label{classNetworkTable_a8f69679fff9c3d64107b7cd01e8b5f92}
+
+\item 
+\hypertarget{classNetworkTable_afc95a13a99e18835a61aac3c99d5de24}{
+class \hyperlink{classNetworkTable_afc95a13a99e18835a61aac3c99d5de24}{NetworkTables::TableAssignment}}
+\label{classNetworkTable_afc95a13a99e18835a61aac3c99d5de24}
+
+\item 
+\hypertarget{classNetworkTable_a5e5f00607e5a3a7ecadc12a77e91e6a4}{
+class \hyperlink{classNetworkTable_a5e5f00607e5a3a7ecadc12a77e91e6a4}{NetworkTables::TableEntry}}
+\label{classNetworkTable_a5e5f00607e5a3a7ecadc12a77e91e6a4}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classNetworkTable_adfbdab51566db8de0aa13cf12a282a4f}{
+\index{NetworkTable@{NetworkTable}!AddAdditionListener@{AddAdditionListener}}
+\index{AddAdditionListener@{AddAdditionListener}!NetworkTable@{NetworkTable}}
+\subsubsection[{AddAdditionListener}]{\setlength{\rightskip}{0pt plus 5cm}void NetworkTable::AddAdditionListener (
+\begin{DoxyParamCaption}
+\item[{{\bf NetworkTableAdditionListener} $\ast$}]{listener}
+\end{DoxyParamCaption}
+)}}
+\label{classNetworkTable_adfbdab51566db8de0aa13cf12a282a4f}
+Adds the \hyperlink{classNetworkTableAdditionListener}{NetworkTableAdditionListener} to the table. 
+\begin{DoxyParams}{Parameters}
+{\em listener} & the listener to add \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classNetworkTableAdditionListener}{NetworkTableAdditionListener} 
+\end{DoxySeeAlso}
+\hypertarget{classNetworkTable_a4299ab2f82343a10d383d124e48b7fd7}{
+\index{NetworkTable@{NetworkTable}!AddChangeListener@{AddChangeListener}}
+\index{AddChangeListener@{AddChangeListener}!NetworkTable@{NetworkTable}}
+\subsubsection[{AddChangeListener}]{\setlength{\rightskip}{0pt plus 5cm}void NetworkTable::AddChangeListener (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{keyName, }
+\item[{{\bf NetworkTableChangeListener} $\ast$}]{listener}
+\end{DoxyParamCaption}
+)}}
+\label{classNetworkTable_a4299ab2f82343a10d383d124e48b7fd7}
+Adds a \hyperlink{classNetworkTableChangeListener}{NetworkTableChangeListener} to listen to the specified element. 
+\begin{DoxyParams}{Parameters}
+{\em keyName} & the key to listen to \\
+\hline
+{\em listener} & the listener \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classNetworkTableChangeListener}{NetworkTableChangeListener} 
+\end{DoxySeeAlso}
+\hypertarget{classNetworkTable_a4ddce7fe697fc353f29081be309b70f0}{
+\index{NetworkTable@{NetworkTable}!AddChangeListenerAny@{AddChangeListenerAny}}
+\index{AddChangeListenerAny@{AddChangeListenerAny}!NetworkTable@{NetworkTable}}
+\subsubsection[{AddChangeListenerAny}]{\setlength{\rightskip}{0pt plus 5cm}void NetworkTable::AddChangeListenerAny (
+\begin{DoxyParamCaption}
+\item[{{\bf NetworkTableChangeListener} $\ast$}]{listener}
+\end{DoxyParamCaption}
+)}}
+\label{classNetworkTable_a4ddce7fe697fc353f29081be309b70f0}
+Adds a \hyperlink{classNetworkTableChangeListener}{NetworkTableChangeListener} to listen to any element changed in the table 
+\begin{DoxyParams}{Parameters}
+{\em listener} & the listener \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classNetworkTableChangeListener}{NetworkTableChangeListener} 
+\end{DoxySeeAlso}
+\hypertarget{classNetworkTable_ad4a248973f11e2cfba103ad1fec6d564}{
+\index{NetworkTable@{NetworkTable}!AddConnectionListener@{AddConnectionListener}}
+\index{AddConnectionListener@{AddConnectionListener}!NetworkTable@{NetworkTable}}
+\subsubsection[{AddConnectionListener}]{\setlength{\rightskip}{0pt plus 5cm}void NetworkTable::AddConnectionListener (
+\begin{DoxyParamCaption}
+\item[{{\bf NetworkTableConnectionListener} $\ast$}]{listener, }
+\item[{bool}]{immediateNotify}
+\end{DoxyParamCaption}
+)}}
+\label{classNetworkTable_ad4a248973f11e2cfba103ad1fec6d564}
+Adds a \hyperlink{classNetworkTableConnectionListener}{NetworkTableConnectionListener} to this table. 
+\begin{DoxyParams}{Parameters}
+{\em listener} & the listener to add \\
+\hline
+{\em immediateNotify} & whether to tell the listener of the current connection status \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classNetworkTableConnectionListener}{NetworkTableConnectionListener} 
+\end{DoxySeeAlso}
+\hypertarget{classNetworkTable_aad62de896f38d7685debeec344443bf9}{
+\index{NetworkTable@{NetworkTable}!BeginTransaction@{BeginTransaction}}
+\index{BeginTransaction@{BeginTransaction}!NetworkTable@{NetworkTable}}
+\subsubsection[{BeginTransaction}]{\setlength{\rightskip}{0pt plus 5cm}void NetworkTable::BeginTransaction (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classNetworkTable_aad62de896f38d7685debeec344443bf9}
+Begins a transaction. Note that you must call endTransaction() afterwards. \hypertarget{classNetworkTable_a8388a7c761af8aa9df26929a42a1984a}{
+\index{NetworkTable@{NetworkTable}!GetBoolean@{GetBoolean}}
+\index{GetBoolean@{GetBoolean}!NetworkTable@{NetworkTable}}
+\subsubsection[{GetBoolean}]{\setlength{\rightskip}{0pt plus 5cm}bool NetworkTable::GetBoolean (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{keyName}
+\end{DoxyParamCaption}
+)}}
+\label{classNetworkTable_a8388a7c761af8aa9df26929a42a1984a}
+Returns the value at the specified key. 
+\begin{DoxyParams}{Parameters}
+{\em keyName} & the key \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the value 
+\end{DoxyReturn}
+\hypertarget{classNetworkTable_a0064df0b72ce042bb51bebbda2b396f4}{
+\index{NetworkTable@{NetworkTable}!GetDouble@{GetDouble}}
+\index{GetDouble@{GetDouble}!NetworkTable@{NetworkTable}}
+\subsubsection[{GetDouble}]{\setlength{\rightskip}{0pt plus 5cm}double NetworkTable::GetDouble (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{keyName}
+\end{DoxyParamCaption}
+)}}
+\label{classNetworkTable_a0064df0b72ce042bb51bebbda2b396f4}
+Returns the value at the specified key. 
+\begin{DoxyParams}{Parameters}
+{\em keyName} & the key \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the value 
+\end{DoxyReturn}
+\hypertarget{classNetworkTable_ab1d185782e5ff4e952a3ba971b123e09}{
+\index{NetworkTable@{NetworkTable}!GetEntry@{GetEntry}}
+\index{GetEntry@{GetEntry}!NetworkTable@{NetworkTable}}
+\subsubsection[{GetEntry}]{\setlength{\rightskip}{0pt plus 5cm}{\bf NetworkTables::Entry} $\ast$ NetworkTable::GetEntry (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{keyName}
+\end{DoxyParamCaption}
+)}}
+\label{classNetworkTable_ab1d185782e5ff4e952a3ba971b123e09}
+Internally used to get at the underlying Entry 
+\begin{DoxyParams}{Parameters}
+{\em keyName} & the name of the key \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the entry at that position (or null if no entry) 
+\end{DoxyReturn}
+\hypertarget{classNetworkTable_a96fac0b010b3762ca76f9a7266ea4ea8}{
+\index{NetworkTable@{NetworkTable}!GetInt@{GetInt}}
+\index{GetInt@{GetInt}!NetworkTable@{NetworkTable}}
+\subsubsection[{GetInt}]{\setlength{\rightskip}{0pt plus 5cm}int NetworkTable::GetInt (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{keyName}
+\end{DoxyParamCaption}
+)}}
+\label{classNetworkTable_a96fac0b010b3762ca76f9a7266ea4ea8}
+Returns the value at the specified key. 
+\begin{DoxyParams}{Parameters}
+{\em keyName} & the key \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the value 
+\end{DoxyReturn}
+\hypertarget{classNetworkTable_a8a165994e25e3fade757779330440c47}{
+\index{NetworkTable@{NetworkTable}!GetString@{GetString}}
+\index{GetString@{GetString}!NetworkTable@{NetworkTable}}
+\subsubsection[{GetString}]{\setlength{\rightskip}{0pt plus 5cm}int NetworkTable::GetString (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{keyName, }
+\item[{char $\ast$}]{value, }
+\item[{int}]{len}
+\end{DoxyParamCaption}
+)}}
+\label{classNetworkTable_a8a165994e25e3fade757779330440c47}
+Returns the value at the specified key. 
+\begin{DoxyParams}{Parameters}
+{\em keyName} & the key \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the value 
+\end{DoxyReturn}
+\hypertarget{classNetworkTable_a990ee7c518e453af4a679d35908e6821}{
+\index{NetworkTable@{NetworkTable}!GetSubTable@{GetSubTable}}
+\index{GetSubTable@{GetSubTable}!NetworkTable@{NetworkTable}}
+\subsubsection[{GetSubTable}]{\setlength{\rightskip}{0pt plus 5cm}{\bf NetworkTable} $\ast$ NetworkTable::GetSubTable (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{keyName}
+\end{DoxyParamCaption}
+)}}
+\label{classNetworkTable_a990ee7c518e453af4a679d35908e6821}
+Returns the value at the specified key. 
+\begin{DoxyParams}{Parameters}
+{\em keyName} & the key \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the value 
+\end{DoxyReturn}
+\hypertarget{classNetworkTable_ab4df628cbe15e2a4fcc49e3393239f9b}{
+\index{NetworkTable@{NetworkTable}!GetTable@{GetTable}}
+\index{GetTable@{GetTable}!NetworkTable@{NetworkTable}}
+\subsubsection[{GetTable}]{\setlength{\rightskip}{0pt plus 5cm}{\bf NetworkTable} $\ast$ NetworkTable::GetTable (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{tableName}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{classNetworkTable_ab4df628cbe15e2a4fcc49e3393239f9b}
+Returns the table with the given name. The table will automatically be connected by clients asking for the same table. 
+\begin{DoxyParams}{Parameters}
+{\em tableName} & The name of the table \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The table 
+\end{DoxyReturn}
+\hypertarget{classNetworkTable_a333b5dd0e5cedf562eb64b1d34053954}{
+\index{NetworkTable@{NetworkTable}!Initialize@{Initialize}}
+\index{Initialize@{Initialize}!NetworkTable@{NetworkTable}}
+\subsubsection[{Initialize}]{\setlength{\rightskip}{0pt plus 5cm}void NetworkTable::Initialize (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{classNetworkTable_a333b5dd0e5cedf562eb64b1d34053954}
+Opens up the connection stream. Note that this method will be called automatically when \hyperlink{classNetworkTable_ab4df628cbe15e2a4fcc49e3393239f9b}{NetworkTable\#GetTable(const char $\ast$)} is called. This will only have an effect the first time this is called. \hypertarget{classNetworkTable_a9ff833b20c5734863225b05fff9d3cca}{
+\index{NetworkTable@{NetworkTable}!IsConnected@{IsConnected}}
+\index{IsConnected@{IsConnected}!NetworkTable@{NetworkTable}}
+\subsubsection[{IsConnected}]{\setlength{\rightskip}{0pt plus 5cm}bool NetworkTable::IsConnected (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classNetworkTable_a9ff833b20c5734863225b05fff9d3cca}
+Returns whether or not this table is connected to the robot.
+
+\begin{DoxyReturn}{Returns}
+whether or not this table is connected to the robot 
+\end{DoxyReturn}
+\hypertarget{classNetworkTable_ae5244280852af3478d9902268854c4ae}{
+\index{NetworkTable@{NetworkTable}!PutBoolean@{PutBoolean}}
+\index{PutBoolean@{PutBoolean}!NetworkTable@{NetworkTable}}
+\subsubsection[{PutBoolean}]{\setlength{\rightskip}{0pt plus 5cm}void NetworkTable::PutBoolean (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{keyName, }
+\item[{bool}]{value}
+\end{DoxyParamCaption}
+)}}
+\label{classNetworkTable_ae5244280852af3478d9902268854c4ae}
+Maps the specified key to the specified value in this table. Neither the key nor the value can be null. The value can be retrieved by calling the get method with a key that is equal to the original key. 
+\begin{DoxyParams}{Parameters}
+{\em keyName} & the key \\
+\hline
+{\em value} & the value \\
+\hline
+\end{DoxyParams}
+\hypertarget{classNetworkTable_a0bc059a8f6b65712ecba839e3286789c}{
+\index{NetworkTable@{NetworkTable}!PutDouble@{PutDouble}}
+\index{PutDouble@{PutDouble}!NetworkTable@{NetworkTable}}
+\subsubsection[{PutDouble}]{\setlength{\rightskip}{0pt plus 5cm}void NetworkTable::PutDouble (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{keyName, }
+\item[{double}]{value}
+\end{DoxyParamCaption}
+)}}
+\label{classNetworkTable_a0bc059a8f6b65712ecba839e3286789c}
+Maps the specified key to the specified value in this table. Neither the key nor the value can be null. The value can be retrieved by calling the get method with a key that is equal to the original key. 
+\begin{DoxyParams}{Parameters}
+{\em keyName} & the key \\
+\hline
+{\em value} & the value \\
+\hline
+\end{DoxyParams}
+\hypertarget{classNetworkTable_a150bef04c2df6d6b4adea7657bc6ec1e}{
+\index{NetworkTable@{NetworkTable}!PutInt@{PutInt}}
+\index{PutInt@{PutInt}!NetworkTable@{NetworkTable}}
+\subsubsection[{PutInt}]{\setlength{\rightskip}{0pt plus 5cm}void NetworkTable::PutInt (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{keyName, }
+\item[{int}]{value}
+\end{DoxyParamCaption}
+)}}
+\label{classNetworkTable_a150bef04c2df6d6b4adea7657bc6ec1e}
+Maps the specified key to the specified value in this table. Neither the key nor the value can be null. The value can be retrieved by calling the get method with a key that is equal to the original key. 
+\begin{DoxyParams}{Parameters}
+{\em keyName} & the key \\
+\hline
+{\em value} & the value \\
+\hline
+\end{DoxyParams}
+\hypertarget{classNetworkTable_a3a3a0df1a3d71dc87841c2bc0d27afa0}{
+\index{NetworkTable@{NetworkTable}!PutString@{PutString}}
+\index{PutString@{PutString}!NetworkTable@{NetworkTable}}
+\subsubsection[{PutString}]{\setlength{\rightskip}{0pt plus 5cm}void NetworkTable::PutString (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{keyName, }
+\item[{const char $\ast$}]{value}
+\end{DoxyParamCaption}
+)}}
+\label{classNetworkTable_a3a3a0df1a3d71dc87841c2bc0d27afa0}
+Maps the specified key to the specified value in this table. Neither the key nor the value can be null. The value can be retrieved by calling the get method with a key that is equal to the original key. 
+\begin{DoxyParams}{Parameters}
+{\em keyName} & the key \\
+\hline
+{\em value} & the value \\
+\hline
+\end{DoxyParams}
+\hypertarget{classNetworkTable_a5a290e9425f7062b8e72a1042f9447fd}{
+\index{NetworkTable@{NetworkTable}!PutSubTable@{PutSubTable}}
+\index{PutSubTable@{PutSubTable}!NetworkTable@{NetworkTable}}
+\subsubsection[{PutSubTable}]{\setlength{\rightskip}{0pt plus 5cm}void NetworkTable::PutSubTable (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{keyName, }
+\item[{{\bf NetworkTable} $\ast$}]{value}
+\end{DoxyParamCaption}
+)}}
+\label{classNetworkTable_a5a290e9425f7062b8e72a1042f9447fd}
+Maps the specified key to the specified value in this table. Neither the key nor the value can be null. The value can be retrieved by calling the get method with a key that is equal to the original key. 
+\begin{DoxyParams}{Parameters}
+{\em keyName} & the key \\
+\hline
+{\em value} & the value \\
+\hline
+\end{DoxyParams}
+\hypertarget{classNetworkTable_a6f4293d410e8530ebb6d510ed896a165}{
+\index{NetworkTable@{NetworkTable}!RemoveAdditionListener@{RemoveAdditionListener}}
+\index{RemoveAdditionListener@{RemoveAdditionListener}!NetworkTable@{NetworkTable}}
+\subsubsection[{RemoveAdditionListener}]{\setlength{\rightskip}{0pt plus 5cm}void NetworkTable::RemoveAdditionListener (
+\begin{DoxyParamCaption}
+\item[{{\bf NetworkTableAdditionListener} $\ast$}]{listener}
+\end{DoxyParamCaption}
+)}}
+\label{classNetworkTable_a6f4293d410e8530ebb6d510ed896a165}
+Removes the given \hyperlink{classNetworkTableAdditionListener}{NetworkTableAdditionListener} from the set of listeners. 
+\begin{DoxyParams}{Parameters}
+{\em listener} & the listener to remove \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classNetworkTableAdditionListener}{NetworkTableAdditionListener} 
+\end{DoxySeeAlso}
+\hypertarget{classNetworkTable_a4d5550ae57067f0719fc70b079fb37f2}{
+\index{NetworkTable@{NetworkTable}!RemoveChangeListener@{RemoveChangeListener}}
+\index{RemoveChangeListener@{RemoveChangeListener}!NetworkTable@{NetworkTable}}
+\subsubsection[{RemoveChangeListener}]{\setlength{\rightskip}{0pt plus 5cm}void NetworkTable::RemoveChangeListener (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{keyName, }
+\item[{{\bf NetworkTableChangeListener} $\ast$}]{listener}
+\end{DoxyParamCaption}
+)}}
+\label{classNetworkTable_a4d5550ae57067f0719fc70b079fb37f2}
+Removes the given \hyperlink{classNetworkTableChangeListener}{NetworkTableChangeListener} from the specified element. 
+\begin{DoxyParams}{Parameters}
+{\em keyName} & the key to no longer listen to. \\
+\hline
+{\em listener} & the listener to remove \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classNetworkTableChangeListener}{NetworkTableChangeListener} 
+\end{DoxySeeAlso}
+\hypertarget{classNetworkTable_aba3ab188d07587e51dcdb64b0602ae72}{
+\index{NetworkTable@{NetworkTable}!RemoveChangeListenerAny@{RemoveChangeListenerAny}}
+\index{RemoveChangeListenerAny@{RemoveChangeListenerAny}!NetworkTable@{NetworkTable}}
+\subsubsection[{RemoveChangeListenerAny}]{\setlength{\rightskip}{0pt plus 5cm}void NetworkTable::RemoveChangeListenerAny (
+\begin{DoxyParamCaption}
+\item[{{\bf NetworkTableChangeListener} $\ast$}]{listener}
+\end{DoxyParamCaption}
+)}}
+\label{classNetworkTable_aba3ab188d07587e51dcdb64b0602ae72}
+Removes the given \hyperlink{classNetworkTableChangeListener}{NetworkTableChangeListener} for any element in the table. 
+\begin{DoxyParams}{Parameters}
+{\em listener} & the listener to remove \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classNetworkTableChangeListener}{NetworkTableChangeListener} 
+\end{DoxySeeAlso}
+\hypertarget{classNetworkTable_ac8a8666f2eef96064bb2c4a77d667f98}{
+\index{NetworkTable@{NetworkTable}!RemoveConnectionListener@{RemoveConnectionListener}}
+\index{RemoveConnectionListener@{RemoveConnectionListener}!NetworkTable@{NetworkTable}}
+\subsubsection[{RemoveConnectionListener}]{\setlength{\rightskip}{0pt plus 5cm}void NetworkTable::RemoveConnectionListener (
+\begin{DoxyParamCaption}
+\item[{{\bf NetworkTableConnectionListener} $\ast$}]{listener}
+\end{DoxyParamCaption}
+)}}
+\label{classNetworkTable_ac8a8666f2eef96064bb2c4a77d667f98}
+Removes the given \hyperlink{classNetworkTableConnectionListener}{NetworkTableConnectionListener} from the table. 
+\begin{DoxyParams}{Parameters}
+{\em listener} & the listener to remove \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classNetworkTableConnectionListener}{NetworkTableConnectionListener} 
+\end{DoxySeeAlso}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+NetworkTables/NetworkTable.h\item 
+NetworkTables/NetworkTable.cpp\end{DoxyCompactItemize}

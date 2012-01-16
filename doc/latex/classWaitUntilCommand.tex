@@ -1,0 +1,126 @@
+\hypertarget{classWaitUntilCommand}{
+\section{WaitUntilCommand Class Reference}
+\label{classWaitUntilCommand}\index{WaitUntilCommand@{WaitUntilCommand}}
+}
+Inheritance diagram for WaitUntilCommand:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{classWaitUntilCommand}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classWaitUntilCommand_a00e1d34ff59ae250e16362684f7ae728}{WaitUntilCommand} (double time)
+\item 
+\hypertarget{classWaitUntilCommand_adb3ccebc9ac0d3983b51c1a6832be3d4}{
+{\bfseries WaitUntilCommand} (const char $\ast$name, double time)}
+\label{classWaitUntilCommand_adb3ccebc9ac0d3983b51c1a6832be3d4}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{classWaitUntilCommand_a30821833969223f43bbd99aaec21c8e8}{Initialize} ()
+\item 
+virtual void \hyperlink{classWaitUntilCommand_aeecc3b6e8fe480786bbb40a486e9812e}{Execute} ()
+\item 
+virtual bool \hyperlink{classWaitUntilCommand_aa176f72313e401526cd617714fe4594f}{IsFinished} ()
+\item 
+virtual void \hyperlink{classWaitUntilCommand_aba53383b0516939f352f86aef61467c0}{End} ()
+\item 
+virtual void \hyperlink{classWaitUntilCommand_ac60f29d6f35a3f40375536ec7f8c0141}{Interrupted} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classWaitUntilCommand_a00e1d34ff59ae250e16362684f7ae728}{
+\index{WaitUntilCommand@{WaitUntilCommand}!WaitUntilCommand@{WaitUntilCommand}}
+\index{WaitUntilCommand@{WaitUntilCommand}!WaitUntilCommand@{WaitUntilCommand}}
+\subsubsection[{WaitUntilCommand}]{\setlength{\rightskip}{0pt plus 5cm}WaitUntilCommand::WaitUntilCommand (
+\begin{DoxyParamCaption}
+\item[{double}]{time}
+\end{DoxyParamCaption}
+)}}
+\label{classWaitUntilCommand_a00e1d34ff59ae250e16362684f7ae728}
+A \hyperlink{classWaitCommand}{WaitCommand} will wait until a certain match time before finishing. This will wait until the game clock reaches some value, then continue to the next command. \begin{DoxySeeAlso}{See also}
+\hyperlink{classCommandGroup}{CommandGroup} 
+\end{DoxySeeAlso}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classWaitUntilCommand_aba53383b0516939f352f86aef61467c0}{
+\index{WaitUntilCommand@{WaitUntilCommand}!End@{End}}
+\index{End@{End}!WaitUntilCommand@{WaitUntilCommand}}
+\subsubsection[{End}]{\setlength{\rightskip}{0pt plus 5cm}void WaitUntilCommand::End (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}protected, virtual\mbox{]}}}}
+\label{classWaitUntilCommand_aba53383b0516939f352f86aef61467c0}
+Called when the command ended peacefully. This is where you may want to wrap up loose ends, like shutting off a motor that was being used in the command. 
+
+Implements \hyperlink{classCommand_aafdfd2fd2f1d005c20b7f9e60450dc7a}{Command}.
+
+\hypertarget{classWaitUntilCommand_aeecc3b6e8fe480786bbb40a486e9812e}{
+\index{WaitUntilCommand@{WaitUntilCommand}!Execute@{Execute}}
+\index{Execute@{Execute}!WaitUntilCommand@{WaitUntilCommand}}
+\subsubsection[{Execute}]{\setlength{\rightskip}{0pt plus 5cm}void WaitUntilCommand::Execute (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}protected, virtual\mbox{]}}}}
+\label{classWaitUntilCommand_aeecc3b6e8fe480786bbb40a486e9812e}
+The execute method is called repeatedly until this \hyperlink{classCommand}{Command} either finishes or is canceled. 
+
+Implements \hyperlink{classCommand_a484c34647660fcfc8ee46b04ad5b32b6}{Command}.
+
+\hypertarget{classWaitUntilCommand_a30821833969223f43bbd99aaec21c8e8}{
+\index{WaitUntilCommand@{WaitUntilCommand}!Initialize@{Initialize}}
+\index{Initialize@{Initialize}!WaitUntilCommand@{WaitUntilCommand}}
+\subsubsection[{Initialize}]{\setlength{\rightskip}{0pt plus 5cm}void WaitUntilCommand::Initialize (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}protected, virtual\mbox{]}}}}
+\label{classWaitUntilCommand_a30821833969223f43bbd99aaec21c8e8}
+The initialize method is called the first time this \hyperlink{classCommand}{Command} is run after being started. 
+
+Implements \hyperlink{classCommand_a35b4c5ab42d8190791863cc8f1224231}{Command}.
+
+\hypertarget{classWaitUntilCommand_ac60f29d6f35a3f40375536ec7f8c0141}{
+\index{WaitUntilCommand@{WaitUntilCommand}!Interrupted@{Interrupted}}
+\index{Interrupted@{Interrupted}!WaitUntilCommand@{WaitUntilCommand}}
+\subsubsection[{Interrupted}]{\setlength{\rightskip}{0pt plus 5cm}void WaitUntilCommand::Interrupted (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}protected, virtual\mbox{]}}}}
+\label{classWaitUntilCommand_ac60f29d6f35a3f40375536ec7f8c0141}
+Called when the command ends because somebody called \hyperlink{}{cancel()} or another command shared the same requirements as this one, and booted it out.
+
+This is where you may want to wrap up loose ends, like shutting off a motor that was being used in the command.
+
+Generally, it is useful to simply call the \hyperlink{}{end()} method within this method 
+
+Implements \hyperlink{classCommand_adaad5530c4dfdaac5e503ca373548a8e}{Command}.
+
+\hypertarget{classWaitUntilCommand_aa176f72313e401526cd617714fe4594f}{
+\index{WaitUntilCommand@{WaitUntilCommand}!IsFinished@{IsFinished}}
+\index{IsFinished@{IsFinished}!WaitUntilCommand@{WaitUntilCommand}}
+\subsubsection[{IsFinished}]{\setlength{\rightskip}{0pt plus 5cm}bool WaitUntilCommand::IsFinished (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}protected, virtual\mbox{]}}}}
+\label{classWaitUntilCommand_aa176f72313e401526cd617714fe4594f}
+Check if we've reached the actual finish time. 
+
+Implements \hyperlink{classCommand_a350a1e6657cd59f177f55e8451e60aa9}{Command}.
+
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+Commands/WaitUntilCommand.h\item 
+Commands/WaitUntilCommand.cpp\end{DoxyCompactItemize}

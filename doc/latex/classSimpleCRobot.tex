@@ -1,0 +1,51 @@
+\hypertarget{classSimpleCRobot}{
+\section{SimpleCRobot Class Reference}
+\label{classSimpleCRobot}\index{SimpleCRobot@{SimpleCRobot}}
+}
+Inheritance diagram for SimpleCRobot:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classSimpleCRobot}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classSimpleCRobot_a2d87751903e0921cb66ff19996d00b56}{SimpleCRobot} ()
+\item 
+void \hyperlink{classSimpleCRobot_abdd266a94d837f7f111ba8fae92b4930}{StartCompetition} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classSimpleCRobot_a2d87751903e0921cb66ff19996d00b56}{
+\index{SimpleCRobot@{SimpleCRobot}!SimpleCRobot@{SimpleCRobot}}
+\index{SimpleCRobot@{SimpleCRobot}!SimpleCRobot@{SimpleCRobot}}
+\subsubsection[{SimpleCRobot}]{\setlength{\rightskip}{0pt plus 5cm}SimpleCRobot::SimpleCRobot (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{classSimpleCRobot_a2d87751903e0921cb66ff19996d00b56}
+The simple robot constructor. The constructor, besides doing the normal constructor stuff, also calls the Initialize() C function where sensors can be set up immediately after the power is turned on. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classSimpleCRobot_abdd266a94d837f7f111ba8fae92b4930}{
+\index{SimpleCRobot@{SimpleCRobot}!StartCompetition@{StartCompetition}}
+\index{StartCompetition@{StartCompetition}!SimpleCRobot@{SimpleCRobot}}
+\subsubsection[{StartCompetition}]{\setlength{\rightskip}{0pt plus 5cm}void SimpleCRobot::StartCompetition (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classSimpleCRobot_abdd266a94d837f7f111ba8fae92b4930}
+Start a competition. This code needs to track the order of the field starting to ensure that everything happens in the right order. Repeatedly run the correct method, either Autonomous or OperatorControl when the robot is enabled. After running the correct method, wait for some state to change, either the other mode starts or the robot is disabled. Then go back and wait for the robot to be enabled again. 
+
+Implements \hyperlink{classRobotBase}{RobotBase}.
+
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+CInterfaces/SimpleCRobot.h\item 
+CInterfaces/SimpleCRobot.cpp\end{DoxyCompactItemize}

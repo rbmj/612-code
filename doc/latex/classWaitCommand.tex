@@ -1,0 +1,122 @@
+\hypertarget{classWaitCommand}{
+\section{WaitCommand Class Reference}
+\label{classWaitCommand}\index{WaitCommand@{WaitCommand}}
+}
+Inheritance diagram for WaitCommand:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{classWaitCommand}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classWaitCommand_a6a2f9603b86feaea525bdb888f221607}{
+{\bfseries WaitCommand} (double timeout)}
+\label{classWaitCommand_a6a2f9603b86feaea525bdb888f221607}
+
+\item 
+\hypertarget{classWaitCommand_a98d963c49824d28ebc487aaaa0d5dda8}{
+{\bfseries WaitCommand} (const char $\ast$name, double timeout)}
+\label{classWaitCommand_a98d963c49824d28ebc487aaaa0d5dda8}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{classWaitCommand_a272bb9b16371f8ca22c5fc807d76f1e7}{Initialize} ()
+\item 
+virtual void \hyperlink{classWaitCommand_ae86cf56da58179704fefe8f3a72e76b2}{Execute} ()
+\item 
+virtual bool \hyperlink{classWaitCommand_a118c9fa181b03cd80969a1a2b16508a5}{IsFinished} ()
+\item 
+virtual void \hyperlink{classWaitCommand_a440032f840a2f61bba2a9be2699227bf}{End} ()
+\item 
+virtual void \hyperlink{classWaitCommand_a5c88fdb4af42a240002d92eb3d9059d6}{Interrupted} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classWaitCommand_a440032f840a2f61bba2a9be2699227bf}{
+\index{WaitCommand@{WaitCommand}!End@{End}}
+\index{End@{End}!WaitCommand@{WaitCommand}}
+\subsubsection[{End}]{\setlength{\rightskip}{0pt plus 5cm}void WaitCommand::End (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}protected, virtual\mbox{]}}}}
+\label{classWaitCommand_a440032f840a2f61bba2a9be2699227bf}
+Called when the command ended peacefully. This is where you may want to wrap up loose ends, like shutting off a motor that was being used in the command. 
+
+Implements \hyperlink{classCommand_aafdfd2fd2f1d005c20b7f9e60450dc7a}{Command}.
+
+\hypertarget{classWaitCommand_ae86cf56da58179704fefe8f3a72e76b2}{
+\index{WaitCommand@{WaitCommand}!Execute@{Execute}}
+\index{Execute@{Execute}!WaitCommand@{WaitCommand}}
+\subsubsection[{Execute}]{\setlength{\rightskip}{0pt plus 5cm}void WaitCommand::Execute (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}protected, virtual\mbox{]}}}}
+\label{classWaitCommand_ae86cf56da58179704fefe8f3a72e76b2}
+The execute method is called repeatedly until this \hyperlink{classCommand}{Command} either finishes or is canceled. 
+
+Implements \hyperlink{classCommand_a484c34647660fcfc8ee46b04ad5b32b6}{Command}.
+
+\hypertarget{classWaitCommand_a272bb9b16371f8ca22c5fc807d76f1e7}{
+\index{WaitCommand@{WaitCommand}!Initialize@{Initialize}}
+\index{Initialize@{Initialize}!WaitCommand@{WaitCommand}}
+\subsubsection[{Initialize}]{\setlength{\rightskip}{0pt plus 5cm}void WaitCommand::Initialize (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}protected, virtual\mbox{]}}}}
+\label{classWaitCommand_a272bb9b16371f8ca22c5fc807d76f1e7}
+The initialize method is called the first time this \hyperlink{classCommand}{Command} is run after being started. 
+
+Implements \hyperlink{classCommand_a35b4c5ab42d8190791863cc8f1224231}{Command}.
+
+\hypertarget{classWaitCommand_a5c88fdb4af42a240002d92eb3d9059d6}{
+\index{WaitCommand@{WaitCommand}!Interrupted@{Interrupted}}
+\index{Interrupted@{Interrupted}!WaitCommand@{WaitCommand}}
+\subsubsection[{Interrupted}]{\setlength{\rightskip}{0pt plus 5cm}void WaitCommand::Interrupted (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}protected, virtual\mbox{]}}}}
+\label{classWaitCommand_a5c88fdb4af42a240002d92eb3d9059d6}
+Called when the command ends because somebody called \hyperlink{}{cancel()} or another command shared the same requirements as this one, and booted it out.
+
+This is where you may want to wrap up loose ends, like shutting off a motor that was being used in the command.
+
+Generally, it is useful to simply call the \hyperlink{}{end()} method within this method 
+
+Implements \hyperlink{classCommand_adaad5530c4dfdaac5e503ca373548a8e}{Command}.
+
+\hypertarget{classWaitCommand_a118c9fa181b03cd80969a1a2b16508a5}{
+\index{WaitCommand@{WaitCommand}!IsFinished@{IsFinished}}
+\index{IsFinished@{IsFinished}!WaitCommand@{WaitCommand}}
+\subsubsection[{IsFinished}]{\setlength{\rightskip}{0pt plus 5cm}bool WaitCommand::IsFinished (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}protected, virtual\mbox{]}}}}
+\label{classWaitCommand_a118c9fa181b03cd80969a1a2b16508a5}
+Returns whether this command is finished. If it is, then the command will be removed and \hyperlink{}{end()} will be called.
+
+It may be useful for a team to reference the \hyperlink{}{isTimedOut()} method for time-\/sensitive commands. \begin{DoxyReturn}{Returns}
+whether this command is finished. 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+Command::isTimedOut() isTimedOut() 
+\end{DoxySeeAlso}
+
+
+Implements \hyperlink{classCommand_a350a1e6657cd59f177f55e8451e60aa9}{Command}.
+
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+Commands/WaitCommand.h\item 
+Commands/WaitCommand.cpp\end{DoxyCompactItemize}

@@ -1,0 +1,325 @@
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tDMA}{
+\section{nFPGA::nFRC\_\-2012\_\-1\_\-6\_\-4::tDMA Class Reference}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tDMA}\index{nFPGA::nFRC\_\-2012\_\-1\_\-6\_\-4::tDMA@{nFPGA::nFRC\_\-2012\_\-1\_\-6\_\-4::tDMA}}
+}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+union \hyperlink{unionnFPGA_1_1nFRC__2012__1__6__4_1_1tDMA_1_1tConfig}{tConfig}
+\item 
+union \hyperlink{unionnFPGA_1_1nFRC__2012__1__6__4_1_1tDMA_1_1tExternalTriggers}{tExternalTriggers}
+\end{DoxyCompactItemize}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum {\bfseries tIfaceConstants} \{ {\bfseries kNumSystems} =  1
+ \}
+\item 
+enum {\bfseries tRate\_\-IfaceConstants} 
+\item 
+enum {\bfseries tConfig\_\-IfaceConstants} 
+\item 
+enum {\bfseries tExternalTriggers\_\-IfaceConstants} \{ {\bfseries kNumExternalTriggersElements} =  4
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tDMA_a96c02580fc31bd469edee25d782bff8a}{
+virtual \hyperlink{classnFPGA_1_1tSystemInterface}{tSystemInterface} $\ast$ {\bfseries getSystemInterface} ()=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tDMA_a96c02580fc31bd469edee25d782bff8a}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tDMA_a4ceb74e616283dd66933c59e9f086cff}{
+virtual void {\bfseries writeRate} (unsigned int value, tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tDMA_a4ceb74e616283dd66933c59e9f086cff}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tDMA_a254a0ec9a51c99acbee524cdc4cf1f34}{
+virtual unsigned int {\bfseries readRate} (tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tDMA_a254a0ec9a51c99acbee524cdc4cf1f34}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tDMA_ac0df5c05f70062b95d65ada702db34b7}{
+virtual void {\bfseries writeConfig} (\hyperlink{unionnFPGA_1_1nFRC__2012__1__6__4_1_1tDMA_1_1tConfig}{tConfig} value, tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tDMA_ac0df5c05f70062b95d65ada702db34b7}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tDMA_a13327c4ce80fb65868c5649192eb3b08}{
+virtual void {\bfseries writeConfig\_\-Pause} (bool value, tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tDMA_a13327c4ce80fb65868c5649192eb3b08}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tDMA_ab40d2d4b47f5d4ad7b1d3f10771d5393}{
+virtual void {\bfseries writeConfig\_\-Enable\_\-AI0\_\-Low} (bool value, tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tDMA_ab40d2d4b47f5d4ad7b1d3f10771d5393}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tDMA_a5033b18e29fc71eba7433370f9f33dad}{
+virtual void {\bfseries writeConfig\_\-Enable\_\-AI0\_\-High} (bool value, tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tDMA_a5033b18e29fc71eba7433370f9f33dad}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tDMA_a9738afad5d525049a238827db3a305cf}{
+virtual void {\bfseries writeConfig\_\-Enable\_\-AIAveraged0\_\-Low} (bool value, tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tDMA_a9738afad5d525049a238827db3a305cf}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tDMA_a4317a070e4d837f221ce7bf8cadffefa}{
+virtual void {\bfseries writeConfig\_\-Enable\_\-AIAveraged0\_\-High} (bool value, tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tDMA_a4317a070e4d837f221ce7bf8cadffefa}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tDMA_a6a7455ae3af7e30f3b3f9a81b70a4861}{
+virtual void {\bfseries writeConfig\_\-Enable\_\-AI1\_\-Low} (bool value, tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tDMA_a6a7455ae3af7e30f3b3f9a81b70a4861}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tDMA_af47023dd0e892aefb9c530ab893a25ad}{
+virtual void {\bfseries writeConfig\_\-Enable\_\-AI1\_\-High} (bool value, tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tDMA_af47023dd0e892aefb9c530ab893a25ad}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tDMA_adc11d0ca653e0a6525009b0f638c59c9}{
+virtual void {\bfseries writeConfig\_\-Enable\_\-AIAveraged1\_\-Low} (bool value, tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tDMA_adc11d0ca653e0a6525009b0f638c59c9}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tDMA_abf794c45215ceb3d3c0b1272dd5d2c59}{
+virtual void {\bfseries writeConfig\_\-Enable\_\-AIAveraged1\_\-High} (bool value, tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tDMA_abf794c45215ceb3d3c0b1272dd5d2c59}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tDMA_a48c31f556556362692b4b0cdad353910}{
+virtual void {\bfseries writeConfig\_\-Enable\_\-Accumulator0} (bool value, tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tDMA_a48c31f556556362692b4b0cdad353910}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tDMA_a2e5c38a4be177756ff6c3c9cd79457a7}{
+virtual void {\bfseries writeConfig\_\-Enable\_\-Accumulator1} (bool value, tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tDMA_a2e5c38a4be177756ff6c3c9cd79457a7}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tDMA_aa458ab464e9376b2e98a9309f48e6f7d}{
+virtual void {\bfseries writeConfig\_\-Enable\_\-DI} (bool value, tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tDMA_aa458ab464e9376b2e98a9309f48e6f7d}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tDMA_afc2f46132af910fb4200b3b344d6bb04}{
+virtual void {\bfseries writeConfig\_\-Enable\_\-AnalogTriggers} (bool value, tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tDMA_afc2f46132af910fb4200b3b344d6bb04}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tDMA_ab8bbba14b63f3771343b6e8b5c88905b}{
+virtual void {\bfseries writeConfig\_\-Enable\_\-Counters\_\-Low} (bool value, tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tDMA_ab8bbba14b63f3771343b6e8b5c88905b}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tDMA_a5ff7d240e7a5404d6cca642902c735a4}{
+virtual void {\bfseries writeConfig\_\-Enable\_\-Counters\_\-High} (bool value, tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tDMA_a5ff7d240e7a5404d6cca642902c735a4}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tDMA_aab35d0b4aa8cfeb9fc2de1bdbbd17277}{
+virtual void {\bfseries writeConfig\_\-Enable\_\-CounterTimers\_\-Low} (bool value, tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tDMA_aab35d0b4aa8cfeb9fc2de1bdbbd17277}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tDMA_a4a38c5ce37e8b88dc16a42b8b275f058}{
+virtual void {\bfseries writeConfig\_\-Enable\_\-CounterTimers\_\-High} (bool value, tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tDMA_a4a38c5ce37e8b88dc16a42b8b275f058}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tDMA_a6a79772c17bc891abf41e9a6c7accd37}{
+virtual void {\bfseries writeConfig\_\-Enable\_\-Encoders} (bool value, tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tDMA_a6a79772c17bc891abf41e9a6c7accd37}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tDMA_a3d73c3ae24b4a61ab40a8f7b7d4ec210}{
+virtual void {\bfseries writeConfig\_\-Enable\_\-EncoderTimers} (bool value, tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tDMA_a3d73c3ae24b4a61ab40a8f7b7d4ec210}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tDMA_a28171529b377f4e24117bafc57088912}{
+virtual void {\bfseries writeConfig\_\-ExternalClock} (bool value, tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tDMA_a28171529b377f4e24117bafc57088912}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tDMA_a24173ffd73f464a293e1c5844e805fab}{
+virtual \hyperlink{unionnFPGA_1_1nFRC__2012__1__6__4_1_1tDMA_1_1tConfig}{tConfig} {\bfseries readConfig} (tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tDMA_a24173ffd73f464a293e1c5844e805fab}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tDMA_a175749ef96deb9ae0cb4269bb97ff220}{
+virtual bool {\bfseries readConfig\_\-Pause} (tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tDMA_a175749ef96deb9ae0cb4269bb97ff220}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tDMA_a1581db7111b1cfeb24692e62e6c31876}{
+virtual bool {\bfseries readConfig\_\-Enable\_\-AI0\_\-Low} (tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tDMA_a1581db7111b1cfeb24692e62e6c31876}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tDMA_a825f900f98c5a6ab2d271062a4a1027a}{
+virtual bool {\bfseries readConfig\_\-Enable\_\-AI0\_\-High} (tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tDMA_a825f900f98c5a6ab2d271062a4a1027a}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tDMA_a7ec882c8619dacab5866d454c48daed4}{
+virtual bool {\bfseries readConfig\_\-Enable\_\-AIAveraged0\_\-Low} (tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tDMA_a7ec882c8619dacab5866d454c48daed4}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tDMA_a7f480d6b53f759bfaba6d8e5de1e7041}{
+virtual bool {\bfseries readConfig\_\-Enable\_\-AIAveraged0\_\-High} (tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tDMA_a7f480d6b53f759bfaba6d8e5de1e7041}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tDMA_afd99a1ac0263bf58a3a2752bb3b03ee2}{
+virtual bool {\bfseries readConfig\_\-Enable\_\-AI1\_\-Low} (tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tDMA_afd99a1ac0263bf58a3a2752bb3b03ee2}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tDMA_a3bc5ebd4565ae841e1ebe86d8a214742}{
+virtual bool {\bfseries readConfig\_\-Enable\_\-AI1\_\-High} (tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tDMA_a3bc5ebd4565ae841e1ebe86d8a214742}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tDMA_a0c974f53618de94ef922361560ded049}{
+virtual bool {\bfseries readConfig\_\-Enable\_\-AIAveraged1\_\-Low} (tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tDMA_a0c974f53618de94ef922361560ded049}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tDMA_a57fe517f4d1974843b29df45feb0f9ea}{
+virtual bool {\bfseries readConfig\_\-Enable\_\-AIAveraged1\_\-High} (tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tDMA_a57fe517f4d1974843b29df45feb0f9ea}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tDMA_ac4b63482671f2f0f8dc77f5594273f69}{
+virtual bool {\bfseries readConfig\_\-Enable\_\-Accumulator0} (tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tDMA_ac4b63482671f2f0f8dc77f5594273f69}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tDMA_ab51d2b58e87fbd2facebb28caf38cfb7}{
+virtual bool {\bfseries readConfig\_\-Enable\_\-Accumulator1} (tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tDMA_ab51d2b58e87fbd2facebb28caf38cfb7}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tDMA_a9b6ab8214a457489f6cce218a17dc98c}{
+virtual bool {\bfseries readConfig\_\-Enable\_\-DI} (tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tDMA_a9b6ab8214a457489f6cce218a17dc98c}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tDMA_ae45291751cafa7cb49dd7b99e7341493}{
+virtual bool {\bfseries readConfig\_\-Enable\_\-AnalogTriggers} (tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tDMA_ae45291751cafa7cb49dd7b99e7341493}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tDMA_af0e155b7366ca1cd06880bf100feedac}{
+virtual bool {\bfseries readConfig\_\-Enable\_\-Counters\_\-Low} (tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tDMA_af0e155b7366ca1cd06880bf100feedac}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tDMA_ae2a68433e793a29cfdf1c3cdeaae3b15}{
+virtual bool {\bfseries readConfig\_\-Enable\_\-Counters\_\-High} (tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tDMA_ae2a68433e793a29cfdf1c3cdeaae3b15}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tDMA_a2bcd54cedfb8169be56061c832ed1200}{
+virtual bool {\bfseries readConfig\_\-Enable\_\-CounterTimers\_\-Low} (tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tDMA_a2bcd54cedfb8169be56061c832ed1200}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tDMA_a43a3e1f7e8192727a4effc88d32712bf}{
+virtual bool {\bfseries readConfig\_\-Enable\_\-CounterTimers\_\-High} (tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tDMA_a43a3e1f7e8192727a4effc88d32712bf}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tDMA_a4ff37f659e4d798c501e8d38a6c8d24d}{
+virtual bool {\bfseries readConfig\_\-Enable\_\-Encoders} (tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tDMA_a4ff37f659e4d798c501e8d38a6c8d24d}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tDMA_a3b6616f97d883eba9afbbd25364f93d6}{
+virtual bool {\bfseries readConfig\_\-Enable\_\-EncoderTimers} (tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tDMA_a3b6616f97d883eba9afbbd25364f93d6}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tDMA_a95f89b51f67d26824e125b1c43ce811d}{
+virtual bool {\bfseries readConfig\_\-ExternalClock} (tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tDMA_a95f89b51f67d26824e125b1c43ce811d}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tDMA_abc26cd73a747335fc6cb5ec1a381c9de}{
+virtual void {\bfseries writeExternalTriggers} (unsigned char bitfield\_\-index, \hyperlink{unionnFPGA_1_1nFRC__2012__1__6__4_1_1tDMA_1_1tExternalTriggers}{tExternalTriggers} value, tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tDMA_abc26cd73a747335fc6cb5ec1a381c9de}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tDMA_afe7e732febdb71445a076dcc3861efe5}{
+virtual void {\bfseries writeExternalTriggers\_\-ExternalClockSource\_\-Channel} (unsigned char bitfield\_\-index, unsigned char value, tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tDMA_afe7e732febdb71445a076dcc3861efe5}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tDMA_a80dc57fd667dad73d7f09868ab8eff8e}{
+virtual void {\bfseries writeExternalTriggers\_\-ExternalClockSource\_\-Module} (unsigned char bitfield\_\-index, unsigned char value, tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tDMA_a80dc57fd667dad73d7f09868ab8eff8e}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tDMA_ad14f2cd25a6b67843cea66860bf81a4f}{
+virtual void {\bfseries writeExternalTriggers\_\-ExternalClockSource\_\-AnalogTrigger} (unsigned char bitfield\_\-index, bool value, tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tDMA_ad14f2cd25a6b67843cea66860bf81a4f}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tDMA_a3e3bf65ebc96483206ff11e16bbe5763}{
+virtual void {\bfseries writeExternalTriggers\_\-RisingEdge} (unsigned char bitfield\_\-index, bool value, tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tDMA_a3e3bf65ebc96483206ff11e16bbe5763}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tDMA_a07de0de28f6b3eac7f9b3137401ffdde}{
+virtual void {\bfseries writeExternalTriggers\_\-FallingEdge} (unsigned char bitfield\_\-index, bool value, tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tDMA_a07de0de28f6b3eac7f9b3137401ffdde}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tDMA_a8cb27bda7a3d3aeb48466d31a35718f6}{
+virtual \hyperlink{unionnFPGA_1_1nFRC__2012__1__6__4_1_1tDMA_1_1tExternalTriggers}{tExternalTriggers} {\bfseries readExternalTriggers} (unsigned char bitfield\_\-index, tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tDMA_a8cb27bda7a3d3aeb48466d31a35718f6}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tDMA_a74ba424c8120e4e0396640c3be138996}{
+virtual unsigned char {\bfseries readExternalTriggers\_\-ExternalClockSource\_\-Channel} (unsigned char bitfield\_\-index, tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tDMA_a74ba424c8120e4e0396640c3be138996}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tDMA_ac9d6cf7795bac7eb0c6e76743895d81c}{
+virtual unsigned char {\bfseries readExternalTriggers\_\-ExternalClockSource\_\-Module} (unsigned char bitfield\_\-index, tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tDMA_ac9d6cf7795bac7eb0c6e76743895d81c}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tDMA_a7ef28cf4da51f15777b9df0afc2d5b06}{
+virtual bool {\bfseries readExternalTriggers\_\-ExternalClockSource\_\-AnalogTrigger} (unsigned char bitfield\_\-index, tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tDMA_a7ef28cf4da51f15777b9df0afc2d5b06}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tDMA_a4d8d9ec6e4de3f40ccbb2c9095612de5}{
+virtual bool {\bfseries readExternalTriggers\_\-RisingEdge} (unsigned char bitfield\_\-index, tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tDMA_a4d8d9ec6e4de3f40ccbb2c9095612de5}
+
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tDMA_a3812bfb112d7f5044df718d74e8a6086}{
+virtual bool {\bfseries readExternalTriggers\_\-FallingEdge} (unsigned char bitfield\_\-index, tRioStatusCode $\ast$status)=0}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tDMA_a3812bfb112d7f5044df718d74e8a6086}
+
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classnFPGA_1_1nFRC__2012__1__6__4_1_1tDMA_afeb7f800be1df959bbe410d298a4ab54}{
+static \hyperlink{classnFPGA_1_1nFRC__2012__1__6__4_1_1tDMA}{tDMA} $\ast$ {\bfseries create} (tRioStatusCode $\ast$status)}
+\label{classnFPGA_1_1nFRC__2012__1__6__4_1_1tDMA_afeb7f800be1df959bbe410d298a4ab54}
+
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+ChipObject/tDMA.h\end{DoxyCompactItemize}
