@@ -33,7 +33,7 @@ void update_registry::unregister_func(update_registry::update_func f, void * a) 
     update_registry::registry_entry e(f, a);
     std::vector<update_registry::registry_entry>::iterator i = find_entry(e);
     if (i != registry.end()) {
-        registry.remove(i);
+        registry.erase(i);
     }
 }
 
