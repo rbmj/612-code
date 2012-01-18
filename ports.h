@@ -26,6 +26,10 @@
 #include <RobotDrive.h>
 #include <Jaguar.h>
 #include <Joystick.h>
+#include <Encoder.h>
+#include <Ultrasonic.h>
+#include <DigitalInput.h>
+#include <Relay.h>
 #include "update.h"
 
 //bundle a reference to a Jaguar and some constants to aid in setting up the

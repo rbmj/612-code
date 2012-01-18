@@ -22,6 +22,13 @@
  * the actual state of affairs on the electrical board!
  */
 
+#include <RobotDrive.h>
+#include <Jaguar.h>
+#include <Joystick.h>
+#include <Encoder.h>
+#include <Ultrasonic.h>
+#include <DigitalInput.h>
+#include <Relay.h>
 #include "ports.h"
 #include "update.h"
 
@@ -42,7 +49,7 @@ Jaguar turret_Z_control_jag             ( 4,     8 );
 //DIOs                                  SLOT   PORT
 Encoder right_drive                     ( 4,     1,
                                                  2 );
-Encoder left_drive                      ( 4,     3
+Encoder left_drive                      ( 4,     3,
                                                  4 );
 Encoder launcher_wheel                  ( 4,     5,
                                                  6 );
@@ -50,8 +57,13 @@ Encoder launch_angle                    ( 4,     7,
                                                  8 );
 
 DigitalInput launch_angle_limit_switch  ( 6,     1 );
-Ultrasonic front_sensor                 ( 6,     2,
-                                                 3 );
+//Ultrasonic front_sensor                 ( 6,     2,
+//                                                 3 );
+// Wrong constructor for Ultrasonic, is either:
+// Ultrasonic front_sensor(2, 3, Ultrasonic::DistanceUnit::kMilliMeters)
+// or
+// Ultrasonic front_sensor(6, 2, 6, 3, Ultrasonic::DistanceUnit::kMilliMeters)
+// Blair, can you verify?
 
 //AIOs                                  SLOT   PORT
 
