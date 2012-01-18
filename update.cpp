@@ -45,6 +45,6 @@ void update_registry::update() {
 }
 
 std::vector<update_registry::registry_entry>::iterator
-find_entry(const update_registry::registry_entry& e) {
+update_registry::find_entry(const update_registry::registry_entry& e) {
     return std::find(registry.begin(), registry.end(), e);
 }
