@@ -30,7 +30,6 @@
 #include <Ultrasonic.h>
 #include <DigitalInput.h>
 #include <Relay.h>
-#include "update.h"
 
 //bundle a reference to a Jaguar and some constants to aid in setting up the
 //robot's drivetrain.  Use this for jaguars that will be used in the RobotDrive
@@ -75,6 +74,5 @@ extern Joystick gunner_joystick;
 
 //Virtual Devices
 extern RobotDrive drive;
-extern update_registry registry;
 
 #endif

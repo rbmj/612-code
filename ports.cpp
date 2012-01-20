@@ -30,7 +30,6 @@
 #include <DigitalInput.h>
 #include <Relay.h>
 #include "ports.h"
-#include "update.h"
 
 //just define & initialize all of the consts in ports.h
 
@@ -85,9 +84,6 @@ RobotDrive drive (
     right_front_motor.jag, //for more details
     right_rear_motor.jag
 );
-
-//update_registry
-update_registry registry;
 
 //drive_jaguar                           JAGUAR&                 TYPE               REVERSE
 drive_jaguar left_front_motor =     { left_front_jag,  RobotDrive::kFrontLeftMotor,  true };

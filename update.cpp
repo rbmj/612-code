@@ -38,10 +38,10 @@ void update_registry::unregister_func(update_registry::update_func f, void * a) 
 }
 
 void update_registry::update() {
-	unsigned upper = registry.size();
-	for (unsigned i = 0; i < upper; ++i) {
-		registry[i]();
-	}
+    unsigned upper = registry.size();
+    for (unsigned i = 0; i < upper; ++i) {
+        registry[i]();
+    }
 }
 
 std::vector<update_registry::registry_entry>::iterator

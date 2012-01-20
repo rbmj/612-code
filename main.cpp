@@ -21,6 +21,7 @@
 
 #include "main.h"
 #include "ports.h"
+#include "update.h"
 
 //constructor - initialize drive
 robot_class::robot_class() {
