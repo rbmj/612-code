@@ -45,24 +45,28 @@ Jaguar left_launcher_jag                ( 4,     6 );
 Jaguar turret_XY_control_jag            ( 4,     7 );
 Jaguar turret_Z_control_jag             ( 4,     8 );
 
+//NOTE: Sica wants to use pots (potentiometers) for the angles, as those are
+//absolute and don't need a zero switch.  If we do that they're seen as
+//AnalogChannel s.  We'll want to write a quick wrapper class so we can get
+//an angular offset, but we'll cross that bridge when we come to it.
+
+//note: for two channel encoders, we need to specify a slot for both ports
 //DIOs                                  SLOT   PORT
 Encoder right_drive                     ( 4,     1,
-                                                 2 );
+                                          4,     2 );
 Encoder left_drive                      ( 4,     3,
-                                                 4 );
+                                          4,     4 );
 Encoder launcher_wheel                  ( 4,     5,
-                                                 6 );
+                                          4,     6 );
 Encoder launch_angle                    ( 4,     7,
-                                                 8 );
+                                          4,     8 );
 
 DigitalInput launch_angle_limit_switch  ( 6,     1 );
-//Ultrasonic front_sensor                 ( 6,     2,
-//                                                 3 );
-// Wrong constructor for Ultrasonic, is either:
-// Ultrasonic front_sensor(2, 3, Ultrasonic::DistanceUnit::kMilliMeters)
-// or
-// Ultrasonic front_sensor(6, 2, 6, 3, Ultrasonic::DistanceUnit::kMilliMeters)
-// Blair, can you verify?
+Ultrasonic front_sensor                 ( 6,     2,
+                                          6,     3 );
+                                          
+//note: since we rely on the default value of kInches for the 5th arg
+//we should use Ultrasonic::GetRangeInches().
 
 //AIOs                                  SLOT   PORT
 
