@@ -4,7 +4,7 @@
 #include "update.h"
 
 void register_callback(void*);
-void update_callback();
+void update_callback_joysmooth(void*);
 
 joysmooth(GenericHID* ghid) : joy(ghid) {
     register_callback((void*)this);
@@ -72,11 +72,11 @@ joysmooth::bool GetRawButton(uinteger btnId){
 }
 
 void register_callback(void* thisPtr) {
-    registry.register_func(update_callback, thisPtr);
+    registry.register_func(update_callback_joysmooth, thisPtr);
 }
 
-void update_callback(void* thisPtr) {
-    thisPtr->update();
+void update_callback_joysmooth(void* thisPtr) {
+    ((joysmooth*)thisPtr)->update();
 }
 
 #endif
