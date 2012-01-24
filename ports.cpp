@@ -36,14 +36,16 @@
 //PORTS TABLE
 
 //PWMs                                  SLOT   PORT
-Jaguar right_front_jag                  ( 4,     1 );
-Jaguar right_rear_jag                   ( 4,     2 );
-Jaguar left_front_jag                   ( 4,     3 );
-Jaguar left_rear_jag                    ( 4,     4 );
-Jaguar right_launcher_jag               ( 4,     5 );
-Jaguar left_launcher_jag                ( 4,     6 );
-Jaguar turret_XY_control_jag            ( 4,     7 );
-Jaguar turret_Z_control_jag             ( 4,     8 );
+Jaguar right_front_jag                  ( 4,     3 );
+Jaguar right_rear_jag                   ( 4,     4 );
+Jaguar left_front_jag                   ( 6,     1 );
+Jaguar left_rear_jag                    ( 6,     2 );
+Jaguar right_launcher_jag               ( 6,     3 );
+Jaguar left_launcher_jag                ( 6,     4 );
+Jaguar turret_XY_control_jag            ( 4,     1 );
+Jaguar turret_Z_control_jag             ( 4,     2 );
+Servo right_servo_shift                 ( 4,     5 );
+Servo left_servo_shift                  ( 6,     5 );
 
 //NOTE: Sica wants to use pots (potentiometers) for the angles, as those are
 //absolute and don't need a zero switch.  If we do that they're seen as
@@ -61,10 +63,9 @@ Encoder launcher_wheel                  ( 4,     5,
 Encoder launch_angle                    ( 4,     7,
                                           4,     8 );
 
-DigitalInput launch_angle_limit_switch  ( 6,     1 );
-Ultrasonic front_sensor                 ( 6,     2,
+DigitalInput launch_angle_switch        ( 6,     1 );
+Ultrasonic front_ultrasonic             ( 6,     2,
                                           6,     3 );
-// Servo servo_shift                       ( ?,     ? ); configuration TBD
                                           
 //note: since we rely on the default value of kInches for the 5th arg
 //we should use Ultrasonic::GetRangeInches().

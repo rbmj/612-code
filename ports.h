@@ -52,15 +52,16 @@ extern Jaguar left_launcher_jag;
 extern Jaguar right_launcher_jag;
 extern Jaguar turret_XY_control_jag;
 extern Jaguar turret_Z_control_jag;
+extern Servo right_servo_shift;
+extern Servo left_servo_shift;
 
 //DIOs
 extern Encoder right_drive;
 extern Encoder left_drive;
 extern Encoder launcher_wheel;
 extern Encoder launch_angle;
-extern Ultrasonic front_sensor;
-extern DigitalInput launch_angle_limit_switch;
-extern Servo servo_shift;
+extern Ultrasonic front_ultrasonic;
+extern DigitalInput launch_angle_switch;
 
 //AIOs
 
