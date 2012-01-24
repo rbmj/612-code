@@ -30,6 +30,8 @@
 #include <Ultrasonic.h>
 #include <DigitalInput.h>
 #include <Relay.h>
+#include <Servo.h>
+#include "joysmooth.h"
 
 //bundle a reference to a Jaguar and some constants to aid in setting up the
 //robot's drivetrain.  Use this for jaguars that will be used in the RobotDrive

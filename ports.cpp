@@ -29,7 +29,9 @@
 #include <Ultrasonic.h>
 #include <DigitalInput.h>
 #include <Relay.h>
+#include <Servo.h>
 #include "ports.h"
+#include "joysmooth.h"
 
 //just define & initialize all of the consts in ports.h
 
@@ -77,9 +79,13 @@ Relay roller_spike_1                    ( 4,     1 );
 Relay roller_spike_2                    ( 4,     2 );
 
 //USBs (on driver station)                     PORT
-joysmooth left_joystick              ( Joystick( 1 ) );
-joysmooth right_joystick             ( Joystick( 2 ) );
-joysmooth gunner_joystick            ( joystick( 3 ) );
+Joystick left_joystick_raw                     ( 1 );
+Joystick right_joystick_raw                    ( 2 );
+Joystick gunner_joystick_raw                   ( 3 );
+
+joysmooth left_joystick        ( left_joystick_raw );
+joysmooth right_joystick      ( right_joystick_raw );
+joysmooth gunner_joystick    ( gunner_joystick_raw );
 
 //initialization of virtual devices:
 
