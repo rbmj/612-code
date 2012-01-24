@@ -83,6 +83,14 @@ void robot_class::TeleopContinuous() {
         //explicitly state drive power is based on Y axis of that side joy
         drive.TankDrive(left, right);
     }
+    if (left_joystick.GetRawButton(11)) {
+        servo :: set(0.7)
+        // set servo to high gear
+    }
+    else if (left_joystick.GetRawbutton(10)) {
+        servo :: set(0.5)
+        //Sets servo to low gear
+    }
     Wait(0.005); //let the CPU rest a little - 5 ms isn't too long
 }
 
