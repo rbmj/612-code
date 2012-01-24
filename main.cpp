@@ -84,11 +84,13 @@ void robot_class::TeleopContinuous() {
         drive.TankDrive(left, right);
     }
     if (left_joystick.GetRawButton(11)) {
-        servo_shift.Set(0.7)
+        right_servo_shift.Set(0.7)
+        left_servo_shift.Set(0.7)
         // set servo to high gear
     }
     else if (left_joystick.GetRawbutton(10)) {
-        servo_shift.Set(0.3)
+        right_servo_shift.Set(0.3)
+        left_servo_shift.Set(0.3)
         //Sets servo to low gear
     }
     Wait(0.005); //let the CPU rest a little - 5 ms isn't too long
