@@ -69,9 +69,9 @@ extern Relay roller_spike_1;
 extern Relay roller_spike_2;
 
 //USBs (on driver station)
-extern Joystick left_joystick;
-extern Joystick right_joystick;
-extern Joystick gunner_joystick;
+extern joysmooth left_joystick;
+extern joysmooth right_joystick;
+extern joysmooth gunner_joystick;
 
 //Virtual Devices
 extern RobotDrive drive;

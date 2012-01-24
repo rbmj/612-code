@@ -76,9 +76,9 @@ Relay roller_spike_1                    ( 4,     1 );
 Relay roller_spike_2                    ( 4,     2 );
 
 //USBs (on driver station)                     PORT
-Joystick left_joystick                         ( 1 );
-Joystick right_joystick                        ( 2 );
-Joystick gunner_joystick                       ( 3 );
+joysmooth left_joystick              ( Joystick( 1 ) );
+joysmooth right_joystick             ( Joystick( 2 ) );
+joysmooth gunner_joystick            ( joystick( 3 ) );
 
 //initialization of virtual devices:
 
