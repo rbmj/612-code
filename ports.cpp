@@ -64,6 +64,7 @@ Encoder launch_angle                    ( 4,     7,
 DigitalInput launch_angle_limit_switch  ( 6,     1 );
 Ultrasonic front_sensor                 ( 6,     2,
                                           6,     3 );
+// Servo servo_shift                       ( ?,     ? ); configuration TBD
                                           
 //note: since we rely on the default value of kInches for the 5th arg
 //we should use Ultrasonic::GetRangeInches().

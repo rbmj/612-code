@@ -60,6 +60,7 @@ extern Encoder launcher_wheel;
 extern Encoder launch_angle;
 extern Ultrasonic front_sensor;
 extern DigitalInput launch_angle_limit_switch;
+extern Servo servo_shift;
 
 //AIOs
 
