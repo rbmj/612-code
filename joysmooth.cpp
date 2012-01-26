@@ -3,6 +3,11 @@
 
 #include "update.h"
 
+//provide definition of constants:
+const int joysmooth::HOLDBACK;
+const int joysmooth::NUMBUTTONS;
+const int joysmooth::NUMAXES;
+
 void register_callback(void*);
 void update_callback_joysmooth(void*);
 
@@ -19,14 +24,14 @@ joysmooth(GenericHID& ghid) : joy(&ghid) {
 }
 
 joysmooth::void update() {
-    for (int d=0;d<NUMBUTTONS;d++)
-    {
-        buttons[d][0]=buttons[d][1];
-        buttons[d][1]=joy->GetRawButton(d);
+    for (int d = 0; d < NUMBUTTONS; d++) {
+        for (int i = 1; i < HOLDBACK; i++) {
+            buttons[d][i - 1] = buttons[d][i];
+        }
+        buttons[d][HOLDBACK - 1] = joy->GetRawButton(d);
     }
-    for(int d=0;d<NUMAXES;d++)
-    {
-        axes[d]=joy->GetRawAxis(d);
+    for(int d = 0; d < NUMAXES; d++) {
+        axes[d] = joy->GetRawAxis(d);
     }
 }
 
@@ -63,7 +68,7 @@ joysmooth::bool GetBumper(){
 }
 
 joysmooth::bool GetRawButton(uinteger btnId){
-    for(int i=0;i<HOLDBACK;i++) {
+    for(int i = 0; i < HOLDBACK; i++) {
         if(!buttons[btnId][i]) {
             return false;
         }

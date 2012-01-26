@@ -22,6 +22,8 @@
 #include <algorithm>
 #include "update.h"
 
+update_registry registry;
+
 void update_registry::register_func(update_registry::update_func f, void * a) {
     update_registry::registry_entry e(f, a);
     if (find_entry(e) == registry.end()) {

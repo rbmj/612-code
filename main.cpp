@@ -25,17 +25,17 @@
 
 //constructor - initialize drive
 robot_class::robot_class() {
+    //do nothing
     GetWatchdog().SetEnabled(false); //we don't want Watchdog
-    //now set the necessary inversions
-    drive.SetInvertedMotor(left_front_motor.type,  left_front_motor.reverse);
-    drive.SetInvertedMotor(left_rear_motor.type,   left_rear_motor.reverse);
-    drive.SetInvertedMotor(right_front_motor.type, right_front_motor.reverse);
-    drive.SetInvertedMotor(right_rear_motor.type,  right_rear_motor.reverse);
 }
 
 void robot_class::RobotInit() {
     //Run-Time INIT
-    //do nothing
+    //set necessary inversions
+    drive.SetInvertedMotor(left_front_motor.type,  left_front_motor.reverse);
+    drive.SetInvertedMotor(left_rear_motor.type,   left_rear_motor.reverse);
+    drive.SetInvertedMotor(right_front_motor.type, right_front_motor.reverse);
+    drive.SetInvertedMotor(right_rear_motor.type,  right_rear_motor.reverse);
 }
 
 void robot_class::DisabledInit() {
