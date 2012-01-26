@@ -12,7 +12,7 @@ Leadership
 Programming Team
 ================
 
-- eEbBhH (Boreh) <zalmon111@gmail.com>
+- eEbBhH (Borah) <zalmon111@gmail.com>
 - MLDrauren (Michael) <eragonelven@yahoo.com>
 - BrianTHN (Brian N) <nguyenthbrian@gmail.com>
 - StevenLW (Steven) <kunzi145@gmail.com>
