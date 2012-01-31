@@ -31,6 +31,7 @@
 #include <DigitalInput.h>
 #include <Relay.h>
 #include <Servo.h>
+#include <AnalogChannel.h>
 #include "joysmooth.h"
 
 //bundle a reference to a Jaguar and some constants to aid in setting up the
@@ -66,6 +67,7 @@ extern Ultrasonic front_ultrasonic;
 extern DigitalInput launch_angle_switch;
 
 //AIOs
+extern AnalogChannel launch_angle_pot;
 
 //Relays
 extern Relay roller_spike_1;
@@ -80,3 +82,4 @@ extern joysmooth gunner_joystick;
 extern RobotDrive drive;
 
 #endif
+

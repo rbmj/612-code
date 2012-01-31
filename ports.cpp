@@ -30,6 +30,7 @@
 #include <DigitalInput.h>
 #include <Relay.h>
 #include <Servo.h>
+#include <AnalogChannel.h>
 #include "ports.h"
 #include "joysmooth.h"
 
