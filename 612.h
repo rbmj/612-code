@@ -23,5 +23,6 @@
 #define INC_612_H
 
 typedef UINT32 uinteger;
+typedef UINT8 module_t;
 
 #endif
