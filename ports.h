@@ -32,6 +32,7 @@
 #include <Relay.h>
 #include <Servo.h>
 #include <AnalogChannel.h>
+#include <Vision/AxisCamera.h>
 #include "joysmooth.h"
 
 //bundle a reference to a Jaguar and some constants to aid in setting up the
@@ -77,6 +78,9 @@ extern Relay roller_spike_2;
 extern joysmooth left_joystick;
 extern joysmooth right_joystick;
 extern joysmooth gunner_joystick;
+
+//IP
+extern AxisCamera camera;
 
 //Virtual Devices
 extern RobotDrive drive;

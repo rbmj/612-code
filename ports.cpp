@@ -31,6 +31,7 @@
 #include <Relay.h>
 #include <Servo.h>
 #include <AnalogChannel.h>
+#include <Vision/AxisCamera.h>
 #include "ports.h"
 #include "joysmooth.h"
 
@@ -48,7 +49,7 @@ const module_t slot8 = 0; //EMPTY
 
 //PORTS TABLE
 
-//PWMs                                     SLOT    PORT
+//PWMs                                    SLOT     PORT
 Jaguar turret_XY_control_jag            ( slot2,     1 );
 Jaguar turret_Z_control_jag             ( slot2,     2 );
 Jaguar right_front_jag                  ( slot2,     3 );
@@ -91,15 +92,18 @@ AnalogChannel launch_angle_pot          ( slot1,     1 );
 Relay roller_spike_1                    ( slot4,     1 );
 Relay roller_spike_2                    ( slot4,     2 );
 
-//USBs (on driver station)                     PORT
-Joystick left_joystick_raw                     ( 1 );
-Joystick right_joystick_raw                    ( 2 );
-Joystick gunner_joystick_raw                   ( 3 );
+//USBs (on driver station)                         PORT
+Joystick left_joystick_raw                         ( 1 );
+Joystick right_joystick_raw                        ( 2 );
+Joystick gunner_joystick_raw                       ( 3 );
 
 
-joysmooth left_joystick        ( left_joystick_raw );
-joysmooth right_joystick      ( right_joystick_raw );
-joysmooth gunner_joystick    ( gunner_joystick_raw );
+joysmooth left_joystick        (  left_joystick_raw    );
+joysmooth right_joystick       (  right_joystick_raw   );
+joysmooth gunner_joystick      (  gunner_joystick_raw  );
+
+//IP                                         IP_ADDRESS
+AxisCamera camera = AxisCamera::GetInstance( "10.6.12.15" ); // ip address static or dynamic?
 
 //initialization of virtual devices:
 
@@ -112,7 +116,7 @@ RobotDrive drive (
 );
 
 //drive_jaguar                           JAGUAR&                 TYPE               REVERSE
-drive_jaguar left_front_motor =     { left_front_jag,  RobotDrive::kFrontLeftMotor,  true };
-drive_jaguar left_rear_motor =      { left_rear_jag,   RobotDrive::kRearLeftMotor,   true };
+drive_jaguar left_front_motor  =    { left_front_jag,  RobotDrive::kFrontLeftMotor,  true };
+drive_jaguar left_rear_motor   =    { left_rear_jag,   RobotDrive::kRearLeftMotor,   true };
 drive_jaguar right_front_motor =    { right_front_jag, RobotDrive::kFrontRightMotor, true };
-drive_jaguar right_rear_motor =     { right_rear_jag,  RobotDrive::kRearRightMotor,  true };
+drive_jaguar right_rear_motor  =    { right_rear_jag,  RobotDrive::kRearRightMotor,  true };
