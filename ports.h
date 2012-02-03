@@ -73,6 +73,7 @@ extern AnalogChannel launch_angle_pot;
 //Relays
 extern Relay roller_spike_1;
 extern Relay roller_spike_2;
+extern Relay bridge_arm_spike;
 
 //USBs (on driver station)
 extern joysmooth left_joystick;

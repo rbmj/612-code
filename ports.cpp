@@ -89,8 +89,9 @@ Ultrasonic front_ultrasonic             ( slot6,     2,
 AnalogChannel launch_angle_pot          ( slot1,     1 );
 
 //Relays                                  SLOT     PORT
-Relay roller_spike_1                    ( slot4,     1 );
-Relay roller_spike_2                    ( slot4,     2 );
+Relay roller_spike_1                    ( slot2,     1 );
+Relay roller_spike_2                    ( slot2,     2 );
+Relay bridge_arm_spike                  ( slot2,     3 );
 
 //USBs (on driver station)                         PORT
 Joystick left_joystick_raw                         ( 1 );
