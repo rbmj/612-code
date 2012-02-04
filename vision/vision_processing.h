@@ -29,7 +29,7 @@ class vision_processing {
 private:
     ColorImage* old_image;
 public:
-    ColorImage get_image);
+    ColorImage get_image();
     ColorImage get_old_image();
     double get_distance();
     double get_distance_from_image(ColorImage*);
