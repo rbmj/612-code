@@ -1,4 +1,4 @@
-/* 612.h
+/* state_tracker.cpp
  *
  * Copyright (c) 2011, 2012 Chantilly Robotics <chantilly612@gmail.com>
  *
@@ -16,21 +16,18 @@
  */
 
 /*
- * Project-Wide defines!
+ * Implements state_tracker to provide functionality for the robot.
  */
-
-#ifndef INC_612_H
-#define INC_612_H
-
+#include <iostream>
 #include "state_tracker.h"
 
-const int STATE_DRIVING = 0;
-const int STATE_AIMING = 1;
-const int STATE_SHOOTING = 2;
+void state_tracker::set_state(int s) {
+    state = s;
+}
+int state_tracker::get_state() {
+    return state;
+}
 
-typedef UINT32 uinteger;
-typedef UINT8 module_t;
 
-extern state_tracker global_state;
 
-#endif
+
