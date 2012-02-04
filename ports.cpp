@@ -32,6 +32,7 @@
 #include <Servo.h>
 #include <AnalogChannel.h>
 #include <Vision/AxisCamera.h>
+#include "612.h"
 #include "ports.h"
 #include "joysmooth.h"
 
