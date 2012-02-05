@@ -19,9 +19,11 @@
  * Implement robot_class to provide functionality for robot.
  */
 
+#include "612.h"
 #include "main.h"
 #include "ports.h"
 #include "update.h"
+#include "vision/vision_processing.h"
 
 //constructor - initialize drive
 robot_class::robot_class() {
@@ -36,6 +38,7 @@ void robot_class::RobotInit() {
     drive.SetInvertedMotor(left_rear_motor.type,   left_rear_motor.reverse);
     drive.SetInvertedMotor(right_front_motor.type, right_front_motor.reverse);
     drive.SetInvertedMotor(right_rear_motor.type,  right_rear_motor.reverse);
+    state_tracker global_state;
 }
 
 void robot_class::DisabledInit() {
@@ -71,27 +74,30 @@ void robot_class::AutonomousContinuous() {
 }
 
 void robot_class::TeleopContinuous() {
-    //actually do something!! :D
-    if (left_joystick.GetRawButton(1)) {
-        //arcade drive
-        drive.ArcadeDrive(left_joystick); //arcade drive on left joystick
-    }
-    else {
-        //tank drive
-        float left = left_joystick.GetY();
-        float right = right_joystick.GetY();
-        //explicitly state drive power is based on Y axis of that side joy
-        drive.TankDrive(left, right);
-    }
-    if (left_joystick.GetRawButton(11)) {
-        right_servo_shift.Set(0.7);
-        left_servo_shift.Set(0.7);
-        // set servo to high gear
-    }
-    else if (left_joystick.GetRawButton(10)) {
-        right_servo_shift.Set(0.3);
-        left_servo_shift.Set(0.3);
-        //Sets servo to low gear
+    if(global_state.get_state() == STATE_DRIVING) {
+        if (left_joystick.GetRawButton(1)) {
+            //arcade drive
+            drive.ArcadeDrive(left_joystick); //arcade drive on left joystick
+        }
+        else {
+            //tank drive
+            float left = left_joystick.GetY();
+            float right = right_joystick.GetY();
+            //explicitly state drive power is based on Y axis of that side joy
+            drive.TankDrive(left, right);
+        }
+        if (left_joystick.GetRawButton(11)) {
+            right_servo_shift.Set(0.7);
+            left_servo_shift.Set(0.7);
+            // set servo to high gear
+        }
+        else if (left_joystick.GetRawButton(10)) {
+            right_servo_shift.Set(0.3);
+            left_servo_shift.Set(0.3);
+            //Sets servo to low gear
+        }
+        vector<double> target_degrees = vision_processing::get_degrees();
+        printf("Angle (degrees) of camera: %f", target_degrees[vision_processing::determine_aim_target_from_image(vision_processing::get_image())]);
     }
     Wait(0.005); //let the CPU rest a little - 5 ms isn't too long
 }

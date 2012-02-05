@@ -80,11 +80,11 @@ extern joysmooth left_joystick;
 extern joysmooth right_joystick;
 extern joysmooth gunner_joystick;
 
-//IP
-extern AxisCamera camera;
+//IP                                    IP_ADDRESS
+#define camera AxisCamera::GetInstance( "10.6.12.11" )
+//                                       ^ ip address static or dynamic?
 
 //Virtual Devices
 extern RobotDrive drive;
 
 #endif
-

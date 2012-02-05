@@ -22,7 +22,7 @@
 #define state_tracker_H_INCLUDED
 
 
-class state_machine {
+class state_tracker {
     private:
         int state;
     public:

@@ -48,7 +48,6 @@ public:
 
     //added methods
     void update_sensors();
-
 };
 
 #endif

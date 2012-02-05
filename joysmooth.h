@@ -1,9 +1,9 @@
 #ifndef JOYSMOOTH_H_INC
 #define JOYSMOOTH_H_INC
 
-#include "612.h"
 #include <bitset>
 #include <GenericHID.h>
+#include "612.h"
 
 class joysmooth : public GenericHID {
 private:
@@ -33,11 +33,11 @@ public:
     float GetZ();
     float GetTwist();
     float GetThrottle();
-    float GetRawAxis(uinteger);
+    float GetRawAxis(UINT32);
     bool GetTrigger(JoystickHand =kRightHand); //button 1
     bool GetTop(JoystickHand =kRightHand); //button 2
     bool GetBumper(JoystickHand =kRightHand); //just return joy->GetBumper() straight
-    bool GetRawButton(uinteger);
+    bool GetRawButton(UINT32);
 
 };
 

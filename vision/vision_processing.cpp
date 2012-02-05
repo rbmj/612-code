@@ -23,34 +23,111 @@
  * Calculated angles are relative to perpendicular.
  */
 
-#include <ColorImage.h>
-#include "ports.h"
+#include <vector>
+#include <cmath>
+#include <Vision/ColorImage.h>
+#include <Vision/BinaryImage.h>
+#include <Vision2009/VisionAPI.h>
+#include "vision_processing.h"
+#include "../ports.h"
+#include "../ranges.h"
+#include "../trajectory.h"
+
+int vision_processing::COLOR_MODE = vision_processing::MODE_HSV;
+
+double degrees_from_ratio(double); // ratio: width/height
+double radians_from_ratio(double);
 
 ColorImage* vision_processing::get_image() {
     if(camera.IsFreshImage()) {
         camera.GetImage(old_image);
     } 
-    else {
-        return get_old_image();
-    }
+    return get_old_image();
 }
 
 ColorImage* vision_processing::get_old_image() {
     return old_image;
 }
 
-double vision_processing::get_distance() {
+BinaryImage* vision_processing::get_image_mask(ColorImage* image) {
+    BinaryImage* imageMask;
+    if(COLOR_MODE == MODE_HSV) {
+        imageMask = image->ThresholdHSV(HSV_HMIN, HSV_HMAX, HSV_SMIN, HSV_SMAX, HSV_VMIN, HSV_VMAX);
+    } else if(COLOR_MODE = MODE_HSI) {
+        imageMask = image->ThresholdHSI(HSI_HMIN, HSI_HMAX, HSI_SMIN, HSI_SMAX, HSI_IMIN, HSI_IMAX);
+    } else { // MODE_HSL
+        imageMask = image->ThresholdHSL(HSL_HMIN, HSL_HMAX, HSL_SMIN, HSL_SMAX, HSL_LMIN, HSL_LMAX);
+    }
+    return imageMask;
+}
+
+vector<ParticleAnalysisReport> vision_processing::get_image_targets(BinaryImage* image) {
+    vector<ParticleAnalysisReport>* particles = image->GetOrderedParticleAnalysisReports();
+    vector<ParticleAnalysisReport> targets;
+    for(unsigned int i = 0; i < particles->size(); i++) {
+        ParticleAnalysisReport particle = particles->at(i);
+        double particle_area = particle.particleArea;
+        if(particle_area > PARTICLE_AREA_MIN && particle_area <= PARTICLE_AREA_MAX) {
+            if(targets.size() >= 4) {
+                // TODO change min and max
+                //      call function again
+                //      if depth is more than 2
+                //      explode
+                break;
+            }
+            targets.push_back(particle);
+        }
+    }
+    return targets;
+}
+
+unsigned int vision_processing::determine_aim_target_from_image(ColorImage*) {
+    return determine_aim_target(get_image_targets(get_image_mask(get_image())));
+}
+
+unsigned int vision_processing::determine_aim_target(vector<ParticleAnalysisReport>) {
+    // TODO make it do stuff
+    return 0;
+}
+
+vector<double> vision_processing::get_distance() {
     return get_distance_from_image(get_image());
 }
 
-double vision_processing::get_distance_from_image(ColorImage* image) {
+vector<double> vision_processing::get_distance_from_image(ColorImage* image) {
     // TODO make it do stuff
+    return vector<double>();
 }
 
-double vision_processing::get_angle() {
-    return get_angle_from_image(get_image());
+vector<double> vision_processing::get_degrees() {
+    return get_degrees_from_image(get_image());
 }
 
-double vision_processing::get_angle_from_image(ColorImage* image) {
-    // TODO make it do stuff
+vector<double> vision_processing::get_degrees_from_image(ColorImage* image) {
+    vector<ParticleAnalysisReport> targets = get_image_targets(get_image_mask(get_image()));
+    vector<double> degrees;
+    for(unsigned int i = 0; i < targets.size(); i++) {
+        int height = targets[i].imageHeight;
+        int width = targets[i].imageWidth;
+        double ratio = 1.0*width/height;
+        degrees.push_back(degrees_from_ratio(ratio));
+    }
+    return degrees;
+}
+
+vector<double> vision_processing::get_radians_from_image(ColorImage* image) {
+    vector<double> degrees = get_degrees_from_image(image);
+    vector<double> radians;
+    for(unsigned int i = 0; i< degrees.size(); i++) {
+        radians.push_back(deg2rad(degrees[i]));
+    }
+    return radians;
+}
+
+double degrees_from_ratio(double ratio) {
+    return (-94.637*pow(ratio,2)) + (119.86*ratio) + 9.7745;
+}
+
+double radians_from_ratio(double ratio) {
+    return deg2rad(degrees_from_ratio(ratio));
 }

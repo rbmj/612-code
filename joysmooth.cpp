@@ -1,6 +1,9 @@
 #ifdef JOYSMOOTH_H_INC
 #define JOYSMOOTH_H_INC
 
+#include <bitset>
+#include <GenericHID.h>
+#include "612.h"
 #include "update.h"
 
 //provide definition of constants:
@@ -55,7 +58,7 @@ joysmooth::float GetThrottle(){
     return axes[THROTTLE_AXIS];
 }
 
-joysmooth::float GetRawAxis(uninteger axisId){
+joysmooth::float GetRawAxis(UINT32 axisId){
     return axes[axisId];
 }
 
@@ -67,7 +70,7 @@ joysmooth::bool GetBumper(){
     return joy->GetBumper();
 }
 
-joysmooth::bool GetRawButton(uinteger btnId){
+joysmooth::bool GetRawButton(UINT32 btnId){
     for(int i = 0; i < HOLDBACK; i++) {
         if(!buttons[btnId][i]) {
             return false;

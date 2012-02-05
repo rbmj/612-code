@@ -104,9 +104,6 @@ joysmooth left_joystick        (  left_joystick_raw    );
 joysmooth right_joystick       (  right_joystick_raw   );
 joysmooth gunner_joystick      (  gunner_joystick_raw  );
 
-//IP                                         IP_ADDRESS
-AxisCamera camera = AxisCamera::GetInstance( "10.6.12.15" ); // ip address static or dynamic?
-
 //initialization of virtual devices:
 
 //RobotDrive
