@@ -55,10 +55,6 @@ using namespace std;
  * 
  */
  
-const double pi = 3.14159265;
-const double pi_over180 = pi / 180;
-const double pi_180over = 180 / pi;
- 
 double get_entry_velocity(double alpha, double dy, double dx, double g) {
     double num = g * dx * dx;
     double denom = cos(alpha);
@@ -82,5 +78,5 @@ double get_launch_angle(double alpha, double dx, double vf, double g) {
     double num = -g * dx;
     num /= comp;
     num += vf * sin(alpha);
-    return -(tan2(num, comp));
+    return -(atan2(num, comp));
 }

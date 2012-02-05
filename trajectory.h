@@ -22,6 +22,10 @@
 #ifndef TRAJECTORY_H_INC
 #define TRAJECTORY_H_INC
 
+const double pi = 3.14159265;
+const double pi_over180 = pi / 180;
+const double pi_180over = 180 / pi;
+ 
 //stuff to calculate trajectory goes here!
 double get_entry_velocity(double, double, double, double = 32.17);
 double get_launch_velocity(double, double, double, double = 32.17);
