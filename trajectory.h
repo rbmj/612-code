@@ -27,7 +27,12 @@ double get_entry_velocity(double, double, double, double = 32.17);
 double get_launch_velocity(double, double, double, double = 32.17);
 double get_launch_angle(double, double, double, double = 32.17);
 
-double deg2rad(double);
-double rad2deg(double);
+double inline deg2rad(double theta) {
+    return theta * pi_over180;
+}
+
+double inline rad2deg(double theta) {
+    return theta * pi_180over;
+}
 
 #endif

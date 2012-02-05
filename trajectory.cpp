@@ -22,6 +22,8 @@
 #include "trajectory.h"
 #include <cmath>
 
+using namespace std;
+
 /*
  * Some Formulas:
  * 
@@ -59,34 +61,26 @@ const double pi_180over = 180 / pi;
  
 double get_entry_velocity(double alpha, double dy, double dx, double g) {
     double num = g * dx * dx;
-    double denom = std::cos(alpha);
+    double denom = cos(alpha);
     denom *= denom;
-    denom *= 2 * (dy + dx * std::tan(alpha));
-    return std::sqrt(num / denom);
+    denom *= 2 * (dy + dx * tan(alpha));
+    return sqrt(num / denom);
 }
 
 double get_launch_velocity(double alpha, double dx, double vf, double g) {
     double ret = vf;
     ret *= vf;
-    ret -= 2 * g * dx * std::tan(alpha);
+    ret -= 2 * g * dx * tan(alpha);
     double comp = g * dx;
-    comp /= vf * std::cos(alpha);
+    comp /= vf * cos(alpha);
     comp *= comp;
-    return std::sqrt(ret + comp);
+    return sqrt(ret + comp);
 }
 
 double get_launch_angle(double alpha, double dx, double vf, double g) {
-    double comp = vf * std::cos(alpha);
+    double comp = vf * cos(alpha);
     double num = -g * dx;
     num /= comp;
-    num += vf * std::sin(alpha);
-    return -(std::atan2(num, comp));
-}
-
-double deg2rad(double theta) {
-    return theta * pi_over180;
-}
-
-double rad2deg(double theta) {
-    return theta * pi_180over;
+    num += vf * sin(alpha);
+    return -(tan2(num, comp));
 }
