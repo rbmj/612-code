@@ -51,16 +51,16 @@ const module_t slot8 = 0; //EMPTY
 //PORTS TABLE
 
 //PWMs                                    SLOT     PORT
-Jaguar turret_XY_control_jag            ( slot2,     1 );
-Jaguar turret_Z_control_jag             ( slot2,     2 );
-Jaguar right_front_jag                  ( slot2,     3 );
-Jaguar right_rear_jag                   ( slot2,     4 );
+Jaguar left_launcher_jag                ( slot2,     1 );
+Jaguar right_front_jag                  ( slot2,     2 );
+Jaguar right_rear_jag                   ( slot2,     3 );
+Jaguar turret_XY_control_jag            ( slot2,     4 );
 Servo right_servo_shift                 ( slot2,     5 );
 
-Jaguar left_front_jag                   ( slot6,     1 );
-Jaguar left_rear_jag                    ( slot6,     2 );
-Jaguar right_launcher_jag               ( slot6,     3 );
-Jaguar left_launcher_jag                ( slot6,     4 );
+Jaguar turret_Z_control_jag             ( slot6,     1 );
+Jaguar left_front_jag                   ( slot6,     2 );
+Jaguar left_rear_jag                    ( slot6,     3 );
+Jaguar right_launcher_jag               ( slot6,     4 );
 Servo left_servo_shift                  ( slot6,     5 );
 
 //NOTE: Sica wants to use pots (potentiometers) for the angles, as those are
