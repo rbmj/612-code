@@ -21,13 +21,13 @@
 #include <iostream>
 #include "state_tracker.h"
 
-void state_tracker::set_state(int s) {
+void state_tracker::set_state(ROBOT_STATE s) {
     state = s;
 }
-int state_tracker::get_state() {
+
+ROBOT_STATE state_tracker::get_state() {
     return state;
 }
 
-
-
+state_tracker global_state;
 

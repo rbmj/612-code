@@ -48,6 +48,10 @@ const module_t slot6 = 2; //2nd digital
 const module_t slot7 = 2; //2nd solenoid
 const module_t slot8 = 0; //EMPTY
 
+//camera IP address:
+const char * cameraIP = "10.6.12.11"; //static IP, camera configured for connection to bridge
+//const char * cameraIP = "192.168.0.90"; //static IP, camera configured for connection to cRIO
+
 //PORTS TABLE
 
 //PWMs                                    SLOT     PORT

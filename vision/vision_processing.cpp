@@ -30,38 +30,60 @@
 #include <Vision2009/VisionAPI.h>
 #include "vision_processing.h"
 #include "../ports.h"
-#include "../ranges.h"
+//#include "../ranges.h" no such file or directory - see below
 #include "../trajectory.h"
 
-int vision_processing::COLOR_MODE = vision_processing::MODE_HSV;
+enum COLOR_MODE_T {
+    HSL,
+    HSI,
+    HSV
+};
+
+//set these to change search color
+const COLOR_MODE_T COLOR_MODE = HSV;
+const int COLOR_FIRST_MIN  = 0; //H   - min
+const int COLOR_FIRST_MAX  = 0; //    - max
+const int COLOR_SECOND_MIN = 0; //S   - min
+const int COLOR_SECOND_MAX = 0; //    - max
+const int COLOR_THIRD_MIN  = 0; //LIV - min
+const int COLOR_THIRD_MAX  = 0; //    - max
+
+//configure the particle
+const int PARTICLE_AREA_MIN = 500;
+const int PARTICLE_AREA_MAX = 10000;
+
+//constants
+ColorImage* old_image;
 
 double degrees_from_ratio(double); // ratio: width/height
 double radians_from_ratio(double);
 
-ColorImage* vision_processing::get_image() {
-    if(camera.IsFreshImage()) {
-        camera.GetImage(old_image);
+ColorImage* get_image() {
+    if(camera().IsFreshImage()) {
+        camera().GetImage(old_image);
     } 
     return get_old_image();
 }
 
-ColorImage* vision_processing::get_old_image() {
+ColorImage* get_old_image() {
     return old_image;
 }
 
-BinaryImage* vision_processing::get_image_mask(ColorImage* image) {
+BinaryImage* get_image_mask(ColorImage* image) {
     BinaryImage* imageMask;
-    if(COLOR_MODE == MODE_HSV) {
-        imageMask = image->ThresholdHSV(HSV_HMIN, HSV_HMAX, HSV_SMIN, HSV_SMAX, HSV_VMIN, HSV_VMAX);
-    } else if(COLOR_MODE = MODE_HSI) {
-        imageMask = image->ThresholdHSI(HSI_HMIN, HSI_HMAX, HSI_SMIN, HSI_SMAX, HSI_IMIN, HSI_IMAX);
-    } else { // MODE_HSL
-        imageMask = image->ThresholdHSL(HSL_HMIN, HSL_HMAX, HSL_SMIN, HSL_SMAX, HSL_LMIN, HSL_LMAX);
+    if (COLOR_MODE == HSV) {
+        imageMask = image->ThresholdHSV(COLOR_FIRST_MIN, COLOR_FIRST_MAX, COLOR_SECOND_MIN, COLOR_SECOND_MAX, COLOR_THIRD_MIN, COLOR_THIRD_MAX);
+    }
+    else if (COLOR_MODE == HSI) {
+        imageMask = image->ThresholdHSI(COLOR_FIRST_MIN, COLOR_FIRST_MAX, COLOR_SECOND_MIN, COLOR_SECOND_MAX, COLOR_THIRD_MIN, COLOR_THIRD_MAX);
+    }
+    else { // assume HSL
+        imageMask = image->ThresholdHSL(COLOR_FIRST_MIN, COLOR_FIRST_MAX, COLOR_SECOND_MIN, COLOR_SECOND_MAX, COLOR_THIRD_MIN, COLOR_THIRD_MAX);
     }
     return imageMask;
 }
 
-vector<ParticleAnalysisReport> vision_processing::get_image_targets(BinaryImage* image) {
+vector<ParticleAnalysisReport> vision_processing(BinaryImage* image) {
     vector<ParticleAnalysisReport>* particles = image->GetOrderedParticleAnalysisReports();
     vector<ParticleAnalysisReport> targets;
     for(unsigned int i = 0; i < particles->size(); i++) {
@@ -81,29 +103,29 @@ vector<ParticleAnalysisReport> vision_processing::get_image_targets(BinaryImage*
     return targets;
 }
 
-unsigned int vision_processing::determine_aim_target_from_image(ColorImage*) {
+unsigned int determine_aim_target_from_image(ColorImage*) {
     return determine_aim_target(get_image_targets(get_image_mask(get_image())));
 }
 
-unsigned int vision_processing::determine_aim_target(vector<ParticleAnalysisReport>) {
+unsigned int determine_aim_target(vector<ParticleAnalysisReport>) {
     // TODO make it do stuff
     return 0;
 }
 
-vector<double> vision_processing::get_distance() {
+vector<double> get_distance() {
     return get_distance_from_image(get_image());
 }
 
-vector<double> vision_processing::get_distance_from_image(ColorImage* image) {
+vector<double> get_distance_from_image(ColorImage* image) {
     // TODO make it do stuff
     return vector<double>();
 }
 
-vector<double> vision_processing::get_degrees() {
+vector<double> get_degrees() {
     return get_degrees_from_image(get_image());
 }
 
-vector<double> vision_processing::get_degrees_from_image(ColorImage* image) {
+vector<double> get_degrees_from_image(ColorImage* image) {
     vector<ParticleAnalysisReport> targets = get_image_targets(get_image_mask(get_image()));
     vector<double> degrees;
     for(unsigned int i = 0; i < targets.size(); i++) {
@@ -115,7 +137,7 @@ vector<double> vision_processing::get_degrees_from_image(ColorImage* image) {
     return degrees;
 }
 
-vector<double> vision_processing::get_radians_from_image(ColorImage* image) {
+vector<double> get_radians_from_image(ColorImage* image) {
     vector<double> degrees = get_degrees_from_image(image);
     vector<double> radians;
     for(unsigned int i = 0; i< degrees.size(); i++) {

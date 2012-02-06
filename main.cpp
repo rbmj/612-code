@@ -24,6 +24,7 @@
 #include "ports.h"
 #include "update.h"
 #include "vision/vision_processing.h"
+#include "state_tracker.h"
 
 //constructor - initialize drive
 robot_class::robot_class() {

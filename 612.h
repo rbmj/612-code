@@ -25,14 +25,8 @@
 #include <stdint.h>
 #include "state_tracker.h"
 
-const int STATE_DRIVING = 0;
-const int STATE_AIMING = 1;
-const int STATE_SHOOTING = 2;
-
 typedef uint32_t uinteger;
 typedef uint8_t module_t;
 typedef uint8_t range_t;
-
-extern state_tracker global_state;
 
 #endif
