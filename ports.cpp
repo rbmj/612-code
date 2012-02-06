@@ -76,8 +76,6 @@ Servo left_servo_shift                  ( slot6,     4 );
 //DIOs                                    SLOT     PORT
 Encoder right_drive                     ( slot2,     1,
                                           slot2,     2 );
-Encoder left_drive                      ( slot6,     5,
-                                          slot6,     6 );
 Encoder launcher_wheel                  ( slot2,     3,
                                           slot2,     4 );
 Encoder launch_angle                    ( slot2,     5,
@@ -86,6 +84,8 @@ Encoder launch_angle                    ( slot2,     5,
 DigitalInput launch_angle_switch        ( slot6,     1 );
 Ultrasonic front_ultrasonic             ( slot6,     2,
                                           slot6,     3 );
+Encoder left_drive                      ( slot6,     5,
+                                          slot6,     6 );
                                           
 //note: since we rely on the default value of kInches for the 5th arg
 //we should use Ultrasonic::GetRangeInches().
