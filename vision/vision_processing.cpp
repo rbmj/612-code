@@ -49,9 +49,10 @@ const int PARTICLE_AREA_MAX = 10000;
 //constants
 ColorImage* old_image;
 
-double degrees_from_ratio(double); // ratio: width/height
-double radians_from_ratio(double);
-int HeightFind(int);
+double inline degrees_from_ratio(double); // ratio: width/height
+double inline radians_from_ratio(double);
+double inline distance_from_height(int);
+int get_image_height(BinaryImage*, ParticleAnalysisReport);
 
 ColorImage* get_image() {
     if(camera().IsFreshImage()) {
@@ -78,7 +79,7 @@ BinaryImage* get_image_mask(ColorImage* image) {
     return imageMask;
 }
 
-vector<ParticleAnalysisReport> vision_processing(BinaryImage* image) {
+vector<ParticleAnalysisReport> get_images_targets(BinaryImage* image) {
     vector<ParticleAnalysisReport>* particles = image->GetOrderedParticleAnalysisReports();
     vector<ParticleAnalysisReport> targets;
     for(unsigned int i = 0; i < particles->size(); i++) {
@@ -111,12 +112,13 @@ vector<double> get_distance() {
     return get_distance_from_image(get_image());
 }
 
-vector<double> vision_processing::get_distance_from_image(ColorImage* image) {
-    vector<ParticleAnalysisReport> targets = get_image_targets(get_image_mask(get_image()));
+vector<double> get_distance_from_image(ColorImage* image) {
+    BinaryImage* image_mask = get_image_mask(get_image());
+    vector<ParticleAnalysisReport> targets = get_image_targets(image_mask);
     vector<double> distance;
     for(unsigned int i = 0; i < targets.size(); i++) {
-		unsigned int height = HeightFind(target.center_mass_x);
-		unsigned double ground_distance = 1532.1932574739*(pow(height,-1.0541299046));
+		unsigned int height = get_image_height(image_mask, target);
+		unsigned double ground_distance = distance_from_height(height);
         distance.push_back(ground_distance);
     }
     return distance;
@@ -153,10 +155,19 @@ vector<double> get_radians_from_image(ColorImage* image) {
     return radians;
 }
 
-double degrees_from_ratio(double ratio) {
-    return (-94.637*pow(ratio,2)) + (119.86*ratio) + 9.7745;
+double inline degrees_from_ratio(double ratio) {
+    return (-94.637 * pow(ratio, 2)) + (119.86 * ratio) + 9.7745;
 }
 
-double radians_from_ratio(double ratio) {
+double inline radians_from_ratio(double ratio) {
     return deg2rad(degrees_from_ratio(ratio));
+}
+
+double inline distance_from_height(int height) {
+    return 1532.1932574739 * (pow(height, -1.0541299046));
+}
+
+int get_height_from_center(BinaryImage* image, ParticleAnalysisReport target) {
+    // return black_magic();
+    return 0;
 }
