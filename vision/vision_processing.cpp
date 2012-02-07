@@ -68,9 +68,11 @@ BinaryImage* get_image_mask(ColorImage* image) {
     BinaryImage* imageMask;
     if (COLOR_MODE == HSV) {
         imageMask = image->ThresholdHSV(HSV_HMIN, HSV_HMAX, HSV_SMIN, HSV_SMAX, HSV_VMIN, HSV_VMAX);
-    } else if(COLOR_MODE = MODE_HSI) {
+    }
+    else if(COLOR_MODE = MODE_HSI) {
         imageMask = image->ThresholdHSI(HSI_HMIN, HSI_HMAX, HSI_SMIN, HSI_SMAX, HSI_IMIN, HSI_IMAX);
-    } else { // HSI is implied (not assumed)
+    }
+    else { // HSI is implied (not assumed)
         imageMask = image->ThresholdHSL(HSL_HMIN, HSL_HMAX, HSL_SMIN, HSL_SMAX, HSL_LMIN, HSL_LMAX);
     }
     return imageMask;
