@@ -33,19 +33,6 @@
 #include "../ranges.h"
 #include "../trajectory.h"
 
-enum COLOR_MODE_T {
-    HSL,
-    HSI,
-    HSV
-};
-
-//set these to change search color
-const COLOR_MODE_T COLOR_MODE = HSV;
-
-//configure the particle
-const int PARTICLE_AREA_MIN = 500;
-const int PARTICLE_AREA_MAX = 10000;
-
 //constants
 ColorImage* old_image;
 
