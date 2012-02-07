@@ -19,15 +19,19 @@
  * Implements state_tracker to provide functionality for the robot.
  */
 #include <iostream>
+#include "612.h"
 #include "state_tracker.h"
 
-void state_tracker::set_state(ROBOT_STATE s) {
-    state = s;
+state_tracker::state_tracker(state_t initial_state) {
+    state= = initial_state;
 }
 
-ROBOT_STATE state_tracker::get_state() {
+void state_tracker::set_state(state_t new_state) {
+    state = new_state;
+}
+
+state_t state_tracker::get_state() {
     return state;
 }
 
 state_tracker global_state;
-
