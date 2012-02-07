@@ -94,9 +94,9 @@ Encoder left_drive                      ( slot6,     5,
 AnalogChannel launch_angle_pot          ( slot1,     1 );
 
 //Relays                                  SLOT     PORT
-Relay roller_spike_1                    ( slot2,     1 );
-Relay roller_spike_2                    ( slot2,     2 );
-Relay bridge_arm_spike                  ( slot2,     3 );
+Relay roller_spike_1                    ( slot6,     1 );
+Relay roller_spike_2                    ( slot6,     2 );
+Relay bridge_arm_spike                  ( slot6,     3 );
 
 //USBs (on driver station)                         PORT
 Joystick left_joystick_raw                         ( 1 );
