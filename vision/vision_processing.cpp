@@ -38,7 +38,7 @@ ColorImage* old_image;
 
 double degrees_from_ratio(double); // ratio: width/height
 double radians_from_ratio(double);
-vector<unsigned int> CornerFind(vector<ParticleAnalysisReport>);
+int HeightFind(int);
 
 ColorImage* get_image() {
     if(camera().IsFreshImage()) {
@@ -102,24 +102,17 @@ vector<double> vision_processing::get_distance_from_image(ColorImage* image) {
     vector<ParticleAnalysisReport> targets = get_image_targets(get_image_mask(get_image()));
     vector<double> distance;
     for(unsigned int i = 0; i < targets.size(); i++) {
-		vector<unsigned int> corners_y = CornerFind(targets);
-		/*-----Corners--------*/
-		//0,1
-		//2,3
-		/*--------------------*/
-		unsigned int top_midpoint_y = (corners_y.at(0) + corners_y.at(1))/2 ;
-		unsigned int bottom_midpoint_y = (corners_y.at(2) + corners_y.at(3))/2 ;
-		unsigned int height = top_midpoint_y - bottom_midpoint_y;
+		unsigned int height = HeightFind(target.center_mass_x);
 		unsigned double ground_distance = 1532.1932574739*(pow(height,-1.0541299046));
         distance.push_back(ground_distance);
     }
     return distance;
 }
 
-vector<unsigned int> CornerFind(vector<ParticleAnalysisReport> targets) {
-	vector<unsigned int> corners;
-	//Add Black Magic Here
-	return corners;
+int HeightFind(int center_mass); {
+	int height;
+	//Add Black Magic Here to get box height at x Note: Actual box not bounding box
+	return height;
 }
 
 vector<double> get_degrees() {
