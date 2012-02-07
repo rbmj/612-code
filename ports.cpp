@@ -82,7 +82,7 @@ Encoder launch_angle                    ( slot2,     7,
 DigitalInput launch_angle_switch        ( slot6,     1 );
 Ultrasonic front_ultrasonic             ( slot6,     2,
                                           slot6,     3 );
-                                          
+
 //note: since we rely on the default value of kInches for the 5th arg
 //we should use Ultrasonic::GetRangeInches().
 
@@ -90,9 +90,9 @@ Ultrasonic front_ultrasonic             ( slot6,     2,
 AnalogChannel launch_angle_pot          ( slot1,     1 );
 
 //Relays                                  SLOT     PORT
-Relay roller_spike_1                    ( slot2,     1 );
-Relay roller_spike_2                    ( slot2,     2 );
-Relay bridge_arm_spike                  ( slot2,     3 );
+Relay roller_spike_1                    ( slot6,     1 );
+Relay roller_spike_2                    ( slot6,     2 );
+Relay bridge_arm_spike                  ( slot6,     3 );
 
 //USBs (on driver station)                         PORT
 Joystick left_joystick_raw                         ( 1 );
