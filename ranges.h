@@ -57,4 +57,17 @@ const range_t HSL_SMAX = 255;
 const range_t HSL_LMIN = 104;
 const range_t HSL_LMAX = 229;
 
+enum COLOR_MODE_T {
+    HSL,
+    HSI,
+    HSV
+};
+
+//set these to change search color
+const COLOR_MODE_T COLOR_MODE = HSV;
+
+//configure the particle
+const int PARTICLE_AREA_MIN = 500;
+const int PARTICLE_AREA_MAX = 10000;
+
 #endif // INC_RANGES_H
