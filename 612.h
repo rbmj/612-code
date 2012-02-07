@@ -26,7 +26,13 @@
 #include "state_tracker.h"
 
 typedef uint32_t uinteger;
+typedef uint32_t state_t;
 typedef uint8_t module_t;
 typedef uint8_t range_t;
+
+enum GLOBAL_ROBOT_STATE {
+	STATE_DRIVING = 0,
+	STATE_SHOOTING = 1
+};
 
 #endif

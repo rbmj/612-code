@@ -111,12 +111,6 @@ vector<double> get_distance_from_image(ColorImage* image) {
     return distance;
 }
 
-int HeightFind(int center_mass); {
-	int height;
-	//Add Black Magic Here to get box height at x Note: Actual box not bounding box
-	return height;
-}
-
 vector<double> get_degrees() {
     return get_degrees_from_image(get_image());
 }

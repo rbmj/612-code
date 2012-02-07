@@ -16,13 +16,11 @@
  */
 
 /*
- * const range_tants for image threshold ranges
+ * const range_t values for image threshold ranges and other ranges
  */
 
 #ifndef INC_RANGES_H
 #define INC_RANGES_H
-
-
 
 // ==== HSV ====
 
