@@ -31,8 +31,6 @@
 #include <Vision/BinaryImage.h>
 #include <Vision2009/VisionAPI.h>
 
-//TODO: Do all of these need to be exposed?
-
 ColorImage* get_image();
 ColorImage* get_old_image();
 BinaryImage* get_image_mask(ColorImage*);

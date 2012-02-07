@@ -30,7 +30,7 @@
 #include <Vision2009/VisionAPI.h>
 #include "vision_processing.h"
 #include "../ports.h"
-//#include "../ranges.h" no such file or directory - see below
+#include "../ranges.h"
 #include "../trajectory.h"
 
 enum COLOR_MODE_T {
@@ -41,12 +41,6 @@ enum COLOR_MODE_T {
 
 //set these to change search color
 const COLOR_MODE_T COLOR_MODE = HSV;
-const int COLOR_FIRST_MIN  = 0; //H   - min
-const int COLOR_FIRST_MAX  = 0; //    - max
-const int COLOR_SECOND_MIN = 0; //S   - min
-const int COLOR_SECOND_MAX = 0; //    - max
-const int COLOR_THIRD_MIN  = 0; //LIV - min
-const int COLOR_THIRD_MAX  = 0; //    - max
 
 //configure the particle
 const int PARTICLE_AREA_MIN = 500;
@@ -72,13 +66,11 @@ ColorImage* get_old_image() {
 BinaryImage* get_image_mask(ColorImage* image) {
     BinaryImage* imageMask;
     if (COLOR_MODE == HSV) {
-        imageMask = image->ThresholdHSV(COLOR_FIRST_MIN, COLOR_FIRST_MAX, COLOR_SECOND_MIN, COLOR_SECOND_MAX, COLOR_THIRD_MIN, COLOR_THIRD_MAX);
-    }
-    else if (COLOR_MODE == HSI) {
-        imageMask = image->ThresholdHSI(COLOR_FIRST_MIN, COLOR_FIRST_MAX, COLOR_SECOND_MIN, COLOR_SECOND_MAX, COLOR_THIRD_MIN, COLOR_THIRD_MAX);
-    }
-    else { // assume HSL
-        imageMask = image->ThresholdHSL(COLOR_FIRST_MIN, COLOR_FIRST_MAX, COLOR_SECOND_MIN, COLOR_SECOND_MAX, COLOR_THIRD_MIN, COLOR_THIRD_MAX);
+        imageMask = image->ThresholdHSV(HSV_HMIN, HSV_HMAX, HSV_SMIN, HSV_SMAX, HSV_VMIN, HSV_VMAX);
+    } else if(COLOR_MODE = MODE_HSI) {
+        imageMask = image->ThresholdHSI(HSI_HMIN, HSI_HMAX, HSI_SMIN, HSI_SMAX, HSI_IMIN, HSI_IMAX);
+    } else { // HSI is implied (not assumed)
+        imageMask = image->ThresholdHSL(HSL_HMIN, HSL_HMAX, HSL_SMIN, HSL_SMAX, HSL_LMIN, HSL_LMAX);
     }
     return imageMask;
 }
