@@ -23,7 +23,6 @@
 #define INC_612_H
 
 #include <stdint.h>
-#include "state_tracker.h"
 
 typedef uint32_t uinteger;
 typedef uint32_t state_t;

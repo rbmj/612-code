@@ -22,8 +22,12 @@
 #include "612.h"
 #include "state_tracker.h"
 
+state_tracker::state_tracker() {
+    state = 0;
+}
+
 state_tracker::state_tracker(state_t initial_state) {
-    state= = initial_state;
+    state = initial_state;
 }
 
 void state_tracker::set_state(state_t new_state) {
