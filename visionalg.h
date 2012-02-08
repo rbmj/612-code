@@ -29,9 +29,9 @@ private:
     int x;
     int y;
 public:
-    int X() const;
-    int Y() const;
-    aspect_ratio(int xv, int yv) : x(xv), y(yv) {}
+    int X() const { return x; }
+    int Y() const { return y; }
+    aspect_ratio(int, int);
 };
 
 class camera_fov {
