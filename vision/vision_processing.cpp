@@ -56,6 +56,9 @@ ColorImage* vision_processing::get_old_image() {
 
 BinaryImage* vision_processing::get_image_mask(ColorImage* image) {
     BinaryImage* imageMask;
+    if(image == NULL) {
+        return imageMask;
+    }
     if (COLOR_MODE == HSV) {
         imageMask = image->ThresholdHSV(HSV_HMIN, HSV_HMAX, HSV_SMIN, HSV_SMAX, HSV_VMIN, HSV_VMAX);
     }
@@ -69,8 +72,11 @@ BinaryImage* vision_processing::get_image_mask(ColorImage* image) {
 }
 
 vector<ParticleAnalysisReport> vision_processing::get_image_targets(BinaryImage* image) {
-    vector<ParticleAnalysisReport>* particles = image->GetOrderedParticleAnalysisReports();
     vector<ParticleAnalysisReport> targets;
+    if(image == NULL) {
+        return targets;
+    }
+    vector<ParticleAnalysisReport>* particles = image->GetOrderedParticleAnalysisReports();
     for(unsigned int i = 0; i < particles->size(); i++) {
         ParticleAnalysisReport particle = particles->at(i);
         double particle_area = particle.particleArea;
@@ -88,8 +94,11 @@ vector<ParticleAnalysisReport> vision_processing::get_image_targets(BinaryImage*
     return targets;
 }
 
-unsigned int vision_processing::determine_aim_target_from_image(ColorImage*) {
-    return determine_aim_target(get_image_targets(get_image_mask(get_image())));
+unsigned int vision_processing::determine_aim_target_from_image(ColorImage* image) {
+    if(image == NULL) {
+        return 0;
+    }
+    return determine_aim_target(get_image_targets(get_image_mask(image)));
 }
 
 unsigned int vision_processing::determine_aim_target(vector<ParticleAnalysisReport>) {
@@ -102,9 +111,12 @@ vector<double> vision_processing::get_distance() {
 }
 
 vector<double> vision_processing::get_distance_from_image(ColorImage* image) {
-    BinaryImage* image_mask = get_image_mask(get_image());
+    BinaryImage* image_mask = get_image_mask(image);
     vector<ParticleAnalysisReport> targets = get_image_targets(image_mask);
     vector<double> distance;
+    if(image == NULL) {
+        return distance;
+    }
     for(unsigned int i = 0; i < targets.size(); i++) {
         ParticleAnalysisReport target = targets[i];
 		unsigned int height = get_image_height(image_mask, target);
@@ -119,8 +131,11 @@ vector<double> vision_processing::get_degrees() {
 }
 
 vector<double> vision_processing::get_degrees_from_image(ColorImage* image) {
-    vector<ParticleAnalysisReport> targets = get_image_targets(get_image_mask(get_image()));
+    vector<ParticleAnalysisReport> targets = get_image_targets(get_image_mask(image));
     vector<double> degrees;
+    if(image == NULL) {
+        return degrees;
+    }
     for(unsigned int i = 0; i < targets.size(); i++) {
         ParticleAnalysisReport target = targets[i];
         int height = target.imageHeight;
@@ -134,6 +149,9 @@ vector<double> vision_processing::get_degrees_from_image(ColorImage* image) {
 vector<double> vision_processing::get_radians_from_image(ColorImage* image) {
     vector<double> degrees = get_degrees_from_image(image);
     vector<double> radians;
+    if(image == NULL) {
+        return radians;
+    }
     for(unsigned int i = 0; i< degrees.size(); i++) {
         radians.push_back(deg2rad(degrees[i]));
     }
