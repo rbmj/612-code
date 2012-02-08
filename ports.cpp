@@ -76,8 +76,7 @@ Encoder left_drive                      ( slot2,     3,
                                           slot2,     4 );
 Encoder launcher_wheel                  ( slot2,     5,
                                           slot2,     6 );
-Encoder launch_angle                    ( slot2,     7,
-                                          slot2,     8 );
+
 
 DigitalInput launch_angle_switch        ( slot6,     1 );
 Ultrasonic front_ultrasonic             ( slot6,     2,
