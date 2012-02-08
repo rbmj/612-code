@@ -27,7 +27,7 @@ joysmooth::~joysmooth() {
     registry().unregister_func(update_callback, (void*)this);
 }
 
-joysmooth::void update() {
+void joysmooth::update() {
     for (int d = 0; d < NUMBUTTONS; d++) {
         for (int i = 1; i < HOLDBACK; i++) {
             buttons[d][i - 1] = buttons[d][i];
