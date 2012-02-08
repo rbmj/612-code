@@ -55,6 +55,6 @@ private:
     std::vector<registry_entry>::iterator find_entry(const registry_entry&);
 };
 
-extern update_registry registry;
+update_registry& registry();
 
 #endif

@@ -20,6 +20,7 @@
 const double robot_height = 31.0/12; //TODO: Replace this with a real #(feet)!
 
 //heights in feet:
+//TODO: add in the height to the center of the particle!
 target bottom_basket(   22.88/12 );
 target midleft_basket(  55.88/12 );
 target midright_basket( 55.88/12 );
@@ -37,17 +38,17 @@ HSLImage target::image; //The only non-rgb raw image type available
 #if 0
 //change the 0 to a 1 to enable :)
 
-class static_init_class {
+class static_init_class_visionalt {
 public:
-    static_init_class() {
-        registry.register_func(target::update_targets, NULL);
+    static_init_class_visionalt() {
+        registry().register_func(target::update_targets, NULL);
     }
-    ~static_init_class() {
-        registry.unregister_func(target::update_targets, NULL);
+    ~static_init_class_visionalt() {
+        registry().unregister_func(target::update_targets, NULL);
     }
 };
 
-static_init_class static_init_class_obj; //just so it will run the ctor on startup
+static_init_class_visionalt static_init_class_obj; //just so it will run the ctor on startup
 
 #endif
 

@@ -23,7 +23,7 @@ joysmooth(GenericHID& ghid) : joy(&ghid) {
 }
 
 ~joysmooth() {
-    registry.unregister_func(update_callback, (void*)this);
+    registry().unregister_func(update_callback, (void*)this);
 }
 
 joysmooth::void update() {
@@ -80,7 +80,7 @@ joysmooth::bool GetRawButton(UINT32 btnId){
 }
 
 void register_callback(void* thisPtr) {
-    registry.register_func(update_callback_joysmooth, thisPtr);
+    registry().register_func(update_callback_joysmooth, thisPtr);
 }
 
 void update_callback_joysmooth(void* thisPtr) {

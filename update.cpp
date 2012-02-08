@@ -22,7 +22,10 @@
 #include <algorithm>
 #include "update.h"
 
-update_registry registry;
+update_registry& registry() {
+    static update_registry reg_obj;
+    return reg_obj;
+}
 
 void update_registry::register_func(update_registry::update_func f, void * a) {
     update_registry::registry_entry e(f, a);
