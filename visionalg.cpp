@@ -49,15 +49,10 @@
 #include <cmath>
 
 const double CAM_FOV = 0.820304748; //47 degrees
-const int AR_X = 4;
+const int AR_X = 4; //4:3 aspect
 const int AR_Y = 3;
 const int RES_X = 320;
 const int RES_Y = 240;
-
-//give me real numbers, not fake ones! - TODO: These should go somewhere else
-const double h_top = 10; //feet
-const double h_mid = 6;
-const double h_low = 2;
 
 double angle_offset(int offset, int total, double FOV) {
     double c = 2 * std::sin(FOV / 2);
@@ -90,19 +85,5 @@ const aspect_ratio& RESOLUTION() {
     return res_obj;
 }
 
-/*
- * Distance - given COM_Y of the backboard
- * 
- * COM_Y ranges 0 (top) to RESOLUTION().Y() (bottom)
- * H is the height (feet) between camera and center of backboard
- * 
- * theta = angle_offset(RESOLUTION().Y()/2 - COM_Y, RESOLUTION().Y(), FOV());
- * DX = H/std::tan(theta);
- */
+aspect_ratio::aspect_ratio(int xv, int yv) : x(xv), y(yv) {}
  
-double getdist_x(int COM_Y) {
-    //TODO: Make h general depending on height, don't just assume top!
-    double theta = angle_offset(RESOLUTION().Y()/2 - COM_Y, RESOLUTION().Y(), FOV());
-    return h_top/std::tan(theta);
-}
-
