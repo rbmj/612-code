@@ -31,17 +31,19 @@
 #include <Vision/BinaryImage.h>
 #include <Vision2009/VisionAPI.h>
 
-ColorImage* get_image();
-ColorImage* get_old_image();
-BinaryImage* get_image_mask(ColorImage*);
-vector<ParticleAnalysisReport> get_image_targets(BinaryImage*);
-unsigned int determine_aim_target(vector<ParticleAnalysisReport>);
-unsigned int determine_aim_target_from_image(ColorImage*);
-vector<double> get_distance();
-vector<double> get_distance_from_image(ColorImage*);
-vector<double> get_radians();
-vector<double> get_radians_from_image(ColorImage*);
-vector<double> get_degrees();
-vector<double> get_degrees_from_image(ColorImage*);
+namespace vision_processing {
+    ColorImage* get_image();
+    ColorImage* get_old_image();
+    BinaryImage* get_image_mask(ColorImage*);
+    vector<ParticleAnalysisReport> get_image_targets(BinaryImage*);
+    unsigned int determine_aim_target(vector<ParticleAnalysisReport>);
+    unsigned int determine_aim_target_from_image(ColorImage*);
+    vector<double> get_distance();
+    vector<double> get_distance_from_image(ColorImage*);
+    vector<double> get_radians();
+    vector<double> get_radians_from_image(ColorImage*);
+    vector<double> get_degrees();
+    vector<double> get_degrees_from_image(ColorImage*);
+};
 
 #endif // INC_VISION_PROCESSING_H

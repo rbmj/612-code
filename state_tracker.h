@@ -21,19 +21,15 @@
 #ifndef state_tracker_H_INCLUDED
 #define state_tracker_H_INCLUDED
 
-enum ROBOT_STATE {
-	STATE_DRIVING,
-	STATE_AIMING,
-	STATE_SHOOTING
-};
+#include "612.h"
 
 class state_tracker {
     private:
-        ROBOT_STATE state;
+        state_t state;
     public:
-        void set_state(ROBOT_STATE);
-        ROBOT_STATE get_state();
-        state_tracker() : state(STATE_DRIVING) {}
+        state_tracker(state_t);
+        void set_state(state_t);
+        state_t get_state();
 };
 
 extern state_tracker global_state;
