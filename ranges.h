@@ -16,13 +16,11 @@
  */
 
 /*
- * const range_tants for image threshold ranges
+ * const range_t values for image threshold ranges and other ranges
  */
 
 #ifndef INC_RANGES_H
 #define INC_RANGES_H
-
-
 
 // ==== HSV ====
 
@@ -67,7 +65,7 @@ enum COLOR_MODE_T {
 const COLOR_MODE_T COLOR_MODE = HSV;
 
 //configure the particle
-const int PARTICLE_AREA_MIN = 500;
+const int PARTICLE_AREA_MIN = 1000;
 const int PARTICLE_AREA_MAX = 10000;
 
 #endif // INC_RANGES_H

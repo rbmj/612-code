@@ -28,17 +28,16 @@ public:
     void update();
 
     //implement GenericHID Interface
-    float GetX(JoystickHand =kRightHand);
-    float GetY(JoystickHand =kRightHand);
+    float GetX(JoystickHand = kRightHand);
+    float GetY(JoystickHand = kRightHand);
     float GetZ();
     float GetTwist();
     float GetThrottle();
     float GetRawAxis(UINT32);
-    bool GetTrigger(JoystickHand =kRightHand); //button 1
-    bool GetTop(JoystickHand =kRightHand); //button 2
-    bool GetBumper(JoystickHand =kRightHand); //just return joy->GetBumper() straight
+    bool GetTrigger(JoystickHand = kRightHand); //button 1
+    bool GetTop(JoystickHand = kRightHand); //button 2
+    bool GetBumper(JoystickHand = kRightHand); //just return joy->GetBumper() straight
     bool GetRawButton(UINT32);
-
 };
 
 #endif

@@ -5,6 +5,7 @@
 #include <GenericHID.h>
 #include "612.h"
 #include "update.h"
+#include "joysmooth.h"
 
 //provide definition of constants:
 const int joysmooth::HOLDBACK;
@@ -14,15 +15,15 @@ const int joysmooth::NUMAXES;
 void register_callback(void*);
 void update_callback_joysmooth(void*);
 
-joysmooth(GenericHID* ghid) : joy(ghid) {
+joysmooth::joysmooth(GenericHID* ghid) : joy(ghid) {
     register_callback((void*)this);
 }
 
-joysmooth(GenericHID& ghid) : joy(&ghid) {
+joysmooth::joysmooth(GenericHID& ghid) : joy(&ghid) {
     register_callback((void*)this);
 }
 
-~joysmooth() {
+joysmooth::~joysmooth() {
     registry().unregister_func(update_callback, (void*)this);
 }
 
@@ -38,39 +39,39 @@ joysmooth::void update() {
     }
 }
 
-joysmooth::float GetX(GenericHID::JoystickHand h) {
+float joysmooth::GetX(GenericHID::JoystickHand h) {
    return axes[X_AXIS];
 }
 
-joysmooth::float GetY(GenericHID::JoystickHand h) {
+float joysmooth::GetY(GenericHID::JoystickHand h) {
    return axes[Y_AXIS];
 }
 
-joysmooth::float GetZ(){
+float joysmooth::GetZ(){
     return axes[Z_AXIS];
 }
 
-joysmooth::float GetTwist(){
+float joysmooth::GetTwist(){
     return axis[TWIST_AXIS];
 }
 
-joysmooth::float GetThrottle(){
+float joysmooth::GetThrottle(){
     return axes[THROTTLE_AXIS];
 }
 
-joysmooth::float GetRawAxis(UINT32 axisId){
+float joysmooth::GetRawAxis(UINT32 axisId){
     return axes[axisId];
 }
 
-joysmooth::bool GetTop(){
+bool joysmooth::GetTop(){
     return GetRawButton(2);
 }
 
-joysmooth::bool GetBumper(){
+bool joysmooth::GetBumper(){
     return joy->GetBumper();
 }
 
-joysmooth::bool GetRawButton(UINT32 btnId){
+bool joysmooth::GetRawButton(UINT32 btnId){
     for(int i = 0; i < HOLDBACK; i++) {
         if(!buttons[btnId][i]) {
             return false;

@@ -27,6 +27,7 @@ class state_tracker {
     private:
         state_t state;
     public:
+        state_tracker();
         state_tracker(state_t);
         void set_state(state_t);
         state_t get_state();
