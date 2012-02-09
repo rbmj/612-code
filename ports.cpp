@@ -104,7 +104,7 @@ Joystick right_joystick_raw                        ( 2 );
 Joystick gunner_joystick_raw                       ( 3 );
 
 
-joysmooth left_joystick         (  left_joystick_raw    );
+joysmooth left_joystick        (  left_joystick_raw    );
 joysmooth right_joystick       (  right_joystick_raw   );
 joysmooth gunner_joystick      (  gunner_joystick_raw  );
 
