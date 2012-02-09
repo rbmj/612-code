@@ -105,7 +105,7 @@ void robot_class::TeleopContinuous() {
 
 void robot_class::update_sensors() {
     //run functions in update registry
-    registry.update();
+    registry().update();
 }
 
 //the following macro tells the library that we want to generate code
