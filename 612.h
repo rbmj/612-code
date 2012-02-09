@@ -34,4 +34,8 @@ enum GLOBAL_ROBOT_STATE {
 	STATE_SHOOTING = 1
 };
 
+void perror_612_(const char*, int, const char *);
+
+#define perror_612(sym) perror_612_(__FILE__, __LINE__, sym)
+
 #endif
