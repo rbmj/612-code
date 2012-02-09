@@ -62,7 +62,7 @@ enum COLOR_MODE_T {
 };
 
 //set these to change search color
-const COLOR_MODE_T COLOR_MODE = HSV;
+const COLOR_MODE_T COLOR_MODE = HSL;
 
 //configure the particle
 const int PARTICLE_AREA_MIN = 1000;
