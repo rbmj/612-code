@@ -39,9 +39,10 @@ using namespace vision_processing;
 ColorImage* old_image;
 
 double inline degrees_from_ratio(double); // ratio: width/height
+double inline distance_from_height(double);
 double inline radians_from_ratio(double);
 double inline distance_from_height(int);
-unsigned int get_image_height(BinaryImage*, ParticleAnalysisReport);
+double inline deviation_from_angle(double)
 
 ColorImage* vision_processing::get_image() {
     if(camera().IsFreshImage()) {
@@ -120,7 +121,8 @@ vector<double> vision_processing::get_distance_from_image(ColorImage* image) {
     for(unsigned int i = 0; i < targets.size(); i++) {
         ParticleAnalysisReport target = targets[i];
 		unsigned int height = get_image_height(image_mask, target);
-		double ground_distance = distance_from_height(height);
+		unsigned int width = get_image_width(image_mask, target);
+		double ground_distance = distance_from_height(height) + deviation_from_angle(degrees_from_ratio(width/height))s ;
         distance.push_back(ground_distance);
     }
     return distance;
@@ -162,15 +164,18 @@ double inline degrees_from_ratio(double ratio) {
     return (-94.637 * pow(ratio, 2)) + (119.86 * ratio) + 9.7745;
 }
 
+double inline distance_from_height(double height) {
+	return (1532.1932574739*(pow(height,-1.0541299046)));
+}
+
+double inline deviation_from_angle(double angle) {
+	return ((-0.00005*(pow(angle,2))) + (0.0206*angle) - 0.0225);
+}
+
 double inline radians_from_ratio(double ratio) {
     return deg2rad(degrees_from_ratio(ratio));
 }
 
 double inline distance_from_height(int height) {
     return 1532.1932574739 * (pow(height, -1.0541299046));
-}
-
-unsigned int get_image_height(BinaryImage* image, ParticleAnalysisReport target) {
-    // return black_magic();
-    return 0;
 }
