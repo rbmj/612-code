@@ -23,7 +23,11 @@
 #include "update.h"
 
 update_registry& registry() {
-    static update_registry reg_obj;
+    //note that the destructor for reg_obj is never called.  This is OK because
+    //when our program terminates, the kernel will reclaim the whole process'
+    //address space.  However, if anything vital goes in the destructor, we'll
+    //have issues :/
+    static update_registry * reg_obj = new update_registry;
     return reg_obj;
 }
 
