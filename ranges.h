@@ -24,7 +24,7 @@
 
 // ==== HSV ====
 
-const range_t HSV_HMIN = 072;
+const range_t HSV_HMIN =  72;
 const range_t HSV_HMAX = 129;
 
 const range_t HSV_SMIN = 110;
@@ -35,10 +35,10 @@ const range_t HSV_VMAX = 255;
 
 // ==== HSI ====
 
-const range_t HSI_HMIN = 072;
+const range_t HSI_HMIN =  72;
 const range_t HSI_HMAX = 129;
 
-const range_t HSI_SMIN = 030;
+const range_t HSI_SMIN =  30;
 const range_t HSI_SMAX = 255;
 
 const range_t HSI_IMIN = 174;
@@ -46,14 +46,14 @@ const range_t HSI_IMAX = 241;
 
 // ==== HSL ====
 
-const range_t HSL_HMIN = 072;
-const range_t HSL_HMAX = 129;
+const range_t HSL_HMIN =  83;//080;
+const range_t HSL_HMAX = 129;//116;
 
-const range_t HSL_SMIN = 193;
-const range_t HSL_SMAX = 255;
+const range_t HSL_SMIN =  50;//075;
+const range_t HSL_SMAX = 255;//255;
 
-const range_t HSL_LMIN = 104;
-const range_t HSL_LMAX = 229;
+const range_t HSL_LMIN =  92;//131;
+const range_t HSL_LMAX = 246;//199;
 
 enum COLOR_MODE_T {
     HSL,
@@ -62,10 +62,10 @@ enum COLOR_MODE_T {
 };
 
 //set these to change search color
-const COLOR_MODE_T COLOR_MODE = HSV;
+const COLOR_MODE_T COLOR_MODE = HSL;
 
 //configure the particle
-const int PARTICLE_AREA_MIN = 1000;
+const int PARTICLE_AREA_MIN = 100;
 const int PARTICLE_AREA_MAX = 10000;
 
 #endif // INC_RANGES_H

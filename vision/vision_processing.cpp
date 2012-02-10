@@ -35,23 +35,31 @@
 
 using namespace vision_processing;
 
+typedef struct particle_rect_struct {
+    int top;    //Location of the top edge of the rectangle.
+    int left;   //Location of the left edge of the rectangle.
+    int height; //Height of the rectangle.
+    int width;  //Width of the rectangle.
+} particle_rect;
+
 //constants
-ColorImage* old_image;
+HSLImage old_image;
 
 double inline degrees_from_ratio(double); // ratio: width/height
 double inline radians_from_ratio(double);
 double inline distance_from_height(int);
 unsigned int get_image_height(BinaryImage*, ParticleAnalysisReport);
+vector<ParticleAnalysisReport>* get_image_particles(BinaryImage*);
 
 ColorImage* vision_processing::get_image() {
     if(camera().IsFreshImage()) {
-        camera().GetImage(old_image);
+        camera().GetImage(&old_image);
     } 
     return get_old_image();
 }
 
 ColorImage* vision_processing::get_old_image() {
-    return old_image;
+    return &old_image;
 }
 
 BinaryImage* vision_processing::get_image_mask(ColorImage* image) {
@@ -76,7 +84,8 @@ vector<ParticleAnalysisReport> vision_processing::get_image_targets(BinaryImage*
     if(image == NULL) {
         return targets;
     }
-    vector<ParticleAnalysisReport>* particles = image->GetOrderedParticleAnalysisReports();
+//    printf("DEBUG: number of particles: %d",image->GetNumberParticles());
+    vector<ParticleAnalysisReport>* particles=image->GetOrderedParticleAnalysisReports();
     for(unsigned int i = 0; i < particles->size(); i++) {
         ParticleAnalysisReport particle = particles->at(i);
         double particle_area = particle.particleArea;
@@ -138,10 +147,12 @@ vector<double> vision_processing::get_degrees_from_image(ColorImage* image) {
     }
     for(unsigned int i = 0; i < targets.size(); i++) {
         ParticleAnalysisReport target = targets[i];
-        int height = target.imageHeight;
-        int width = target.imageWidth;
+        particle_rect target_rect=*((particle_rect*)&target.boundingRect);
+        int height = target_rect.width;
+        int width = target_rect.height;
         double ratio = 1.0*width/height;
-        degrees.push_back(degrees_from_ratio(ratio));
+        double image_degrees=degrees_from_ratio(ratio);
+        degrees.push_back(image_degrees);
     }
     return degrees;
 }
