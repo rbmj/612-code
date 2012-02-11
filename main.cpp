@@ -122,7 +122,6 @@ void robot_class::TeleopContinuous() {
     if(global_state.get_state() != STATE_AIMING) {
         Wait(0.005); //let the CPU rest a little - 5 ms isn't too long
     }
-    Wait(0.005); //let the CPU rest a little - 5 ms isn't too long
 }
 
 void robot_class::update_sensors() {
