@@ -28,7 +28,7 @@ update_registry& registry() {
     //address space.  However, if anything vital goes in the destructor, we'll
     //have issues :/
     static update_registry * reg_obj = new update_registry;
-    return reg_obj;
+    return *reg_obj;
 }
 
 void update_registry::register_func(update_registry::update_func f, void * a) {

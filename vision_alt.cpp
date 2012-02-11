@@ -3,6 +3,7 @@
 #include "update.h"
 #include "ports.h"
 #include "visionalg.h"
+#include "612.h"
 
 #include <nivision.h>
 #include <Threshold.h>
@@ -14,6 +15,9 @@
 
 #include <vector>
 #include <cmath>
+#include <cstdio>
+#include <cstdlib>
+#include <algorithm>
 
 /* Remember that y increases as you go DOWN the image!! */
 
@@ -52,6 +56,27 @@ static_init_class_visionalt static_init_class_obj; //just so it will run the cto
 
 #endif
 
+void output_debug_info_target(const char * n, const target& t) {
+    if (t.valid()) {
+        std::printf("Target %s found:\n"
+                    "\tdistance = %g\n"
+                    "\tx_offset = %i\n"
+                    "\theight   = %g\n",
+                    n, t.distance(), t.x_offset(), t.height());
+        //
+    }
+    else {
+        std::printf("Target %s not found.\n", n);
+    }
+}
+
+void output_debug_info() {
+    output_debug_info_target("bottom_basket", bottom_basket);
+    output_debug_info_target("midleft_basket", midleft_basket);
+    output_debug_info_target("midright_basket", midright_basket);
+    output_debug_info_target("top_basket", top_basket);
+}
+
 /* update logic: */
 
 void target::update_targets(void * ignored) {
@@ -59,7 +84,7 @@ void target::update_targets(void * ignored) {
         return; //no new image for us to process
     }
     if (!camera().GetImage(&image)) {
-        //error getting image from camera
+        perror_612("Cannot Recieve Image From Camera");
         return;
     }
     BinaryImage * result = NULL;
@@ -75,11 +100,12 @@ void target::update_targets(void * ignored) {
     else {
         //color mode undefined.  Fall back to HSL
         result = image.ThresholdHSL(HSL_THOLD);
-        //probably should output an error message
+        perror_612("Invalid Color Mode - Falling Back to HSL");
     }
     if (!result) {
         //we have issues
-        return; //error?
+        perror_612("Threshold Unsuccessful");
+        return;
     }
     report_vector * reports = result->GetOrderedParticleAnalysisReports();
     if (!reports) {
@@ -101,6 +127,58 @@ void target::update_targets(void * ignored) {
     //identify targets, and update the values there
     id_and_process(reports);
     delete reports; //free vector
+    if (DEBUG_612) {
+        if (std::rand() % 5 == 0) { //make it so it outputs 20% of the time
+            output_debug_info();
+        }
+    }
+}
+
+void three_targets_alignx(const ParticleAnalysisReport& aligna, const ParticleAnalysisReport& alignb, const ParticleAnalysisReport& unalign) {
+    //aligna and alignb are vertically aligned
+    if (aligna.center_mass_y > alignb.center_mass_y) {
+        //aligna is bottom, and alignb is top
+        bottom_basket.update_data_with_report(aligna);
+        top_basket.update_data_with_report(alignb);
+    }
+    else {
+        //alignb is bottom, and aligna is top
+        bottom_basket.update_data_with_report(alignb);
+        top_basket.update_data_with_report(aligna);
+    }
+    if (unalign.center_mass_x < (aligna.center_mass_x + alignb.center_mass_x) / 2) {
+        //unalign is midleft
+        midleft_basket.update_data_with_report(unalign);
+    }
+    else {
+        //unalign is midright
+        midright_basket.update_data_with_report(unalign);
+    }
+}
+
+void three_targets_aligny(const ParticleAnalysisReport& aligna,
+    const ParticleAnalysisReport& alignb,
+    const ParticleAnalysisReport& unalign)
+{
+    //aligna and alignb are horizontally aligned
+    if (aligna.center_mass_x < alignb.center_mass_x) {
+        //aligna is midleft, and alignb is midright
+        midleft_basket.update_data_with_report(aligna);
+        midright_basket.update_data_with_report(alignb);
+    }
+    else {
+        //alignb is midleft, and aligna is midright
+        midleft_basket.update_data_with_report(alignb);
+        midright.update_data_with_report(aligna);
+    }
+    if (unalign.center_mass_y < (aligna.center_mass_y + alignb.center_mass_y) / 2) {
+        //unalign is top
+        top_basket.update_data_with_report(unalign);
+    }
+    else {
+        //unalign is bottom
+        bottom_basket.update_data_with_report(unalign);
+    }
 }
 
 void target::id_and_process(const report_vector * reports) {
@@ -154,7 +232,43 @@ void target::id_and_process(const report_vector * reports) {
         //parallel to an axis.  If it's the x axis, they're the mid-level
         //baskets.  If it's the y axis, they're the top/bottom baskets
         
-        //TODO: Implement
+        int x0_1, x1_2, x0_2;
+        x0_1 = std::abs(reports->at(0).center_mass_x - reports->at(1).center_mass_x);
+        x1_2 = std::abs(reports->at(1).center_mass_x - reports->at(2).center_mass_x);
+        x0_2 = std::abs(reports->at(0).center_mass_x - reports->at(2).center_mass_x);
+        
+        int y0_1, y1_2, y0_2;
+        y0_1 = std::abs(reports->at(0).center_mass_y - reports->at(1).center_mass_y);
+        y1_2 = std::abs(reports->at(1).center_mass_y - reports->at(2).center_mass_y);
+        y0_2 = std::abs(reports->at(0).center_mass_y - reports->at(2).center_mass_y);
+        
+        xmin = std::min(std::min(x0_1, x0_2), x1_2);
+        ymin = std::min(std::min(y0_1, y0_2), x1_2);
+        
+        if (xmin < ymin) {
+            //vertically aligned, therefore two of them are top and bottom
+            if (xmin == x0_1) {
+                three_targets_alignx(reports->at(0), reports->at(1), reports->at(2));
+            }
+            else if (xmin == x0_2) {
+                three_targets_alignx(reports->at(0), reports->at(2), reports->at(1));
+            }
+            else if (xmin == x1_2) {
+                three_targets_alignx(reports->at(1), reports->at(2), reports->at(0));
+            }
+        }
+        else {
+            //horizontally aligned, therefore two of them are left and right
+            if (ymin == y0_1) {
+                three_targets_aligny(reports->at(0), reports->at(1), reports->at(2));
+            }
+            else if (ymin == y0_2) {
+                three_targets_aligny(reports->at(0), reports->at(2), reports->at(1));
+            }
+            else if (ymin == y1_2) {
+                three_targets_aligny(reports->at(1), reports->at(2), reports->at(0));
+            }
+        }
     }
     else if (reports->size() == 4) {
         //all baskets on screen.
@@ -191,7 +305,10 @@ void target::id_and_process(const report_vector * reports) {
         //should only be one element left in vector
         //right
         midright_basket.update_data_with_report(reports->begin());
-    }    
+    }
+    else {
+        perror_612("Too Many Particles.  Aborting.");
+    }  
 }
 
 /*

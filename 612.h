@@ -38,4 +38,6 @@ void perror_612_(const char*, int, const char *);
 
 #define perror_612(sym) perror_612_(__FILE__, __LINE__, sym)
 
+const bool DEBUG_612 = true;
+
 #endif
