@@ -177,5 +177,5 @@ double inline radians_from_ratio(double ratio) {
 }
 
 double inline distance_from_height(int height) {
-    return 1532.1932574739 * (pow(height, -1.0541299046));
+    return ((1277.686246075*(1/height)) - 0.8265433113);
 }
