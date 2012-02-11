@@ -66,6 +66,6 @@ const COLOR_MODE_T COLOR_MODE = HSL;
 
 //configure the particle
 const int PARTICLE_AREA_MIN = 100;
-const int PARTICLE_AREA_MAX = 10000;
+const int PARTICLE_AREA_MAX = 50000;
 
 #endif // INC_RANGES_H

@@ -97,8 +97,30 @@ void robot_class::TeleopContinuous() {
             left_servo_shift.Set(0.3);
             //Sets servo to low gear
         }
-        vector<double> target_degrees = vision_processing::get_degrees();
-        printf("Angle (degrees) of camera: %f", target_degrees[vision_processing::determine_aim_target_from_image(vision_processing::get_image())]);
+    }
+    else if(global_state.get_state() == STATE_AIMING) {
+        // disable motor safety check to stop wasting netconsole space
+        drive.SetSafetyEnabled(false);
+        ColorImage* camera_image = vision_processing::get_image();
+        vector<double> target_degrees = vision_processing::get_degrees_from_image(camera_image);
+        vector<double> target_distances = vision_processing::get_distance_from_image(camera_image);
+//        printf("Angle (degrees) of camera: %f", target_degrees[vision_processing::determine_aim_target_from_image(vision_processing::get_image())]);
+        if(target_degrees.size() >= 1) {
+            printf("Angle (degrees) of camera: %f\n", target_degrees[0]);
+        }
+        else {
+            printf("No target detected\n");
+        }
+        if(target_distances.size() >= 1) {
+            printf("Distance of target:       %f\n", target_distances[0]);
+        }
+        if(!left_joystick.GetRawButton(3)) {
+            global_state.set_state(STATE_DRIVING);
+            drive.SetSafetyEnabled(true);
+        }
+    }
+    if(global_state.get_state() != STATE_AIMING) {
+        Wait(0.005); //let the CPU rest a little - 5 ms isn't too long
     }
     Wait(0.005); //let the CPU rest a little - 5 ms isn't too long
 }

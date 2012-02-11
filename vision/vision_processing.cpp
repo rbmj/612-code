@@ -48,8 +48,8 @@ HSLImage old_image;
 double inline degrees_from_ratio(double); // ratio: width/height
 double inline radians_from_ratio(double);
 double inline distance_from_height(int);
-unsigned int get_image_height(BinaryImage*, ParticleAnalysisReport);
-vector<ParticleAnalysisReport>* get_image_particles(BinaryImage*);
+double inline deviation_from_angle(double);
+particle_rect inline get_bounding_box(ParticleAnalysisReport);
 
 ColorImage* vision_processing::get_image() {
     if(camera().IsFreshImage()) {
@@ -73,7 +73,7 @@ BinaryImage* vision_processing::get_image_mask(ColorImage* image) {
     else if(COLOR_MODE == HSI) {
         imageMask = image->ThresholdHSI(HSI_HMIN, HSI_HMAX, HSI_SMIN, HSI_SMAX, HSI_IMIN, HSI_IMAX);
     }
-    else { // HSI is implied (not assumed)
+    else { // HSL is implied (not assumed)
         imageMask = image->ThresholdHSL(HSL_HMIN, HSL_HMAX, HSL_SMIN, HSL_SMAX, HSL_LMIN, HSL_LMAX);
     }
     return imageMask;
@@ -128,8 +128,12 @@ vector<double> vision_processing::get_distance_from_image(ColorImage* image) {
     }
     for(unsigned int i = 0; i < targets.size(); i++) {
         ParticleAnalysisReport target = targets[i];
-		unsigned int height = get_image_height(image_mask, target);
-		double ground_distance = distance_from_height(height);
+        particle_rect target_rect=get_bounding_box(target);
+        int height = target_rect.height;
+        int width = target_rect.width;
+        double ratio = 1.0 * width/height;
+        double image_degrees = degrees_from_ratio(ratio);
+		double ground_distance = distance_from_height(height) + deviation_from_angle(image_degrees);
         distance.push_back(ground_distance);
     }
     return distance;
@@ -147,11 +151,11 @@ vector<double> vision_processing::get_degrees_from_image(ColorImage* image) {
     }
     for(unsigned int i = 0; i < targets.size(); i++) {
         ParticleAnalysisReport target = targets[i];
-        particle_rect target_rect=*((particle_rect*)&target.boundingRect);
-        int height = target_rect.width;
-        int width = target_rect.height;
-        double ratio = 1.0*width/height;
-        double image_degrees=degrees_from_ratio(ratio);
+        particle_rect target_rect=get_bounding_box(target);
+        int height = target_rect.height;
+        int width = target_rect.width;
+        double ratio = 1.0 * width/height;
+        double image_degrees = degrees_from_ratio(ratio);
         degrees.push_back(image_degrees);
     }
     return degrees;
@@ -181,7 +185,10 @@ double inline distance_from_height(int height) {
     return 1532.1932574739 * (pow(height, -1.0541299046));
 }
 
-unsigned int get_image_height(BinaryImage* image, ParticleAnalysisReport target) {
-    // return black_magic();
-    return 0;
+double inline deviation_from_angle(double angle) {
+	return ((-0.00005*(pow(angle,2))) + (0.0206*angle) - 0.0225);
+}
+
+particle_rect inline get_bounding_box(ParticleAnalysisReport particle) {
+    return *((particle_rect*)&particle.boundingRect);
 }
