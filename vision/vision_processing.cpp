@@ -165,11 +165,11 @@ double inline degrees_from_ratio(double ratio) {
 }
 
 double inline distance_from_height(double height) {
-	return (1532.1932574739*(pow(height,-1.0541299046)));
+	return ((1277.686246075*(1/height)) - 0.8265433113);
 }
 
 double inline deviation_from_angle(double angle) {
-	return ((-0.00005*(pow(angle,2))) + (0.0206*angle) - 0.0225);
+	return ((-0.00005*(pow(angle,2))) +(0.0208*angle) +0.0046);
 }
 
 double inline radians_from_ratio(double ratio) {
@@ -177,5 +177,5 @@ double inline radians_from_ratio(double ratio) {
 }
 
 double inline distance_from_height(int height) {
-    return 1532.1932574739 * (pow(height, -1.0541299046));
+    return ((1277.686246075*(1/height)) - 0.8265433113);
 }
