@@ -20,6 +20,10 @@
  */
 
 #include "visionalg.h"
+#include "ports.h"
+
+#include <cmath>
+#include <Vision/AxisCameraParams.h>
 
 /* A few algorithms:
  * 
@@ -45,9 +49,6 @@
  * theta = arcsin [ ------------------------------- ]
  *                [            r_total              ]
  */
- 
-#include <cmath>
-#include <Vision/AxisCameraParams.h>
 
 #ifdef AXIS_CAMERA_M1011
 const double CAM_FOV = 0.820304748; //47 degrees, Axis M1011
@@ -108,4 +109,10 @@ const aspect_ratio& RESOLUTION() {
 }
 
 aspect_ratio::aspect_ratio(int xv, int yv) : x(xv), y(yv) {}
+
+void init_camera() {
+    if (camera().GetResolution() != axis_resolution) {
+        camera.WriteResolution(axis_resolution);
+    }
+}
  

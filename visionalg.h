@@ -31,6 +31,8 @@
 
 double angle_offset(int, int, double); //offset, total, FOV
 
+void init_camera();
+
 class aspect_ratio {
 private:
     int x;

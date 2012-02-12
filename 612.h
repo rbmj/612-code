@@ -37,7 +37,6 @@ enum GLOBAL_ROBOT_STATE {
 
 void perror_612_(const char*, int, const char *);
 
-
 //need to use a #define here in order to have __FILE__/__LINE__ work
 #define perror_612(sym) perror_612_(__FILE__, __LINE__, sym)
 

@@ -46,7 +46,6 @@ struct drive_jaguar {
 
 //actual definitions.  Note they all must be declared 'extern'!
 
-
 //PWMs
 extern drive_jaguar left_front_motor;
 extern drive_jaguar right_front_motor;

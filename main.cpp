@@ -25,6 +25,7 @@
 #include "update.h"
 #include "vision/vision_processing.h"
 #include "state_tracker.h"
+#include "visionalg.h"
 
 //constructor - initialize drive
 robot_class::robot_class() {
@@ -39,7 +40,7 @@ void robot_class::RobotInit() {
     drive.SetInvertedMotor(left_rear_motor.type,   left_rear_motor.reverse);
     drive.SetInvertedMotor(right_front_motor.type, right_front_motor.reverse);
     drive.SetInvertedMotor(right_rear_motor.type,  right_rear_motor.reverse);
-    state_tracker global_state;
+    init_camera();
 }
 
 void robot_class::DisabledInit() {
