@@ -112,7 +112,7 @@ aspect_ratio::aspect_ratio(int xv, int yv) : x(xv), y(yv) {}
 
 void init_camera() {
     if (camera().GetResolution() != axis_resolution) {
-        camera.WriteResolution(axis_resolution);
+        camera().WriteResolution(axis_resolution);
     }
 }
  

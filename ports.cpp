@@ -35,6 +35,7 @@
 #include "612.h"
 #include "ports.h"
 #include "joysmooth.h"
+#include "roller.h"
 
 //just define & initialize all of the consts in ports.h
 
@@ -115,6 +116,9 @@ RobotDrive drive (
     right_front_motor.jag, //for more details
     right_rear_motor.jag
 );
+
+//roller_t
+roller_t rollers(roller_spike_1, roller_spike_2);
 
 //drive_jaguar                           JAGUAR&                 TYPE               REVERSE
 drive_jaguar left_front_motor  =    { left_front_jag,  RobotDrive::kFrontLeftMotor,  true };
