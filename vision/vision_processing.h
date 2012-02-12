@@ -44,6 +44,9 @@ namespace vision_processing {
     vector<double> get_radians_from_image(ColorImage*);
     vector<double> get_degrees();
     vector<double> get_degrees_from_image(ColorImage*);
+    
+    //hooks for other methods to use algorithms
+    double get_distance_from_report(const ParticleAnalysisReport&);
 };
 
 #endif // INC_VISION_PROCESSING_H

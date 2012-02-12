@@ -28,10 +28,13 @@
 #include <Vision/ColorImage.h>
 #include <Vision/BinaryImage.h>
 #include <Vision2009/VisionAPI.h>
+#include <nivision.h>
+
 #include "vision_processing.h"
 #include "../ports.h"
 #include "../ranges.h"
 #include "../trajectory.h"
+#include "../visionalg.h"
 
 using namespace vision_processing;
 
@@ -49,7 +52,6 @@ double inline degrees_from_ratio(double); // ratio: width/height
 double inline radians_from_ratio(double);
 double inline distance_from_height(int);
 double inline deviation_from_angle(double);
-particle_rect inline get_bounding_box(ParticleAnalysisReport);
 
 ColorImage* vision_processing::get_image() {
     if(camera().IsFreshImage()) {
@@ -128,7 +130,7 @@ vector<double> vision_processing::get_distance_from_image(ColorImage* image) {
     }
     for(unsigned int i = 0; i < targets.size(); i++) {
         ParticleAnalysisReport target = targets[i];
-        particle_rect target_rect=get_bounding_box(target);
+        Rect target_rect=target.boundingRect;
         int height = target_rect.height;
         int width = target_rect.width;
         double ratio = 1.0 * width/height;
@@ -137,6 +139,22 @@ vector<double> vision_processing::get_distance_from_image(ColorImage* image) {
         distance.push_back(ground_distance);
     }
     return distance;
+}
+
+//TODO: Someone else (Jeff?) sanity check this and make sure it's right.  I tried to copy your logic
+//from above.
+double get_distance_from_report(const ParticleAnalysisReport& report) {
+    double ratio = ((double)(report.boundingRect.width))/(report.boundingRect.height);
+    double degrees = degrees_from_ratio(ratio);
+    double dist = distance_from_height(report.boundingRect.height) + deviation_from_angle(degrees);
+    return dist;
+}
+
+double get_height_offset_from_report(const ParticleAnalysisReport& r, double dist) {
+    //meant to be called once you have dist from get_distance_from_report
+    //this way we don't need to have target detection
+    double theta = angle_offset(RESOLUTION().Y()/2 - r.center_mass_y, RESOLUTION().Y(), FOV().Y()); 
+    return std::tan(theta)*dist;
 }
 
 vector<double> vision_processing::get_degrees() {
@@ -151,7 +169,7 @@ vector<double> vision_processing::get_degrees_from_image(ColorImage* image) {
     }
     for(unsigned int i = 0; i < targets.size(); i++) {
         ParticleAnalysisReport target = targets[i];
-        particle_rect target_rect=get_bounding_box(target);
+        Rect target_rect = target.boundingRect;
         int height = target_rect.height;
         int width = target_rect.width;
         double ratio = 1.0 * width/height;
@@ -174,7 +192,8 @@ vector<double> vision_processing::get_radians_from_image(ColorImage* image) {
 }
 
 double inline degrees_from_ratio(double ratio) {
-    return (-94.637 * pow(ratio, 2)) + (119.86 * ratio) + 9.7745;
+    //a quadratic regression.  Fits rather well.
+    return (-94.637 * ratio * ratio) + (119.86 * ratio) + 9.7745;
 }
 
 double inline radians_from_ratio(double ratio) {
@@ -182,13 +201,11 @@ double inline radians_from_ratio(double ratio) {
 }
 
 double inline distance_from_height(int height) {
+    //magic numbers are gross but they do the job...
+    //a tad worried about the -0.8.  Not sure what this will do at close distances
 	return ((1277.686246075*(1/height)) - 0.8265433113);
 }
 
 double inline deviation_from_angle(double angle) {
 	return ((-0.00005*(pow(angle,2))) +(0.0208*angle) + 0.0046);
-}
-
-particle_rect inline get_bounding_box(ParticleAnalysisReport particle) {
-    return *((particle_rect*)&particle.boundingRect);
 }

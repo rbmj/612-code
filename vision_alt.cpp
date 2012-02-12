@@ -25,6 +25,7 @@
 #include "ports.h"
 #include "visionalg.h"
 #include "612.h"
+#include "vision/vision_processing.h"
 
 #include <nivision.h>
 #include <Vision/Threshold.h>
@@ -39,6 +40,14 @@
 #include <cstdio>
 #include <cstdlib>
 #include <algorithm>
+
+enum VISION_ALGORITHM {
+    TRIGONOMETRIC,
+    REGRESSION
+};
+
+//note: only REGRESSION will work if the target detection doesn't work well :/
+const VISION_ALGORITHM ALGORITHM = TRIGONOMETRIC;
 
 /* Remember that y increases as you go DOWN the image!! */
 
@@ -327,7 +336,7 @@ void target::id_and_process(report_vector * reports) {
  * DX = H/std::tan(theta);
  */
 
-double get_distance(const ParticleAnalysisReport& r, double height) {
+double get_distance_TRIG(const ParticleAnalysisReport& r, double height) {
     double theta = angle_offset(RESOLUTION().Y()/2 - r.center_mass_y, RESOLUTION().Y(), FOV().Y());
     return (height/std::tan(theta));
 }
@@ -335,7 +344,12 @@ double get_distance(const ParticleAnalysisReport& r, double height) {
 void target::update_data_with_report(const ParticleAnalysisReport & r) {
     m_valid = true;
     double v_offset = m_height - robot_height;
-    m_distance = get_distance(r, v_offset);
+    if (ALGORITHM == TRIGONOMETRIC) {
+        m_distance = get_distance_TRIG(r, v_offset);
+    }
+    else if (ALGORITHM == REGRESSION) {
+        m_distance = vision_processing::get_distance_from_report(r);
+    }
     m_x_offset = r.boundingRect.left + (r.boundingRect.width/2);
     m_x_offset -= RESOLUTION().X()/2; //move to center
 }
