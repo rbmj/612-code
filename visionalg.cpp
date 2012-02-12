@@ -47,12 +47,34 @@
  */
  
 #include <cmath>
+#include <Vision/AxisCameraParams.h>
 
-const double CAM_FOV = 0.820304748; //47 degrees
+#ifdef AXIS_CAMERA_M1011
+const double CAM_FOV = 0.820304748; //47 degrees, Axis M1011
+#elif defined AXIS_CAMERA_206
+const double CAM_FOV = 0.959931089; //55 degrees, Axis 206
+#else
+#error Invalid Camera Specified
+#endif
+
 const int AR_X = 4; //4:3 aspect
 const int AR_Y = 3;
+
+#ifdef RESOLUTION_640_480
+const int RES_X = 640;
+const int RES_Y = 480;
+const AxisCameraParams::Resolution_t axis_resolution = AxisCameraParams::kResolution_640x480;
+#elif defined RESOLUTION_320_240
 const int RES_X = 320;
 const int RES_Y = 240;
+const AxisCameraParams::Resolution_t axis_resolution = AxisCameraParams::kResolution_320x240;
+#elif defined RESOLUTION_160_120
+const int RES_X = 160;
+const int RES_Y = 120;
+const AxisCameraParams::Resolution_t axis_resolution = AxisCameraParams::kResolution_160x120;
+#else
+#error Invalid Resolution Specified
+#endif
 
 double angle_offset(int offset, int total, double FOV) {
     double c = 2 * std::sin(FOV / 2);

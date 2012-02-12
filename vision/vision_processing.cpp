@@ -193,6 +193,7 @@ vector<double> vision_processing::get_radians_from_image(ColorImage* image) {
 
 double inline degrees_from_ratio(double ratio) {
     //a quadratic regression.  Fits rather well.
+    //aspect ratio is constant 4:3, so no need to adjust ratio
     return (-94.637 * ratio * ratio) + (119.86 * ratio) + 9.7745;
 }
 
@@ -203,7 +204,14 @@ double inline radians_from_ratio(double ratio) {
 double inline distance_from_height(int height) {
     //magic numbers are gross but they do the job...
     //a tad worried about the -0.8.  Not sure what this will do at close distances
-	return ((1277.686246075*(1/height)) - 0.8265433113);
+#ifdef RESOLUTION_640_480
+    //no need to do anything
+#elif defined RESOLUTION_320_240
+    height *= 2; //adjust for resolution
+#elif defined RESOLUTION_160_120
+    height *= 4;
+#endif
+    return ((1277.686246075*(1/height)) - 0.8265433113);
 }
 
 double inline deviation_from_angle(double angle) {
