@@ -1,4 +1,4 @@
-/* vision/vision_alt.h
+/* vision_alt.h
  *
  * Copyright (c) 2011, 2012 Chantilly Robotics <chantilly612@gmail.com>
  *
@@ -22,8 +22,11 @@
 #ifndef VISION_ALT_H_INC
 #define VISION_ALT_H_INC
 
-#include <ColorImage.h>
+#include <Vision/ColorImage.h>
+#include <Vision/HSLImage.h>
 #include <Vision2009/VisionAPI.h>
+
+#include <vector>
 
 //make our lives easier
 typedef std::vector<ParticleAnalysisReport> report_vector;
@@ -39,7 +42,12 @@ private:
     void update_data_with_report(const ParticleAnalysisReport&);
     
     static HSLImage image;
-    static void id_and_process(const report_vector * vec);
+    static void id_and_process(report_vector * vec);
+    static void three_targets_alignx(const ParticleAnalysisReport&,
+            const ParticleAnalysisReport&, const ParticleAnalysisReport&);
+    static void three_targets_aligny(const ParticleAnalysisReport&,
+            const ParticleAnalysisReport&, const ParticleAnalysisReport&);
+    //
 public:
     target(double h) : m_height(h) {} //feet
     bool valid() const { return m_valid; }
@@ -47,7 +55,7 @@ public:
     double distance() const { return m_distance; } //feet
     double height() const { return m_height; } //feet
     
-    static void update_targets(void*);
+    static void update_targets(void* = NULL);
 };
 
 extern target bottom_basket;

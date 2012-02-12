@@ -1,3 +1,24 @@
+/* vision_alt.cpp
+ *
+ * Copyright (c) 2011, 2012 Chantilly Robotics <chantilly612@gmail.com>
+ *
+ * Permission to use, copy, modify, and/or distribute this software for any
+ * purpose with or without fee is hereby granted, provided that the above
+ * copyright notice and this permission notice appear in all copies.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+ * WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+ * MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
+ * ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+ * WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
+ * ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
+ * OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+ */
+
+/*
+ * An alternative implementation of image processing
+ */
+
 #include "vision_alt.h"
 #include "ranges.h"
 #include "update.h"
@@ -6,7 +27,7 @@
 #include "612.h"
 
 #include <nivision.h>
-#include <Threshold.h>
+#include <Vision/Threshold.h>
 #include <Vision/AxisCamera.h>
 #include <Vision/HSLImage.h>
 #include <Vision/ColorImage.h>
@@ -36,25 +57,6 @@ Threshold HSI_THOLD(HSI_HMIN, HSI_HMAX, HSI_SMIN, HSI_SMAX, HSI_IMIN, HSI_IMAX);
 Threshold HSV_THOLD(HSV_HMIN, HSV_HMAX, HSV_SMIN, HSV_SMAX, HSV_VMIN, HSV_VMAX);
 
 HSLImage target::image; //The only non-rgb raw image type available
-
-/* Helper functions for this file: */
-
-#if 0
-//change the 0 to a 1 to enable :)
-
-class static_init_class_visionalt {
-public:
-    static_init_class_visionalt() {
-        registry().register_func(target::update_targets, NULL);
-    }
-    ~static_init_class_visionalt() {
-        registry().unregister_func(target::update_targets, NULL);
-    }
-};
-
-static_init_class_visionalt static_init_class_obj; //just so it will run the ctor on startup
-
-#endif
 
 void output_debug_info_target(const char * n, const target& t) {
     if (t.valid()) {
@@ -134,7 +136,10 @@ void target::update_targets(void * ignored) {
     }
 }
 
-void three_targets_alignx(const ParticleAnalysisReport& aligna, const ParticleAnalysisReport& alignb, const ParticleAnalysisReport& unalign) {
+void target::three_targets_alignx(const ParticleAnalysisReport& aligna,
+                                  const ParticleAnalysisReport& alignb,
+                                  const ParticleAnalysisReport& unalign)
+{
     //aligna and alignb are vertically aligned
     if (aligna.center_mass_y > alignb.center_mass_y) {
         //aligna is bottom, and alignb is top
@@ -156,9 +161,9 @@ void three_targets_alignx(const ParticleAnalysisReport& aligna, const ParticleAn
     }
 }
 
-void three_targets_aligny(const ParticleAnalysisReport& aligna,
-    const ParticleAnalysisReport& alignb,
-    const ParticleAnalysisReport& unalign)
+void target::three_targets_aligny(const ParticleAnalysisReport& aligna,
+                                  const ParticleAnalysisReport& alignb,
+                                  const ParticleAnalysisReport& unalign)
 {
     //aligna and alignb are horizontally aligned
     if (aligna.center_mass_x < alignb.center_mass_x) {
@@ -169,7 +174,7 @@ void three_targets_aligny(const ParticleAnalysisReport& aligna,
     else {
         //alignb is midleft, and aligna is midright
         midleft_basket.update_data_with_report(alignb);
-        midright.update_data_with_report(aligna);
+        midright_basket.update_data_with_report(aligna);
     }
     if (unalign.center_mass_y < (aligna.center_mass_y + alignb.center_mass_y) / 2) {
         //unalign is top
@@ -181,7 +186,7 @@ void three_targets_aligny(const ParticleAnalysisReport& aligna,
     }
 }
 
-void target::id_and_process(const report_vector * reports) {
+void target::id_and_process(report_vector * reports) {
     //set all valid flags to false for now.  Call update_data_with_report()
     //to make it valid later.
     bottom_basket.m_valid = false;
@@ -242,8 +247,8 @@ void target::id_and_process(const report_vector * reports) {
         y1_2 = std::abs(reports->at(1).center_mass_y - reports->at(2).center_mass_y);
         y0_2 = std::abs(reports->at(0).center_mass_y - reports->at(2).center_mass_y);
         
-        xmin = std::min(std::min(x0_1, x0_2), x1_2);
-        ymin = std::min(std::min(y0_1, y0_2), x1_2);
+        int xmin = std::min(std::min(x0_1, x0_2), x1_2);
+        int ymin = std::min(std::min(y0_1, y0_2), x1_2);
         
         if (xmin < ymin) {
             //vertically aligned, therefore two of them are top and bottom
@@ -304,9 +309,10 @@ void target::id_and_process(const report_vector * reports) {
         reports->erase(chosen);
         //should only be one element left in vector
         //right
-        midright_basket.update_data_with_report(reports->begin());
+        midright_basket.update_data_with_report(*(reports->begin()));
     }
     else {
+        //shouldn't happen
         perror_612("Too Many Particles.  Aborting.");
     }  
 }
@@ -320,14 +326,17 @@ void target::id_and_process(const report_vector * reports) {
  * theta = angle_offset(RESOLUTION().Y()/2 - COM_Y, RESOLUTION().Y(), FOV());
  * DX = H/std::tan(theta);
  */
+
+double get_distance(const ParticleAnalysisReport& r, double height) {
+    double theta = angle_offset(RESOLUTION().Y()/2 - r.center_mass_y, RESOLUTION().Y(), FOV().Y());
+    return (height/std::tan(theta));
+}
  
 void target::update_data_with_report(const ParticleAnalysisReport & r) {
     m_valid = true;
     double v_offset = m_height - robot_height;
-    double theta = angle_offset(RESOLUTION().Y()/2 - r.center_mass_y, RESOLUTION().Y(), FOV().Y());
-    m_distance = m_height/std::tan(theta);
-    Rect rect = r.boundingRect;
-    m_x_offset = rect.left + (rect.width/2);
+    m_distance = get_distance(r, v_offset);
+    m_x_offset = r.boundingRect.left + (r.boundingRect.width/2);
     m_x_offset -= RESOLUTION().X()/2; //move to center
 }
     

@@ -22,6 +22,8 @@
 #ifndef INC_RANGES_H
 #define INC_RANGES_H
 
+#include "612.h"
+
 // ==== HSV ====
 
 const range_t HSV_HMIN =  72;

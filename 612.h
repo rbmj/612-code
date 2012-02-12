@@ -30,14 +30,18 @@ typedef uint8_t module_t;
 typedef uint8_t range_t;
 
 enum GLOBAL_ROBOT_STATE {
-	STATE_DRIVING = 0,
-	STATE_SHOOTING = 1
+    STATE_DRIVING = 0,
+    STATE_SHOOTING,
+    STATE_AIMING        
 };
 
 void perror_612_(const char*, int, const char *);
 
+
+//need to use a #define here in order to have __FILE__/__LINE__ work
 #define perror_612(sym) perror_612_(__FILE__, __LINE__, sym)
 
-const bool DEBUG_612 = true;
+//need to use a #define here cause the compiler is ancient and stupid :/
+#define DEBUG_612 (true)
 
 #endif

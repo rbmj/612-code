@@ -8,4 +8,3 @@ void perror_612_(const char * file, int line, const char * msg) {
     std::printf("||ERROR at line %i in file %s: %s\n", line, file, msg);
 }
 
-const bool DEBUG_612;
