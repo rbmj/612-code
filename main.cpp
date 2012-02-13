@@ -99,13 +99,6 @@ void robot_class::TeleopContinuous() {
             //Sets servo to low gear
         }
     }
-    //stuff goes under
-    if (left_joystick.GetRawButton(3)) { 
-		left_launcher_jag.Set(0.1);
-		right_launcher_jag.Set(0.1);
-	}
-    //stuff goes over
-    
     else if(global_state.get_state() == STATE_AIMING) {
         // disable motor safety check to stop wasting netconsole space
         drive.SetSafetyEnabled(false);
@@ -127,6 +120,12 @@ void robot_class::TeleopContinuous() {
             drive.SetSafetyEnabled(true);
         }
     }
+    //stuff goes under
+    if (left_joystick.GetRawButton(3)) { 
+		left_launcher_jag.Set(0.1);
+		right_launcher_jag.Set(0.1);
+	}
+    //stuff goes over
     if(global_state.get_state() != STATE_AIMING) {
         Wait(0.005); //let the CPU rest a little - 5 ms isn't too long
     }
