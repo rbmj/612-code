@@ -100,9 +100,9 @@ void robot_class::TeleopContinuous() {
         }
     }
     //stuff goes under
-    if (left_joystick.GetRawButton(3){
-		left_launcher_jag.set(0.1);
-		right_launcher_jag.set(0.1);
+    if (left_joystick.GetRawButton(3)) { 
+		left_launcher_jag.Set(0.1);
+		right_launcher_jag.Set(0.1);
 	}
     //stuff goes over
     
