@@ -215,5 +215,5 @@ double inline distance_from_height(int height) {
 }
 
 double inline deviation_from_angle(double angle) {
-	return ((-0.00005*(pow(angle,2))) +(0.0208*angle) + 0.0046);
+	return ((0.0188*angle) + 0.017);
 }
