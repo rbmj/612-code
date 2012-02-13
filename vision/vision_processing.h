@@ -34,16 +34,11 @@
 namespace vision_processing {
     ColorImage* get_image();
     ColorImage* get_old_image();
-    BinaryImage* get_image_mask(ColorImage*);
-    vector<ParticleAnalysisReport> get_image_targets(BinaryImage*);
-    unsigned int determine_aim_target(vector<ParticleAnalysisReport>);
-    unsigned int determine_aim_target_from_image(ColorImage*);
+    unsigned int determine_aim_target();
     vector<double> get_distance();
-    vector<double> get_distance_from_image(ColorImage*);
-    vector<double> get_radians();
-    vector<double> get_radians_from_image(ColorImage*);
     vector<double> get_degrees();
-    vector<double> get_degrees_from_image(ColorImage*);
+    vector<double> get_radians();
+    void update();
     
     //hooks for other methods to use algorithms
     double get_distance_from_report(const ParticleAnalysisReport&);
