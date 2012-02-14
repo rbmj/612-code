@@ -54,8 +54,8 @@ extern drive_jaguar left_rear_motor;
 extern drive_jaguar right_rear_motor;
 extern Jaguar left_launcher_jag;
 extern Jaguar right_launcher_jag;
-extern Jaguar turret_XY_control_jag;
-extern Jaguar turret_Z_control_jag;
+extern Jaguar turret_rotation_jag;
+extern Jaguar turret_winch_jag;
 extern Servo right_servo_shift;
 extern Servo left_servo_shift;
 
