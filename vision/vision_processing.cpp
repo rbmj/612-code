@@ -75,29 +75,16 @@ unsigned int vision_processing::determine_aim_target() {
 
 vector<double> vision_processing::get_distance() {
     vector<double> distance;
-    for(unsigned int i = 0; i < targets->size(); i++) {
-        ParticleAnalysisReport target = targets->at(i);
-        Rect target_rect=target.boundingRect;
-        int height = target_rect.height;
-        int width = target_rect.width;
-        double ratio = 1.0 * width/height;
-        double image_degrees = degrees_from_ratio(ratio);
-		double ground_distance = distance_from_height(height) + deviation_from_angle(image_degrees);
-        distance.push_back(ground_distance);
+    for (unsigned int i = 0; i < targets->size(); i++) {
+        distance.push_back(get_distance_from_report(targets->at(i)));
     }
     return distance;
 }
 
 vector<double> vision_processing::get_degrees() {
     vector<double> degrees;
-    for(unsigned int i = 0; i < targets->size(); i++) {
-        ParticleAnalysisReport target = targets->at(i);
-        Rect target_rect = target.boundingRect;
-        int height = target_rect.height;
-        int width = target_rect.width;
-        double ratio = 1.0 * width/height;
-        double image_degrees = degrees_from_ratio(ratio);
-        degrees.push_back(image_degrees);
+    for (unsigned int i = 0; i < targets->size(); i++) {
+        degrees.push_back(get_degrees_from_report(targets->at(i)));
     }
     return degrees;
 }
@@ -168,6 +155,11 @@ double get_distance_from_report(const ParticleAnalysisReport& report) {
     double degrees = degrees_from_ratio(ratio);
     double dist = distance_from_height(report.boundingRect.height) + deviation_from_angle(degrees);
     return dist;
+}
+
+double get_degrees_from_report(const ParticleAnalysisReport& r) {
+    double ratio = ((double)(r.boundingRect.width)/(r.boundingRect.height);
+    return degrees_from_ratio(ratio);
 }
 
 double get_height_offset_from_report(const ParticleAnalysisReport& r, double dist) {
