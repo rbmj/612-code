@@ -41,6 +41,7 @@ void robot_class::RobotInit() {
     drive.SetInvertedMotor(left_rear_motor.type,   left_rear_motor.reverse);
     drive.SetInvertedMotor(right_front_motor.type, right_front_motor.reverse);
     drive.SetInvertedMotor(right_rear_motor.type,  right_rear_motor.reverse);
+    global_state.set_state(STATE_DRIVING);
     init_camera();
 }
 
@@ -97,6 +98,9 @@ void robot_class::TeleopContinuous() {
             servo_shifter.set(shifter::LOW);
             //Sets servo to low gear
         }
+        if(left_joystick.GetRawButton(3)) {
+            global_state.set_state(STATE_SHOOTING);
+        }
     }
     else if(global_state.get_state() == STATE_SHOOTING) {
         // disable motor safety check to stop wasting netconsole space
@@ -104,7 +108,6 @@ void robot_class::TeleopContinuous() {
         vision_processing::update();
         vector<double> target_degrees = vision_processing::get_degrees();
         vector<double> target_distances = vision_processing::get_distance();
-//        printf("Angle (degrees) of camera: %f", target_degrees[vision_processing::determine_aim_target_from_image(vision_processing::get_image())]);
         if(target_degrees.size() >= 1) {
             printf("Angle (degrees) of camera: %f\n", target_degrees[0]);
         }
