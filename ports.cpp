@@ -120,6 +120,9 @@ RobotDrive drive (
 //roller_t
 roller_t rollers(roller_spike_1, roller_spike_2);
 
+//shifter
+shifter servo_shifter(left_servo_shift, right_servo_shift);
+
 //drive_jaguar                           JAGUAR&                 TYPE               REVERSE
 drive_jaguar left_front_motor  =    { left_front_jag,  RobotDrive::kFrontLeftMotor,  true };
 drive_jaguar left_rear_motor   =    { left_rear_jag,   RobotDrive::kRearLeftMotor,   true };
