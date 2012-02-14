@@ -1,27 +1,27 @@
 /* vision/vision_processing.cpp
-*
-* Copyright (c) 2011, 2012 Chantilly Robotics <chantilly612@gmail.com>
-*
-* Permission to use, copy, modify, and/or distribute this software for any
-* purpose with or without fee is hereby granted, provided that the above
-* copyright notice and this permission notice appear in all copies.
-*
-* THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
-* WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
-* MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
-* ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
-* WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
-* ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
-* OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
-*/
+ *
+ * Copyright (c) 2011, 2012 Chantilly Robotics <chantilly612@gmail.com>
+ *
+ * Permission to use, copy, modify, and/or distribute this software for any
+ * purpose with or without fee is hereby granted, provided that the above
+ * copyright notice and this permission notice appear in all copies.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+ * WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+ * MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
+ * ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+ * WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
+ * ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
+ * OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+ */
 
 /*
-* Entry points for vision processing: distance and angle from image
-*/
+ * Entry points for vision processing: distance and angle from image
+ */
  
 /*
-* Calculated angles are relative to perpendicular.
-*/
+ * Calculated angles are relative to perpendicular.
+ */
 
 #include <vector>
 #include <cmath>
@@ -39,10 +39,10 @@
 using namespace vision_processing;
 
 typedef struct particle_rect_struct {
-    int top; //Location of the top edge of the rectangle.
-    int left; //Location of the left edge of the rectangle.
+    int top;    //Location of the top edge of the rectangle.
+    int left;   //Location of the left edge of the rectangle.
     int height; //Height of the rectangle.
-    int width; //Width of the rectangle.
+    int width;  //Width of the rectangle.
 } particle_rect;
 
 //constants
@@ -56,7 +56,7 @@ double inline deviation_from_angle(double);
 ColorImage* vision_processing::get_image() {
     if(camera().IsFreshImage()) {
         camera().GetImage(&old_image);
-    }
+    } 
     return get_old_image();
 }
 
@@ -86,7 +86,7 @@ vector<ParticleAnalysisReport> vision_processing::get_image_targets(BinaryImage*
     if(image == NULL) {
         return targets;
     }
-// printf("DEBUG: number of particles: %d",image->GetNumberParticles());
+//    printf("DEBUG: number of particles: %d",image->GetNumberParticles());
     vector<ParticleAnalysisReport>* particles=image->GetOrderedParticleAnalysisReports();
     for(unsigned int i = 0; i < particles->size(); i++) {
         ParticleAnalysisReport particle = particles->at(i);
@@ -94,9 +94,9 @@ vector<ParticleAnalysisReport> vision_processing::get_image_targets(BinaryImage*
         if(particle_area > PARTICLE_AREA_MIN && particle_area <= PARTICLE_AREA_MAX) {
             if(targets.size() >= 4) {
                 // TODO change min and max
-                // call function again
-                // if depth is more than 2
-                // explode
+                //      call function again
+                //      if depth is more than 2
+                //      explode
                 break;
             }
             targets.push_back(particle);
@@ -135,13 +135,13 @@ vector<double> vision_processing::get_distance_from_image(ColorImage* image) {
         int width = target_rect.width;
         double ratio = 1.0 * width/height;
         double image_degrees = degrees_from_ratio(ratio);
-double ground_distance = distance_from_height(height) + deviation_from_angle(image_degrees);
+		double ground_distance = distance_from_height(height) + deviation_from_angle(image_degrees);
         distance.push_back(ground_distance);
     }
     return distance;
 }
 
-//TODO: Someone else (Jeff?) sanity check this and make sure it's right. I tried to copy your logic
+//TODO: Someone else (Jeff?) sanity check this and make sure it's right.  I tried to copy your logic
 //from above.
 double get_distance_from_report(const ParticleAnalysisReport& report) {
     double ratio = ((double)(report.boundingRect.width))/(report.boundingRect.height);
@@ -153,7 +153,7 @@ double get_distance_from_report(const ParticleAnalysisReport& report) {
 double get_height_offset_from_report(const ParticleAnalysisReport& r, double dist) {
     //meant to be called once you have dist from get_distance_from_report
     //this way we don't need to have target detection
-    double theta = angle_offset(RESOLUTION().Y()/2 - r.center_mass_y, RESOLUTION().Y(), FOV().Y());
+    double theta = angle_offset(RESOLUTION().Y()/2 - r.center_mass_y, RESOLUTION().Y(), FOV().Y()); 
     return std::tan(theta)*dist;
 }
 
@@ -192,7 +192,7 @@ vector<double> vision_processing::get_radians_from_image(ColorImage* image) {
 }
 
 double inline degrees_from_ratio(double ratio) {
-    //a quadratic regression. Fits rather well.
+    //a quadratic regression.  Fits rather well.
     //aspect ratio is constant 4:3, so no need to adjust ratio
     return (-94.637 * ratio * ratio) + (119.86 * ratio) + 9.7745;
 }
@@ -202,10 +202,10 @@ double inline radians_from_ratio(double ratio) {
 }
 
 double inline distance_from_height(int height) {
-//magic numbers are gross but they do the job...
-//a tad worried about the -0.8. Not sure what this will do at close distances
+    //magic numbers are gross but they do the job...
+    //a tad worried about the -0.8.  Not sure what this will do at close distances
 #ifdef RESOLUTION_640_480
-//no need to do anything
+    //no need to do anything
 #elif defined RESOLUTION_320_240
     height *= 2; //adjust for resolution
 #elif defined RESOLUTION_160_120
@@ -215,5 +215,5 @@ double inline distance_from_height(int height) {
 }
 
 double inline deviation_from_angle(double angle) {
-return ((0.0188*angle) + 0.017);
+    return ((0.0188*angle) + 0.017);
 }
