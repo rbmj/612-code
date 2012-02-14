@@ -99,12 +99,12 @@ void robot_class::TeleopContinuous() {
             //Sets servo to low gear
         }
     }
-    else if(global_state.get_state() == STATE_AIMING) {
+    else if(global_state.get_state() == STATE_SHOOTING) {
         // disable motor safety check to stop wasting netconsole space
         drive.SetSafetyEnabled(false);
-        ColorImage* camera_image = vision_processing::get_image();
-        vector<double> target_degrees = vision_processing::get_degrees_from_image(camera_image);
-        vector<double> target_distances = vision_processing::get_distance_from_image(camera_image);
+        vision_processing::update();
+        vector<double> target_degrees = vision_processing::get_degrees();
+        vector<double> target_distances = vision_processing::get_distance();
 //        printf("Angle (degrees) of camera: %f", target_degrees[vision_processing::determine_aim_target_from_image(vision_processing::get_image())]);
         if(target_degrees.size() >= 1) {
             printf("Angle (degrees) of camera: %f\n", target_degrees[0]);
@@ -126,7 +126,7 @@ void robot_class::TeleopContinuous() {
 		right_launcher_jag.Set(0.1);
 	}
     //stuff goes over
-    if(global_state.get_state() != STATE_AIMING) {
+    if(global_state.get_state() != STATE_SHOOTING) {
         Wait(0.005); //let the CPU rest a little - 5 ms isn't too long
     }
 }

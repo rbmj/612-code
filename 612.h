@@ -32,7 +32,6 @@ typedef uint8_t range_t;
 enum GLOBAL_ROBOT_STATE {
     STATE_DRIVING = 0,
     STATE_SHOOTING,
-    STATE_AIMING        
 };
 
 void perror_612_(const char*, int, const char *);
