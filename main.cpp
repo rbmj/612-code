@@ -108,6 +108,7 @@ void robot_class::TeleopContinuous() {
         vision_processing::update();
         vector<double> target_degrees = vision_processing::get_degrees();
         vector<double> target_distances = vision_processing::get_distance();
+        printf("Number of targets detected: %d\n", target_degrees.size());
         if(target_degrees.size() >= 1) {
             printf("Angle (degrees) of camera: %f\n", target_degrees[0]);
         }
