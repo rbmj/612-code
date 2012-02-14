@@ -9,16 +9,15 @@
 #include <SmartDashboard/SmartDashboard.h>
 #endif
 
-#include "two_jags.h"
 #include "612.h"
+#include "ports.h"
+#include "two_jags.h"
 
 #include <cstdlib>
 
 
 const int ZERO_MAX = 4;
 const int ZERO_MIN = -1;
-const int LEFT = 0;
-const int RIGHT = 1;
 const float TURN_SPEED = 0.1;
 
 //PID Gains
@@ -53,3 +52,13 @@ void turret::align(target& t) {
     cur_target = &t;
 }
 
+void turret:turn(DIRECTION direction) {
+    if(direction == LEFT) {
+        rotation_jag.Set(TURN_SPEED);
+    }
+    else { // RIGHT is implied (not assumed)
+        rotation_jag.Set(-TURN_SPEED);
+    }
+}
+
+//turret robot_turret(turret_rotation_jag, turret_winch_jag, left_launcher_jag, right_launcher_jag
