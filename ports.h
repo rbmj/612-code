@@ -89,5 +89,6 @@ static inline AxisCamera& camera() {
 //Virtual Devices
 extern RobotDrive drive;
 extern roller_t rollers;
+extern shifter servo_shifters;
 
 #endif

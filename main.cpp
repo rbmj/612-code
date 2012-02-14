@@ -88,14 +88,12 @@ void robot_class::TeleopContinuous() {
             //explicitly state drive power is based on Y axis of that side joy
             drive.TankDrive(left, right);
         }
-        if (left_joystick.GetRawButton(11)) {
-            right_servo_shift.Set(0.7);
-            left_servo_shift.Set(0.7);
+        if (right_joystick.GetRawButton(11) || left_joystick.GetRawButton(11)) {
+            servo_shifter.set(shifter::HIGH);
             // set servo to high gear
         }
-        else if (left_joystick.GetRawButton(10)) {
-            right_servo_shift.Set(0.3);
-            left_servo_shift.Set(0.3);
+        else if (left_joystick.GetRawButton(10) || right_joystick.GetRawButton(10)) {
+            servo_shifter.set(shifter::LOW);
             //Sets servo to low gear
         }
     }
@@ -120,13 +118,29 @@ void robot_class::TeleopContinuous() {
             drive.SetSafetyEnabled(true);
         }
     }
-    //stuff goes under
-    if (left_joystick.GetRawButton(3)) { 
-		left_launcher_jag.Set(0.1);
-		right_launcher_jag.Set(0.1);
-	}
-    //stuff goes over
+    //TEMPORARY: GUNNER LAUNCHER WHEEL CONTROLS
+    if (gunner_joystick.GetRawButton(7)) {
+        left_launcher_jag.Set(1.0);
+        right_launcher_Jag.Set(1.0);
+    }
+    else {
+        left_launcher_jag.Set(0.0);
+        right_launcher_jag.Set(0.0);
+    }
     if(global_state.get_state() != STATE_SHOOTING) {
+        //MANUAL ROLLER CONTROL
+        if (gunner_joystick.GetRawButton(11)) {
+            //rollers up
+            rollers.set_direction(UP);
+        }
+        else if (gunner_joystick.GetRawButton(10)) {
+            //rollers down
+            rollers.set_direction(DOWN);
+        }
+        else {
+            //auto belts
+        }
+        //
         Wait(0.005); //let the CPU rest a little - 5 ms isn't too long
     }
 }
