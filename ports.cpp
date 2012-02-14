@@ -36,6 +36,7 @@
 #include "ports.h"
 #include "joysmooth.h"
 #include "roller.h"
+#include "shifter.h"
 
 //just define & initialize all of the consts in ports.h
 

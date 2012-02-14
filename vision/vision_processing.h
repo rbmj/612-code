@@ -42,6 +42,7 @@ namespace vision_processing {
     
     //hooks for other methods to use algorithms
     double get_distance_from_report(const ParticleAnalysisReport&);
+    double get_degrees_from_report(const ParticleAnalysisReport&);
 };
 
 #endif // INC_VISION_PROCESSING_H

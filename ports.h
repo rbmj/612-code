@@ -35,6 +35,7 @@
 #include <Vision/AxisCamera.h>
 #include "joysmooth.h"
 #include "roller.h"
+#include "shifter.h"
 
 //bundle a reference to a Jaguar and some constants to aid in setting up the
 //robot's drivetrain.  Use this for jaguars that will be used in the RobotDrive
@@ -89,6 +90,6 @@ static inline AxisCamera& camera() {
 //Virtual Devices
 extern RobotDrive drive;
 extern roller_t rollers;
-extern shifter servo_shifters;
+extern shifter servo_shifter;
 
 #endif

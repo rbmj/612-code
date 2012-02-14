@@ -11,6 +11,7 @@ public:
         NEUTRAL
     };
     shifter(Servo&, Servo&);
+    ~shifter();
     void set(GEAR);
 private:
     shifter() {}

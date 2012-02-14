@@ -26,6 +26,7 @@
 #include "vision/vision_processing.h"
 #include "state_tracker.h"
 #include "visionalg.h"
+#include "shifter.h"
 
 //constructor - initialize drive
 robot_class::robot_class() {
@@ -121,7 +122,7 @@ void robot_class::TeleopContinuous() {
     //TEMPORARY: GUNNER LAUNCHER WHEEL CONTROLS
     if (gunner_joystick.GetRawButton(7)) {
         left_launcher_jag.Set(1.0);
-        right_launcher_Jag.Set(1.0);
+        right_launcher_jag.Set(1.0);
     }
     else {
         left_launcher_jag.Set(0.0);
@@ -131,11 +132,11 @@ void robot_class::TeleopContinuous() {
         //MANUAL ROLLER CONTROL
         if (gunner_joystick.GetRawButton(11)) {
             //rollers up
-            rollers.set_direction(UP);
+            rollers.set_direction(roller_t::UP);
         }
         else if (gunner_joystick.GetRawButton(10)) {
             //rollers down
-            rollers.set_direction(DOWN);
+            rollers.set_direction(roller_t::DOWN);
         }
         else {
             //auto belts

@@ -158,7 +158,7 @@ double get_distance_from_report(const ParticleAnalysisReport& report) {
 }
 
 double get_degrees_from_report(const ParticleAnalysisReport& r) {
-    double ratio = ((double)(r.boundingRect.width)/(r.boundingRect.height);
+    double ratio = ((double)(r.boundingRect.width))/(r.boundingRect.height);
     return degrees_from_ratio(ratio);
 }
 

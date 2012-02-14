@@ -20,6 +20,11 @@
 
 #include <Jaguar.h>
 #include <PIDController.h>
+#include <Counter.h>
+#include "612.h"
+#include "launch_counter.h"
+#include "vision_alt.h"
+#include "two_jags.h"
 
 class Turret {
 public:
@@ -36,11 +41,10 @@ private:
     Jaguar * winch_jag;
 
     PIDController * launch_control;
-    two_jags launcher_jags;
-    launch_counter launch_count;
-    
+    two_jags * launcher_jags;
+    launch_counter * launch_speed;
 #if DEBUG_612
-    char * key;
+    const char * key;
 #endif
 };
 

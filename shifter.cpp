@@ -23,7 +23,7 @@ void shifter::set(GEAR g) {
 }
 
 void shifter::update() {
-    float * servoval;
+    const float * servoval;
     switch (cur_gear) {
         default:
         case LOW:
@@ -33,7 +33,7 @@ void shifter::update() {
             servoval = &kneutral;
             break;
         case NEUTRAL:
-            servoval = &khighgear
+            servoval = &khighgear;
             break;
     }
     shift1->Set(*servoval);
