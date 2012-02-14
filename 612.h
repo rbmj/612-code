@@ -39,7 +39,10 @@ void perror_612_(const char*, int, const char *);
 //need to use a #define here in order to have __FILE__/__LINE__ work
 #define perror_612(sym) perror_612_(__FILE__, __LINE__, sym)
 
-//need to use a #define here cause the compiler is ancient and stupid :/
-#define DEBUG_612 (true)
+//need to use a #define here - use 1/0 not true/false to allow #if usage.
+//debug mode
+#define DEBUG_612 (1)
+//non-debug mode
+//#defind DEBUG_612 (0)
 
 #endif

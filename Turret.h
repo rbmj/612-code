@@ -14,13 +14,34 @@
  * ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
  * OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
  */
+ 
 #ifndef INC_Turret_H
 #define INC_Turret_H
 
-class Turret(){
-	Turret();
-	~Turret();
-	void Align(int);
+#include <Jaguar.h>
+#include <PIDController.h>
+
+class Turret {
+public:
+	Turret(Jaguar&, Jaguar&, Jaguar&, Jaguar&, Counter&);
+    ~Turret();
+	void Align(target&);
+    void Enable();
+    void Disable();
+private:
+    Turret() {}
+    target * cur_target;
+    
+    Jaguar * rotation_jag;
+    Jaguar * winch_jag;
+
+    PIDController * launch_control;
+    two_jags launcher_jags;
+    launch_counter launch_count;
+    
+#if DEBUG_612
+    char * key;
+#endif
 };
 
 
