@@ -43,7 +43,7 @@ void roller_t::update() {
         spike2->Set(Relay::kForward);
     }
     else if (m_direction == (unsigned char) DOWN) {
-        spike2->Set(Relay::kReverse);
+        spike1->Set(Relay::kReverse);
         spike2->Set(Relay::kReverse);
     }
     else {
