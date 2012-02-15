@@ -18,7 +18,7 @@
 /*
  * Entry points for vision processing: distance and angle from image
  */
- 
+
 /*
  * Calculated angles are relative to perpendicular.
  */
@@ -92,10 +92,21 @@ vector<double> vision_processing::get_degrees() {
 vector<double> vision_processing::get_radians() {
     vector<double> degrees = get_degrees();
     vector<double> radians;
-    for(unsigned int i = 0; i< degrees.size(); i++) {
+    for(unsigned int i = 0; i < degrees.size(); i++) {
         radians.push_back(deg2rad(degrees[i]));
     }
     return radians;
+}
+
+int vision_processing::target_distance_from_center(int index){//measured in pixels
+    ParticleAnalysisReport target = targets->at(index);
+    int image_width = target.imageWidth;
+    int target_center = target.center_mass_x;
+    int difference = (image_width/2) - target_center;
+    if(difference < 0){
+        difference = 0 - difference;
+    }
+    return difference;
 }
 
 BinaryImage* get_image_mask(ColorImage* image) {
@@ -165,7 +176,7 @@ double get_degrees_from_report(const ParticleAnalysisReport& r) {
 double get_height_offset_from_report(const ParticleAnalysisReport& r, double dist) {
     //meant to be called once you have dist from get_distance_from_report
     //this way we don't need to have target detection
-    double theta = angle_offset(RESOLUTION().Y()/2 - r.center_mass_y, RESOLUTION().Y(), FOV().Y()); 
+    double theta = angle_offset(RESOLUTION().Y()/2 - r.center_mass_y, RESOLUTION().Y(), FOV().Y());
     return std::tan(theta)*dist;
 }
 
