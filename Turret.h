@@ -28,7 +28,7 @@
 
 class Turret {
 public:
-	Turret(Jaguar&, Jaguar&, Jaguar&, Jaguar&, Counter&);
+	Turret(Jaguar&, Jaguar&, Jaguar&, Jaguar&, shooter_wheel&);
     ~Turret();
 	void Align(target&);
     void Enable();
@@ -40,12 +40,6 @@ private:
     Jaguar * rotation_jag;
     Jaguar * winch_jag;
 
-    PIDController * launch_control;
-    two_jags * launcher_jags;
-    launch_counter * launch_speed;
-#if DEBUG_612
-    const char * key;
-#endif
 };
 
 
