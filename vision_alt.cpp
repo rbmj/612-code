@@ -48,17 +48,24 @@ enum VISION_ALGORITHM {
 
 //note: only REGRESSION will work if the target detection doesn't work well :/
 const VISION_ALGORITHM ALGORITHM = TRIGONOMETRIC;
+//note: if VISION_ALGORITHM_ADHOC is enabled then REGRESSION will be selected
+//regardless of what you put here.
 
 /* Remember that y increases as you go DOWN the image!! */
 
 const double robot_height = 31.0/12; //TODO: Replace this with a real #(feet)!
 
+#ifdef VISION_ALT_HEURISTIC
 //heights in feet:
 //TODO: add in the height to the center of the particle!
 target bottom_basket(   22.88/12 );
 target midleft_basket(  55.88/12 );
 target midright_basket( 55.88/12 );
 target top_basket(      92.88/12 );
+#elif defined VISION_ALT_ADHOC
+const unsigned numtargets = 4;
+target target_arr[numtargets];
+#endif
 
 //Threshold objects
 Threshold HSL_THOLD(HSL_HMIN, HSL_HMAX, HSL_SMIN, HSL_SMAX, HSL_LMIN, HSL_LMAX);
@@ -82,15 +89,21 @@ void output_debug_info_target(const char * n, const target& t) {
 }
 
 void output_debug_info() {
+#ifdef VISION_ALT_HEURISTIC
     output_debug_info_target("bottom_basket", bottom_basket);
     output_debug_info_target("midleft_basket", midleft_basket);
     output_debug_info_target("midright_basket", midright_basket);
     output_debug_info_target("top_basket", top_basket);
+#elif defined VISION_ALT_ADHOC
+    for (unsigned i = 0; i < numtargets; i++) {
+        output_debug_info_target("generic", target_arr[i]);
+    }
+#endif
 }
 
 /* update logic: */
 
-void target::update_targets(void * ignored) {
+void target::update_target_arr(void * ignored) {
     if (!camera().IsFreshImage()) {
         return; //no new image for us to process
     }
@@ -135,8 +148,26 @@ void target::update_targets(void * ignored) {
     while (reports->size() && reports->back().particleArea > (double)PARTICLE_AREA_MIN) {
         reports->pop_back();
     }
-    //identify targets, and update the values there
+#ifdef VISION_ALT_HEURISTIC
+    //identify target_arr, and update the values there
     id_and_process(reports);
+#elif defined VISION_ALT_ADHOC
+    //give each target a particle :)
+    if (numtargets < reports->size()) {
+        //should NEVER be true
+        for (unsigned i = 0; i < numtargets; i++) {
+            target_arr[i].update_data_with_report(reports->at(i));
+        }
+    }
+    else {
+        for (unsigned i = 0; i < reports->size(); i++) {
+            target_arr[i].update_data_with_report(reports->at(i));
+        }
+        for (unsigned i = reports->size(); i < numtargets; i++) {
+            target_arr[i].m_valid = false;
+        }
+    }
+#endif
     delete reports; //free vector
     if (DEBUG_612) {
         if (std::rand() % 5 == 0) { //make it so it outputs 20% of the time
@@ -144,6 +175,8 @@ void target::update_targets(void * ignored) {
         }
     }
 }
+
+#ifdef VISION_ALT_HEURISTIC
 
 void target::three_targets_alignx(const ParticleAnalysisReport& aligna,
                                   const ParticleAnalysisReport& alignb,
@@ -326,6 +359,8 @@ void target::id_and_process(report_vector * reports) {
     }  
 }
 
+#endif
+
 /*
  * Distance - given COM_Y of the backboard
  * 
@@ -343,6 +378,7 @@ double get_distance_TRIG(const ParticleAnalysisReport& r, double height) {
  
 void target::update_data_with_report(const ParticleAnalysisReport & r) {
     m_valid = true;
+#ifdef VISION_ALT_HEURISTIC
     double v_offset = m_height - robot_height;
     if (ALGORITHM == TRIGONOMETRIC) {
         m_distance = get_distance_TRIG(r, v_offset);
@@ -350,7 +386,11 @@ void target::update_data_with_report(const ParticleAnalysisReport & r) {
     else if (ALGORITHM == REGRESSION) {
         m_distance = vision_processing::get_distance_from_report(r);
     }
-    m_x_offset = r.boundingRect.left + (r.boundingRect.width/2);
-    m_x_offset -= RESOLUTION().X()/2; //move to center
+#elif defined VISION_ALT_ADHOC
+    m_distance = vision_processing::get_distance_from_report(r);
+    double v_offset = vision_processing::get_height_offset_from_report(r, m_distance);
+    m_height = v_offset + robot_height;
+#endif
+    m_x_offset = r.center_mass_x - (RESOLUTION().X()/2);
 }
     

@@ -28,16 +28,11 @@
 
 class turret {
 public:
-    enum DIRECTION {
-        LEFT = 0,
-        RIGHT = 1
-    }
 	turret(Jaguar&, Jaguar&, Jaguar&, Jaguar&, Counter&);
     ~turret();
 	void align(target&);
     void enable();
     void disable();
-    void turn(DIRECTION);
 private:
     turret() {}
     target * cur_target;
@@ -45,12 +40,6 @@ private:
     Jaguar * rotation_jag;
     Jaguar * winch_jag;
 
-    PIDController * launch_control;
-    two_jags * launcher_jags;
-    launch_counter * launch_speed;
-#if DEBUG_612
-    const char * key;
-#endif
 };
 
 

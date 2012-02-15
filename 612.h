@@ -22,12 +22,12 @@
 #ifndef INC_612_H
 #define INC_612_H
 
-#include <stdint.h>
+#include <vxWorks.h>
 
-typedef uint32_t uinteger;
-typedef uint32_t state_t;
-typedef uint8_t module_t;
-typedef uint8_t range_t;
+typedef UINT32 uinteger;
+typedef UINT32 state_t;
+typedef UINT8 module_t;
+typedef UINT8 range_t;
 
 enum GLOBAL_ROBOT_STATE {
     STATE_DRIVING = 0,
@@ -44,5 +44,10 @@ void perror_612_(const char*, int, const char *);
 #define DEBUG_612 (1)
 //non-debug mode
 //#defind DEBUG_612 (0)
+
+//use target identification heuristic
+//#define VISION_ALT_HEURISTIC
+//use ad-hoc target height detection
+#define VISION_ALT_ADHOC
 
 #endif

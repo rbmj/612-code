@@ -28,12 +28,16 @@
 
 #include <vector>
 
+#include "612.h"
+
 //make our lives easier
 typedef std::vector<ParticleAnalysisReport> report_vector;
 
 class target {
 private:
-    target() {}
+#ifdef VISION_ALT_HEURISTIC
+    target() {} //make private
+#endif
     double m_height; //should be constant
     double m_distance;
     int m_x_offset;
@@ -43,24 +47,38 @@ private:
     
     static HSLImage image;
     static void id_and_process(report_vector * vec);
-    static void three_targets_alignx(const ParticleAnalysisReport&,
+    static void three_target_arr_alignx(const ParticleAnalysisReport&,
             const ParticleAnalysisReport&, const ParticleAnalysisReport&);
-    static void three_targets_aligny(const ParticleAnalysisReport&,
+    static void three_target_arr_aligny(const ParticleAnalysisReport&,
             const ParticleAnalysisReport&, const ParticleAnalysisReport&);
     //
 public:
+#ifdef VISION_ALT_ADHOC
+    target() : m_valid(false) {}
+#endif
     target(double h) : m_height(h) {} //feet
     bool valid() const { return m_valid; }
     int x_offset() const { return m_x_offset; } //pixels
     double distance() const { return m_distance; } //feet
     double height() const { return m_height; } //feet
     
-    static void update_targets(void* = NULL);
+    static void update_target_arr(void* = NULL);
 };
+
+#ifdef VISION_ALT_HEURISTIC
 
 extern target bottom_basket;
 extern target midleft_basket;
 extern target midright_basket;
 extern target top_basket;
+
+#elif defined VISION_ALT_ADHOC
+
+extern target target_arr[];
+extern const unsigned numtargets;
+
+#else
+#error No valid VISION_ALT mode specified in 612.h
+#endif
 
 #endif

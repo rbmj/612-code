@@ -46,6 +46,8 @@ turret::turret(Jaguar& rotate, Jaguar& winch, Jaguar& launcha, Jaguar& launchb, 
 
 turret::~turret() {
     delete launch_control;
+    delete launcher_jags;
+    delete launch_speed;
 }
 
 void turret::align(target& t) {
