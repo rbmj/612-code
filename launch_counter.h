@@ -10,6 +10,7 @@ public:
     double PIDGet(); //get rate
 private:
     launch_counter() {}
+    Counter * counter_obj;
 };
 
 #endif

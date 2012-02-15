@@ -63,7 +63,7 @@ extern Servo left_servo_shift;
 //DIOs
 extern Encoder right_drive;
 extern Encoder left_drive;
-extern Encoder launcher_wheel;
+extern Counter launcher_wheel;
 extern Encoder launch_angle;
 extern Ultrasonic front_ultrasonic;
 extern DigitalInput launch_angle_switch;
@@ -91,5 +91,8 @@ static inline AxisCamera& camera() {
 extern RobotDrive drive;
 extern roller_t rollers;
 extern shifter servo_shifter;
+/* turret 
+extern turret shooter_turret;
+*/
 
 #endif

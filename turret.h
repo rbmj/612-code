@@ -25,6 +25,7 @@
 #include "launch_counter.h"
 #include "vision_alt.h"
 #include "two_jags.h"
+#include "shooter.h"
 
 class turret {
 public:
@@ -39,6 +40,8 @@ private:
     
     Jaguar * rotation_jag;
     Jaguar * winch_jag;
+    
+    shooter * shooter_wheels;
 
 };
 
