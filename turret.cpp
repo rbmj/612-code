@@ -1,4 +1,4 @@
-#include "Turret.h"
+#include "turret.h"
 #include "vision_alt.h"
 #include "ports.h"
 
@@ -9,24 +9,23 @@
 #include <SmartDashboard/SmartDashboard.h>
 #endif
 
-#include "two_jags.h"
 #include "612.h"
+#include "ports.h"
+#include "two_jags.h"
 
 #include <cstdlib>
 
 
-const int Zero_Max = 4;
-const int Zero_Min = -1;
-const int Left = 0;
-const int Right = 1;
-const float Turn_Speed = 0.1;
+const int ZERO_MAX = 4;
+const int ZERO_MIN = -1;
+const float TURN_SPEED = 0.1;
 
 //PID Gains
 const double PID_P = 0.0;
 const double PID_I = 0.0;
 const double PID_D = 0.0;
 
-Turret::Turret(Jaguar& rotate, Jaguar& winch, Jaguar& launcha, Jaguar& launchb, Counter& count) {
+turret::turret(Jaguar& rotate, Jaguar& winch, Jaguar& launcha, Jaguar& launchb, Counter& count) {
     rotation_jag = &rotate;
     winch_jag = &winch;
     
@@ -45,13 +44,23 @@ Turret::Turret(Jaguar& rotate, Jaguar& winch, Jaguar& launcha, Jaguar& launchb, 
     //done!
 }
 
-Turret::~Turret() {
+turret::~turret() {
     delete launch_control;
     delete launcher_jags;
     delete launch_speed;
 }
 
-void Turret::Align(target& t) {
+void turret::align(target& t) {
     cur_target = &t;
 }
 
+void turret:turn(DIRECTION direction) {
+    if(direction == LEFT) {
+        rotation_jag.Set(TURN_SPEED);
+    }
+    else { // RIGHT is implied (not assumed)
+        rotation_jag.Set(-TURN_SPEED);
+    }
+}
+
+//turret robot_turret(turret_rotation_jag, turret_winch_jag, left_launcher_jag, right_launcher_jag

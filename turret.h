@@ -26,15 +26,15 @@
 #include "vision_alt.h"
 #include "two_jags.h"
 
-class Turret {
+class turret {
 public:
-	Turret(Jaguar&, Jaguar&, Jaguar&, Jaguar&, shooter_wheel&);
-    ~Turret();
-	void Align(target&);
-    void Enable();
-    void Disable();
+	turret(Jaguar&, Jaguar&, Jaguar&, Jaguar&, Counter&);
+    ~turret();
+	void align(target&);
+    void enable();
+    void disable();
 private:
-    Turret() {}
+    turret() {}
     target * cur_target;
     
     Jaguar * rotation_jag;
