@@ -69,6 +69,8 @@ Jaguar left_front_jag                   ( slot6,     2 );
 Jaguar left_rear_jag                    ( slot6,     3 );
 Servo left_servo_shift                  ( slot6,     4 );
 
+PWM camera_led                          ( slot6,     5 );
+
 //NOTE: Sica wants to use pots (potentiometers) for the angles, as those are
 //absolute and don't need a zero switch.  If we do that they're seen as
 //AnalogChannel s.  We'll want to write a quick wrapper class so we can get
@@ -78,13 +80,17 @@ Servo left_servo_shift                  ( slot6,     4 );
 //DIOs                                    SLOT     PORT
 Encoder right_drive                     ( slot2,     1,
                                           slot2,     2 );
+Encoder left_drive                      ( slot6,     4,
+                                          slot6,     5 );
 Counter launcher_wheel                  ( slot2,     3 );
 
-DigitalInput launch_angle_switch        ( slot6,     1 );
 Ultrasonic front_ultrasonic             ( slot6,     2,
                                           slot6,     3 );
-Encoder left_drive                      ( slot6,     5,
-                                          slot6,     6 );
+DigitalInput launch_angle_switch        ( slot6,     1 );
+DigitalInput bridge_arm_switch          ( slot6,     6 );
+DigitalInput turret_middle_switch       ( slot2,     5 );
+DigitalInput turret_right_switch        ( slot2,     6 );
+DigitalInput turret_left_switch         ( slot2,     7 );
                                           
 //note: since we rely on the default value of kInches for the 5th arg
 //we should use Ultrasonic::GetRangeInches().
