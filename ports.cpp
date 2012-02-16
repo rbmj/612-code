@@ -129,7 +129,7 @@ turret shooter_turret(turret_rotation_jag, turret_winch_jag, left_launcher_jag, 
 */
 
 //drive_jaguar                           JAGUAR&                 TYPE               REVERSE
-drive_jaguar left_front_motor  =    { left_front_jag,  RobotDrive::kFrontLeftMotor,  true };
-drive_jaguar left_rear_motor   =    { left_rear_jag,   RobotDrive::kRearLeftMotor,   true };
-drive_jaguar right_front_motor =    { right_front_jag, RobotDrive::kFrontRightMotor, true };
-drive_jaguar right_rear_motor  =    { right_rear_jag,  RobotDrive::kRearRightMotor,  true };
+drive_jaguar left_front_motor  =    { left_front_jag,  RobotDrive::kFrontLeftMotor,  false };
+drive_jaguar left_rear_motor   =    { left_rear_jag,   RobotDrive::kRearLeftMotor,   false };
+drive_jaguar right_front_motor =    { right_front_jag, RobotDrive::kFrontRightMotor, false };
+drive_jaguar right_rear_motor  =    { right_rear_jag,  RobotDrive::kRearRightMotor,  false };
