@@ -38,11 +38,11 @@ void roller_t::update_helper(void * obj) {
 }
 
 void roller_t::update() {
-    if (m_direction == (unsigned char) UP) {
+    if (m_direction == (unsigned char) DOWN) {
         spike1->Set(Relay::kForward);
         spike2->Set(Relay::kForward);
     }
-    else if (m_direction == (unsigned char) DOWN) {
+    else if (m_direction == (unsigned char) UP) {
         spike1->Set(Relay::kReverse);
         spike2->Set(Relay::kReverse);
     }
