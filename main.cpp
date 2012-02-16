@@ -106,19 +106,30 @@ void robot_class::TeleopContinuous() {
             global_state.set_state(STATE_SHOOTING);
         }
         //Turret rotation controlled by gunner joystick during drive state only. Must press button 1
-        if(gunner_joystick.GetRawButton(1){
+        if(gunner_joystick.GetRawButton(1)) {
             turret_rotation_jag.Set(gunner_joystick.GetX());
         }
-        if(bridge_arm_switch.get()!=1){//limit switch not pressed
-            bridge_arm_spike.set(kOn);
-            if(gunner_joystick.GetRawButton(2){//up
-               bridge_arm_spike.set(kForwardOnly);
+        if(bridge_arm_switch.Get() == 1){//limit switch is pressed
+            bridge_arm_spike.Set(Relay::kOff);
+        }
+        else {
+            bridge_arm_spike.Set(Relay::kOn);
+            if(gunner_joystick.GetRawButton(2)){//up
+               bridge_arm_spike.Set(Relay::kForward);
             }
-            if(gunner_joystick.GetRawButton(3){//down
-               bridge_arm_spike.set(kReverseOnly);
+            if(gunner_joystick.GetRawButton(3)){//down
+               bridge_arm_spike.Set(Relay::kReverse);
             }
         }
-        bridge_arm_spike.set(kOff);
+        if(gunner_joystick.GetRawButton(10)) {
+            turret_winch_jag.Set(0.1);
+        }
+        else if(gunner_joystick.GetRawButton(11)) {
+            turret_winch_jag.Set(-0.1);
+        }
+        if(gunner_joystick.GetRawButton(9)) {
+            printf("pot voltage: %f\n", launch_angle_pot.GetVoltage());
+        }
     }
     else if(global_state.get_state() == STATE_SHOOTING) {
         // disable motor safety check to stop wasting netconsole space
