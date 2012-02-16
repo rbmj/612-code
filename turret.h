@@ -32,7 +32,7 @@ public:
     enum DIRECTION {
         LEFT = 0,
         RIGHT = 1
-    }
+    };
 	turret(Jaguar&, Jaguar&, Jaguar&, Jaguar&, Counter&);
     ~turret();
 	void align(target&);

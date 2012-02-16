@@ -80,8 +80,9 @@ void robot_class::AutonomousContinuous() {
 void robot_class::TeleopContinuous() {
     if(global_state.get_state() == STATE_DRIVING) {
         //Turret rotation controlled by gunner joystick during drive state only. Must press button 1
-        if(gunner_joystick.GetRawButton(1){
+        if (gunner_joystick.GetRawButton(1)) {
             turret_rotation_jag.Set(gunner_joystick.GetX());
+        }
         if (left_joystick.GetRawButton(1)) {
             //arcade drive
             drive.ArcadeDrive(left_joystick); //arcade drive on left joystick
@@ -135,7 +136,7 @@ void robot_class::TeleopContinuous() {
         left_launcher_jag.Set(0.0);
         right_launcher_jag.Set(0.0);
     }
-    if(global_state.get_state() != STATE_SHOOTING) {
+    if (global_state.get_state() != STATE_SHOOTING) {
         //MANUAL ROLLER CONTROL
         if (gunner_joystick.GetRawButton(11)) {
             //rollers up

@@ -103,6 +103,7 @@ int vision_processing::target_distance_from_center(int index){//measured in pixe
     int target_center = target.center_mass_x;
     int difference = (image_width/2) - target_center;
     return difference;
+}
 
 BinaryImage* get_image_mask(ColorImage* image) {
     if(image == NULL) {
