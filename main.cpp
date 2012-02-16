@@ -146,6 +146,9 @@ void robot_class::TeleopContinuous() {
             //rollers down
             rollers.set_direction(roller_t::DOWN);
         }
+        else if (gunner_joystick.GetRawButton(9)) {
+            rollers.set_direction(roller_t::OFF);
+        }
         else {
             //auto belts
         }
