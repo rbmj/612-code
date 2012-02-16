@@ -150,14 +150,14 @@ void vision_processing::update() {
 
 //TODO: Someone else (Jeff?) sanity check this and make sure it's right.  I tried to copy your logic
 //from above.
-double get_distance_from_report(const ParticleAnalysisReport& report) {
+double vision_processing::get_distance_from_report(const ParticleAnalysisReport& report) {
     double ratio = ((double)(report.boundingRect.width))/(report.boundingRect.height);
     double degrees = degrees_from_ratio(ratio);
     double dist = distance_from_height(report.boundingRect.height) + deviation_from_angle(degrees);
     return dist;
 }
 
-double get_degrees_from_report(const ParticleAnalysisReport& r) {
+double vision_processing::get_degrees_from_report(const ParticleAnalysisReport& r) {
     double ratio = ((double)(r.boundingRect.width))/(r.boundingRect.height);
     return degrees_from_ratio(ratio);
 }
