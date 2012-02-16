@@ -3,9 +3,9 @@
 
 #include <Servo.h>
 
-const float klowgear = 0.3;
+const float klowgear = 0.15;
 const float kneutral = 0.5;
-const float khighgear = 0.7;
+const float khighgear = 0.85;
 
 shifter::shifter(Servo& a, Servo& b) {
     shift1 = &a;
