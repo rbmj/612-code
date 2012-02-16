@@ -25,13 +25,13 @@ joysmooth::~joysmooth() {
 }
 
 void joysmooth::update() {
-    for (int d = 0; d < NUMBUTTONS; d++) {
+    for (int d = 1; d <= NUMBUTTONS; d++) {
         for (int i = 1; i < HOLDBACK; i++) {
             buttons[d][i - 1] = buttons[d][i];
         }
         buttons[d][HOLDBACK - 1] = joy->GetRawButton(d);
     }
-    for(int d = 0; d < NUMAXES; d++) {
+    for(int d = 1; d <= NUMAXES; d++) {
         axes[d] = joy->GetRawAxis(d);
     }
 }

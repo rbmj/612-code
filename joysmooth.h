@@ -16,7 +16,7 @@ private:
     
 public:
     enum axis_t {
-        X_AXIS = 0,
+        X_AXIS = 1,
         Y_AXIS,
         Z_AXIS,
         TWIST_AXIS,
