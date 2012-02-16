@@ -1,6 +1,3 @@
-#ifdef JOYSMOOTH_H_INC
-#define JOYSMOOTH_H_INC
-
 #include <bitset>
 #include <GenericHID.h>
 #include "612.h"
@@ -24,17 +21,17 @@ joysmooth::joysmooth(GenericHID& ghid) : joy(&ghid) {
 }
 
 joysmooth::~joysmooth() {
-    registry().unregister_func(update_callback, (void*)this);
+    registry().unregister_func(update_callback_joysmooth, (void*)this);
 }
 
 void joysmooth::update() {
-    for (int d = 0; d < NUMBUTTONS; d++) {
+    for (int d = 1; d <= NUMBUTTONS; d++) {
         for (int i = 1; i < HOLDBACK; i++) {
             buttons[d][i - 1] = buttons[d][i];
         }
         buttons[d][HOLDBACK - 1] = joy->GetRawButton(d);
     }
-    for(int d = 0; d < NUMAXES; d++) {
+    for(int d = 1; d <= NUMAXES; d++) {
         axes[d] = joy->GetRawAxis(d);
     }
 }
@@ -52,7 +49,7 @@ float joysmooth::GetZ(){
 }
 
 float joysmooth::GetTwist(){
-    return axis[TWIST_AXIS];
+    return axes[TWIST_AXIS];
 }
 
 float joysmooth::GetThrottle(){
@@ -63,12 +60,16 @@ float joysmooth::GetRawAxis(UINT32 axisId){
     return axes[axisId];
 }
 
-bool joysmooth::GetTop(){
+bool joysmooth::GetTop(GenericHID::JoystickHand h){
     return GetRawButton(2);
 }
 
-bool joysmooth::GetBumper(){
+bool joysmooth::GetBumper(GenericHID::JoystickHand h){
     return joy->GetBumper();
+}
+
+bool joysmooth::GetTrigger(GenericHID::JoystickHand h){
+    return GetRawButton(1);
 }
 
 bool joysmooth::GetRawButton(UINT32 btnId){
@@ -87,5 +88,3 @@ void register_callback(void* thisPtr) {
 void update_callback_joysmooth(void* thisPtr) {
     ((joysmooth*)thisPtr)->update();
 }
-
-#endif

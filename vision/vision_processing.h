@@ -38,7 +38,11 @@ namespace vision_processing {
     vector<double> get_distance();
     vector<double> get_degrees();
     vector<double> get_radians();
+<<<<<<< HEAD
     int vision_processing::target_distance_from_center(int){//measured in pixels
+=======
+    int target_distance_from_center(int);//mesured in pixels
+>>>>>>> 8afb9e24dc731f8caaa5059004a9457f3e398e95
     void update();
 
     //hooks for other methods to use algorithms

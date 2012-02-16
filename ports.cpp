@@ -78,8 +78,7 @@ Servo left_servo_shift                  ( slot6,     4 );
 //DIOs                                    SLOT     PORT
 Encoder right_drive                     ( slot2,     1,
                                           slot2,     2 );
-Encoder launcher_wheel                  ( slot2,     3,
-                                          slot2,     4 );
+Counter launcher_wheel                  ( slot2,     3 );
 
 DigitalInput launch_angle_switch        ( slot6,     1 );
 Ultrasonic front_ultrasonic             ( slot6,     2,
@@ -124,8 +123,13 @@ roller_t rollers(roller_spike_1, roller_spike_2);
 //shifter
 shifter servo_shifter(left_servo_shift, right_servo_shift);
 
+/*
+//turret
+turret shooter_turret(turret_rotation_jag, turret_winch_jag, left_launcher_jag, right_launcher_jag, launcher_wheel);
+*/
+
 //drive_jaguar                           JAGUAR&                 TYPE               REVERSE
-drive_jaguar left_front_motor  =    { left_front_jag,  RobotDrive::kFrontLeftMotor,  true };
-drive_jaguar left_rear_motor   =    { left_rear_jag,   RobotDrive::kRearLeftMotor,   true };
-drive_jaguar right_front_motor =    { right_front_jag, RobotDrive::kFrontRightMotor, true };
-drive_jaguar right_rear_motor  =    { right_rear_jag,  RobotDrive::kRearRightMotor,  true };
+drive_jaguar left_front_motor  =    { left_front_jag,  RobotDrive::kFrontLeftMotor,  false };
+drive_jaguar left_rear_motor   =    { left_rear_jag,   RobotDrive::kRearLeftMotor,   false };
+drive_jaguar right_front_motor =    { right_front_jag, RobotDrive::kFrontRightMotor, false };
+drive_jaguar right_rear_motor  =    { right_rear_jag,  RobotDrive::kRearRightMotor,  false };

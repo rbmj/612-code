@@ -97,6 +97,13 @@ vector<double> vision_processing::get_radians() {
     }
     return radians;
 }
+int vision_processing::target_distance_from_center(int index){//measured in pixels
+    ParticleAnalysisReport target = targets->at(index);
+    int image_width = target.imageWidth;
+    int target_center = target.center_mass_x;
+    int difference = (image_width/2) - target_center;
+    return difference;
+}
 
 int vision_processing::target_distance_from_center(int index){//measured in pixels
     ParticleAnalysisReport target = targets->at(index);
@@ -158,19 +165,19 @@ void vision_processing::update() {
 
 //TODO: Someone else (Jeff?) sanity check this and make sure it's right.  I tried to copy your logic
 //from above.
-double get_distance_from_report(const ParticleAnalysisReport& report) {
+double vision_processing::get_distance_from_report(const ParticleAnalysisReport& report) {
     double ratio = ((double)(report.boundingRect.width))/(report.boundingRect.height);
     double degrees = degrees_from_ratio(ratio);
     double dist = distance_from_height(report.boundingRect.height) + deviation_from_angle(degrees);
     return dist;
 }
 
-double get_degrees_from_report(const ParticleAnalysisReport& r) {
+double vision_processing::get_degrees_from_report(const ParticleAnalysisReport& r) {
     double ratio = ((double)(r.boundingRect.width))/(r.boundingRect.height);
     return degrees_from_ratio(ratio);
 }
 
-double get_height_offset_from_report(const ParticleAnalysisReport& r, double dist) {
+double vision_processing::get_height_offset_from_report(const ParticleAnalysisReport& r, double dist) {
     //meant to be called once you have dist from get_distance_from_report
     //this way we don't need to have target detection
     double theta = angle_offset(RESOLUTION().Y()/2 - r.center_mass_y, RESOLUTION().Y(), FOV().Y());
