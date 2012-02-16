@@ -14,7 +14,7 @@
  * ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
  * OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
  */
- 
+
 #ifndef INC_Turret_H
 #define INC_Turret_H
 
@@ -29,20 +29,24 @@
 
 class turret {
 public:
+    enum DIRECTION {
+        LEFT = 0,
+        RIGHT = 1
+    }
 	turret(Jaguar&, Jaguar&, Jaguar&, Jaguar&, Counter&);
     ~turret();
 	void align(target&);
     void enable();
     void disable();
+    void turn(DIRECTION);
 private:
     turret() {}
     target * cur_target;
-    
+
     Jaguar * rotation_jag;
     Jaguar * winch_jag;
-    
-    shooter * shooter_wheels;
 
+    shooter * shooter_wheels;
 };
 
 
