@@ -68,6 +68,10 @@ bool joysmooth::GetBumper(GenericHID::JoystickHand h){
     return joy->GetBumper();
 }
 
+bool joysmooth::GetTrigger(GenericHID::JoystickHand h){
+    return GetRawButton(1);
+}
+
 bool joysmooth::GetRawButton(UINT32 btnId){
     for(int i = 0; i < HOLDBACK; i++) {
         if(!buttons[btnId][i]) {

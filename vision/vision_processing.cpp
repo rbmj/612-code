@@ -169,7 +169,7 @@ double vision_processing::get_degrees_from_report(const ParticleAnalysisReport& 
     return degrees_from_ratio(ratio);
 }
 
-double get_height_offset_from_report(const ParticleAnalysisReport& r, double dist) {
+double vision_processing::get_height_offset_from_report(const ParticleAnalysisReport& r, double dist) {
     //meant to be called once you have dist from get_distance_from_report
     //this way we don't need to have target detection
     double theta = angle_offset(RESOLUTION().Y()/2 - r.center_mass_y, RESOLUTION().Y(), FOV().Y()); 
