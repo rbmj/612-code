@@ -81,7 +81,7 @@ void robot_class::TeleopContinuous() {
     if(global_state.get_state() == STATE_DRIVING) {
         //Turret rotation controlled by gunner joystick during drive state only. Must press button 1
         if (gunner_joystick.GetRawButton(1)) {
-            turret_rotation_jag.Set(gunner_joystick.GetX());
+            turret_rotation_jag.Set(-gunner_joystick.GetX());
         }
         if (left_joystick.GetRawButton(1)) {
             //arcade drive
@@ -121,11 +121,14 @@ void robot_class::TeleopContinuous() {
                bridge_arm_spike.Set(Relay::kReverse);
             }
         }
-        if(gunner_joystick.GetRawButton(10)) {
-            turret_winch_jag.Set(0.1);
+        if(gunner_joystick.GetRawButton(6)) {
+            turret_winch_jag.Set(-0.2);
         }
-        else if(gunner_joystick.GetRawButton(11)) {
-            turret_winch_jag.Set(-0.1);
+        else if(gunner_joystick.GetRawButton(7)) {
+            turret_winch_jag.Set(0.2);
+        }
+        else {
+            turret_winch_jag.Set(0.0);
         }
         if(gunner_joystick.GetRawButton(9)) {
             printf("pot voltage: %f\n", launch_angle_pot.GetVoltage());
@@ -153,7 +156,7 @@ void robot_class::TeleopContinuous() {
         }
     }
     //TEMPORARY: GUNNER LAUNCHER WHEEL CONTROLS
-    if (gunner_joystick.GetRawButton(7)) {
+    if (gunner_joystick.GetRawButton(4)) {
         left_launcher_jag.Set(1.0);
         right_launcher_jag.Set(1.0);
     }
