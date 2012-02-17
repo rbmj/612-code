@@ -105,17 +105,15 @@ void robot_class::TeleopContinuous() {
         if(left_joystick.GetRawButton(3)) {
             global_state.set_state(STATE_SHOOTING);
         }
-        if(bridge_arm_switch.Get() == 1){//limit switch is pressed
-            bridge_arm_spike.Set(Relay::kOff);
+        if(gunner_joystick.GetRawButton(2) && bridge_arm_switch.Get() != 1){//up
+            //limit switch is pressed, do not go up any more
+            bridge_arm_spike.Set(Relay::kForward);
+        }
+        else if(gunner_joystick.GetRawButton(3)){//down
+            bridge_arm_spike.Set(Relay::kReverse);
         }
         else {
-            bridge_arm_spike.Set(Relay::kOn);
-            if(gunner_joystick.GetRawButton(2)){//up
-               bridge_arm_spike.Set(Relay::kForward);
-            }
-            if(gunner_joystick.GetRawButton(3)){//down
-               bridge_arm_spike.Set(Relay::kReverse);
-            }
+            bridge_arm_spike.Set(Relay::kOff);
         }
         if(gunner_joystick.GetRawButton(6)) {
             turret_winch_jag.Set(-0.2);
