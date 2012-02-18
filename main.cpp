@@ -81,7 +81,7 @@ void robot_class::TeleopContinuous() {
     if(global_state.get_state() == STATE_DRIVING) {
         //Turret rotation controlled by gunner joystick during drive state only. Must press button 1
         if (gunner_joystick.GetRawButton(1)) {
-            turret_rotation_jag.Set(gunner_joystick.GetX());
+            turret_rotation_jag.Set(-gunner_joystick.GetX());
         }
         if (left_joystick.GetRawButton(1)) {
             //arcade drive
@@ -106,22 +106,34 @@ void robot_class::TeleopContinuous() {
             global_state.set_state(STATE_SHOOTING);
         }
         //Turret rotation controlled by gunner joystick during drive state only. Must press button 1
-        if(gunner_joystick.GetRawButton(1){
+        if(gunner_joystick.GetRawButton(1)) {
             turret_rotation_jag.Set(gunner_joystick.GetX());
         }
-        
-        if(gunner_joystick.GetRawButton(3){//down
-           bridge_arm_spike.set(kOn);
-           bridge_arm_spike.set(kReverseOnly);
+        if(bridge_arm_switch.Get() == 1){//limit switch is pressed
+            bridge_arm_spike.Set(Relay::kOff);
         }
-        if(bridge_arm_switch.get()!=1){//limit switch not pressed
-            if(gunner_joystick.GetRawButton(2){//up
-                bridge_arm_spike.set(kOn);
-                bridge_arm_spike.set(kForwardOnly);
+        else {
+            bridge_arm_spike.Set(Relay::kOn);	
+            if(gunner_joystick.GetRawButton(2)){//up
+               bridge_arm_spike.Set(Relay::kForward);
             }
+            if(gunner_joystick.GetRawButton(3)){//down	
+               bridge_arm_spike.Set(Relay::kReverse);
+            }
+        }        
+        if(gunner_joystick.GetRawButton(6)) {
+            turret_winch_jag.Set(-0.2);
         }
-        bridge_arm_spike.set(kOff);
-    }
+        else if(gunner_joystick.GetRawButton(7)) {
+            turret_winch_jag.Set(0.2);
+        }
+        else {
+            turret_winch_jag.Set(0.0);
+        }
+        if(gunner_joystick.GetRawButton(9)) {
+            printf("pot voltage: %f\n", launch_angle_pot.GetVoltage());
+        }
+        
     else if(global_state.get_state() == STATE_SHOOTING) {
         // disable motor safety check to stop wasting netconsole space
         drive.SetSafetyEnabled(false);
@@ -144,7 +156,7 @@ void robot_class::TeleopContinuous() {
         }
     }
     //TEMPORARY: GUNNER LAUNCHER WHEEL CONTROLS
-    if (gunner_joystick.GetRawButton(7)) {
+    if (gunner_joystick.GetRawButton(4)) {
         left_launcher_jag.Set(1.0);
         right_launcher_jag.Set(1.0);
     }
