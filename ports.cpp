@@ -101,7 +101,7 @@ AnalogChannel launch_angle_pot          ( slot1,     1 );
 //Relays                                  SLOT     PORT
 Relay roller_spike_1                    ( slot6,     1 );
 Relay roller_spike_2                    ( slot6,     2 );
-Relay bridge_arm_spike                  ( slot6,     3 );
+Relay bridge_arm_spike                  ( slot6,     8 );
 
 //USBs (on driver station)                         PORT
 Joystick left_joystick_raw                         ( 1 );
