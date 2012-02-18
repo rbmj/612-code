@@ -67,10 +67,10 @@ extern Encoder left_drive;
 extern Counter launcher_wheel;
 extern Ultrasonic front_ultrasonic;
 extern DigitalInput launch_angle_switch;
+extern DigitalInput turret_limit_left;
+extern DigitalInput turret_limit_mid;
+extern DigitalInput turret_limit_right;
 extern DigitalInput bridge_arm_switch;
-extern DigitalInput turret_middle_switch;
-extern DigitalInput turret_right_switch;
-extern DigitalInput turret_left_switch;
 
 //AIOs
 extern AnalogChannel launch_angle_pot;

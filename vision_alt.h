@@ -42,6 +42,7 @@ private:
     double m_distance;
     int m_x_offset;
     bool m_valid;
+    bool m_fresh;
     
     void update_data_with_report(const ParticleAnalysisReport&);
     
@@ -54,10 +55,11 @@ private:
     //
 public:
 #ifdef VISION_ALT_ADHOC
-    target() : m_valid(false) {}
+    target() : m_valid(false), m_fresh(false) {}
 #endif
     target(double h) : m_height(h) {} //feet
     bool valid() const { return m_valid; }
+    bool fresh() { if (m_fresh) return !(m_fresh = false); else return false; }
     int x_offset() const { return m_x_offset; } //pixels
     double distance() const { return m_distance; } //feet
     double height() const { return m_height; } //feet

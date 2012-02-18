@@ -22,14 +22,40 @@
 #ifndef TRAJECTORY_H_INC
 #define TRAJECTORY_H_INC
 
+#include "vision_alt.h"
+
+struct trajectory {
+    double angle; //radians
+    double velocity; //fps
+};
+
+const double DEFAULT_ENTRYANGLE = 1.04719755; //60 degrees
+const double DEFAULT_LAUNCHSPEED = 0.0;
+const double ACC_G = 32.17;
+
+trajectory calculate_trajectory_entryangle(const target&, double, double = ACC_G);
+trajectory calculate_trajectory_launchspeed(const target&, double, double = ACC_G);
+
+trajectory inline calculate_trajectory(const target& t) {
+#ifdef TRAJECTORY_LAUNCHSPEED
+    return calculate_trajectory_launchspeed(t, DEFAULT_LAUNCHSPEED);
+#elif defined TRAJECTORY_ENTRYANGLE
+    return calculate_trajectory_entryangle(t, DEFAULT_ENTRYANGLE);
+#else
+#error Invalid Trajectory Specification in 612.h
+#endif
+}
+
 const double pi = 3.14159265;
 const double pi_over180 = pi / 180;
 const double pi_180over = 180 / pi;
+const double pi_over4 = pi / 4;
+const double pi_over2 = pi / 2;
  
 //stuff to calculate trajectory goes here!
-double get_entry_velocity(double, double, double, double = 32.17);
-double get_launch_velocity(double, double, double, double = 32.17);
-double get_launch_angle(double, double, double, double = 32.17);
+double get_entry_velocity(double, double, double, double = ACC_G);
+double get_launch_velocity(double, double, double, double = ACC_G);
+double get_launch_angle(double, double, double, double = ACC_G);
 
 double inline deg2rad(double theta) {
     return theta * pi_over180;

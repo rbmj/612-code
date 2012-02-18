@@ -80,17 +80,20 @@ PWM camera_led                          ( slot6,     5 );
 //DIOs                                    SLOT     PORT
 Encoder right_drive                     ( slot2,     1,
                                           slot2,     2 );
-Encoder left_drive                      ( slot6,     4,
-                                          slot6,     5 );
-Counter launcher_wheel                  ( slot2,     3 );
+
+
+DigitalInput turret_limit_mid           ( slot2,     5 );
+DigitalInput turret_limit_right         ( slot2,     6 );
+DigitalInput turret_limit_left          ( slot2,     7 );
+
+
+Counter launcher_wheel                  ( slot2,    10 );
 
 Ultrasonic front_ultrasonic             ( slot6,     2,
                                           slot6,     3 );
-DigitalInput launch_angle_switch        ( slot6,     1 );
+Encoder left_drive                      ( slot6,     4,
+                                          slot6,     5 );
 DigitalInput bridge_arm_switch          ( slot6,     6 );
-DigitalInput turret_middle_switch       ( slot2,     5 );
-DigitalInput turret_right_switch        ( slot2,     6 );
-DigitalInput turret_left_switch         ( slot2,     7 );
                                           
 //note: since we rely on the default value of kInches for the 5th arg
 //we should use Ultrasonic::GetRangeInches().
@@ -101,7 +104,7 @@ AnalogChannel launch_angle_pot          ( slot1,     1 );
 //Relays                                  SLOT     PORT
 Relay roller_spike_1                    ( slot6,     1 );
 Relay roller_spike_2                    ( slot6,     2 );
-Relay bridge_arm_spike                  ( slot6,     8 );
+Relay bridge_arm_spike                  ( slot6,    10 );
 
 //USBs (on driver station)                         PORT
 Joystick left_joystick_raw                         ( 1 );
@@ -131,7 +134,16 @@ shifter servo_shifter(left_servo_shift, right_servo_shift);
 
 /*
 //turret
-turret shooter_turret(turret_rotation_jag, turret_winch_jag, left_launcher_jag, right_launcher_jag, launcher_wheel);
+turret shooter_turret(
+    turret_rotation_jag,
+    turret_winch_jag,
+    left_launcher_jag,
+    right_launcher_jag,
+    launcher_wheel,
+    launch_angle_pot,
+    launch_angle_switch,
+    
+);
 */
 
 //drive_jaguar                           JAGUAR&                 TYPE               REVERSE

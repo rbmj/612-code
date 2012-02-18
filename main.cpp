@@ -27,6 +27,14 @@
 #include "state_tracker.h"
 #include "visionalg.h"
 #include "shifter.h"
+#include "launch_counter.h"
+#include "pid_controller.h"
+
+/* this is just for test purposes.  Don't use it */
+launch_counter launch_wheel_counter(launcher_wheel);
+two_jags launch_wheel_jags(left_launcher_jag, right_launcher_jag);
+pid_controller launch_pid(0.0, 0.0, 0.0, &launch_wheel_counter, &launch_wheel_jags);
+/* end */
 
 //constructor - initialize drive
 robot_class::robot_class() {
@@ -163,10 +171,11 @@ void robot_class::TeleopContinuous() {
     if (gunner_joystick.GetRawButton(4)) {
         left_launcher_jag.Set(1.0);
         right_launcher_jag.Set(1.0);
+        std::printf("Launcher Wheel Speed: %f\n", 1/launcher_wheel.GetPeriod());
     }
     else {
-        left_launcher_jag.Set(0.0);
-        right_launcher_jag.Set(0.0);
+        left_launcher_jag.Set(-0.05);
+        right_launcher_jag.Set(-0.05);
     }
     if (global_state.get_state() != STATE_SHOOTING) {
         //MANUAL ROLLER CONTROL
