@@ -109,13 +109,15 @@ void robot_class::TeleopContinuous() {
         if(gunner_joystick.GetRawButton(1){
             turret_rotation_jag.Set(gunner_joystick.GetX());
         }
+        
+        if(gunner_joystick.GetRawButton(3){//down
+           bridge_arm_spike.set(kOn);
+           bridge_arm_spike.set(kReverseOnly);
+        }
         if(bridge_arm_switch.get()!=1){//limit switch not pressed
-            bridge_arm_spike.set(kOn);
             if(gunner_joystick.GetRawButton(2){//up
-               bridge_arm_spike.set(kForwardOnly);
-            }
-            if(gunner_joystick.GetRawButton(3){//down
-               bridge_arm_spike.set(kReverseOnly);
+                bridge_arm_spike.set(kOn);
+                bridge_arm_spike.set(kForwardOnly);
             }
         }
         bridge_arm_spike.set(kOff);
