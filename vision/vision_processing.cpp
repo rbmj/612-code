@@ -97,7 +97,8 @@ vector<double> vision_processing::get_radians() {
     }
     return radians;
 }
-int vision_processing::target_distance_from_center(int index){//measured in pixels
+
+int vision_processing::target_distance_from_center(int index) {//measured in pixels
     ParticleAnalysisReport target = targets->at(index);
     int image_width = target.imageWidth;
     int target_center = target.center_mass_x;
