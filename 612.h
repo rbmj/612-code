@@ -28,6 +28,7 @@ typedef UINT32 uinteger;
 typedef UINT32 state_t;
 typedef UINT8 module_t;
 typedef UINT8 range_t;
+typedef UINT8 ucharacter;
 
 enum GLOBAL_ROBOT_STATE {
     STATE_DRIVING = 0,
@@ -49,5 +50,10 @@ void perror_612_(const char*, int, const char *);
 //#define VISION_ALT_HEURISTIC
 //use ad-hoc target height detection
 #define VISION_ALT_ADHOC
+
+//calculate trajectory with fixed exit speed
+//#define TRAJECTORY_LAUNCHSPEED
+//calculate trajectory with fixed entry angle
+#define TRAJECTORY_ENTRYANGLE
 
 #endif

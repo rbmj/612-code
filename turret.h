@@ -21,31 +21,35 @@
 #include <Jaguar.h>
 #include <PIDController.h>
 #include <Counter.h>
+#include <AnalogChannel.h>
+#include <DigitalInput.h>
 #include "612.h"
 #include "launch_counter.h"
 #include "vision_alt.h"
 #include "two_jags.h"
 #include "shooter.h"
+#include "turntable.h"
+#include "winch.h"
 
 class turret {
 public:
-    enum DIRECTION {
-        LEFT = 0,
-        RIGHT = 1
-    };
-	turret(Jaguar&, Jaguar&, Jaguar&, Jaguar&, Counter&);
+    turret(Jaguar&, Jaguar&, Jaguar&, Jaguar&, Counter&, AnalogChannel&, DigitalInput&, DigitalInput&, DigitalInput&, DigitalInput&);
     ~turret();
-	void align(target&);
+    void align(target&);
     void enable();
     void disable();
-    void turn(DIRECTION);
 private:
     turret() {}
+    static void update_help(void*);
+    void update();
+    
+    bool enabled;
+    bool just_enabled;
+    
     target * cur_target;
 
-    Jaguar * rotation_jag;
-    Jaguar * winch_jag;
-
+    turntable * lazy_susan;
+    winch * winch_obj;
     shooter * shooter_wheels;
 };
 

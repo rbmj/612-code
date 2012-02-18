@@ -47,7 +47,7 @@ enum VISION_ALGORITHM {
 };
 
 //note: only REGRESSION will work if the target detection doesn't work well :/
-const VISION_ALGORITHM ALGORITHM = TRIGONOMETRIC;
+const VISION_ALGORITHM ALGORITHM = REGRESSION;
 //note: if VISION_ALGORITHM_ADHOC is enabled then REGRESSION will be selected
 //regardless of what you put here.
 
@@ -58,10 +58,10 @@ const double robot_height = 31.0/12; //TODO: Replace this with a real #(feet)!
 #ifdef VISION_ALT_HEURISTIC
 //heights in feet:
 //TODO: add in the height to the center of the particle!
-target bottom_basket(   22.88/12 );
-target midleft_basket(  55.88/12 );
-target midright_basket( 55.88/12 );
-target top_basket(      92.88/12 );
+target bottom_basket(   22.88/12 - robot_height );
+target midleft_basket(  55.88/12 - robot_height );
+target midright_basket( 55.88/12 - robot_height );
+target top_basket(      92.88/12 - robot_height );
 #elif defined VISION_ALT_ADHOC
 const unsigned numtargets = 4;
 target target_arr[numtargets];
@@ -379,18 +379,17 @@ double get_distance_TRIG(const ParticleAnalysisReport& r, double height) {
 void target::update_data_with_report(const ParticleAnalysisReport & r) {
     m_valid = true;
 #ifdef VISION_ALT_HEURISTIC
-    double v_offset = m_height - robot_height;
     if (ALGORITHM == TRIGONOMETRIC) {
-        m_distance = get_distance_TRIG(r, v_offset);
+        m_distance = get_distance_TRIG(r, m_height);
     }
     else if (ALGORITHM == REGRESSION) {
         m_distance = vision_processing::get_distance_from_report(r);
     }
 #elif defined VISION_ALT_ADHOC
     m_distance = vision_processing::get_distance_from_report(r);
-    double v_offset = vision_processing::get_height_offset_from_report(r, m_distance);
-    m_height = v_offset + robot_height;
+    m_height = vision_processing::get_height_offset_from_report(r, m_distance);
 #endif
     m_x_offset = r.center_mass_x - (RESOLUTION().X()/2);
+    m_fresh = true;
 }
     

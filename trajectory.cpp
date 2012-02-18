@@ -80,3 +80,46 @@ double get_launch_angle(double alpha, double dx, double vf, double g) {
     num += vf * sin(alpha);
     return -(atan2(num, comp));
 }
+
+trajectory calculate_trajectory_entryangle(const target& t, double a, double g) {
+    trajectory ret;
+    double vf = get_entry_velocity(a, t.height(), t.distance(), g);
+    ret.velocity = get_launch_velocity(a, t.distance(), vf, g);
+    ret.angle = get_launch_angle(a, t.distance(), vf, g);
+    return ret;
+}
+
+/* This calculation relies upon a different methodology.  The angle theta
+ * at which a projectile needs to be launched in order to have a displacement
+ * (x, y) when the velocity is v at the intial point is:
+ * 
+ *                             ______________________
+ *               [    v^2 +/- / v^4 - g(gx^2 + 2yv^2)    ]
+ * theta = arctan[ ------------------------------------- ]
+ *               [                  gx                   ]
+ * 
+ */
+
+trajectory calculate_trajectory_launchspeed(const target& t, double v, double g) {
+    trajectory ret;
+    double v_2 = v * v;
+    double v_4 = v_2 * v_2;
+    double x = t.distance();
+    double x_2 = x * x;
+    double y = t.height();
+    double discrim = v_4 - (g * ((g * x_2) + (2 * y * v_2)));
+    if (discrim < 0) {
+        //unable to reach point
+        ret.velocity = 0.0;
+        ret.angle = 0.0;
+        return ret;
+    }
+    discrim = std::sqrt(discrim);
+    double theta = std::atan2(v_2 + discrim, g * x);
+    if (theta < pi_over4) {
+        theta = pi_over2 - theta;
+    }
+    ret.velocity = v;
+    ret.angle = theta;
+    return ret;    
+}
