@@ -89,7 +89,7 @@ void robot_class::TeleopContinuous() {
     if(global_state.get_state() == STATE_DRIVING) {
         //Turret rotation controlled by gunner joystick during drive state only. Must press button 1
         if (gunner_joystick.GetRawButton(1)) {
-            turret_rotation_jag.Set(gunner_joystick.GetX());
+            turret_rotation_jag.Set(-gunner_joystick.GetX());
         }
         if (left_joystick.GetRawButton(1)) {
             //arcade drive
@@ -112,6 +112,38 @@ void robot_class::TeleopContinuous() {
         }
         if(left_joystick.GetRawButton(3)) {
             global_state.set_state(STATE_SHOOTING);
+        }
+        //Turret rotation controlled by gunner joystick during drive state only. Must press button 1
+        if(gunner_joystick.GetRawButton(1)){
+            turret_rotation_jag.Set(gunner_joystick.GetX());
+        }
+        // bridge
+        if(gunner_joystick.GetRawButton(2)){//up
+            if(bridge_arm_switch.Get()!=1){//limit switch not pressed
+                printf("bridge DOWN");
+                bridge_arm_spike.Set(Relay::kForward);
+            }
+        }        
+        else if(gunner_joystick.GetRawButton(3)){//down
+            printf("bridge UP");
+            bridge_arm_spike.Set(Relay::kReverse);
+        }
+        else {
+            bridge_arm_spike.Set(Relay::kOff);
+        }
+        // winch
+        if(gunner_joystick.GetRawButton(6)) {
+            turret_winch_jag.Set(-0.2);
+        }
+        else if(gunner_joystick.GetRawButton(7)) {
+            turret_winch_jag.Set(0.2);
+        }
+        else {
+            turret_winch_jag.Set(0.0);
+        }
+        // pot
+        if(gunner_joystick.GetRawButton(8)) {
+            printf("pot voltage: %f\n", launch_angle_pot.GetVoltage());
         }
     }
     else if(global_state.get_state() == STATE_SHOOTING) {
@@ -155,11 +187,8 @@ void robot_class::TeleopContinuous() {
             //rollers down
             rollers.set_direction(roller_t::DOWN);
         }
-        else if (gunner_joystick.GetRawButton(9)) {
-            rollers.set_direction(roller_t::OFF);
-        }
         else {
-            //auto belts
+            rollers.set_direction(roller_t::OFF);
         }
         //
         Wait(0.005); //let the CPU rest a little - 5 ms isn't too long

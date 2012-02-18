@@ -18,7 +18,7 @@
 /*
  * Entry points for vision processing: distance and angle from image
  */
- 
+
 /*
  * Calculated angles are relative to perpendicular.
  */
@@ -40,7 +40,7 @@ namespace vision_processing {
     vector<double> get_radians();
     int target_distance_from_center(int);//mesured in pixels
     void update();
-    
+
     //hooks for other methods to use algorithms
     double get_distance_from_report(const ParticleAnalysisReport&);
     double get_degrees_from_report(const ParticleAnalysisReport&);

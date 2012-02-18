@@ -59,12 +59,12 @@ extern Jaguar turret_rotation_jag;
 extern Jaguar turret_winch_jag;
 extern Servo right_servo_shift;
 extern Servo left_servo_shift;
+extern PWM camera_led;
 
 //DIOs
 extern Encoder right_drive;
 extern Encoder left_drive;
 extern Counter launcher_wheel;
-extern Encoder launch_angle;
 extern Ultrasonic front_ultrasonic;
 extern DigitalInput launch_angle_switch;
 extern DigitalInput turret_limit_left;
