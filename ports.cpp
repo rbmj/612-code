@@ -68,7 +68,6 @@ Jaguar turret_winch_jag                 ( slot6,     1 );
 Jaguar left_front_jag                   ( slot6,     2 );
 Jaguar left_rear_jag                    ( slot6,     3 );
 Servo left_servo_shift                  ( slot6,     4 );
-
 PWM camera_led                          ( slot6,     5 );
 
 //NOTE: Sica wants to use pots (potentiometers) for the angles, as those are
@@ -104,7 +103,7 @@ AnalogChannel launch_angle_pot          ( slot1,     1 );
 //Relays                                  SLOT     PORT
 Relay roller_spike_1                    ( slot6,     1 );
 Relay roller_spike_2                    ( slot6,     2 );
-Relay bridge_arm_spike                  ( slot6,    10 );
+Relay bridge_arm_spike                  ( slot6,     8 );
 
 //USBs (on driver station)                         PORT
 Joystick left_joystick_raw                         ( 1 );

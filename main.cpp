@@ -31,6 +31,8 @@
 #include "pid_controller.h"
 #include "two_jags.h"
 
+#include <PWM.h>
+
 /* this is just for test purposes.  Don't use it */
 launch_counter launch_wheel_counter(launcher_wheel);
 two_jags launch_wheel_jags(left_launcher_jag, right_launcher_jag);
@@ -76,6 +78,7 @@ void robot_class::AutonomousPeriodic() {
 
 void robot_class::TeleopPeriodic() {
     update_sensors();
+    camera_led.SetRaw(255);
 }
 
 void robot_class::DisabledContinuous() {

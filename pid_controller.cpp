@@ -17,11 +17,18 @@ pid_controller::pid_controller(float p, float i, float d, PIDSource* s, PIDOutpu
     : PIDController(p, i, d, s, o, f) //shouldn't do anything - just shut up gcc
 {
 #if DEBUG_612
-    pidobj = new SendablePIDController(p, i, d, s, o, f);
+	std::printf("In pid_controller::pid_controller()\n");
+	SendablePIDController * tmpp;
+    tmpp = new SendablePIDController(p, i, d, s, o, f);
     key = new char[slen];
+    std::printf("\tMemory allocated\n");
     std::sprintf(key, &(format[0]), (unsigned long)this);
-    SmartDashboard::GetInstance()->PutData(key, (SendablePIDController*)pidobj);
-    //NOTE: THE ABOVE POINTER CAST IS VERY DANGEROUS!!!
+    std::printf("\t\tkey = %s\n", key);
+    std::printf("\tsprintf done\n");
+    //SmartDashboard kills our code
+    //SmartDashboard::GetInstance()->PutData(key, tmpp);
+    //std::printf("\tadded to smart dashboard");
+    pidobj = tmpp;
 #else
     pidobj = new PIDController(p, i, d, s, o, f);
 #endif
