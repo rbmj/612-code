@@ -33,8 +33,8 @@
 
 #include <PWM.h>
 #include "override_controls.h"
-#include "states/shooting.h"
-#include "states/driving.h"
+//#include "states/shooting.h" no such file or directory
+//#include "states/driving.h" no such file or directory
 
 /* this is just for test purposes.  Don't use it */
 launch_counter launch_wheel_counter(launcher_wheel);
@@ -57,7 +57,8 @@ void robot_class::RobotInit() {
     drive.SetInvertedMotor(right_rear_motor.type,  right_rear_motor.reverse);
     global_state.set_state(STATE_DRIVING);
     init_camera();
-    launcher_wheel.Enable();
+    //launcher_wheel.Enable();
+    launcher_wheel.Start();
 }
 
 void robot_class::DisabledInit() {
