@@ -7,7 +7,6 @@
 class turntable {
 public:
     turntable(Jaguar&, DigitalInput&, DigitalInput&, DigitalInput&);
-    ~turntable();
     void new_offset(int, int);
     void center();
     void enable();
