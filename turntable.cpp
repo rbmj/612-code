@@ -66,7 +66,7 @@ void turntable::disable() {
 }
 
 void turntable::new_offset(int offset, int max) {
-    power = coerce((offset / max) * TURNTABLE_MULTIPLIER, -1.0, 1.0);
+    power = coerce<double>((offset / max) * TURNTABLE_MULTIPLIER, -1.0, 1.0);
     if (!RIGHT_POSITIVE) {
         power = -power;
     }

@@ -29,6 +29,7 @@
 #include "shifter.h"
 #include "launch_counter.h"
 #include "pid_controller.h"
+#include "two_jags.h"
 
 /* this is just for test purposes.  Don't use it */
 launch_counter launch_wheel_counter(launcher_wheel);
