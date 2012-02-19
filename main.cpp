@@ -32,6 +32,9 @@
 #include "two_jags.h"
 
 #include <PWM.h>
+#include "override_controls.h"
+#include "states/shooting.h"
+#include "states/driving.h"
 
 /* this is just for test purposes.  Don't use it */
 launch_counter launch_wheel_counter(launcher_wheel);
@@ -54,6 +57,7 @@ void robot_class::RobotInit() {
     drive.SetInvertedMotor(right_rear_motor.type,  right_rear_motor.reverse);
     global_state.set_state(STATE_DRIVING);
     init_camera();
+    launcher_wheel.Enable();
 }
 
 void robot_class::DisabledInit() {
@@ -91,10 +95,6 @@ void robot_class::AutonomousContinuous() {
 
 void robot_class::TeleopContinuous() {
     if(global_state.get_state() == STATE_DRIVING) {
-        //Turret rotation controlled by gunner joystick during drive state only. Must press button 1
-        if (gunner_joystick.GetRawButton(1)) {
-            turret_rotation_jag.Set(-gunner_joystick.GetX());
-        }
         if (left_joystick.GetRawButton(1)) {
             //arcade drive
             drive.ArcadeDrive(left_joystick); //arcade drive on left joystick
@@ -127,7 +127,7 @@ void robot_class::TeleopContinuous() {
                 printf("bridge DOWN");
                 bridge_arm_spike.Set(Relay::kForward);
             }
-        }        
+        }
         else if(gunner_joystick.GetRawButton(3)){//down
             printf("bridge UP");
             bridge_arm_spike.Set(Relay::kReverse);
@@ -147,6 +147,18 @@ void robot_class::TeleopContinuous() {
         }
         // pot
         if(gunner_joystick.GetRawButton(8)) {
+            printf("pot voltage: %f\n", launch_angle_pot.GetVoltage());
+        }
+        if(gunner_joystick.GetRawButton(6)) {
+            turret_winch_jag.Set(-0.2);
+        }
+        else if(gunner_joystick.GetRawButton(7)) {
+            turret_winch_jag.Set(0.2);
+        }
+        else {
+            turret_winch_jag.Set(0.0);
+        }
+        if(gunner_joystick.GetRawButton(9)) {
             printf("pot voltage: %f\n", launch_angle_pot.GetVoltage());
         }
     }

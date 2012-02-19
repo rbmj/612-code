@@ -79,21 +79,20 @@ PWM camera_led                          ( slot6,     5 );
 //DIOs                                    SLOT     PORT
 Encoder right_drive                     ( slot2,     1,
                                           slot2,     2 );
-
-
 DigitalInput turret_limit_mid           ( slot2,     5 );
 DigitalInput turret_limit_right         ( slot2,     6 );
 DigitalInput turret_limit_left          ( slot2,     7 );
 
-
 Counter launcher_wheel                  ( slot2,    10 );
+
+DigitalInput launch_angle_switch        ( slot6,     1 );
 
 Ultrasonic front_ultrasonic             ( slot6,     2,
                                           slot6,     3 );
 Encoder left_drive                      ( slot6,     4,
                                           slot6,     5 );
 DigitalInput bridge_arm_switch          ( slot6,     6 );
-                                          
+
 //note: since we rely on the default value of kInches for the 5th arg
 //we should use Ultrasonic::GetRangeInches().
 
