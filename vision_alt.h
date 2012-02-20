@@ -48,9 +48,9 @@ private:
     
     static HSLImage image;
     static void id_and_process(report_vector * vec);
-    static void three_target_arr_alignx(const ParticleAnalysisReport&,
+    static void three_targets_alignx(const ParticleAnalysisReport&,
             const ParticleAnalysisReport&, const ParticleAnalysisReport&);
-    static void three_target_arr_aligny(const ParticleAnalysisReport&,
+    static void three_targets_aligny(const ParticleAnalysisReport&,
             const ParticleAnalysisReport&, const ParticleAnalysisReport&);
     //
 public:
@@ -64,7 +64,7 @@ public:
     double distance() const { return m_distance; } //feet
     double height() const { return m_height; } //feet
     
-    static void update_target_arr(void* = NULL);
+    static void update_targets(void* = NULL);
 };
 
 #ifdef VISION_ALT_HEURISTIC
