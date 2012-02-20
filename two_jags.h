@@ -15,6 +15,7 @@ public:
     float speed;
     void PIDWrite(float);
     void Set(float, ucharacter = 0);
+    void reset();
 };
 
 #endif

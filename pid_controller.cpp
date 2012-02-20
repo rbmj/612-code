@@ -32,6 +32,9 @@ pid_controller::pid_controller(float p, float i, float d, PIDSource* s, PIDOutpu
 #else
     pidobj = new PIDController(p, i, d, s, o, f);
 #endif
+    pidobj->SetInputRange(0.0, 75.0);
+    pidobj->SetOutputRange(-0.25, 0.25);
+    pidobj->SetTolerance(4.0); //default tolerance of four percent
 }
 
 pid_controller::~pid_controller() {

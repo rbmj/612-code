@@ -20,6 +20,7 @@
  */
  
 #include <cstdio>
+#include <Timer.h>
 #include "612.h"
 #include "vision/vision_processing.h"
 #include "ports.h"
@@ -36,20 +37,21 @@ void show_pot_voltage();
 void do_launcher_wheel();
 void do_rollers();
 
-const int TURRET_ROTATION    = 1;
-const int BRIDGE_ARM_DOWN    = 2;
-const int BRIDGE_ARM_UP      = 3;
-const int WINCH_DOWN         = 6;
-const int WINCH_UP           = 7;
-const int POT_VOLTAGE        = 9;
-const int LAUNCHER_WHEEL_60  = 4;
-const int LAUNCHER_WHEEL_30  = 5;
-const int ROLLERS_DOWN       = 10;
-const int ROLLERS_UP         = 11;
+const int TURRET_ROTATION        = 1;
+const int BRIDGE_ARM_DOWN        = 2;
+const int BRIDGE_ARM_UP          = 3;
+const int WINCH_DOWN             = 6;
+const int WINCH_UP               = 7;
+const int POT_VOLTAGE            = 9;
+const int LAUNCHER_WHEEL_60      = 4;
+const int LAUNCHER_WHEEL_30      = 5;
+const int LAUNCHER_WHEEL_DISABLE = 8;
+const int ROLLERS_DOWN           = 10;
+const int ROLLERS_UP             = 11;
 
 launch_counter launch_wheel_counter(launcher_wheel);
 two_jags launch_wheel_jags(left_launcher_jag, right_launcher_jag);
-pid_controller launch_pid(0.05, 0.0, 0.0, &launch_wheel_counter, &launch_wheel_jags);
+pid_controller launch_pid(0.005, 0.00, 0.002, &launch_wheel_counter, &launch_wheel_jags);
 
 void gunner_override_controls() {
     do_turret_rotation();
@@ -70,7 +72,7 @@ void do_turret_rotation() {
 
 void do_bridge_arm() {
     if(gunner_joystick.GetRawButton(BRIDGE_ARM_DOWN)){//up
-        if(bridge_arm_switch.Get()!=1){//limit switch not pressed
+        if(bridge_arm_switch.Get() == 1){//limit switch not pressed
             printf("bridge arm DOWN\n");
             bridge_arm_spike.Set(Relay::kForward);
         }
@@ -104,20 +106,47 @@ void show_pot_voltage() {
     }
 }
 
+bool setpoint_set = false;
+bool timer_started = false;
+int setpoint = 0;
+Timer timer;
 void do_launcher_wheel() {
-    if (gunner_joystick.GetRawButton(LAUNCHER_WHEEL_60)) {
+    if (gunner_joystick.GetRawButton(LAUNCHER_WHEEL_60) && !timer_started && !setpoint_set) {
         printf("launcher wheel SPIN (60 rps)\n");
-        launch_pid.SetSetpoint(60);
-        printf("Launcher Wheel Speed: %f\n", 1/launcher_wheel.GetPeriod());
+        timer.Start();
+        timer_started = true;
+        setpoint = 60;
+        launch_wheel_jags.Set(0.75);
     }
-    else if (gunner_joystick.GetRawButton(LAUNCHER_WHEEL_30)) {
+    else if (gunner_joystick.GetRawButton(LAUNCHER_WHEEL_30) && !timer_started && !setpoint_set) {
         printf("launcher wheel SPIN (30 rps)\n");
-        launch_pid.SetSetpoint(30);
-        printf("Launcher Wheel Speed: %f\n", 1/launcher_wheel.GetPeriod());
+        timer.Start();
+        timer_started = true;
+        setpoint = 30;
+        launch_wheel_jags.Set(0.75);
+    }
+    else if (timer_started && timer.HasPeriodPassed(0.25)) {
+        timer.Stop();
+        launch_pid.SetSetpoint(setpoint);
+        launch_pid.Enable();
+        setpoint_set = true;
+    }
+    else if (gunner_joystick.GetRawButton(LAUNCHER_WHEEL_DISABLE)) {
+        if(setpoint_set) {
+            launch_pid.Disable();
+            setpoint_set = false;
+        }
+        if(timer_started) {
+            timer.Stop();
+            timer_started = false;
+        }
+        launch_wheel_jags.reset();
+    }
+    else if(!setpoint_set && !timer_started) {
+        launch_wheel_jags.Set(-0.09);
     }
     else {
-        left_launcher_jag.Set(-0.05);
-        right_launcher_jag.Set(-0.05);
+        printf("Launcher Wheel Speed: %f\n", 1/launcher_wheel.GetPeriod());
     }
 }
 

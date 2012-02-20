@@ -20,6 +20,7 @@ private:
     DigitalInput * limit;
     pid_controller * pid;
     static double angle_to_voltage(double);
+    static double launch_angle_to_winch_angle(double);
 };
 
 #endif
