@@ -38,4 +38,20 @@ state_t state_tracker::get_state() {
     return state;
 }
 
+void state_tracker::register_func(state_t state, state_func callback) {
+    callbacks[state] = callback;
+}
+
+void state_tracker::unregister_func(state_func callback) {
+    callbacks.erase(callbacks.find(callback);
+}
+
+void state_tracker::unregister_func(state_t) {
+    callbacks.erase(state_t);
+}
+
+void state_tracker::run_state() {
+    callbacks[state]();
+}
+
 state_tracker global_state;

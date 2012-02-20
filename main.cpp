@@ -19,6 +19,7 @@
  * Implement robot_class to provide functionality for robot.
  */
 
+#include <PWM.h>
 #include "612.h"
 #include "main.h"
 #include "ports.h"
@@ -30,12 +31,10 @@
 #include "launch_counter.h"
 #include "pid_controller.h"
 #include "two_jags.h"
-
-#include <PWM.h>
-#include "override_controls.h"
 #include "vision_alt.h"
-//#include "states/shooting.h" no such file or directory
-//#include "states/driving.h" no such file or directory
+#include "override_controls.h"
+#include "states/shooting.h"
+#include "states/driving.h"
 
 /* this is just for test purposes.  Don't use it */
 launch_counter launch_wheel_counter(launcher_wheel);
@@ -60,6 +59,8 @@ void robot_class::RobotInit() {
     init_camera();
     //launcher_wheel.Enable();
     launcher_wheel.Start();
+    global_state.register_func(STATE_DRIVING, state_driving);
+    global_state.register_func(STATE_SHOOTING, state_shooting);
 }
 
 void robot_class::DisabledInit() {

@@ -21,16 +21,23 @@
 #ifndef state_tracker_H_INCLUDED
 #define state_tracker_H_INCLUDED
 
+#include <vector>
 #include "612.h"
 
 class state_tracker {
     private:
         state_t state;
+        map<state_t, state_func> callbacks;
     public:
+        typedef void(*state_func)();
         state_tracker();
         state_tracker(state_t);
         void set_state(state_t);
         state_t get_state();
+        void register_func(state_t, state_func);
+        void unregister_func(state_func);
+        void unregister_func(state_t);
+        void run_state();
 };
 
 extern state_tracker global_state;
