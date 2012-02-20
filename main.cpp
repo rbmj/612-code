@@ -34,12 +34,6 @@
 #include "states/state_shooting.h"
 #include "states/state_driving.h"
 
-/* this is just for test purposes.  Don't use it */
-launch_counter launch_wheel_counter(launcher_wheel);
-two_jags launch_wheel_jags(left_launcher_jag, right_launcher_jag);
-pid_controller launch_pid(0.0, 0.0, 0.0, &launch_wheel_counter, &launch_wheel_jags);
-/* end */
-
 //constructor - initialize drive
 robot_class::robot_class() {
     //do nothing

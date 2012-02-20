@@ -24,6 +24,10 @@
 #include "vision/vision_processing.h"
 #include "ports.h"
 #include "visionalg.h"
+#include "launch_counter.h"
+#include "pid_controller.h"
+#include "two_jags.h"
+
 
 void do_turret_rotation();
 void do_bridge_arm();
@@ -31,6 +35,21 @@ void do_turret_winch();
 void show_pot_voltage();
 void do_launcher_wheel();
 void do_rollers();
+
+const int TURRET_ROTATION    = 1;
+const int BRIDGE_ARM_DOWN    = 2;
+const int BRIDGE_ARM_UP      = 3;
+const int WINCH_DOWN         = 6;
+const int WINCH_UP           = 7;
+const int POT_VOLTAGE        = 9;
+const int LAUNCHER_WHEEL_60  = 4;
+const int LAUNCHER_WHEEL_30  = 5;
+const int ROLLERS_DOWN       = 10;
+const int ROLLERS_UP         = 11;
+
+launch_counter launch_wheel_counter(launcher_wheel);
+two_jags launch_wheel_jags(left_launcher_jag, right_launcher_jag);
+pid_controller launch_pid(0.05, 0.0, 0.0, &launch_wheel_counter, &launch_wheel_jags);
 
 void gunner_override_controls() {
     do_turret_rotation();
@@ -43,21 +62,21 @@ void gunner_override_controls() {
 
 void do_turret_rotation() {
     //Turret rotation controlled by gunner joystick during drive state only. Must press button 1
-    if (gunner_joystick.GetRawButton(1)) {
+    if (gunner_joystick.GetRawButton(TURRET_ROTATION)) {
         printf("turret ROTATE\n");
         turret_rotation_jag.Set(-gunner_joystick.GetX());
     }
 }
 
 void do_bridge_arm() {
-    if(gunner_joystick.GetRawButton(2)){//up
+    if(gunner_joystick.GetRawButton(BRIDGE_ARM_DOWN)){//up
         if(bridge_arm_switch.Get()!=1){//limit switch not pressed
-            printf("bridge DOWN\n");
+            printf("bridge arm DOWN\n");
             bridge_arm_spike.Set(Relay::kForward);
         }
     }
-    else if(gunner_joystick.GetRawButton(3)){//down
-        printf("bridge UP\n");
+    else if(gunner_joystick.GetRawButton(BRIDGE_ARM_UP)){//down
+        printf("bridge arm UP\n");
         bridge_arm_spike.Set(Relay::kReverse);
     }
     else {
@@ -66,11 +85,11 @@ void do_bridge_arm() {
 }
 
 void do_turret_winch() {
-    if(gunner_joystick.GetRawButton(7)) {
+    if(gunner_joystick.GetRawButton(WINCH_UP)) {
         printf("winch UP\n");
         turret_winch_jag.Set(0.2);
     }
-    else if(gunner_joystick.GetRawButton(6)) {
+    else if(gunner_joystick.GetRawButton(WINCH_DOWN)) {
         printf("winch DOWN\n");
         turret_winch_jag.Set(-0.2);
     }
@@ -80,16 +99,20 @@ void do_turret_winch() {
 }
 
 void show_pot_voltage() {
-    if(gunner_joystick.GetRawButton(8)) {
+    if(gunner_joystick.GetRawButton(POT_VOLTAGE)) {
         printf("pot voltage: %f\n", launch_angle_pot.GetVoltage());
     }
 }
 
 void do_launcher_wheel() {
-    if (gunner_joystick.GetRawButton(4)) {
-        printf("launcher wheel SPIN\n");
-        left_launcher_jag.Set(1.0);
-        right_launcher_jag.Set(1.0);
+    if (gunner_joystick.GetRawButton(LAUNCHER_WHEEL_60)) {
+        printf("launcher wheel SPIN (60 rps)\n");
+        launch_pid.SetSetpoint(60);
+        printf("Launcher Wheel Speed: %f\n", 1/launcher_wheel.GetPeriod());
+    }
+    else if (gunner_joystick.GetRawButton(LAUNCHER_WHEEL_30)) {
+        printf("launcher wheel SPIN (30 rps)\n");
+        launch_pid.SetSetpoint(30);
         printf("Launcher Wheel Speed: %f\n", 1/launcher_wheel.GetPeriod());
     }
     else {
@@ -99,11 +122,11 @@ void do_launcher_wheel() {
 }
 
 void do_rollers() {
-    if (gunner_joystick.GetRawButton(11)) {
+    if (gunner_joystick.GetRawButton(ROLLERS_UP)) {
         printf("rollers UP\n");
         rollers.set_direction(roller_t::UP);
     }
-    else if (gunner_joystick.GetRawButton(10)) {
+    else if (gunner_joystick.GetRawButton(ROLLERS_DOWN)) {
         printf("rollers DOWN\n");
         rollers.set_direction(roller_t::DOWN);
     }
