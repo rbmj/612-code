@@ -18,16 +18,16 @@
 /*
  * Implements a state_tracker class for the state of the robot.
  */
+ 
 #ifndef state_tracker_H_INCLUDED
 #define state_tracker_H_INCLUDED
 
-#include <vector>
+#include <map>
 #include "612.h"
 
+using namespace std;
+
 class state_tracker {
-    private:
-        state_t state;
-        map<state_t, state_func> callbacks;
     public:
         typedef void(*state_func)();
         state_tracker();
@@ -35,9 +35,11 @@ class state_tracker {
         void set_state(state_t);
         state_t get_state();
         void register_func(state_t, state_func);
-        void unregister_func(state_func);
         void unregister_func(state_t);
         void run_state();
+    private:
+        state_t state;
+        map<state_t, state_func> callbacks;
 };
 
 extern state_tracker global_state;

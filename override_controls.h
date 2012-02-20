@@ -14,10 +14,14 @@
  * ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
  * OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
  */
+ 
+/* 
+ * Controls for overriding automatic shooting
+ */
 
 #ifndef INC_OVERRIDE_CONTROLS_H_INC
 #define INC_OVERRIDE_CONTROLS_H_INC
 
-void override_controls();
+void gunner_override_controls();
 
 #endif

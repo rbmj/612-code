@@ -18,9 +18,13 @@
 /*
  * Implements state_tracker to provide functionality for the robot.
  */
+ 
 #include <iostream>
+#include <algorithm>
 #include "612.h"
 #include "state_tracker.h"
+
+using namespace std;
 
 state_tracker::state_tracker() {
     state = 0;
@@ -38,16 +42,12 @@ state_t state_tracker::get_state() {
     return state;
 }
 
-void state_tracker::register_func(state_t state, state_func callback) {
-    callbacks[state] = callback;
+void state_tracker::register_func(state_t set_state, state_func callback) {
+    callbacks[set_state] = callback;
 }
 
-void state_tracker::unregister_func(state_func callback) {
-    callbacks.erase(callbacks.find(callback);
-}
-
-void state_tracker::unregister_func(state_t) {
-    callbacks.erase(state_t);
+void state_tracker::unregister_func(state_t set_state) {
+    callbacks.erase(set_state);
 }
 
 void state_tracker::run_state() {
