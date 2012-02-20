@@ -120,7 +120,10 @@ void robot_class::TeleopContinuous() {
         }
         //Turret rotation controlled by gunner joystick during drive state only. Must press button 1
         if(gunner_joystick.GetRawButton(1)){
-            turret_rotation_jag.Set(gunner_joystick.GetX());
+            turret_rotation_jag.Set(-(gunner_joystick.GetX()));
+        }
+        else {
+            turret_rotation_jag.Set(0.0);
         }
         // bridge
         if(gunner_joystick.GetRawButton(2)){//up
