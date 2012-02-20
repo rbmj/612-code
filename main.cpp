@@ -59,6 +59,8 @@ void robot_class::RobotInit() {
     init_camera();
     //launcher_wheel.Enable();
     launcher_wheel.Start();
+    global_state.register_func(STATE_DRIVING, state_driving);
+    global_state.register_func(STATE_SHOOTING, state_shooting);
 }
 
 void robot_class::DisabledInit() {
