@@ -34,6 +34,7 @@
 #include <Vision/ColorImage.h>
 #include <Vision/BinaryImage.h>
 #include <Vision2009/VisionAPI.h>
+#include <Timer.h>
 
 #include <vector>
 #include <cmath>
@@ -53,7 +54,7 @@ const VISION_ALGORITHM ALGORITHM = REGRESSION;
 
 /* Remember that y increases as you go DOWN the image!! */
 
-const double robot_height = 31.0/12; //TODO: Replace this with a real #(feet)!
+const double robot_height = 31.0/12;
 
 #ifdef VISION_ALT_HEURISTIC
 //heights in feet:
@@ -104,6 +105,10 @@ void output_debug_info() {
 /* update logic: */
 
 void target::update_targets(void * ignored) {
+#if DEBUG_612
+    Timer process_time;
+    process_time.Start();
+#endif
     if (!camera().IsFreshImage()) {
         return; //no new image for us to process
     }
@@ -169,9 +174,10 @@ void target::update_targets(void * ignored) {
     }
 #endif
     delete reports; //free vector
-    if (DEBUG_612) {
-        output_debug_info();
-    }
+#if DEBUG_612
+    output_debug_info();
+    std::printf("Processing took %f sec\n", process_time.Get());
+#endif
 }
 
 #ifdef VISION_ALT_HEURISTIC

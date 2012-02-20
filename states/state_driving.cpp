@@ -36,7 +36,7 @@ void state_driving() {
 }
 
 void do_driving() {
-	if (left_joystick.GetRawButton(1)) {
+    if (left_joystick.GetRawButton(1)) {
         //arcade drive
         drive.ArcadeDrive(left_joystick); //arcade drive on left joystick
     }
@@ -61,7 +61,7 @@ void do_shifting() {
 }
 
 void change_state() {
-    if(left_joystick.GetRawButton(3)) {
+    if(gunner_joystick.GetRawButton(1)) {
         global_state.set_state(STATE_SHOOTING);
     }
 }
