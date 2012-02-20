@@ -147,15 +147,6 @@ void robot_class::TeleopContinuous() {
         else {
             turret_winch_jag.Set(0.0);
         }
-        if(gunner_joystick.GetRawButton(6)) {
-            turret_winch_jag.Set(-0.2);
-        }
-        else if(gunner_joystick.GetRawButton(7)) {
-            turret_winch_jag.Set(0.2);
-        }
-        else {
-            turret_winch_jag.Set(0.0);
-        }
         if(gunner_joystick.GetRawButton(9)) {
             printf("pot voltage: %f\n", launch_angle_pot.GetVoltage());
         }
