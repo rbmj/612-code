@@ -33,6 +33,7 @@
 #include <Servo.h>
 #include <AnalogChannel.h>
 #include <Vision/AxisCamera.h>
+#include <DigitalOutput.h>
 #include "joysmooth.h"
 #include "roller.h"
 #include "shifter.h"
@@ -59,7 +60,7 @@ extern Jaguar turret_rotation_jag;
 extern Jaguar turret_winch_jag;
 extern Servo right_servo_shift;
 extern Servo left_servo_shift;
-extern PWM camera_led;
+//extern PWM camera_led; //not using PWM
 
 //DIOs
 extern Encoder right_drive;
@@ -71,6 +72,7 @@ extern DigitalInput turret_limit_left;
 extern DigitalInput turret_limit_mid;
 extern DigitalInput turret_limit_right;
 extern DigitalInput bridge_arm_switch;
+extern DigitalOutput camera_led_digital;
 
 //AIOs
 extern AnalogChannel launch_angle_pot;

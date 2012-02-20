@@ -28,10 +28,12 @@
 #include <Encoder.h>
 #include <Ultrasonic.h>
 #include <DigitalInput.h>
+#include <DigitalOutput.h>
 #include <Relay.h>
 #include <Servo.h>
 #include <AnalogChannel.h>
 #include <Vision/AxisCamera.h>
+
 #include "612.h"
 #include "ports.h"
 #include "joysmooth.h"
@@ -68,7 +70,6 @@ Jaguar turret_winch_jag                 ( slot6,     1 );
 Jaguar left_front_jag                   ( slot6,     2 );
 Jaguar left_rear_jag                    ( slot6,     3 );
 Servo left_servo_shift                  ( slot6,     4 );
-PWM camera_led                          ( slot6,     5 );
 
 //NOTE: Sica wants to use pots (potentiometers) for the angles, as those are
 //absolute and don't need a zero switch.  If we do that they're seen as
@@ -82,11 +83,11 @@ Encoder right_drive                     ( slot2,     1,
 DigitalInput turret_limit_mid           ( slot2,     5 );
 DigitalInput turret_limit_right         ( slot2,     6 );
 DigitalInput turret_limit_left          ( slot2,     7 );
+DigitalOutput camera_led_digital        ( slot2,     8 );
 
 Counter launcher_wheel                  ( slot2,    10 );
 
 DigitalInput launch_angle_switch        ( slot6,     1 );
-
 Ultrasonic front_ultrasonic             ( slot6,     2,
                                           slot6,     3 );
 Encoder left_drive                      ( slot6,     4,
@@ -140,7 +141,9 @@ turret shooter_turret(
     launcher_wheel,
     launch_angle_pot,
     launch_angle_switch,
-    
+    turret_limit_left,
+    turret_limit_mid,
+    turret_limit_right
 );
 */
 

@@ -33,6 +33,7 @@
 
 #include <PWM.h>
 #include "override_controls.h"
+#include "vision_alt.h"
 //#include "states/shooting.h" no such file or directory
 //#include "states/driving.h" no such file or directory
 
@@ -83,7 +84,6 @@ void robot_class::AutonomousPeriodic() {
 
 void robot_class::TeleopPeriodic() {
     update_sensors();
-    camera_led.SetRaw(255);
 }
 
 void robot_class::DisabledContinuous() {
@@ -124,13 +124,11 @@ void robot_class::TeleopContinuous() {
         }
         // bridge
         if(gunner_joystick.GetRawButton(2)){//up
-            if(bridge_arm_switch.Get()!=1){//limit switch not pressed
-                printf("bridge DOWN");
+            if (bridge_arm_switch.Get()){ //limit switch not pressed
                 bridge_arm_spike.Set(Relay::kForward);
             }
         }
         else if(gunner_joystick.GetRawButton(3)){//down
-            printf("bridge UP");
             bridge_arm_spike.Set(Relay::kReverse);
         }
         else {
@@ -145,10 +143,6 @@ void robot_class::TeleopContinuous() {
         }
         else {
             turret_winch_jag.Set(0.0);
-        }
-        // pot
-        if(gunner_joystick.GetRawButton(8)) {
-            printf("pot voltage: %f\n", launch_angle_pot.GetVoltage());
         }
         if(gunner_joystick.GetRawButton(6)) {
             turret_winch_jag.Set(-0.2);
@@ -166,6 +160,7 @@ void robot_class::TeleopContinuous() {
     else if(global_state.get_state() == STATE_SHOOTING) {
         // disable motor safety check to stop wasting netconsole space
         drive.SetSafetyEnabled(false);
+        /*
         vision_processing::update();
         vector<double> target_degrees = vision_processing::get_degrees();
         vector<double> target_distances = vision_processing::get_distance();
@@ -179,6 +174,8 @@ void robot_class::TeleopContinuous() {
         if(target_distances.size() >= 1) {
             printf("Distance of target:       %f\n", target_distances[0]);
         }
+        */
+        target::update_targets();
         if(!left_joystick.GetRawButton(3)) {
             global_state.set_state(STATE_DRIVING);
             drive.SetSafetyEnabled(true);
@@ -215,6 +212,9 @@ void robot_class::TeleopContinuous() {
 void robot_class::update_sensors() {
     //run functions in update registry
     registry().update();
+    //power on LEDs
+    camera_led_digital.Set(1);
+    //camera_led.SetRaw(255); //not using pwm
 }
 
 //the following macro tells the library that we want to generate code

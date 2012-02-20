@@ -47,9 +47,9 @@ void perror_612_(const char*, int, const char *);
 //#defind DEBUG_612 (0)
 
 //use target identification heuristic
-//#define VISION_ALT_HEURISTIC
+#define VISION_ALT_HEURISTIC
 //use ad-hoc target height detection
-#define VISION_ALT_ADHOC
+//#define VISION_ALT_ADHOC
 
 //calculate trajectory with fixed exit speed
 //#define TRAJECTORY_LAUNCHSPEED

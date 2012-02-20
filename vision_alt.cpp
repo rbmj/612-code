@@ -103,7 +103,7 @@ void output_debug_info() {
 
 /* update logic: */
 
-void target::update_target_arr(void * ignored) {
+void target::update_targets(void * ignored) {
     if (!camera().IsFreshImage()) {
         return; //no new image for us to process
     }
@@ -170,9 +170,7 @@ void target::update_target_arr(void * ignored) {
 #endif
     delete reports; //free vector
     if (DEBUG_612) {
-        if (std::rand() % 5 == 0) { //make it so it outputs 20% of the time
-            output_debug_info();
-        }
+        output_debug_info();
     }
 }
 
