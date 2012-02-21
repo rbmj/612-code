@@ -5,6 +5,7 @@
 #include "winch.h"
 //#include "winch_motor.h"
 #include "update.h"
+#include "trajectory.h"
 
 const float WINCH_TOLERANCE = 0.025;
 const float WINCH_SPEED = 0.2;
@@ -17,8 +18,8 @@ winch::winch(Jaguar& j, AnalogChannel& c, DigitalInput& l) {
     limit = &l;
     //winch starts enabled by default, as winch should always be enabled and
     //updating.
-    enabled = true;
     desired_pot_voltage = pot->GetVoltage();
+    enabled = true;
     registry().register_func(winch_update_helper, (void*)this);
 }
 
@@ -29,11 +30,16 @@ winch::~winch() {
 double winch::launch_angle_to_voltage(double theta) {
     //takes an angle in radians and converts it to a voltage.
     //note that the angle starts at pi/2 and decreases to pi/4
-    //TODO: implement
     return (-0.9493487159 * theta) + 3.9019452071;
 }
 
+double winch::voltage_to_launch_angle(double voltage) {
+    double radians = (-1.0466681558 * voltage) + 4.0902451845;
+    return rad2deg(radians);
+}
+
 void winch::enable() {
+    desired_pot_voltage = pot->GetVoltage();
     enabled = true;
 }
 
@@ -53,6 +59,23 @@ void winch::set_angle(double theta) { // angle of launch in radians, not angle o
     desired_pot_voltage = launch_angle_to_voltage(theta);
     printf("pot voltage: %f\n", desired_pot_voltage);
 //    pid->SetSetpoint(pot_voltage);
+}
+
+void winch::manual_control(direction_t direction) {
+    if(direction == UP) {
+        jag->Set(-WINCH_SPEED);
+    }
+    else if(direction == DOWN) {
+        if (limit->Get()) {
+            jag->Set(WINCH_SPEED);
+        }
+        else {
+            jag->Set(0.0);
+        }
+    }
+    else {
+        jag->Set(0.0);
+    }
 }
 
 void winch::update() {
