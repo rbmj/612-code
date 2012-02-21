@@ -22,21 +22,10 @@ For more information regarding ucpp, see 'ucpp.rst'.
 Configuring
 ++++++++++++++++
 
-Configuration Details:
-
- - Some configuration is required on the cRIO to get everything to work.  First,
-   when imaging it is necessary to select the option for WindRiver C++, and please
+ - When imaging it is necessary to select the option for WindRiver C++, and please
    enable NetConsole (except for in perhaps release builds).
  - Remember that the cRIO runs an ftp server that allows anonymous ftp access.
- - Second, for NetConsole to work ni-rt.ini needs to have the DNS and default
-   gateway set to the router.  The default is 10.6.12.1, and, though this works on
-   the field, it will not allow NetConsole to work for debugging.  The subnet mask
-   of computer running NetConsole must also be set to 255.0.0.0 (not the more
-   intuitive 255.255.255.0).
-    - Again, without these changes, the robot will still DRIVE fine.
- - FOR NOW, the robot REQUIRES version 30 of the firmware.  This WILL change come
-   build season, though!
- - Be sure to undo any/all changes to ni-rt.ini before going onto the field!!!
+ - The robot needs to be imaged with version 43 of the firmware to be legal.
 
 License
 ++++++++++++++++
