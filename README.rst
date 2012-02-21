@@ -22,6 +22,8 @@ For more information regarding ucpp, see 'ucpp.rst'.
 Configuring
 ++++++++++++++++
 
+Configuration Details:
+
  - Some configuration is required on the cRIO to get everything to work.  First,
    when imaging it is necessary to select the option for WindRiver C++, and please
    enable NetConsole (except for in perhaps release builds).
