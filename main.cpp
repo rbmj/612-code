@@ -48,8 +48,7 @@ void robot_class::RobotInit() {
     drive.SetInvertedMotor(right_front_motor.type, right_front_motor.reverse);
     drive.SetInvertedMotor(right_rear_motor.type,  right_rear_motor.reverse);
     global_state.set_state(STATE_DRIVING);
-    //init_camera();
-    //launcher_wheel.Enable();
+    init_camera();
     launcher_wheel.Start();
     global_state.register_func(STATE_DRIVING, state_driving);
     global_state.register_func(STATE_SHOOTING, state_shooting);
