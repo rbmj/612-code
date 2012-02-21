@@ -6,12 +6,19 @@
 
 class turntable {
 public:
+    enum cur_side {
+        UNSURE,
+        LEFT,
+        RIGHT,
+        CENTER
+    };
     turntable(Jaguar&, DigitalInput&, DigitalInput&, DigitalInput&);
     ~turntable();
     void new_offset(int, int);
     void center();
     void enable();
     void disable();
+    void manual_control(float);
 private:
     Jaguar * jag;
     DigitalInput * left;
@@ -20,6 +27,7 @@ private:
     float power;
     bool centering;
     bool enabled;
+    cur_side pos;
     void update();
     static void update_help(void*);
 };

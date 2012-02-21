@@ -60,18 +60,19 @@ void winch::update() {
         jag->Set(0.0);
         return;
     }
-/*    if(limit->Get()) {
-        disable();
-    }*/
     float current_pot_voltage = pot->GetVoltage();
     float pot_voltage_diff = desired_pot_voltage - current_pot_voltage;
     if(abs((int)(pot_voltage_diff * 100)) < (int)(WINCH_TOLERANCE * 100)) {
-        printf("arrived at angle\n");
-        disable();
+        jag->Set(0.0);
         return;
     }
     if(pot_voltage_diff > 0) {
-        jag->Set(WINCH_SPEED);
+        if (limit->Get()) {
+            jag->Set(WINCH_SPEED);
+        }
+        else {
+            jag->Set(0.0);
+        }
     }
     else {
         jag->Set(-WINCH_SPEED);

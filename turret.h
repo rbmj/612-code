@@ -38,6 +38,9 @@ public:
     void align(target&);
     void enable();
     void disable();
+    shooter& Shooter();
+    winch& Winch();
+    turntable& Susan();
 private:
     turret() {}
     static void update_help(void*);

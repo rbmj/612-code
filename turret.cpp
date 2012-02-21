@@ -32,8 +32,7 @@ turret::turret(
     shooter_wheels = new shooter(count, launcha, launchb);
     
     cur_target = NULL;
-    enabled = false;
-    just_enabled = false;
+    enabled = true;
 }
 
 turret::~turret() {
@@ -48,7 +47,9 @@ void turret::align(target& t) {
 
 void turret::enable() {
     enabled = true;
-    just_enabled = true;
+    winch_obj->enable();
+    shooter_wheels->enable();
+    lazy_susan->enable();
 }
 
 void turret::disable() {
@@ -60,18 +61,18 @@ void turret::update_help(void * obj) {
 }
 
 void turret::update() {
-    if (cur_target != NULL && cur_target->valid() && enabled) {
-        if (just_enabled) {
-            winch_obj->enable();
-            shooter_wheels->enable();
-            lazy_susan->enable();
-            just_enabled = false;
+    if (enabled) {
+        if (cur_target != NULL && cur_target->valid()) {
+            //auto target mode
+            if (cur_target->fresh()) {
+                trajectory traj = calculate_trajectory(*cur_target);
+                lazy_susan->new_offset(cur_target->x_offset(), RESOLUTION().X()/2);
+                shooter_wheels->set_speed(traj.velocity);
+                winch_obj->set_angle(traj.angle);
+            }
         }
-        if (cur_target->fresh()) {
-            trajectory traj = calculate_trajectory(*cur_target);
-            lazy_susan->new_offset(cur_target->x_offset(), RESOLUTION().X()/2);
-            shooter_wheels->set_speed(traj.velocity);
-            winch_obj->set_angle(traj.angle);
+        else {
+            //other mode
         }
     }
     else {
@@ -79,4 +80,16 @@ void turret::update() {
         shooter_wheels->disable();
         lazy_susan->disable();
     }
+}
+
+shooter& turret::Shooter() {
+    return *shooter_wheels;
+}
+
+winch& turret::Winch() {
+    return *winch_obj;
+}
+
+turntable& turret::Susan() {
+    return *lazy_susan;
 }

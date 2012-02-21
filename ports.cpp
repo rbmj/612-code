@@ -39,6 +39,7 @@
 #include "joysmooth.h"
 #include "roller.h"
 #include "shifter.h"
+#include "turret.h"
 
 //just define & initialize all of the consts in ports.h
 
@@ -131,7 +132,6 @@ roller_t rollers(roller_spike_1, roller_spike_2);
 //shifter
 shifter servo_shifter(left_servo_shift, right_servo_shift);
 
-/*
 //turret
 turret shooter_turret(
     turret_rotation_jag,
@@ -145,7 +145,6 @@ turret shooter_turret(
     turret_limit_mid,
     turret_limit_right
 );
-*/
 
 //drive_jaguar                           JAGUAR&                 TYPE               REVERSE
 drive_jaguar left_front_motor  =    { left_front_jag,  RobotDrive::kFrontLeftMotor,  false };

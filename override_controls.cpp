@@ -40,7 +40,7 @@ void show_pot_voltage();
 void do_launcher_wheel();
 void do_rollers();
 
-const int TURRET_ROTATION        = 1;
+const int TURRET_ROTATION        = 2;
 const int BRIDGE_ARM_DOWN        = 8;
 const int BRIDGE_ARM_UP          = 9;
 const int WINCH_ADJUST           = 3;
@@ -48,11 +48,6 @@ const int POT_VOLTAGE            = 10;
 const int LAUNCHER_WHEEL         = 4;
 const int ROLLERS_DOWN           = 6;
 const int ROLLERS_UP             = 7;
-
-
-winch winch_obj(turret_winch_jag, launch_angle_pot, launch_angle_switch);
-
-shooter launch_shooter(launcher_wheel, left_launcher_jag, right_launcher_jag);
 
 void gunner_override_controls() {
     do_turret_rotation();
@@ -64,13 +59,11 @@ void gunner_override_controls() {
 }
 
 void do_turret_rotation() {
-    //Turret rotation controlled by gunner joystick during drive state only. Must press button 1
-    //TODO: incorporate turntable.  Not finished and ready to release yet.
     if (gunner_joystick.GetRawButton(TURRET_ROTATION)) {
-        turret_rotation_jag.Set(-gunner_joystick.GetX());
+        shooter_turret.Susan().manual_control(gunner_joystick.GetX());
     }
     else {
-        turret_rotation_jag.Set(0.0);
+        shooter_turret.Susan().manual_control(0.0);
     }
 }
 
@@ -98,8 +91,7 @@ void do_turret_winch() {
         angle_changed = true;
     }
     if (gunner_joystick.GetRawButton(WINCH_ADJUST) && angle_changed) {
-        winch_obj.set_angle(deg2rad(winch_z));
-        winch_obj.enable();
+        shooter_turret.Winch().set_angle(deg2rad(winch_z));
         angle_changed = false;
     }
 }
@@ -121,13 +113,13 @@ void do_launcher_wheel() {
     if (!enabled) {
         if (gunner_joystick.GetRawButton(LAUNCHER_WHEEL)) {
             enabled = true;
-            launch_shooter.set_freq(prev_z);
-            launch_shooter.enable();
+            shooter_turret.Shooter().set_freq(prev_z);
+            shooter_turret.Shooter().enable();
         }
     }
     else if (!gunner_joystick.GetRawButton(LAUNCHER_WHEEL)) {
         enabled = false;
-        launch_shooter.disable();
+        shooter_turret.Shooter().disable();
     }
 }
 

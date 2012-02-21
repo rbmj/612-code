@@ -19,8 +19,6 @@ private:
     Jaguar * jag;
     AnalogChannel * pot;
     DigitalInput * limit;
-//    pid_controller * pid;
-//    winch_motor * motor;
     bool enabled;
     float desired_pot_voltage;
     static double launch_angle_to_voltage(double);
