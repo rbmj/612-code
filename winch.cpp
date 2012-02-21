@@ -65,7 +65,6 @@ void winch::set_angle(double theta) { // angle of launch in radians, not angle o
 }
 
 void winch::update() {
-    printf("enabled: %d\n", enabled);
     if(!enabled) {
         jag->Set(0.0);
         return;
