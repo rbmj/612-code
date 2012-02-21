@@ -25,6 +25,11 @@
 #include "../visionalg.h"
 #include "../state_tracker.h"
 
+const int ARCADE_DRIVE = 1;
+const int SHIFT_HIGH   = 11;
+const int SHIFT_LOW    = 10;
+const int SHOOT        = 5;
+
 void do_driving();
 void do_shifting();
 void change_state();
@@ -36,7 +41,7 @@ void state_driving() {
 }
 
 void do_driving() {
-    if (left_joystick.GetRawButton(1)) {
+    if (left_joystick.GetRawButton(ARCADE_DRIVE)) {
         //arcade drive
         drive.ArcadeDrive(left_joystick); //arcade drive on left joystick
     }
@@ -50,18 +55,18 @@ void do_driving() {
 }
 
 void do_shifting() {
-    if (right_joystick.GetRawButton(11) || left_joystick.GetRawButton(11)) {
+    if (right_joystick.GetRawButton(SHIFT_HIGH) || left_joystick.GetRawButton(SHIFT_HIGH)) {
         // set servo to high gear
         servo_shifter.set(shifter::HIGH);
     }
-    else if (left_joystick.GetRawButton(10) || right_joystick.GetRawButton(10)) {
+    else if (left_joystick.GetRawButton(SHIFT_LOW) || right_joystick.GetRawButton(SHIFT_LOW)) {
         // set servo to low gear
         servo_shifter.set(shifter::LOW);
     }
 }
 
 void change_state() {
-    if(gunner_joystick.GetRawButton(1)) {
+    if(gunner_joystick.GetRawButton(SHOOT)) {
         global_state.set_state(STATE_SHOOTING);
     }
 }
