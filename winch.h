@@ -8,6 +8,11 @@
 
 class winch {
 public:
+    enum direction_t {
+        UP,
+        DOWN,
+        OFF
+    };
     winch(Jaguar&, AnalogChannel&, DigitalInput&);
     ~winch();
     void enable();
@@ -17,6 +22,7 @@ public:
     float get_cur_angle() const;
     float get_set_angle() const;
     void update();
+    void manual_control(direction_t);
 private:
     Jaguar * jag;
     AnalogChannel * pot;

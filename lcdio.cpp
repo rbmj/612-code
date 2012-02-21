@@ -2,6 +2,7 @@
 #include "update.h"
 #include "ports.h"
 #include "vision_alt.h"
+#include "trajectory.h"
 #include <DriverStationLCD.h>
 
 /* Format like this: */
@@ -36,8 +37,8 @@ lcdio::~lcdio() {
 }
 
 void lcdio::update() {
-    update_set_angle(shooter_turret.Winch().get_set_angle());
-    update_cur_angle(shooter_turret.Winch().get_cur_angle());
+    update_set_angle(rad2deg(shooter_turret.Winch().get_set_angle()));
+    update_cur_angle(rad2deg(shooter_turret.Winch().get_cur_angle()));
     update_set_speed(shooter_turret.Shooter().get_set_freq());
     update_cur_speed(shooter_turret.Shooter().get_cur_freq());
 #ifdef VISION_ALT_HEURISTIC

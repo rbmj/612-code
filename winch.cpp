@@ -3,8 +3,8 @@
 #include <AnalogChannel.h>
 #include <DigitalInput.h>
 #include "winch.h"
-//#include "winch_motor.h"
 #include "update.h"
+#include "trajectory.h"
 
 const float WINCH_TOLERANCE = 0.025;
 const float WINCH_SPEED = 0.2;
@@ -17,8 +17,8 @@ winch::winch(Jaguar& j, AnalogChannel& c, DigitalInput& l) {
     limit = &l;
     //winch starts enabled by default, as winch should always be enabled and
     //updating.
-    enabled = true;
     desired_pot_voltage = pot->GetVoltage();
+    enabled = true;
     registry().register_func(winch_update_helper, (void*)this);
 }
 
@@ -38,6 +38,7 @@ float winch::voltage_to_launch_angle(float voltage) {
 }
 
 void winch::enable() {
+    desired_pot_voltage = pot->GetVoltage();
     enabled = true;
 }
 
@@ -63,6 +64,23 @@ float winch::get_set_angle() const {
 
 float winch::get_cur_angle() const {
     return voltage_to_launch_angle(pot->GetVoltage());
+}
+
+void winch::manual_control(direction_t direction) {
+    if(direction == UP) {
+        jag->Set(-WINCH_SPEED);
+    }
+    else if(direction == DOWN) {
+        if (limit->Get()) {
+            jag->Set(WINCH_SPEED);
+        }
+        else {
+            jag->Set(0.0);
+        }
+    }
+    else {
+        jag->Set(0.0);
+    }
 }
 
 void winch::update() {

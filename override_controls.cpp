@@ -40,10 +40,12 @@ void show_pot_voltage();
 void do_launcher_wheel();
 void do_rollers();
 
-const int TURRET_ROTATION        = 2;
+const int TURRET_ROTATION        = 1;
 const int BRIDGE_ARM_DOWN        = 8;
 const int BRIDGE_ARM_UP          = 9;
 const int WINCH_ADJUST           = 3;
+const int WINCH_UP               = 3;
+const int WINCH_DOWN             = 2;
 const int POT_VOLTAGE            = 10;
 const int LAUNCHER_WHEEL         = 4;
 const int ROLLERS_DOWN           = 6;
@@ -82,6 +84,18 @@ void do_bridge_arm() {
 void do_turret_winch() {
     static float winch_z = 0.0;
     static bool angle_changed = false;
+    if(gunner_joystick.GetRawButton(WINCH_UP)) {
+        shooter_turret.Winch().disable();
+        shooter_turret.Winch().manual_control(winch::UP);
+    }
+    else if(gunner_joystick.GetRawButton(WINCH_DOWN)) {
+        shooter_turret.Winch().disable();
+        shooter_turret.Winch().manual_control(winch::DOWN);
+    }
+    else if(!shooter_turret.Winch().is_enabled()) {
+        shooter_turret.Winch().manual_control(winch::OFF);
+        shooter_turret.Winch().enable();
+    }
     float new_winch_z = (-left_joystick.GetZ()+1)*22.5+45;
     if(new_winch_z != winch_z) {
         winch_z = new_winch_z;
