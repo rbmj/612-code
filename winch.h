@@ -4,8 +4,8 @@
 #include <Jaguar.h>
 #include <AnalogChannel.h>
 #include <DigitalInput.h>
-
 #include "pid_controller.h"
+#include "winch_motor.h"
 
 class winch {
 public:
@@ -13,14 +13,18 @@ public:
     ~winch();
     void enable();
     void disable();
+    bool is_enabled();
     void set_angle(double);
+    void update();
 private:
     Jaguar * jag;
     AnalogChannel * pot;
     DigitalInput * limit;
-    pid_controller * pid;
-    static double angle_to_voltage(double);
-    static double launch_angle_to_winch_angle(double);
+//    pid_controller * pid;
+//    winch_motor * motor;
+    bool enabled;
+    float desired_pot_voltage;
+    static double launch_angle_to_voltage(double);
 };
 
 #endif

@@ -96,7 +96,7 @@ void robot_class::TeleopContinuous() {
         state_shooting();
     }
     if (global_state.get_state() != STATE_SHOOTING) {
-        Wait(0.005); //let the CPU rest a little - 5 ms isn't too long
+        Wait(0.0025); //let the CPU rest a little - 5 ms isn't too long
     }
 }
 
