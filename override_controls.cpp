@@ -69,15 +69,13 @@ void do_turret_rotation() {
 
 void do_bridge_arm() {
     if(gunner_joystick.GetRawButton(BRIDGE_ARM_UP)){//up
-        if(!bridge_arm_switch.Get()){//limit switch not pressed
-            bridge_arm_spike.Set(Relay::kForward);
-        }
+        bridge_arm.set_direction(bridge_arm_t::UP);
     }
     else if(gunner_joystick.GetRawButton(BRIDGE_ARM_DOWN)){//down
-        bridge_arm_spike.Set(Relay::kReverse);
+        bridge_arm.set_direction(bridge_arm_t::DOWN);
     }
     else {
-        bridge_arm_spike.Set(Relay::kOff);
+        bridge_arm.set_direction(bridge_arm_t::NEUTRAL);
     }
 }
 

@@ -13,6 +13,10 @@ public:
     ~shooter();
     void set_speed(double);
     void set_freq(double);
+    double get_cur_speed() const;
+    double get_cur_freq() const;
+    double get_set_speed() const;
+    double get_set_freq() const;
     void enable();
     void disable();
 private:
@@ -28,6 +32,7 @@ private:
     Timer launch_time;
     void update();
     static double ballspeed_to_rps(double);
+    static double rps_to_ballspeed(double);
     static void update_help(void*);
 };
 

@@ -19,6 +19,7 @@ public:
     void enable();
     void disable();
     void manual_control(float);
+    float get_power() const;
 private:
     Jaguar * jag;
     DigitalInput * left;

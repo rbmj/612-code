@@ -64,12 +64,18 @@ double shooter::ballspeed_to_rps(double speed) {
     return speed;
 }
 
+double shooter::rps_to_ballspeed(double rps) {
+    //TODO: Implement.  Inverse of the above
+    return rps;
+}
+
 void shooter::update_help(void * obj) {
     ((shooter*)obj)->update();
 }
 
 void shooter::update() {
     if (!enabled) {
+        //backspin to keep balls in chute
         jags->Set(-0.175);
         return;
     }
@@ -93,15 +99,21 @@ void shooter::update() {
     }
     if (setpoint_set) {
         //PID control
-#if DEBUG_612
-        bool at_target = control->OnTarget();
-        if (!arrived_at_speed && at_target) {
-            arrived_at_speed = true;
-            std::printf("shooter: arrived at speed %f\n", setpoint);
-        }
-        if (arrived_at_speed && !at_target) {
-            arrived_at_speed = false;
-        }
-#endif
     }
+}
+
+double shooter::get_cur_speed() const {
+    return rps_to_ballspeed(speed->get_frequency());
+}
+
+double shooter::get_cur_freq() const {
+    return speed->get_frequency();
+}
+
+double shooter::get_set_speed() const {
+    return rps_to_ballspeed(setpoint);
+}
+
+double shooter::get_set_freq() const {
+    return setpoint;
 }

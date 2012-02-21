@@ -12,16 +12,20 @@ public:
     ~winch();
     void enable();
     void disable();
-    bool is_enabled();
-    void set_angle(double);
+    bool is_enabled() const;
+    void set_angle(float);
+    float get_cur_angle() const;
+    float get_set_angle() const;
     void update();
 private:
     Jaguar * jag;
     AnalogChannel * pot;
     DigitalInput * limit;
     bool enabled;
+    float desired_angle;
     float desired_pot_voltage;
-    static double launch_angle_to_voltage(double);
+    static float launch_angle_to_voltage(float);
+    static float voltage_to_launch_angle(float);
 };
 
 #endif
