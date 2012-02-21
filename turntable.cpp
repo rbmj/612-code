@@ -8,7 +8,7 @@
 //a proportional constant
 const float TURNTABLE_MULTIPLIER = 1.0;
 const int TURNTABLE_TOLERANCE = 5; //px
-const float TURNTABLE_DEFPOWER = 0.5;
+const float TURNTABLE_DEFPOWER = 0.3;
 
 const bool RIGHT_POSITIVE = false;
 
@@ -137,5 +137,5 @@ void turntable::manual_control(float val) {
         val = -val;
     }
     centering = false;
-    power = coerce(val, -0.5f, 0.5f);
+    power = coerce(val, -0.3f, 0.3f);
 }
