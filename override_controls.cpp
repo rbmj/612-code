@@ -30,6 +30,7 @@
 #include "two_jags.h"
 #include "trajectory.h"
 #include "winch.h"
+#include "shooter.h"
 
 
 void do_turret_rotation();
@@ -42,19 +43,16 @@ void do_rollers();
 const int TURRET_ROTATION        = 1;
 const int BRIDGE_ARM_DOWN        = 8;
 const int BRIDGE_ARM_UP          = 9;
-const int WINCH_75               = 3;
-const int WINCH_UP               = 3;
-const int WINCH_80               = 2;
-const int WINCH_DOWN             = 2;
+const int WINCH_ADJUST           = 3;
 const int POT_VOLTAGE            = 10;
 const int LAUNCHER_WHEEL         = 4;
 const int ROLLERS_DOWN           = 6;
 const int ROLLERS_UP             = 7;
 
-launch_counter launch_wheel_counter(launcher_wheel);
-two_jags launch_wheel_jags(left_launcher_jag, right_launcher_jag);
-pid_controller launch_pid(0.005, 0.00, 0.002, &launch_wheel_counter, &launch_wheel_jags);
+
 winch winch_obj(turret_winch_jag, launch_angle_pot, launch_angle_switch);
+
+shooter launch_shooter(launcher_wheel, left_launcher_jag, right_launcher_jag);
 
 void gunner_override_controls() {
     do_turret_rotation();
@@ -67,21 +65,22 @@ void gunner_override_controls() {
 
 void do_turret_rotation() {
     //Turret rotation controlled by gunner joystick during drive state only. Must press button 1
+    //TODO: incorporate turntable.  Not finished and ready to release yet.
     if (gunner_joystick.GetRawButton(TURRET_ROTATION)) {
-        printf("turret ROTATE\n");
         turret_rotation_jag.Set(-gunner_joystick.GetX());
+    }
+    else {
+        turret_rotation_jag.Set(0.0);
     }
 }
 
 void do_bridge_arm() {
     if(gunner_joystick.GetRawButton(BRIDGE_ARM_UP)){//up
         if(!bridge_arm_switch.Get()){//limit switch not pressed
-            printf("bridge arm UP\n");
             bridge_arm_spike.Set(Relay::kForward);
         }
     }
     else if(gunner_joystick.GetRawButton(BRIDGE_ARM_DOWN)){//down
-        printf("bridge arm DOWN\n");
         bridge_arm_spike.Set(Relay::kReverse);
     }
     else {
@@ -89,38 +88,19 @@ void do_bridge_arm() {
     }
 }
 
-float winch_z = 0;
-bool angle_changed = false;
 void do_turret_winch() {
-/*    if(left_joystick.GetRawButton(WINCH_UP)) {
-        printf("winch UP\n");
-        turret_winch_jag.Set(-0.2);
-    }
-    else if(left_joystick.GetRawButton(WINCH_DOWN)) {
-        printf("winch DOWN\n");
-        turret_winch_jag.Set(0.2);
-    }
-    else {
-        turret_winch_jag.Set(0.0);
-    }*/
+    static float winch_z = 0.0;
+    static bool angle_changed = false;
     float new_winch_z = (-left_joystick.GetZ()+1)*22.5+45;
     if(new_winch_z != winch_z) {
         winch_z = new_winch_z;
         printf("winch (desired) angle: %f\n", new_winch_z);
         angle_changed = true;
     }
-    if(gunner_joystick.GetRawButton(WINCH_75)) {
-        printf("winch (desired) angle: 75\n");
-        winch_obj.disable();
-        winch_obj.set_angle(deg2rad(75));
-    }
-    else if(gunner_joystick.GetRawButton(WINCH_80)) {
-        if(angle_changed) {
-            printf("winch TURN\n");
-            winch_obj.disable();
-            winch_obj.set_angle(deg2rad(winch_z));
-            angle_changed = false;
-        }
+    if (gunner_joystick.GetRawButton(WINCH_ADJUST) && angle_changed) {
+        winch_obj.set_angle(deg2rad(winch_z));
+        winch_obj.enable();
+        angle_changed = false;
     }
 }
 
@@ -130,53 +110,32 @@ void show_pot_voltage() {
     }
 }
 
-bool setpoint_set = false;
-bool timer_started = false;
-float setpoint = 0;
-Timer timer;
-float prev_z = 0;
 void do_launcher_wheel() {
+    static float prev_z = 0.0;
+    static bool enabled = false;
     float new_z = (-gunner_joystick.GetZ()+1)*30+20;
     if (new_z != prev_z) {
         prev_z = new_z;
         printf("launcher rps: %f\n", new_z);
     }
-    if (gunner_joystick.GetRawButton(LAUNCHER_WHEEL) && !timer_started && !setpoint_set) {
-        printf("launcher wheel SPIN (%f rps)\n", prev_z);
-        timer.Start();
-        timer_started = true;
-        setpoint = prev_z;
-        launch_wheel_jags.Set(0.75);
-    }
-    else if (timer_started && timer.HasPeriodPassed(0.25)) {
-        timer.Stop();
-        launch_pid.SetSetpoint(setpoint);
-        launch_pid.Enable();
-        setpoint_set = true;
+    if (!enabled) {
+        if (gunner_joystick.GetRawButton(LAUNCHER_WHEEL)) {
+            enabled = true;
+            launch_shooter.set_freq(prev_z);
+            launch_shooter.enable();
+        }
     }
     else if (!gunner_joystick.GetRawButton(LAUNCHER_WHEEL)) {
-        if(setpoint_set) {
-            launch_pid.Disable();
-            setpoint_set = false;
-        }
-        if(timer_started) {
-            timer.Stop();
-            timer_started = false;
-        }
-        launch_wheel_jags.Set(-0.15);
-    }
-    if (timer_started || setpoint_set) {
-        printf("Launcher Wheel Speed: %f\n", 1/launcher_wheel.GetPeriod());
+        enabled = false;
+        launch_shooter.disable();
     }
 }
 
 void do_rollers() {
     if (gunner_joystick.GetRawButton(ROLLERS_UP)) {
-        printf("rollers UP\n");
         rollers.set_direction(roller_t::UP);
     }
     else if (gunner_joystick.GetRawButton(ROLLERS_DOWN)) {
-        printf("rollers DOWN\n");
         rollers.set_direction(roller_t::DOWN);
     }
     else {

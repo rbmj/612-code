@@ -5,7 +5,6 @@
 #include <AnalogChannel.h>
 #include <DigitalInput.h>
 #include "pid_controller.h"
-#include "winch_motor.h"
 
 class winch {
 public:

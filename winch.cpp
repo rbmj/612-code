@@ -3,7 +3,7 @@
 #include <AnalogChannel.h>
 #include <DigitalInput.h>
 #include "winch.h"
-#include "winch_motor.h"
+//#include "winch_motor.h"
 #include "update.h"
 
 const float WINCH_TOLERANCE = 0.025;
@@ -15,18 +15,15 @@ winch::winch(Jaguar& j, AnalogChannel& c, DigitalInput& l) {
     jag = &j;
     pot = &c;
     limit = &l;
+    //winch starts enabled by default, as winch should always be enabled and
+    //updating.
     enabled = true;
     desired_pot_voltage = pot->GetVoltage();
     registry().register_func(winch_update_helper, (void*)this);
-//    motor = new winch_motor(j, l);
-//    pid = new pid_controller(WINCH_P, WINCH_I, WINCH_D, pot, motor);
-//    pid->SetTolerance(WINCH_TOLERANCE);
-//    pot->SetAverageBits(2);
 }
 
 winch::~winch() {
-//    delete pid;
-//    delete motor;
+    //
 }
 
 double winch::launch_angle_to_voltage(double theta) {
@@ -37,19 +34,14 @@ double winch::launch_angle_to_voltage(double theta) {
 }
 
 void winch::enable() {
-//    pid->Enable();
-    printf("enabling\n");
     enabled = true;
 }
 
 void winch::disable() {
-//    pid->Disable();
-    printf("disabling\n");
     enabled = false;
 }
 
 bool winch::is_enabled() {
-//    return pid->IsEnabled();
     return enabled;
 }
 
@@ -58,7 +50,6 @@ void winch::set_angle(double theta) { // angle of launch in radians, not angle o
     if(theta < 0.77 || theta > 1.58) {
         return;
     }
-    enable();
     desired_pot_voltage = launch_angle_to_voltage(theta);
     printf("pot voltage: %f\n", desired_pot_voltage);
 //    pid->SetSetpoint(pot_voltage);
