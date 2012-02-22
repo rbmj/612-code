@@ -13,6 +13,9 @@ const double WHEEL_P = 0.005;
 const double WHEEL_I = 0.0;
 const double WHEEL_D = 0.002;
 const float WHEEL_TOLERANCE = 4.0; //percent
+const int MaxRps = 75;
+
+float FindMax(float);
 
 shooter::shooter(Counter& c, Jaguar& a, Jaguar& b) {
     jags = new two_jags(a, b);
@@ -59,15 +62,23 @@ void shooter::disable() {
     control->Disable();
 }
 
-double shooter::ballspeed_to_rps(double speed) {
-    //TODO: Implement.  Use high speed camera?
-    return speed;
+double shooter::ballspeed_to_rps(double speed,double Angle) {
+    float Max = FindMax(Angle);
+	float AmountNeeded = speed/Max;
+	return (AmountNeeded*MaxRps);
 }
 
-double shooter::rps_to_ballspeed(double rps) {
-    //TODO: Implement.  Inverse of the above
-    return rps;
+double shooter::rps_to_ballspeed(double rps,double Angle) {
+    float Max=FindMax(Angle);
+    float AmountUsed = rps/MaxRps;
+    return (AmountUsed*Max);
 }
+
+
+float FindMax(float Angle) {
+	return ((46.2215843991*Angle) - 24.8498231509);
+}
+
 
 void shooter::update_help(void * obj) {
     ((shooter*)obj)->update();
