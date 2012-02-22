@@ -31,8 +31,8 @@ private:
     bool arrived_at_speed;
     Timer launch_time;
     void update();
-    static double ballspeed_to_rps(double);
-    static double rps_to_ballspeed(double);
+    static double ballspeed_to_rps(double,double);
+    static double rps_to_ballspeed(double,double);
     static void update_help(void*);
 };
 
