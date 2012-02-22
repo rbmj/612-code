@@ -7,7 +7,7 @@
 #include "update.h"
 #include "trajectory.h"
 
-const float WINCH_TOLERANCE = 0.025;
+const float WINCH_TOLERANCE = 0.15;
 const float WINCH_SPEED = 0.2;
 
 void winch_update_helper(void*);
