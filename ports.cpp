@@ -40,6 +40,7 @@
 #include "roller.h"
 #include "shifter.h"
 #include "turret.h"
+#include "bridge_arm.h"
 
 //just define & initialize all of the consts in ports.h
 
@@ -145,6 +146,9 @@ turret shooter_turret(
     turret_limit_mid,
     turret_limit_right
 );
+
+//bridge_arm_t
+bridge_arm_t bridge_arm(bridge_arm_spike, bridge_arm_switch);
 
 //drive_jaguar                           JAGUAR&                 TYPE               REVERSE
 drive_jaguar left_front_motor  =    { left_front_jag,  RobotDrive::kFrontLeftMotor,  false };

@@ -7,7 +7,8 @@
 class launch_counter : public PIDSource {
 public:
     launch_counter(Counter&);
-    double PIDGet(); //get rate
+    double PIDGet();
+    double get_frequency();
 private:
     launch_counter() {}
     Counter * counter_obj;

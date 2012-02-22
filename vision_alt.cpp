@@ -59,10 +59,10 @@ const double robot_height = 31.0/12;
 #ifdef VISION_ALT_HEURISTIC
 //heights in feet:
 //TODO: add in the height to the center of the particle!
-target bottom_basket(   22.88/12 - robot_height );
-target midleft_basket(  55.88/12 - robot_height );
-target midright_basket( 55.88/12 - robot_height );
-target top_basket(      92.88/12 - robot_height );
+target bottom_basket(   28.0/12 - robot_height );
+target midleft_basket(  61.0/12 - robot_height );
+target midright_basket( 61.0/12 - robot_height );
+target top_basket(      98.0/12 - robot_height );
 #elif defined VISION_ALT_ADHOC
 const unsigned numtargets = 4;
 target target_arr[numtargets];

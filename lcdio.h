@@ -21,6 +21,7 @@ private:
     void update_set_angle(float);
     void update_cur_angle(float);
     void update_target_dx(float);
+    void update_target_dx_no_targets();
     void update_target_ok(bool, bool, bool, bool);
     void update_roller(direction);
     void update_bridge(direction);

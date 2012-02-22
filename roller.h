@@ -34,6 +34,7 @@ public:
     roller_t(Relay&, Relay&);
     ~roller_t();
     void set_direction(direction);
+    direction get_direction();
 private:
     Relay* spike1;
     Relay* spike2;

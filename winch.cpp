@@ -3,7 +3,6 @@
 #include <AnalogChannel.h>
 #include <DigitalInput.h>
 #include "winch.h"
-//#include "winch_motor.h"
 #include "update.h"
 #include "trajectory.h"
 
@@ -27,15 +26,15 @@ winch::~winch() {
     //
 }
 
-double winch::launch_angle_to_voltage(double theta) {
+float winch::launch_angle_to_voltage(float theta) {
     //takes an angle in radians and converts it to a voltage.
     //note that the angle starts at pi/2 and decreases to pi/4
     return (-0.9493487159 * theta) + 3.9019452071;
 }
 
-double winch::voltage_to_launch_angle(double voltage) {
-    double radians = (-1.0466681558 * voltage) + 4.0902451845;
-    return rad2deg(radians);
+float winch::voltage_to_launch_angle(float voltage) {
+    //the inverse of the above
+    return (-1.05335 * voltage) + 4.11013;
 }
 
 void winch::enable() {
@@ -47,18 +46,24 @@ void winch::disable() {
     enabled = false;
 }
 
-bool winch::is_enabled() {
+bool winch::is_enabled() const {
     return enabled;
 }
 
-void winch::set_angle(double theta) { // angle of launch in radians, not angle of winch
-    printf("theta: %f\n", theta);
+void winch::set_angle(float theta) { // angle of launch in radians, not angle of winch
     if(theta < 0.77 || theta > 1.58) {
         return;
     }
     desired_pot_voltage = launch_angle_to_voltage(theta);
-    printf("pot voltage: %f\n", desired_pot_voltage);
-//    pid->SetSetpoint(pot_voltage);
+    desired_angle = theta;
+}
+
+float winch::get_set_angle() const {
+    return desired_angle;
+}
+
+float winch::get_cur_angle() const {
+    return voltage_to_launch_angle(pot->GetVoltage());
 }
 
 void winch::manual_control(direction_t direction) {

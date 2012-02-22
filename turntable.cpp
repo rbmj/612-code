@@ -139,3 +139,11 @@ void turntable::manual_control(float val) {
     centering = false;
     power = coerce(val, -0.3f, 0.3f);
 }
+
+float turntable::get_power() const {
+    float ret = power;
+    if (!RIGHT_POSITIVE) {
+        ret = -ret;
+    }
+    return ret;
+}

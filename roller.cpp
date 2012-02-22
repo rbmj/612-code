@@ -56,3 +56,7 @@ void roller_t::update() {
 void roller_t::set_direction(direction d) {
     m_direction = (unsigned char) d;
 }
+
+roller_t::direction roller_t::get_direction() {
+    return ((roller_t::direction)m_direction);
+}
