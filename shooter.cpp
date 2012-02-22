@@ -74,11 +74,9 @@ double shooter::rps_to_ballspeed(double rps,double Angle) {
     return (AmountUsed*Max);
 }
 
-
 float FindMax(float Angle) {
 	return ((46.2215843991*Angle) - 24.8498231509);
 }
-
 
 void shooter::update_help(void * obj) {
     ((shooter*)obj)->update();
