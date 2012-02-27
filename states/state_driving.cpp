@@ -29,7 +29,7 @@ const int ARCADE_DRIVE = 1;
 const int SHIFT_HIGH_L = 6;
 const int SHIFT_LOW_L  = 7;
 const int SHIFT_HIGH_R = 11;
-const int SHIFT_LOW_R  = 10
+const int SHIFT_LOW_R  = 10;
 const int SHOOT        = 5;
 
 void do_driving();
