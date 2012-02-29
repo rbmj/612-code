@@ -26,8 +26,10 @@
 #include "../state_tracker.h"
 
 const int ARCADE_DRIVE = 1;
-const int SHIFT_HIGH   = 11;
-const int SHIFT_LOW    = 10;
+const int SHIFT_HIGH_L = 6;
+const int SHIFT_LOW_L  = 7;
+const int SHIFT_HIGH_R = 11;
+const int SHIFT_LOW_R  = 10;
 const int SHOOT        = 5;
 
 void do_driving();
@@ -55,11 +57,11 @@ void do_driving() {
 }
 
 void do_shifting() {
-    if (right_joystick.GetRawButton(SHIFT_HIGH) || left_joystick.GetRawButton(SHIFT_HIGH)) {
+    if (right_joystick.GetRawButton(SHIFT_HIGH_R) || left_joystick.GetRawButton(SHIFT_HIGH_L)) {
         // set servo to high gear
         servo_shifter.set(shifter::HIGH);
     }
-    else if (left_joystick.GetRawButton(SHIFT_LOW) || right_joystick.GetRawButton(SHIFT_LOW)) {
+    else if (left_joystick.GetRawButton(SHIFT_LOW_L) || right_joystick.GetRawButton(SHIFT_LOW_R)) {
         // set servo to low gear
         servo_shifter.set(shifter::LOW);
     }

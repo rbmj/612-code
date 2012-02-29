@@ -36,26 +36,20 @@
 void do_turret_rotation();
 void do_bridge_arm();
 void do_turret_winch();
-void show_pot_voltage();
 void do_launcher_wheel();
 void do_rollers();
 
 const int TURRET_ROTATION        = 1;
-const int BRIDGE_ARM_DOWN        = 8;
-const int BRIDGE_ARM_UP          = 9;
-const int WINCH_ADJUST           = 3;
-const int WINCH_UP               = 3;
-const int WINCH_DOWN             = 2;
-const int POT_VOLTAGE            = 10;
 const int LAUNCHER_WHEEL         = 4;
 const int ROLLERS_DOWN           = 6;
 const int ROLLERS_UP             = 7;
+const int BRIDGE_ARM_DOWN        = 8;
+const int BRIDGE_ARM_UP          = 9;
 
 void gunner_override_controls() {
     do_turret_rotation();
     do_bridge_arm();
     do_turret_winch();
-    show_pot_voltage();
     do_launcher_wheel();
     do_rollers();
 }
@@ -83,7 +77,7 @@ void do_bridge_arm() {
 
 void do_turret_winch() {
     static float winch_z = 0.0;
-    static bool angle_changed = false;
+/*
     if(gunner_joystick.GetRawButton(WINCH_UP)) {
         shooter_turret.Winch().disable();
         shooter_turret.Winch().manual_control(winch::UP);
@@ -96,21 +90,11 @@ void do_turret_winch() {
         shooter_turret.Winch().manual_control(winch::OFF);
         shooter_turret.Winch().enable();
     }
+*/
     float new_winch_z = (-left_joystick.GetZ()+1)*22.5+45;
     if(new_winch_z != winch_z) {
         winch_z = new_winch_z;
-        printf("winch (desired) angle: %f\n", new_winch_z);
-        angle_changed = true;
-    }
-    if (gunner_joystick.GetRawButton(WINCH_ADJUST) && angle_changed) {
         shooter_turret.Winch().set_angle(deg2rad(winch_z));
-        angle_changed = false;
-    }
-}
-
-void show_pot_voltage() {
-    if(gunner_joystick.GetRawButton(POT_VOLTAGE)) {
-        printf("pot voltage: %f\n", launch_angle_pot.GetVoltage());
     }
 }
 
@@ -120,12 +104,11 @@ void do_launcher_wheel() {
     float new_z = (-gunner_joystick.GetZ()+1)*30+20;
     if (new_z != prev_z) {
         prev_z = new_z;
-        printf("launcher rps: %f\n", new_z);
+        shooter_turret.Shooter().set_freq(new_z);
     }
     if (!enabled) {
         if (gunner_joystick.GetRawButton(LAUNCHER_WHEEL)) {
             enabled = true;
-            shooter_turret.Shooter().set_freq(prev_z);
             shooter_turret.Shooter().enable();
         }
     }
