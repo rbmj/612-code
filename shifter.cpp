@@ -30,10 +30,10 @@ void shifter::update() {
             servoval = &klowgear;
             break;
         case HIGH:
-            servoval = &kneutral;
+            servoval = &khighgear;
             break;
         case NEUTRAL:
-            servoval = &khighgear;
+            servoval = &kneutral;
             break;
     }
     shift1->Set(*servoval);
