@@ -41,8 +41,8 @@ shooter::~shooter() {
     registry().unregister_func(shooter::update_help, (void*)this);
 }
 
-void shooter::set_speed(double s) {
-    setpoint = ballspeed_to_rps(s);
+void shooter::set_speed(double s, double a) {
+    setpoint = ballspeed_to_rps(s, a);
 }
 
 void shooter::set_freq(double s) {
@@ -60,6 +60,10 @@ void shooter::disable() {
     arrived_at_speed = false;
     launch_time.Stop();
     control->Disable();
+}
+
+bool shooter::at_setpoint() {
+    return control->OnTarget();
 }
 
 double shooter::ballspeed_to_rps(double speed,double Angle) {
@@ -111,16 +115,16 @@ void shooter::update() {
     }
 }
 
-double shooter::get_cur_speed() const {
-    return rps_to_ballspeed(speed->get_frequency());
+double shooter::get_cur_speed(double a) const {
+    return rps_to_ballspeed(speed->get_frequency(), a);
 }
 
 double shooter::get_cur_freq() const {
     return speed->get_frequency();
 }
 
-double shooter::get_set_speed() const {
-    return rps_to_ballspeed(setpoint);
+double shooter::get_set_speed(double a) const {
+    return rps_to_ballspeed(setpoint, a);
 }
 
 double shooter::get_set_freq() const {

@@ -11,14 +11,17 @@ class shooter {
 public:
     shooter(Counter&, Jaguar&, Jaguar&);
     ~shooter();
-    void set_speed(double);
+    void set_speed(double, double);
     void set_freq(double);
-    double get_cur_speed() const;
+    double get_cur_speed(double) const;
     double get_cur_freq() const;
-    double get_set_speed() const;
+    double get_set_speed(double) const;
     double get_set_freq() const;
     void enable();
     void disable();
+    static double ballspeed_to_rps(double,double);
+    static double rps_to_ballspeed(double,double);
+    bool at_setpoint();
 private:
     shooter() {}
     pid_controller * control;
@@ -31,8 +34,6 @@ private:
     bool arrived_at_speed;
     Timer launch_time;
     void update();
-    static double ballspeed_to_rps(double,double);
-    static double rps_to_ballspeed(double,double);
     static void update_help(void*);
 };
 

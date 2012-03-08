@@ -22,6 +22,21 @@
 #ifndef INC_OVERRIDE_CONTROLS_H_INC
 #define INC_OVERRIDE_CONTROLS_H_INC
 
-void gunner_override_controls();
+#include "buttons.h"
+
+extern const int TURRET_ROTATION;
+extern const int SHOOT_SPIN;
+extern const int ACQUIRE_TARGET;
+extern const int SHOOT_KEY;
+extern const int SHOOT_FENDER;
+extern const int ROLLERS_DOWN;
+extern const int ROLLERS_UP;
+extern const int WINCH_OVERRIDE;
+extern const int SHOOTER_OVERRIDE;
+extern const int BRIDGE_ARM_DOWN;
+extern const int BRIDGE_ARM_UP;
+
+
+void gunner_override_controls(const buttons&);
 
 #endif

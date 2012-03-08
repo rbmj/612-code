@@ -24,6 +24,8 @@
 
 #include "612.h"
 
+//TODO: Update HSI/HSV Ranges
+
 // ==== HSV ====
 
 const range_t HSV_HMIN =  72;
@@ -48,14 +50,14 @@ const range_t HSI_IMAX = 241;
 
 // ==== HSL ====
 
-const range_t HSL_HMIN =  83;//080;
-const range_t HSL_HMAX = 129;//116;
+const range_t HSL_HMIN = 0;//080;
+const range_t HSL_HMAX = 145;//116;
 
-const range_t HSL_SMIN =  50;//075;
-const range_t HSL_SMAX = 255;//255;
+const range_t HSL_SMIN =  0;//075;
+const range_t HSL_SMAX = 75;//255;
 
-const range_t HSL_LMIN =  92;//131;
-const range_t HSL_LMAX = 246;//199;
+const range_t HSL_LMIN = 230;//131;
+const range_t HSL_LMAX = 255;//199;
 
 enum COLOR_MODE_T {
     HSL,
@@ -67,7 +69,7 @@ enum COLOR_MODE_T {
 const COLOR_MODE_T COLOR_MODE = HSL;
 
 //configure the particle
-const int PARTICLE_AREA_MIN = 100;
+const int PARTICLE_AREA_MIN = 800; //for 640x480 px
 const int PARTICLE_AREA_MAX = 50000;
 
 #endif // INC_RANGES_H

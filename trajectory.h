@@ -30,7 +30,8 @@ struct trajectory {
 };
 
 const double DEFAULT_ENTRYANGLE = 1.04719755; //60 degrees
-const double DEFAULT_LAUNCHSPEED = 0.0;
+const double DEFAULT_ENTRYANGLE_BACKBOARD = 0.261799388; //15 degrees
+const double DEFAULT_LAUNCHSPEED = 25.0;
 const double ACC_G = 32.17;
 
 trajectory calculate_trajectory_entryangle(const target&, double, double = ACC_G);

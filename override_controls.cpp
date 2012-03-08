@@ -23,39 +23,107 @@
 #include <Timer.h>
 #include "612.h"
 #include "vision/vision_processing.h"
+#include "override_controls.h"
 #include "ports.h"
 #include "visionalg.h"
+#include "vision_alt.h"
 #include "launch_counter.h"
 #include "pid_controller.h"
 #include "two_jags.h"
 #include "trajectory.h"
 #include "winch.h"
 #include "shooter.h"
+#include "buttons.h"
+#include "vision_thread.h"
 
+target KEY_TARGET = target::make_target(((98.0 + 11.0)/12) - robot_height, 12.0, 0);
+target FENDER_TARGET = target::make_target(((98.0 + 11.0) / 12) - robot_height, 38.5/12, 0);
 
-void do_turret_rotation();
-void do_bridge_arm();
-void do_turret_winch();
-void do_launcher_wheel();
-void do_rollers();
+trajectory KEY_TRAJECTORY = calculate_trajectory_entryangle(KEY_TARGET, DEFAULT_ENTRYANGLE_BACKBOARD);
+trajectory FENDER_TRAJECTORY = calculate_trajectory_entryangle(FENDER_TARGET, DEFAULT_ENTRYANGLE_BACKBOARD);
+
+trajectory cur_trajectory;
+
+void do_turret_rotation(const buttons&);
+void do_bridge_arm(const buttons&);
+void do_turret_winch(const buttons&);
+void do_launcher_wheel(const buttons&);
+void do_rollers(const buttons&);
 
 const int TURRET_ROTATION        = 1;
-const int LAUNCHER_WHEEL         = 4;
+const int SHOOT_SPIN             = 2;
+const int ACQUIRE_TARGET         = 3;
+const int SHOOT_KEY              = 4;
+const int SHOOT_FENDER           = 5;
 const int ROLLERS_DOWN           = 6;
 const int ROLLERS_UP             = 7;
-const int BRIDGE_ARM_DOWN        = 8;
-const int BRIDGE_ARM_UP          = 9;
+const int WINCH_OVERRIDE         = 8;
+const int SHOOTER_OVERRIDE       = 9;
+const int BRIDGE_ARM_DOWN        = 10;
+const int BRIDGE_ARM_UP          = 11;
 
-void gunner_override_controls() {
-    do_turret_rotation();
-    do_bridge_arm();
-    do_turret_winch();
-    do_launcher_wheel();
-    do_rollers();
+void gunner_override_controls(const buttons& joy) {
+    if (joy.GetRawButton(ACQUIRE_TARGET)) {
+        vision_targets& ts = get_targets();
+        target * t;
+#ifdef VISION_ALT_ADHOC
+        //adhoc
+        std::vector<target> t_vec = ts.targets();
+        t = NULL;
+        for (unsigned i = 0; i < numtargets && t_vec[i].valid(); i++) {
+            if (t) {
+                if (t_vec[i].height() > t->height())) {
+                    t = &(t_vec[i]);
+                }
+            }
+            else {
+                t = &(t_vec[i]);
+            }
+        }
+#else
+        //heuristic
+        if (ts.top().valid()) {
+            t = &(ts.top());
+        }
+        else if (ts.left().valid()) {
+            t = &(ts.left());
+        }
+        else if (ts.right().valid()) {
+            t = &(ts.right());
+        }
+        else if (ts.bottom().valid()) {
+            t = &(ts.bottom());
+        }
+        else {
+            t = NULL;
+        }
+#endif
+        bool have_trajectory = false;
+        if (t) {
+            //have target
+            cur_trajectory = calculate_trajectory_entryangle(*t, DEFAULT_ENTRYANGLE_BACKBOARD);
+            if (cur_trajectory.velocity > shooter::rps_to_ballspeed(75.0, cur_trajectory.angle)) {
+                //unable to do - fallback
+                cur_trajectory = calculate_trajectory_launchspeed(*t, DEFAULT_LAUNCHSPEED);
+                if (cur_trajectory.velocity == 0.0) {
+                    //really unable to do
+                }
+            }
+        }
+        else {
+            cur_trajectory.velocity = 0.0;
+            cur_trajectory.angle = 0.0;
+        }
+    }
+    do_turret_rotation(joy);
+    do_bridge_arm(joy);
+    do_turret_winch(joy);
+    do_launcher_wheel(joy);
+    do_rollers(joy);
 }
 
-void do_turret_rotation() {
-    if (gunner_joystick.GetRawButton(TURRET_ROTATION)) {
+void do_turret_rotation(const buttons& joy) {
+    if (joy.GetRawButton(TURRET_ROTATION)) {
         shooter_turret.Susan().manual_control(gunner_joystick.GetX());
     }
     else {
@@ -63,11 +131,11 @@ void do_turret_rotation() {
     }
 }
 
-void do_bridge_arm() {
-    if(gunner_joystick.GetRawButton(BRIDGE_ARM_UP)){//up
+void do_bridge_arm(const buttons& joy) {
+    if(joy.GetRawButton(BRIDGE_ARM_UP)){//up
         bridge_arm.set_direction(bridge_arm_t::UP);
     }
-    else if(gunner_joystick.GetRawButton(BRIDGE_ARM_DOWN)){//down
+    else if(joy.GetRawButton(BRIDGE_ARM_DOWN)){//down
         bridge_arm.set_direction(bridge_arm_t::DOWN);
     }
     else {
@@ -75,7 +143,7 @@ void do_bridge_arm() {
     }
 }
 
-void do_turret_winch() {
+void do_turret_winch(const buttons& joy) {
     static float winch_z = 0.0;
 /*
     if(gunner_joystick.GetRawButton(WINCH_UP)) {
@@ -91,38 +159,66 @@ void do_turret_winch() {
         shooter_turret.Winch().enable();
     }
 */
-    float new_winch_z = (-left_joystick.GetZ()+1)*22.5+45;
+    float new_winch_z = winch_z;
+    if (joy.GetRawButton(SHOOT_KEY)) {
+        new_winch_z = KEY_TRAJECTORY.angle;
+    }
+    else if (joy.GetRawButton(SHOOT_FENDER)) {
+        new_winch_z = FENDER_TRAJECTORY.angle;
+    }
+    else if (joy.GetRawButton(WINCH_OVERRIDE)) {
+        new_winch_z = deg2rad((-left_joystick.GetZ()+1)*22.5+45);
+    }
+    else if (joy.GetRawButton(ACQUIRE_TARGET)) {
+        if (cur_trajectory.velocity != 0) {
+            new_winch_z = cur_trajectory.angle;
+        }
+    }
     if(new_winch_z != winch_z) {
         winch_z = new_winch_z;
-        shooter_turret.Winch().set_angle(deg2rad(winch_z));
+        shooter_turret.Winch().set_angle(winch_z);
     }
 }
 
-void do_launcher_wheel() {
-    static float prev_z = 0.0;
+void do_launcher_wheel(const buttons& joy) {
+    static float shoot_freq = 0.0;
     static bool enabled = false;
-    float new_z = (-gunner_joystick.GetZ()+1)*30+20;
-    if (new_z != prev_z) {
-        prev_z = new_z;
-        shooter_turret.Shooter().set_freq(new_z);
+    float new_shoot_freq = shoot_freq;
+    if (joy.GetRawButton(SHOOT_KEY)) {
+        new_shoot_freq = shooter::ballspeed_to_rps(KEY_TRAJECTORY.velocity, KEY_TRAJECTORY.angle);
+    }
+    else if (joy.GetRawButton(SHOOT_FENDER)) {
+        new_shoot_freq = shooter::ballspeed_to_rps(FENDER_TRAJECTORY.velocity, FENDER_TRAJECTORY.angle);
+    }
+    else if (joy.GetRawButton(SHOOTER_OVERRIDE)) {
+        new_shoot_freq = (-gunner_joystick.GetZ()+1)*30+20;
+    }
+    else if (joy.GetRawButton(ACQUIRE_TARGET)) {
+        if (cur_trajectory.velocity != 0.0) {
+            new_shoot_freq = shooter::ballspeed_to_rps(cur_trajectory.velocity, cur_trajectory.angle);
+        }
+    }
+    if (new_shoot_freq != shoot_freq) {
+        shoot_freq = new_shoot_freq;
+        shooter_turret.Shooter().set_freq(shoot_freq);
     }
     if (!enabled) {
-        if (gunner_joystick.GetRawButton(LAUNCHER_WHEEL)) {
+        if (joy.GetRawButton(SHOOT_SPIN)) {
             enabled = true;
             shooter_turret.Shooter().enable();
         }
     }
-    else if (!gunner_joystick.GetRawButton(LAUNCHER_WHEEL)) {
+    else if (!joy.GetRawButton(SHOOT_SPIN)) {
         enabled = false;
         shooter_turret.Shooter().disable();
     }
 }
 
-void do_rollers() {
-    if (gunner_joystick.GetRawButton(ROLLERS_UP)) {
+void do_rollers(const buttons& joy) {
+    if (joy.GetRawButton(ROLLERS_UP)) {
         rollers.set_direction(roller_t::UP);
     }
-    else if (gunner_joystick.GetRawButton(ROLLERS_DOWN)) {
+    else if (joy.GetRawButton(ROLLERS_DOWN)) {
         rollers.set_direction(roller_t::DOWN);
     }
     else {

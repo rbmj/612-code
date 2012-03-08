@@ -68,13 +68,6 @@ const unsigned numtargets = 4;
 target target_arr[numtargets];
 #endif
 
-//Threshold objects
-Threshold HSL_THOLD(HSL_HMIN, HSL_HMAX, HSL_SMIN, HSL_SMAX, HSL_LMIN, HSL_LMAX);
-Threshold HSI_THOLD(HSI_HMIN, HSI_HMAX, HSI_SMIN, HSI_SMAX, HSI_IMIN, HSI_IMAX);
-Threshold HSV_THOLD(HSV_HMIN, HSV_HMAX, HSV_SMIN, HSV_SMAX, HSV_VMIN, HSV_VMAX);
-
-HSLImage target::image; //The only non-rgb raw image type available
-
 void output_debug_info_target(const char * n, const target& t) {
     if (t.valid()) {
         std::printf("Target %s found:\n"
@@ -102,85 +95,118 @@ void output_debug_info() {
 #endif
 }
 
-/* update logic: */
-
-void target::update_targets(void * ignored) {
-#if DEBUG_612
-    Timer process_time;
-    process_time.Start();
-#endif
-    if (!camera().IsFreshImage()) {
-        return; //no new image for us to process
-    }
-    if (!camera().GetImage(&image)) {
-        perror_612("Cannot Recieve Image From Camera");
-        return;
-    }
-    BinaryImage * result = NULL;
-    if (COLOR_MODE == HSL) {
-        result = image.ThresholdHSL(HSL_THOLD);
-    }
-    else if (COLOR_MODE == HSI) {
-        result = image.ThresholdHSI(HSI_THOLD);
-    }
-    else if (COLOR_MODE == HSV) {
-        result = image.ThresholdHSV(HSV_THOLD);
-    }
-    else {
-        //color mode undefined.  Fall back to HSL
-        result = image.ThresholdHSL(HSL_THOLD);
-        perror_612("Invalid Color Mode - Falling Back to HSL");
-    }
-    if (!result) {
-        //we have issues
-        perror_612("Threshold Unsuccessful");
-        return;
-    }
-    report_vector * reports = result->GetOrderedParticleAnalysisReports();
-    if (!reports) {
-        //particle analysis failed. shouldn't happen, but free memory and quit.
-        delete result;
-        return;
-    }
-    //done with the binary image, can return that memory
-    delete result; //TODO: may be more efficient if we can allocate one binary
-                   //image and call imaqColorThreshold.  leaving as is now
-                   //cause it's prettier this way and POITROAE.
-    if (reports->size() > 4) { //more than four elements
-        reports->resize(4); //drop extra elements - get four biggest
-    }
-    //filter particles according to size
-    while (reports->size() && reports->back().particleArea > (double)PARTICLE_AREA_MIN) {
-        reports->pop_back();
-    }
 #ifdef VISION_ALT_HEURISTIC
-    //identify target_arr, and update the values there
-    id_and_process(reports);
-#elif defined VISION_ALT_ADHOC
-    //give each target a particle :)
-    if (numtargets < reports->size()) {
-        //should NEVER be true
-        for (unsigned i = 0; i < numtargets; i++) {
-            target_arr[i].update_data_with_report(reports->at(i));
+
+void target::id_two_targets(report_vector * reports) {
+    //guess that it's bottom basket and one side.
+    //TODO: Probably should be a little more intelligent about this too
+    
+    if (reports->front().center_mass_y > reports->back().center_mass_y) {
+        //front() is bottom basket
+        bottom_basket.update_data_with_report(reports->front());
+        if (reports->front().center_mass_x < reports->back().center_mass_x) {
+            //back() is mid-right basket
+            midright_basket.update_data_with_report(reports->back());
+        }
+        else {
+            //back() is mid-left basket
+            midleft_basket.update_data_with_report(reports->back());
         }
     }
     else {
-        for (unsigned i = 0; i < reports->size(); i++) {
-            target_arr[i].update_data_with_report(reports->at(i));
+        //back() is bottom basket
+        bottom_basket.update_data_with_report(reports->back());
+        if (reports->front().center_mass_x < reports->back().center_mass_x) {
+            //front() is mid-left basket
+            midleft_basket.update_data_with_report(reports->front());
         }
-        for (unsigned i = reports->size(); i < numtargets; i++) {
-            target_arr[i].m_valid = false;
+        else {
+            //front() is mid-right basket
+            midright_basket.update_data_with_report(reports->back());
         }
     }
-#endif
-    delete reports; //free vector
-#if DEBUG_612
-    output_debug_info();
-    std::printf("Processing took %f sec\n", process_time.Get());
-#endif
 }
 
-#ifdef VISION_ALT_HEURISTIC
+void target::id_four_targets(report_vector * reports) {
+    //all baskets on screen.
+    //pick lowest for bottom, highest for top, furthest left for midleft,
+    //and the last on is midright.
+    report_vector::iterator chosen;
+    double cmpval = 0.0; //further up than everything
+    //find bottom
+    for (report_vector::iterator i = reports->begin(); i < reports->end(); ++i) {
+        if (i->center_mass_y > cmpval) {
+            chosen = i;
+        }
+    }
+    bottom_basket.update_data_with_report(*chosen);
+    reports->erase(chosen);
+    //find top
+    cmpval = (double)RESOLUTION().Y(); //further down than everything
+    for (report_vector::iterator i = reports->begin(); i < reports->end(); ++i) {
+        if (i->center_mass_y < cmpval) {
+            chosen = i;
+        }
+    }
+    top_basket.update_data_with_report(*chosen);
+    reports->erase(chosen);
+    //find left
+    cmpval = (double)RESOLUTION().X();
+    for (report_vector::iterator i = reports->begin(); i < reports->end(); ++i) {
+        if (i->center_mass_x < cmpval) {
+            chosen = i;
+        }
+    }
+    midleft_basket.update_data_with_report(*chosen);
+    reports->erase(chosen);
+    //should only be one element left in vector
+    //right
+    midright_basket.update_data_with_report(*(reports->begin()));
+}
+
+void target::id_three_targets(report_vector * reports) {
+    //three on screen.  Check if a line through two of the baskets is approx
+    //parallel to an axis.  If it's the x axis, they're the mid-level
+    //baskets.  If it's the y axis, they're the top/bottom baskets
+        
+    int x0_1, x1_2, x0_2;
+    x0_1 = std::abs(reports->at(0).center_mass_x - reports->at(1).center_mass_x);
+    x1_2 = std::abs(reports->at(1).center_mass_x - reports->at(2).center_mass_x);
+    x0_2 = std::abs(reports->at(0).center_mass_x - reports->at(2).center_mass_x);
+    
+    int y0_1, y1_2, y0_2;
+    y0_1 = std::abs(reports->at(0).center_mass_y - reports->at(1).center_mass_y);
+    y1_2 = std::abs(reports->at(1).center_mass_y - reports->at(2).center_mass_y);
+    y0_2 = std::abs(reports->at(0).center_mass_y - reports->at(2).center_mass_y);
+    
+    int xmin = std::min(std::min(x0_1, x0_2), x1_2);
+    int ymin = std::min(std::min(y0_1, y0_2), x1_2);
+    
+    if (xmin < ymin) {
+        //vertically aligned, therefore two of them are top and bottom
+        if (xmin == x0_1) {
+            three_targets_alignx(reports->at(0), reports->at(1), reports->at(2));
+        }
+        else if (xmin == x0_2) {
+            three_targets_alignx(reports->at(0), reports->at(2), reports->at(1));
+        }
+        else if (xmin == x1_2) {
+            three_targets_alignx(reports->at(1), reports->at(2), reports->at(0));
+        }
+    }
+    else {
+        //horizontally aligned, therefore two of them are left and right
+        if (ymin == y0_1) {
+            three_targets_aligny(reports->at(0), reports->at(1), reports->at(2));
+        }
+        else if (ymin == y0_2) {
+            three_targets_aligny(reports->at(0), reports->at(2), reports->at(1));
+        }
+        else if (ymin == y1_2) {
+            three_targets_aligny(reports->at(1), reports->at(2), reports->at(0));
+        }
+    }
+}
 
 void target::three_targets_alignx(const ParticleAnalysisReport& aligna,
                                   const ParticleAnalysisReport& alignb,
@@ -232,7 +258,10 @@ void target::three_targets_aligny(const ParticleAnalysisReport& aligna,
     }
 }
 
+#endif
+
 void target::id_and_process(report_vector * reports) {
+#ifdef VISION_ALT_HEURISTIC
     //set all valid flags to false for now.  Call update_data_with_report()
     //to make it valid later.
     bottom_basket.m_valid = false;
@@ -244,126 +273,42 @@ void target::id_and_process(report_vector * reports) {
         //no particles
     }
     else if (reports->size() == 1) {
-        //guess bottom basket
+        //guess top basket so we'll shoot at something known
         //TODO: Probably should be a little more intelligent about this
         //check based on position in image? esp y pos cause that doesn't change
         top_basket.update_data_with_report(reports->front());
     }
     else if (reports->size() == 2) {
-        //guess that it's bottom basket and one side.
-        //TODO: Probably should be a little more intelligent about this too
-        
-        if (reports->front().center_mass_y > reports->back().center_mass_y) {
-            //front() is bottom basket
-            bottom_basket.update_data_with_report(reports->front());
-            if (reports->front().center_mass_x < reports->back().center_mass_x) {
-                //back() is mid-right basket
-                midright_basket.update_data_with_report(reports->back());
-            }
-            else {
-                //back() is mid-left basket
-                midleft_basket.update_data_with_report(reports->back());
-            }
-        }
-        else {
-            //back() is bottom basket
-            bottom_basket.update_data_with_report(reports->back());
-            if (reports->front().center_mass_x < reports->back().center_mass_x) {
-                //front() is mid-left basket
-                midleft_basket.update_data_with_report(reports->front());
-            }
-            else {
-                //front() is mid-right basket
-                midright_basket.update_data_with_report(reports->back());
-            }
-        }
+        id_two_targets(reports);
     }
     else if (reports->size() == 3) {
-        //three on screen.  Check if a line through two of the baskets is approx
-        //parallel to an axis.  If it's the x axis, they're the mid-level
-        //baskets.  If it's the y axis, they're the top/bottom baskets
-        
-        int x0_1, x1_2, x0_2;
-        x0_1 = std::abs(reports->at(0).center_mass_x - reports->at(1).center_mass_x);
-        x1_2 = std::abs(reports->at(1).center_mass_x - reports->at(2).center_mass_x);
-        x0_2 = std::abs(reports->at(0).center_mass_x - reports->at(2).center_mass_x);
-        
-        int y0_1, y1_2, y0_2;
-        y0_1 = std::abs(reports->at(0).center_mass_y - reports->at(1).center_mass_y);
-        y1_2 = std::abs(reports->at(1).center_mass_y - reports->at(2).center_mass_y);
-        y0_2 = std::abs(reports->at(0).center_mass_y - reports->at(2).center_mass_y);
-        
-        int xmin = std::min(std::min(x0_1, x0_2), x1_2);
-        int ymin = std::min(std::min(y0_1, y0_2), x1_2);
-        
-        if (xmin < ymin) {
-            //vertically aligned, therefore two of them are top and bottom
-            if (xmin == x0_1) {
-                three_targets_alignx(reports->at(0), reports->at(1), reports->at(2));
-            }
-            else if (xmin == x0_2) {
-                three_targets_alignx(reports->at(0), reports->at(2), reports->at(1));
-            }
-            else if (xmin == x1_2) {
-                three_targets_alignx(reports->at(1), reports->at(2), reports->at(0));
-            }
-        }
-        else {
-            //horizontally aligned, therefore two of them are left and right
-            if (ymin == y0_1) {
-                three_targets_aligny(reports->at(0), reports->at(1), reports->at(2));
-            }
-            else if (ymin == y0_2) {
-                three_targets_aligny(reports->at(0), reports->at(2), reports->at(1));
-            }
-            else if (ymin == y1_2) {
-                three_targets_aligny(reports->at(1), reports->at(2), reports->at(0));
-            }
-        }
+        id_three_targets(reports);
     }
     else if (reports->size() == 4) {
-        //all baskets on screen.
-        //pick lowest for bottom, highest for top, furthest left for midleft,
-        //and the last on is midright.
-        report_vector::iterator chosen;
-        double cmpval = 0.0; //further up than everything
-        //find bottom
-        for (report_vector::iterator i = reports->begin(); i < reports->end(); ++i) {
-            if (i->center_mass_y > cmpval) {
-                chosen = i;
-            }
-        }
-        bottom_basket.update_data_with_report(*chosen);
-        reports->erase(chosen);
-        //find top
-        cmpval = (double)RESOLUTION().Y(); //further down than everything
-        for (report_vector::iterator i = reports->begin(); i < reports->end(); ++i) {
-            if (i->center_mass_y < cmpval) {
-                chosen = i;
-            }
-        }
-        top_basket.update_data_with_report(*chosen);
-        reports->erase(chosen);
-        //find left
-        cmpval = (double)RESOLUTION().X();
-        for (report_vector::iterator i = reports->begin(); i < reports->end(); ++i) {
-            if (i->center_mass_x < cmpval) {
-                chosen = i;
-            }
-        }
-        midleft_basket.update_data_with_report(*chosen);
-        reports->erase(chosen);
-        //should only be one element left in vector
-        //right
-        midright_basket.update_data_with_report(*(reports->begin()));
+        id_four_targets(reports);
     }
     else {
         //shouldn't happen
         perror_612("Too Many Particles.  Aborting.");
-    }  
-}
-
+    }
+#else
+    //give each target a particle :)
+    if (numtargets < reports->size()) {
+        //should NEVER be true
+        for (unsigned i = 0; i < numtargets; i++) {
+            target_arr[i].update_data_with_report(reports->at(i));
+        }
+    }
+    else {
+        for (unsigned i = 0; i < reports->size(); i++) {
+            target_arr[i].update_data_with_report(reports->at(i));
+        }
+        for (unsigned i = reports->size(); i < numtargets; i++) {
+            target_arr[i].m_valid = false;
+        }
+    }
 #endif
+}
 
 /*
  * Distance - given COM_Y of the backboard

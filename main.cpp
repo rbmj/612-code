@@ -31,6 +31,7 @@
 #include "two_jags.h"
 #include "visionalg.h"
 #include "override_controls.h"
+#include "vision_alt.h"
 #include "states/state_shooting.h"
 #include "states/state_driving.h"
 
@@ -55,15 +56,18 @@ void robot_class::RobotInit() {
 }
 
 void robot_class::DisabledInit() {
-    //do nothing
+    //disable shooter
+    shooter_turret.Shooter().disable();
 }
 
 void robot_class::AutonomousInit() {
     //do nothing
+    shooter_turret.Shooter().disable();
 }
 
 void robot_class::TeleopInit() {
     //do nothing
+    shooter_turret.Shooter().disable();
 }
 
 void robot_class::DisabledPeriodic() {
@@ -83,11 +87,43 @@ void robot_class::DisabledContinuous() {
 }
 
 void robot_class::AutonomousContinuous() {
-    //do nothing
+    static bool setup = false;
+    static bool atsetpoint = false;
+    static bool reached_setpoint = false;
+    static Timer setpoint_timer;
+    if (!setup) {
+        //Set up controller
+        buttons btns;
+        btns.GetRawButton(SHOOT_KEY) = true;
+        gunner_override_controls(btns);
+        shooter_turret.Shooter().enable();
+        setup = true;
+    }
+    else if (!atsetpoint) {
+        //spin up the balls!
+        if (shooter_turret.Shooter().at_setpoint()) {
+            if (!reached_setpoint) {
+                reached_setpoint = true;
+                setpoint_timer.Start();
+            }
+            else if (setpoint_timer.HasPeriodPassed(0.25)) {
+                atsetpoint = true;
+            }
+        }
+        else if (reached_setpoint) {
+            setpoint_timer.Stop();
+            reached_setpoint = false;
+        }
+    }
+    else {
+        //rollers up
+        rollers.set_direction(roller_t::UP);
+    }
+    Wait(0.05);   
 }
 
 void robot_class::TeleopContinuous() {
-    gunner_override_controls();
+    gunner_override_controls(buttons(gunner_joystick));
     if(global_state.get_state() == STATE_DRIVING) {
         state_driving();
     }
@@ -105,6 +141,13 @@ void robot_class::update_sensors() {
     //power on LEDs
     camera_led_digital.Set(1);
     //camera_led.SetRaw(255); //not using pwm
+    set_target();
+}
+
+void robot_class::set_target() {
+    if (gunner_joystick.GetRawButton(3)) {
+        //get target from vision processing
+    }
 }
 
 //the following macro tells the library that we want to generate code

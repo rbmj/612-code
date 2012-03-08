@@ -45,18 +45,21 @@ private:
     bool m_fresh;
     
     void update_data_with_report(const ParticleAnalysisReport&);
-    
-    static HSLImage image;
-    static void id_and_process(report_vector * vec);
+
+#ifdef VISION_ALT_HEURISTIC
+    static void id_two_targets(report_vector*);
+    static void id_three_targets(report_vector*);
+    static void id_four_targets(report_vector*);
     static void three_targets_alignx(const ParticleAnalysisReport&,
             const ParticleAnalysisReport&, const ParticleAnalysisReport&);
     static void three_targets_aligny(const ParticleAnalysisReport&,
             const ParticleAnalysisReport&, const ParticleAnalysisReport&);
-    //
+#endif
 public:
 #ifdef VISION_ALT_ADHOC
     target() : m_valid(false), m_fresh(false) {}
 #endif
+    static void id_and_process(report_vector * vec);
     target(double h) : m_height(h) {} //feet
     bool valid() const { return m_valid; }
     bool fresh() { if (m_fresh) return !(m_fresh = false); else return false; }
@@ -65,6 +68,13 @@ public:
     double height() const { return m_height; } //feet
     
     static void update_targets(void* = NULL);
+    static target make_target(double h, double d, int x) {
+        target t;
+        t.m_height = h;
+        t.m_distance = d;
+        t.m_x_offset = x;
+        return t;
+    }
 };
 
 #ifdef VISION_ALT_HEURISTIC
@@ -82,5 +92,9 @@ extern const unsigned numtargets;
 #else
 #error No valid VISION_ALT mode specified in 612.h
 #endif
+
+void output_debug_info();
+
+extern const double robot_height;
 
 #endif

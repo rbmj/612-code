@@ -48,6 +48,7 @@ public:
 
     //added methods
     void update_sensors();
+    void set_target();
 };
 
 #endif
