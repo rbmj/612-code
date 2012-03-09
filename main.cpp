@@ -102,20 +102,21 @@ void robot_class::AutonomousContinuous() {
         atsetpoint = false;
         reached_setpoint = false;
         setpoint_timer.Stop();
+        setpoint_timer.Reset();
     }
-    const double shoot_freq = 70.78;
-    double launch_angle = deg2rad(66.0);
     if (!setup) {
         //TODO: Set up controller the good way
-        //shoot_key();
-        shooter_turret.Shooter().set_freq(shoot_freq);
+        //shooter_turret.Shooter().set_freq(shoot_freq);
+        //shooter_turret.Winch().set_angle(launch_angle);
+        shoot_key();
         shooter_turret.Shooter().enable();
-        shooter_turret.Winch().set_angle(launch_angle);
         setup = true;
     }
     else if (!atsetpoint) {
         //spin up the balls!
-        if (std::fabs(shooter_turret.Shooter().get_cur_freq() - shoot_freq) < 1.0) {
+        if (std::fabs(shooter_turret.Shooter().get_cur_freq() - 
+            shooter_turret.Shooter().get_set_freq()) < 1.0)
+        {
             if (!reached_setpoint) {
                 reached_setpoint = true;
                 setpoint_timer.Start();
@@ -126,6 +127,7 @@ void robot_class::AutonomousContinuous() {
         }
         else if (reached_setpoint) {
             setpoint_timer.Stop();
+            setpoint_timer.Reset();
             reached_setpoint = false;
         }
     }
