@@ -176,18 +176,14 @@ vision_thread& get_vision_thread() {
     return t;
 }
 
-#if 0
-
 vision_targets& get_targets() {
     static vision_targets t;
     return t;
 }
 
-#endif
-
 //FORCE INSTANTIATION
 vision_thread& VISION_THREAD_INSTANCE = get_vision_thread();
-//vision_targets& VISION_TARGETS_INSTANCE = get_targets();
+vision_targets& VISION_TARGETS_INSTANCE = get_targets();
 
 //MUST DELETE RETURN VALUE IN CALLER
 std::pair<report_vector*, BinaryImage*> do_threshold(ColorImage& image) {

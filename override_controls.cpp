@@ -67,7 +67,6 @@ joysmooth& joy = gunner_joystick;
 
 void gunner_override_controls() {
     bool acquire = joy.GetRawButton(ACQUIRE_TARGET);
-#if 0
     if (acquire) {
         vision_targets& ts = get_targets();
         target * t;
@@ -77,7 +76,7 @@ void gunner_override_controls() {
         t = NULL;
         for (unsigned i = 0; i < numtargets && t_vec[i].valid(); i++) {
             if (t) {
-                if (t_vec[i].height() > t->height())) {
+                if (t_vec[i].height() > t->height()) {
                     t = &(t_vec[i]);
                 }
             }
@@ -120,7 +119,6 @@ void gunner_override_controls() {
             cur_trajectory.angle = 0.0;
         }
     }
-#endif
     do_turret_rotation();
     do_bridge_arm();
     bool key = joy.GetRawButton(SHOOT_KEY);

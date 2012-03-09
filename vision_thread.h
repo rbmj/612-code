@@ -59,6 +59,6 @@ private:
 };
 
 vision_thread& get_vision_thread();
-//vision_targets& get_targets();
+vision_targets& get_targets();
 
 #endif
