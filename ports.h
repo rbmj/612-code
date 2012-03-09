@@ -100,8 +100,6 @@ extern RobotDrive drive;
 extern roller_t rollers;
 extern shifter servo_shifter;
 extern bridge_arm_t bridge_arm;
-
-//turret
 extern turret shooter_turret;
 
 #endif

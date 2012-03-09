@@ -26,8 +26,10 @@
 
 using namespace std;
 
-state_tracker::state_tracker() {
-    state = 0;
+state_tracker::state_tracker():
+    state(0),
+    callbacks()
+{
 }
 
 state_tracker::state_tracker(state_t initial_state) {

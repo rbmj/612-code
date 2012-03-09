@@ -12,7 +12,7 @@
 const double WHEEL_P = 0.005;
 const double WHEEL_I = 0.0;
 const double WHEEL_D = 0.002;
-const float WHEEL_TOLERANCE = 4.0; //percent
+const float WHEEL_TOLERANCE = 1.5; //percent
 const int MaxRps = 75;
 
 float FindMax(float);

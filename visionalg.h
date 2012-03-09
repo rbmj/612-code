@@ -57,6 +57,15 @@ public:
     camera_fov(double, aspect_ratio);
 };
 
+const aspect_ratio& RESOLUTION();
+
+/* call thusly:
+ * 
+ * RESOLUTION().X() - x resolution
+ * RESOLUTION().Y() - y resolution
+ * 
+ */
+ 
 const camera_fov& FOV();
 
 /* call thusly:
@@ -67,16 +76,5 @@ const camera_fov& FOV();
  * FOV().ASPECT().X() - x component of AR
  * FOV().ASPECT().Y() - y component of AR
  */
- 
-const aspect_ratio& RESOLUTION();
-
-/* call thusly:
- * 
- * RESOLUTION().X() - x resolution
- * RESOLUTION().Y() - y resolution
- * 
- */
- 
-
 
 #endif

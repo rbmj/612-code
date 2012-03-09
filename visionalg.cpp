@@ -77,12 +77,8 @@ const AxisCameraParams::Resolution_t axis_resolution = AxisCameraParams::kResolu
 #error Invalid Resolution Specified
 #endif
 
-double angle_offset(int offset, int total, double FOV) {
-    double c = 2 * std::sin(FOV / 2);
-    c *= offset;
-    c /= total;
-    return std::asin(c);
-}
+camera_fov fov_obj(CAM_FOV, aspect_ratio(AR_X, AR_Y));
+aspect_ratio res_obj(RES_X, RES_Y);
 
 double fov_axis(int axis_one, int axis_two, double total) {
     //returns field of view along axis_one with aspect ratio one:two
@@ -91,28 +87,29 @@ double fov_axis(int axis_one, int axis_two, double total) {
     return std::atan(val);
 }
 
-camera_fov::camera_fov(double fov, aspect_ratio r) : field_of_view(fov), ratio(r) {
-    field_of_view_x = fov_axis(ratio.X(), ratio.Y(), field_of_view);
-    field_of_view_y = fov_axis(ratio.Y(), ratio.X(), field_of_view);
+double angle_offset(int offset, int total, double FOV) {
+    double c = 2 * std::sin(FOV / 2);
+    c *= offset;
+    c /= total;
+    return std::asin(c);
 }
-
-camera_fov fov_obj(CAM_FOV, aspect_ratio(AR_X, AR_Y));
-
-const camera_fov& FOV() {
-    return fov_obj;
-}
-
-aspect_ratio res_obj(RES_X, RES_Y);
-
-const aspect_ratio& RESOLUTION() {
-    return res_obj;
-}
-
-aspect_ratio::aspect_ratio(int xv, int yv) : x(xv), y(yv) {}
 
 void init_camera() {
     if (camera().GetResolution() != axis_resolution) {
         camera().WriteResolution(axis_resolution);
     }
 }
- 
+aspect_ratio::aspect_ratio(int xv, int yv) : x(xv), y(yv) {}
+
+camera_fov::camera_fov(double fov, aspect_ratio r) : field_of_view(fov), ratio(r) {
+    field_of_view_x = fov_axis(ratio.X(), ratio.Y(), field_of_view);
+    field_of_view_y = fov_axis(ratio.Y(), ratio.X(), field_of_view);
+}
+
+const camera_fov& FOV() {
+    return fov_obj;
+}
+
+const aspect_ratio& RESOLUTION() {
+    return res_obj;
+}
