@@ -6,6 +6,7 @@
 bridge_arm_t::bridge_arm_t(Relay& r, DigitalInput& l) {
     spike = &r;
     limit = &l;
+    dir = UP;
     registry().register_func(bridge_arm_t::update_help, (void*)this);
 }
 
