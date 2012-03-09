@@ -53,6 +53,7 @@ void do_driving() {
         float right = right_joystick.GetY();
         //explicitly state drive power is based on Y axis of that side joy
         drive.TankDrive(left, right);
+        std::printf("Tank Drive: %f, %f\n", left, right);
     }
 }
 
@@ -68,7 +69,9 @@ void do_shifting() {
 }
 
 void change_state() {
+    /*
     if(gunner_joystick.GetRawButton(SHOOT)) {
         global_state.set_state(STATE_SHOOTING);
     }
+    */
 }

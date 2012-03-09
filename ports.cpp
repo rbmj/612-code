@@ -85,7 +85,7 @@ Encoder right_drive                     ( slot2,     1,
 DigitalInput turret_limit_mid           ( slot2,     5 );
 DigitalInput turret_limit_right         ( slot2,     6 );
 DigitalInput turret_limit_left          ( slot2,     7 );
-DigitalOutput camera_led_digital        ( slot2,     8 );
+
 
 Counter launcher_wheel                  ( slot2,    10 );
 
@@ -95,6 +95,8 @@ Ultrasonic front_ultrasonic             ( slot6,     2,
 Encoder left_drive                      ( slot6,     4,
                                           slot6,     5 );
 DigitalInput bridge_arm_switch          ( slot6,     6 );
+
+DigitalOutput camera_led_digital        ( slot6,     8 );
 
 //note: since we rely on the default value of kInches for the 5th arg
 //we should use Ultrasonic::GetRangeInches().

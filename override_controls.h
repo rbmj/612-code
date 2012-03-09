@@ -37,6 +37,19 @@ extern const int BRIDGE_ARM_DOWN;
 extern const int BRIDGE_ARM_UP;
 
 
-void gunner_override_controls(const buttons&);
+void gunner_override_controls();
+
+void bridge_arm_up();
+void bridge_arm_down();
+void bridge_arm_neutral();
+
+void rollers_up();
+void rollers_down();
+void rollers_off();
+
+void shoot_key();
+void shoot_spin();
+void shoot_fender();
+void turret_acquire();
 
 #endif

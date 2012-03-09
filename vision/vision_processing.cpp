@@ -197,7 +197,7 @@ double inline distance_from_height(int height) {
 #elif defined RESOLUTION_160_120
     height *= 4;
 #endif
-    return ((1277.686246075*(1/height)) - 0.8265433113);
+    return ((1277.686246075*(1.0/height)) - 0.8265433113);
 }
 
 double inline deviation_from_angle(double angle) {

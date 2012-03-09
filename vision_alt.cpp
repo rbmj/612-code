@@ -83,6 +83,7 @@ void output_debug_info_target(const char * n, const target& t) {
 }
 
 void output_debug_info() {
+    /*
 #ifdef VISION_ALT_HEURISTIC
     output_debug_info_target("bottom_basket", bottom_basket);
     output_debug_info_target("midleft_basket", midleft_basket);
@@ -93,6 +94,7 @@ void output_debug_info() {
         output_debug_info_target("generic", target_arr[i]);
     }
 #endif
+*/
 }
 
 #ifdef VISION_ALT_HEURISTIC

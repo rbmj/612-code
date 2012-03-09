@@ -68,6 +68,8 @@ void robot_class::AutonomousInit() {
 void robot_class::TeleopInit() {
     //do nothing
     shooter_turret.Shooter().disable();
+    //buttons b(gunner_joystick);
+    //gunner_override_controls(b);
 }
 
 void robot_class::DisabledPeriodic() {
@@ -92,10 +94,8 @@ void robot_class::AutonomousContinuous() {
     static bool reached_setpoint = false;
     static Timer setpoint_timer;
     if (!setup) {
-        //Set up controller
-        buttons btns;
-        btns.GetRawButton(SHOOT_KEY) = true;
-        gunner_override_controls(btns);
+        //TODO: Set up controller
+        shoot_key();
         shooter_turret.Shooter().enable();
         setup = true;
     }
@@ -123,7 +123,7 @@ void robot_class::AutonomousContinuous() {
 }
 
 void robot_class::TeleopContinuous() {
-    gunner_override_controls(buttons(gunner_joystick));
+    gunner_override_controls();
     if(global_state.get_state() == STATE_DRIVING) {
         state_driving();
     }
@@ -131,7 +131,7 @@ void robot_class::TeleopContinuous() {
         state_shooting();
     }
     if (global_state.get_state() != STATE_SHOOTING) {
-        Wait(0.0025); //let the CPU rest a little - 5 ms isn't too long
+        Wait(0.0025); //let the CPU rest a little - 1 ms isn't too long
     }
 }
 

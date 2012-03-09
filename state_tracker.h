@@ -25,8 +25,6 @@
 #include <map>
 #include "612.h"
 
-using namespace std;
-
 class state_tracker {
     public:
         typedef void(*state_func)();
@@ -39,7 +37,7 @@ class state_tracker {
         void run_state();
     private:
         state_t state;
-        map<state_t, state_func> callbacks;
+        std::map<state_t, state_func> callbacks;
 };
 
 extern state_tracker global_state;

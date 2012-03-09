@@ -44,11 +44,11 @@ trajectory FENDER_TRAJECTORY = calculate_trajectory_entryangle(FENDER_TARGET, DE
 
 trajectory cur_trajectory;
 
-void do_turret_rotation(const buttons&);
-void do_bridge_arm(const buttons&);
-void do_turret_winch(const buttons&);
-void do_launcher_wheel(const buttons&);
-void do_rollers(const buttons&);
+void do_turret_rotation();
+void do_bridge_arm();
+void do_turret_winch(bool, bool, bool, bool);
+void do_launcher_wheel(bool, bool, bool, bool, bool);
+void do_rollers();
 
 const int TURRET_ROTATION        = 1;
 const int SHOOT_SPIN             = 2;
@@ -62,8 +62,13 @@ const int SHOOTER_OVERRIDE       = 9;
 const int BRIDGE_ARM_DOWN        = 10;
 const int BRIDGE_ARM_UP          = 11;
 
-void gunner_override_controls(const buttons& joy) {
-    if (joy.GetRawButton(ACQUIRE_TARGET)) {
+//don't ask me WHY this won't work with buttons& OR with GenericHID&
+joysmooth& joy = gunner_joystick;
+
+void gunner_override_controls() {
+    bool acquire = joy.GetRawButton(ACQUIRE_TARGET);
+#if 0
+    if (acquire) {
         vision_targets& ts = get_targets();
         target * t;
 #ifdef VISION_ALT_ADHOC
@@ -115,14 +120,17 @@ void gunner_override_controls(const buttons& joy) {
             cur_trajectory.angle = 0.0;
         }
     }
-    do_turret_rotation(joy);
-    do_bridge_arm(joy);
-    do_turret_winch(joy);
-    do_launcher_wheel(joy);
-    do_rollers(joy);
+#endif
+    do_turret_rotation();
+    do_bridge_arm();
+    bool key = joy.GetRawButton(SHOOT_KEY);
+    bool fender = joy.GetRawButton(SHOOT_FENDER);
+    do_turret_winch(key, fender, joy.GetRawButton(WINCH_OVERRIDE), acquire);
+    do_launcher_wheel(key, fender, joy.GetRawButton(SHOOTER_OVERRIDE), acquire, joy.GetRawButton(SHOOT_SPIN));
+    do_rollers();
 }
 
-void do_turret_rotation(const buttons& joy) {
+void do_turret_rotation() {
     if (joy.GetRawButton(TURRET_ROTATION)) {
         shooter_turret.Susan().manual_control(gunner_joystick.GetX());
     }
@@ -131,19 +139,31 @@ void do_turret_rotation(const buttons& joy) {
     }
 }
 
-void do_bridge_arm(const buttons& joy) {
+void do_bridge_arm() {
     if(joy.GetRawButton(BRIDGE_ARM_UP)){//up
-        bridge_arm.set_direction(bridge_arm_t::UP);
+        bridge_arm_up();
     }
     else if(joy.GetRawButton(BRIDGE_ARM_DOWN)){//down
-        bridge_arm.set_direction(bridge_arm_t::DOWN);
+        bridge_arm_down();
     }
     else {
-        bridge_arm.set_direction(bridge_arm_t::NEUTRAL);
+        bridge_arm_neutral();
     }
 }
 
-void do_turret_winch(const buttons& joy) {
+void bridge_arm_up() {
+    bridge_arm.set_direction(bridge_arm_t::UP);
+}
+
+void bridge_arm_down() {
+    bridge_arm.set_direction(bridge_arm_t::DOWN);
+}
+
+void bridge_arm_neutral() {
+    bridge_arm.set_direction(bridge_arm_t::NEUTRAL);
+}
+
+void do_turret_winch(bool key, bool fender, bool override, bool acquire) {
     static float winch_z = 0.0;
 /*
     if(gunner_joystick.GetRawButton(WINCH_UP)) {
@@ -160,16 +180,16 @@ void do_turret_winch(const buttons& joy) {
     }
 */
     float new_winch_z = winch_z;
-    if (joy.GetRawButton(SHOOT_KEY)) {
+    if (key) {
         new_winch_z = KEY_TRAJECTORY.angle;
     }
-    else if (joy.GetRawButton(SHOOT_FENDER)) {
+    else if (fender) {
         new_winch_z = FENDER_TRAJECTORY.angle;
     }
-    else if (joy.GetRawButton(WINCH_OVERRIDE)) {
+    else if (override) {
         new_winch_z = deg2rad((-left_joystick.GetZ()+1)*22.5+45);
     }
-    else if (joy.GetRawButton(ACQUIRE_TARGET)) {
+    else if (acquire) {
         if (cur_trajectory.velocity != 0) {
             new_winch_z = cur_trajectory.angle;
         }
@@ -180,20 +200,20 @@ void do_turret_winch(const buttons& joy) {
     }
 }
 
-void do_launcher_wheel(const buttons& joy) {
+void do_launcher_wheel(bool key, bool fender, bool override, bool acquire, bool spin) {
     static float shoot_freq = 0.0;
     static bool enabled = false;
     float new_shoot_freq = shoot_freq;
-    if (joy.GetRawButton(SHOOT_KEY)) {
+    if (key) {
         new_shoot_freq = shooter::ballspeed_to_rps(KEY_TRAJECTORY.velocity, KEY_TRAJECTORY.angle);
     }
-    else if (joy.GetRawButton(SHOOT_FENDER)) {
+    else if (fender) {
         new_shoot_freq = shooter::ballspeed_to_rps(FENDER_TRAJECTORY.velocity, FENDER_TRAJECTORY.angle);
     }
-    else if (joy.GetRawButton(SHOOTER_OVERRIDE)) {
+    else if (override) {
         new_shoot_freq = (-gunner_joystick.GetZ()+1)*30+20;
     }
-    else if (joy.GetRawButton(ACQUIRE_TARGET)) {
+    else if (acquire) {
         if (cur_trajectory.velocity != 0.0) {
             new_shoot_freq = shooter::ballspeed_to_rps(cur_trajectory.velocity, cur_trajectory.angle);
         }
@@ -203,25 +223,56 @@ void do_launcher_wheel(const buttons& joy) {
         shooter_turret.Shooter().set_freq(shoot_freq);
     }
     if (!enabled) {
-        if (joy.GetRawButton(SHOOT_SPIN)) {
+        if (spin) {
             enabled = true;
             shooter_turret.Shooter().enable();
         }
     }
-    else if (!joy.GetRawButton(SHOOT_SPIN)) {
+    else if (spin) {
         enabled = false;
         shooter_turret.Shooter().disable();
     }
 }
 
-void do_rollers(const buttons& joy) {
+void do_rollers() {
     if (joy.GetRawButton(ROLLERS_UP)) {
-        rollers.set_direction(roller_t::UP);
+        rollers_up();
     }
     else if (joy.GetRawButton(ROLLERS_DOWN)) {
-        rollers.set_direction(roller_t::DOWN);
+        rollers_down();
     }
     else {
-        rollers.set_direction(roller_t::OFF);
+        rollers_off();
     }
+}
+
+void rollers_up() {
+    rollers.set_direction(roller_t::UP);
+}
+
+void rollers_down() {
+    rollers.set_direction(roller_t::DOWN);
+}
+
+void rollers_off() {
+    rollers.set_direction(roller_t::OFF);
+}
+
+void shoot_key() {
+    do_launcher_wheel(true, false, false, false, false);
+    do_turret_winch(true, false, false, false);
+}
+
+void shoot_fender() {
+    do_launcher_wheel(false, true, false, false, false);
+    do_turret_winch(false, true, false, false);
+}
+
+void shoot_spin() {
+    do_launcher_wheel(false, false, false, false, true);
+}
+
+void turret_acquire() {
+    do_launcher_wheel(false, false, false, true, false);
+    do_turret_winch(false, false, false, true);
 }

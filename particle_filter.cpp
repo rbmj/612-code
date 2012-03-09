@@ -40,9 +40,6 @@ bool particle_filter::operator()(const ParticleAnalysisReport& r) const {
                 //filled in - change denom on next line to make more/less strict
                 if (++tot_filled_in > numpoints / 4) {
                     //too many!
-#if DEBUG_612
-                    std::printf("Particle removed due to filled in\n");
-#endif
                     return true;
                 }
             }
