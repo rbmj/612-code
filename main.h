@@ -27,6 +27,8 @@
 #include <RobotDrive.h>
 
 class robot_class : public IterativeRobot {
+private:
+    bool AutonomousSetup;
 public:
     //ctor
     robot_class();

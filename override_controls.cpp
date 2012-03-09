@@ -55,8 +55,8 @@ const int SHOOT_SPIN             = 2;
 const int ACQUIRE_TARGET         = 3;
 const int SHOOT_KEY              = 4;
 const int SHOOT_FENDER           = 5;
-const int ROLLERS_DOWN           = 6;
-const int ROLLERS_UP             = 7;
+const int ROLLERS_UP             = 6;
+const int ROLLERS_DOWN           = 7;
 const int WINCH_OVERRIDE         = 8;
 const int SHOOTER_OVERRIDE       = 9;
 const int BRIDGE_ARM_DOWN        = 10;
@@ -185,7 +185,7 @@ void do_turret_winch(bool key, bool fender, bool override, bool acquire) {
         new_winch_z = FENDER_TRAJECTORY.angle;
     }
     else if (override) {
-        new_winch_z = deg2rad((-left_joystick.GetZ()+1)*22.5+45);
+        new_winch_z = deg2rad((-gunner_joystick.GetZ()+1)*22.5+45);
     }
     else if (acquire) {
         if (cur_trajectory.velocity != 0) {
@@ -209,7 +209,7 @@ void do_launcher_wheel(bool key, bool fender, bool override, bool acquire, bool 
         new_shoot_freq = shooter::ballspeed_to_rps(FENDER_TRAJECTORY.velocity, FENDER_TRAJECTORY.angle);
     }
     else if (override) {
-        new_shoot_freq = (-gunner_joystick.GetZ()+1)*30+20;
+        new_shoot_freq = (-gunner_joystick.GetZ()+1)*30+15;
     }
     else if (acquire) {
         if (cur_trajectory.velocity != 0.0) {
@@ -226,7 +226,7 @@ void do_launcher_wheel(bool key, bool fender, bool override, bool acquire, bool 
             shooter_turret.Shooter().enable();
         }
     }
-    else if (spin) {
+    else if (!spin) {
         enabled = false;
         shooter_turret.Shooter().disable();
     }

@@ -75,7 +75,7 @@ void lcdio::update() {
     update_target_ok(target_arr[0].valid(), target_arr[1].valid(), target_arr[2].valid(), target_arr[3].valid());
     double acc = 0.0;
     int div = 0;
-    for (int i = 0; i < numtargets; i++) {
+    for (unsigned i = 0; i < numtargets; i++) {
         if (target_arr[i].valid()) {
             acc += target_arr[i].distance();
             div++;
