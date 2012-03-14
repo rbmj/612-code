@@ -34,6 +34,8 @@
 #include "override_controls.h"
 #include "vision_alt.h"
 #include "trajectory.h"
+#include "autonomous.h"
+#include "encoder.h"
 #include "states/state_shooting.h"
 #include "states/state_driving.h"
 
@@ -55,6 +57,8 @@ void robot_class::RobotInit() {
     launcher_wheel.Start();
     global_state.register_func(STATE_DRIVING, state_driving);
     global_state.register_func(STATE_SHOOTING, state_shooting);
+    EncoderWheels::Init(left_drive, right_drive);
+    EncoderWheels::GetInstance().Enable();
 }
 
 void robot_class::DisabledInit() {
@@ -63,9 +67,7 @@ void robot_class::DisabledInit() {
 }
 
 void robot_class::AutonomousInit() {
-    //do nothing
-    shooter_turret.Shooter().disable();
-    AutonomousSetup = true;
+    autonomous_init();
 }
 
 void robot_class::TeleopInit() {
@@ -92,58 +94,13 @@ void robot_class::DisabledContinuous() {
 }
 
 void robot_class::AutonomousContinuous() {
-    static bool setup = false;
-    static bool atsetpoint = false;
-    static bool reached_setpoint = false;
-    static Timer setpoint_timer;
-    if (AutonomousSetup) {
-        AutonomousSetup = false;
-        setup = false;
-        atsetpoint = false;
-        reached_setpoint = false;
-        setpoint_timer.Stop();
-    }
-    const double shoot_freq = 70.78;
-    double launch_angle = deg2rad(66.0);
-    if (!setup) {
-        //TODO: Set up controller the good way
-        //shoot_key();
-        shooter_turret.Shooter().set_freq(shoot_freq);
-        shooter_turret.Shooter().enable();
-        shooter_turret.Winch().set_angle(launch_angle);
-        setup = true;
-    }
-    else if (!atsetpoint) {
-        //spin up the balls!
-        if (std::fabs(shooter_turret.Shooter().get_cur_freq() - shoot_freq) < 1.0) {
-            if (!reached_setpoint) {
-                reached_setpoint = true;
-                setpoint_timer.Start();
-            }
-            else if (setpoint_timer.HasPeriodPassed(0.25)) {
-                atsetpoint = true;
-            }
-        }
-        else if (reached_setpoint) {
-            setpoint_timer.Stop();
-            reached_setpoint = false;
-        }
-    }
-    else {
-        //rollers up
-        rollers.set_direction(roller_t::UP);
-    }
-    Wait(0.05);   
+    do_autonomous();
+    Wait(0.05);
 }
 
 void robot_class::TeleopContinuous() {
     gunner_override_controls();
-    if(global_state.get_state() == STATE_DRIVING) {
-        state_driving();
-    }
-    else if(global_state.get_state() == STATE_SHOOTING) {
-        state_shooting();
-    }
+    global_state.run_state();
     if (global_state.get_state() != STATE_SHOOTING) {
         Wait(0.0025); //let the CPU rest a little - 1 ms isn't too long
     }

@@ -293,14 +293,19 @@ void update_targets(vision_thread& thread, ColorImage& image) {
     report_vector * reports = ptrs.first;
     BinaryImage * img = ptrs.second;
 #if DEBUG_612
-    if (left_joystick.GetRawButton(1)) {
+    if (right_joystick.GetRawButton(1)) {
         std::printf("Writing...\n");
         char buffer[64];
-        std::sprintf(buffer, "%f.bmp", Timer::GetFPGATimestamp());        
-        img->Write(buffer);
+        std::sprintf(buffer, "%f_clr.bmp", Timer::GetFPGATimestamp());
+        image.Write(buffer);
         int x = std::strlen(buffer);
-        buffer[x-3] = 'h';
-        buffer[x-2] = '\0';
+        buffer[x-6] = 'b';
+        buffer[x-5] = 'i';
+        buffer[x-4] = 'n';
+        img->Write(buffer);
+        buffer[x-7] = '.';
+        buffer[x-6] = 'h';
+        buffer[x-5] = '\0';
         write_particles(buffer, reports);
     }
 #endif

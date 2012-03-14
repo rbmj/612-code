@@ -22,8 +22,14 @@ public:
     static double ballspeed_to_rps(double,double);
     static double rps_to_ballspeed(double,double);
     bool at_setpoint();
+    unsigned int get_num_shot();
+    void reset_num_shot();
 private:
     shooter() {}
+	void update_num_shot ();
+	double last_setpoint;
+	bool reached_target;
+    unsigned int num_shot;
     pid_controller * control;
     launch_counter * speed;
     two_jags * jags;
@@ -32,6 +38,7 @@ private:
     bool timer_started;
     bool setpoint_set;
     bool arrived_at_speed;
+    bool ball_incremented;
     Timer launch_time;
     void update();
     static void update_help(void*);

@@ -179,10 +179,16 @@ void do_turret_winch(bool key, bool fender, bool override, bool acquire) {
 */
     float new_winch_z = winch_z;
     if (key) {
-        new_winch_z = KEY_TRAJECTORY.angle;
+        /* hard coding */
+        //TODO: Remove
+        new_winch_z = deg2rad(63.78);
+        //new_winch_z = KEY_TRAJECTORY.angle;
     }
     else if (fender) {
-        new_winch_z = FENDER_TRAJECTORY.angle;
+        /* hard coding */
+        //TODO: Remove
+        new_winch_z = deg2rad(90.0);
+        //new_winch_z = FENDER_TRAJECTORY.angle;
     }
     else if (override) {
         new_winch_z = deg2rad((-gunner_joystick.GetZ()+1)*22.5+45);
@@ -203,13 +209,19 @@ void do_launcher_wheel(bool key, bool fender, bool override, bool acquire, bool 
     static bool enabled = false;
     float new_shoot_freq = shoot_freq;
     if (key) {
-        new_shoot_freq = shooter::ballspeed_to_rps(KEY_TRAJECTORY.velocity, KEY_TRAJECTORY.angle);
+        /* hard coding */
+        //TODO: Remove
+        new_shoot_freq = 73.5;
+        //new_shoot_freq = shooter::ballspeed_to_rps(KEY_TRAJECTORY.velocity, KEY_TRAJECTORY.angle);
     }
     else if (fender) {
-        new_shoot_freq = shooter::ballspeed_to_rps(FENDER_TRAJECTORY.velocity, FENDER_TRAJECTORY.angle);
+        /* hard coding */
+        //TODO: Remove
+        new_shoot_freq = 55.0;
+        //new_shoot_freq = shooter::ballspeed_to_rps(FENDER_TRAJECTORY.velocity, FENDER_TRAJECTORY.angle);
     }
     else if (override) {
-        new_shoot_freq = (-gunner_joystick.GetZ()+1)*30+15;
+        new_shoot_freq = (-gunner_joystick.GetZ()+1)*15+45;
     }
     else if (acquire) {
         if (cur_trajectory.velocity != 0.0) {

@@ -24,6 +24,7 @@
 #include "../ports.h"
 #include "../visionalg.h"
 #include "../state_tracker.h"
+#include "../encoder.h"
 
 const int ARCADE_DRIVE = 1;
 const int SHIFT_HIGH_L = 6;
@@ -53,8 +54,8 @@ void do_driving() {
         float right = right_joystick.GetY();
         //explicitly state drive power is based on Y axis of that side joy
         drive.TankDrive(left, right);
-        std::printf("Tank Drive: %f, %f\n", left, right);
     }
+    std::printf("current distance (encoders): %f\n", EncoderWheels::GetInstance().GetCurDistance());
 }
 
 void do_shifting() {
