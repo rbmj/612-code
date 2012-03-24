@@ -57,7 +57,7 @@ void robot_class::RobotInit() {
     launcher_wheel.Start();
     global_state.register_func(STATE_DRIVING, state_driving);
     global_state.register_func(STATE_SHOOTING, state_shooting);
-    EncoderWheels::Init(left_drive, right_drive);
+    EncoderWheels::Init(left_drive, right_drive, left_front_motor, right_front_motor, left_rear_motor, right_rear_motor);
     EncoderWheels::GetInstance().Enable();
 }
 

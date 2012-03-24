@@ -27,6 +27,8 @@
 
 #include <vector>
 
+const int DISTANCE_TO_BRIDGE = -55; // inches
+
 state_tracker autonomous_substate;
 
 void autonomous_substate_setup();
@@ -64,7 +66,7 @@ void autonomous_substate_launch() {
     else {
         rollers.set_direction(roller_t::OFF);
         shooter_turret.Shooter().disable();
-        //autonomous_substate.set_state(AUTNOM_STATE_DRIVE);
+        autonomous_substate.set_state(AUTNOM_STATE_DRIVE);
     }
 }
 
@@ -77,7 +79,7 @@ void autonomous_substate_drive() {
     //from end of key (closer to bridge wheels) to middle bridge is 88 inches?- drive a little less so we don't hit bridge.
     //couldn't find encoder's Pulses per Revolution - basing code on distance isntead
     //guess by Linda and Melissa:256
-    for(bool far = true ; far ; ){
+/*    for(bool far = true ; far ; ){
         //double distance = EncoderWheels::GetInstance().GetCurDistance();
         vector<double> distances = vision_processing::get_distance();
         double distance = -1;//actual distance should never be negative.
@@ -93,5 +95,6 @@ void autonomous_substate_drive() {
         else{//close to bridge
             far = false;//exit for loop, stop driving
         }
-    }
+    }*/
+    EncoderWheels::GetInstance().SetDistance(DISTANCE_TO_BRIDGE);
 }

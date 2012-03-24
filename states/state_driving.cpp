@@ -32,6 +32,8 @@ const int SHIFT_LOW_L  = 7;
 const int SHIFT_HIGH_R = 11;
 const int SHIFT_LOW_R  = 10;
 const int SHOOT        = 5;
+const int DRIVE_BACK   = 8;
+const double DRIVE_BACK_DISTANCE = -14; // inches
 
 void do_driving();
 void do_shifting();
@@ -44,7 +46,9 @@ void state_driving() {
 }
 
 void do_driving() {
-    if (left_joystick.GetRawButton(ARCADE_DRIVE)) {
+    if (right_joystick.GetRawButton(DRIVE_BACK)) {
+        EncoderWheels::GetInstance().SetDistance(DRIVE_BACK_DISTANCE);
+    } else if (left_joystick.GetRawButton(ARCADE_DRIVE)) {
         //arcade drive
         drive.ArcadeDrive(left_joystick); //arcade drive on left joystick
     }
@@ -55,7 +59,7 @@ void do_driving() {
         //explicitly state drive power is based on Y axis of that side joy
         drive.TankDrive(left, right);
     }
-    std::printf("current distance (encoders): %f\n", EncoderWheels::GetInstance().GetCurDistance());
+    std::printf("current distance (encoders): %f\n", EncoderWheels::GetInstance().GetCurDistance(EncoderWheels::DISTANCE_AVG));
 }
 
 void do_shifting() {
