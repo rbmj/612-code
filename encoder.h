@@ -18,13 +18,15 @@
 //the encoders on those wheels are 250 ticks per revolution
 //therefore distance = ticks * (250/(2pi)) * (38/60) * (8/2)
 
-const double WHEEL_RADIUS = 8.0/2;
+const double WHEEL_RADIUS = 6.0/2;
 const double TICKS_PER_REV = 250;
 const double DRIVE_REDUCTION = 38.0/60;
 
 class EncoderWheels {
 private:
-    EncoderWheels(Encoder&, Encoder&, drive_jaguar&, drive_jaguar&, drive_jaguar&, drive_jaguar&);
+    EncoderWheels(Encoder&, Encoder&, Jaguar&, Jaguar&, Jaguar&, Jaguar&);
+    static void update_help(void*);
+    void update();
     static EncoderWheels * instance;
     static const double wheel_radius;
     static const unsigned ticks_per_rev;
@@ -43,10 +45,12 @@ public:
         DISTANCE_RIGHT = 0x2,
         DISTANCE_AVG = DISTANCE_LEFT | DISTANCE_RIGHT
     };
-    static void Init(Encoder&, Encoder&, drive_jaguar&, drive_jaguar&, drive_jaguar&, drive_jaguar&);
+    static void Init(Encoder&, Encoder&, Jaguar&, Jaguar&, Jaguar&, Jaguar&);
     static EncoderWheels& GetInstance();
+    static double InchesToTicks(double, int);
     void Enable();
     void Disable();
+    bool IsEnabled();
     void SetDistance(double);
     bool AtTarget();
     double GetCurDistance(distance_side_t);
