@@ -47,6 +47,8 @@ trajectory inline calculate_trajectory(const target& t) {
 #endif
 }
 
+trajectory projected_trajectory(target*);
+
 const double pi = 3.14159265;
 const double pi_over180 = pi / 180;
 const double pi_180over = 180 / pi;

@@ -19,8 +19,10 @@
  * Implement trajectory calculation algorithms defined in trajectory.h
  */     
 
-#include "trajectory.h"
 #include <cmath>
+#include "trajectory.h"
+#include "vision_alt.h"
+#include "shooter.h"
 
 using namespace std;
 
@@ -122,4 +124,17 @@ trajectory calculate_trajectory_launchspeed(const target& t, double v, double g)
     ret.velocity = v;
     ret.angle = theta;
     return ret;    
+}
+
+trajectory projected_trajectory(target* t) {
+    trajectory ret_trajectory = calculate_trajectory_entryangle(*t, DEFAULT_ENTRYANGLE_BACKBOARD);
+    if (ret_trajectory.velocity > shooter::rps_to_ballspeed(75.0, ret_trajectory.angle)) {
+        //unable to do - fallback
+        ret_trajectory = calculate_trajectory_launchspeed(*t, DEFAULT_LAUNCHSPEED);
+        if (ret_trajectory.velocity == 0.0) {
+            //really unable to do
+            return {0,0};
+        }
+    }
+    return ret_trajectory;
 }

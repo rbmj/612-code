@@ -68,51 +68,11 @@ joysmooth& joy = gunner_joystick;
 void gunner_override_controls() {
     bool acquire = joy.GetRawButton(ACQUIRE_TARGET);
     if (acquire) {
-        vision_targets& ts = get_targets();
-        target * t;
-#ifdef VISION_ALT_ADHOC
-        //adhoc
-        std::vector<target> t_vec = ts.targets();
-        t = NULL;
-        for (unsigned i = 0; i < numtargets && t_vec[i].valid(); i++) {
-            if (t) {
-                if (t_vec[i].height() > t->height()) {
-                    t = &(t_vec[i]);
-                }
-            }
-            else {
-                t = &(t_vec[i]);
-            }
-        }
-#else
-        //heuristic
-        if (ts.top().valid()) {
-            t = &(ts.top());
-        }
-        else if (ts.left().valid()) {
-            t = &(ts.left());
-        }
-        else if (ts.right().valid()) {
-            t = &(ts.right());
-        }
-        else if (ts.bottom().valid()) {
-            t = &(ts.bottom());
-        }
-        else {
-            t = NULL;
-        }
-#endif
+        target* t = ascertain_primary_target();
         bool have_trajectory = false;
         if (t) {
             //have target
-            cur_trajectory = calculate_trajectory_entryangle(*t, DEFAULT_ENTRYANGLE_BACKBOARD);
-            if (cur_trajectory.velocity > shooter::rps_to_ballspeed(75.0, cur_trajectory.angle)) {
-                //unable to do - fallback
-                cur_trajectory = calculate_trajectory_launchspeed(*t, DEFAULT_LAUNCHSPEED);
-                if (cur_trajectory.velocity == 0.0) {
-                    //really unable to do
-                }
-            }
+            cur_trajectory = projected_trajectory(t);
         }
         else {
             cur_trajectory.velocity = 0.0;

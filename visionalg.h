@@ -22,6 +22,8 @@
 #ifndef VISIONALG_H_INC
 #define VISIONALG_H_INC
 
+#include "vision_alt.h"
+
 //#define AXIS_CAMERA_206
 #define AXIS_CAMERA_M1011
 
@@ -76,5 +78,7 @@ const camera_fov& FOV();
  * FOV().ASPECT().X() - x component of AR
  * FOV().ASPECT().Y() - y component of AR
  */
+
+target* ascertain_primary_target();
 
 #endif

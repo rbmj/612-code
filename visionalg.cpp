@@ -19,11 +19,12 @@
  * Implement algorithms for vision processing.
  */
 
+#include <cmath>
+#include <vector>
+#include <Vision/AxisCameraParams.h>
 #include "visionalg.h"
 #include "ports.h"
-
-#include <cmath>
-#include <Vision/AxisCameraParams.h>
+#include "vision_alt.h"
 
 /* A few algorithms:
  * 
@@ -112,4 +113,42 @@ const camera_fov& FOV() {
 
 const aspect_ratio& RESOLUTION() {
     return res_obj;
+}
+
+target* ascertain_primary_target() {
+    vision_targets& ts = get_targets();
+    target* t;
+#ifdef VISION_ALT_ADHOC
+    //adhoc
+    std::vector<target> t_vec = ts.targets();
+    t = NULL;
+    for (unsigned i = 0; i < numtargets && t_vec[i].valid(); i++) {
+        if (t) {
+            if (t_vec[i].height() > t->height()) {
+                t = &(t_vec[i]);
+            }
+        }
+        else {
+            t = &(t_vec[i]);
+        }
+    }
+#else
+    //heuristic
+    if (ts.top().valid()) {
+        t = &(ts.top());
+    }
+    else if (ts.left().valid()) {
+        t = &(ts.left());
+    }
+    else if (ts.right().valid()) {
+        t = &(ts.right());
+    }
+    else if (ts.bottom().valid()) {
+        t = &(ts.bottom());
+    }
+    else {
+        t = NULL;
+    }
+#endif
+    return t;
 }
