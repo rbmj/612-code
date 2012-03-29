@@ -3,20 +3,21 @@
 
 #include <RobotDrive.h>
 #include <PIDOutput.h>
-#include "ports.h"
+#include <Jaguar.h>
 
 class drive_pid : public PIDOutput {
 public:
     enum drive_pid_side_t {
-        DRIVE_PID_LEFT,
-        DRIVE_PID_RIGHT
+        SIDE_LEFT,
+        SIDE_RIGHT
     };
-    drive_pid(drive_jaguar&, drive_jaguar&, drive_pid_side_t);
+    drive_pid(Jaguar&, Jaguar&, drive_pid_side_t, bool);
     void PIDWrite(float);
 private:
-    drive_jaguar* jag1;
-    drive_jaguar* jag2;
+    Jaguar* jag1;
+    Jaguar* jag2;
     drive_pid_side_t side;
+    bool reverse;
 };
 
 #endif
