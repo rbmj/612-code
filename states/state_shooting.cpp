@@ -19,18 +19,67 @@
  * shooting state
  */
  
+#include <vector>
 #include "../612.h"
 #include "../vision/vision_processing.h"
 #include "../ports.h"
 #include "../visionalg.h"
 #include "../vision_alt.h"
 #include "../state_tracker.h"
+#include "../vision_thread.h"
+#include "../visionalg.h"
 
-void state_shooting(){
+void aim();
+void select();
+void shoot();
+
+state_tracker shooting_substate(state_selection);
+target* primary_target = NULL;
+
+void state_shooting() {
     // disable motor safety check to stop wasting netconsole space
     drive.SetSafetyEnabled(false);
+    if(shooting_substate.get_state() == shooting_substate_selection) {
+        select();
+    }
+    else if(shooting_substate.get_state() == shooting_substate_aiming) {
+        aim();
+    }
+    else if(shooting_substate.get_state() == shooting_substate_shooting) {
+        shoot();
+    }
     if(!gunner_joystick.GetRawButton(1)) {
+		// TODO Find way To Center Turret While In Drive State
+		shooter_turret.disable();
+		shooting_substate.set_state(shooting_substate_selection);
+		rollers.set_direction(roller_t::OFF);
         global_state.set_state(STATE_DRIVING);
         drive.SetSafetyEnabled(true);
+    }
+}
+
+void select() {
+    primary_target = ascertain_primary_target();
+	shooter_turret.align(PrimaryTarget);
+	shooting_substate.set_state(shooting_substate_aiming);
+}
+
+void aim() {
+    shooter_turret.enable();
+    // TODO better tolerance detection (right now i think it detects distance from edge of image... not sure)
+    if(primary_target->x_offset() < TOLERANCE) // x_offset gives pixels
+    {
+		shooting_substate.set_state(shooting_substate_shooting);
+	}
+}
+
+void shoot() {
+	if(shooter_turret.Shooter().at_setpoint())
+    {
+		rollers.set_direction(roller_t::UP);
+    }
+    else
+    {
+		rollers.set_direction(roller_t::OFF);
     }
 }
