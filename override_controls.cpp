@@ -66,10 +66,12 @@ const int BRIDGE_ARM_UP          = 11;
 joysmooth& joy = gunner_joystick;
 
 void gunner_override_controls() {
-    bool acquire = joy.GetRawButton(ACQUIRE_TARGET);
+//    bool acquire = joy.GetRawButton(ACQUIRE_TARGET); // moved to states
+    bool acquire = true;
+    // legacy
     if (acquire) {
         target* t = ascertain_primary_target();
-        bool have_trajectory = false;
+//        bool have_trajectory = false; // unused
         if (t) {
             //have target
             cur_trajectory = projected_trajectory(t);

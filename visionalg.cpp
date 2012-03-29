@@ -25,6 +25,7 @@
 #include "visionalg.h"
 #include "ports.h"
 #include "vision_alt.h"
+#include "vision_thread.h"
 
 /* A few algorithms:
  * 

@@ -133,7 +133,7 @@ trajectory projected_trajectory(target* t) {
         ret_trajectory = calculate_trajectory_launchspeed(*t, DEFAULT_LAUNCHSPEED);
         if (ret_trajectory.velocity == 0.0) {
             //really unable to do
-            return {0,0};
+            return (trajectory){0,0};
         }
     }
     return ret_trajectory;

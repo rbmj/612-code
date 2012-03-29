@@ -20,6 +20,7 @@
  */
  
 #include <vector>
+#include "state_shooting.h"
 #include "../612.h"
 #include "../vision/vision_processing.h"
 #include "../ports.h"
@@ -33,7 +34,7 @@ void aim();
 void select();
 void shoot();
 
-state_tracker shooting_substate(state_selection);
+state_tracker shooting_substate(shooting_substate_selection);
 target* primary_target = NULL;
 
 void state_shooting() {
@@ -60,14 +61,14 @@ void state_shooting() {
 
 void select() {
     primary_target = ascertain_primary_target();
-	shooter_turret.align(PrimaryTarget);
+	shooter_turret.align(*primary_target);
 	shooting_substate.set_state(shooting_substate_aiming);
 }
 
 void aim() {
     shooter_turret.enable();
     // TODO better tolerance detection (right now i think it detects distance from edge of image... not sure)
-    if(primary_target->x_offset() < TOLERANCE) // x_offset gives pixels
+    if(primary_target->x_offset() < TARGET_X_TOLERANCE) // x_offset gives pixels
     {
 		shooting_substate.set_state(shooting_substate_shooting);
 	}

@@ -19,6 +19,8 @@
  * driving state
  */
  
+#include <cmath>
+#include "state_driving.h"
 #include "../612.h"
 #include "../vision/vision_processing.h"
 #include "../ports.h"
@@ -31,7 +33,7 @@ const int SHIFT_HIGH_L = 6;
 const int SHIFT_LOW_L  = 7;
 const int SHIFT_HIGH_R = 11;
 const int SHIFT_LOW_R  = 10;
-const int SHOOT        = 5;
+const int SHOOT        = 3;
 const int DRIVE_BACK   = 8;
 const double DRIVE_BACK_DISTANCE = -14; // inches
 const double JOY_TOLERANCE = 0.00001;
@@ -59,7 +61,7 @@ void do_driving() {
         float left = left_joystick.GetY();
         float right = right_joystick.GetY();
         if(std::fabs(left) > JOY_TOLERANCE || std::fabs(right) > JOY_TOLERANCE) {
-            EncoderWheels::GetInstance.Disable();
+            EncoderWheels::GetInstance().Disable();
             //explicitly state drive power is based on Y axis of that side joy
             drive.TankDrive(left, right);
         }
@@ -79,9 +81,7 @@ void do_shifting() {
 }
 
 void change_state() {
-    /*
     if(gunner_joystick.GetRawButton(SHOOT)) {
         global_state.set_state(STATE_SHOOTING);
     }
-    */
 }

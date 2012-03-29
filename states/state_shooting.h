@@ -24,13 +24,13 @@
 
 #include "../state_tracker.h"
 
-const unsigned int TARGET_X_TOLERANCE = 15; // number of pixels target is allowed to be off center
+const int TARGET_X_TOLERANCE = 15; // number of pixels target is allowed to be off center
 
 enum SHOOTING_SUBSTATE {
     shooting_substate_selection,
     shooting_substate_aiming,
     shooting_substate_shooting
-}
+};
 
 extern state_tracker shooting_substate;
 
