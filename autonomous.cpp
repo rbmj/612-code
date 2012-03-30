@@ -68,7 +68,7 @@ void autonomous_substate_launch() {
     else {
         rollers.set_direction(roller_t::OFF);
         shooter_turret.Shooter().disable();
-        autonomous_substate.set_state(AUTNOM_STATE_DRIVE);
+//        autonomous_substate.set_state(AUTNOM_STATE_DRIVE);
     }
 }
 
