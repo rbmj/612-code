@@ -16,7 +16,7 @@ const double DRIVETRAIN_PID_TOLERANCE = 0.75;
 //const double DRIVETRAIN_SPEED = 0.7;
 // TODO Joystick + encoder pid driving at the same time
 // TODO decide what is reverse and what isn't!
-const int RESET               = 9;
+const int RESET               = 1;
 
 EncoderWheels * EncoderWheels::instance = NULL;
 
@@ -47,7 +47,7 @@ void EncoderWheels::update() {
         std::printf("------------TARGET REACHED-----------------\n");
         Disable();
     }
-    if(right_joystick.GetRawButton(RESET)) {
+    if(left_joystick.GetRawButton(RESET)) {
         std::printf("............RESET ENCODERS.............\n");
         Disable();
         Enable();

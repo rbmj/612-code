@@ -33,7 +33,8 @@ const int SHIFT_HIGH_L = 6;
 const int SHIFT_LOW_L  = 7;
 const int SHIFT_HIGH_R = 11;
 const int SHIFT_LOW_R  = 10;
-const int DRIVE_BACK   = 8;
+const int DRIVE_BACK   = 8; // right joy
+const int DRIVE_BACK_DOUBLE = 9; // right joy
 const double DRIVE_BACK_DISTANCE = -14; // inches
 const double JOY_TOLERANCE = 0.2;
 
@@ -50,6 +51,8 @@ void state_driving() {
 void do_driving() {
     if (right_joystick.GetRawButton(DRIVE_BACK)) {
         EncoderWheels::GetInstance().SetDistance(DRIVE_BACK_DISTANCE);
+    } else if (right_joystick.GetRawButton(DRIVE_BACK_DOUBLE)) {
+        EncoderWheels::GetInstance().SetDistance(DRIVE_BACK_DISTANCE*2);
     } else if (left_joystick.GetRawButton(ARCADE_DRIVE)) {
         EncoderWheels::GetInstance().Disable();
         //arcade drive
