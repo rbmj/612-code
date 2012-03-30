@@ -13,9 +13,6 @@
 const double WHEEL_P = 0.005;
 const double WHEEL_I = 0.0;
 const double WHEEL_D = 0.002;
-const float WHEEL_TOLERANCE = 1.5; //percent
-const float NUM_SHOT_TOLERANCE = 10.0;
-const int MAX_RPS = 75;
 
 float find_max_speed(float);
 

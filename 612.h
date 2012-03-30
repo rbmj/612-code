@@ -24,6 +24,9 @@
 
 #include <vxWorks.h>
 
+/*const double SHOOT_KEY_FREQ = 73.0
+const double SHOOT_KEY_ANGLE = */
+
 typedef UINT32 uinteger;
 typedef UINT32 state_t;
 typedef UINT8 module_t;

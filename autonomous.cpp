@@ -19,6 +19,7 @@
  * autonomous code
  */
 
+#include <cmath>
 #include "autonomous.h"
 #include "state_tracker.h"
 #include "ports.h"
@@ -34,6 +35,8 @@ void autonomous_substate_launch();
 void autonomous_substate_drive();
 
 void autonomous_init() {
+    // disable safety: we don't drive using RobotDrive
+    drive.SetSafetyEnabled(false);
     shooter_turret.Shooter().disable();
     autonomous_substate.set_state(AUTNOM_STATE_SETUP);
     autonomous_substate.register_func(AUTNOM_STATE_SETUP,autonomous_substate_setup);
@@ -50,6 +53,7 @@ void autonomous_substate_setup() {
     shooter_turret.Shooter().enable();
     shooter_turret.Winch().set_angle(LAUNCH_ANGLE_RAD);
     autonomous_substate.set_state(AUTNOM_STATE_LAUNCH);
+    EncoderWheels::GetInstance().Disable();
 }
 
 void autonomous_substate_launch() {
@@ -94,5 +98,7 @@ void autonomous_substate_drive() {
             far = false;//exit for loop, stop driving
         }
     }*/
-    EncoderWheels::GetInstance().SetDistance(DISTANCE_TO_BRIDGE);
+    if(!EncoderWheels::GetInstance().IsEnabled()) {
+        EncoderWheels::GetInstance().SetDistance(DISTANCE_TO_BRIDGE);
+    }
 }

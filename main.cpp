@@ -74,7 +74,8 @@ void robot_class::AutonomousInit() {
 }
 
 void robot_class::TeleopInit() {
-    //do nothing
+    // enable safety because disabled in autonomous
+    drive.SetSafetyEnabled(true);
     shooter_turret.Shooter().disable();
     //buttons b(gunner_joystick);
     //gunner_override_controls(b);

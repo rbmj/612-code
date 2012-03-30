@@ -183,7 +183,7 @@ void do_launcher_wheel(bool key, bool fender, bool override, bool acquire, bool 
     if (key) {
         /* hard coding */
         //TODO: Remove
-        new_shoot_freq = 75.0;
+        new_shoot_freq = 73.0;
         //new_shoot_freq = shooter::ballspeed_to_rps(KEY_TRAJECTORY.velocity, KEY_TRAJECTORY.angle);
     }
     else if (fender) {

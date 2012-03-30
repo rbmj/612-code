@@ -26,10 +26,10 @@
 #include "trajectory.h"
 
 const int DISTANCE_TO_BRIDGE = -100; // inches
-const double SHOOT_FREQ = 75.0; // 70.78;
+const double SHOOT_FREQ = 73.0; // 70.78;
 const double LAUNCH_ANGLE_DEG = 61.5; // 66.0;
 const double LAUNCH_ANGLE_RAD = deg2rad(LAUNCH_ANGLE_DEG);
-const double AUTNOM_NUM_BALLS = 3;
+const double AUTNOM_NUM_BALLS = 2;
 
 enum AUTONOMOUS_SUBSTATE {
     AUTNOM_STATE_SETUP,

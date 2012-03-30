@@ -7,6 +7,10 @@
 #include <Counter.h>
 #include <Timer.h>
 
+const float WHEEL_TOLERANCE = 1.5; //percent
+const float NUM_SHOT_TOLERANCE = 10.0;
+const int MAX_RPS = 75;
+
 class shooter {
 public:
     shooter(Counter&, Jaguar&, Jaguar&);
