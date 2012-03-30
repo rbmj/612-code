@@ -64,10 +64,13 @@ void robot_class::RobotInit() {
 void robot_class::DisabledInit() {
     //disable shooter
     shooter_turret.Shooter().disable();
+    EncoderWheels::GetInstance().Disable();
+    
 }
 
 void robot_class::AutonomousInit() {
     autonomous_init();
+    shooter_turret.Shooter().disable();
 }
 
 void robot_class::TeleopInit() {
@@ -112,7 +115,7 @@ void robot_class::update_sensors() {
     //power on LEDs
     camera_led_digital.Set(1);
     //camera_led.SetRaw(255); //not using pwm
-    set_target();
+//    set_target();
 }
 
 void robot_class::set_target() {

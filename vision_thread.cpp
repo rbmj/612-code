@@ -17,6 +17,10 @@
 #include <utility>
 #include <fstream>
 
+#if DEBUG_612
+const int WRITE_IMAGE = 9;
+#endif
+
 //NI function
 IMAQ_FUNC int Priv_SetWriteFileAllowed(UINT32 enable); 
 
@@ -293,7 +297,7 @@ void update_targets(vision_thread& thread, ColorImage& image) {
     report_vector * reports = ptrs.first;
     BinaryImage * img = ptrs.second;
 #if DEBUG_612
-    if (right_joystick.GetRawButton(1)) {
+    if (left_joystick.GetRawButton(WRITE_IMAGE)) {
         std::printf("Writing...\n");
         char buffer[64];
         std::sprintf(buffer, "%f_clr.bmp", Timer::GetFPGATimestamp());

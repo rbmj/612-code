@@ -49,7 +49,7 @@ trajectory inline calculate_trajectory(const target& t) {
 
 trajectory projected_trajectory(target*);
 
-const double pi = 3.14159265;
+const double pi = 3.14159265358979; // max precision :(
 const double pi_over180 = pi / 180;
 const double pi_180over = 180 / pi;
 const double pi_over4 = pi / 4;

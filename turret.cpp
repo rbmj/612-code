@@ -65,7 +65,7 @@ void turret::update() {
         if (cur_target != NULL && cur_target->valid()) {
             //auto target mode
             if (cur_target->fresh()) {
-                trajectory traj = calculate_trajectory(*cur_target);
+                trajectory traj = projected_trajectory(cur_target);
                 lazy_susan->new_offset(cur_target->x_offset(), RESOLUTION().X()/2);
                 shooter_wheels->set_speed(traj.velocity, traj.angle);
                 winch_obj->set_angle(traj.angle);

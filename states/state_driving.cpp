@@ -33,14 +33,13 @@ const int SHIFT_HIGH_L = 6;
 const int SHIFT_LOW_L  = 7;
 const int SHIFT_HIGH_R = 11;
 const int SHIFT_LOW_R  = 10;
-const int SHOOT        = 3;
 const int DRIVE_BACK   = 8;
 const double DRIVE_BACK_DISTANCE = -14; // inches
-const double JOY_TOLERANCE = 0.00001;
+const double JOY_TOLERANCE = 0.2;
 
 void do_driving();
 void do_shifting();
-void change_state();
+static void change_state();
 
 void state_driving() {
     do_driving();
@@ -60,13 +59,22 @@ void do_driving() {
         //tank drive
         float left = left_joystick.GetY();
         float right = right_joystick.GetY();
-        if(std::fabs(left) > JOY_TOLERANCE || std::fabs(right) > JOY_TOLERANCE) {
-            EncoderWheels::GetInstance().Disable();
+        if(EncoderWheels::GetInstance().IsEnabled()) {
+            if(std::fabs(left) > JOY_TOLERANCE || std::fabs(right) > JOY_TOLERANCE) {
+                EncoderWheels::GetInstance().Disable();
             //explicitly state drive power is based on Y axis of that side joy
+                drive.TankDrive(left, right);
+            }
+        }
+        else {
             drive.TankDrive(left, right);
         }
     }
-//    std::printf("current distance (encoders): %f\n", EncoderWheels::GetInstance().GetCurDistance(EncoderWheels::DISTANCE_AVG));
+    static unsigned iterate = 0;
+    iterate++;
+    if(iterate%4==0) {
+        std::printf("current distance (encoders): %f\n", EncoderWheels::GetInstance().GetCurDistance(EncoderWheels::DISTANCE_LEFT));
+    }
 }
 
 void do_shifting() {

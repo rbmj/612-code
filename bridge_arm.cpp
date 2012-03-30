@@ -37,11 +37,11 @@ void bridge_arm_t::update() {
             dir = NEUTRAL;
         }
         else {
-            v = Relay::kForward;
+            v = Relay::kReverse;
         }
         break;
     case DOWN:
-        v = Relay::kReverse;
+        v = Relay::kForward;
         break;
     default:
         v = Relay::kOff;

@@ -8,26 +8,27 @@
 
 // PID values from the almighty Wikipedia
 // TODO retune PID for Suzie
-const double DRIVETRAIN_PID_P = 0.5; // 0.025;
-const double DRIVETRAIN_PID_I = 0; // 0.0005;
+const double DRIVETRAIN_PID_P = 0.24; // 0.025;
+const double DRIVETRAIN_PID_I = 0.000; // 0.0005;
 const double DRIVETRAIN_PID_D = 0;
 const double DRIVETRAIN_PID_TOLERANCE = 0.75;
 //const double DRIVETRAIN_TOLERANCE = 1.0;
 //const double DRIVETRAIN_SPEED = 0.7;
 // TODO Joystick + encoder pid driving at the same time
 // TODO decide what is reverse and what isn't!
+const int RESET               = 9;
 
 EncoderWheels * EncoderWheels::instance = NULL;
 
 EncoderWheels::EncoderWheels(Encoder& el, Encoder& er, Jaguar& jag_fl, Jaguar& jag_fr, Jaguar& jag_rl, Jaguar& jag_rr) : encoder_left(el), encoder_right(er) {
     enabled = false;
     setpoint = 0.0;
-    encoder_left.SetDistancePerPulse(pi * DRIVE_REDUCTION * WHEEL_RADIUS / 360 * -1.0);
-    encoder_right.SetDistancePerPulse(pi * DRIVE_REDUCTION * WHEEL_RADIUS / 360 * -1.0);
+    encoder_left.SetDistancePerPulse(2 * pi * DRIVE_REDUCTION * WHEEL_RADIUS / 360 * -1.0);
+    encoder_right.SetDistancePerPulse(2 * pi * DRIVE_REDUCTION * WHEEL_RADIUS / 360);
     encoder_left.SetPIDSourceParameter(Encoder::kDistance);
     encoder_right.SetPIDSourceParameter(Encoder::kDistance);
-    drive_pid_obj_left = new drive_pid(jag_fl, jag_rl, drive_pid::SIDE_LEFT, false);
-    drive_pid_obj_right = new drive_pid(jag_fr, jag_rr, drive_pid::SIDE_RIGHT, true);
+    drive_pid_obj_left = new drive_pid(jag_fl, jag_rl, drive_pid::SIDE_LEFT, true);
+    drive_pid_obj_right = new drive_pid(jag_fr, jag_rr, drive_pid::SIDE_RIGHT, false);
     pid_left = new pid_controller(DRIVETRAIN_PID_P, DRIVETRAIN_PID_I, DRIVETRAIN_PID_D, &encoder_left, drive_pid_obj_left);
     pid_right = new pid_controller(DRIVETRAIN_PID_P, DRIVETRAIN_PID_I, DRIVETRAIN_PID_D, &encoder_right, drive_pid_obj_right);
     pid_left->SetTolerance(DRIVETRAIN_PID_TOLERANCE);
@@ -43,8 +44,13 @@ void EncoderWheels::update_help(void* obj) {
 
 void EncoderWheels::update() {
     if(AtTarget()) {
-        // TODO fix
+        std::printf("------------TARGET REACHED-----------------\n");
         Disable();
+    }
+    if(right_joystick.GetRawButton(RESET)) {
+        std::printf("............RESET ENCODERS.............\n");
+        Disable();
+        Enable();
     }
 }
 
@@ -70,6 +76,7 @@ double EncoderWheels::InchesToTicks(double inches, int axes=4) {
 //there's a bool here but it will probably be more like a PID enable
 void EncoderWheels::Enable() {
     if(std::fabs(setpoint)>1.0) {
+        drive.SetSafetyEnabled(false);
         pid_left->Enable();
         pid_right->Enable();
     }
@@ -83,6 +90,7 @@ void EncoderWheels::Enable() {
 void EncoderWheels::Disable() {
     pid_left->Disable();
     pid_right->Disable();
+    drive.SetSafetyEnabled(true);
     encoder_left.Stop();
     encoder_right.Stop();
     setpoint = 0.0;
@@ -95,6 +103,7 @@ bool EncoderWheels::IsEnabled() {
 
 void EncoderWheels::SetDistance(double distance) {
     Disable();
+    distance /= 1.7;
     setpoint = distance;
     pid_left->SetSetpoint(setpoint);
     pid_right->SetSetpoint(setpoint);
@@ -108,28 +117,27 @@ void EncoderWheels::SetDistance(double distance) {
 
 bool EncoderWheels::AtTarget() {
     bool TargetReached = pid_left->OnTarget() && pid_right->OnTarget();
-    std::printf("target_reached = %d\n", TargetReached);
     return TargetReached;
 //    return std::fabs(GetCurDistance()-setpoint) > DRIVETRAIN_TOLERANCE;
 }
 
 double EncoderWheels::GetCurDistance(distance_side_t side) {
     double distance_ret=0;
-    int axes=4; // assume four, no way to find type of encoder right now
+//    int axes=4; // assume four, no way to find type of encoder right now
     if(side & DISTANCE_LEFT) {
 /*        double left_ticks=encoder_left.Get()*1.0/axes;
         std::printf("left_ticks = %f", left_ticks);
         double left_distance=left_ticks * (TICKS_PER_REV/(2*pi)) * DRIVE_REDUCTION * WHEEL_RADIUS;
         left_distance/=-360;
         distance_ret+=left_distance;*/
-        distance_ret+=encoder_left.GetDistance();
+        distance_ret+=encoder_left.GetDistance()*1.7;
     }
     if(side & DISTANCE_RIGHT) {
 /*        double right_ticks=encoder_right.Get()*1.0/axes;
         double right_distance=right_ticks * (TICKS_PER_REV/(2*pi)) * DRIVE_REDUCTION * WHEEL_RADIUS;
         right_distance/=-360;
         distance_ret+=right_distance;*/
-        distance_ret+=encoder_right.GetDistance();
+        distance_ret+=encoder_right.GetDistance()*1.7;
     }
     if(side == DISTANCE_AVG) {
         distance_ret/=2.0;
@@ -138,5 +146,5 @@ double EncoderWheels::GetCurDistance(distance_side_t side) {
 }
 
 double EncoderWheels::GetSetDistance() {
-    return setpoint;
+    return setpoint*1.7;
 }

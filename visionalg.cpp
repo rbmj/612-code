@@ -117,6 +117,7 @@ const aspect_ratio& RESOLUTION() {
 }
 
 target* ascertain_primary_target() {
+#if 0
     vision_targets& ts = get_targets();
     target* t;
 #ifdef VISION_ALT_ADHOC
@@ -152,4 +153,6 @@ target* ascertain_primary_target() {
     }
 #endif
     return t;
+#endif
+    return NULL;
 }

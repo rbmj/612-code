@@ -22,6 +22,8 @@
 #ifndef STATE_DRIVING_H_INCLUDED
 #define STATE_DRIVING_H_INCLUDED
 
+const int SHOOT          = 3;
+
 void state_driving();
 
 #endif // STATE_DRIVING_H_INCLUDED

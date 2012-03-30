@@ -82,6 +82,8 @@ Servo left_servo_shift                  ( slot6,     4 );
 //DIOs                                    SLOT     PORT
 Encoder right_drive                     ( slot2,     1,
                                           slot2,     2 );
+Encoder lazy_susan                      ( slot2,     3,
+                                          slot2,     4 );
 DigitalInput turret_limit_mid           ( slot2,     5 );
 DigitalInput turret_limit_right         ( slot2,     6 );
 DigitalInput turret_limit_left          ( slot2,     7 );
@@ -103,6 +105,7 @@ DigitalOutput camera_led_digital        ( slot6,     8 );
 
 //AIOs                                    SLOT     PORT
 AnalogChannel launch_angle_pot          ( slot1,     1 );
+AnalogChannel density_pot               ( slot1,     2 );
 
 //Relays                                  SLOT     PORT
 Relay roller_spike_1                    ( slot6,     1 );
