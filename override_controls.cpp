@@ -52,7 +52,7 @@ void do_rollers();
 
 const int TURRET_ROTATION        = 1;
 const int SHOOT_SPIN             = 2;
-const int ACQUIRE_TARGET         = 3;
+//const int ACQUIRE_TARGET         = 3;
 const int SHOOT_KEY              = 4;
 const int SHOOT_FENDER           = 5;
 const int ROLLERS_UP             = 6;
@@ -67,7 +67,7 @@ joysmooth& joy = gunner_joystick;
 
 void gunner_override_controls() {
 //    bool acquire = joy.GetRawButton(ACQUIRE_TARGET); // moved to states
-    bool acquire = true;
+    bool acquire = false;
     // legacy
     if (acquire) {
         target* t = ascertain_primary_target();
@@ -141,15 +141,15 @@ void do_turret_winch(bool key, bool fender, bool override, bool acquire) {
 */
     float new_winch_z = winch_z;
     if (key) {
-        /* hard coding */
+        // hard coding
         //TODO: Remove
-        new_winch_z = deg2rad(63.78);
+        new_winch_z = deg2rad(61.0);
         //new_winch_z = KEY_TRAJECTORY.angle;
     }
     else if (fender) {
-        /* hard coding */
+        // hard coding
         //TODO: Remove
-        new_winch_z = deg2rad(90.0);
+        new_winch_z = deg2rad(86.3);
         //new_winch_z = FENDER_TRAJECTORY.angle;
     }
     else if (override) {
@@ -162,8 +162,18 @@ void do_turret_winch(bool key, bool fender, bool override, bool acquire) {
     }
     if(new_winch_z != winch_z) {
         winch_z = new_winch_z;
+//        std::printf("
         shooter_turret.Winch().set_angle(winch_z);
     }
+/*    if(gunner_joystick.GetRawButton(8)) {
+        shooter_turret.Winch().manual_control(winch::UP);
+    }
+    else if(gunner_joystick.GetRawButton(9)) {
+        shooter_turret.Winch().manual_control(winch::DOWN);
+    }
+    else {
+        shooter_turret.Winch().manual_control(winch::OFF);
+    }*/
 }
 
 void do_launcher_wheel(bool key, bool fender, bool override, bool acquire, bool spin) {
@@ -173,7 +183,7 @@ void do_launcher_wheel(bool key, bool fender, bool override, bool acquire, bool 
     if (key) {
         /* hard coding */
         //TODO: Remove
-        new_shoot_freq = 73.5;
+        new_shoot_freq = 75.0;
         //new_shoot_freq = shooter::ballspeed_to_rps(KEY_TRAJECTORY.velocity, KEY_TRAJECTORY.angle);
     }
     else if (fender) {

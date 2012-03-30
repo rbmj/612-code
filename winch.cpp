@@ -29,12 +29,13 @@ winch::~winch() {
 float winch::launch_angle_to_voltage(float theta) {
     //takes an angle in radians and converts it to a voltage.
     //note that the angle starts at pi/2 and decreases to pi/4
-    return (-0.9493487159 * theta) + 3.9019452071;
+    return (-1.0207443959 * theta) + 4.1827946896;
 }
 
 float winch::voltage_to_launch_angle(float voltage) {
     //the inverse of the above
-    return (-1.05335 * voltage) + 4.11013;
+    float launch_angle = (-0.9129997242 * voltage) + 3.9002999384;
+    return launch_angle;
 }
 
 void winch::enable() {
@@ -71,12 +72,12 @@ void winch::manual_control(direction_t direction) {
         jag->Set(-WINCH_SPEED);
     }
     else if(direction == DOWN) {
-        if (limit->Get()) {
+//        if (limit->Get()) {
             jag->Set(WINCH_SPEED);
-        }
+/*        }
         else {
             jag->Set(0.0);
-        }
+        }*/
     }
     else {
         jag->Set(0.0);

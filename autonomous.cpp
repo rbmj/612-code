@@ -27,8 +27,6 @@
 
 #include <vector>
 
-const int DISTANCE_TO_BRIDGE = -55; // inches
-
 state_tracker autonomous_substate;
 
 void autonomous_substate_setup();
@@ -55,7 +53,7 @@ void autonomous_substate_setup() {
 }
 
 void autonomous_substate_launch() {
-    if(shooter_turret.Shooter().get_num_shot()<AUTNOM_NUM_BALLS) {
+    if(shooter_turret.Shooter().get_num_shot() < AUTNOM_NUM_BALLS) {
         if(shooter_turret.Shooter().at_setpoint()) {
             rollers.set_direction(roller_t::UP);
         }

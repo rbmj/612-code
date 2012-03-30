@@ -6,6 +6,7 @@
 #include "ports.h"
 #include "pid_controller.h"
 #include "drive_pid.h"
+#include "trajectory.h"
 
 //I don't normally use CamelCase, but meh.
 
@@ -18,9 +19,10 @@
 //the encoders on those wheels are 250 ticks per revolution
 //therefore distance = ticks * (250/(2pi)) * (38/60) * (8/2)
 
-const double WHEEL_RADIUS = 6.0/2;
+const double WHEEL_RADIUS = 8.0/2;
 const double TICKS_PER_REV = 250;
 const double DRIVE_REDUCTION = 38.0/60;
+const double ENCODER_SCALE = 1.7;
 
 class EncoderWheels {
 private:
