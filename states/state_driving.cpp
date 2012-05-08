@@ -35,7 +35,7 @@ const int SHIFT_HIGH_R = 11;
 const int SHIFT_LOW_R  = 10;
 const int DRIVE_BACK   = 8; // right joy
 const int DRIVE_BACK_DOUBLE = 9; // right joy
-const double DRIVE_BACK_DISTANCE = -14; // inches
+const double DRIVE_BACK_DISTANCE = -15; // inches
 const double JOY_TOLERANCE = 0.2;
 
 void do_driving();

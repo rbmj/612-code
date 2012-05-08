@@ -106,7 +106,9 @@ void EncoderWheels::SetDistance(double distance) {
     distance /= 1.7;
     setpoint = distance;
     pid_left->SetSetpoint(setpoint);
+    std::printf("set pid left to %f\n", distance);
     pid_right->SetSetpoint(setpoint);
+    std::printf("set pid right to %f\n", distance);
     Enable();
 /*    if(AtTarget()) {
         drive.Drive(0,0);

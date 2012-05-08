@@ -65,7 +65,7 @@ void robot_class::DisabledInit() {
     //disable shooter
     shooter_turret.Shooter().disable();
     EncoderWheels::GetInstance().Disable();
-    
+    rollers.set_direction(roller_t::OFF);
 }
 
 void robot_class::AutonomousInit() {

@@ -20,6 +20,7 @@
  */
 
 #include <cmath>
+#include <Timer.h>
 #include "autonomous.h"
 #include "state_tracker.h"
 #include "ports.h"
@@ -28,11 +29,13 @@
 
 #include <vector>
 
+const double SHOT_WAIT = 0.25;
 state_tracker autonomous_substate;
 
 void autonomous_substate_setup();
 void autonomous_substate_launch();
 void autonomous_substate_drive();
+void autonomous_substate_bridgearm();
 
 void autonomous_init() {
     // disable safety: we don't drive using RobotDrive
@@ -49,56 +52,47 @@ void do_autonomous() {
 }
 
 void autonomous_substate_setup() {
-    shooter_turret.Shooter().set_freq(SHOOT_FREQ);
-    shooter_turret.Shooter().enable();
     shooter_turret.Winch().set_angle(LAUNCH_ANGLE_RAD);
-    autonomous_substate.set_state(AUTNOM_STATE_LAUNCH);
-    EncoderWheels::GetInstance().Disable();
+    autonomous_substate.set_state(AUTNOM_STATE_DRIVE);
 }
 
 void autonomous_substate_launch() {
-    if(shooter_turret.Shooter().get_num_shot() < AUTNOM_NUM_BALLS) {
         if(shooter_turret.Shooter().at_setpoint()) {
             rollers.set_direction(roller_t::UP);
         }
-        else {
-            rollers.set_direction(roller_t::OFF);
-        }
-    }
-    else {
-        rollers.set_direction(roller_t::OFF);
-        shooter_turret.Shooter().disable();
-//        autonomous_substate.set_state(AUTNOM_STATE_DRIVE);
-    }
 }
 
 void autonomous_substate_drive() {
-    // todo
-    //       N U M B E R S :
-    //from alliance wall to closer side of middle bridge- 280 inches
-    //from alliance wall to key- 144 inches
-    //key is 48 inches deep
-    //from end of key (closer to bridge wheels) to middle bridge is 88 inches?- drive a little less so we don't hit bridge.
-    //couldn't find encoder's Pulses per Revolution - basing code on distance isntead
-    //guess by Linda and Melissa:256
-/*    for(bool far = true ; far ; ){
-        //double distance = EncoderWheels::GetInstance().GetCurDistance();
-        vector<double> distances = vision_processing::get_distance();
-        double distance = -1;//actual distance should never be negative.
-        for(unsigned int i=0; (i<distances.size()) && (distance <= 0); i++){
-            if((distances[i] < 90)&& (distances[i] >0)){//within logical range, since key is 88 inches away and formula might not be completely exact
-                distance = distances[i];//will break loop
-            }
-        }
-        if(distance < 80){//80 feet will be good place to stop
-            std::printf("current distance: %f", distance);
-            drive.TankDrive(-.75 , -.75);//drive backwards at 3/4 full speed
-        }
-        else{//close to bridge
-            far = false;//exit for loop, stop driving
-        }
-    }*/
-    if(!EncoderWheels::GetInstance().IsEnabled()) {
-        EncoderWheels::GetInstance().SetDistance(DISTANCE_TO_BRIDGE);
+    static bool distance_set = false;
+    static Timer encoder_timer;
+    if(!distance_set) {
+        EncoderWheels::GetInstance().Disable();
+        EncoderWheels::GetInstance().SetDistance(DISTANCE_FORWARD);
+        distance_set = true;
+        encoder_timer.Start();
     }
+    else if(EncoderWheels::GetInstance().AtTarget() || encoder_timer.HasPeriodPassed(4.0)) {
+        shooter_turret.Shooter().set_freq(SHOOT_FREQ);
+        shooter_turret.Shooter().enable();
+        autonomous_substate.set_state(AUTNOM_STATE_LAUNCH);
+        EncoderWheels::GetInstance().Disable();
+    }
+}
+
+void autonomous_substate_bridgearm() {
+/*    static Timer arm_timer;
+    static bool timer_started = false;
+    if(timer_started) {
+        if(arm_timer.HasPeriodPassed(BRIDGEARM_WAIT)) {
+            bridge_arm.set_direction(bridge_arm_t::NEUTRAL);
+            rollers.set_direction(roller_t::UP);
+        }
+        else {
+            bridge_arm.set_direction(bridge_arm_t::DOWN);
+        }
+    }
+    else {
+        arm_timer.Start();
+        timer_started = true;
+    }*/
 }

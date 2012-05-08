@@ -25,16 +25,25 @@
 #include "state_tracker.h"
 #include "trajectory.h"
 
+#define DRIVE_BACK_ENABLED
+// #define DRIVE_BACK_DISABLED
+
+// #define BALLS_FIXED
+#define BALLS_INFINITE
+
 const int DISTANCE_TO_BRIDGE = -100; // inches
-const double SHOOT_FREQ = 73.0; // 70.78;
-const double LAUNCH_ANGLE_DEG = 61.5; // 66.0;
+const int DISTANCE_FORWARD = 32;
+const double SHOOT_FREQ = 62.7; // 70.78;
+const double LAUNCH_ANGLE_DEG = 74.4; // 66.0;
 const double LAUNCH_ANGLE_RAD = deg2rad(LAUNCH_ANGLE_DEG);
 const double AUTNOM_NUM_BALLS = 2;
+const double BRIDGEARM_WAIT = 1.5;
 
 enum AUTONOMOUS_SUBSTATE {
     AUTNOM_STATE_SETUP,
-    AUTNOM_STATE_LAUNCH,
     AUTNOM_STATE_DRIVE,
+    AUTNOM_STATE_LAUNCH,
+    AUTNOM_STATE_BRIDGEARM
 };
 
 extern state_tracker autonomous_substate;
