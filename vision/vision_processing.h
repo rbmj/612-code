@@ -35,9 +35,9 @@ namespace vision_processing {
     ColorImage* get_image();
     ColorImage* get_old_image();
     unsigned int determine_aim_target();
-    vector<double> get_distance();
-    vector<double> get_degrees();
-    vector<double> get_radians();
+    std::vector<double> get_distance();
+    std::vector<double> get_degrees();
+    std::vector<double> get_radians();
     int target_distance_from_center(int);//mesured in pixels
     void update();
 

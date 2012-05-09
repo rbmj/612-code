@@ -49,10 +49,10 @@ typedef struct particle_rect_struct {
 HSLImage old_image;
 
 BinaryImage* image_mask;
-vector<ParticleAnalysisReport>* targets;
+std::vector<ParticleAnalysisReport>* targets;
 
 BinaryImage* get_image_mask(ColorImage*);
-vector<ParticleAnalysisReport>* get_image_targets(BinaryImage*);
+std::vector<ParticleAnalysisReport>* get_image_targets(BinaryImage*);
 
 double inline degrees_from_ratio(double); // ratio: width/height
 double inline radians_from_ratio(double);
@@ -73,25 +73,25 @@ unsigned int vision_processing::determine_aim_target() {
     return 0;
 }
 
-vector<double> vision_processing::get_distance() {
-    vector<double> distance;
+std::vector<double> vision_processing::get_distance() {
+    std::vector<double> distance;
     for (unsigned int i = 0; i < targets->size(); i++) {
         distance.push_back(get_distance_from_report(targets->at(i)));
     }
     return distance;
 }
 
-vector<double> vision_processing::get_degrees() {
-    vector<double> degrees;
+std::vector<double> vision_processing::get_degrees() {
+    std::vector<double> degrees;
     for (unsigned int i = 0; i < targets->size(); i++) {
         degrees.push_back(get_degrees_from_report(targets->at(i)));
     }
     return degrees;
 }
 
-vector<double> vision_processing::get_radians() {
-    vector<double> degrees = get_degrees();
-    vector<double> radians;
+std::vector<double> vision_processing::get_radians() {
+    std::vector<double> degrees = get_degrees();
+    std::vector<double> radians;
     for(unsigned int i = 0; i < degrees.size(); i++) {
         radians.push_back(deg2rad(degrees[i]));
     }
@@ -122,12 +122,12 @@ BinaryImage* get_image_mask(ColorImage* image) {
     return image_mask;
 }
 
-vector<ParticleAnalysisReport>* get_image_targets(BinaryImage* image) {
-    vector<ParticleAnalysisReport>* targets = new vector<ParticleAnalysisReport>();
+std::vector<ParticleAnalysisReport>* get_image_targets(BinaryImage* image) {
+    std::vector<ParticleAnalysisReport>* targets = new std::vector<ParticleAnalysisReport>();
     if(image == NULL) {
         return targets;
     }
-    vector<ParticleAnalysisReport>* particles=image->GetOrderedParticleAnalysisReports();
+    std::vector<ParticleAnalysisReport>* particles=image->GetOrderedParticleAnalysisReports();
     for(unsigned int i = 0; i < particles->size(); i++) {
         ParticleAnalysisReport particle = particles->at(i);
         double particle_area = particle.particleArea;

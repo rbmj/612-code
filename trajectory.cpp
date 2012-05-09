@@ -24,8 +24,6 @@
 #include "vision_alt.h"
 #include "shooter.h"
 
-using namespace std;
-
 /*
  * Some Formulas:
  * 

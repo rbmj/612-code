@@ -24,8 +24,6 @@
 #include "612.h"
 #include "state_tracker.h"
 
-using namespace std;
-
 state_tracker::state_tracker():
     state(0),
     callbacks()
