@@ -10,6 +10,7 @@
 #include <Timer.h>
 #include <Task.h>
 #include <cstdio>
+#include <cstring>
 #include <vxWorks.h>
 #include <nivision.h>
 
@@ -190,7 +191,7 @@ vision_thread& VISION_THREAD_INSTANCE = get_vision_thread();
 vision_targets& VISION_TARGETS_INSTANCE = get_targets();
 
 //MUST DELETE RETURN VALUE IN CALLER
-std::pair<report_vector*, BinaryImage*> do_threshold(ColorImage& image) {
+std::pair<report_vector*&, BinaryImage*&> do_threshold(ColorImage& image) {
     //Threshold objects
     static Threshold HSL_THOLD(HSL_HMIN, HSL_HMAX, HSL_SMIN, HSL_SMAX, HSL_LMIN, HSL_LMAX);
     static Threshold HSI_THOLD(HSI_HMIN, HSI_HMAX, HSI_SMIN, HSI_SMAX, HSI_IMIN, HSI_IMAX);
@@ -219,7 +220,7 @@ std::pair<report_vector*, BinaryImage*> do_threshold(ColorImage& image) {
     //delete result;//TODO: may be more efficient if we can allocate one binary
                     //image and call imaqColorThreshold.  leaving as is now
                     //cause it's prettier this way and POITROAE.
-    return std::make_pair<report_vector*, BinaryImage*>(ret, result);
+    return std::make_pair<report_vector*&, BinaryImage*&>(ret, result);
 }
 
 void do_particle_filter(report_vector * v, Image * img) {
@@ -293,7 +294,7 @@ void write_particles(const char * fname, const report_vector * v) {
 
 
 void update_targets(vision_thread& thread, ColorImage& image) {
-    std::pair<report_vector*, BinaryImage*> ptrs = do_threshold(image);
+    std::pair<report_vector*&, BinaryImage*&> ptrs = do_threshold(image);
     report_vector * reports = ptrs.first;
     BinaryImage * img = ptrs.second;
 #if DEBUG_612
