@@ -9,7 +9,7 @@
 #include <cstdio>
 #endif
 
-const char format[] = "pid_controller@0x%X";
+const char format[] = "pid_controller@0x%lX";
 const unsigned slen = sizeof(format) + (2 * sizeof(void*)) - 2;
 //slen is size of format string + 2 bytes per pointer byte minus two for the %X
 
