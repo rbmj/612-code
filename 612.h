@@ -23,15 +23,24 @@
 #define INC_612_H
 
 #include <vxWorks.h>
+#include <taskLib.h>
+
+#ifndef TASKARG_T_DEFINED // defined in frc-cpp-sim, not defined for actual robot
+#ifdef __x86_64__
+typedef UINT64 taskarg_t;
+#else
+typedef UINT32 taskarg_t;
+#endif
+#define TASKARG_T_DEFINED
+#endif
+
 
 /*const double SHOOT_KEY_FREQ = 73.0
 const double SHOOT_KEY_ANGLE = */
 
-typedef UINT32 uinteger;
 typedef UINT32 state_t;
 typedef UINT8 module_t;
 typedef UINT8 range_t;
-typedef UINT8 ucharacter;
 
 enum GLOBAL_ROBOT_STATE {
     STATE_DRIVING = 0,

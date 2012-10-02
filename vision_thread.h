@@ -28,7 +28,7 @@ private:
     HSLImage image;
     //no lock (only write from main thread), only atomic
     bool enabled;
-    static int thread_worker(uinteger);
+    static int thread_worker(taskarg_t);
     void process_loop();
 };
 

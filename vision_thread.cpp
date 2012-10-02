@@ -33,7 +33,7 @@ vision_thread::vision_thread(AxisCamera& c, vision_processor p) : thread_obj("vi
     //initialize mutex
     target_lock = semBCreate(SEM_Q_PRIORITY, SEM_FULL);
     //make new thread  
-    if (!thread_obj.Start((uinteger)this)) {
+    if (!thread_obj.Start((taskarg_t)this)) {
         std::printf("Vision: Error creating thread.\n");
     }
 }
@@ -45,7 +45,7 @@ vision_thread::~vision_thread() {
     thread_obj.Stop();
 }
 
-int vision_thread::thread_worker(uinteger obj) {
+int vision_thread::thread_worker(taskarg_t obj) {
     ((vision_thread*)obj)->process_loop();
     //should never be reached
     return 0;

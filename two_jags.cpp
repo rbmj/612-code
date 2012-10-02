@@ -1,3 +1,4 @@
+#include <vxWorks.h>
 #include "two_jags.h"
 #include "612.h"
 #include "utility.h"
@@ -11,7 +12,7 @@ void two_jags::PIDWrite(float output) {
     jag2->PIDWrite(speed);
 }
 
-void two_jags::Set(float value, ucharacter sync) {
+void two_jags::Set(float value, UINT8 sync) {
     speed = coerce(value, -1.0f, 1.0f);
     jag1->Set(value, sync);
     jag2->Set(value, sync);
