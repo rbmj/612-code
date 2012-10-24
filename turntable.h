@@ -1,7 +1,7 @@
 #ifndef TURNTABLE_H_INC
 #define TURNTABLE_H_INC
 
-#include <Jaguar.h>
+#include <SpeedController.h>
 #include <DigitalInput.h>
 
 class turntable {
@@ -12,7 +12,7 @@ public:
         RIGHT,
         CENTER
     };
-    turntable(Jaguar&, DigitalInput&, DigitalInput&, DigitalInput&);
+    turntable(SpeedController&, DigitalInput&, DigitalInput&, DigitalInput&);
     ~turntable();
     void new_offset(int, int);
     void center();
@@ -21,7 +21,7 @@ public:
     void manual_control(float);
     float get_power() const;
 private:
-    Jaguar * jag;
+    SpeedController * jag;
     DigitalInput * left;
     DigitalInput * mid;
     DigitalInput * right;

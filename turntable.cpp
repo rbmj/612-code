@@ -2,7 +2,7 @@
 #include "update.h"
 #include "utility.h"
 
-#include <Jaguar.h>
+#include <SpeedController.h>
 #include <DigitalInput.h>
 
 //a proportional constant
@@ -12,7 +12,7 @@ const float TURNTABLE_DEFPOWER = 0.3;
 
 const bool RIGHT_POSITIVE = false;
 
-turntable::turntable(Jaguar& j, DigitalInput& l, DigitalInput& m, DigitalInput& r) {
+turntable::turntable(SpeedController& j, DigitalInput& l, DigitalInput& m, DigitalInput& r) {
     jag = &j;
     left = &l;
     mid = &m;

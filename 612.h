@@ -68,4 +68,8 @@ void perror_612_(const char*, int, const char *);
 //calculate trajectory with fixed entry angle
 #define TRAJECTORY_ENTRYANGLE
 
+#define USE_CANBUS
+//#define USE_JAGUARPWM
+#define SPEEDCONTROLLER CANJaguar
+
 #endif

@@ -1,7 +1,7 @@
 #ifndef WINCH_H_INC
 #define WINCH_H_INC
 
-#include <Jaguar.h>
+#include <SpeedController.h>
 #include <AnalogChannel.h>
 #include <DigitalInput.h>
 #include "pid_controller.h"
@@ -13,7 +13,7 @@ public:
         DOWN,
         OFF
     };
-    winch(Jaguar&, AnalogChannel&, DigitalInput&);
+    winch(SpeedController&, AnalogChannel&, DigitalInput&);
     ~winch();
     void enable();
     void disable();
@@ -24,7 +24,7 @@ public:
     void update();
     void manual_control(direction_t);
 private:
-    Jaguar * jag;
+    SpeedController * jag;
     AnalogChannel * pot;
     DigitalInput * limit;
     bool enabled;

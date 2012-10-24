@@ -22,16 +22,22 @@
 #ifndef INC_WINCH_MOTOR_H
 #define INC_WINCH_MOTOR_H
 
+#include "612.h"
+#include <SpeedController.h>
+#ifdef USE_JAGUARPWM
 #include <Jaguar.h>
+#else
+#include <CANJaguar.h>
+#endif
 #include <DigitalInput.h>
 #include <PIDOutput.h>
 
 class winch_motor : public PIDOutput {
 private:
-    Jaguar* jag;
+    SPEEDCONTROLLER* jag;
     DigitalInput* limit_switch;
 public:
-    winch_motor(Jaguar&, DigitalInput&);
+    winch_motor(SpeedController&, DigitalInput&);
     void PIDWrite(float);
 };
 

@@ -24,7 +24,11 @@
 #define INC_PORTS_H_INC
 
 #include <RobotDrive.h>
+#ifdef USE_JAGUARPWM
 #include <Jaguar.h>
+#else
+#include <CANJaguar.h>
+#endif
 #include <Joystick.h>
 #include <Encoder.h>
 #include <Ultrasonic.h>
@@ -40,11 +44,11 @@
 #include "turret.h"
 #include "bridge_arm.h"
 
-//bundle a reference to a Jaguar and some constants to aid in setting up the
+//bundle a reference to a SPEEDCONTROLLER and some constants to aid in setting up the
 //robot's drivetrain.  Use this for jaguars that will be used in the RobotDrive
 //drivetrain object.
 struct drive_jaguar {
-    Jaguar& jag; //reference to prevent multiple definition
+    SPEEDCONTROLLER& jag; //reference to prevent multiple definition
     const RobotDrive::MotorType type;
     const bool reverse;
 };
@@ -56,10 +60,10 @@ extern drive_jaguar left_front_motor;
 extern drive_jaguar right_front_motor;
 extern drive_jaguar left_rear_motor;
 extern drive_jaguar right_rear_motor;
-extern Jaguar left_launcher_jag;
-extern Jaguar right_launcher_jag;
-extern Jaguar turret_rotation_jag;
-extern Jaguar turret_winch_jag;
+extern SPEEDCONTROLLER left_launcher_jag;
+extern SPEEDCONTROLLER right_launcher_jag;
+extern SPEEDCONTROLLER turret_rotation_jag;
+extern SPEEDCONTROLLER turret_winch_jag;
 extern Servo right_servo_shift;
 extern Servo left_servo_shift;
 //extern PWM camera_led; //not using PWM

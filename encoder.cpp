@@ -20,7 +20,7 @@ const int RESET               = 1;
 
 EncoderWheels * EncoderWheels::instance = NULL;
 
-EncoderWheels::EncoderWheels(Encoder& el, Encoder& er, Jaguar& jag_fl, Jaguar& jag_fr, Jaguar& jag_rl, Jaguar& jag_rr) : encoder_left(el), encoder_right(er) {
+EncoderWheels::EncoderWheels(Encoder& el, Encoder& er, SpeedController& jag_fl, SpeedController& jag_fr, SpeedController& jag_rl, SpeedController& jag_rr) : encoder_left(el), encoder_right(er) {
     enabled = false;
     setpoint = 0.0;
     encoder_left.SetDistancePerPulse(2 * pi * DRIVE_REDUCTION * WHEEL_RADIUS / 360 * -1.0);
@@ -54,7 +54,7 @@ void EncoderWheels::update() {
     }
 }
 
-void EncoderWheels::Init(Encoder& el, Encoder& er, Jaguar& jag_fl, Jaguar& jag_fr, Jaguar& jag_rl, Jaguar& jag_rr) {
+void EncoderWheels::Init(Encoder& el, Encoder& er, SpeedController& jag_fl, SpeedController& jag_fr, SpeedController& jag_rl, SpeedController& jag_rr) {
     instance = new EncoderWheels(el, er, jag_fl, jag_fr, jag_rl, jag_rr);
     //don't need to delete as this object will last the lifetime of the program,
     //and the memory will be reclaimed when the process ends.  Only call this

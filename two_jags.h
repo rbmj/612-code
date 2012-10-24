@@ -1,18 +1,23 @@
 #ifndef TWO_JAGS_H_INC
 #define TWO_JAGS_H_INC
 
+#include "612.h"
 #include <vxWorks.h>
 #include <PIDOutput.h>
+#include <SpeedController.h>
+#ifdef USE_JAGUARPWM
 #include <Jaguar.h>
-#include "612.h"
+#else
+#include <CANJaguar.h>
+#endif
 
 class two_jags : public PIDOutput {
 private:
-    Jaguar* jag1;
-    Jaguar* jag2;
+    SPEEDCONTROLLER* jag1;
+    SPEEDCONTROLLER* jag2;
     two_jags() {} //SHOULD NEVER EVER BE CALLED
 public:
-    two_jags(Jaguar&, Jaguar&);
+    two_jags(SpeedController&, SpeedController&);
     virtual ~two_jags() {}
     float speed;
     void PIDWrite(float);

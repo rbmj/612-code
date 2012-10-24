@@ -26,7 +26,7 @@ const double ENCODER_SCALE = 1.7;
 
 class EncoderWheels {
 private:
-    EncoderWheels(Encoder&, Encoder&, Jaguar&, Jaguar&, Jaguar&, Jaguar&);
+    EncoderWheels(Encoder&, Encoder&, SpeedController&, SpeedController&, SpeedController&, SpeedController&);
     static void update_help(void*);
     void update();
     static EncoderWheels * instance;
@@ -47,7 +47,7 @@ public:
         DISTANCE_RIGHT = 0x2,
         DISTANCE_AVG = DISTANCE_LEFT | DISTANCE_RIGHT
     };
-    static void Init(Encoder&, Encoder&, Jaguar&, Jaguar&, Jaguar&, Jaguar&);
+    static void Init(Encoder&, Encoder&, SpeedController&, SpeedController&, SpeedController&, SpeedController&);
     static EncoderWheels& GetInstance();
     static double InchesToTicks(double, int);
     void Enable();

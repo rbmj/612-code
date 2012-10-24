@@ -18,7 +18,7 @@
 #ifndef INC_Turret_H
 #define INC_Turret_H
 
-#include <Jaguar.h>
+#include <SpeedController.h>
 #include <PIDController.h>
 #include <Counter.h>
 #include <AnalogChannel.h>
@@ -33,7 +33,7 @@
 
 class turret {
 public:
-    turret(Jaguar&, Jaguar&, Jaguar&, Jaguar&, Counter&, AnalogChannel&, DigitalInput&, DigitalInput&, DigitalInput&, DigitalInput&);
+    turret(SpeedController&, SpeedController&, SpeedController&, SpeedController&, Counter&, AnalogChannel&, DigitalInput&, DigitalInput&, DigitalInput&, DigitalInput&);
     ~turret();
     void align(target&);
     void enable();

@@ -16,7 +16,7 @@ const double WHEEL_D = 0.002;
 
 float find_max_speed(float);
 
-shooter::shooter(Counter& c, Jaguar& a, Jaguar& b) {
+shooter::shooter(Counter& c, SpeedController& a, SpeedController& b) {
     jags = new two_jags(a, b);
     speed = new launch_counter(c);
     //allocate PID Control

@@ -1,10 +1,18 @@
-#include <vxWorks.h>
-#include "two_jags.h"
 #include "612.h"
-#include "utility.h"
+#include <vxWorks.h>
+#include <SpeedController.h>
+#ifdef USE_JAGUARPWM
 #include <Jaguar.h>
+#else
+#include <CANJaguar.h>
+#endif
+#include "two_jags.h"
+#include "utility.h"
 
-two_jags::two_jags(Jaguar& a, Jaguar& b) : jag1(&a), jag2(&b), speed(0.0) {}
+two_jags::two_jags(SpeedController& a, SpeedController& b) : speed(0.0) {
+	jag1 = static_cast<SPEEDCONTROLLER*>(&a);
+	jag2 = static_cast<SPEEDCONTROLLER*>(&b);
+}
 
 void two_jags::PIDWrite(float output) {
     speed = coerce(output + speed, -1.0f, 1.0f);

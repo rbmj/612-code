@@ -19,12 +19,18 @@
  * Wrapper class for winch jag to incoporate limit switch
  */
 
+#include "612.h"
+#include <SpeedController.h>
+#ifdef USE_JAGUARPWM
 #include <Jaguar.h>
+#else
+#include <CANJaguar.h>
+#endif
 #include <DigitalInput.h>
 #include "winch_motor.h"
 
-winch_motor::winch_motor(Jaguar& j, DigitalInput& l) {
-    jag = &j;
+winch_motor::winch_motor(SpeedController& j, DigitalInput& l) {
+    jag = static_cast<SPEEDCONTROLLER*>(&j);
     limit_switch = &l;
 }
 

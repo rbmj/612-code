@@ -1,5 +1,5 @@
 #include <cmath>
-#include <Jaguar.h>
+#include <SpeedController.h>
 #include <AnalogChannel.h>
 #include <DigitalInput.h>
 #include "winch.h"
@@ -11,7 +11,7 @@ const float WINCH_SPEED = 0.35;
 
 void winch_update_helper(void*);
 
-winch::winch(Jaguar& j, AnalogChannel& c, DigitalInput& l) {
+winch::winch(SpeedController& j, AnalogChannel& c, DigitalInput& l) {
     jag = &j;
     pot = &c;
     limit = &l;

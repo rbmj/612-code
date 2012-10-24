@@ -23,7 +23,7 @@
  */
 
 #include <RobotDrive.h>
-#include <Jaguar.h>
+#include <SpeedController.h>
 #include <Joystick.h>
 #include <Encoder.h>
 #include <Ultrasonic.h>
@@ -60,17 +60,29 @@ const char * cameraIP = "10.6.12.11"; //static IP, camera configured for connect
 
 //PORTS TABLE
 
+#ifdef USE_JAGUARPWM
 //PWMs                                    SLOT     PORT
 Jaguar left_launcher_jag                ( slot2,     1 );
 Jaguar right_launcher_jag               ( slot2,     2 );
 Jaguar right_front_jag                  ( slot2,     3 );
 Jaguar right_rear_jag                   ( slot2,     4 );
 Jaguar turret_rotation_jag              ( slot2,     5 );
-Servo right_servo_shift                 ( slot2,     6 );
 
 Jaguar turret_winch_jag                 ( slot6,     1 );
 Jaguar left_front_jag                   ( slot6,     2 );
 Jaguar left_rear_jag                    ( slot6,     3 );
+#else
+// CANBUS                                 ID
+CANJaguar left_launcher_jag             ( 1 );
+CANJaguar right_launcher_jag            ( 2 );
+CANJaguar right_front_jag               ( 3 );
+CANJaguar right_rear_jag                ( 4 );
+CANJaguar turret_winch_jag              ( 5 );
+CANJaguar left_front_jag                ( 6 );
+CANJaguar left_rear_jag                 ( 7 );
+#endif
+
+Servo right_servo_shift                 ( slot2,     6 );
 Servo left_servo_shift                  ( slot6,     4 );
 
 //NOTE: Sica wants to use pots (potentiometers) for the angles, as those are

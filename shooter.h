@@ -13,7 +13,7 @@ const int MAX_RPS = 75;
 
 class shooter {
 public:
-    shooter(Counter&, Jaguar&, Jaguar&);
+    shooter(Counter&, SpeedController&, SpeedController&);
     ~shooter();
     void set_speed(double, double);
     void set_freq(double);

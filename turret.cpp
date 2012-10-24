@@ -16,10 +16,10 @@
 #include <cstdlib>
 
 turret::turret(
-    Jaguar& rotate,
-    Jaguar& winch_jag,
-    Jaguar& launcha,
-    Jaguar& launchb,
+    SpeedController& rotate,
+    SpeedController& winch_jag,
+    SpeedController& launcha,
+    SpeedController& launchb,
     Counter& count,
     AnalogChannel& pot,
     DigitalInput& winch_limit,
