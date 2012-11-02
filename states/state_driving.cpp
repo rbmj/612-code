@@ -73,11 +73,11 @@ void do_driving() {
             drive.TankDrive(left, right);
         }
     }
-    static unsigned iterate = 0;
+/*    static unsigned iterate = 0;
     iterate++;
     if(iterate%4==0) {
         std::printf("current distance (encoders): %f\n", EncoderWheels::GetInstance().GetCurDistance(EncoderWheels::DISTANCE_LEFT));
-    }
+    }*/
 }
 
 void do_shifting() {

@@ -74,9 +74,10 @@ Jaguar left_rear_jag                    ( slot6,     3 );
 #else
 // CANBUS                                 ID
 CANJaguar left_launcher_jag             ( 1 );
-CANJaguar right_launcher_jag            ( 2 );
-CANJaguar right_front_jag               ( 3 );
-CANJaguar right_rear_jag                ( 4 );
+CANJaguar right_launcher_jag            ( 8 );
+CANJaguar right_front_jag               ( 2 );
+CANJaguar right_rear_jag                ( 3 );
+CANJaguar turret_rotation_jag           ( 4 );
 CANJaguar turret_winch_jag              ( 5 );
 CANJaguar left_front_jag                ( 6 );
 CANJaguar left_rear_jag                 ( 7 );

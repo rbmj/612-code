@@ -70,6 +70,10 @@ void perror_612_(const char*, int, const char *);
 
 #define USE_CANBUS
 //#define USE_JAGUARPWM
+#ifdef USE_JAGUARPWM
+#define SPEEDCONTROLLER Jaguar
+#else
 #define SPEEDCONTROLLER CANJaguar
+#endif
 
 #endif
