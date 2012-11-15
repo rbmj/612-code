@@ -103,7 +103,7 @@ void robot_class::AutonomousContinuous() {
 }
 
 void robot_class::TeleopContinuous() {
-//    gunner_override_controls();
+    gunner_override_controls();
     global_state.run_state();
     if (global_state.get_state() != STATE_SHOOTING) {
         Wait(0.0025); //let the CPU rest a little - 1 ms isn't too long
