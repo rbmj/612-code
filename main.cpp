@@ -99,7 +99,7 @@ void robot_class::DisabledContinuous() {
 
 void robot_class::AutonomousContinuous() {
     do_autonomous();
-    Wait(0.05);
+//    Wait(0.05);
 }
 
 void robot_class::TeleopContinuous() {
