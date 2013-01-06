@@ -5,10 +5,6 @@
 #include <nivision.h>
 #include <Vision2009/VisionAPI.h>
 
-#if DEBUG_612
-#include <cstdio>
-#endif
-
 //return true if particle should be removed
 bool particle_filter::operator()(const ParticleAnalysisReport& r) const {
     //get minimum particle size

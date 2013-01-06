@@ -16,9 +16,6 @@
 class pid_controller : public PIDController {
 private:
     PIDController * pidobj;
-#if DEBUG_612
-    char * key;
-#endif
 public:
     pid_controller(float, float, float, PIDSource*, PIDOutput*, float = 0.05);
     ~pid_controller();
