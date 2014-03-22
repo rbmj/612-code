@@ -51,37 +51,40 @@ int vision_thread::thread_worker(taskarg_t obj) {
     return 0;
 }
 
-void vision_thread::process_loop() {
+void vision_thread::process_loop() 
+{
     //this the routine puts us in here.  Do vision processing
-    while (true) {
+    while (true) 
+    {
         //YES, I KNOW GOTOS ARE SUPPOSED TO BE EVIL.  I AM USING THEM HERE
         //TO AVOID NEEDLESS SENTINEL VARIABLES.
-        if (enabled) {
+        
+        //You dont need variables for this or gotos
+        if (enabled) 
+        {
             //get picture from camera
 #if DEBUG_612
                 Timer process_time;
                 process_time.Start();
 #endif
-            if (!camera().IsFreshImage()) {
-                goto processing_footer; //no new image for us to process
-            }
-            if (!camera().GetImage(&image)) {
-                perror_612("Cannot Recieve Image From Camera");
-                goto processing_footer;
-            }
-            //do vision processing
-            callback(*this, image);
+            if (camera().IsFreshImage())
+            {
+                if (!camera().GetImage(&image))
+                    perror_612("Cannot Recieve Image From Camera");
+                else
+                {
+                    //do vision processing
+                    callback(*this, image);
 #if DEBUG_612
-                output_debug_info();
-                //std::printf("Processing took %f sec\n", process_time.Get());
+                    output_debug_info();
+                    //std::printf("Processing took %f sec\n", process_time.Get());
 #endif
+                }
+            }
         }
-        processing_footer:
-        {
-            Wait(0.05); //should be a trivial wait compared to processing wait
-            //wait is here to keep sucking up processing power while polling the
-            //camera object
-        }
+        Wait(0.05); //should be a trivial wait compared to processing wait
+        //wait is here to keep sucking up processing power while polling the
+        //camera object
     }
 }
 
