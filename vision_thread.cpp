@@ -51,28 +51,23 @@ int vision_thread::thread_worker(taskarg_t obj) {
     return 0;
 }
 
-void vision_thread::process_loop() 
-{
+void vision_thread::process_loop() {
     //this the routine puts us in here.  Do vision processing
-    while (true) 
-    {
+    while (true) {
         //YES, I KNOW GOTOS ARE SUPPOSED TO BE EVIL.  I AM USING THEM HERE
         //TO AVOID NEEDLESS SENTINEL VARIABLES.
         
         //You dont need variables for this or gotos
-        if (enabled) 
-        {
+        if (enabled) {
             //get picture from camera
 #if DEBUG_612
                 Timer process_time;
                 process_time.Start();
 #endif
-            if (camera().IsFreshImage())
-            {
+            if (camera().IsFreshImage()){
                 if (!camera().GetImage(&image))
                     perror_612("Cannot Recieve Image From Camera");
-                else
-                {
+                else{
                     //do vision processing
                     callback(*this, image);
 #if DEBUG_612
